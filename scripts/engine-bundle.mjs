@@ -645,6 +645,12 @@ function visualTintFamilies(draftEvent) {
   return draftEvent.emotion_family ? [draftEvent.emotion_family] : [];
 }
 
+// src/utils/text.ts
+function stripEmDashes(text) {
+  if (!text) return text;
+  return text.replace(/\s*[—–―‒]\s*/g, ", ").replace(/\s+,/g, ",").replace(/,\s*,/g, ", ").replace(/,\s*([.!?;:])/g, "$1").replace(/,\s*$/g, "").replace(/\s{2,}/g, " ").trim();
+}
+
 // src/services/ai/weeklyNarrative.ts
 var FAMILY_WORD = {
   joy: "joy",
@@ -691,10 +697,12 @@ function composeWeeklySummary(input) {
     if (learning) parts.push(`I learned one shape I want to hold onto: ${trimEnd(learning)}.`);
     if (input.deepenedPatterns.length) {
       const dp = joinList(input.deepenedPatterns.map((f) => FAMILY_WORD[f]));
-      parts.push(`And ${dp} is starting to feel familiar \u2014 we\u2019ve met it more than once now.`);
+      parts.push(`And ${dp} is starting to feel familiar; we\u2019ve met it more than once now.`);
     }
     summary = parts.join(" ");
   }
+  summary = stripEmDashes(summary);
+  const learningClean = learning ? stripEmDashes(learning) : null;
   const userPhrases = [...new Set([...input.savedUserWords, ...input.eventPhrases].map(trimEnd).filter(Boolean))].slice(0, 4);
   return {
     id: input.id,
@@ -708,17 +716,11 @@ function composeWeeklySummary(input) {
     deepened_patterns: input.deepenedPatterns,
     repeated_themes: input.repeatedThemes,
     key_user_phrases: userPhrases,
-    companion_learning_statement: learning,
+    companion_learning_statement: learningClean,
     companion_summary: summary,
     caveat: caveatFor(input.savedSummaries.length, input.checkinCount),
     pdf_export_path: null
   };
-}
-
-// src/utils/text.ts
-function stripEmDashes(text) {
-  if (!text) return text;
-  return text.replace(/\s*[—–―‒]\s*/g, ", ").replace(/\s+,/g, ",").replace(/,\s*,/g, ", ").replace(/,\s*([.!?;:])/g, "$1").replace(/,\s*$/g, "").replace(/\s{2,}/g, " ").trim();
 }
 export {
   PROGRESS_RANK,

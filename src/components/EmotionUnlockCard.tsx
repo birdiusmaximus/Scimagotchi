@@ -1,3 +1,4 @@
+import { LinearGradient } from 'expo-linear-gradient';
 import { StyleSheet, View } from 'react-native';
 
 import { CompanionOrb } from '@/components/CompanionOrb';
@@ -5,7 +6,7 @@ import { Glass } from '@/components/Glass';
 import { PressableScale } from '@/components/PressableScale';
 import { Txt } from '@/components/Txt';
 import { EMOTION_MAPS } from '@/data/emotionMaps';
-import { palette, radii, spacing } from '@/theme/tokens';
+import { gradients, palette, radii, spacing } from '@/theme/tokens';
 import type { EmotionEvent } from '@/types/models';
 
 type Props = {
@@ -57,10 +58,12 @@ export function EmotionUnlockCard({ event, onKeepExploring, onDone }: Props) {
               Keep talking
             </Txt>
           </PressableScale>
-          <PressableScale onPress={onDone} style={[styles.btn, styles.btnSolid]}>
-            <Txt variant="label" color={palette.white}>
-              Leave it here for now
-            </Txt>
+          <PressableScale onPress={onDone} style={styles.btnGrow}>
+            <LinearGradient colors={gradients.brand} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={[styles.btn, styles.btnSolid]}>
+              <Txt variant="label" color={palette.white}>
+                Leave it here for now
+              </Txt>
+            </LinearGradient>
           </PressableScale>
         </View>
       </Glass>
@@ -88,6 +91,7 @@ const styles = StyleSheet.create({
   },
   actions: { flexDirection: 'row', gap: spacing.sm, marginTop: spacing.sm },
   btn: { paddingVertical: 12, paddingHorizontal: 18, borderRadius: radii.pill, alignItems: 'center' },
+  btnGrow: { flexShrink: 1 },
   btnGhost: { backgroundColor: 'rgba(255,255,255,0.6)' },
-  btnSolid: { backgroundColor: palette.accent },
+  btnSolid: { overflow: 'hidden' },
 });

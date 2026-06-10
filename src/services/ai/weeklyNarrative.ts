@@ -10,6 +10,7 @@
  */
 
 import type { EmotionFamilyId, WeeklySummary } from '@/types/models';
+import { stripEmDashes } from '@/utils/text';
 
 const FAMILY_WORD: Record<EmotionFamilyId, string> = {
   joy: 'joy',
@@ -86,11 +87,13 @@ export function composeWeeklySummary(input: WeeklyInput): WeeklySummary {
 
     if (input.deepenedPatterns.length) {
       const dp = joinList(input.deepenedPatterns.map((f) => FAMILY_WORD[f]));
-      parts.push(`And ${dp} is starting to feel familiar — we’ve met it more than once now.`);
+      parts.push(`And ${dp} is starting to feel familiar; we’ve met it more than once now.`);
     }
 
     summary = parts.join(' ');
   }
+  summary = stripEmDashes(summary);
+  const learningClean = learning ? stripEmDashes(learning) : null;
 
   const userPhrases = [...new Set([...input.savedUserWords, ...input.eventPhrases].map(trimEnd).filter(Boolean))].slice(0, 4);
 
@@ -106,7 +109,7 @@ export function composeWeeklySummary(input: WeeklyInput): WeeklySummary {
     deepened_patterns: input.deepenedPatterns,
     repeated_themes: input.repeatedThemes,
     key_user_phrases: userPhrases,
-    companion_learning_statement: learning,
+    companion_learning_statement: learningClean,
     companion_summary: summary,
     caveat: caveatFor(input.savedSummaries.length, input.checkinCount),
     pdf_export_path: null,

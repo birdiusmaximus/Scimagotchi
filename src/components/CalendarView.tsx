@@ -1,10 +1,11 @@
 import { Feather } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
 import { Pressable, StyleSheet, View } from 'react-native';
 
 import { Glass } from '@/components/Glass';
 import { Txt } from '@/components/Txt';
 import { FAMILY_COLORS } from '@/data/emotionMaps';
-import { palette, radii, spacing } from '@/theme/tokens';
+import { gradients, palette, radii, spacing } from '@/theme/tokens';
 import type { EmotionEvent } from '@/types/models';
 import { monthLabel } from '@/utils/date';
 
@@ -70,14 +71,19 @@ export function CalendarView({ year, month, eventsByDay, selected, today, onSele
 
           return (
             <Pressable key={i} style={styles.cell} onPress={() => onSelect(key)}>
-              <View style={[styles.dayWrap, isSel && styles.daySel]}>
-                <Txt
-                  variant="label"
-                  color={isSel ? palette.white : isToday ? palette.accentDeep : palette.inkOnGlass}
-                >
-                  {d}
-                </Txt>
-              </View>
+              {isSel ? (
+                <LinearGradient colors={gradients.brand} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.dayWrap}>
+                  <Txt variant="label" color={palette.white}>
+                    {d}
+                  </Txt>
+                </LinearGradient>
+              ) : (
+                <View style={styles.dayWrap}>
+                  <Txt variant="label" color={isToday ? palette.accentDeep : palette.inkOnGlass}>
+                    {d}
+                  </Txt>
+                </View>
+              )}
               <View style={styles.dots}>
                 {colors.map((c, ci) => (
                   <View key={ci} style={[styles.dot, { backgroundColor: c }]} />
@@ -104,8 +110,7 @@ const styles = StyleSheet.create({
   weekCell: { width: '14.28%' },
   grid: { flexDirection: 'row', flexWrap: 'wrap' },
   cell: { width: '14.28%', alignItems: 'center', paddingVertical: 4, minHeight: 44 },
-  dayWrap: { width: 30, height: 30, borderRadius: 15, alignItems: 'center', justifyContent: 'center' },
-  daySel: { backgroundColor: palette.accent },
+  dayWrap: { width: 32, height: 32, borderRadius: 16, alignItems: 'center', justifyContent: 'center', overflow: 'hidden' },
   dots: { flexDirection: 'row', gap: 3, height: 7, marginTop: 2, alignItems: 'center' },
   dot: { width: 5, height: 5, borderRadius: 3 },
 });

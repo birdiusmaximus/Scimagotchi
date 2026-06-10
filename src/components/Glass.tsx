@@ -20,7 +20,7 @@ type Props = ViewProps & {
  * highlight border. The building block for chips, the chat input and buttons.
  */
 export function Glass({
-  intensity = 40,
+  intensity = 52,
   tint = 'light',
   fill = palette.glassFill,
   border = palette.glassBorder,

@@ -9,18 +9,20 @@
 import { Platform } from 'react-native';
 
 export const palette = {
-  // Background wash (light, airy, lavender → orchid → periwinkle → soft blue)
-  bgTop: '#EFEAFF',
-  bgUpperMid: '#F5ECFC',
-  bgLowerMid: '#ECF1FF',
-  bgBottom: '#E6EEFF',
+  // Background wash — a richer lavender → orchid → periwinkle → soft blue, closer
+  // to the glassmorphic reference field (still airy; blur + blobs do the rest).
+  bgTop: '#E7E0FF',
+  bgUpperMid: '#EFE2FB',
+  bgLowerMid: '#E3E8FF',
+  bgBottom: '#DEE8FF',
 
-  // Floating background blobs (kept light; blur + low opacity does the rest)
-  blobPink: '#FFC4E6',
-  blobMagenta: '#FBABD8',
-  blobViolet: '#C4AFFF',
-  blobPeriwinkle: '#B7CEFF',
-  blobMint: '#D8F1FF',
+  // Floating background blobs — more saturated pinks/violets/blues for the
+  // vivid dreamy wash of the references.
+  blobPink: '#FFA8D8',
+  blobMagenta: '#FB7FC6',
+  blobViolet: '#B196FF',
+  blobPeriwinkle: '#98B4FF',
+  blobMint: '#CCEAFF',
 
   // Companion orb gradient stops
   orbViolet: '#7C5CF2',
@@ -41,22 +43,33 @@ export const palette = {
   glassBorder: 'rgba(255,255,255,0.65)',
   glassBorderSoft: 'rgba(255,255,255,0.45)',
 
-  // Accent (mic / send / interactive)
-  accent: '#7C8CF8',
-  accentDeep: '#5B6BF0',
+  // Accent (interactive bits, active states) — a vivid violet that ties the
+  // glass UI to the companion's own hue.
+  accent: '#8E78EE',
+  accentDeep: '#6B57E8',
 
   white: '#FFFFFF',
   black: '#000000',
 } as const;
 
+/**
+ * The signature reference gradient: pink → violet → periwinkle-blue. Used on
+ * primary CTAs, the user's chat bubbles, and hero surfaces across the app.
+ */
+const BRAND_GRADIENT = ['#FB7BC4', '#9E6CF1', '#6A88F3'] as const;
+
 /** LinearGradient colour arrays */
 export const gradients = {
   background: [palette.bgTop, palette.bgUpperMid, palette.bgLowerMid, palette.bgBottom],
-  // Calm default orb: violet (top) → indigo → vivid blue (bottom)
+  // Calm default orb: violet (top) → indigo → vivid blue (bottom). DO NOT CHANGE —
+  // the companion avatar stays exactly as designed.
   orbCalm: ['#9A6CF2', '#6E5BF2', '#5566F2', '#4F8BF5'],
   // Warmer orb for Anger & Protest (used later by the emotion system)
   orbAnger: ['#F2A26B', '#F0686B', '#E0566B', '#C0506B'],
-  accentButton: [palette.accent, palette.accentDeep],
+  // Vivid pink→violet→blue for CTAs, user bubbles, hero cards.
+  brand: BRAND_GRADIENT,
+  brandSoft: ['#FBA8D8', '#B79BF4', '#93AEF6'] as const,
+  accentButton: BRAND_GRADIENT,
 } as const;
 
 export const radii = {

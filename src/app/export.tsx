@@ -71,11 +71,15 @@ export default function ExportScreen() {
             {PRESETS.map((p) => {
               const active = preset === p.key;
               return (
-                <Pressable
-                  key={p.key}
-                  onPress={() => setPreset(p.key)}
-                  style={[styles.segItem, active && styles.segItemActive]}
-                >
+                <Pressable key={p.key} onPress={() => setPreset(p.key)} style={styles.segItem}>
+                  {active ? (
+                    <LinearGradient
+                      colors={gradients.brand}
+                      start={{ x: 0, y: 0 }}
+                      end={{ x: 1, y: 1 }}
+                      style={StyleSheet.absoluteFill}
+                    />
+                  ) : null}
                   <Txt variant="label" color={active ? palette.white : palette.inkOnGlass}>
                     {p.label}
                   </Txt>
@@ -166,8 +170,7 @@ const styles = StyleSheet.create({
     gap: 4,
     marginBottom: spacing.lg,
   },
-  segItem: { flex: 1, alignItems: 'center', paddingVertical: 10, borderRadius: radii.pill },
-  segItemActive: { backgroundColor: palette.accent },
+  segItem: { flex: 1, alignItems: 'center', justifyContent: 'center', paddingVertical: 10, borderRadius: radii.pill, overflow: 'hidden' },
   card: { padding: spacing.lg, gap: 4 },
   stats: { flexDirection: 'row', justifyContent: 'space-around', marginTop: spacing.sm },
   stat: { alignItems: 'center', minWidth: 72 },

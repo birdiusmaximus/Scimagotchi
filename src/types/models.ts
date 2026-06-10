@@ -155,11 +155,19 @@ export interface WeeklySummary {
   week_end: string;
   generated_at: string;
   checkin_count: number;
+  /** How many memories the user chose to keep this week — what the summary is built on (§17.1). */
+  saved_count: number;
   emotions_introduced: EmotionFamilyId[];
   emotions_first_shape: EmotionFamilyId[];
+  /** Families that reached a returning/deepened pattern this week (§13.5, §17.2). */
+  deepened_patterns: EmotionFamilyId[];
   repeated_themes: string[];
   key_user_phrases: string[];
+  /** One tentative thing the companion learned, in the user's framing (§14). */
+  companion_learning_statement: string | null;
   companion_summary: string;
+  /** Honest scope note — never present sparse data as if complete (§17.1). */
+  caveat: string;
   pdf_export_path?: string | null;
 }
 

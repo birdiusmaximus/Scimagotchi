@@ -673,10 +673,81 @@ function visualTintFamilies(draftEvent) {
   }
   return draftEvent.emotion_family ? [draftEvent.emotion_family] : [];
 }
+
+// src/services/ai/weeklyNarrative.ts
+var FAMILY_WORD = {
+  joy: "joy",
+  calm: "calm",
+  fear: "fear",
+  pressure: "pressure",
+  anger: "anger",
+  sadness: "sadness",
+  hurt: "hurt",
+  shame: "shame",
+  flat: "flatness"
+};
+function joinList(items) {
+  if (items.length <= 1) return items[0] ?? "";
+  if (items.length === 2) return `${items[0]} and ${items[1]}`;
+  return `${items.slice(0, -1).join(", ")}, and ${items[items.length - 1]}`;
+}
+function trimEnd(s) {
+  return s.replace(/[\s.]+$/, "");
+}
+function caveatFor(saved, checkins) {
+  if (saved > 0) return "Based only on the moments you chose to save \u2014 not your whole week.";
+  if (checkins > 0) return "Just a glimpse from a few check-ins \u2014 not the whole picture.";
+  return "Nothing kept this week \u2014 I\u2019m here whenever there\u2019s something you\u2019d like to hold onto.";
+}
+function composeWeeklySummary(input) {
+  const families = input.emotionsIntroduced.map((f) => FAMILY_WORD[f]);
+  const hadActivity = input.checkinCount > 0 || families.length > 0 || input.savedSummaries.length > 0;
+  const learning = input.savedSummaries[0] ?? null;
+  let summary;
+  if (!hadActivity) {
+    summary = "I don\u2019t have new feelings to reflect this week, and that\u2019s okay. I\u2019m here whenever there\u2019s something you want to name.";
+  } else {
+    const parts = [];
+    if (input.savedSummaries.length > 0) {
+      parts.push(
+        families.length ? `Based on the moments you chose to keep, ${joinList(families)} came up this week.` : "Here are the moments you chose to keep this week."
+      );
+    } else if (input.emotionsFirstShape.length) {
+      parts.push(`This week, you helped me understand the first shape of ${joinList(input.emotionsFirstShape.map((f) => FAMILY_WORD[f]))}.`);
+    } else if (families.length) {
+      parts.push(`This week, we started noticing ${joinList(families)} together.`);
+    }
+    if (learning) parts.push(`I learned one shape I want to hold onto: ${trimEnd(learning)}.`);
+    if (input.deepenedPatterns.length) {
+      const dp = joinList(input.deepenedPatterns.map((f) => FAMILY_WORD[f]));
+      parts.push(`And ${dp} is starting to feel familiar \u2014 we\u2019ve met it more than once now.`);
+    }
+    summary = parts.join(" ");
+  }
+  const userPhrases = [...new Set([...input.savedUserWords, ...input.eventPhrases].map(trimEnd).filter(Boolean))].slice(0, 4);
+  return {
+    id: input.id,
+    week_start: input.weekStart,
+    week_end: input.weekEnd,
+    generated_at: input.generatedAt,
+    checkin_count: input.checkinCount,
+    saved_count: input.savedSummaries.length,
+    emotions_introduced: input.emotionsIntroduced,
+    emotions_first_shape: input.emotionsFirstShape,
+    deepened_patterns: input.deepenedPatterns,
+    repeated_themes: input.repeatedThemes,
+    key_user_phrases: userPhrases,
+    companion_learning_statement: learning,
+    companion_summary: summary,
+    caveat: caveatFor(input.savedSummaries.length, input.checkinCount),
+    pdf_export_path: null
+  };
+}
 export {
   PROGRESS_RANK,
   activeCards,
   advanceProgress,
+  composeWeeklySummary,
   draftFromRejection,
   draftFromTurn,
   emptyProgress,

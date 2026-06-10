@@ -79,6 +79,13 @@ export function WeeklySummaryView({ summary }: { summary: WeeklySummary }) {
           ))}
         </View>
       ) : null}
+
+      {/* Honest scope — never present sparse data as a whole week (§17.1). */}
+      {summary.caveat ? (
+        <Txt variant="small" color={palette.inkSoft} align="center" style={styles.caveat}>
+          {summary.caveat}
+        </Txt>
+      ) : null}
     </Glass>
   );
 }
@@ -109,4 +116,5 @@ const styles = StyleSheet.create({
     borderRadius: radii.md,
     padding: spacing.md,
   },
+  caveat: { marginTop: spacing.md, fontStyle: 'italic', opacity: 0.85, lineHeight: 18 },
 });

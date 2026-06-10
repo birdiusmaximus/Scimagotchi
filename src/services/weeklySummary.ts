@@ -1,102 +1,78 @@
 /**
- * Weekly summary generation (brief §11.7). Character-led, no advice, no guilt for
- * a quiet week. Computed locally from the week's emotion events, conversations and
- * progress. The companion narrates what it learned — it never recommends.
+ * Weekly summary orchestration (engine brief §17). Fetches the week's data —
+ * led by the memories the user CHOSE to keep — and delegates the narration to
+ * the pure composer (weeklyNarrative.ts). The companion reflects what it
+ * learned; it never recommends, scores, or guilts a quiet week.
  */
 
-import { EMOTION_MAPS } from '@/data/emotionMaps';
+import { composeWeeklySummary } from '@/services/ai/weeklyNarrative';
 import {
   conversationsRepo,
   emotionEventsRepo,
   emotionProgressRepo,
+  memoryCardsRepo,
   weeklySummariesRepo,
 } from '@/services/db/repos';
 import type { EmotionFamilyId, WeeklySummary } from '@/types/models';
 import { nowIso } from '@/utils/date';
 
-const familyWord = (id: EmotionFamilyId) => EMOTION_MAPS[id].label.split(' ')[0].toLowerCase();
-
-function joinList(items: string[]): string {
-  if (items.length <= 1) return items[0] ?? '';
-  if (items.length === 2) return `${items[0]} and ${items[1]}`;
-  return `${items.slice(0, -1).join(', ')}, and ${items[items.length - 1]}`;
-}
-
-function narrate(s: WeeklySummary): string {
-  const hadActivity = s.checkin_count > 0 || s.emotions_introduced.length > 0;
-  if (!hadActivity) {
-    return 'I don’t have new feelings to reflect this week. That’s okay — I’m here when there’s something you want to name.';
-  }
-
-  const parts: string[] = [];
-  if (s.emotions_first_shape.length) {
-    parts.push(
-      `This week, you helped me understand the first shape of ${joinList(s.emotions_first_shape.map(familyWord))}.`,
-    );
-  } else if (s.emotions_introduced.length) {
-    parts.push(`This week, we started noticing ${joinList(s.emotions_introduced.map(familyWord))} together.`);
-  }
-
-  if (s.key_user_phrases.length) {
-    const phrase = s.key_user_phrases[0].replace(/[\s.]+$/, '');
-    parts.push(`You described it in your own words — “${phrase}.”`);
-  }
-
-  const checkins = `${s.checkin_count} ${s.checkin_count === 1 ? 'time' : 'times'}`;
-  const n = s.key_user_phrases.length;
-  const learned = n ? `, and I learned ${n} new ${n === 1 ? 'phrase' : 'phrases'} from you` : '';
-  parts.push(`You checked in ${checkins}${learned}.`);
-
-  return parts.join(' ');
-}
-
 export async function buildWeeklySummary(weekStart: Date): Promise<WeeklySummary> {
   const start = new Date(weekStart.getFullYear(), weekStart.getMonth(), weekStart.getDate());
   const end = new Date(start);
   end.setDate(end.getDate() + 7);
-  const inWeek = (iso: string) => {
+  const inWeek = (iso: string | null | undefined) => {
+    if (!iso) return false;
     const t = new Date(iso).getTime();
     return t >= start.getTime() && t < end.getTime();
   };
   const pad = (x: number) => String(x).padStart(2, '0');
 
-  const [events, convos, progress] = await Promise.all([
+  const [events, convos, progress, memories] = await Promise.all([
     emotionEventsRepo.all().catch(() => []),
     conversationsRepo.all().catch(() => []),
     emotionProgressRepo.all().catch(() => []),
+    memoryCardsRepo.all().catch(() => []),
   ]);
 
   const weekEvents = events.filter((e) => !e.do_not_store && e.emotion_family && inWeek(e.timestamp));
   const weekConvos = convos.filter((c) => inWeek(c.created_at));
 
-  const families = [...new Set(weekEvents.map((e) => e.emotion_family))] as EmotionFamilyId[];
-  const firstShape = progress
-    .filter((p) => p.first_shape_at && inWeek(p.first_shape_at))
+  // The moments the user chose to keep — the heart of the summary (§17.1).
+  const savedThisWeek = memories.filter(
+    (m) => (m.confirmation_status === 'user_confirmed' || m.confirmation_status === 'user_edited') && inWeek(m.created_at),
+  );
+  const savedSummaries = savedThisWeek.map((m) => m.summary).filter(Boolean);
+  const savedUserWords = savedThisWeek.flatMap((m) => m.user_words).filter(Boolean);
+
+  const emotionsIntroduced = [...new Set(weekEvents.map((e) => e.emotion_family))] as EmotionFamilyId[];
+  const emotionsFirstShape = progress.filter((p) => inWeek(p.first_shape_at)).map((p) => p.emotion_family);
+  const deepenedPatterns = progress
+    .filter((p) => inWeek(p.deepened_at) || inWeek(p.returning_at))
     .map((p) => p.emotion_family);
-  const phrases = [...new Set(weekEvents.map((e) => e.user_words_raw).filter(Boolean))].slice(0, 4);
+  const eventPhrases = [...new Set(weekEvents.map((e) => e.user_words_raw).filter(Boolean))].slice(0, 4);
 
   const triggerCounts: Record<string, number> = {};
   weekEvents.forEach((e) => {
     if (e.trigger_event) triggerCounts[e.trigger_event] = (triggerCounts[e.trigger_event] ?? 0) + 1;
   });
-  const repeated = Object.entries(triggerCounts)
+  const repeatedThemes = Object.entries(triggerCounts)
     .filter(([, count]) => count >= 2)
     .map(([t]) => t);
 
-  const summary: WeeklySummary = {
+  const summary = composeWeeklySummary({
     id: `week_${start.getFullYear()}-${pad(start.getMonth() + 1)}-${pad(start.getDate())}`,
-    week_start: start.toISOString(),
-    week_end: end.toISOString(),
-    generated_at: nowIso(),
-    checkin_count: weekConvos.length,
-    emotions_introduced: families,
-    emotions_first_shape: firstShape,
-    repeated_themes: repeated,
-    key_user_phrases: phrases,
-    companion_summary: '',
-    pdf_export_path: null,
-  };
-  summary.companion_summary = narrate(summary);
+    weekStart: start.toISOString(),
+    weekEnd: end.toISOString(),
+    generatedAt: nowIso(),
+    checkinCount: weekConvos.length,
+    savedSummaries,
+    savedUserWords,
+    emotionsIntroduced,
+    emotionsFirstShape,
+    deepenedPatterns,
+    eventPhrases,
+    repeatedThemes,
+  });
 
   weeklySummariesRepo.save(summary).catch(() => {});
   return summary;

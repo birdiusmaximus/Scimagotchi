@@ -33,6 +33,7 @@ import {
   safetyEventsRepo,
   settingsRepo,
 } from '@/services/db/repos';
+import type { ConversationMode } from '@/services/ai/modeRouter';
 import { advanceProgress, migrateStage } from '@/services/ai/progressionEngine';
 import { draftFromRejection, draftFromTurn, manualDraft, relevantMemory } from '@/services/memoryLedger';
 import { buildWeeklySummary } from '@/services/weeklySummary';
@@ -81,6 +82,8 @@ interface AppState {
   memoryCards: MemoryCard[];
   /** A drafted memory awaiting the user's Save / Edit / Not this. Never persisted as-is. */
   memoryDraft: MemoryCard | null;
+  /** Stance chosen at the door (home chip) — biases the first companion turn, then clears. */
+  entryMode: ConversationMode | null;
   weekly: WeeklySummary | null;
   userName: string;
   remindersEnabled: boolean;
@@ -122,6 +125,7 @@ export const useStore = create<AppState>((set, get) => ({
   safetyCheck: null,
   memoryCards: [],
   memoryDraft: null,
+  entryMode: null,
   weekly: null,
   userName: '',
   remindersEnabled: false,
@@ -193,7 +197,7 @@ export const useStore = create<AppState>((set, get) => ({
       safety_level: 0,
     };
     // Set state synchronously first so callers can immediately greet/send into it.
-    set({ conversationId: id, messages: [], draftEvent: null, orbFamily: null, unlock: null, safetyCheck: null, memoryDraft: null });
+    set({ conversationId: id, messages: [], draftEvent: null, orbFamily: null, unlock: null, safetyCheck: null, memoryDraft: null, entryMode: null });
     conversationsRepo.save(conv).catch(() => {});
     return id;
   },
@@ -336,6 +340,9 @@ export const useStore = create<AppState>((set, get) => ({
         .map((m) => ({ role: m.role as 'user' | 'companion', content: m.content }));
 
       const prevDraft = get().draftEvent;
+      // The entry-chip stance biases only the first turn, then clears.
+      const entryHint = get().entryMode;
+      if (entryHint) set({ entryMode: null });
       const turn = await ai.generateTurn({
         userText: clean,
         prevEvent: prevDraft,
@@ -344,6 +351,7 @@ export const useStore = create<AppState>((set, get) => ({
         memory: relevantMemory(get().memoryCards, clean, prevDraft?.emotion_family ?? null),
         userName: get().userName || null,
         safetyNote,
+        entryHint,
       });
 
       const compMsg: Message = {
@@ -489,6 +497,7 @@ export const useStore = create<AppState>((set, get) => ({
       safetyCheck: null,
       memoryCards: [],
       memoryDraft: null,
+      entryMode: null,
       weekly: null,
       userName: '',
       remindersEnabled: false,

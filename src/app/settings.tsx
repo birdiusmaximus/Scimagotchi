@@ -60,7 +60,12 @@ export default function SettingsScreen() {
           <Glass radius={radii.lg} contentStyle={styles.cardPad}>
             <TextInput
               value={name}
-              onChangeText={setName}
+              onChangeText={(t) => {
+                setName(t);
+                // Persist live — onEndEditing/onSubmitEditing don't reliably fire
+                // when navigating away on web, so the name could be lost otherwise.
+                useStore.getState().setUserName(t);
+              }}
               onEndEditing={saveName}
               onSubmitEditing={saveName}
               placeholder="What should the companion call you?"

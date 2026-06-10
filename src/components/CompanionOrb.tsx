@@ -219,15 +219,6 @@ export function CompanionOrb({
           <Animated.View style={[StyleSheet.absoluteFill, { backgroundColor: tintColor }, tintStyle]} />
           {/* Background strand of a mixed feeling — a second, fainter hue layered in */}
           <Animated.View style={[StyleSheet.absoluteFill, { backgroundColor: secondColor }, secondTintStyle]} />
-          {/* Deepened: a faint inner ring — new internal texture, not a trophy */}
-          {visual === 'deepened' ? (
-            <View
-              style={[
-                styles.deepRing,
-                { width: size * 0.62, height: size * 0.62, borderRadius: (size * 0.62) / 2, top: size * 0.19, left: size * 0.19 },
-              ]}
-            />
-          ) : null}
           <Animated.View style={[styles.highlight, { width: size * 0.4, height: size * 0.26 }, highlightStyle]} />
           <OrbGradientLayer kind="sheen" />
 
@@ -327,5 +318,4 @@ const styles = StyleSheet.create({
   },
   eyeRow: { flexDirection: 'row', gap: 21, alignItems: 'center' },
   eye: { backgroundColor: '#FBFCFF', boxShadow: '0px 2px 4px rgba(42,42,85,0.18)' },
-  deepRing: { position: 'absolute', borderWidth: 1.5, borderColor: 'rgba(255,255,255,0.35)' },
 });

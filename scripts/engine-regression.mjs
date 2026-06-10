@@ -107,6 +107,13 @@ check('router: named feeling, no family yet -> name', mode("i'm so angry at my s
 check('router: vague short -> clarify', mode('i feel off today'), 'clarify');
 check('router: family known + shaped -> meaning',
   mode('it started after the meeting', ev({ label_source: 'user_stated' })), 'meaning');
+// entry-hint (home chip) biases an ambiguous first turn...
+check('router: entry hint witness on a short first message', routeMode('ugh work', null, 'witness').mode, 'witness');
+check('router: entry hint body_first when unsure', routeMode('idk really', null, 'body_first').mode, 'body_first');
+check('router: entry hint soft_landing for check-in', routeMode('not much, just popping in', null, 'soft_landing').mode, 'soft_landing');
+// ...but explicit signals and heavy disclosures still override the hint
+check('router: repair overrides entry hint', routeMode("no that's not it", null, 'witness').mode, 'repair');
+check('router: heavy disclosure overrides a light check-in hint', routeMode('my mum passed away yesterday', null, 'soft_landing').mode, 'witness');
 
 // ── Variety signals ──────────────────────────────────────────────────────────
 const v = varietySignals([

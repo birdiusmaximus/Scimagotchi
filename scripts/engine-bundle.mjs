@@ -48,65 +48,36 @@ var GREETING = /^ (hey|hi|hiya|hello|yo|sup|morning|evening|good (morning|evenin
 var EMOTION_WORD = /(angry|anger|furious|frustrat|annoyed|sad|down|grief|griev|miserable|anxious|anxiety|scared|afraid|fear|worried|dread|stressed|overwhelmed|pressure|ashamed|shame|embarrass|guilty|guilt|hurt|betrayed|rejected|lonely|numb|empty|flat|happy|excited|proud|joy|calm|peaceful|relieved|content)/;
 var HEAVY_DISCLOSURE = /(died|passed away|funeral|divorce|broke up|break up|cheated|miscarriage|diagnos|cancer|fired|laid off|redundan|assault|bullied|relapse|eviction|cant pay rent)/;
 var ASK_WHAT_FEELING = /(what (is|am) (this|i) feel|what would you call|is this (anger|fear|sadness|shame|anxiety))/;
-function routeMode(userText, prevEvent) {
+var DIRECTIVES = {
+  repair: 'Mode: REPAIR \u2014 they just corrected or rejected your reading. Acknowledge the miss plainly and without defensiveness ("I had that wrong" / "let me step back"), drop the rejected label completely (record it as rejected, never re-propose it), lower the intensity, and either offer a low-effort correction ("what word would be closer?") or simply make room. Nothing can be marked understood on a repair turn.',
+  close: "Mode: CLOSE \u2014 they are wrapping up. End with dignity in one warm sentence, in their register. No new question, no re-opening the feeling, no summary unless they asked. Vary your closing words from previous closes.",
+  hold_mixed: "Mode: HOLD MIXED \u2014 more than one feeling is present. Hold both strands without collapsing them into one label. If useful, ask ONE question about how they relate (both at once / moving between them / one underneath the other). Set mixed_relation in your output. Never force a single answer.",
+  body_first: 'Mode: BODY FIRST \u2014 they cannot or do not want to name it. Do not demand emotion words. Help them find it gently by starting from the felt sense \u2014 where it sits, its weight/temperature/movement \u2014 or what was happening when it showed up. "Unnamed for now" is a fully valid resting place; ask one soft, concrete question, never a quiz.',
+  soft_landing: `Mode: SOFT LANDING \u2014 a light check-in or greeting. Be warm and genuinely glad they came, and make it easy to begin ("good to hear from you \u2014 what's on your mind?"). No emotion probing, no menus, no analysis. emotion_family stays null until something surfaces.`,
+  witness: "Mode: WITNESS \u2014 make them feel HEARD before anything else; you are here to listen, not to classify. Reflect ONE concrete, specific detail in their own words. Strongly prefer NO question this turn \u2014 a question now would feel extractive. If you must, make it one short, open invitation to say more.",
+  name: "Mode: NAME \u2014 a feeling word is on the table. Accept their word first; help find the closest-fitting shade only if it helps. Treat any label you supply as a tentative hypothesis, never as truth.",
+  clarify: 'Mode: CLARIFY \u2014 they sense something but it is vague ("off", "not right"). Help them identify it: reflect what you heard, then offer ONE small, gentle distinction or open question toward what it might be. It is fine to leave it broad; never push a label on.',
+  meaning: "Mode: MEANING \u2014 the feeling has a name and a felt shape. Gently reach for what the moment seemed to mean or what set it off, one step only, in their words. If meaning is already clear, reflect the shape you now understand.",
+  differentiate: "Mode: DIFFERENTIATE \u2014 a family is in play but the shade is loose. Help separate nearby feelings only as far as is useful; their own word beats a precise-sounding one."
+};
+function routeMode(userText, prevEvent, entryHint = null) {
   const t = norm(userText);
   const long = userText.trim().length > 160;
   const familyKnown = !!prevEvent?.emotion_family;
   const shaped = !!prevEvent && (prevEvent.body_cue.length > 0 || prevEvent.behaviour_action.length > 0);
-  if (REPAIR.test(t))
-    return {
-      mode: "repair",
-      directive: 'Mode: REPAIR \u2014 they just corrected or rejected your reading. Acknowledge the miss plainly and without defensiveness ("I had that wrong" / "let me step back"), drop the rejected label completely (record it as rejected, never re-propose it), lower the intensity, and either offer a low-effort correction ("what word would be closer?") or simply make room. Nothing can be marked understood on a repair turn.'
-    };
-  if (CLOSE.test(t))
-    return {
-      mode: "close",
-      directive: "Mode: CLOSE \u2014 they are wrapping up. End with dignity in one warm sentence, in their register. No new question, no re-opening the feeling, no summary unless they asked. Vary your closing words from previous closes."
-    };
-  if (MIXED.test(t))
-    return {
-      mode: "hold_mixed",
-      directive: "Mode: HOLD MIXED \u2014 more than one feeling is present. Hold both strands without collapsing them into one label. If useful, ask ONE question about how they relate (both at once / moving between them / one underneath the other). Set mixed_relation in your output. Never force a single answer."
-    };
-  if (DONT_KNOW.test(t) || BODY_WORDS.test(t) && !EMOTION_WORD.test(t))
-    return {
-      mode: "body_first",
-      directive: 'Mode: BODY FIRST \u2014 they cannot or do not want to name it. Do not demand emotion words. Stay with the felt sense: where it sits, its weight/temperature/movement. "Unnamed for now" is a fully valid resting place.'
-    };
-  if (GREETING.test(t))
-    return {
-      mode: "soft_landing",
-      directive: "Mode: SOFT LANDING \u2014 a greeting/small talk. Just be warm and present; make it easy to begin. No emotion probing, no menus. emotion_family stays null."
-    };
-  if (long && (EMOTION_WORD.test(t) || HEAVY_DISCLOSURE.test(t)) || HEAVY_DISCLOSURE.test(t))
-    return {
-      mode: "witness",
-      directive: "Mode: WITNESS \u2014 they shared something heavy or rich. The job this turn is to make them feel HEARD, not to classify. Reflect ONE concrete, specific detail in their own words. Strongly prefer NO question this turn \u2014 a question now would feel extractive. If you must ask, make it one short, open invitation."
-    };
-  if (ASK_WHAT_FEELING.test(t) || EMOTION_WORD.test(t) && !familyKnown)
-    return {
-      mode: "name",
-      directive: "Mode: NAME \u2014 a feeling word is on the table. Accept their word first; help find the closest-fitting shade only if it helps. Treat any label you supply as a tentative hypothesis, never as truth."
-    };
-  if (VAGUE.test(t) && !familyKnown)
-    return {
-      mode: "clarify",
-      directive: "Mode: CLARIFY \u2014 the signal is vague. Offer one small, gentle distinction (not a quiz). It is fine to leave it broad; do not push a label onto it."
-    };
-  if (familyKnown && shaped)
-    return {
-      mode: "meaning",
-      directive: "Mode: MEANING \u2014 the feeling has a name and a felt shape. Gently reach for what the moment seemed to mean or what set it off, one step only, in their words. If meaning is already clear, reflect the shape you now understand."
-    };
-  if (familyKnown)
-    return {
-      mode: "differentiate",
-      directive: "Mode: DIFFERENTIATE \u2014 a family is in play but the shade is loose. Help separate nearby feelings only as far as is useful; their own word beats a precise-sounding one."
-    };
-  return {
-    mode: "witness",
-    directive: "Mode: WITNESS (default) \u2014 reflect one specific thing you actually heard, in their words, before anything else. At most one short question, and only if it clearly helps."
-  };
+  const decide = (mode) => ({ mode, directive: DIRECTIVES[mode] });
+  if (REPAIR.test(t)) return decide("repair");
+  if (CLOSE.test(t)) return decide("close");
+  if (MIXED.test(t)) return decide("hold_mixed");
+  if (DONT_KNOW.test(t) || BODY_WORDS.test(t) && !EMOTION_WORD.test(t)) return decide("body_first");
+  if (GREETING.test(t)) return decide("soft_landing");
+  if (long && (EMOTION_WORD.test(t) || HEAVY_DISCLOSURE.test(t)) || HEAVY_DISCLOSURE.test(t)) return decide("witness");
+  if (entryHint && !familyKnown) return decide(entryHint);
+  if (ASK_WHAT_FEELING.test(t) || EMOTION_WORD.test(t) && !familyKnown) return decide("name");
+  if (VAGUE.test(t) && !familyKnown) return decide("clarify");
+  if (familyKnown && shaped) return decide("meaning");
+  if (familyKnown) return decide("differentiate");
+  return decide("witness");
 }
 
 // src/services/ai/responsePolicy.ts

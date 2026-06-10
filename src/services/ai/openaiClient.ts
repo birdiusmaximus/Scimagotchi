@@ -57,7 +57,7 @@ export async function openaiGenerateTurn(
   const family = prev?.emotion_family ?? detectFamily(input.userText);
 
   // ── Deterministic pre-stages: mode + variety + safety directives ───────────
-  const mode = routeMode(input.userText, prev ?? null);
+  const mode = routeMode(input.userText, prev ?? null, input.entryHint ?? null);
   const companionReplies = (input.history ?? []).filter((m) => m.role === 'companion').map((m) => m.content);
   const variety = varietyDirective(varietySignals(companionReplies));
 

@@ -33,6 +33,8 @@ export interface CompanionInput {
   userName?: string | null;
   /** safety-layer directive for this turn (post-check resume, dependency boundary) */
   safetyNote?: string | null;
+  /** stance chosen at the door (home chip) — biases the first turn's conversation mode */
+  entryHint?: import('@/services/ai/modeRouter').ConversationMode | null;
 }
 
 export function emptyEvent(conversationId: string): EmotionEvent {

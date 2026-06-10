@@ -12,39 +12,51 @@ import { SuggestionChip } from '@/components/SuggestionChip';
 import { TopBar } from '@/components/TopBar';
 import { Txt } from '@/components/Txt';
 import type { CompanionVisualState } from '@/services/ai/companionVisualState';
+import type { ConversationMode } from '@/services/ai/modeRouter';
 import { useStore } from '@/state/store';
 import { palette, spacing } from '@/theme/tokens';
 
 /** Start a fresh conversation, then either greet (chip) or send the typed text. */
-function openChat(kind: 'greet' | 'say', text: string, go: (cid: string) => void) {
+function openChat(kind: 'greet' | 'say', text: string, go: (cid: string) => void, entryMode?: ConversationMode) {
   const s = useStore.getState();
-  s.newConversation(); // sets conversationId synchronously
+  s.newConversation(); // sets conversationId synchronously, clears entryMode
   const cid = useStore.getState().conversationId as string;
+  // The chip's stance biases the first companion turn (consumed + cleared in send()).
+  if (entryMode) useStore.setState({ entryMode });
   if (kind === 'greet') s.greet(text);
   else s.send(text);
   go(cid);
 }
 
-const CHIPS: { icon: keyof typeof Feather.glyphMap; label: string; opener: string }[] = [
+/**
+ * Each door sets a distinct stance (engine brief §6): vent → just listen,
+ * "off" → help identify it, "not sure" → find it via the body/situation,
+ * check-in → light and glad. The opener AND the first turn's mode both follow.
+ */
+const CHIPS: { icon: keyof typeof Feather.glyphMap; label: string; opener: string; entry: ConversationMode }[] = [
   {
     icon: 'cloud',
     label: 'I feel off',
-    opener: 'I’m here. We can start anywhere — what feels most present right now?',
+    entry: 'clarify',
+    opener: 'Something feels off — that’s a real place to start. Can you say a little about what’s going on, even roughly?',
   },
   {
     icon: 'zap',
     label: 'Vent a little',
-    opener: 'Go ahead — tell me what happened, in your own words. I’m listening.',
+    entry: 'witness',
+    opener: 'Go ahead — say whatever’s there, however it comes out. I’m just here to listen.',
   },
   {
     icon: 'help-circle',
     label: 'I’m not sure',
-    opener: 'That’s allowed. We don’t need the right word yet. Is it more heavy, tense, blank, or restless?',
+    entry: 'body_first',
+    opener: 'That’s okay — we don’t need a name for it yet. Want to start with what’s been happening, or how it sits in your body?',
   },
   {
     icon: 'sun',
     label: 'Checking in',
-    opener: 'I’m glad you’re here. How are you feeling right now?',
+    entry: 'soft_landing',
+    opener: 'I’m really glad you’re here. What’s on your mind today?',
   },
 ];
 
@@ -110,7 +122,7 @@ export default function NowScreen() {
 
         <View style={styles.chips}>
           {CHIPS.map((c) => (
-            <SuggestionChip key={c.label} icon={c.icon} label={c.label} onPress={() => openChat('greet', c.opener, go)} />
+            <SuggestionChip key={c.label} icon={c.icon} label={c.label} onPress={() => openChat('greet', c.opener, go, c.entry)} />
           ))}
         </View>
 

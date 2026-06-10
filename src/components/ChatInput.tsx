@@ -16,7 +16,7 @@ type Props = {
 };
 
 /** The always-visible chat input pill: + button · text field · mic/send. */
-export function ChatInput({ placeholder = 'Tell me what this feels like…', onSubmit, autoFocus, refocusSignal }: Props) {
+export function ChatInput({ placeholder = 'What’s here?', onSubmit, autoFocus, refocusSignal }: Props) {
   const [text, setText] = useState('');
   const inputRef = useRef<TextInput>(null);
   const hasText = text.trim().length > 0;
@@ -54,7 +54,7 @@ export function ChatInput({ placeholder = 'Tell me what this feels like…', onS
         value={text}
         onChangeText={setText}
         placeholder={placeholder}
-        placeholderTextColor={palette.inkSoft}
+        placeholderTextColor="rgba(110,108,155,0.5)"
         style={styles.input}
         onSubmitEditing={submit}
         submitBehavior="submit"

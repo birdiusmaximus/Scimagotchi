@@ -1,10 +1,21 @@
 :root {
-  /* Adobe Fonts (Typekit nvl5gki) — Eixample display family, used for headings */
+  /* Adobe Fonts (Typekit abe4vwg, loaded in +html.tsx) */
+  --font-text:
+    'neue-haas-grotesk-text', 'Helvetica Neue', system-ui, -apple-system, sans-serif;
   --font-display:
-    'eixample-glaces-contrast-1', 'SF Pro Rounded', ui-sans-serif, system-ui, sans-serif;
-  --font-display-narrow: 'eixample-dip-narrow', 'SF Pro Rounded', ui-sans-serif, system-ui, sans-serif;
+    'neue-haas-grotesk-display', 'Helvetica Neue', system-ui, -apple-system, sans-serif;
+  --font-condensed:
+    'acumin-pro-extra-condensed', 'Helvetica Neue Condensed', 'Arial Narrow', system-ui, sans-serif;
+  /* legacy alias — older tokens referenced --font-rounded */
+  --font-rounded: var(--font-text);
   --font-mono:
-    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-  --font-rounded: 'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif;
-  --font-serif: Georgia, 'Times New Roman', serif;
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+html,
+body,
+#root {
+  font-family: var(--font-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

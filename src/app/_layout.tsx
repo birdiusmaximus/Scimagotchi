@@ -36,6 +36,15 @@ export default function RootLayout() {
 
   useEffect(() => {
     useStore.getState().init();
+    // Load the Adobe Fonts (Typekit) kit on web. +html.tsx covers static export,
+    // but Expo's dev server doesn't apply it, so inject the stylesheet at runtime.
+    if (Platform.OS === 'web' && typeof document !== 'undefined' && !document.getElementById('typekit-abe4vwg')) {
+      const link = document.createElement('link');
+      link.id = 'typekit-abe4vwg';
+      link.rel = 'stylesheet';
+      link.href = 'https://use.typekit.net/abe4vwg.css';
+      document.head.appendChild(link);
+    }
   }, []);
 
   return (

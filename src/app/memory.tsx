@@ -1,3 +1,4 @@
+import { LinearGradient } from 'expo-linear-gradient';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
@@ -5,7 +6,6 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { CalendarView } from '@/components/CalendarView';
 import { GradientBackground } from '@/components/GradientBackground';
-import { Glass } from '@/components/Glass';
 import { IconButton } from '@/components/IconButton';
 import { Txt } from '@/components/Txt';
 import { useGoBack } from '@/hooks/useGoBack';
@@ -14,6 +14,7 @@ import { emotionEventsRepo } from '@/services/db/repos';
 import { palette, radii, spacing } from '@/theme/tokens';
 import type { EmotionEvent } from '@/types/models';
 import { dayKey, prettyTime } from '@/utils/date';
+import { tintPair } from '@/utils/color';
 
 export default function MemoryScreen() {
   const router = useRouter();
@@ -91,17 +92,19 @@ export default function MemoryScreen() {
                   <Pressable
                     key={ev.id}
                     onPress={() => router.push({ pathname: '/entry', params: { id: ev.id } })}
-                    style={({ pressed }) => ({ opacity: pressed ? 0.7 : 1 })}
+                    style={({ pressed }) => ({ opacity: pressed ? 0.8 : 1, transform: [{ scale: pressed ? 0.99 : 1 }] })}
                   >
-                    <Glass radius={radii.lg} contentStyle={styles.entryRow}>
-                      <View
-                        style={[
-                          styles.dot,
-                          { backgroundColor: ev.emotion_family ? FAMILY_COLORS[ev.emotion_family] : palette.inkSoft },
-                        ]}
-                      />
+                    <View style={styles.entryCard}>
+                      <LinearGradient
+                        colors={tintPair(ev.emotion_family ? FAMILY_COLORS[ev.emotion_family] : palette.inkSoft)}
+                        start={{ x: 0, y: 0 }}
+                        end={{ x: 1, y: 1 }}
+                        style={styles.entryTile}
+                      >
+                        <View style={styles.entryTileDot} />
+                      </LinearGradient>
                       <View style={{ flex: 1 }}>
-                        <Txt variant="label" color={palette.inkOnGlass}>
+                        <Txt variant="label" color={palette.ink}>
                           {map ? map.label : 'Reflection'}
                           {ev.emotion_shade ? ` · ${ev.emotion_shade}` : ''}
                         </Txt>
@@ -114,7 +117,7 @@ export default function MemoryScreen() {
                       <Txt variant="small" color={palette.inkSoft}>
                         {prettyTime(ev.timestamp)}
                       </Txt>
-                    </Glass>
+                    </View>
                   </Pressable>
                 );
               })
@@ -133,6 +136,26 @@ const styles = StyleSheet.create({
   scroll: { paddingVertical: spacing.lg, gap: spacing.md },
   entries: { gap: spacing.sm },
   empty: { marginTop: spacing.lg },
-  entryRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.md, paddingVertical: 14, paddingHorizontal: spacing.md },
-  dot: { width: 12, height: 12, borderRadius: 6 },
+  entryCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.md,
+    paddingVertical: 12,
+    paddingRight: spacing.md,
+    paddingLeft: 12,
+    backgroundColor: 'rgba(255,255,255,0.82)',
+    borderRadius: radii.lg,
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.7)',
+    boxShadow: '0px 8px 20px rgba(95,90,160,0.10)',
+  },
+  entryTile: {
+    width: 44,
+    height: 44,
+    borderRadius: 14,
+    alignItems: 'center',
+    justifyContent: 'center',
+    boxShadow: '0px 4px 10px rgba(95,90,160,0.18)',
+  },
+  entryTileDot: { width: 12, height: 12, borderRadius: 6, backgroundColor: 'rgba(255,255,255,0.9)' },
 });

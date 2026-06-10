@@ -1,6 +1,6 @@
 import { Text, type TextProps, type TextStyle } from 'react-native';
 
-import { fontFamily, fontFamilyDisplay, palette, type as typeScale } from '@/theme/tokens';
+import { fontFamily, fontFamilyCondensed, fontFamilyDisplay, palette, type as typeScale } from '@/theme/tokens';
 
 type Variant = keyof typeof typeScale;
 
@@ -9,15 +9,14 @@ type Props = TextProps & {
   color?: string;
   align?: TextStyle['textAlign'];
   weight?: TextStyle['fontWeight'];
-  /** Override the family: 'display' (Eixample) or 'body' (rounded sans). */
-  font?: 'display' | 'body';
+  /** Override the family: 'display' (Neue Haas Display), 'condensed' (Acumin), or 'body'. */
+  font?: 'display' | 'condensed' | 'body';
 };
 
 /**
- * App-wide text primitive. Body copy uses the rounded sans for readability;
- * headings (h1/subtitle) use the Eixample display face. The loaded display weight
- * is 500, so display text defaults there to avoid faux-bold on a high-contrast
- * face.
+ * App-wide text primitive. Body copy uses Neue Haas Grotesk Text; headings
+ * (h1/subtitle) use the Display optical size at a confident 600; large stat
+ * numerals can opt into the condensed face via font="condensed".
  */
 export function Txt({
   variant = 'body',
@@ -29,8 +28,8 @@ export function Txt({
   ...rest
 }: Props) {
   const useDisplay = font ? font === 'display' : variant === 'h1' || variant === 'subtitle';
-  const family = useDisplay ? fontFamilyDisplay : fontFamily;
-  const resolvedWeight = weight ?? (useDisplay ? '500' : undefined);
+  const family = font === 'condensed' ? fontFamilyCondensed : useDisplay ? fontFamilyDisplay : fontFamily;
+  const resolvedWeight = weight ?? (useDisplay ? '600' : undefined);
 
   return (
     <Text

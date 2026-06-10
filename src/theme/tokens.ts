@@ -91,22 +91,24 @@ export const spacing = {
 } as const;
 
 /**
- * Rounded, friendly system font. On the web preview this resolves to SF Pro
- * Rounded (via the --font-rounded CSS variable defined in global.css); on iOS it
- * falls back to the system face. Keeps copy soft and non-clinical.
+ * Body / UI text — Neue Haas Grotesk Text (web, via the Typekit kit + the CSS
+ * variables defined in +html.tsx). A clean, designed grotesque. On native it
+ * falls back to the system face until the font files are bundled.
  */
 export const fontFamily = Platform.select({
-  web: 'var(--font-rounded)',
+  web: 'var(--font-text)',
   default: undefined,
 }) as string | undefined;
 
-/**
- * Display face for headings/branding — the Eixample family from the Typekit kit
- * (web). On native it falls back to the system face until the licensed font files
- * are bundled (Typekit delivers web fonts only).
- */
+/** Display face for headings — Neue Haas Grotesk Display (web). */
 export const fontFamilyDisplay = Platform.select({
   web: 'var(--font-display)',
+  default: undefined,
+}) as string | undefined;
+
+/** Condensed face for large numerals / stat figures — Acumin Pro Extra Condensed (web). */
+export const fontFamilyCondensed = Platform.select({
+  web: 'var(--font-condensed)',
   default: undefined,
 }) as string | undefined;
 

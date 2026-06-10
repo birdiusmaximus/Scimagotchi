@@ -1,10 +1,10 @@
+import { LinearGradient } from 'expo-linear-gradient';
 import { useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { GradientBackground } from '@/components/GradientBackground';
-import { Glass } from '@/components/Glass';
 import { IconButton } from '@/components/IconButton';
 import { useGoBack } from '@/hooks/useGoBack';
 import { MessageBubble } from '@/components/MessageBubble';
@@ -14,6 +14,7 @@ import { emotionEventsRepo, messagesRepo } from '@/services/db/repos';
 import { palette, radii, spacing } from '@/theme/tokens';
 import type { EmotionEvent, Message, UnlockStage } from '@/types/models';
 import { prettyDate } from '@/utils/date';
+import { tintPair, withAlpha } from '@/utils/color';
 
 const STAGE_LABEL: Record<UnlockStage, string> = {
   noticed: 'Noticed',
@@ -79,41 +80,48 @@ export default function EntryScreen() {
             </Txt>
           ) : (
             <>
-              <Glass radius={radii.lg} contentStyle={styles.card}>
-                <View style={styles.headerRow}>
-                  <View style={[styles.dot, { backgroundColor: color }]} />
-                  <Txt variant="label" color={palette.inkOnGlass} style={{ flex: 1 }}>
-                    {map ? map.label : 'Reflection'}
+              <View style={styles.card}>
+                <LinearGradient colors={tintPair(color)} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.hero}>
+                  <View style={styles.heroTop}>
+                    <Txt variant="subtitle" font="display" color={palette.white} style={{ flex: 1 }}>
+                      {map ? map.label : 'Reflection'}
+                    </Txt>
+                    <View style={styles.heroBadge}>
+                      <Txt variant="small" color={palette.white}>
+                        {STAGE_LABEL[event.unlock_stage]}
+                      </Txt>
+                    </View>
+                  </View>
+                  {event.emotion_shade ? (
+                    <Txt variant="body" color="rgba(255,255,255,0.95)">
+                      {event.emotion_shade}
+                    </Txt>
+                  ) : null}
+                  <Txt variant="small" color="rgba(255,255,255,0.82)">
+                    {prettyDate(event.timestamp)}
                   </Txt>
-                  <View style={styles.badge}>
-                    <Txt variant="small" color={palette.accentDeep}>
-                      {STAGE_LABEL[event.unlock_stage]}
-                    </Txt>
-                  </View>
+                </LinearGradient>
+
+                <View style={styles.body}>
+                  {event.user_words_raw ? <Field label="Your words" value={`“${event.user_words_raw}”`} /> : null}
+                  {event.body_cue.length ? <Field label="Felt shape" value={event.body_cue.join(', ')} /> : null}
+                  {event.trigger_event ? <Field label="What happened" value={event.trigger_event} /> : null}
+                  {event.appraisal_thought ? (
+                    <Field label="What it seemed to mean" value={event.appraisal_thought} />
+                  ) : null}
+
+                  {event.memory_note ? (
+                    <View style={[styles.note, { backgroundColor: withAlpha(color, 0.14) }]}>
+                      <Txt variant="small" color={palette.inkSoft}>
+                        What the companion learned
+                      </Txt>
+                      <Txt variant="body" color={palette.inkOnGlass}>
+                        {event.memory_note}
+                      </Txt>
+                    </View>
+                  ) : null}
                 </View>
-                <Txt variant="small" color={palette.inkSoft} style={{ marginBottom: spacing.xs }}>
-                  {prettyDate(event.timestamp)}
-                </Txt>
-
-                {event.emotion_shade ? <Field label="Shade" value={event.emotion_shade} /> : null}
-                {event.user_words_raw ? <Field label="Your words" value={`“${event.user_words_raw}”`} /> : null}
-                {event.body_cue.length ? <Field label="Felt shape" value={event.body_cue.join(', ')} /> : null}
-                {event.trigger_event ? <Field label="What happened" value={event.trigger_event} /> : null}
-                {event.appraisal_thought ? (
-                  <Field label="What it seemed to mean" value={event.appraisal_thought} />
-                ) : null}
-
-                {event.memory_note ? (
-                  <View style={styles.note}>
-                    <Txt variant="small" color={palette.inkSoft}>
-                      What the companion learned
-                    </Txt>
-                    <Txt variant="body" color={palette.inkOnGlass}>
-                      {event.memory_note}
-                    </Txt>
-                  </View>
-                ) : null}
-              </Glass>
+              </View>
 
               {messages.length ? (
                 <View style={styles.convo}>
@@ -138,19 +146,19 @@ const styles = StyleSheet.create({
   safe: { flex: 1, paddingHorizontal: spacing.lg },
   bar: { paddingTop: spacing.sm, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   scroll: { paddingVertical: spacing.lg, gap: spacing.md },
-  card: { padding: spacing.lg, gap: 4 },
-  headerRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
-  dot: { width: 12, height: 12, borderRadius: 6 },
-  badge: {
-    backgroundColor: 'rgba(124,140,248,0.18)',
+  card: { borderRadius: radii.lg, overflow: 'hidden', boxShadow: '0px 10px 26px rgba(95,90,160,0.16)' },
+  hero: { padding: spacing.lg, gap: 4 },
+  heroTop: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
+  heroBadge: {
+    backgroundColor: 'rgba(255,255,255,0.28)',
     borderRadius: radii.pill,
     paddingVertical: 4,
     paddingHorizontal: 10,
   },
+  body: { backgroundColor: 'rgba(255,255,255,0.74)', padding: spacing.lg, gap: 4 },
   field: { marginTop: spacing.sm, gap: 2 },
   note: {
     marginTop: spacing.md,
-    backgroundColor: 'rgba(255,255,255,0.5)',
     borderRadius: radii.md,
     padding: spacing.md,
     gap: 4,

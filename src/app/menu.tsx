@@ -1,4 +1,5 @@
 import { Feather } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter, type Href } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -10,13 +11,14 @@ import { PressableScale } from '@/components/PressableScale';
 import { Txt } from '@/components/Txt';
 import { useGoBack } from '@/hooks/useGoBack';
 import { palette, radii, spacing } from '@/theme/tokens';
+import { tintPair } from '@/utils/color';
 
-const ITEMS: { label: string; icon: keyof typeof Feather.glyphMap; route: Href; hint: string }[] = [
-  { label: 'Memory', icon: 'calendar', route: '/memory', hint: 'Your emotional record' },
-  { label: 'Patterns', icon: 'activity', route: '/patterns', hint: 'Weekly reflections' },
-  { label: 'Therapy notes', icon: 'file-text', route: '/export', hint: 'Export a PDF summary' },
-  { label: 'Support', icon: 'life-buoy', route: '/support', hint: 'Help & resources' },
-  { label: 'Settings', icon: 'sliders', route: '/settings', hint: 'Privacy & preferences' },
+const ITEMS: { label: string; icon: keyof typeof Feather.glyphMap; route: Href; hint: string; tint: string }[] = [
+  { label: 'Memory', icon: 'calendar', route: '/memory', hint: 'Your emotional record', tint: '#6E8BF5' },
+  { label: 'Patterns', icon: 'activity', route: '/patterns', hint: 'Weekly reflections', tint: '#9E6CF1' },
+  { label: 'Therapy notes', icon: 'file-text', route: '/export', hint: 'Export a PDF summary', tint: '#E07BB0' },
+  { label: 'Support', icon: 'life-buoy', route: '/support', hint: 'Help & resources', tint: '#EF7E6B' },
+  { label: 'Settings', icon: 'sliders', route: '/settings', hint: 'Privacy & preferences', tint: '#5FBFA6' },
 ];
 
 export default function MenuScreen() {
@@ -36,9 +38,9 @@ export default function MenuScreen() {
           {ITEMS.map((item) => (
             <PressableScale key={item.label} onPress={() => router.push(item.route)} scaleTo={0.97}>
               <Glass radius={radii.lg} contentStyle={styles.row}>
-                <View style={styles.iconWrap}>
-                  <Feather name={item.icon} size={20} color={palette.accentDeep} />
-                </View>
+                <LinearGradient colors={tintPair(item.tint)} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.iconWrap}>
+                  <Feather name={item.icon} size={19} color={palette.white} />
+                </LinearGradient>
                 <View style={{ flex: 1 }}>
                   <Txt variant="label" color={palette.inkOnGlass}>
                     {item.label}
@@ -75,11 +77,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.md,
   },
   iconWrap: {
-    width: 40,
-    height: 40,
-    borderRadius: radii.full,
+    width: 42,
+    height: 42,
+    borderRadius: 14,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'rgba(255,255,255,0.5)',
+    boxShadow: '0px 4px 10px rgba(95,90,160,0.20)',
   },
 });

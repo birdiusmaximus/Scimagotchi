@@ -1,0 +1,185 @@
+{
+  "cid": "fear__17",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-09T17:37:11.753Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "logging something. nervous about my relationship i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds a bit uneasy, maybe nervous or uncertain. What feels most alive in it right now?"
+    },
+    {
+      "role": "user",
+      "content": "he's been distant. like he texts back hours later now. didnt used to be like that"
+    },
+    {
+      "role": "companion",
+      "content": "That shift sounds unsettling, especially when it used to be different. Does it feel more like worry, hurt, or both?"
+    },
+    {
+      "role": "user",
+      "content": "worry mostly. keep thinking hes losing interest. or theres someone else. i dont know"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like worry circling around two hard possibilities. Does it make you want to check, wait, or pull back?"
+    },
+    {
+      "role": "user",
+      "content": "check probably. i keep staring at my phone. its bad. anniversary is next week too and he hasnt said anything"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds very on edge — staring at your phone, with the anniversary coming up and no word yet. Is it more of a tense, restless feeling, or more of a frozen waiting?"
+    },
+    {
+      "role": "user",
+      "content": "restless. cant sit still. anyway thats it really. just needed to put it somewhere"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — restless and waiting with nowhere to put it until now. We can leave it here, or if you want, I can stay with what this is asking for underneath."
+    },
+    {
+      "role": "user",
+      "content": "leave it here. thanks. gotta go"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — we can leave it here. Take care, and come back any time if you want to pick it up again."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6x9t6z3vp0wry1",
+    "conversation_id": "fear__17",
+    "timestamp": "2026-06-09T17:37:38.489Z",
+    "user_words_raw": "leave it here",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "restless",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "he's been distant; anniversary is next week and he hasn't said anything",
+    "appraisal_thought": "he's losing interest; there could be someone else",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User wanted to leave the feeling here for now.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "logging something. nervous about my relationship i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds a bit uneasy, maybe nervous or uncertain. What feels most alive in it right now?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "nervous",
+      "body_cue": [],
+      "trigger": "their relationship"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "he's been distant. like he texts back hours later now. didnt used to be like that"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That shift sounds unsettling, especially when it used to be different. Does it feel more like worry, hurt, or both?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": "he's been distant; texts back hours later now"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "worry mostly. keep thinking hes losing interest. or theres someone else. i dont know"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like worry circling around two hard possibilities. Does it make you want to check, wait, or pull back?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "worried",
+      "body_cue": [],
+      "trigger": "he's been distant; texts back hours later now"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "check probably. i keep staring at my phone. its bad. anniversary is next week too and he hasnt said anything"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds very on edge — staring at your phone, with the anniversary coming up and no word yet. Is it more of a tense, restless feeling, or more of a frozen waiting?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "on edge",
+      "body_cue": [],
+      "trigger": "he's been distant; texts back hours later now; anniversary is next week and he hasn't said anything"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "restless. cant sit still. anyway thats it really. just needed to put it somewhere"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That makes sense — restless and waiting with nowhere to put it until now. We can leave it here, or if you want, I can stay with what this is asking for underneath.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "restless",
+      "body_cue": [],
+      "trigger": "he's been distant; anniversary is next week and he hasn't said anything"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "leave it here. thanks. gotta go"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course — we can leave it here. Take care, and come back any time if you want to pick it up again.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "restless",
+      "body_cue": [],
+      "trigger": "he's been distant; anniversary is next week and he hasn't said anything"
+    }
+  ]
+}

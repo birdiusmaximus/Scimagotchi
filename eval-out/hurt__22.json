@@ -1,0 +1,266 @@
+{
+  "cid": "hurt__22",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-09T18:22:35.469Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont even know why im typing this. just kind of a rough day"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like one of those rough-day states where the feeling is there, but the shape of it is still blurry. Is it more heavy, tense, or just worn down?"
+    },
+    {
+      "role": "user",
+      "content": "not really tense. more like. worn down i guess but theres a thing underneath it. i found out today my best friend had a whole birthday dinner and didnt invite me"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds hurt, with a worn-down layer on top. Was the hardest part the exclusion itself, or what it seemed to say about you?"
+    },
+    {
+      "role": "user",
+      "content": "what it says about me probably. like i saw the photos on instagram. everyone was there. people i introduced HER to. and im just. not on the list anymore i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a sharp kind of left-out hurt — seeing the photos, and then the thought of not being on the list anymore. Did it make you want to pull back, or go quiet?"
+    },
+    {
+      "role": "user",
+      "content": "go quiet. i already did. she texted me happy something meme thing yesterday like nothing and i just left her on read. ten years we been friends. i was at her dads funeral. i dont get it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like hurt mixed with a very deep kind of betrayal — ten years, and especially being there at her dad’s funeral makes this feel bigger than just one dinner. Do you want to stay with what this is asking for, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "no i want to stay with it. cause heres the thing i keep going back and forth. part of me is so angry. but the other part is like. did i do something. was i too much lately. ive been a mess since my mom got sick and maybe shes just done with me being heavy"
+    },
+    {
+      "role": "companion",
+      "content": "I’m hearing anger and also a self-blame kind of wobble — like maybe you’re wondering if being “heavy” pushed her away. Does that fit, or is it more about fearing you were too much?"
+    },
+    {
+      "role": "user",
+      "content": "yeah the too much thing. like i called her crying twice last month about my mom. and she was nice about it but maybe she didnt mean it. maybe everyone has a limit and i hit hers and now im the friend you dont invite anymore"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a painful “too much” story landing on top of the hurt — as if the dinner became proof you hit a limit. Do you want to stay with that meaning a little more, or would it help to leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "i dont know. saying it out loud it sounds like im making the dinner mean the worst possible thing. like i jumped straight to im unlovable instead of maybe she planned it weird or forgot or i dunno. doesnt make the hurt go away tho"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — the hurt is still there, even if the story got bigger than the dinner. I’m wondering if what’s loudest now is the sting of being left out, or the fear it says something about you?"
+    },
+    {
+      "role": "user",
+      "content": "the fear of what it says about me. thats the loud one. the left out part stings but i can sit with that. its the what if everyone leaves when im hard to love that keeps me up. anyway. maybe ill actually text her back and just ask instead of spiraling"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the sharpest part: not just being left out, but what it seems to say about you. We can leave it here, or if you want, we can stay with that fear of being hard to love a little longer."
+    },
+    {
+      "role": "user",
+      "content": "lets leave it here. im tired but a bit less knotted up than i was. thanks for letting me ramble. gonna go text her back before i lose my nerve"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — I’m glad it loosened a little, even if it’s still tender. Go text her back, and we can pick this up another time if you want."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yw71wa1ylqmwi",
+    "conversation_id": "hurt__22",
+    "timestamp": "2026-06-09T18:23:33.083Z",
+    "user_words_raw": "hard to love",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "too much",
+    "secondary_emotions": [
+      "hurt"
+    ],
+    "valence": "mixed",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "seeing a friend’s birthday dinner photos and realizing they weren’t invited",
+    "appraisal_thought": "what if everyone leaves when I'm hard to love",
+    "body_cue": [],
+    "behaviour_action": [
+      "text her back"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "belonging",
+      "acceptance",
+      "being understood",
+      "dignity"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "A feeling of being too much comes up when feeling excluded from friends while already strained by a family illness.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont even know why im typing this. just kind of a rough day"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like one of those rough-day states where the feeling is there, but the shape of it is still blurry. Is it more heavy, tense, or just worn down?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "rough day",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "not really tense. more like. worn down i guess but theres a thing underneath it. i found out today my best friend had a whole birthday dinner and didnt invite me"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds hurt, with a worn-down layer on top. Was the hardest part the exclusion itself, or what it seemed to say about you?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "found out their best friend had a birthday dinner and didn't invite them"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "what it says about me probably. like i saw the photos on instagram. everyone was there. people i introduced HER to. and im just. not on the list anymore i guess"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like a sharp kind of left-out hurt — seeing the photos, and then the thought of not being on the list anymore. Did it make you want to pull back, or go quiet?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [],
+      "trigger": "found out their best friend had a birthday dinner and didn't invite them"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "go quiet. i already did. she texted me happy something meme thing yesterday like nothing and i just left her on read. ten years we been friends. i was at her dads funeral. i dont get it"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like hurt mixed with a very deep kind of betrayal — ten years, and especially being there at her dad’s funeral makes this feel bigger than just one dinner. Do you want to stay with what this is asking for, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "betrayed",
+      "body_cue": [],
+      "trigger": "Best friend had a birthday dinner and didn’t invite them, then texted like nothing happened"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "no i want to stay with it. cause heres the thing i keep going back and forth. part of me is so angry. but the other part is like. did i do something. was i too much lately. ive been a mess since my mom got sick and maybe shes just done with me being heavy"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "I’m hearing anger and also a self-blame kind of wobble — like maybe you’re wondering if being “heavy” pushed her away. Does that fit, or is it more about fearing you were too much?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "betrayed",
+      "body_cue": [],
+      "trigger": "Best friend had a birthday dinner and didn’t invite them, then texted like nothing happened."
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah the too much thing. like i called her crying twice last month about my mom. and she was nice about it but maybe she didnt mean it. maybe everyone has a limit and i hit hers and now im the friend you dont invite anymore"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like a painful “too much” story landing on top of the hurt — as if the dinner became proof you hit a limit. Do you want to stay with that meaning a little more, or would it help to leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "too much",
+      "body_cue": [],
+      "trigger": "best friend had a birthday dinner and didn’t invite them, then texted like nothing happened"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "i dont know. saying it out loud it sounds like im making the dinner mean the worst possible thing. like i jumped straight to im unlovable instead of maybe she planned it weird or forgot or i dunno. doesnt make the hurt go away tho"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That makes sense — the hurt is still there, even if the story got bigger than the dinner. I’m wondering if what’s loudest now is the sting of being left out, or the fear it says something about you?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "too much",
+      "body_cue": [],
+      "trigger": "seeing a friend’s birthday dinner photos and realizing they weren’t invited"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "the fear of what it says about me. thats the loud one. the left out part stings but i can sit with that. its the what if everyone leaves when im hard to love that keeps me up. anyway. maybe ill actually text her back and just ask instead of spiraling"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That sounds like the sharpest part: not just being left out, but what it seems to say about you. We can leave it here, or if you want, we can stay with that fear of being hard to love a little longer.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "too much",
+      "body_cue": [],
+      "trigger": "seeing a friend’s birthday dinner photos and realizing they weren’t invited"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "lets leave it here. im tired but a bit less knotted up than i was. thanks for letting me ramble. gonna go text her back before i lose my nerve"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Of course — I’m glad it loosened a little, even if it’s still tender. Go text her back, and we can pick this up another time if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "too much",
+      "body_cue": [],
+      "trigger": "seeing a friend’s birthday dinner photos and realizing they weren’t invited"
+    }
+  ]
+}

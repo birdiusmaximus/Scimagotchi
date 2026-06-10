@@ -1,0 +1,198 @@
+{
+  "cid": "shame__10",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-09T18:24:16.420Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. i dont really know why im here lol. just had a kind of rough day i guess and a friend said this app helped her so. anyway hi"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — hi. A rough day can be enough reason on its own; what’s the roughest part of it so far?"
+    },
+    {
+      "role": "user",
+      "content": "ugh i dont even know. ok so i had my annual physical today and my doctor basically. she didnt say anything mean but she did the whole lets talk about your weight thing and pulled up my numbers and. idk. my a1c is creeping up and my bloodpressure was high and ive been telling myself for like a year id deal with it and i just. havent"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds disappointing and maybe a little heavy — like you got shown something you’d been putting off. Does it feel more heavy, embarrassed, or just let down?"
+    },
+    {
+      "role": "user",
+      "content": "embarrassed for sure. like i sat there in the paper gown and i could feel my face going red. and the worst part is shes really nice?? she wasnt judging me at all but i was judging me. like i KNOW better. i used to be the person who meal prepped and ran 5ks and now i couldnt even tell her the last time i went for a walk. theres this voice going youre 34 how did you let yourself get here. embarrassed but also just kind of mad at myself i guess, both at the same time"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like embarrassment with a sharp edge of self-madness, especially sitting there in the gown and going red. When that voice shows up, what does it make you want to do?"
+    },
+    {
+      "role": "user",
+      "content": "honestly it makes me want to just. not deal with it. like avoid. i scheduled the follow up bloodwork for six weeks out and part of me already knows ill probably push it. and theres this thing where i dont even want to tell my partner the numbers because then itll be real and theyll worry and then ill feel like ive let them down too. so i just kind of want to disappear into my phone and pretend the appointment didnt happen. which i know is exactly the thing that got me here in the first place lol"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like embarrassment turning into wanting to hide, avoid, and not make it real with your partner. It sounds like the appointment touched both the numbers and the fear of letting someone else down — does that feel right, or is there another piece under it?"
+    },
+    {
+      "role": "user",
+      "content": "yeah theres another piece i think. its like. my mom had all this stuff, the bp, the diabetes, and i watched what it did to her and i swore id never let that be me. so seeing those numbers today felt like im becoming the exact thing i was scared of. like im failing some promise i made when i was a kid. its not even really about the gown or the doctor its that. but ok saying it out loud it sounds less like im a failure and more like im just. scared. which is different i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Yes — that sounds more like fear showing up under the embarrassment, especially with those numbers feeling like you were becoming the thing you were scared of. I can leave it there, or stay with that scared part a little longer if you want."
+    },
+    {
+      "role": "user",
+      "content": "no i think thats enough for tonight, my brain is kind of full now. but that actually helped, like calling it scared instead of just hating myself. maybe ill tell my partner the numbers this weekend. idk. thank you for this, im gonna go put my phone down for once"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a good place to stop for tonight. I’m glad we found the scared part; you can come back to it anytime."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yycq18edgi1cc",
+    "conversation_id": "shame__10",
+    "timestamp": "2026-06-09T18:24:54.040Z",
+    "user_words_raw": "my brain is kind of full now",
+    "emotion_status": "confirmed",
+    "emotion_family": "fear",
+    "emotion_shade": "scared",
+    "secondary_emotions": [
+      "embarrassed"
+    ],
+    "valence": "mixed",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "seeing annual physical results and being reminded of a parent’s illness",
+    "appraisal_thought": "becoming the exact thing I was scared of",
+    "body_cue": [],
+    "behaviour_action": [
+      "put my phone down"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "safety",
+      "certainty",
+      "support",
+      "trust"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Annual physical results can bring up fear, embarrassment, and self-judgment; family illness makes it feel more personal.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. i dont really know why im here lol. just had a kind of rough day i guess and a friend said this app helped her so. anyway hi"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — hi. A rough day can be enough reason on its own; what’s the roughest part of it so far?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "disappointed",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "ugh i dont even know. ok so i had my annual physical today and my doctor basically. she didnt say anything mean but she did the whole lets talk about your weight thing and pulled up my numbers and. idk. my a1c is creeping up and my bloodpressure was high and ive been telling myself for like a year id deal with it and i just. havent"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds disappointing and maybe a little heavy — like you got shown something you’d been putting off. Does it feel more heavy, embarrassed, or just let down?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "disappointed",
+      "body_cue": [],
+      "trigger": "annual physical and being confronted with weight, A1c, and high blood pressure"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "embarrassed for sure. like i sat there in the paper gown and i could feel my face going red. and the worst part is shes really nice?? she wasnt judging me at all but i was judging me. like i KNOW better. i used to be the person who meal prepped and ran 5ks and now i couldnt even tell her the last time i went for a walk. theres this voice going youre 34 how did you let yourself get here. embarrassed but also just kind of mad at myself i guess, both at the same time"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like embarrassment with a sharp edge of self-madness, especially sitting there in the gown and going red. When that voice shows up, what does it make you want to do?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [
+        "face going red"
+      ],
+      "trigger": "annual physical and being confronted with weight, A1c, and blood pressure numbers"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "honestly it makes me want to just. not deal with it. like avoid. i scheduled the follow up bloodwork for six weeks out and part of me already knows ill probably push it. and theres this thing where i dont even want to tell my partner the numbers because then itll be real and theyll worry and then ill feel like ive let them down too. so i just kind of want to disappear into my phone and pretend the appointment didnt happen. which i know is exactly the thing that got me here in the first place lol"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That feels like embarrassment turning into wanting to hide, avoid, and not make it real with your partner. It sounds like the appointment touched both the numbers and the fear of letting someone else down — does that feel right, or is there another piece under it?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [
+        "face going red"
+      ],
+      "trigger": "annual physical, being shown weight, A1c, and blood pressure numbers, and thinking about telling partner"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah theres another piece i think. its like. my mom had all this stuff, the bp, the diabetes, and i watched what it did to her and i swore id never let that be me. so seeing those numbers today felt like im becoming the exact thing i was scared of. like im failing some promise i made when i was a kid. its not even really about the gown or the doctor its that. but ok saying it out loud it sounds less like im a failure and more like im just. scared. which is different i guess"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Yes — that sounds more like fear showing up under the embarrassment, especially with those numbers feeling like you were becoming the thing you were scared of. I can leave it there, or stay with that scared part a little longer if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "scared",
+      "body_cue": [],
+      "trigger": "seeing annual physical results and being reminded of a parent’s illness"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "no i think thats enough for tonight, my brain is kind of full now. but that actually helped, like calling it scared instead of just hating myself. maybe ill tell my partner the numbers this weekend. idk. thank you for this, im gonna go put my phone down for once"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels like a good place to stop for tonight. I’m glad we found the scared part; you can come back to it anytime.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "scared",
+      "body_cue": [],
+      "trigger": "seeing annual physical results and being reminded of a parent’s illness"
+    }
+  ]
+}

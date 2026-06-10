@@ -1,0 +1,197 @@
+{
+  "cid": "joy__14",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-09T17:42:23.103Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. ok this is gonna sound silly but i just need to tell someone. my daughter took her first steps today"
+    },
+    {
+      "role": "companion",
+      "content": "That’s such a beautiful first step to get to witness. It sounds like a really joyful, maybe tender moment — what was it like for you when it happened?"
+    },
+    {
+      "role": "user",
+      "content": "honestly i kind of froze. she just let go of the coffee table and did like three wobbly steps toward me and i had my phone half up but i didnt even get it on video lol. i just kept saying her name. my wife was in the other room and i yelled for her so loud"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a burst of delight and surprise, with a little rush to share it — almost like your whole body went toward the moment. Did it make you want to grab it, shout it, or just stay right there?"
+    },
+    {
+      "role": "user",
+      "content": "stay right there i think. like i didnt want to move and break it. she had this huge proud grin like she KNEW she did something. and it hit me she was this tiny thing in the nicu 11 months ago and now shes walking at me. i got a bit teary not gonna lie"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like delight with something tender and moving underneath it, especially with the NICU memory landing all at once. Do you want to stay with that moment a little longer, or leave it right there?"
+    },
+    {
+      "role": "user",
+      "content": "maybe just a little longer. its weird how proud i am of her, like genuinely proud, but its also proud of us? we were so scared back then. the beeping machines and everything. and today she just walked. like it all worked out"
+    },
+    {
+      "role": "companion",
+      "content": "It sounds like pride in her and pride in the two of you, with that old fear still nearby in the background. What does \"it all worked out\" mean to you in this moment?"
+    },
+    {
+      "role": "user",
+      "content": "i think it means shes ok. she made it. all those nights i told myself shed be fine and i didnt fully believe it. and now i kind of do. shes here and shes walking and shes mine. ok im actually smiling at my phone now"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like relief and pride settling together, and the smile says it’s still very alive in you. We can leave it here, or if you want, we can stay with what “she’s mine” feels like."
+    },
+    {
+      "role": "user",
+      "content": "lets leave it here i think. i kind of just want to go scoop her up now haha. thanks for letting me say it out loud. needed that"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — I’ll leave it there with you. That feels like something worth holding quietly; go scoop her up."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xghsfargckuv4",
+    "conversation_id": "joy__14",
+    "timestamp": "2026-06-09T17:43:02.149Z",
+    "user_words_raw": "she's mine",
+    "emotion_status": "confirmed",
+    "emotion_family": "joy",
+    "emotion_shade": "relieved, proud",
+    "secondary_emotions": [
+      "tenderness"
+    ],
+    "valence": "positive",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "she took a few wobbly steps toward me after starting from the coffee table",
+    "appraisal_thought": "she's ok; she made it",
+    "body_cue": [],
+    "behaviour_action": [
+      "smiling at my phone",
+      "go scoop her up"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "belonging",
+      "appreciation",
+      "family"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "A child’s first steps after a difficult start brought pride, relief, and a sense of family bond.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. ok this is gonna sound silly but i just need to tell someone. my daughter took her first steps today"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That’s such a beautiful first step to get to witness. It sounds like a really joyful, maybe tender moment — what was it like for you when it happened?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "delighted",
+      "body_cue": [],
+      "trigger": "their daughter took her first steps"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "honestly i kind of froze. she just let go of the coffee table and did like three wobbly steps toward me and i had my phone half up but i didnt even get it on video lol. i just kept saying her name. my wife was in the other room and i yelled for her so loud"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a burst of delight and surprise, with a little rush to share it — almost like your whole body went toward the moment. Did it make you want to grab it, shout it, or just stay right there?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "delight",
+      "body_cue": [],
+      "trigger": "their daughter took three wobbly steps toward them"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "stay right there i think. like i didnt want to move and break it. she had this huge proud grin like she KNEW she did something. and it hit me she was this tiny thing in the nicu 11 months ago and now shes walking at me. i got a bit teary not gonna lie"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That feels like delight with something tender and moving underneath it, especially with the NICU memory landing all at once. Do you want to stay with that moment a little longer, or leave it right there?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "tender delight",
+      "body_cue": [
+        "got a bit teary"
+      ],
+      "trigger": "she took wobbly steps toward them after being tiny in the NICU 11 months ago"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "maybe just a little longer. its weird how proud i am of her, like genuinely proud, but its also proud of us? we were so scared back then. the beeping machines and everything. and today she just walked. like it all worked out"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "It sounds like pride in her and pride in the two of you, with that old fear still nearby in the background. What does \"it all worked out\" mean to you in this moment?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud, tender",
+      "body_cue": [],
+      "trigger": "she took her first steps after a NICU start 11 months ago"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i think it means shes ok. she made it. all those nights i told myself shed be fine and i didnt fully believe it. and now i kind of do. shes here and shes walking and shes mine. ok im actually smiling at my phone now"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like relief and pride settling together, and the smile says it’s still very alive in you. We can leave it here, or if you want, we can stay with what “she’s mine” feels like.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relieved, proud",
+      "body_cue": [],
+      "trigger": "your daughter took her first steps after a NICU start"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "lets leave it here i think. i kind of just want to go scoop her up now haha. thanks for letting me say it out loud. needed that"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course — I’ll leave it there with you. That feels like something worth holding quietly; go scoop her up.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relieved, proud",
+      "body_cue": [],
+      "trigger": "she took a few wobbly steps toward me after starting from the coffee table"
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "cid": "fear__11",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-09T17:36:51.269Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. not really sure what im doing here"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that’s completely okay. We can just take it as it comes; what’s been nudging you to message today?"
+    },
+    {
+      "role": "user",
+      "content": "dunno. work stuff i guess. its probably nothing"
+    },
+    {
+      "role": "companion",
+      "content": "Work stuff sounds like it’s sitting there anyway, even if it feels like “probably nothing.” Is it more vague, or more like you’d rather not look at it yet?"
+    },
+    {
+      "role": "user",
+      "content": "rather not look at it honestly. theres these layoffs coming. nobody will say who. my managers been weird w me all week"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a tense kind of not-knowing, with your manager’s weirdness making it feel even harder to stand in. Does it feel more like pressure, worry, or both?"
+    },
+    {
+      "role": "user",
+      "content": "worry. like a low hum i cant turn off. i keep refreshing my email waiting for the meeting invite that means im done. been here 6 yrs"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a low, constant worry — and the refreshing feels like you’re bracing for that invite. What does it make you want to do, if anything?"
+    },
+    {
+      "role": "user",
+      "content": "honestly part of me just wants them to do it already so the waiting stops. and part of me is terrified bc i dont know how id pay rent. i havent told anyone, not even my partner"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds split between wanting the waiting to end and being scared of what comes next, especially with rent and carrying it alone. If you want, we can stay with it here or look a little more at what the “not telling anyone” part is holding."
+    },
+    {
+      "role": "user",
+      "content": "i think thats enough for now. i dont really wanna get into the partner thing. but it helped to say it out loud i guess. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That’s enough for now, and that’s completely okay. I’m glad saying it out loud helped a little."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6x9df0d5nedcm7",
+    "conversation_id": "fear__11",
+    "timestamp": "2026-06-09T17:37:22.620Z",
+    "user_words_raw": "a low hum i cant turn off",
+    "emotion_status": "confirmed",
+    "emotion_family": "fear",
+    "emotion_shade": "worried",
+    "secondary_emotions": [
+      "pressure"
+    ],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "layoffs coming and waiting for the meeting invite",
+    "appraisal_thought": "something bad might happen and I don’t know what will happen",
+    "body_cue": [],
+    "behaviour_action": [
+      "refreshing my email",
+      "wanting them to do it already",
+      "not told anyone"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "certainty",
+      "support",
+      "protection"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Worry at work about layoffs; carrying it privately and checking email repeatedly.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. not really sure what im doing here"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that’s completely okay. We can just take it as it comes; what’s been nudging you to message today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "dunno. work stuff i guess. its probably nothing"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Work stuff sounds like it’s sitting there anyway, even if it feels like “probably nothing.” Is it more vague, or more like you’d rather not look at it yet?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "vague",
+      "body_cue": [],
+      "trigger": "work stuff"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "rather not look at it honestly. theres these layoffs coming. nobody will say who. my managers been weird w me all week"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like a tense kind of not-knowing, with your manager’s weirdness making it feel even harder to stand in. Does it feel more like pressure, worry, or both?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "tense",
+      "body_cue": [],
+      "trigger": "layoffs coming and manager acting weird"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "worry. like a low hum i cant turn off. i keep refreshing my email waiting for the meeting invite that means im done. been here 6 yrs"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like a low, constant worry — and the refreshing feels like you’re bracing for that invite. What does it make you want to do, if anything?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "worry",
+      "body_cue": [],
+      "trigger": "layoffs coming and waiting for a meeting invite"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "honestly part of me just wants them to do it already so the waiting stops. and part of me is terrified bc i dont know how id pay rent. i havent told anyone, not even my partner"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds split between wanting the waiting to end and being scared of what comes next, especially with rent and carrying it alone. If you want, we can stay with it here or look a little more at what the “not telling anyone” part is holding.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "worried",
+      "body_cue": [],
+      "trigger": "layoffs coming and waiting for the meeting invite"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "i think thats enough for now. i dont really wanna get into the partner thing. but it helped to say it out loud i guess. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That’s enough for now, and that’s completely okay. I’m glad saying it out loud helped a little.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "worried",
+      "body_cue": [],
+      "trigger": "layoffs coming and waiting for the meeting invite"
+    }
+  ]
+}

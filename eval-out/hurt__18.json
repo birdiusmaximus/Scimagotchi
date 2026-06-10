@@ -1,0 +1,198 @@
+{
+  "cid": "hurt__18",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-09T18:21:53.734Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. i dont really know how to start this. ive just been kind of off all week and i think i needed somewhere to put it that isnt a person who'll get tired of me"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, you can start anywhere here. “Kind of off all week” feels like the main thing so far—what does that off-ness feel like for you, if anything?"
+    },
+    {
+      "role": "user",
+      "content": "off isnt quite the word maybe. its more like.. hurt? but also angry at myself for being hurt. ok so the thing is my manager basically told me in my review that theres 'no clear path' for me here for at least another two years and i just sat there nodding. ive been there three years. i turned down another offer in january because she told me to my face that i was 'next in line'"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like hurt with a sharp edge of anger at yourself too. I’m wondering if the biggest sting is the review, or the \"next in line\" part?"
+    },
+    {
+      "role": "user",
+      "content": "the next in line thing. 100 percent. like the review on its own would just be disappointing but the fact that she SAID that to me and i made an actual decision based on it.. i declined the other job, i told them no thank you, i was so sure. and now i dont even know if she remembers saying it. thats whats eating me. did she just say it to keep me from leaving? was it always a maybe and i heard what i wanted to hear? i keep going back and forth and i cant tell anymore if im allowed to be this upset"
+    },
+    {
+      "role": "companion",
+      "content": "Yes — that “next in line” part is where the hurt seems to turn sharpest, and maybe into feeling misled or second-guessing yourself. Did it land more like betrayal, or like being made to look back and wonder if you were only ever a maybe?"
+    },
+    {
+      "role": "user",
+      "content": "honestly both at the same time and i hate that. like part of me is furious because i trusted her, shes not just my boss shes someone i actually looked up to, i defended her to other people. so yeah it feels like betrayal. but then the other half of me is like.. you idiot, you should never have made a life decision off one sentence in a hallway, this is on you for being naive. and i cant hold both. one minute im angry at her the next im angry at me and theres no version where i just feel okay. and the future part is the worst bit honestly because now im just stuck. do i start looking again. do i wait out the two years she mentioned and hope. i genuinely dont know what happens next and i used to always know"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like betrayal and self-blame tangled together, with the hardest part being that you don’t know what happens next. Does it feel more like a tight, restless stuckness, or more like a drop when you think about the future?"
+    },
+    {
+      "role": "user",
+      "content": "a drop. definitely a drop. like that feeling when you miss a step on the stairs except it doesnt stop. i think i hadnt actually said the betrayal word out loud til now, even to myself. ive just been calling it being disappointed because that felt more reasonable, like i was allowed to feel that one. saying betrayed feels dramatic but it also feels.. true? i dont know. it helps a tiny bit to just put it somewhere"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — “betrayed” sounds like the truer word, even if it feels dramatic to say. If you want, we can leave it there for now, or stay with what that drop is asking for underneath."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there i think. im kind of wrung out now but in a good way? the future stuff is still sitting there and i dont have an answer for any of it but at least i know what im actually feeling underneath now instead of pretending its just disappointment. thank you for this. genuinely. i didnt expect to actually say the real thing tonight but here we are. ok. night"
+    },
+    {
+      "role": "companion",
+      "content": "Night — I’m glad we found the real word together. You can let it rest here, and if you come back to the future part later, we can meet it then."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yvb0qles3s1kg",
+    "conversation_id": "hurt__18",
+    "timestamp": "2026-06-09T18:22:42.573Z",
+    "user_words_raw": "betrayed",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "betrayed",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "manager said there was 'no clear path' after previously saying the user was 'next in line'",
+    "appraisal_thought": "I trusted her and acted on what she said, and now I’m left wondering if I misread it or was misled.",
+    "body_cue": [
+      "a drop"
+    ],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "truth",
+      "trust",
+      "reassurance",
+      "clarity",
+      "repair"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "A manager's promise of next steps later turned unclear, leaving the user feeling betrayed and self-blaming.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. i dont really know how to start this. ive just been kind of off all week and i think i needed somewhere to put it that isnt a person who'll get tired of me"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, you can start anywhere here. “Kind of off all week” feels like the main thing so far—what does that off-ness feel like for you, if anything?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "off",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "off isnt quite the word maybe. its more like.. hurt? but also angry at myself for being hurt. ok so the thing is my manager basically told me in my review that theres 'no clear path' for me here for at least another two years and i just sat there nodding. ive been there three years. i turned down another offer in january because she told me to my face that i was 'next in line'"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like hurt with a sharp edge of anger at yourself too. I’m wondering if the biggest sting is the review, or the \"next in line\" part?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "manager said there was \"no clear path\" after previously saying the user was \"next in line\""
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "the next in line thing. 100 percent. like the review on its own would just be disappointing but the fact that she SAID that to me and i made an actual decision based on it.. i declined the other job, i told them no thank you, i was so sure. and now i dont even know if she remembers saying it. thats whats eating me. did she just say it to keep me from leaving? was it always a maybe and i heard what i wanted to hear? i keep going back and forth and i cant tell anymore if im allowed to be this upset"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Yes — that “next in line” part is where the hurt seems to turn sharpest, and maybe into feeling misled or second-guessing yourself. Did it land more like betrayal, or like being made to look back and wonder if you were only ever a maybe?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "betrayed",
+      "body_cue": [],
+      "trigger": "manager said there was 'no clear path' after previously saying the user was 'next in line'"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "honestly both at the same time and i hate that. like part of me is furious because i trusted her, shes not just my boss shes someone i actually looked up to, i defended her to other people. so yeah it feels like betrayal. but then the other half of me is like.. you idiot, you should never have made a life decision off one sentence in a hallway, this is on you for being naive. and i cant hold both. one minute im angry at her the next im angry at me and theres no version where i just feel okay. and the future part is the worst bit honestly because now im just stuck. do i start looking again. do i wait out the two years she mentioned and hope. i genuinely dont know what happens next and i used to always know"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like betrayal and self-blame tangled together, with the hardest part being that you don’t know what happens next. Does it feel more like a tight, restless stuckness, or more like a drop when you think about the future?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "betrayed",
+      "body_cue": [],
+      "trigger": "manager said there was no clear path after previously saying the user was next in line"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "a drop. definitely a drop. like that feeling when you miss a step on the stairs except it doesnt stop. i think i hadnt actually said the betrayal word out loud til now, even to myself. ive just been calling it being disappointed because that felt more reasonable, like i was allowed to feel that one. saying betrayed feels dramatic but it also feels.. true? i dont know. it helps a tiny bit to just put it somewhere"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That makes sense — “betrayed” sounds like the truer word, even if it feels dramatic to say. If you want, we can leave it there for now, or stay with what that drop is asking for underneath.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "betrayed",
+      "body_cue": [
+        "a drop",
+        "like that feeling when you miss a step on the stairs"
+      ],
+      "trigger": "manager said there was no clear path after previously saying the user was next in line"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it there i think. im kind of wrung out now but in a good way? the future stuff is still sitting there and i dont have an answer for any of it but at least i know what im actually feeling underneath now instead of pretending its just disappointment. thank you for this. genuinely. i didnt expect to actually say the real thing tonight but here we are. ok. night"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Night — I’m glad we found the real word together. You can let it rest here, and if you come back to the future part later, we can meet it then.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "betrayed",
+      "body_cue": [
+        "a drop"
+      ],
+      "trigger": "manager said there was 'no clear path' after previously saying the user was 'next in line'"
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "cid": "sadness__17",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-09T18:19:51.438Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "just need to put this somewhere. feeling kinda low today"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a low day, and maybe a bit heavy too. Does it feel more like low in general, or like something missing?"
+    },
+    {
+      "role": "user",
+      "content": "something missing i guess. me and jord broke up tuesday"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds more like loss than just low, and the breakup on Tuesday seems to be the missing piece. Does it feel heavy, hollow, or more like a kind of ache?"
+    },
+    {
+      "role": "user",
+      "content": "hollow. keep reaching for my phone to text them n theyre just not there anymore"
+    },
+    {
+      "role": "companion",
+      "content": "Hollow makes sense here, and the reaching for your phone sounds like the missing is very present. It seems like the breakup has left you with that empty reach toward them — do you want to stay with that, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "yeah three years its weird. but i dont wanna get into all of it rn. just needed to say it out loud"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, three years can make that absence feel very real. We can leave it here — I’m glad you said it out loud."
+    },
+    {
+      "role": "user",
+      "content": "thanks. needed that. night"
+    },
+    {
+      "role": "companion",
+      "content": "Goodnight. I’m glad you got to put it somewhere."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ysofhlwr8nfft",
+    "conversation_id": "sadness__17",
+    "timestamp": "2026-06-09T18:20:16.292Z",
+    "user_words_raw": "just needed to say it out loud",
+    "emotion_status": "confirmed",
+    "emotion_family": "sadness",
+    "emotion_shade": "hollow",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "breaking up with Jord on Tuesday",
+    "appraisal_thought": "they're just not there anymore",
+    "body_cue": [],
+    "behaviour_action": [
+      "reaching for my phone to text them"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "recognition",
+      "space"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "recent breakup after a long relationship; wanted to say it out loud and not go into details",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "just need to put this somewhere. feeling kinda low today"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a low day, and maybe a bit heavy too. Does it feel more like low in general, or like something missing?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "low",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "something missing i guess. me and jord broke up tuesday"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds more like loss than just low, and the breakup on Tuesday seems to be the missing piece. Does it feel heavy, hollow, or more like a kind of ache?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "loss",
+      "body_cue": [],
+      "trigger": "breaking up with Jord on Tuesday"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "hollow. keep reaching for my phone to text them n theyre just not there anymore"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Hollow makes sense here, and the reaching for your phone sounds like the missing is very present. It seems like the breakup has left you with that empty reach toward them — do you want to stay with that, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "sadness",
+      "shade": "hollow",
+      "body_cue": [],
+      "trigger": "breaking up with Jord on Tuesday"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah three years its weird. but i dont wanna get into all of it rn. just needed to say it out loud"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Yeah, three years can make that absence feel very real. We can leave it here — I’m glad you said it out loud.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "hollow",
+      "body_cue": [],
+      "trigger": "breaking up with Jord on Tuesday"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "thanks. needed that. night"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Goodnight. I’m glad you got to put it somewhere.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "hollow",
+      "body_cue": [],
+      "trigger": "breaking up with Jord on Tuesday"
+    }
+  ]
+}

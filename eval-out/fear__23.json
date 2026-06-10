@@ -1,0 +1,299 @@
+{
+  "cid": "fear__23",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-09T17:37:51.310Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i think im just tired honestly. been off all week, kind of irritable, cant settle"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a worn, irritable kind of off — like you can’t quite settle into yourself. Is it more the tired part, the irritability, or both together?"
+    },
+    {
+      "role": "user",
+      "content": "both i guess. i keep snapping at my partner over nothing. dropped a plate this morning and almost cried which isnt like me at all"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like it’s spilling over — the snapping, and then almost crying over the plate. What feels strongest right now: the irritability, the hurt, or the sheer overload of it?"
+    },
+    {
+      "role": "user",
+      "content": "overload maybe. theres just a thing in the back of my head i cant turn off. i open my banking app like 6 times a day and the number isnt changing for the better"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a loop that won’t let you rest, with your head kept on the number. Is it the pressure of watching it, or the feeling that it keeps confirming something?"
+    },
+    {
+      "role": "user",
+      "content": "confirming it. my hours got cut at work last month, like a third gone, and i havent told my partner how bad its actually getting. rent is due in 3 weeks and i did the maths last night and we dont have it"
+    },
+    {
+      "role": "companion",
+      "content": "That makes the number feel like proof, not just a number. It sounds like the cut hours and not telling your partner have made this feel very real — do you want to stay with that for a moment, or leave it here?"
+    },
+    {
+      "role": "user",
+      "content": "no i can stay with it. honestly i said tired earlier but its not really that is it. its more like im scared. like genuinely scared. i lie awake doing sums and my chest goes tight"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like fear has moved to the front now — especially with the lying awake and the tight chest. Is it more the rent, the not telling your partner, or what might happen next?"
+    },
+    {
+      "role": "user",
+      "content": "the not telling i think. cos every day i dont say it the gap gets bigger. and theres this other thing, my dad lost the house when i was a kid and i swore id never let that happen and now im sat here and its happening anyway"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the not telling has started to feel like the gap itself, and the old house memory is making this hit even harder. Do you want to stay with that part, or leave it there for now?"
+    },
+    {
+      "role": "user",
+      "content": "stay with it a sec. its weird saying it out loud. i think im not just scared of the money im scared of being the person who let it happen. like i failed at the one thing i promised myself"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like fear tangled with shame — not just the money, but the person you think this makes you. Does “failed” feel like the loudest word there, or is there another one that fits better?"
+    },
+    {
+      "role": "user",
+      "content": "yeah failed is the loud one. though saying it now it sounds harsher than it is. hours getting cut isnt me failing really. its just bad luck i havent dealt with yet"
+    },
+    {
+      "role": "companion",
+      "content": "That shift matters — “failed” sounds harsh, and “bad luck I haven’t dealt with yet” feels more like the shape of it. Does that make it feel less like shame, or more like the shame is about not having said it sooner?"
+    },
+    {
+      "role": "user",
+      "content": "more about not saying it sooner yeah. ok i think i actually just need to tell my partner tonight. cant fix the rent in a chat but i can stop carrying it alone. thanks for this, helped to untangle it a bit"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the part of the shame that was tied to staying silent, and now it’s got a clearer shape. I can leave it here, or if you want, we can stay with what it feels like to say it tonight."
+    },
+    {
+      "role": "user",
+      "content": "leave it here i think. ill come back after maybe. gonna go make tea and find the words. thanks again"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a good place to pause. Go make the tea and find the words — I’ll be here when you come back."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xaokeg8m7zq9p",
+    "conversation_id": "fear__23",
+    "timestamp": "2026-06-09T17:38:52.252Z",
+    "user_words_raw": "not saying it sooner",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "self-critical",
+    "secondary_emotions": [
+      "pressure"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "not telling partner about the money situation while hours got cut",
+    "appraisal_thought": "I failed at the one thing I promised myself",
+    "body_cue": [
+      "tight chest"
+    ],
+    "behaviour_action": [
+      "lying awake doing sums"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "integrity",
+      "repair",
+      "being understood"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Concern about money, keeping it secret from partner, and fear of failing a promise to self after family housing loss.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i think im just tired honestly. been off all week, kind of irritable, cant settle"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a worn, irritable kind of off — like you can’t quite settle into yourself. Is it more the tired part, the irritability, or both together?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "irritable",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "both i guess. i keep snapping at my partner over nothing. dropped a plate this morning and almost cried which isnt like me at all"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like it’s spilling over — the snapping, and then almost crying over the plate. What feels strongest right now: the irritability, the hurt, or the sheer overload of it?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "overloaded",
+      "body_cue": [],
+      "trigger": "dropped a plate this morning"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "overload maybe. theres just a thing in the back of my head i cant turn off. i open my banking app like 6 times a day and the number isnt changing for the better"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That feels like a loop that won’t let you rest, with your head kept on the number. Is it the pressure of watching it, or the feeling that it keeps confirming something?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overloaded",
+      "body_cue": [],
+      "trigger": "the number in the banking app isn’t changing for the better"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "confirming it. my hours got cut at work last month, like a third gone, and i havent told my partner how bad its actually getting. rent is due in 3 weeks and i did the maths last night and we dont have it"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes the number feel like proof, not just a number. It sounds like the cut hours and not telling your partner have made this feel very real — do you want to stay with that for a moment, or leave it here?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overloaded",
+      "body_cue": [],
+      "trigger": "the number in the banking app isn’t changing for the better; hours got cut at work; rent is due in 3 weeks"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "no i can stay with it. honestly i said tired earlier but its not really that is it. its more like im scared. like genuinely scared. i lie awake doing sums and my chest goes tight"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like fear has moved to the front now — especially with the lying awake and the tight chest. Is it more the rent, the not telling your partner, or what might happen next?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "scared",
+      "body_cue": [
+        "tight chest"
+      ],
+      "trigger": "rent is due in 3 weeks; hours got cut at work; hasn't told partner how bad it's getting"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "the not telling i think. cos every day i dont say it the gap gets bigger. and theres this other thing, my dad lost the house when i was a kid and i swore id never let that happen and now im sat here and its happening anyway"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like the not telling has started to feel like the gap itself, and the old house memory is making this hit even harder. Do you want to stay with that part, or leave it there for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "scared",
+      "body_cue": [
+        "tight chest"
+      ],
+      "trigger": "Not telling partner how bad the money situation is, with rent due and hours cut at work; it echoes the memory of dad losing the house."
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "stay with it a sec. its weird saying it out loud. i think im not just scared of the money im scared of being the person who let it happen. like i failed at the one thing i promised myself"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds like fear tangled with shame — not just the money, but the person you think this makes you. Does “failed” feel like the loudest word there, or is there another one that fits better?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "failed",
+      "body_cue": [],
+      "trigger": "Not telling partner about how bad the money situation is, with rent due and hours cut at work; it echoes the memory of dad losing the house."
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah failed is the loud one. though saying it now it sounds harsher than it is. hours getting cut isnt me failing really. its just bad luck i havent dealt with yet"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That shift matters — “failed” sounds harsh, and “bad luck I haven’t dealt with yet” feels more like the shape of it. Does that make it feel less like shame, or more like the shame is about not having said it sooner?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "harsh self-critical",
+      "body_cue": [],
+      "trigger": "hours getting cut and not telling partner about how bad the money situation is"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "more about not saying it sooner yeah. ok i think i actually just need to tell my partner tonight. cant fix the rent in a chat but i can stop carrying it alone. thanks for this, helped to untangle it a bit"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "That sounds like the part of the shame that was tied to staying silent, and now it’s got a clearer shape. I can leave it here, or if you want, we can stay with what it feels like to say it tonight.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [
+        "tight chest"
+      ],
+      "trigger": "not telling partner about the money situation while hours got cut"
+    },
+    {
+      "turn": 18,
+      "role": "user",
+      "content": "leave it here i think. ill come back after maybe. gonna go make tea and find the words. thanks again"
+    },
+    {
+      "turn": 19,
+      "role": "companion",
+      "content": "That feels like a good place to pause. Go make the tea and find the words — I’ll be here when you come back.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [
+        "tight chest"
+      ],
+      "trigger": "not telling partner about the money situation while hours got cut"
+    }
+  ]
+}

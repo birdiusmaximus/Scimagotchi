@@ -1,0 +1,95 @@
+{
+  "cid": "joy__smoke",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-09T17:21:45.472Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "I got the job offer today and I cannot stop smiling"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a bright kind of moment. What part of the offer is lighting you up most?"
+    },
+    {
+      "role": "user",
+      "content": "yeah I want to call everyone I know"
+    },
+    {
+      "role": "companion",
+      "content": "It feels like it wants to burst outward — sharing it with everyone. Does that fit, or is it more just wanting to let the good news spill out?"
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6wpz287nggg1ce",
+    "conversation_id": "joy__smoke",
+    "timestamp": "2026-06-09T17:21:49.756Z",
+    "user_words_raw": "I want to call everyone I know",
+    "emotion_status": "confirmed",
+    "emotion_family": "joy",
+    "emotion_shade": "delighted",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "got the job offer today",
+    "appraisal_thought": "this is worth sharing",
+    "body_cue": [],
+    "behaviour_action": [
+      "call everyone I know"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "sharing",
+      "recognition"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "feels a strong urge to share good news widely",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "I got the job offer today and I cannot stop smiling"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a bright kind of moment. What part of the offer is lighting you up most?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "delighted",
+      "body_cue": [],
+      "trigger": "got the job offer today"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah I want to call everyone I know"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "It feels like it wants to burst outward — sharing it with everyone. Does that fit, or is it more just wanting to let the good news spill out?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "delighted",
+      "body_cue": [],
+      "trigger": "got the job offer today"
+    }
+  ]
+}

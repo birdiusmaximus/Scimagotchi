@@ -1,0 +1,166 @@
+{
+  "cid": "sadness__06",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-09T18:19:14.505Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. i dont really know how to start this"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that’s completely fine. We can start wherever feels easiest; what’s been going on?"
+    },
+    {
+      "role": "user",
+      "content": "my best friend hasnt talked to me in like three weeks. we used to text every day"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a kind of silence that can really land. I’m wondering if it feels more like hurt, worry, or just a strange empty gap?"
+    },
+    {
+      "role": "user",
+      "content": "honestly just empty. like theres this hole where she used to be. i dont even know what i did wrong"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds hollow, like a hole where her presence used to be, and the “what did I do wrong” is sitting right next to it. Does it make you want to pull back, reach out, or just go quiet?"
+    },
+    {
+      "role": "user",
+      "content": "go quiet i guess. i dont wanna seem desperate. thanks for listening. i think im gonna go"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it sounds like you want to protect yourself a bit. We can leave it here for now, if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah. lets leave it. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Of course. I’ll leave it right there with you."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yrvt1qfyfla6i",
+    "conversation_id": "sadness__06",
+    "timestamp": "2026-06-09T18:19:38.361Z",
+    "user_words_raw": "there's this hole where she used to be",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "empty",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "best friend hasn’t talked in three weeks after texting every day",
+    "appraisal_thought": "I don’t know what I did wrong",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "belonging",
+      "being seen",
+      "closeness",
+      "repair"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "A close friendship went suddenly quiet after frequent daily contact.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. i dont really know how to start this"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that’s completely fine. We can start wherever feels easiest; what’s been going on?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "my best friend hasnt talked to me in like three weeks. we used to text every day"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a kind of silence that can really land. I’m wondering if it feels more like hurt, worry, or just a strange empty gap?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "best friend hasn’t talked for three weeks after texting every day"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "honestly just empty. like theres this hole where she used to be. i dont even know what i did wrong"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds hollow, like a hole where her presence used to be, and the “what did I do wrong” is sitting right next to it. Does it make you want to pull back, reach out, or just go quiet?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "empty",
+      "body_cue": [],
+      "trigger": "best friend hasn’t talked in three weeks after texting every day"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "go quiet i guess. i dont wanna seem desperate. thanks for listening. i think im gonna go"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — it sounds like you want to protect yourself a bit. We can leave it here for now, if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "empty",
+      "body_cue": [],
+      "trigger": "best friend hasn’t talked in three weeks after texting every day"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. lets leave it. thanks"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Of course. I’ll leave it right there with you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "empty",
+      "body_cue": [],
+      "trigger": "best friend hasn’t talked in three weeks after texting every day"
+    }
+  ]
+}

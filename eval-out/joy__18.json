@@ -1,0 +1,200 @@
+{
+  "cid": "joy__18",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-09T17:42:31.312Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so i dont even really know why im opening this lol. ive got this thing rattling around in my head all day. i got into the grad program i applied to. like the one i actually wanted. and i should be over the moon right? and part of me IS"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a mix of real joy and something else still rattling there. Is the other part more uneasy, muted, or pulled in another direction?"
+    },
+    {
+      "role": "user",
+      "content": "yeah i think pulled in another direction is closer. like its weird. its a clinical psych program 6 hours away and ive wanted this for literally years. when i opened the email i actually screamed in my kitchen lol. but then like an hour later i was just sitting there and my stomach dropped because. idk. its 5 years. its a whole life somewhere else"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like joy on the first hit, then a drop into something heavier when it landed as “5 years” and “a whole life somewhere else.” Is that closer to fear, sadness, or just the weight of it?"
+    },
+    {
+      "role": "user",
+      "content": "honestly maybe all three a little. but if im being real its more like. the weight? like im happy and im grieving at the same time which sounds so dramatic when i type it out. my partner is here. my little sister still lives at home and we got really close this year. and i keep doing this thing where i feel guilty for being excited?? like im allowed to want my own thing but it feels like im choosing a future over the people i already have. and i dont even know whats gonna happen with us long distance"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound dramatic to me — it sounds like happiness sitting right next to grief and guilt. Is the heaviest part the leaving, or the not knowing what happens with the people you love?"
+    },
+    {
+      "role": "user",
+      "content": "the not knowing. 100 percent the not knowing. like if someone could just tell me wed be fine i think id pack my bags tomorrow no problem. its the open endedness. me and my partner havent even really talked about it properly yet, weve kind of been tiptoeing around it which is so unlike us. and my sisters gonna start her last year of school without me around and i just. i dont want to miss it but i also cant put my whole life on hold for a maybe. ugh sorry im rambling"
+    },
+    {
+      "role": "companion",
+      "content": "The not knowing sounds like the sharpest part — the open-endedness, and how even the usual closeness is getting tiptoed around. It makes sense that this feels like grief and guilt and a kind of pressure all at once."
+    },
+    {
+      "role": "user",
+      "content": "yeah. pressure is a good word for it. its like the deadline to accept is in two weeks and i feel like i have to have my whole life figured out before then and i just dont. i think saying it out loud here actually helped a bit though?? like the excitement is still real, im not gonna let the scared part talk me out of something i worked this hard for. i think i just needed to admit both things can be true at the same time. i kept feeling like i had to pick one feeling and be that"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — this sounds like pressure that’s sitting right on top of real excitement, with the two-week deadline making it feel bigger. Does it feel more rushed, heavy, or trapped?"
+    },
+    {
+      "role": "user",
+      "content": "rushed more than anything i think. but a bit lighter now too honestly. i think im gonna actually sit down with my partner tonight and just say the thing instead of tiptoeing. and let myself be excited without feeling bad about it. anyway thank you, this genuinely helped more than i thought it would. im gonna go make some tea and maybe text my sister. take care x"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like the pressure has loosened a little, and “rushed” fits the shape of it well. I’m glad you said the thing here; you can leave it there for now, or come back if you want to sort through whatever comes up tonight."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xgo71f7mj2ovx",
+    "conversation_id": "joy__18",
+    "timestamp": "2026-06-09T17:43:11.825Z",
+    "user_words_raw": "rushed",
+    "emotion_status": "confirmed",
+    "emotion_family": "pressure",
+    "emotion_shade": "rushed",
+    "secondary_emotions": [
+      "joy",
+      "calm"
+    ],
+    "valence": "mixed",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "deadline to accept in two weeks and needing to decide about a 5-year program and long-distance future",
+    "appraisal_thought": "I have to have my whole life figured out before then",
+    "body_cue": [],
+    "behaviour_action": [
+      "sit down with partner and say the thing",
+      "make tea",
+      "text sister"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "clarity",
+      "space",
+      "connection"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Facing a major future decision with mixed excitement, guilt, and pressure; talking it through helped them feel lighter.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so i dont even really know why im opening this lol. ive got this thing rattling around in my head all day. i got into the grad program i applied to. like the one i actually wanted. and i should be over the moon right? and part of me IS"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a mix of real joy and something else still rattling there. Is the other part more uneasy, muted, or pulled in another direction?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "delighted",
+      "body_cue": [],
+      "trigger": "got into the grad program they wanted"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah i think pulled in another direction is closer. like its weird. its a clinical psych program 6 hours away and ive wanted this for literally years. when i opened the email i actually screamed in my kitchen lol. but then like an hour later i was just sitting there and my stomach dropped because. idk. its 5 years. its a whole life somewhere else"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like joy on the first hit, then a drop into something heavier when it landed as “5 years” and “a whole life somewhere else.” Is that closer to fear, sadness, or just the weight of it?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "delighted",
+      "body_cue": [
+        "stomach dropped"
+      ],
+      "trigger": "got into the clinical psych grad program 6 hours away after wanting it for years"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "honestly maybe all three a little. but if im being real its more like. the weight? like im happy and im grieving at the same time which sounds so dramatic when i type it out. my partner is here. my little sister still lives at home and we got really close this year. and i keep doing this thing where i feel guilty for being excited?? like im allowed to want my own thing but it feels like im choosing a future over the people i already have. and i dont even know whats gonna happen with us long distance"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That doesn’t sound dramatic to me — it sounds like happiness sitting right next to grief and guilt. Is the heaviest part the leaving, or the not knowing what happens with the people you love?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "grateful",
+      "body_cue": [
+        "stomach dropped"
+      ],
+      "trigger": "got into the clinical psych grad program 6 hours away after wanting it for years"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "the not knowing. 100 percent the not knowing. like if someone could just tell me wed be fine i think id pack my bags tomorrow no problem. its the open endedness. me and my partner havent even really talked about it properly yet, weve kind of been tiptoeing around it which is so unlike us. and my sisters gonna start her last year of school without me around and i just. i dont want to miss it but i also cant put my whole life on hold for a maybe. ugh sorry im rambling"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "The not knowing sounds like the sharpest part — the open-endedness, and how even the usual closeness is getting tiptoed around. It makes sense that this feels like grief and guilt and a kind of pressure all at once.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "getting into a clinical psych grad program 6 hours away, with the relationship and family implications still unknown"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. pressure is a good word for it. its like the deadline to accept is in two weeks and i feel like i have to have my whole life figured out before then and i just dont. i think saying it out loud here actually helped a bit though?? like the excitement is still real, im not gonna let the scared part talk me out of something i worked this hard for. i think i just needed to admit both things can be true at the same time. i kept feeling like i had to pick one feeling and be that"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That makes sense — this sounds like pressure that’s sitting right on top of real excitement, with the two-week deadline making it feel bigger. Does it feel more rushed, heavy, or trapped?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressure",
+      "body_cue": [],
+      "trigger": "deadline to accept in two weeks and having to decide about a 5-year program and long-distance future"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "rushed more than anything i think. but a bit lighter now too honestly. i think im gonna actually sit down with my partner tonight and just say the thing instead of tiptoeing. and let myself be excited without feeling bad about it. anyway thank you, this genuinely helped more than i thought it would. im gonna go make some tea and maybe text my sister. take care x"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels like the pressure has loosened a little, and “rushed” fits the shape of it well. I’m glad you said the thing here; you can leave it there for now, or come back if you want to sort through whatever comes up tonight.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "rushed",
+      "body_cue": [],
+      "trigger": "deadline to accept in two weeks and needing to decide about a 5-year program and long-distance future"
+    }
+  ]
+}

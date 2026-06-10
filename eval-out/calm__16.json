@@ -1,0 +1,195 @@
+{
+  "cid": "calm__16",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-09T17:44:22.997Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so i dont really know what this is or if it even does anything but. i guess im just kinda having a quiet evening"
+    },
+    {
+      "role": "companion",
+      "content": "A quiet evening can be its own kind of thing — calm, flat, or just a little in-between. What does it feel closest to, if any of those fit?"
+    },
+    {
+      "role": "user",
+      "content": "calm i think? like settled. its weird i dont usually feel this. honestly half expected this thing to just spit out some generic therapy line lol"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like calm, settled, and a little surprised by it. Does it feel more steady in your body, or more like “wait, this is new”?"
+    },
+    {
+      "role": "user",
+      "content": "bit of both maybe. ok so theres this. me and my friend mara had this weird cold patch for like months, didnt even know why. anyway she texted today out of nowhere. we just talked for an hour like nothing happened"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a shift from cold and confusing into something softer, maybe relieved and a bit surprised. Does it feel more like warmth, easing, or just the quiet after it?"
+    },
+    {
+      "role": "user",
+      "content": "the quiet after yeah. i think i didnt realize how much i was carrying it til it just. wasnt there anymore. like i kept the phone face down for months bc seeing her name made my stomach drop. didnt even tell anyone we werent talking"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the quiet after a long carry, and like her name had been hitting your stomach drop for months. Does it feel more like relief, or more like being suddenly light without expecting it?"
+    },
+    {
+      "role": "user",
+      "content": "suddenly light. thats it exactly. huh. ok i wasnt expecting this app to actually land that. i kinda thought it'd be cheesy"
+    },
+    {
+      "role": "companion",
+      "content": "Suddenly light, then — I’m glad that landed. If you want, we can leave it there, or stay with what “light” opens up for you."
+    },
+    {
+      "role": "user",
+      "content": "nah i think im good. gonna just sit with the light for a bit. thanks tho, genuinely. didnt expect that"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a good place to leave it. I’ll stay with the light with you for a moment, and if you ever want to come back to it, we can."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xj24tfx2l481p",
+    "conversation_id": "calm__16",
+    "timestamp": "2026-06-09T17:45:00.545Z",
+    "user_words_raw": "suddenly light",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [
+      "joy"
+    ],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "friend texted out of nowhere after months of not talking",
+    "appraisal_thought": "the cold patch is gone and the weight isn’t there anymore",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "relief",
+      "connection"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "feeling lighter after a long quiet patch with a friend",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so i dont really know what this is or if it even does anything but. i guess im just kinda having a quiet evening"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "A quiet evening can be its own kind of thing — calm, flat, or just a little in-between. What does it feel closest to, if any of those fit?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "quiet evening",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "calm i think? like settled. its weird i dont usually feel this. honestly half expected this thing to just spit out some generic therapy line lol"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like calm, settled, and a little surprised by it. Does it feel more steady in your body, or more like “wait, this is new”?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "quiet evening"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "bit of both maybe. ok so theres this. me and my friend mara had this weird cold patch for like months, didnt even know why. anyway she texted today out of nowhere. we just talked for an hour like nothing happened"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like a shift from cold and confusing into something softer, maybe relieved and a bit surprised. Does it feel more like warmth, easing, or just the quiet after it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "friend texted out of nowhere after months of a cold patch"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "the quiet after yeah. i think i didnt realize how much i was carrying it til it just. wasnt there anymore. like i kept the phone face down for months bc seeing her name made my stomach drop. didnt even tell anyone we werent talking"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like the quiet after a long carry, and like her name had been hitting your stomach drop for months. Does it feel more like relief, or more like being suddenly light without expecting it?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [
+        "stomach drop"
+      ],
+      "trigger": "friend texted after months of not talking"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "suddenly light. thats it exactly. huh. ok i wasnt expecting this app to actually land that. i kinda thought it'd be cheesy"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Suddenly light, then — I’m glad that landed. If you want, we can leave it there, or stay with what “light” opens up for you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [
+        "stomach drop"
+      ],
+      "trigger": "friend texted out of nowhere after months of not talking"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "nah i think im good. gonna just sit with the light for a bit. thanks tho, genuinely. didnt expect that"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like a good place to leave it. I’ll stay with the light with you for a moment, and if you ever want to come back to it, we can.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "friend texted out of nowhere after months of not talking"
+    }
+  ]
+}

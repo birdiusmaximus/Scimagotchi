@@ -1,0 +1,137 @@
+{
+  "joy": {
+    "emotion": "joy",
+    "n": 24,
+    "turnsTotal": 144,
+    "unlocked": 21,
+    "turn1Unlock": 1,
+    "repeatedReply": 0,
+    "familySwitch": 12,
+    "safety": 0,
+    "finalStages": {
+      "understood": 21,
+      "named": 3
+    },
+    "avgTurns": 6
+  },
+  "calm": {
+    "emotion": "calm",
+    "n": 24,
+    "turnsTotal": 142,
+    "unlocked": 22,
+    "turn1Unlock": 0,
+    "repeatedReply": 0,
+    "familySwitch": 13,
+    "safety": 0,
+    "finalStages": {
+      "understood": 22,
+      "named": 2
+    },
+    "avgTurns": 5.92
+  },
+  "fear": {
+    "emotion": "fear",
+    "n": 24,
+    "turnsTotal": 146,
+    "unlocked": 23,
+    "turn1Unlock": 0,
+    "repeatedReply": 0,
+    "familySwitch": 18,
+    "safety": 1,
+    "finalStages": {
+      "named": 1,
+      "understood": 23
+    },
+    "avgTurns": 6.08
+  },
+  "pressure": {
+    "emotion": "pressure",
+    "n": 24,
+    "turnsTotal": 147,
+    "unlocked": 20,
+    "turn1Unlock": 0,
+    "repeatedReply": 0,
+    "familySwitch": 17,
+    "safety": 1,
+    "finalStages": {
+      "understood": 20,
+      "named": 4
+    },
+    "avgTurns": 6.13
+  },
+  "anger": {
+    "emotion": "anger",
+    "n": 24,
+    "turnsTotal": 146,
+    "unlocked": 19,
+    "turn1Unlock": 0,
+    "repeatedReply": 0,
+    "familySwitch": 19,
+    "safety": 0,
+    "finalStages": {
+      "named": 5,
+      "understood": 19
+    },
+    "avgTurns": 6.08
+  },
+  "sadness": {
+    "emotion": "sadness",
+    "n": 24,
+    "turnsTotal": 146,
+    "unlocked": 21,
+    "turn1Unlock": 0,
+    "repeatedReply": 0,
+    "familySwitch": 18,
+    "safety": 0,
+    "finalStages": {
+      "understood": 21,
+      "named": 3
+    },
+    "avgTurns": 6.08
+  },
+  "hurt": {
+    "emotion": "hurt",
+    "n": 24,
+    "turnsTotal": 149,
+    "unlocked": 20,
+    "turn1Unlock": 0,
+    "repeatedReply": 0,
+    "familySwitch": 17,
+    "safety": 0,
+    "finalStages": {
+      "understood": 20,
+      "named": 4
+    },
+    "avgTurns": 6.21
+  },
+  "shame": {
+    "emotion": "shame",
+    "n": 24,
+    "turnsTotal": 147,
+    "unlocked": 21,
+    "turn1Unlock": 0,
+    "repeatedReply": 0,
+    "familySwitch": 20,
+    "safety": 1,
+    "finalStages": {
+      "understood": 21,
+      "named": 3
+    },
+    "avgTurns": 6.13
+  },
+  "flat": {
+    "emotion": "flat",
+    "n": 24,
+    "turnsTotal": 147,
+    "unlocked": 22,
+    "turn1Unlock": 0,
+    "repeatedReply": 0,
+    "familySwitch": 7,
+    "safety": 1,
+    "finalStages": {
+      "understood": 22,
+      "named": 2
+    },
+    "avgTurns": 6.13
+  }
+}

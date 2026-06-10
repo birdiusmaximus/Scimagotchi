@@ -1,0 +1,265 @@
+{
+  "cid": "flat__19",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-09T18:27:14.907Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont really know why im here"
+    },
+    {
+      "role": "companion",
+      "content": "That’s okay — you don’t have to know right away. What made you decide to open this chat today?"
+    },
+    {
+      "role": "user",
+      "content": "i dont know. saw it in the app store i guess. thought maybe it would help with the nothing"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a kind of flat, hard-to-grab nothing. Does it feel more blank, numb, or just off?"
+    },
+    {
+      "role": "user",
+      "content": "numb i think. like everything is behind glass. i go to work, come home, scroll, sleep. nothing actually lands"
+    },
+    {
+      "role": "companion",
+      "content": "That “behind glass” feeling sounds really numb and distant. Is it more like you’re moving through the day on autopilot, or like you’re far away from it?"
+    },
+    {
+      "role": "user",
+      "content": "both maybe. i used to be the person who was good at things. people came to me. now i cant even tell you what i like anymore. i look in the mirror and theres just. a guy"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds numb and a bit detached, with something of grief under it too. Does “just a guy” feel empty, or more like you don’t recognise yourself there?"
+    },
+    {
+      "role": "user",
+      "content": "dont recognize him. i got passed over for the lead role on my team in march. someone i mentored got it. and the weird thing is i didnt even feel mad. i just felt nothing. like ok that tracks. thats when i knew something was off"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a very sharp kind of numbness — almost like the hurt never got a chance to show itself. Would you want to stay with that March moment a little, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "i dont know what staying with it would even do. it was months ago. i should be over it. but i used to define myself by being the smart one, the capable one, and now i just feel like a fraud whos coasting. maybe i never was that person"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like numbness with shame and loss tangled together. I’m wondering if the sharp part is more about being passed over, or about losing the version of you that felt capable?"
+    },
+    {
+      "role": "user",
+      "content": "losing the version of me. i could take the job thing. jobs are jobs. but i used to feel like i mattered, like i was sharp. now i just go through it grey. my girlfriend asked me last week what i wanted for my birthday and i genuinely couldnt answer. i dont want anything. i dont feel anything"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds very grey and flat, and also like losing the part of you that used to want things. Does it feel more blank, or more like you’ve gone dim?"
+    },
+    {
+      "role": "user",
+      "content": "dim. like the lights are on but turned way down. i can still function. i just cant feel the color of anything. i dont know if that makes sense"
+    },
+    {
+      "role": "companion",
+      "content": "It does make sense — dim, functional, and the color gone from things. Does it feel mostly like that shut-down distance, or more like you’re just worn thin?"
+    },
+    {
+      "role": "user",
+      "content": "i dont know. both. im tired of trying to name it honestly. it doesnt change anything. thanks though. i think im gonna go"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — we can leave it here. Thanks for trusting me with it, and I’ll be here if you want to pick it up another time."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z26dfv5b14v31",
+    "conversation_id": "flat__19",
+    "timestamp": "2026-06-09T18:28:06.582Z",
+    "user_words_raw": "it doesnt change anything",
+    "emotion_status": "confirmed",
+    "emotion_family": "flat",
+    "emotion_shade": "dim",
+    "secondary_emotions": [
+      "sadness"
+    ],
+    "valence": "mixed",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "losing the version of self that felt sharp and mattered; being asked what wanted for birthday and not being able to answer",
+    "appraisal_thought": "it doesnt change anything",
+    "body_cue": [],
+    "behaviour_action": [
+      "can still function"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "permission to stop",
+      "reduced pressure",
+      "quiet"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feels dim and functional, with a sense of losing the self that used to feel sharp and capable.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont really know why im here"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That’s okay — you don’t have to know right away. What made you decide to open this chat today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i dont know. saw it in the app store i guess. thought maybe it would help with the nothing"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a kind of flat, hard-to-grab nothing. Does it feel more blank, numb, or just off?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "saw it in the app store"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "numb i think. like everything is behind glass. i go to work, come home, scroll, sleep. nothing actually lands"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That “behind glass” feeling sounds really numb and distant. Is it more like you’re moving through the day on autopilot, or like you’re far away from it?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": "saw it in the app store"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "both maybe. i used to be the person who was good at things. people came to me. now i cant even tell you what i like anymore. i look in the mirror and theres just. a guy"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds numb and a bit detached, with something of grief under it too. Does “just a guy” feel empty, or more like you don’t recognise yourself there?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "detached",
+      "body_cue": [],
+      "trigger": "seeing themself in the mirror and noticing they can't tell what they like anymore"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "dont recognize him. i got passed over for the lead role on my team in march. someone i mentored got it. and the weird thing is i didnt even feel mad. i just felt nothing. like ok that tracks. thats when i knew something was off"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like a very sharp kind of numbness — almost like the hurt never got a chance to show itself. Would you want to stay with that March moment a little, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": "being passed over for the lead role on their team in March, especially after mentoring the person who got it"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "i dont know what staying with it would even do. it was months ago. i should be over it. but i used to define myself by being the smart one, the capable one, and now i just feel like a fraud whos coasting. maybe i never was that person"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like numbness with shame and loss tangled together. I’m wondering if the sharp part is more about being passed over, or about losing the version of you that felt capable?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "fraud",
+      "body_cue": [],
+      "trigger": "being passed over for the lead role on their team in March, especially after mentoring the person who got it"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "losing the version of me. i could take the job thing. jobs are jobs. but i used to feel like i mattered, like i was sharp. now i just go through it grey. my girlfriend asked me last week what i wanted for my birthday and i genuinely couldnt answer. i dont want anything. i dont feel anything"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds very grey and flat, and also like losing the part of you that used to want things. Does it feel more blank, or more like you’ve gone dim?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "Losing the version of self that felt sharp and mattered; being asked what wanted for birthday and not being able to answer"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "dim. like the lights are on but turned way down. i can still function. i just cant feel the color of anything. i dont know if that makes sense"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "It does make sense — dim, functional, and the color gone from things. Does it feel mostly like that shut-down distance, or more like you’re just worn thin?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "dim",
+      "body_cue": [],
+      "trigger": "Losing the version of self that felt sharp and mattered; being asked what wanted for birthday and not being able to answer"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "i dont know. both. im tired of trying to name it honestly. it doesnt change anything. thanks though. i think im gonna go"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "That makes sense — we can leave it here. Thanks for trusting me with it, and I’ll be here if you want to pick it up another time.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "dim",
+      "body_cue": [],
+      "trigger": "losing the version of self that felt sharp and mattered; being asked what wanted for birthday and not being able to answer"
+    }
+  ]
+}

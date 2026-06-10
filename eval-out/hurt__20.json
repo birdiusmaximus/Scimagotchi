@@ -1,0 +1,266 @@
+{
+  "cid": "hurt__20",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-09T18:22:25.538Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. wasn't sure if i'd actually open this today but here i am"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, I’m glad you showed up. What’s it like to be here now?"
+    },
+    {
+      "role": "user",
+      "content": "honestly kind of weird. like i've got this thing rattling around and i don't really have anyone to say it to. how does this even work, do i just talk"
+    },
+    {
+      "role": "companion",
+      "content": "Yes — you can just talk, in whatever order feels natural. I’ll stay with what you say and help sort it out gently if you want."
+    },
+    {
+      "role": "user",
+      "content": "ok. so. it's a health thing. i got diagnosed with an autoimmune condition back in february and it's been a whole mess of appointments and meds and feeling like garbage. but that's not even really the part that's getting to me"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a lot to carry, and it makes sense that the diagnosis and all the appointments are only part of it. What’s the part that’s getting to you most?"
+    },
+    {
+      "role": "user",
+      "content": "it's not really the overwhelm. it's my sister. she's a nurse. she works in healthcare. and when i told her what was going on she just... kind of brushed it off. said something like 'oh everyone's tired, you'll be fine, it's manageable.' and i just sat there"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds more like being brushed off than the illness itself — maybe hurt, or left alone with it. What did that leave sitting in you?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. brushed off is exactly it. and the thing is she's the one person who should GET it you know. she does this for a living. i kept thinking if anyone would understand it'd be her. so when she waved it away it felt like... i don't even know. like i wasn't worth the worry"
+    },
+    {
+      "role": "companion",
+      "content": "That lands like not being worth the worry, which feels sharp. Does it feel more like hurt, disappointment, or being unseen?"
+    },
+    {
+      "role": "user",
+      "content": "unseen. god. yeah. and it's complicated because she's had a hard year too, her marriage fell apart and i KNOW she's running on empty. so part of me is like, who am i to need anything from her right now. but then the other part is just so angry that i had to sit there and pretend it was fine when it really really wasn't"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like unseen, with anger right beside it — especially having to pretend it was fine when it really wasn’t. Does the anger feel like it wants to pull away, say something, or just sit there hot and tight?"
+    },
+    {
+      "role": "user",
+      "content": "honestly it just sits there hot and tight. i haven't said anything to her. we talked twice since and i just kept it surface level, asked about her kids, didn't bring me up at all. and i hate that. i hate that i'm protecting her from my own diagnosis. like i'm doing the emotional labor of being sick AND making sure nobody has to feel bad about it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like anger that’s been turned inward into keeping everyone else comfortable — and it sits there hot and tight. Would it fit more as resentment, hurt, or just plain unfairness?"
+    },
+    {
+      "role": "user",
+      "content": "resentment maybe. but under it i think it's just hurt. i don't actually want to be mad at her. i love her. i just wanted her to look at me for one second and say that's really hard, im sorry. that's all. i didn't need her to fix anything"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like hurt under the resentment — wanting just one honest, gentle look instead of a fix. We can leave it there, or if you want, we could stay with what that missed sentence meant to you."
+    },
+    {
+      "role": "user",
+      "content": "i think i'll leave it there for now. it helped just to say it out loud and not have it brushed off, honestly. maybe i'll actually tell her one of these days. thanks for listening. ok. bye"
+    },
+    {
+      "role": "companion",
+      "content": "Of course. I’m glad it could rest here for now, and I’ll hold that missed sentence gently with you."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yvz4t571so111",
+    "conversation_id": "hurt__20",
+    "timestamp": "2026-06-09T18:23:20.626Z",
+    "user_words_raw": "it helped just to say it out loud",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "hurt",
+    "secondary_emotions": [
+      "resignation",
+      "relief"
+    ],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "sister brushed it off and didn’t acknowledge how hard it was",
+    "appraisal_thought": "I wanted her to see me and it felt like I wasn’t worth the worry",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "being seen",
+      "reassurance",
+      "care"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feeling unseen by someone close who works in care; wanted simple acknowledgment, not fixing.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. wasn't sure if i'd actually open this today but here i am"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, I’m glad you showed up. What’s it like to be here now?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "honestly kind of weird. like i've got this thing rattling around and i don't really have anyone to say it to. how does this even work, do i just talk"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Yes — you can just talk, in whatever order feels natural. I’ll stay with what you say and help sort it out gently if you want.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "ok. so. it's a health thing. i got diagnosed with an autoimmune condition back in february and it's been a whole mess of appointments and meds and feeling like garbage. but that's not even really the part that's getting to me"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like a lot to carry, and it makes sense that the diagnosis and all the appointments are only part of it. What’s the part that’s getting to you most?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "being diagnosed with an autoimmune condition and dealing with appointments and meds"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "it's not really the overwhelm. it's my sister. she's a nurse. she works in healthcare. and when i told her what was going on she just... kind of brushed it off. said something like 'oh everyone's tired, you'll be fine, it's manageable.' and i just sat there"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds more like being brushed off than the illness itself — maybe hurt, or left alone with it. What did that leave sitting in you?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "brushed off",
+      "body_cue": [],
+      "trigger": "sister brushed off the diagnosis and said it was manageable"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. brushed off is exactly it. and the thing is she's the one person who should GET it you know. she does this for a living. i kept thinking if anyone would understand it'd be her. so when she waved it away it felt like... i don't even know. like i wasn't worth the worry"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That lands like not being worth the worry, which feels sharp. Does it feel more like hurt, disappointment, or being unseen?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "unseen",
+      "body_cue": [],
+      "trigger": "sister brushed off the diagnosis and said it was manageable"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "unseen. god. yeah. and it's complicated because she's had a hard year too, her marriage fell apart and i KNOW she's running on empty. so part of me is like, who am i to need anything from her right now. but then the other part is just so angry that i had to sit there and pretend it was fine when it really really wasn't"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like unseen, with anger right beside it — especially having to pretend it was fine when it really wasn’t. Does the anger feel like it wants to pull away, say something, or just sit there hot and tight?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "unseen",
+      "body_cue": [],
+      "trigger": "sister brushed off the diagnosis and the user had to pretend it was fine"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "honestly it just sits there hot and tight. i haven't said anything to her. we talked twice since and i just kept it surface level, asked about her kids, didn't bring me up at all. and i hate that. i hate that i'm protecting her from my own diagnosis. like i'm doing the emotional labor of being sick AND making sure nobody has to feel bad about it"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds like anger that’s been turned inward into keeping everyone else comfortable — and it sits there hot and tight. Would it fit more as resentment, hurt, or just plain unfairness?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "turned inward",
+      "body_cue": [
+        "hot and tight"
+      ],
+      "trigger": "sister brushed off the diagnosis and the user felt they had to protect her from feeling bad"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "resentment maybe. but under it i think it's just hurt. i don't actually want to be mad at her. i love her. i just wanted her to look at me for one second and say that's really hard, im sorry. that's all. i didn't need her to fix anything"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That feels like hurt under the resentment — wanting just one honest, gentle look instead of a fix. We can leave it there, or if you want, we could stay with what that missed sentence meant to you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "sister brushed it off and didn’t acknowledge how hard it was"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "i think i'll leave it there for now. it helped just to say it out loud and not have it brushed off, honestly. maybe i'll actually tell her one of these days. thanks for listening. ok. bye"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Of course. I’m glad it could rest here for now, and I’ll hold that missed sentence gently with you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "sister brushed it off and didn’t acknowledge how hard it was"
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "cid": "fear__18",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-09T17:37:17.117Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. um i dont really know how to use this or what im doing here honestly. i just kind of needed somewhere to put this i think. my contract ends in like 7 weeks and i dont have anything lined up after and i keep telling myself its fine but its not really sitting like fine"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that sounds like a lot to be holding, especially with the contract ending so soon. Is it more like worry, pressure, or that uneasy not-sitting-right feeling?"
+    },
+    {
+      "role": "user",
+      "content": "honestly maybe all three. but i think the worst part is its like two things at once? theres the obvious money panic, rent is due regardless and i have like two months of savings if im careful. but theres this other thing underneath where im almost relieved? like i never even wanted this job and now i dont have to figure out how to leave it, it just ends. and then i feel guilty for being relieved when i should be terrified and applying to stuff. idk if that makes sense"
+    },
+    {
+      "role": "companion",
+      "content": "It does make sense — there’s the money panic, and also a quiet relief under it, with guilt sitting on top. Which one is loudest right now: the panic, the relief, or the guilt?"
+    },
+    {
+      "role": "user",
+      "content": "right now? probably the panic but only because its like 11pm and thats when my brain does the math thing. i open the banking app i dont even know why i do that at night nothing changes. but during the day its more the blank space after. like i genuinely cannot picture march. i cant picture what i do or where i am and that nothing-ness is scarier than the money tbh. the money at least has a number. the future part is just fog and i keep poking at it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like two different edges: the night-time math panic, and then the foggy blankness after that feels scarier. Does the blank part feel more like floating, or more like bracing against something you can’t picture?"
+    },
+    {
+      "role": "user",
+      "content": "bracing. definitely bracing. its like im standing in a hallway waiting for a door to open and i cant tell if its gonna be fine or if its the bottom falling out and my whole body is just tensed for it. floating wouldve been almost nice. this is more like im holding my breath for 7 weeks straight. and the relief thing is in there too because part of me wants the door to just open already even if its bad, just so i can stop bracing"
+    },
+    {
+      "role": "companion",
+      "content": "That feels very much like bracing — holding your breath at a door you can’t see through, with relief mixed into the fear of what comes next. Does it feel familiar, this waiting-for-the-drop kind of tension, or is this a new shape for you?"
+    },
+    {
+      "role": "user",
+      "content": "no its familiar. way too familiar. i do this every time anything is uncertain, i just lock up and brace and wait instead of doing the thing. my mum was the same, always waiting for the other shoe. and i hate that i can see myself doing it and still cant make myself just send the applications, like i told myself i would today and i didnt. i just braced instead. ok this got heavier than i meant it to lol"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — the bracing sounds familiar enough that it almost takes over before the applications can happen, and that can feel heavy to sit with. We can leave it here if you want, or stay with it a little longer — what does that bracing seem to be protecting you from?"
+    },
+    {
+      "role": "user",
+      "content": "i think if i dont try then i cant actually fail at it, the door stays closed and i dont have to find out. which is dumb because the contract ending is the door opening whether i like it or not. anyway yeah i think i should leave it here, its late and im gonna spiral if i keep poking. but this helped more than the banking app did lol. maybe ill actually send one application tomorrow. thanks for sitting with the heavy bit"
+    },
+    {
+      "role": "companion",
+      "content": "That makes a lot of sense — the bracing is keeping you away from having to find out, even when the door is opening either way. We can leave it here for tonight, and I’m glad it helped a bit more than the banking app."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6x9xn6sabbgdxd",
+    "conversation_id": "fear__18",
+    "timestamp": "2026-06-09T17:37:59.978Z",
+    "user_words_raw": "holding my breath for 7 weeks straight",
+    "emotion_status": "confirmed",
+    "emotion_family": "pressure",
+    "emotion_shade": "bracing",
+    "secondary_emotions": [
+      "fear",
+      "hurt",
+      "calm"
+    ],
+    "valence": "mixed",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "the contract ending in about 7 weeks and trying to picture March",
+    "appraisal_thought": "If I don’t try, I can’t fail at it; the door stays closed and I don’t have to find out.",
+    "body_cue": [
+      "holding my breath",
+      "whole body is just tensed"
+    ],
+    "behaviour_action": [
+      "opening the banking app",
+      "poking at it",
+      "bracing",
+      "waiting instead of doing the thing"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "clarity",
+      "permission to pause"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Wants to avoid finding out by not trying when things are uncertain; bracing is a familiar pattern.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. um i dont really know how to use this or what im doing here honestly. i just kind of needed somewhere to put this i think. my contract ends in like 7 weeks and i dont have anything lined up after and i keep telling myself its fine but its not really sitting like fine"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that sounds like a lot to be holding, especially with the contract ending so soon. Is it more like worry, pressure, or that uneasy not-sitting-right feeling?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": "their contract ends in about 7 weeks and nothing is lined up after"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "honestly maybe all three. but i think the worst part is its like two things at once? theres the obvious money panic, rent is due regardless and i have like two months of savings if im careful. but theres this other thing underneath where im almost relieved? like i never even wanted this job and now i dont have to figure out how to leave it, it just ends. and then i feel guilty for being relieved when i should be terrified and applying to stuff. idk if that makes sense"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "It does make sense — there’s the money panic, and also a quiet relief under it, with guilt sitting on top. Which one is loudest right now: the panic, the relief, or the guilt?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "mixed, uneasy",
+      "body_cue": [],
+      "trigger": "their contract ending in about 7 weeks with nothing lined up after, plus rent and savings worries"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "right now? probably the panic but only because its like 11pm and thats when my brain does the math thing. i open the banking app i dont even know why i do that at night nothing changes. but during the day its more the blank space after. like i genuinely cannot picture march. i cant picture what i do or where i am and that nothing-ness is scarier than the money tbh. the money at least has a number. the future part is just fog and i keep poking at it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like two different edges: the night-time math panic, and then the foggy blankness after that feels scarier. Does the blank part feel more like floating, or more like bracing against something you can’t picture?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "mixed, foggy, panic",
+      "body_cue": [],
+      "trigger": "thinking about the contract ending and trying to picture March"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "bracing. definitely bracing. its like im standing in a hallway waiting for a door to open and i cant tell if its gonna be fine or if its the bottom falling out and my whole body is just tensed for it. floating wouldve been almost nice. this is more like im holding my breath for 7 weeks straight. and the relief thing is in there too because part of me wants the door to just open already even if its bad, just so i can stop bracing"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That feels very much like bracing — holding your breath at a door you can’t see through, with relief mixed into the fear of what comes next. Does it feel familiar, this waiting-for-the-drop kind of tension, or is this a new shape for you?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "bracing",
+      "body_cue": [
+        "holding my breath",
+        "my whole body is just tensed"
+      ],
+      "trigger": "the contract ending in about 7 weeks and trying to picture March"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "no its familiar. way too familiar. i do this every time anything is uncertain, i just lock up and brace and wait instead of doing the thing. my mum was the same, always waiting for the other shoe. and i hate that i can see myself doing it and still cant make myself just send the applications, like i told myself i would today and i didnt. i just braced instead. ok this got heavier than i meant it to lol"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Yeah — the bracing sounds familiar enough that it almost takes over before the applications can happen, and that can feel heavy to sit with. We can leave it here if you want, or stay with it a little longer — what does that bracing seem to be protecting you from?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "bracing",
+      "body_cue": [
+        "holding my breath",
+        "whole body is just tensed"
+      ],
+      "trigger": "the contract ending in about 7 weeks and trying to picture March"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "i think if i dont try then i cant actually fail at it, the door stays closed and i dont have to find out. which is dumb because the contract ending is the door opening whether i like it or not. anyway yeah i think i should leave it here, its late and im gonna spiral if i keep poking. but this helped more than the banking app did lol. maybe ill actually send one application tomorrow. thanks for sitting with the heavy bit"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That makes a lot of sense — the bracing is keeping you away from having to find out, even when the door is opening either way. We can leave it here for tonight, and I’m glad it helped a bit more than the banking app.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "bracing",
+      "body_cue": [
+        "holding my breath",
+        "whole body is just tensed"
+      ],
+      "trigger": "the contract ending in about 7 weeks and trying to picture March"
+    }
+  ]
+}

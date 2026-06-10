@@ -1,0 +1,257 @@
+{
+  "cid": "sadness__21",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-09T18:20:25.772Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. uh i dont really know why im here honestly. someone said i should try talking to something"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that’s alright — we can keep it simple. What’s been on your mind today?"
+    },
+    {
+      "role": "user",
+      "content": "lol my mind is a very boring place i wouldnt go in there. idk just work stuff i guess. nothing dramatic"
+    },
+    {
+      "role": "companion",
+      "content": "Work stuff, and not dramatic — that sounds pretty plain and maybe a little hard to pin down. Is it more just dull, or more like something is sitting there in the background?"
+    },
+    {
+      "role": "user",
+      "content": "ha 'sitting there in the background' yeah thats my whole personality now apparently. i dont know. its fine. its just work it happens to everyone"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that sounds like it’s become a kind of background hum. Does it feel more like “fine” on the surface, or more like you’re keeping it at arm’s length?"
+    },
+    {
+      "role": "user",
+      "content": "ok rude lol. fine yeah arms length whatever. its just. i got passed over for this thing at work. promotion. they gave it to someone i literally trained. but its not a big deal people get passed over all the time"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a sharp kind of being-passed-over, even if you’re keeping it at arm’s length. I’m wondering if it’s more frustrated, hurt, or just blank at this point?"
+    },
+    {
+      "role": "user",
+      "content": "blank mostly. like i did the whole speech in my head, 'im happy for them' and i meant it kind of? but then i went home and just sort of sat in the car in the driveway for like 40 mins. didnt even turn the radio on. thats not me"
+    },
+    {
+      "role": "companion",
+      "content": "That blankness sounds like it had some weight to it, especially with the 40 minutes in the car. Was it more like sitting still, or more like wanting to pull away from everything?"
+    },
+    {
+      "role": "user",
+      "content": "pull away i think. like whats even the point of trying so hard. i stayed late for two years. covered for everyone. and the manager literally said 'youre too valuable where you are' like cool so im a doormat then. sorry thats dramatic. it really isnt that deep"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound dramatic to me — it sounds like a pulled-away kind of blank, with some hurt and maybe anger under it. If you want, we can stay with this, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "no its. ok yeah maybe theres some anger. i just feel kind of stupid? like i actually believed if i kept my head down and worked hard itd be noticed. and it just. wasnt. and now i dont know what im even doing there anymore"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like anger and a sting of feeling stupid, with your old expectation just dropping out from under you. What feels most true now: anger, hurt, or that blank pulled-away place?"
+    },
+    {
+      "role": "user",
+      "content": "honestly probably the blank one. the anger feels easier to say out loud but underneath its more like. disappointed. mostly in myself for caring this much about a job that clearly doesnt care back lol. anyway. this got heavier than i meant it to"
+    },
+    {
+      "role": "companion",
+      "content": "That disappointed blank sounds like the part that’s actually sitting underneath the jokes. We can leave it here, or if you want, I can stay with that “doesn’t care back” feeling a little longer."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there for now i think. that was. more than i usually say out loud honestly. thanks for not making it weird. ok bye"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — I’m glad you said it out loud here, and we can leave it there. Take care for now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ytet46atpz2gn",
+    "conversation_id": "sadness__21",
+    "timestamp": "2026-06-09T18:21:22.633Z",
+    "user_words_raw": "more than i usually say out loud",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "disappointed",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "being passed over for a promotion after two years of staying late and covering for others",
+    "appraisal_thought": "I cared more than I meant to, and the job didn’t care back.",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Shared a quiet, heavy work disappointment and then chose to leave it there.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. uh i dont really know why im here honestly. someone said i should try talking to something"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that’s alright — we can keep it simple. What’s been on your mind today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "lol my mind is a very boring place i wouldnt go in there. idk just work stuff i guess. nothing dramatic"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Work stuff, and not dramatic — that sounds pretty plain and maybe a little hard to pin down. Is it more just dull, or more like something is sitting there in the background?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "work stuff"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "ha 'sitting there in the background' yeah thats my whole personality now apparently. i dont know. its fine. its just work it happens to everyone"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Yeah, that sounds like it’s become a kind of background hum. Does it feel more like “fine” on the surface, or more like you’re keeping it at arm’s length?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "detached",
+      "body_cue": [],
+      "trigger": "work stuff"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "ok rude lol. fine yeah arms length whatever. its just. i got passed over for this thing at work. promotion. they gave it to someone i literally trained. but its not a big deal people get passed over all the time"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like a sharp kind of being-passed-over, even if you’re keeping it at arm’s length. I’m wondering if it’s more frustrated, hurt, or just blank at this point?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "passed over",
+      "body_cue": [],
+      "trigger": "being passed over for a promotion at work"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "blank mostly. like i did the whole speech in my head, 'im happy for them' and i meant it kind of? but then i went home and just sort of sat in the car in the driveway for like 40 mins. didnt even turn the radio on. thats not me"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That blankness sounds like it had some weight to it, especially with the 40 minutes in the car. Was it more like sitting still, or more like wanting to pull away from everything?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "being passed over for a promotion at work"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "pull away i think. like whats even the point of trying so hard. i stayed late for two years. covered for everyone. and the manager literally said 'youre too valuable where you are' like cool so im a doormat then. sorry thats dramatic. it really isnt that deep"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That doesn’t sound dramatic to me — it sounds like a pulled-away kind of blank, with some hurt and maybe anger under it. If you want, we can stay with this, or leave it here for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "being passed over for a promotion after two years of staying late and covering for others"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "no its. ok yeah maybe theres some anger. i just feel kind of stupid? like i actually believed if i kept my head down and worked hard itd be noticed. and it just. wasnt. and now i dont know what im even doing there anymore"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds like anger and a sting of feeling stupid, with your old expectation just dropping out from under you. What feels most true now: anger, hurt, or that blank pulled-away place?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "stung",
+      "body_cue": [],
+      "trigger": "being passed over for a promotion after two years of staying late and covering for others"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "honestly probably the blank one. the anger feels easier to say out loud but underneath its more like. disappointed. mostly in myself for caring this much about a job that clearly doesnt care back lol. anyway. this got heavier than i meant it to"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That disappointed blank sounds like the part that’s actually sitting underneath the jokes. We can leave it here, or if you want, I can stay with that “doesn’t care back” feeling a little longer.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "disappointed",
+      "body_cue": [],
+      "trigger": "being passed over for a promotion after two years of staying late and covering for others"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "yeah lets leave it there for now i think. that was. more than i usually say out loud honestly. thanks for not making it weird. ok bye"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Of course — I’m glad you said it out loud here, and we can leave it there. Take care for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "disappointed",
+      "body_cue": [],
+      "trigger": "being passed over for a promotion after two years of staying late and covering for others"
+    }
+  ]
+}

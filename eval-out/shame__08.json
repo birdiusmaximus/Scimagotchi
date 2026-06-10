@@ -1,0 +1,143 @@
+{
+  "cid": "shame__08",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-09T18:24:15.686Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk if this is gonna do anything but ok. cant stop thinking about how i still dont have a job lined up after i graduate"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a pretty heavy worry sitting there in the background. Is it more the “don’t have a job lined up” part, the graduating part, or the two together?"
+    },
+    {
+      "role": "user",
+      "content": "both i guess? everyone in my class already has stuff figured out. like theyve got grad school or offers and im just. nothing. feels like i wasted four years honestly"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like pressure mixed with hurt — especially with everyone else seeming sorted while you feel like “nothing.” Does it feel more like tight and rushed, or more like heavy and stuck?"
+    },
+    {
+      "role": "user",
+      "content": "heavy and stuck for sure. like a kind of embarrassing. my parents keep asking whats next and i just dont have an answer and i feel like such a letdown"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds heavy and stuck, with some embarrassment and letdown folded into it. Is the strongest part the pressure from your parents, or the feeling of being a letdown?"
+    },
+    {
+      "role": "user",
+      "content": "the letdown part i think. anyway idk if saying it helps but its less stuck in my head now. gonna go. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — the letdown part was the sharpest piece, and it sounds a little looser now. We can leave it here; thanks for saying it out loud."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yycl9z5j1lddz",
+    "conversation_id": "shame__08",
+    "timestamp": "2026-06-09T18:24:37.908Z",
+    "user_words_raw": "such a letdown",
+    "emotion_status": "candidate",
+    "emotion_family": "shame",
+    "emotion_shade": "letdown",
+    "secondary_emotions": [
+      "pressure"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "parents asking what's next after graduation",
+    "appraisal_thought": "I'm a letdown",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "acceptance",
+      "dignity",
+      "understanding"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "Feels like a letdown when asked what’s next after graduation.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk if this is gonna do anything but ok. cant stop thinking about how i still dont have a job lined up after i graduate"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a pretty heavy worry sitting there in the background. Is it more the “don’t have a job lined up” part, the graduating part, or the two together?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "worried",
+      "body_cue": [],
+      "trigger": "still not having a job lined up after graduating"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "both i guess? everyone in my class already has stuff figured out. like theyve got grad school or offers and im just. nothing. feels like i wasted four years honestly"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like pressure mixed with hurt — especially with everyone else seeming sorted while you feel like “nothing.” Does it feel more like tight and rushed, or more like heavy and stuck?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "Still not having a job lined up after graduating, while classmates seem to already have grad school or offers."
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "heavy and stuck for sure. like a kind of embarrassing. my parents keep asking whats next and i just dont have an answer and i feel like such a letdown"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds heavy and stuck, with some embarrassment and letdown folded into it. Is the strongest part the pressure from your parents, or the feeling of being a letdown?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassing",
+      "body_cue": [],
+      "trigger": "parents asking what's next and not having an answer"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "the letdown part i think. anyway idk if saying it helps but its less stuck in my head now. gonna go. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — the letdown part was the sharpest piece, and it sounds a little looser now. We can leave it here; thanks for saying it out loud.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "letdown",
+      "body_cue": [],
+      "trigger": "parents asking what's next after graduation"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "cid": "fear__07",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-09T17:35:57.825Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. so im just kind of annoyed i guess. my girlfriends been on her phone a lot lately and idk it bugs me"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that sounds pretty annoying. Is it more like frustration, feeling ignored, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "i mean yeah ignored kind of. but honestly its more like. she texts someone and laughs and i dont know who. and my stomach drops every time"
+    },
+    {
+      "role": "companion",
+      "content": "That drop in your stomach sounds like it carries more than annoyance — maybe hurt or worry too. What does it make you want to do in that moment?"
+    },
+    {
+      "role": "user",
+      "content": "honestly i just want to check her phone. which i know is bad. i think im scared shes gonna leave. like im waiting for it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like fear sitting right under the urge to check, and the waiting-for-it part feels really sharp. Does it feel more like fear, hurt, or both?"
+    },
+    {
+      "role": "user",
+      "content": "yeah its fear. mostly fear. saying it out loud makes it feel less crazy i guess. i should probably just talk to her instead of snooping. anyway thanks, gotta go"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — that sounds like fear, and saying it out loud can make the shape of it a little clearer. We can leave it there for now, and thanks for telling me."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6x88bzog180s7b",
+    "conversation_id": "fear__07",
+    "timestamp": "2026-06-09T17:36:18.134Z",
+    "user_words_raw": "waiting for it",
+    "emotion_status": "confirmed",
+    "emotion_family": "fear",
+    "emotion_shade": "fear",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "she texts someone and laughs and I don't know who",
+    "appraisal_thought": "she's going to leave",
+    "body_cue": [
+      "my stomach drops"
+    ],
+    "behaviour_action": [
+      "want to check her phone",
+      "waiting for it"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "certainty",
+      "reassurance",
+      "trust"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Fear about a partner possibly leaving, with checking urges around phone use.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. so im just kind of annoyed i guess. my girlfriends been on her phone a lot lately and idk it bugs me"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that sounds pretty annoying. Is it more like frustration, feeling ignored, or something else?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "annoyed",
+      "body_cue": [],
+      "trigger": "girlfriend being on her phone a lot lately"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i mean yeah ignored kind of. but honestly its more like. she texts someone and laughs and i dont know who. and my stomach drops every time"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That drop in your stomach sounds like it carries more than annoyance — maybe hurt or worry too. What does it make you want to do in that moment?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "ignored",
+      "body_cue": [
+        "stomach drops"
+      ],
+      "trigger": "she texts someone and laughs and I don't know who"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "honestly i just want to check her phone. which i know is bad. i think im scared shes gonna leave. like im waiting for it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like fear sitting right under the urge to check, and the waiting-for-it part feels really sharp. Does it feel more like fear, hurt, or both?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "scared she’s going to leave",
+      "body_cue": [
+        "my stomach drops"
+      ],
+      "trigger": "she texts someone and laughs and I don't know who"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah its fear. mostly fear. saying it out loud makes it feel less crazy i guess. i should probably just talk to her instead of snooping. anyway thanks, gotta go"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Yeah — that sounds like fear, and saying it out loud can make the shape of it a little clearer. We can leave it there for now, and thanks for telling me.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "fear",
+      "body_cue": [
+        "my stomach drops"
+      ],
+      "trigger": "she texts someone and laughs and I don't know who"
+    }
+  ]
+}

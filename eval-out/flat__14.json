@@ -1,0 +1,191 @@
+{
+  "cid": "flat__14",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-09T18:26:52.709Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk why im even here. been feeling kind of off lately"
+    },
+    {
+      "role": "companion",
+      "content": "Something feels off and hard to place. Is it more vague and flat, or more restless and uneasy?"
+    },
+    {
+      "role": "user",
+      "content": "more flat i guess. like theres nothing there. i went to my parents place for dinner sunday and just felt like i was watching it all from behind glass"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really flat and a bit far away — like you were there, but behind glass. Does it feel more like numb, blank, or disconnected?"
+    },
+    {
+      "role": "user",
+      "content": "disconnected. thats the word. like everyone was laughing and passing food around and i was just. nodding. my mom asked how work was and i couldnt even feel anything when i answered. its been like this with them for a while honestly"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds disconnected, especially with your parents — like you were nodding through it while your mom asked about work. Does it feel more like going quiet inside, or like you’re watching from a distance?"
+    },
+    {
+      "role": "user",
+      "content": "watching from a distance. i used to be so close with them, esp my dad. but ever since i moved out and they kind of brushed off some stuff that happened, idk. its like i just turned something off so it wouldnt hurt. and now i cant turn it back on even when i want to"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like you turned something off so it wouldn’t hurt, and now it stays distant even when you want closeness. Do you want to stay with that, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "yeah i think i can stay with it a sec. its weird saying it out loud. i think part of me went numb cause caring just got too disappointing. like if i dont expect anything from them it cant let me down again"
+    },
+    {
+      "role": "companion",
+      "content": "That makes a lot of sense — numb can be the shape disappointment takes when caring has felt too costly. Does it feel more like protection, or more like a quiet grief underneath it?"
+    },
+    {
+      "role": "user",
+      "content": "grief. yeah. didnt expect that to hit. ok i think im gonna sit with that for now. thanks for this, genuinely"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — grief feels like the deeper thing under it, and that may be enough for now. We can leave it there, or if you want later, we can stay with what it’s grieving."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z1rz2ks92hcuz",
+    "conversation_id": "flat__14",
+    "timestamp": "2026-06-09T18:27:33.535Z",
+    "user_words_raw": "grief",
+    "emotion_status": "confirmed",
+    "emotion_family": "sadness",
+    "emotion_shade": "grief",
+    "secondary_emotions": [
+      "hurt"
+    ],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "they brushed off some stuff that happened after they moved out",
+    "appraisal_thought": "if I don’t expect anything from them it can’t let me down again",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "closeness",
+      "understanding",
+      "permission to stop"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feeling grief underneath numbness/disconnection with family after moving out and feeling brushed off.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk why im even here. been feeling kind of off lately"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Something feels off and hard to place. Is it more vague and flat, or more restless and uneasy?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "off",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "more flat i guess. like theres nothing there. i went to my parents place for dinner sunday and just felt like i was watching it all from behind glass"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds really flat and a bit far away — like you were there, but behind glass. Does it feel more like numb, blank, or disconnected?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "going to parents' place for dinner"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "disconnected. thats the word. like everyone was laughing and passing food around and i was just. nodding. my mom asked how work was and i couldnt even feel anything when i answered. its been like this with them for a while honestly"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds disconnected, especially with your parents — like you were nodding through it while your mom asked about work. Does it feel more like going quiet inside, or like you’re watching from a distance?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "going to parents' place for dinner"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "watching from a distance. i used to be so close with them, esp my dad. but ever since i moved out and they kind of brushed off some stuff that happened, idk. its like i just turned something off so it wouldnt hurt. and now i cant turn it back on even when i want to"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like you turned something off so it wouldn’t hurt, and now it stays distant even when you want closeness. Do you want to stay with that, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "they brushed off some stuff that happened after moving out"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah i think i can stay with it a sec. its weird saying it out loud. i think part of me went numb cause caring just got too disappointing. like if i dont expect anything from them it cant let me down again"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That makes a lot of sense — numb can be the shape disappointment takes when caring has felt too costly. Does it feel more like protection, or more like a quiet grief underneath it?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": "they brushed off some stuff after moving out"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "grief. yeah. didnt expect that to hit. ok i think im gonna sit with that for now. thanks for this, genuinely"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Yeah — grief feels like the deeper thing under it, and that may be enough for now. We can leave it there, or if you want later, we can stay with what it’s grieving.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grief",
+      "body_cue": [],
+      "trigger": "they brushed off some stuff that happened after they moved out"
+    }
+  ]
+}

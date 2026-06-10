@@ -1,0 +1,201 @@
+{
+  "cid": "hurt__16",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-09T18:21:49.521Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk if this kind of thing even works but ok. having a weird day i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that feels a little uncertain and vague. What’s making it a weird day?"
+    },
+    {
+      "role": "user",
+      "content": "i dunno. its dumb probably. its just my friend maya. we were supposed to do this whole trip thing and. whatever. its fine"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like there might be a hurt or disappointed edge under the “whatever.” What happened with the trip thing?"
+    },
+    {
+      "role": "user",
+      "content": "ok so we planned portugal like for months. me and her. it was gonna be our thing, we even had a whole pinterest board lol. and then she just. she texted me she's going with becca instead. like a group thing now apparently. and i found out the actual dates were already booked. without me"
+    },
+    {
+      "role": "companion",
+      "content": "Oof, that sounds really hurtful — like being left out of something that was meant to be yours together. Did it land more like hurt, or more like anger on top of it?"
+    },
+    {
+      "role": "user",
+      "content": "honestly more hurt i think. like im not even that mad? i keep waiting to be mad. its more like. i thought i mattered more than that. we've been friends since we were 11. and becca's known her two years. and somehow im the one getting cut. that part stings"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that sting sounds like being cut out after expecting to be chosen. Does it feel more like a hollow ache, wanting to pull away, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "yeah the hollow thing. kinda. i havent texted back yet. its been like a day. i dont even know what id say. part of me wants to act like its no big deal so she doesnt think im being dramatic. ugh. i hate that this is getting to me this much over a trip"
+    },
+    {
+      "role": "companion",
+      "content": "That hollow, holding-back feeling makes sense here — and it sounds like the trip touched something bigger than the trip itself. If you want, we can stay with that, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "yeah maybe its the choosing part more than the trip. like who picks me. i didnt expect to say that out loud honestly. i think i should probably just sit with it tonight. but. this was less weird than i thought it'd be. thanks i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like the choosing part, not just the Portugal plan. We can leave it there for tonight, and I’m glad it felt a little less weird to say out loud."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yv7i9es74zvvu",
+    "conversation_id": "hurt__16",
+    "timestamp": "2026-06-09T18:22:24.693Z",
+    "user_words_raw": "who picks me",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "left out",
+    "secondary_emotions": [
+      "sadness"
+    ],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "A planned Portugal trip with a close friend changed into a group trip, and the user found out the dates were already booked without them.",
+    "appraisal_thought": "who picks me",
+    "body_cue": [
+      "hollow"
+    ],
+    "behaviour_action": [
+      "not texted back",
+      "wanting to act like it's no big deal"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "belonging",
+      "being chosen",
+      "care",
+      "closeness"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feeling cut out by someone close after a long-planned trip changed without them.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk if this kind of thing even works but ok. having a weird day i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Yeah, that feels a little uncertain and vague. What’s making it a weird day?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i dunno. its dumb probably. its just my friend maya. we were supposed to do this whole trip thing and. whatever. its fine"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like there might be a hurt or disappointed edge under the “whatever.” What happened with the trip thing?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "disappointed",
+      "body_cue": [],
+      "trigger": "the planned trip with a friend fell through or changed"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "ok so we planned portugal like for months. me and her. it was gonna be our thing, we even had a whole pinterest board lol. and then she just. she texted me she's going with becca instead. like a group thing now apparently. and i found out the actual dates were already booked. without me"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Oof, that sounds really hurtful — like being left out of something that was meant to be yours together. Did it land more like hurt, or more like anger on top of it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "A planned trip with a friend changed into a group trip, and the user found out the dates were already booked without them."
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "honestly more hurt i think. like im not even that mad? i keep waiting to be mad. its more like. i thought i mattered more than that. we've been friends since we were 11. and becca's known her two years. and somehow im the one getting cut. that part stings"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Yeah, that sting sounds like being cut out after expecting to be chosen. Does it feel more like a hollow ache, wanting to pull away, or something else?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "A planned Portugal trip with a close friend changed into a group trip, and the user found out the dates were already booked without them."
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah the hollow thing. kinda. i havent texted back yet. its been like a day. i dont even know what id say. part of me wants to act like its no big deal so she doesnt think im being dramatic. ugh. i hate that this is getting to me this much over a trip"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That hollow, holding-back feeling makes sense here — and it sounds like the trip touched something bigger than the trip itself. If you want, we can stay with that, or leave it here for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [
+        "hollow"
+      ],
+      "trigger": "A planned Portugal trip with a close friend changed into a group trip, and the user found out the dates were already booked without them."
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah maybe its the choosing part more than the trip. like who picks me. i didnt expect to say that out loud honestly. i think i should probably just sit with it tonight. but. this was less weird than i thought it'd be. thanks i guess"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels like the choosing part, not just the Portugal plan. We can leave it there for tonight, and I’m glad it felt a little less weird to say out loud.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [
+        "hollow"
+      ],
+      "trigger": "A planned Portugal trip with a close friend changed into a group trip, and the user found out the dates were already booked without them."
+    }
+  ]
+}

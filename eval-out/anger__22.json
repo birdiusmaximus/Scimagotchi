@@ -1,0 +1,241 @@
+{
+  "cid": "anger__22",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-09T18:18:25.138Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont even know why im opening this. just had the worst evening"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a rough evening. We can stay with it lightly if you want — what made it feel worst?"
+    },
+    {
+      "role": "user",
+      "content": "its not really sad. im just pissed. my roommate ate the thing i was saving. again. like the SPECIFIC thing i told her i was keeping for after my shift"
+    },
+    {
+      "role": "companion",
+      "content": "Ugh, that sounds really frustrating and violated. Was it more the “again” part, the specific thing, or the way they ignored what you said?"
+    },
+    {
+      "role": "user",
+      "content": "the again. 100% the again. its a leftover tub of pad thai but its not about the food its that ive asked her like four times and she just does whatever she wants and then says oh sorry i didnt see your name on it. ITS THE FRIDGE WE SHARE who else would it be"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — the “again” is the sharp part here, like you’re being brushed off on purpose. Does it feel more hot and ready-to-push-back, or more tight and resentful?"
+    },
+    {
+      "role": "user",
+      "content": "tight i think. i didnt even say anything to her. i just put my bag down and came in here instead. i hate that i do that. like i swallow it every time and then im the one stewing while shes in there watching tv like nothing happened"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds tight and swallowed — like the anger stays in you while she carries on as if nothing happened. Does it make you want to confront her, or mostly just shut down and hold it in?"
+    },
+    {
+      "role": "user",
+      "content": "both at once honestly. part of me wants to bang on her door and be like ARE YOU KIDDING ME. but then i hear myself and im like its a takeout container becca. youre 27. so i just dont. and then i resent her more for making me feel insane over something small"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that sounds like two things colliding: the urge to push back, and the part of you that judges the whole thing as “too small.” It seems to turn into resentment and self-doubt at the same time — is that right, or is there a different name for it?"
+    },
+    {
+      "role": "user",
+      "content": "resentful yeah. but its bigger than her too if im honest. its like i do this everywhere. work, my mum, becca. i make myself small and tell myself its not a big deal and then im furious that nobody treats my stuff like it matters. but i never SAY it matters. so how would they even know"
+    },
+    {
+      "role": "companion",
+      "content": "That feels bigger than the one container — like resentment that keeps finding the same shape in different places. It sounds like something about your stuff, your space, or your say not mattering is in this too; do you want to stay with that, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "honestly i dont have it in me to crack open the whole my say doesnt matter thing tonight, im wiped. but yeah. thats the thread. i kind of hate that you found it that fast lol"
+    },
+    {
+      "role": "companion",
+      "content": "Got it — we can leave it there, and that thread is enough for tonight. And yeah, I may have caught the thread fast, but you were the one who showed me where it was."
+    },
+    {
+      "role": "user",
+      "content": "yeah. ok. that actually helped more than yelling at becca wouldve. still might label the next tub like a psycho though. night"
+    },
+    {
+      "role": "companion",
+      "content": "Night. That feels like enough for now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yqtve5wvxchw0",
+    "conversation_id": "anger__22",
+    "timestamp": "2026-06-09T18:19:14.896Z",
+    "user_words_raw": "my say doesnt matter",
+    "emotion_status": "confirmed",
+    "emotion_family": "anger",
+    "emotion_shade": "resentful",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "Roommate ate the leftover pad thai after being told it was being saved, and it touched a bigger pattern of feeling like their say and their stuff don’t matter.",
+    "appraisal_thought": "My say doesn’t matter.",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "respect",
+      "being heard",
+      "autonomy"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feels treated as if their things and preferences don't matter; this shows up in several relationships.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont even know why im opening this. just had the worst evening"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a rough evening. We can stay with it lightly if you want — what made it feel worst?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "its not really sad. im just pissed. my roommate ate the thing i was saving. again. like the SPECIFIC thing i told her i was keeping for after my shift"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Ugh, that sounds really frustrating and violated. Was it more the “again” part, the specific thing, or the way they ignored what you said?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "roommate ate something they were saving after being told not to"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "the again. 100% the again. its a leftover tub of pad thai but its not about the food its that ive asked her like four times and she just does whatever she wants and then says oh sorry i didnt see your name on it. ITS THE FRIDGE WE SHARE who else would it be"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Yeah — the “again” is the sharp part here, like you’re being brushed off on purpose. Does it feel more hot and ready-to-push-back, or more tight and resentful?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "roommate ate the thing they were saving after being told not to, again"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "tight i think. i didnt even say anything to her. i just put my bag down and came in here instead. i hate that i do that. like i swallow it every time and then im the one stewing while shes in there watching tv like nothing happened"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds tight and swallowed — like the anger stays in you while she carries on as if nothing happened. Does it make you want to confront her, or mostly just shut down and hold it in?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [
+        "tight"
+      ],
+      "trigger": "roommate ate the leftover tub of pad thai again after being told not to"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "both at once honestly. part of me wants to bang on her door and be like ARE YOU KIDDING ME. but then i hear myself and im like its a takeout container becca. youre 27. so i just dont. and then i resent her more for making me feel insane over something small"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Yeah, that sounds like two things colliding: the urge to push back, and the part of you that judges the whole thing as “too small.” It seems to turn into resentment and self-doubt at the same time — is that right, or is there a different name for it?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [
+        "tight"
+      ],
+      "trigger": "roommate ate the leftover tub of pad thai after being told not to, again"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "resentful yeah. but its bigger than her too if im honest. its like i do this everywhere. work, my mum, becca. i make myself small and tell myself its not a big deal and then im furious that nobody treats my stuff like it matters. but i never SAY it matters. so how would they even know"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels bigger than the one container — like resentment that keeps finding the same shape in different places. It sounds like something about your stuff, your space, or your say not mattering is in this too; do you want to stay with that, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [],
+      "trigger": "Roommate ate the leftover pad thai after being told it was being saved, especially after it happened again."
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "honestly i dont have it in me to crack open the whole my say doesnt matter thing tonight, im wiped. but yeah. thats the thread. i kind of hate that you found it that fast lol"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "Got it — we can leave it there, and that thread is enough for tonight. And yeah, I may have caught the thread fast, but you were the one who showed me where it was.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [],
+      "trigger": "Roommate ate the leftover pad thai after being told it was being saved, and it touched a bigger pattern of feeling like their say and their stuff don’t matter."
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah. ok. that actually helped more than yelling at becca wouldve. still might label the next tub like a psycho though. night"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "Night. That feels like enough for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [],
+      "trigger": "Roommate ate the leftover pad thai after being told it was being saved, and it touched a bigger pattern of feeling like their say and their stuff don’t matter."
+    }
+  ]
+}

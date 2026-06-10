@@ -1,0 +1,267 @@
+{
+  "cid": "hurt__21",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-09T18:22:28.396Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk why im even opening this. work stuff. nothing dramatic"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds pretty ordinary on the surface, but maybe not empty. What's the work stuff like for you right now?"
+    },
+    {
+      "role": "user",
+      "content": "ha 'not empty'. you sound like my therapist. its fine. just normal office politics i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Fair — I can drop the therapist voice. Normal office politics can still have a bite; does it feel more annoying, tense, or just blah?"
+    },
+    {
+      "role": "user",
+      "content": "blah is easier to say lol. i dunno. theres this promotion thing. doesnt matter"
+    },
+    {
+      "role": "companion",
+      "content": "“Blah” feels like the easiest word here, and that promotion thing sounds like it might be sitting underneath it. Want to leave it there, or stay with that promotion for a moment?"
+    },
+    {
+      "role": "user",
+      "content": "i mean theres nothing to stay with really. they gave it to marcus. i trained marcus. literally showed him the whole pipeline last year. but sure hes 'ready' apparently"
+    },
+    {
+      "role": "companion",
+      "content": "That has a sharp unfairness to it — you trained him, and then he got called “ready.” Does it feel more irritated, hurt, or both?"
+    },
+    {
+      "role": "user",
+      "content": "irritated sure. hurt is a strong word, im not gonna cry over a job title lol. its just. i dunno. my manager pulled me aside like she was doing me a favor telling me first. 'we really value your stability in the role' lmao. translation: stay put forever"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds irritating in a very pointed way — like they dressed it up as praise, but it landed as “stay put.” Did it make you want to push back, go quiet, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "went quiet obviously. said thanks for letting me know. what was i gonna do, throw a chair. but honestly the quiet part is. like i smiled and nodded and i felt like an idiot. ive been there four years. i thought that meant something to her"
+    },
+    {
+      "role": "companion",
+      "content": "That quiet sounds like it carried embarrassment too — smiling and nodding while feeling like an idiot, after four years and expecting it to mean something. If you want, we can stay with that, or let it rest here."
+    },
+    {
+      "role": "user",
+      "content": "yeah i guess. its dumb tho right. she doesnt owe me anything its a company not a friendship. i KNOW that. but i kept thinking she had my back. four years of staying late covering for ppl. and the takeaway is im 'stable'. cool. great. love that for me"
+    },
+    {
+      "role": "companion",
+      "content": "That lands like a mix of embarrassment and disappointment — not because you expected a friendship, but because “having my back” didn’t seem to show up when it mattered. Does it feel more like being dismissed, or like losing a bit of trust?"
+    },
+    {
+      "role": "user",
+      "content": "losing trust i think. yeah. like i cant unhear it now. every time she asks me to pick up something extra im gonna think oh right im the stable furniture. the reliable one you dont have to worry about promoting"
+    },
+    {
+      "role": "companion",
+      "content": "That “stable furniture” line feels like it’s stuck to the whole thing now. If you want, we can stay with what it changed for you, or let it rest here."
+    },
+    {
+      "role": "user",
+      "content": "nah lets leave it there. i should sleep before i spiral about furniture lol. this was... actually not nothing. thanks weird little app"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it was something, even if it was a weird little something. Sleep well."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yw2cs3jheao8j",
+    "conversation_id": "hurt__21",
+    "timestamp": "2026-06-09T18:23:16.616Z",
+    "user_words_raw": "stable furniture",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "embarrassed",
+    "secondary_emotions": [
+      "hurt",
+      "sadness"
+    ],
+    "valence": "mixed",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "manager said she valued the user's stability in the role after promoting someone else",
+    "appraisal_thought": "I thought that meant something to her; now I feel like the reliable one you don’t have to worry about promoting.",
+    "body_cue": [],
+    "behaviour_action": [
+      "went quiet",
+      "smiled and nodded"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "trust",
+      "recognition",
+      "dignity"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feels overlooked after being described as stable at work; now associates extra requests with being unrewarded and stuck in place.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk why im even opening this. work stuff. nothing dramatic"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds pretty ordinary on the surface, but maybe not empty. What's the work stuff like for you right now?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "work stuff"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "ha 'not empty'. you sound like my therapist. its fine. just normal office politics i guess"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Fair — I can drop the therapist voice. Normal office politics can still have a bite; does it feel more annoying, tense, or just blah?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "annoying",
+      "body_cue": [],
+      "trigger": "work stuff"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "blah is easier to say lol. i dunno. theres this promotion thing. doesnt matter"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "“Blah” feels like the easiest word here, and that promotion thing sounds like it might be sitting underneath it. Want to leave it there, or stay with that promotion for a moment?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blah",
+      "body_cue": [],
+      "trigger": "promotion thing at work"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "i mean theres nothing to stay with really. they gave it to marcus. i trained marcus. literally showed him the whole pipeline last year. but sure hes 'ready' apparently"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That has a sharp unfairness to it — you trained him, and then he got called “ready.” Does it feel more irritated, hurt, or both?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "unfair",
+      "body_cue": [],
+      "trigger": "they gave the promotion to Marcus after the user trained him"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "irritated sure. hurt is a strong word, im not gonna cry over a job title lol. its just. i dunno. my manager pulled me aside like she was doing me a favor telling me first. 'we really value your stability in the role' lmao. translation: stay put forever"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds irritating in a very pointed way — like they dressed it up as praise, but it landed as “stay put.” Did it make you want to push back, go quiet, or something else?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "irritated",
+      "body_cue": [],
+      "trigger": "their manager framed the promotion decision as valuing the user's stability in the role"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "went quiet obviously. said thanks for letting me know. what was i gonna do, throw a chair. but honestly the quiet part is. like i smiled and nodded and i felt like an idiot. ive been there four years. i thought that meant something to her"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That quiet sounds like it carried embarrassment too — smiling and nodding while feeling like an idiot, after four years and expecting it to mean something. If you want, we can stay with that, or let it rest here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "manager saying they valued the user's stability in the role after giving the promotion to Marcus"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "yeah i guess. its dumb tho right. she doesnt owe me anything its a company not a friendship. i KNOW that. but i kept thinking she had my back. four years of staying late covering for ppl. and the takeaway is im 'stable'. cool. great. love that for me"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That lands like a mix of embarrassment and disappointment — not because you expected a friendship, but because “having my back” didn’t seem to show up when it mattered. Does it feel more like being dismissed, or like losing a bit of trust?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "manager said they valued the user's stability in the role after giving the promotion to Marcus"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "losing trust i think. yeah. like i cant unhear it now. every time she asks me to pick up something extra im gonna think oh right im the stable furniture. the reliable one you dont have to worry about promoting"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That “stable furniture” line feels like it’s stuck to the whole thing now. If you want, we can stay with what it changed for you, or let it rest here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "manager said they valued the user's stability in the role after giving the promotion to Marcus"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "nah lets leave it there. i should sleep before i spiral about furniture lol. this was... actually not nothing. thanks weird little app"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "I’m glad it was something, even if it was a weird little something. Sleep well.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "manager said she valued the user's stability in the role after promoting someone else"
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "cid": "sadness__14",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-09T18:19:46.187Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. i dont really know why im here. just been a rough few days i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, I’m glad you came by. A rough few days can land in a lot of different ways — is it more like heavy, tense, or just hard to pin down?"
+    },
+    {
+      "role": "user",
+      "content": "not tense really. more just sad. heavy i guess. my dad and i had this huge fight last week and we havent spoken since"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds heavy and sad, especially with the silence after a huge fight. Is the heaviest part the fight itself, or not speaking since?"
+    },
+    {
+      "role": "user",
+      "content": "the silence. honestly. weve fought before but he always calls the next day. its been 6 days now. i keep checking my phone like an idiot"
+    },
+    {
+      "role": "companion",
+      "content": "The silence is the heaviest part, and the waiting keeps pulling you back to your phone. Does it feel more like ache, or more like a tight kind of hoping?"
+    },
+    {
+      "role": "user",
+      "content": "ache i think. the fight was about my mom and how he's been since the divorce. i said some stuff i didnt mean. or maybe i did mean it and thats whats worse"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like ache with guilt tangled into it. I’m wondering if the hard part is both what was said, and what it might mean about the fight — would you want to stay with that, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "maybe stay a sec. i just miss him. hes stubborn and so am i and i dont know who breaks first. i dont want it to be like this with him too"
+    },
+    {
+      "role": "companion",
+      "content": "You miss him, and there’s fear in how this could turn into something lasting. Does it feel like the missing is louder, or the worry about what this means for you two?"
+    },
+    {
+      "role": "user",
+      "content": "the missing. definitely the missing. i think im just gonna text him goodnight. nothing big. just something. thanks for letting me get that out"
+    },
+    {
+      "role": "companion",
+      "content": "The missing feels like the loudest part, and that makes sense here. We can leave it there, or if you want, we can stay with what you hope that text might carry."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ysksgqe987utd",
+    "conversation_id": "sadness__14",
+    "timestamp": "2026-06-09T18:20:16.471Z",
+    "user_words_raw": "the missing",
+    "emotion_status": "confirmed",
+    "emotion_family": "sadness",
+    "emotion_shade": "missing",
+    "secondary_emotions": [
+      "hurt",
+      "fear"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "not speaking with dad after a fight about mom and the divorce",
+    "appraisal_thought": "I miss him, and I don't want this to become something lasting between us",
+    "body_cue": [],
+    "behaviour_action": [
+      "checking my phone"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "repair",
+      "care"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "strained silence after a fight with a parent; missed the parent and worried about distance",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. i dont really know why im here. just been a rough few days i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, I’m glad you came by. A rough few days can land in a lot of different ways — is it more like heavy, tense, or just hard to pin down?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "not tense really. more just sad. heavy i guess. my dad and i had this huge fight last week and we havent spoken since"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds heavy and sad, especially with the silence after a huge fight. Is the heaviest part the fight itself, or not speaking since?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "heavy",
+      "body_cue": [],
+      "trigger": "a huge fight with dad and not speaking since"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "the silence. honestly. weve fought before but he always calls the next day. its been 6 days now. i keep checking my phone like an idiot"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "The silence is the heaviest part, and the waiting keeps pulling you back to your phone. Does it feel more like ache, or more like a tight kind of hoping?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "sadness",
+      "shade": "heavy",
+      "body_cue": [],
+      "trigger": "not speaking with dad after a huge fight; it’s been 6 days and he hasn’t called like he usually does"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "ache i think. the fight was about my mom and how he's been since the divorce. i said some stuff i didnt mean. or maybe i did mean it and thats whats worse"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like ache with guilt tangled into it. I’m wondering if the hard part is both what was said, and what it might mean about the fight — would you want to stay with that, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "heavy",
+      "body_cue": [],
+      "trigger": "not speaking with dad after a huge fight about mom and the divorce"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "maybe stay a sec. i just miss him. hes stubborn and so am i and i dont know who breaks first. i dont want it to be like this with him too"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "You miss him, and there’s fear in how this could turn into something lasting. Does it feel like the missing is louder, or the worry about what this means for you two?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "missing",
+      "body_cue": [],
+      "trigger": "not speaking with dad after a fight about mom and the divorce"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "the missing. definitely the missing. i think im just gonna text him goodnight. nothing big. just something. thanks for letting me get that out"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "The missing feels like the loudest part, and that makes sense here. We can leave it there, or if you want, we can stay with what you hope that text might carry.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "missing",
+      "body_cue": [],
+      "trigger": "not speaking with dad after a fight about mom and the divorce"
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "cid": "anger__15",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-09T18:17:45.270Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "honestly i dont even know why im here. just feeling kind of off today. i guess restless maybe"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds a bit restless and hard to pin down. Does it feel more like jittery, uneasy, or just unsettled?"
+    },
+    {
+      "role": "user",
+      "content": "no not really jittery. more like.. i cant stop thinking about something. my brother. we havent talked in like 2 years and it just keeps coming up in my head"
+    },
+    {
+      "role": "companion",
+      "content": "That feels less like jitters and more like something keeps tugging at you about your brother. Is it more of a wanting-to-reach-out feeling, or a stuck thinking feeling?"
+    },
+    {
+      "role": "user",
+      "content": "stuck i guess. but if im honest its not me wanting to reach out. its that he never paid back the money for mums funeral. i covered all of it. 8 grand. he just disappeared after and acted like it never happened"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds stuck in a really sharp way — like the money and his disappearance keep circling back together. Does it feel more like anger, hurt, or both?"
+    },
+    {
+      "role": "user",
+      "content": "yeah ok its anger. im angry. ive been telling myself for 2 years im just disappointed but no. im furious. he let me pay for our own mothers funeral and didnt even say thank you. and im the one who looks petty if i bring it up"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds furious and pretty boxed in — like he took something huge and then left you carrying the ugly part of it. Do you want to stay with that a bit, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "carrying the ugly part. thats exactly it. everyone in the family thinks were just not close anymore. nobody knows i paid. and if i say something now it just looks like im keeping score over our dead mum. so i say nothing and it eats at me"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds furious and trapped — carrying the ugly part, while everyone else sees only distance. Is the anger feeling more hot and ready to push back, or more tight and swallowed?"
+    },
+    {
+      "role": "user",
+      "content": "tight and swallowed. definitely. i just push it down and carry on. anyway. i didnt expect to actually say all that out loud. helps a bit to just call it what it is. thanks. gonna leave it there for now"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — you named it clearly, and it can rest here for now. Thanks for trusting me with it."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ypz4f38fblgbt",
+    "conversation_id": "anger__15",
+    "timestamp": "2026-06-09T18:18:26.939Z",
+    "user_words_raw": "tight and swallowed",
+    "emotion_status": "confirmed",
+    "emotion_family": "anger",
+    "emotion_shade": "furious",
+    "secondary_emotions": [
+      "hurt",
+      "pressure"
+    ],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "brother never paid back the money for mum’s funeral and disappeared after",
+    "appraisal_thought": "If I say something, I’ll look petty and like I’m keeping score over our dead mum.",
+    "body_cue": [
+      "tight and swallowed"
+    ],
+    "behaviour_action": [
+      "push it down",
+      "carry on",
+      "say nothing"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "fairness",
+      "respect",
+      "being heard",
+      "recognition"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "A family money grievance around a funeral; user feels furious but keeps silent and carries it alone.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "honestly i dont even know why im here. just feeling kind of off today. i guess restless maybe"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds a bit restless and hard to pin down. Does it feel more like jittery, uneasy, or just unsettled?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "restless",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "no not really jittery. more like.. i cant stop thinking about something. my brother. we havent talked in like 2 years and it just keeps coming up in my head"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That feels less like jitters and more like something keeps tugging at you about your brother. Is it more of a wanting-to-reach-out feeling, or a stuck thinking feeling?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": "not talking to brother for 2 years"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "stuck i guess. but if im honest its not me wanting to reach out. its that he never paid back the money for mums funeral. i covered all of it. 8 grand. he just disappeared after and acted like it never happened"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds stuck in a really sharp way — like the money and his disappearance keep circling back together. Does it feel more like anger, hurt, or both?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "brother never paid back the money for mum’s funeral and disappeared after"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah ok its anger. im angry. ive been telling myself for 2 years im just disappointed but no. im furious. he let me pay for our own mothers funeral and didnt even say thank you. and im the one who looks petty if i bring it up"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds furious and pretty boxed in — like he took something huge and then left you carrying the ugly part of it. Do you want to stay with that a bit, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "furious",
+      "body_cue": [],
+      "trigger": "brother never paid back the money for mum’s funeral and disappeared after"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "carrying the ugly part. thats exactly it. everyone in the family thinks were just not close anymore. nobody knows i paid. and if i say something now it just looks like im keeping score over our dead mum. so i say nothing and it eats at me"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds furious and trapped — carrying the ugly part, while everyone else sees only distance. Is the anger feeling more hot and ready to push back, or more tight and swallowed?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "furious",
+      "body_cue": [],
+      "trigger": "brother never paid back the money for mum’s funeral and disappeared after"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "tight and swallowed. definitely. i just push it down and carry on. anyway. i didnt expect to actually say all that out loud. helps a bit to just call it what it is. thanks. gonna leave it there for now"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That makes sense — you named it clearly, and it can rest here for now. Thanks for trusting me with it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "furious",
+      "body_cue": [
+        "tight and swallowed"
+      ],
+      "trigger": "brother never paid back the money for mum’s funeral and disappeared after"
+    }
+  ]
+}

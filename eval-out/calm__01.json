@@ -1,0 +1,141 @@
+{
+  "cid": "calm__01",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-09T17:43:12.323Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "finally handed in the big report today. been hanging over me for weeks"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a real weight lifting off after weeks of carrying it. Is it more relief, or something else too?"
+    },
+    {
+      "role": "user",
+      "content": "yeah relief mostly. just feel settled now. like i can breathe"
+    },
+    {
+      "role": "companion",
+      "content": "That settled, can-breathe feeling sounds clear. Is it mostly a soft exhale now, or a bigger drop in pressure?"
+    },
+    {
+      "role": "user",
+      "content": "soft exhale. thats it exactly. ok thats all i needed. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — we can leave it there. Glad you named it so clearly, and thanks for sharing it with me."
+    },
+    {
+      "role": "user",
+      "content": "yeah. thanks. bye"
+    },
+    {
+      "role": "companion",
+      "content": "Bye for now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xhjqgggdymwur",
+    "conversation_id": "calm__01",
+    "timestamp": "2026-06-09T17:43:29.681Z",
+    "user_words_raw": "thanks",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "settled",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "finally handed in the big report after weeks of it hanging over them",
+    "appraisal_thought": "it’s done; I can settle now",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "After finishing a long-held task, they described a settled relief that shows up as being able to breathe and a soft exhale.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "finally handed in the big report today. been hanging over me for weeks"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a real weight lifting off after weeks of carrying it. Is it more relief, or something else too?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "relief",
+      "body_cue": [],
+      "trigger": "finally handed in the big report today"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah relief mostly. just feel settled now. like i can breathe"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That settled, can-breathe feeling sounds clear. Is it mostly a soft exhale now, or a bigger drop in pressure?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [
+        "can breathe"
+      ],
+      "trigger": "finally handing in the big report after weeks of it hanging over them"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "soft exhale. thats it exactly. ok thats all i needed. thanks"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That makes sense — we can leave it there. Glad you named it so clearly, and thanks for sharing it with me.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [
+        "can breathe"
+      ],
+      "trigger": "finally handed in the big report after weeks of it hanging over them"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah. thanks. bye"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Bye for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "finally handed in the big report after weeks of it hanging over them"
+    }
+  ]
+}

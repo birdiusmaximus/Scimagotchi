@@ -1,0 +1,269 @@
+{
+  "cid": "sadness__23",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-09T18:20:32.319Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "honestly i think im just stressed. work been a lot and i cant switch my brain off lately"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a lot of pressure, with your mind staying switched on even after work. Is it more the amount of work, or the not-being-able-to-turn-off part?"
+    },
+    {
+      "role": "user",
+      "content": "i mean yeah but its not really work. work is just the thing i keep busy with. its money. i did our taxes last week and realised how bad it actually is"
+    },
+    {
+      "role": "companion",
+      "content": "Ah, so the work is carrying the money worry underneath it, and the taxes made it feel real. Does it feel more like pressure, fear, or something heavier?"
+    },
+    {
+      "role": "user",
+      "content": "heavier i think. not scared exactly. more like a sinking. we put money into my brothers business 4 years ago and its gone now. like properly gone. 30k that was meant to be our deposit"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds heavier and like a sinking kind of loss, especially with the deposit tied up in it. Does it feel more like heaviness in your body, or an urge to do something, like freeze, fix, or pull away?"
+    },
+    {
+      "role": "user",
+      "content": "heaviness mostly. i just sit there. theres nothing to fix is the thing. its been 4 years the money isnt coming back. i keep doing the maths like if wed just kept it wed have a house by now. wed have moved on with our lives"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a heavy, settled grief — the money is gone, and the house-that-could-have-been is sitting right there with it. If you want, we can stay with the heaviness a little more, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "can stay a bit. the bit i dont say out loud is im angry at him. my brother. but hes my brother and he feels terrible and he tried, so what am i meant to do. and meanwhile my wife never says anything but i know shes thinking it too"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like anger sitting right next to guilt and loyalty — torn between what happened and who it happened with. What feels strongest right now: the anger, the guilt, or the pressure of knowing your wife is carrying it too?"
+    },
+    {
+      "role": "user",
+      "content": "the wife one. the anger i can sit with. but watching her not say anything kills me. shes 38. she wanted kids in a place that was ours not renting. and i feel like i took that from her by trusting him. thats the real heavy bit"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like the heaviest part — not just the money, but the sense of having taken something from her by trusting him. Does that land more as guilt, shame, or something like grief for the life you thought you’d be building?"
+    },
+    {
+      "role": "user",
+      "content": "grief i think. for the life. the guilt i can argue myself out of, my wife says she wouldve made the same call. but the grief just sits there. its not a decision anymore its just a thing that happened to us"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — the grief sounds like it’s about the life itself, not about blame. What’s it like in you when it “just sits there”?"
+    },
+    {
+      "role": "user",
+      "content": "quiet honestly. like a flat grey. not crying or anything just heavy in the chest. i think ive been calling it stress all year cos grief sounds dramatic for money. but yeah. it is what it is"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a quiet, flat grey grief — heavy in the chest, and bigger than the word “stress” was giving it. We can leave it there, or stay with what else that grey is touching if you want."
+    },
+    {
+      "role": "user",
+      "content": "nah lets leave it there. helped to actually call it the right thing tho. ive got to get back to it anyway. cheers"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it helped to name it. Go get back to it — and if you want to pick this up again later, I’ll be here."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ytke0iav0ouq5",
+    "conversation_id": "sadness__23",
+    "timestamp": "2026-06-09T18:21:25.678Z",
+    "user_words_raw": "flat grey",
+    "emotion_status": "confirmed",
+    "emotion_family": "sadness",
+    "emotion_shade": "grief",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "the lost house deposit and the life they thought they’d be building",
+    "appraisal_thought": "it’s not a decision anymore, it’s just a thing that happened to us",
+    "body_cue": [
+      "heavy in the chest"
+    ],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "being recognised",
+      "mourning",
+      "meaning"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Grief about the lost life they thought they’d be building; heavy in the chest.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "honestly i think im just stressed. work been a lot and i cant switch my brain off lately"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a lot of pressure, with your mind staying switched on even after work. Is it more the amount of work, or the not-being-able-to-turn-off part?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "stressed",
+      "body_cue": [],
+      "trigger": "work has been a lot"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i mean yeah but its not really work. work is just the thing i keep busy with. its money. i did our taxes last week and realised how bad it actually is"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Ah, so the work is carrying the money worry underneath it, and the taxes made it feel real. Does it feel more like pressure, fear, or something heavier?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "stressed",
+      "body_cue": [],
+      "trigger": "realising after doing the taxes that their money situation is bad"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "heavier i think. not scared exactly. more like a sinking. we put money into my brothers business 4 years ago and its gone now. like properly gone. 30k that was meant to be our deposit"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds heavier and like a sinking kind of loss, especially with the deposit tied up in it. Does it feel more like heaviness in your body, or an urge to do something, like freeze, fix, or pull away?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "heavy",
+      "body_cue": [],
+      "trigger": "Doing the taxes and realising the money put into their brother's business is gone, including the deposit they were counting on."
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "heaviness mostly. i just sit there. theres nothing to fix is the thing. its been 4 years the money isnt coming back. i keep doing the maths like if wed just kept it wed have a house by now. wed have moved on with our lives"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like a heavy, settled grief — the money is gone, and the house-that-could-have-been is sitting right there with it. If you want, we can stay with the heaviness a little more, or leave it here for now.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "sadness",
+      "shade": "heavy",
+      "body_cue": [
+        "heaviness"
+      ],
+      "trigger": "Realising the money put into their brother's business is gone, including the deposit they were counting on"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "can stay a bit. the bit i dont say out loud is im angry at him. my brother. but hes my brother and he feels terrible and he tried, so what am i meant to do. and meanwhile my wife never says anything but i know shes thinking it too"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like anger sitting right next to guilt and loyalty — torn between what happened and who it happened with. What feels strongest right now: the anger, the guilt, or the pressure of knowing your wife is carrying it too?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "torn",
+      "body_cue": [],
+      "trigger": "realising the lost money came from money put into his brother’s business, and feeling the weight of how it affects his wife too"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "the wife one. the anger i can sit with. but watching her not say anything kills me. shes 38. she wanted kids in a place that was ours not renting. and i feel like i took that from her by trusting him. thats the real heavy bit"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels like the heaviest part — not just the money, but the sense of having taken something from her by trusting him. Does that land more as guilt, shame, or something like grief for the life you thought you’d be building?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "guilty",
+      "body_cue": [],
+      "trigger": "realising the lost money came from money put into his brother’s business, and feeling the weight of how it affects his wife too"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "grief i think. for the life. the guilt i can argue myself out of, my wife says she wouldve made the same call. but the grief just sits there. its not a decision anymore its just a thing that happened to us"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That makes sense — the grief sounds like it’s about the life itself, not about blame. What’s it like in you when it “just sits there”?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grief",
+      "body_cue": [],
+      "trigger": "the lost house deposit and the life they thought they’d be building with their wife"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "quiet honestly. like a flat grey. not crying or anything just heavy in the chest. i think ive been calling it stress all year cos grief sounds dramatic for money. but yeah. it is what it is"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That sounds like a quiet, flat grey grief — heavy in the chest, and bigger than the word “stress” was giving it. We can leave it there, or stay with what else that grey is touching if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grief",
+      "body_cue": [
+        "heavy in the chest"
+      ],
+      "trigger": "the lost house deposit and the life they thought they’d be building"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "nah lets leave it there. helped to actually call it the right thing tho. ive got to get back to it anyway. cheers"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "I’m glad it helped to name it. Go get back to it — and if you want to pick this up again later, I’ll be here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grief",
+      "body_cue": [
+        "heavy in the chest"
+      ],
+      "trigger": "the lost house deposit and the life they thought they’d be building"
+    }
+  ]
+}

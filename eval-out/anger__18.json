@@ -1,0 +1,189 @@
+{
+  "cid": "anger__18",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-09T18:17:49.719Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so i dont even know why im typing this but i just got off a call with my manager and apparently the whole team might get restructured next quarter and nobody can tell me if my role still exists after. like cool thanks for that"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a pretty sharp hit of uncertainty — maybe frustration mixed with worry. Is the loudest part the \"nobody can tell me\" piece, or the part about your role not being safe?"
+    },
+    {
+      "role": "user",
+      "content": "honestly its not really worry its more like im pissed off. ive been here three years, i restructured the entire onboarding flow last spring, did the work nobody wanted, and now its just oh we might fold your team into ops, tbd. like im a line item. and the kicker is my boss said it like he was telling me the weather"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds more like anger and hurt than worry — especially the “line item” part and how flat he said it. What part hit hardest: being reduced to a line item, or the way he delivered it?"
+    },
+    {
+      "role": "user",
+      "content": "the way he said it for sure. but heres the messed up thing and i hate admitting it. underneath the mad im also kind of scared?? like i have rent and my partner just went part time and i keep doing the math at 2am. but the scared makes me MORE angry because i shouldnt have to feel this way over a maybe. they wont even commit to a real answer"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — the scared sounds like it’s sitting under the anger, and the “2am math” gives it a very real shape. Does it feel more tight and urgent, or more restless and keyed up?"
+    },
+    {
+      "role": "user",
+      "content": "restless and keyed up i think. i cant sit still. i keep refreshing my work email like the answer is gonna magically appear and then i get mad all over again that im even checking. its the not knowing thats eating me. i could plan for bad news. i cant plan for a shrug"
+    },
+    {
+      "role": "companion",
+      "content": "That makes a lot of sense — the “not knowing” seems to be the part that keeps kicking it back up, and the checking is almost like your hands going looking for an answer. It feels like a mix of restless fear and anger; does that fit, or is it closer to just being on edge?"
+    },
+    {
+      "role": "user",
+      "content": "yeah thats it. restless fear and anger braided together, both yelling at once. i think the anger is honestly easier to hold than the scared part so i lead with it. saying the 2am math out loud makes it feel less like a secret im carrying around at least"
+    },
+    {
+      "role": "companion",
+      "content": "That “braided together” feels like the shape of it, and I’m glad the 2am math feels a little less secret out loud. We can leave it there, or if you want, I can stay with what the scared part seems to be asking for underneath."
+    },
+    {
+      "role": "user",
+      "content": "i think im gonna leave it there for tonight. ive got enough swirling without cracking that open at 11pm lol. but yeah this actually helped, getting it out of my head. thanks for not telling me to just calm down or whatever. ok night"
+    },
+    {
+      "role": "companion",
+      "content": "Good night — I’m glad it helped get it out of your head, and we can leave it right here. Thanks for trusting me with it."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yq2oxdxfs3ptu",
+    "conversation_id": "anger__18",
+    "timestamp": "2026-06-09T18:18:29.424Z",
+    "user_words_raw": "getting it out of my head",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "restless and keyed up",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "not knowing whether the role still exists after a possible restructuring",
+    "appraisal_thought": "the not knowing is the part that keeps kicking it back up",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User tends to name anger and fear together around work uncertainty; speaking it out loud helps.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so i dont even know why im typing this but i just got off a call with my manager and apparently the whole team might get restructured next quarter and nobody can tell me if my role still exists after. like cool thanks for that"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a pretty sharp hit of uncertainty — maybe frustration mixed with worry. Is the loudest part the \"nobody can tell me\" piece, or the part about your role not being safe?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "worry",
+      "body_cue": [],
+      "trigger": "A call with their manager about a possible team restructure and uncertainty about whether their role will still exist next quarter."
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "honestly its not really worry its more like im pissed off. ive been here three years, i restructured the entire onboarding flow last spring, did the work nobody wanted, and now its just oh we might fold your team into ops, tbd. like im a line item. and the kicker is my boss said it like he was telling me the weather"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds more like anger and hurt than worry — especially the “line item” part and how flat he said it. What part hit hardest: being reduced to a line item, or the way he delivered it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "pissed off",
+      "body_cue": [],
+      "trigger": "manager said the team might be restructured next quarter and the user’s role may not exist"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "the way he said it for sure. but heres the messed up thing and i hate admitting it. underneath the mad im also kind of scared?? like i have rent and my partner just went part time and i keep doing the math at 2am. but the scared makes me MORE angry because i shouldnt have to feel this way over a maybe. they wont even commit to a real answer"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Yeah — the scared sounds like it’s sitting under the anger, and the “2am math” gives it a very real shape. Does it feel more tight and urgent, or more restless and keyed up?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "scared",
+      "body_cue": [],
+      "trigger": "manager wouldn't commit to a real answer about whether the role still exists after a possible restructuring"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "restless and keyed up i think. i cant sit still. i keep refreshing my work email like the answer is gonna magically appear and then i get mad all over again that im even checking. its the not knowing thats eating me. i could plan for bad news. i cant plan for a shrug"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes a lot of sense — the “not knowing” seems to be the part that keeps kicking it back up, and the checking is almost like your hands going looking for an answer. It feels like a mix of restless fear and anger; does that fit, or is it closer to just being on edge?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "on edge",
+      "body_cue": [
+        "restless and keyed up"
+      ],
+      "trigger": "not knowing whether the role still exists after a possible restructuring"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah thats it. restless fear and anger braided together, both yelling at once. i think the anger is honestly easier to hold than the scared part so i lead with it. saying the 2am math out loud makes it feel less like a secret im carrying around at least"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That “braided together” feels like the shape of it, and I’m glad the 2am math feels a little less secret out loud. We can leave it there, or if you want, I can stay with what the scared part seems to be asking for underneath.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "restless and keyed up",
+      "body_cue": [
+        "cant sit still"
+      ],
+      "trigger": "not knowing whether the role still exists after a possible restructuring"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "i think im gonna leave it there for tonight. ive got enough swirling without cracking that open at 11pm lol. but yeah this actually helped, getting it out of my head. thanks for not telling me to just calm down or whatever. ok night"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Good night — I’m glad it helped get it out of your head, and we can leave it right here. Thanks for trusting me with it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "restless and keyed up",
+      "body_cue": [],
+      "trigger": "not knowing whether the role still exists after a possible restructuring"
+    }
+  ]
+}

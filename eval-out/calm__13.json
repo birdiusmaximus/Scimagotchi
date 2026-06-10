@@ -1,0 +1,193 @@
+{
+  "cid": "calm__13",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-09T17:44:17.709Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk why im even opening this lol. things are fine i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that’s okay — we can keep it light. “Fine I guess” sounds a little unsure; what’s been on your mind?"
+    },
+    {
+      "role": "user",
+      "content": "ehh nothing really. work stuff money stuff the usual. its honestly not even bad rn which is weird"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds oddly flat, like “the usual” is there but not really landing. Is it more blank, off, or just hard to care about right now?"
+    },
+    {
+      "role": "user",
+      "content": "no no its not a bad weird. like good weird? i finally paid off this stupid credit card i been dragging around for years. so i guess im just... not stressed about it for once ha"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a relieved kind of weird — the credit card finally being done, and the stress dropping away for once. Does it feel more relieved, light, or almost unreal?"
+    },
+    {
+      "role": "user",
+      "content": "kinda unreal ngl. i keep checking the app like its gonna say jk you still owe us 4 grand lol. but yeah. theres this little quiet thing. like i can breathe without doing math in my head every time i buy coffee"
+    },
+    {
+      "role": "companion",
+      "content": "That little quiet thing makes sense — like your mind can stop doing math for a moment. Does it feel calm and open, or more like a careful quiet you keep checking on?"
+    },
+    {
+      "role": "user",
+      "content": "careful quiet for sure. like i dont fully trust it yet? been broke n stressed so long that calm feels like the wrong shoe size lol. but its nice. ill take it"
+    },
+    {
+      "role": "companion",
+      "content": "That makes a lot of sense — a careful quiet that feels nice, but not fully familiar yet. We can leave it there, or stay with what this new calm is like for you."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there i think. didnt expect to actually feel better talking abt money of all things lol. thanks tho. catch ya later"
+    },
+    {
+      "role": "companion",
+      "content": "Sounds good — we can leave it right there. Catch you later."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xiy37qsixmxrw",
+    "conversation_id": "calm__13",
+    "timestamp": "2026-06-09T17:44:50.341Z",
+    "user_words_raw": "careful quiet",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "careful quiet",
+    "secondary_emotions": [
+      "relief"
+    ],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "paying off the credit card after carrying it for years",
+    "appraisal_thought": "it might not last / maybe I still owe this",
+    "body_cue": [],
+    "behaviour_action": [
+      "checking the app"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "clarity",
+      "rest"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "A long-running money stress eased after paying off a credit card; they described the calm as careful and not fully trusted yet.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk why im even opening this lol. things are fine i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that’s okay — we can keep it light. “Fine I guess” sounds a little unsure; what’s been on your mind?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "ehh nothing really. work stuff money stuff the usual. its honestly not even bad rn which is weird"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds oddly flat, like “the usual” is there but not really landing. Is it more blank, off, or just hard to care about right now?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": "work stuff money stuff the usual"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "no no its not a bad weird. like good weird? i finally paid off this stupid credit card i been dragging around for years. so i guess im just... not stressed about it for once ha"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like a relieved kind of weird — the credit card finally being done, and the stress dropping away for once. Does it feel more relieved, light, or almost unreal?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "relieved",
+      "body_cue": [],
+      "trigger": "paid off a credit card after years of carrying it"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "kinda unreal ngl. i keep checking the app like its gonna say jk you still owe us 4 grand lol. but yeah. theres this little quiet thing. like i can breathe without doing math in my head every time i buy coffee"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That little quiet thing makes sense — like your mind can stop doing math for a moment. Does it feel calm and open, or more like a careful quiet you keep checking on?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "quiet",
+      "body_cue": [],
+      "trigger": "paying off the credit card after carrying it for years"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "careful quiet for sure. like i dont fully trust it yet? been broke n stressed so long that calm feels like the wrong shoe size lol. but its nice. ill take it"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That makes a lot of sense — a careful quiet that feels nice, but not fully familiar yet. We can leave it there, or stay with what this new calm is like for you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "careful quiet",
+      "body_cue": [],
+      "trigger": "paying off the credit card after carrying it for years"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it there i think. didnt expect to actually feel better talking abt money of all things lol. thanks tho. catch ya later"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Sounds good — we can leave it right there. Catch you later.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "careful quiet",
+      "body_cue": [],
+      "trigger": "paying off the credit card after carrying it for years"
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "cid": "pressure__21",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-09T17:46:57.983Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk why im even opening this lol. work stuff. its fine probably"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — work stuff can still be worth opening, even if it’s “fine probably.” What’s making you pause about it?"
+    },
+    {
+      "role": "user",
+      "content": "ehh nothing really. just got a lot on. you know how it is. anyway hows the weather in robot land"
+    },
+    {
+      "role": "companion",
+      "content": "Haha, probably very synthetic and mildly overcast. You’ve got a lot on, so maybe we can leave the work stuff there for now."
+    },
+    {
+      "role": "user",
+      "content": "no its fine i mean. its not a big deal its just like. theres this thing at work. its dumb"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like it’s carrying some frustration or pressure, even if you’re calling it dumb. What about the thing at work feels dumb?"
+    },
+    {
+      "role": "user",
+      "content": "ok so like. my manager left right. and instead of replacing her they just sort of. handed me her stuff. on top of my stuff. but nobody actually SAID anything its just sort of assumed now lol classic"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really pressured — like it got piled onto you without anyone actually naming it. Does it feel more like rushed, trapped, or just overloaded?"
+    },
+    {
+      "role": "user",
+      "content": "i dunno man. all of them? lol. i guess overloaded. like i open my laptop and theres just. so much. and half of it isnt even mine its just hers that became mine somehow"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — overloaded, with your laptop turning into this pile of both yours and hers. Does it make you want to speed up, shut down, or get out from under it?"
+    },
+    {
+      "role": "user",
+      "content": "honestly? shut down. like ill sit there at 11pm just staring at it not doing anything which is the worst because then nothing gets done and im still up. but if i say something ill look like i cant handle it you know"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like overloaded and shut down — staring at it while everything stays there. Is the hardest part the amount, or looking like you can’t handle it?"
+    },
+    {
+      "role": "user",
+      "content": "the second one i think. ugh. like the work is whatever, work is always too much. its more that i feel like if i admit its too much then thats it, im the one who couldnt do it. she did all this AND made it look easy and im over here drowning at her old desk lol"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like pressure and shame tangled together — the work is one thing, and the fear of being seen as “the one who couldn’t do it” is the sharper edge. Want to stay with that, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "yeah no thats. huh. i hadnt really put it like that. shame is a strong word but. yeah maybe. anyway i should probably actually go look at that laptop instead of avoiding it haha. thanks tho. this was weirdly ok"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — I’m glad it got a little clearer, even if shame feels strong. We can leave it here, and I’m glad it was okay to say out loud."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xmdkbtfinwpug",
+    "conversation_id": "pressure__21",
+    "timestamp": "2026-06-09T17:47:41.652Z",
+    "user_words_raw": "the one who couldnt do it",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "self-critical",
+    "secondary_emotions": [
+      "pressure"
+    ],
+    "valence": "mixed",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "being handed a manager’s work on top of their own without it being said directly",
+    "appraisal_thought": "If I admit it’s too much, I’ll look like I can’t handle it.",
+    "body_cue": [],
+    "behaviour_action": [
+      "shut down",
+      "avoiding"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "dignity",
+      "being understood"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Carrying a manager’s work on top of their own has felt piled-on and unspoken.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk why im even opening this lol. work stuff. its fine probably"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — work stuff can still be worth opening, even if it’s “fine probably.” What’s making you pause about it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "work stuff"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "ehh nothing really. just got a lot on. you know how it is. anyway hows the weather in robot land"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Haha, probably very synthetic and mildly overcast. You’ve got a lot on, so maybe we can leave the work stuff there for now.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "work stuff"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "no its fine i mean. its not a big deal its just like. theres this thing at work. its dumb"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like it’s carrying some frustration or pressure, even if you’re calling it dumb. What about the thing at work feels dumb?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressured",
+      "body_cue": [],
+      "trigger": "a thing at work"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "ok so like. my manager left right. and instead of replacing her they just sort of. handed me her stuff. on top of my stuff. but nobody actually SAID anything its just sort of assumed now lol classic"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds really pressured — like it got piled onto you without anyone actually naming it. Does it feel more like rushed, trapped, or just overloaded?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressured",
+      "body_cue": [],
+      "trigger": "manager left and their work was handed to them on top of their own work without anyone saying anything"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i dunno man. all of them? lol. i guess overloaded. like i open my laptop and theres just. so much. and half of it isnt even mine its just hers that became mine somehow"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Yeah — overloaded, with your laptop turning into this pile of both yours and hers. Does it make you want to speed up, shut down, or get out from under it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overloaded",
+      "body_cue": [],
+      "trigger": "manager left and her work was handed to them on top of their own work without anyone saying anything"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "honestly? shut down. like ill sit there at 11pm just staring at it not doing anything which is the worst because then nothing gets done and im still up. but if i say something ill look like i cant handle it you know"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like overloaded and shut down — staring at it while everything stays there. Is the hardest part the amount, or looking like you can’t handle it?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "overloaded",
+      "body_cue": [],
+      "trigger": "manager left and her work was handed to them on top of their own work without anyone saying anything"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "the second one i think. ugh. like the work is whatever, work is always too much. its more that i feel like if i admit its too much then thats it, im the one who couldnt do it. she did all this AND made it look easy and im over here drowning at her old desk lol"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds like pressure and shame tangled together — the work is one thing, and the fear of being seen as “the one who couldn’t do it” is the sharper edge. Want to stay with that, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "fear of being seen as unable to handle it",
+      "body_cue": [],
+      "trigger": "being handed your manager’s work on top of your own without it being said directly"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah no thats. huh. i hadnt really put it like that. shame is a strong word but. yeah maybe. anyway i should probably actually go look at that laptop instead of avoiding it haha. thanks tho. this was weirdly ok"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "Yeah — I’m glad it got a little clearer, even if shame feels strong. We can leave it here, and I’m glad it was okay to say out loud.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "being handed a manager’s work on top of their own without it being said directly"
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "cid": "flat__18",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-09T18:27:07.617Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. idk why im even opening this. been kind of just. blank lately. not sad really just nothing. like im going through the days and nothing really lands"
+    },
+    {
+      "role": "companion",
+      "content": "Hey. That sounds really flat and far away — more like blank than sad; does it feel blank, numb, or just kind of detached?"
+    },
+    {
+      "role": "user",
+      "content": "detached i think. like theres a sheet of glass between me and everything. and the weird thing is theres this other part of me thats kind of anxious underneath it? like nothing matters but also im scared. its probably the whole future thing. i graduate in like a few weeks and everyone keeps asking what my plan is and i just. dont have one. and instead of panicking i just feel nothing which somehow feels worse"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — detached on the surface, with anxiety underneath, and the future question pressing on it. Does it feel more like the glass, the scared part, or the not-having-a-plan is the strongest piece right now?"
+    },
+    {
+      "role": "user",
+      "content": "honestly the glass. like the not having a plan i could deal with if i actually FELT something about it you know. my roommate is going on about her grad job and her apartment and i just nod and im happy for her i guess but it doesnt reach me. i used to have things i wanted. i wanted to do marine bio since i was a kid. and now when i think about applying anywhere its just. grey. like someone turned the color off. i keep waiting to feel scared or excited or anything and its just quiet in there"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds very grey and quiet in there — like the wanting used to be alive, and now it doesn’t quite reach you. Does it feel more blank, shut down, or just out of reach?"
+    },
+    {
+      "role": "user",
+      "content": "out of reach. yeah. its still in there somewhere i think i just cant get to it. like ive been studying so hard for so long and now that the finish line is here i kind of went numb. my mum thinks im being lazy bc i havent applied for anything but its not that. i open the application tabs and just stare. i dont even know if i still want marine bio or if i just dont know who id be without it. sorry this is a lot. i havent really said any of this out loud"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound lazy — it sounds like the wanting is still there, but out of reach, and the finish line may have left you numb. Would you want to stay with that a little, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "maybe stay just a sec. its kind of nice that something actually landed for once. like hearing it back as out of reach instead of lazy made my chest do a little something. i think ive been so busy being numb i forgot the wanting didnt go away it just went quiet. i dont have to apply tonight. maybe i can just let it be out of reach for a bit without making it mean im broken"
+    },
+    {
+      "role": "companion",
+      "content": "That little something in your chest feels important — the wanting going quiet, not gone. Do you want to stay with what it means that it’s out of reach without making you broken, or let it rest here?"
+    },
+    {
+      "role": "user",
+      "content": "i think ill let it rest here. im kind of tired now but a good tired. thank you. genuinely. i didnt expect to feel anything tonight and i kind of did. gonna close my laptop and just sit with it. thanks for this x"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad you’re letting it rest. That feels like a quiet, real ending for tonight."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z21280q505z2q",
+    "conversation_id": "flat__18",
+    "timestamp": "2026-06-09T18:27:51.028Z",
+    "user_words_raw": "a good tired",
+    "emotion_status": "confirmed",
+    "emotion_family": "flat",
+    "emotion_shade": "resting",
+    "secondary_emotions": [
+      "calm"
+    ],
+    "valence": "mixed",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "finishing the conversation after talking about being out of reach and not broken",
+    "appraisal_thought": "maybe I can let it be out of reach for a bit without making it mean I’m broken",
+    "body_cue": [],
+    "behaviour_action": [
+      "close my laptop",
+      "just sit with it"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "permission not to know",
+      "quiet",
+      "reduced pressure"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User was exploring feeling flat/out of reach around graduation and future plans; found some relief in naming it and then chose to rest.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. idk why im even opening this. been kind of just. blank lately. not sad really just nothing. like im going through the days and nothing really lands"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey. That sounds really flat and far away — more like blank than sad; does it feel blank, numb, or just kind of detached?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "detached i think. like theres a sheet of glass between me and everything. and the weird thing is theres this other part of me thats kind of anxious underneath it? like nothing matters but also im scared. its probably the whole future thing. i graduate in like a few weeks and everyone keeps asking what my plan is and i just. dont have one. and instead of panicking i just feel nothing which somehow feels worse"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That makes sense — detached on the surface, with anxiety underneath, and the future question pressing on it. Does it feel more like the glass, the scared part, or the not-having-a-plan is the strongest piece right now?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "detached",
+      "body_cue": [],
+      "trigger": "graduating soon and being asked about a plan"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "honestly the glass. like the not having a plan i could deal with if i actually FELT something about it you know. my roommate is going on about her grad job and her apartment and i just nod and im happy for her i guess but it doesnt reach me. i used to have things i wanted. i wanted to do marine bio since i was a kid. and now when i think about applying anywhere its just. grey. like someone turned the color off. i keep waiting to feel scared or excited or anything and its just quiet in there"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds very grey and quiet in there — like the wanting used to be alive, and now it doesn’t quite reach you. Does it feel more blank, shut down, or just out of reach?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "grey",
+      "body_cue": [],
+      "trigger": "thinking about applying anywhere after graduation, while others talk about their plans"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "out of reach. yeah. its still in there somewhere i think i just cant get to it. like ive been studying so hard for so long and now that the finish line is here i kind of went numb. my mum thinks im being lazy bc i havent applied for anything but its not that. i open the application tabs and just stare. i dont even know if i still want marine bio or if i just dont know who id be without it. sorry this is a lot. i havent really said any of this out loud"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That doesn’t sound lazy — it sounds like the wanting is still there, but out of reach, and the finish line may have left you numb. Would you want to stay with that a little, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "out of reach",
+      "body_cue": [],
+      "trigger": "finishing studies and facing graduation applications"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "maybe stay just a sec. its kind of nice that something actually landed for once. like hearing it back as out of reach instead of lazy made my chest do a little something. i think ive been so busy being numb i forgot the wanting didnt go away it just went quiet. i dont have to apply tonight. maybe i can just let it be out of reach for a bit without making it mean im broken"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That little something in your chest feels important — the wanting going quiet, not gone. Do you want to stay with what it means that it’s out of reach without making you broken, or let it rest here?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "out of reach",
+      "body_cue": [
+        "chest"
+      ],
+      "trigger": "finishing studies and facing graduation applications"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "i think ill let it rest here. im kind of tired now but a good tired. thank you. genuinely. i didnt expect to feel anything tonight and i kind of did. gonna close my laptop and just sit with it. thanks for this x"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad you’re letting it rest. That feels like a quiet, real ending for tonight.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "resting",
+      "body_cue": [],
+      "trigger": "finishing the conversation after talking about being out of reach and not broken"
+    }
+  ]
+}

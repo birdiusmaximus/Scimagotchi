@@ -1,0 +1,185 @@
+{
+  "cid": "shame__16",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-09T18:24:56.532Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. not really sure how this works tbh. someone said i should try it"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that makes sense. We can keep it simple: you can just say what’s on your mind, or even just test it out here."
+    },
+    {
+      "role": "user",
+      "content": "i dunno. its kind of a friend thing i guess. or whatever. idk if talking to an app even helps with this stuff but ok"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that sounds a bit tentative — like you’re half testing it, half not sure what to expect. Do you want to keep it casual and see what it feels like?"
+    },
+    {
+      "role": "user",
+      "content": "sure ok. so theres this group chat with my old uni friends. and like. someone posted about a get together a few weekends ago and i saw it and just. didnt reply. and then i kept not replying and now its weeks later and i feel like an idiot"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like it landed with a lot of self-blame — maybe embarrassment, or guilt?"
+    },
+    {
+      "role": "user",
+      "content": "yeah embarrassment for sure. like its not even that i didnt want to go?? i think i did. but i let it sit too long and now replying feels worse than not. like everyone else answered right away and im the weird one who ghosted. these are people i actually like. ugh"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really exposed — like the longer it sat, the more it turned into “I’m the weird one.” Does it feel more like wanting to hide, or wanting to explain yourself?"
+    },
+    {
+      "role": "user",
+      "content": "hide. definitely hide. like if i explain it sounds pathetic, oh sorry i saw your message 3 weeks ago and just couldnt make myself type back. who does that with people they like. i think part of me thinks if i wait long enough itll just. go away. but it doesnt it just gets heavier"
+    },
+    {
+      "role": "companion",
+      "content": "That heavier, hide-y feeling makes sense here — like the silence itself has become part of the embarrassment. Do you want to stay with what it’s saying about you, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it. i think i just needed to say it out loud or. type it out whatever. its not as dramatic when its actual words. maybe ill just reply to the dumb chat. anyway. thanks, this was less weird than i thought"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it felt a little less weird once it had words. We can leave it there, and if you want to come back to it later, I’ll be here."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yz7oj89p4fkj2",
+    "conversation_id": "shame__16",
+    "timestamp": "2026-06-09T18:25:37.966Z",
+    "user_words_raw": "not as dramatic when its actual words",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "embarrassed",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "seeing the group chat get-together and not replying, then noticing it weeks later",
+    "appraisal_thought": "if i explain it sounds pathetic",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User found it easier once the feeling was put into words and chose to leave it for now.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. not really sure how this works tbh. someone said i should try it"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that makes sense. We can keep it simple: you can just say what’s on your mind, or even just test it out here.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i dunno. its kind of a friend thing i guess. or whatever. idk if talking to an app even helps with this stuff but ok"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Yeah, that sounds a bit tentative — like you’re half testing it, half not sure what to expect. Do you want to keep it casual and see what it feels like?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "sure ok. so theres this group chat with my old uni friends. and like. someone posted about a get together a few weekends ago and i saw it and just. didnt reply. and then i kept not replying and now its weeks later and i feel like an idiot"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like it landed with a lot of self-blame — maybe embarrassment, or guilt?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassment",
+      "body_cue": [],
+      "trigger": "seeing the group chat get-together and not replying, then noticing it weeks later"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah embarrassment for sure. like its not even that i didnt want to go?? i think i did. but i let it sit too long and now replying feels worse than not. like everyone else answered right away and im the weird one who ghosted. these are people i actually like. ugh"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds really exposed — like the longer it sat, the more it turned into “I’m the weird one.” Does it feel more like wanting to hide, or wanting to explain yourself?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "seeing the group chat get-together and not replying, then noticing it weeks later"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "hide. definitely hide. like if i explain it sounds pathetic, oh sorry i saw your message 3 weeks ago and just couldnt make myself type back. who does that with people they like. i think part of me thinks if i wait long enough itll just. go away. but it doesnt it just gets heavier"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That heavier, hide-y feeling makes sense here — like the silence itself has become part of the embarrassment. Do you want to stay with what it’s saying about you, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "seeing the group chat get-together and not replying, then noticing it weeks later"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it. i think i just needed to say it out loud or. type it out whatever. its not as dramatic when its actual words. maybe ill just reply to the dumb chat. anyway. thanks, this was less weird than i thought"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad it felt a little less weird once it had words. We can leave it there, and if you want to come back to it later, I’ll be here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "seeing the group chat get-together and not replying, then noticing it weeks later"
+    }
+  ]
+}

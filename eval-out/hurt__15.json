@@ -1,0 +1,198 @@
+{
+  "cid": "hurt__15",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-09T18:21:49.672Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dunno why im even opening this. just feeling kind of annoyed lately i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a real edge to carry around. Is it more like frustrated, irritated, or just generally fed up?"
+    },
+    {
+      "role": "user",
+      "content": "yeah fed up maybe. its more this thing with my dad honestly. he wasnt around much when i was a kid and i found out some stuff recently"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like fed up mixed with something hurtful around your dad. What’s the part that landed hardest for you?"
+    },
+    {
+      "role": "user",
+      "content": "found out he was actually around the whole time. like living 20 min away. just chose not to show up. my mum kept that from me to protect me i think but still"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds sharp and deeply unfair — like it may have turned into a more pointed kind of anger. Did it feel more like wanting to push back, or more like a tight, blocked feeling?"
+    },
+    {
+      "role": "user",
+      "content": "not really furious tbh. i thought it was anger when i opened this but its more like... he just didnt want me. like i wasnt worth the drive. thats the bit that gets me"
+    },
+    {
+      "role": "companion",
+      "content": "That lands like hurt under the anger — the part that says you weren’t worth the drive. Does it feel more heavy, tight, or kind of numb when you hit that part?"
+    },
+    {
+      "role": "user",
+      "content": "heavy i think. kind of sits in my chest. ive spent years telling myself i didnt care and finding out he was right there just undid all of that"
+    },
+    {
+      "role": "companion",
+      "content": "That heavy chest makes sense here — like the old “I didn’t care” got shaken by something very close to rejection. Do you want to stay with that, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. didnt expect to land on that but its probably the truth. thanks. gonna get on with my day"
+    },
+    {
+      "role": "companion",
+      "content": "That feels settled enough to leave here. Thanks for trusting me with it — have a gentler rest of your day."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yv8s7jgpzfwv2",
+    "conversation_id": "hurt__15",
+    "timestamp": "2026-06-09T18:22:23.166Z",
+    "user_words_raw": "he just didnt want me",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "rejected",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "found out he was living 20 minutes away and chose not to show up",
+    "appraisal_thought": "I wasn’t worth the drive",
+    "body_cue": [
+      "heavy",
+      "sits in my chest"
+    ],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "being wanted",
+      "being seen",
+      "belonging"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "familiar family hurt about not being chosen",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dunno why im even opening this. just feeling kind of annoyed lately i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a real edge to carry around. Is it more like frustrated, irritated, or just generally fed up?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "annoyed",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah fed up maybe. its more this thing with my dad honestly. he wasnt around much when i was a kid and i found out some stuff recently"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like fed up mixed with something hurtful around your dad. What’s the part that landed hardest for you?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "fed up",
+      "body_cue": [],
+      "trigger": "finding out some stuff recently about dad not being around much when they were a kid"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "found out he was actually around the whole time. like living 20 min away. just chose not to show up. my mum kept that from me to protect me i think but still"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds sharp and deeply unfair — like it may have turned into a more pointed kind of anger. Did it feel more like wanting to push back, or more like a tight, blocked feeling?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "furious",
+      "body_cue": [],
+      "trigger": "finding out he was living nearby and chose not to show up, after being kept in the dark by their mum"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "not really furious tbh. i thought it was anger when i opened this but its more like... he just didnt want me. like i wasnt worth the drive. thats the bit that gets me"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That lands like hurt under the anger — the part that says you weren’t worth the drive. Does it feel more heavy, tight, or kind of numb when you hit that part?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "finding out he lived nearby and chose not to show up"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "heavy i think. kind of sits in my chest. ive spent years telling myself i didnt care and finding out he was right there just undid all of that"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That heavy chest makes sense here — like the old “I didn’t care” got shaken by something very close to rejection. Do you want to stay with that, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "rejected",
+      "body_cue": [
+        "heavy",
+        "sits in my chest"
+      ],
+      "trigger": "found out he was living 20 minutes away and chose not to show up"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it there. didnt expect to land on that but its probably the truth. thanks. gonna get on with my day"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels settled enough to leave here. Thanks for trusting me with it — have a gentler rest of your day.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "rejected",
+      "body_cue": [
+        "heavy",
+        "sits in my chest"
+      ],
+      "trigger": "found out he was living 20 minutes away and chose not to show up"
+    }
+  ]
+}

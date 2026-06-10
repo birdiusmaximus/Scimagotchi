@@ -1,0 +1,194 @@
+{
+  "cid": "calm__18",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-09T17:44:32.905Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. i dont really know how to start this. i guess i've just been sitting with something tonight and i wanted to put it somewhere. its weird because for the first time in a while i actually feel kind of okay? like calm. but its tangled up with this other thing too"
+    },
+    {
+      "role": "companion",
+      "content": "Hey. That sounds quietly mixed — a kind of okay or calm, with something else sitting alongside it. Does the calm feel more like settled, or more like tired and quiet?"
+    },
+    {
+      "role": "user",
+      "content": "settled i think. more settled than ive felt in months honestly. ok so the thing is i finally made a decision about the future. i've been in this holding pattern for like a year not knowing what i was doing after my contract ends in august, and i kept spiraling about it. and last week i just. decided. im not renewing. im going to take the savings i have and move back closer to my family and figure it out from there. and the second i decided it this weight just lifted"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a real lifting — settled and lighter, after a long stretch of not knowing. What’s the felt shape of it now: lighter, open, or still a little tense somewhere?"
+    },
+    {
+      "role": "user",
+      "content": "thats the thing. its both? mostly lighter and open like i can breathe again. but theres this little knot still. because i dont actually have a plan plan. like im choosing uncertainty on purpose now instead of having it forced on me and somehow that feels totally different but also kind of terrifying if i think about it too hard. my friends keep asking what are you going to DO and i dont have an answer and a month ago that would have wrecked me but now im just like. i dont know yet. and im weirdly ok with that"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense to me — mostly lighter and open, with a small knot of terrifying still left in it. I’m wondering if that knot is more in your chest, your stomach, or in the wanting-a-plan part?"
+    },
+    {
+      "role": "user",
+      "content": "stomach maybe? when i picture telling people at work im not staying it kind of clenches. but honestly its mostly in the wanting a plan part like my brain still wants to grab onto something concrete. but underneath all that theres this calm that i havent had in so long. its like the calm is the floor and the knot is just sitting on top of it for now. i think the calm is winning though. i actually slept properly this week for the first time in ages"
+    },
+    {
+      "role": "companion",
+      "content": "That image feels very clear — the calm as the floor, and the knot sitting on top of it for now. It sounds like your body is still bracing around telling people and wanting something concrete, even while the steadier part is holding."
+    },
+    {
+      "role": "user",
+      "content": "yeah. the calm as the floor. i like that. i think ive been waiting for permission to feel ok about this and maybe i dont need it, i just made the right call for me and my body kind of already knows even if my head is still catching up. its funny saying it all out loud like this makes the knot smaller somehow. like its allowed to be there and it doesnt cancel out the calm"
+    },
+    {
+      "role": "companion",
+      "content": "That feels very held — the knot doesn’t cancel the calm, it just sits beside it. We can leave it there for now if you want, or stay with what the knot is asking for underneath."
+    },
+    {
+      "role": "user",
+      "content": "i think i want to leave it there for tonight. that feels like enough. thank you for this, genuinely. i feel lighter than when i sat down. ok. goodnight"
+    },
+    {
+      "role": "companion",
+      "content": "Goodnight — I’m glad it feels like enough for tonight. Let the lighter part have the room, and we can come back to the rest another time if you want."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xj9tkom8i8n5f",
+    "conversation_id": "calm__18",
+    "timestamp": "2026-06-09T17:45:13.389Z",
+    "user_words_raw": "that feels like enough",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "making a decision about not renewing the contract and planning to move closer to family",
+    "appraisal_thought": "I made the right call for me; I don’t need permission to feel okay about this",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "clarity",
+      "autonomy",
+      "safety enough"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "They felt relief and steadiness after deciding not to renew and planning a move closer to family.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. i dont really know how to start this. i guess i've just been sitting with something tonight and i wanted to put it somewhere. its weird because for the first time in a while i actually feel kind of okay? like calm. but its tangled up with this other thing too"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey. That sounds quietly mixed — a kind of okay or calm, with something else sitting alongside it. Does the calm feel more like settled, or more like tired and quiet?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "okay",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "settled i think. more settled than ive felt in months honestly. ok so the thing is i finally made a decision about the future. i've been in this holding pattern for like a year not knowing what i was doing after my contract ends in august, and i kept spiraling about it. and last week i just. decided. im not renewing. im going to take the savings i have and move back closer to my family and figure it out from there. and the second i decided it this weight just lifted"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a real lifting — settled and lighter, after a long stretch of not knowing. What’s the felt shape of it now: lighter, open, or still a little tense somewhere?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "deciding not to renew the contract and moving closer to family"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "thats the thing. its both? mostly lighter and open like i can breathe again. but theres this little knot still. because i dont actually have a plan plan. like im choosing uncertainty on purpose now instead of having it forced on me and somehow that feels totally different but also kind of terrifying if i think about it too hard. my friends keep asking what are you going to DO and i dont have an answer and a month ago that would have wrecked me but now im just like. i dont know yet. and im weirdly ok with that"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That makes sense to me — mostly lighter and open, with a small knot of terrifying still left in it. I’m wondering if that knot is more in your chest, your stomach, or in the wanting-a-plan part?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "deciding not to renew the contract and choosing uncertainty on purpose"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "stomach maybe? when i picture telling people at work im not staying it kind of clenches. but honestly its mostly in the wanting a plan part like my brain still wants to grab onto something concrete. but underneath all that theres this calm that i havent had in so long. its like the calm is the floor and the knot is just sitting on top of it for now. i think the calm is winning though. i actually slept properly this week for the first time in ages"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That image feels very clear — the calm as the floor, and the knot sitting on top of it for now. It sounds like your body is still bracing around telling people and wanting something concrete, even while the steadier part is holding.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [
+        "stomach clenches"
+      ],
+      "trigger": "thinking about telling people at work that you're not staying"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. the calm as the floor. i like that. i think ive been waiting for permission to feel ok about this and maybe i dont need it, i just made the right call for me and my body kind of already knows even if my head is still catching up. its funny saying it all out loud like this makes the knot smaller somehow. like its allowed to be there and it doesnt cancel out the calm"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That feels very held — the knot doesn’t cancel the calm, it just sits beside it. We can leave it there for now if you want, or stay with what the knot is asking for underneath.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [
+        "stomach clenches"
+      ],
+      "trigger": "thinking about telling people at work I'm not staying"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "i think i want to leave it there for tonight. that feels like enough. thank you for this, genuinely. i feel lighter than when i sat down. ok. goodnight"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Goodnight — I’m glad it feels like enough for tonight. Let the lighter part have the room, and we can come back to the rest another time if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "making a decision about not renewing the contract and planning to move closer to family"
+    }
+  ]
+}

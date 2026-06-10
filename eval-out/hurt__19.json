@@ -1,0 +1,281 @@
+{
+  "cid": "hurt__19",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-09T18:22:11.110Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — good to see you. What's been going on today?"
+    },
+    {
+      "role": "user",
+      "content": "idk. not much. just kind of a weird day"
+    },
+    {
+      "role": "companion",
+      "content": "A weird day can feel hard to pin down. Was it more off, tense, or just blank?"
+    },
+    {
+      "role": "user",
+      "content": "off i guess. theres a thing i keep thinking about but its dumb"
+    },
+    {
+      "role": "companion",
+      "content": "Off makes sense here. What’s the thing you keep thinking about?"
+    },
+    {
+      "role": "user",
+      "content": "my sister got a promotion. like a big one. and at dinner my dad spent the whole time going on about how proud he is of her"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like it might have landed as a mix of hurt and being left out. Did it feel more like that, or more like annoyance at the dinner itself?"
+    },
+    {
+      "role": "user",
+      "content": "i dont even know. its not her fault shes good at stuff. i just sat there. he never talks about me like that. im the one who calls him every week"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like being overlooked, maybe with a quiet ache underneath it. Did it make you want to pull back, or keep sitting there and take it in?"
+    },
+    {
+      "role": "user",
+      "content": "i just went quiet. i always go quiet. like whats the point. ive never been the one anyone brags about. theres nothing about me thats the thing they point to"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds very alone and hard to feel, like you were made smaller in that moment. We can stay with that, or if you want, we can look at what “what’s the point” is connected to here."
+    },
+    {
+      "role": "user",
+      "content": "its connected to like. who am i even. shes the smart one shes the successful one. i just sort of exist in the background. and i hate that i even care this much its so petty"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like hurt with a sharp pinch of shame mixed in. Is the heavier part being in the background, or hating that you care so much?"
+    },
+    {
+      "role": "user",
+      "content": "the background part i think. like i could disappear and theyd be fine. ive built my whole life around being the easy one the low maintenance one and now i dont know if anyone actually sees me or just likes that im no trouble"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like being unseen, and maybe like being valued for being easy rather than for you. Does it feel more like invisible, or like not really chosen?"
+    },
+    {
+      "role": "user",
+      "content": "not chosen. yeah. thats the word. ive never said that out loud"
+    },
+    {
+      "role": "companion",
+      "content": "Not chosen — that feels very clear, and very lonely. If you want, we can stay with that, or I can help you find what it asks for underneath."
+    },
+    {
+      "role": "user",
+      "content": "i think i need to stop for now. thats kind of a lot. but. thank you. ill come back maybe"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — we can leave it there for now. Thank you for saying it out loud; I’ll be here when you come back."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yvnupzldq145q",
+    "conversation_id": "hurt__19",
+    "timestamp": "2026-06-09T18:23:02.728Z",
+    "user_words_raw": "that's kind of a lot",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "not chosen",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "sister's promotion and father's praise at dinner",
+    "appraisal_thought": "I am not really chosen / seen for who I am",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User may want to return to feeling not chosen / unseen later.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — good to see you. What's been going on today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "idk. not much. just kind of a weird day"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "A weird day can feel hard to pin down. Was it more off, tense, or just blank?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "weird / unclear",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "off i guess. theres a thing i keep thinking about but its dumb"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Off makes sense here. What’s the thing you keep thinking about?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "off",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "my sister got a promotion. like a big one. and at dinner my dad spent the whole time going on about how proud he is of her"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like it might have landed as a mix of hurt and being left out. Did it feel more like that, or more like annoyance at the dinner itself?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [],
+      "trigger": "dad spent the whole dinner going on about sister's promotion"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i dont even know. its not her fault shes good at stuff. i just sat there. he never talks about me like that. im the one who calls him every week"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like being overlooked, maybe with a quiet ache underneath it. Did it make you want to pull back, or keep sitting there and take it in?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "overlooked",
+      "body_cue": [],
+      "trigger": "dad spent the dinner praising sister's promotion"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "i just went quiet. i always go quiet. like whats the point. ive never been the one anyone brags about. theres nothing about me thats the thing they point to"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds very alone and hard to feel, like you were made smaller in that moment. We can stay with that, or if you want, we can look at what “what’s the point” is connected to here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "overlooked",
+      "body_cue": [],
+      "trigger": "father praised sister's promotion at dinner while not speaking about them"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "its connected to like. who am i even. shes the smart one shes the successful one. i just sort of exist in the background. and i hate that i even care this much its so petty"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds like hurt with a sharp pinch of shame mixed in. Is the heavier part being in the background, or hating that you care so much?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "sister's promotion and father's praise of her at dinner"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "the background part i think. like i could disappear and theyd be fine. ive built my whole life around being the easy one the low maintenance one and now i dont know if anyone actually sees me or just likes that im no trouble"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That sounds like being unseen, and maybe like being valued for being easy rather than for you. Does it feel more like invisible, or like not really chosen?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "unseen",
+      "body_cue": [],
+      "trigger": "sister's promotion and father's praise at dinner"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "not chosen. yeah. thats the word. ive never said that out loud"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Not chosen — that feels very clear, and very lonely. If you want, we can stay with that, or I can help you find what it asks for underneath.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "not chosen",
+      "body_cue": [],
+      "trigger": "sister's promotion and father's praise at dinner"
+    },
+    {
+      "turn": 18,
+      "role": "user",
+      "content": "i think i need to stop for now. thats kind of a lot. but. thank you. ill come back maybe"
+    },
+    {
+      "turn": 19,
+      "role": "companion",
+      "content": "Of course — we can leave it there for now. Thank you for saying it out loud; I’ll be here when you come back.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "not chosen",
+      "body_cue": [],
+      "trigger": "sister's promotion and father's praise at dinner"
+    }
+  ]
+}

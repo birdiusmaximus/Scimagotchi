@@ -1,0 +1,191 @@
+{
+  "cid": "fear__15",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-09T17:37:02.748Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "honestly im just kind of irritated tonight and i dont really know why. cant settle"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a restless, irritated kind of evening. Does it feel more like frustration, or more like a quiet protest that won’t settle?"
+    },
+    {
+      "role": "user",
+      "content": "yeah maybe frustration. like i keep getting up and checking the door is locked and the stove is off. did it like four times already"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like frustration with a restless, checking kind of pull. Is it more the urge to check again, or the feeling that something might be off if you don’t?"
+    },
+    {
+      "role": "user",
+      "content": "the second one i guess. its stupid. years ago i left a candle burning when i went out and came back to the smoke alarm going and a scorch mark on the shelf. nothing burned down but it couldve. i still think about it"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound stupid at all — it sounds like this got its shape from that candle moment, when “could’ve” stayed alive. Would it help to stay with that a little, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "stay with it i think. and honestly now that i say it out loud its not really frustration is it. its more like dread. like im waiting for the thing to happen again"
+    },
+    {
+      "role": "companion",
+      "content": "That shift makes sense — it sounds more like dread than frustration, like you’re braced for the same thing to return. Does it feel more like fear, or more like being on guard?"
+    },
+    {
+      "role": "user",
+      "content": "on guard. always. its worst at night before bed. the checking is the only thing that lets me lie down. i know nothing is wrong but my body doesnt believe it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds very on guard, especially at night, with checking becoming the thing that lets you lie down. If you want, we can stay with how that nightly dread feels, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "i think im gonna leave it here. it helped to actually name it though. dread fits better than whatever i thought it was. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it found a truer name. We can leave it there, and I’ll keep that it comes up most at night before bed and shows up as checking."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6x9mf030e297l0",
+    "conversation_id": "fear__15",
+    "timestamp": "2026-06-09T17:37:39.739Z",
+    "user_words_raw": "waiting for the thing to happen again",
+    "emotion_status": "confirmed",
+    "emotion_family": "fear",
+    "emotion_shade": "dread",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "night before bed, after the candle-burning memory",
+    "appraisal_thought": "waiting for the thing to happen again",
+    "body_cue": [],
+    "behaviour_action": [
+      "checking"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "certainty",
+      "safety",
+      "control"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Dread shows up at night before bed, with checking as the main urge.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "honestly im just kind of irritated tonight and i dont really know why. cant settle"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a restless, irritated kind of evening. Does it feel more like frustration, or more like a quiet protest that won’t settle?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "irritated",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah maybe frustration. like i keep getting up and checking the door is locked and the stove is off. did it like four times already"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like frustration with a restless, checking kind of pull. Is it more the urge to check again, or the feeling that something might be off if you don’t?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "the second one i guess. its stupid. years ago i left a candle burning when i went out and came back to the smoke alarm going and a scorch mark on the shelf. nothing burned down but it couldve. i still think about it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That doesn’t sound stupid at all — it sounds like this got its shape from that candle moment, when “could’ve” stayed alive. Would it help to stay with that a little, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "a past candle incident that still comes back when checking things now"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "stay with it i think. and honestly now that i say it out loud its not really frustration is it. its more like dread. like im waiting for the thing to happen again"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That shift makes sense — it sounds more like dread than frustration, like you’re braced for the same thing to return. Does it feel more like fear, or more like being on guard?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [],
+      "trigger": "the memory of leaving a candle burning and coming back to smoke and a scorch mark"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "on guard. always. its worst at night before bed. the checking is the only thing that lets me lie down. i know nothing is wrong but my body doesnt believe it"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds very on guard, especially at night, with checking becoming the thing that lets you lie down. If you want, we can stay with how that nightly dread feels, or leave it here for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [],
+      "trigger": "night before bed after the candle-burning memory"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "i think im gonna leave it here. it helped to actually name it though. dread fits better than whatever i thought it was. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad it found a truer name. We can leave it there, and I’ll keep that it comes up most at night before bed and shows up as checking.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [],
+      "trigger": "night before bed, after the candle-burning memory"
+    }
+  ]
+}

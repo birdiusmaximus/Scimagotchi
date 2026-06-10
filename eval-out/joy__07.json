@@ -1,0 +1,161 @@
+{
+  "cid": "joy__07",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-09T17:41:51.706Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. so i think im just kinda stressed lol. me and my girlfriend booked a trip to portugal last night, like actually paid for flights and everything"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that sounds like a lot landed at once. Is it the pressure of having it booked, or something else about the trip?"
+    },
+    {
+      "role": "user",
+      "content": "no thats the thing. like i keep saying im stressed but when i actually picture it im kind of grinning at my phone. weve been together two years and this is the first big trip we planned just us"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds more like excited-stressed than plain stress — like a grin with a lot riding on it. Does it feel more buzzy and high, or tight and pressured?"
+    },
+    {
+      "role": "user",
+      "content": "yeah buzzy. definitely buzzy. i screenshotted the booking like four times haha. i think im just excited. we already started a list of places we wanna eat"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really buzzy and excited — like it wants to spill outward. What part feels biggest right now: the trip itself, or the fact that it’s your first big one together?"
+    },
+    {
+      "role": "user",
+      "content": "honestly the us part. doing something just the two of us. anyway thats it really, feels good to call it what it is. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it sounds like the “just the two of us” part is the heart of it. We can leave it there, or if you want, we could stay with what that first big trip means to you."
+    },
+    {
+      "role": "user",
+      "content": "nah lets leave it there. gonna go add more spots to the list lol. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a nice place to pause. Have fun with the list, and I’m glad you could name it."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xftf2493g28wk",
+    "conversation_id": "joy__07",
+    "timestamp": "2026-06-09T17:42:17.584Z",
+    "user_words_raw": "gonna go add more spots to the list",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "excited",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "Booked and paid for flights for a first big trip to Portugal just the two of them after two years together.",
+    "appraisal_thought": "This is our first big trip together; doing something just the two of us matters.",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User tends to light up around shared plans and the relationship aspect of trips.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. so i think im just kinda stressed lol. me and my girlfriend booked a trip to portugal last night, like actually paid for flights and everything"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that sounds like a lot landed at once. Is it the pressure of having it booked, or something else about the trip?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "stressed",
+      "body_cue": [],
+      "trigger": "Booked and paid for flights for a trip to Portugal"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "no thats the thing. like i keep saying im stressed but when i actually picture it im kind of grinning at my phone. weve been together two years and this is the first big trip we planned just us"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds more like excited-stressed than plain stress — like a grin with a lot riding on it. Does it feel more buzzy and high, or tight and pressured?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "stressed",
+      "body_cue": [],
+      "trigger": "Booked and paid for flights for a trip to Portugal; first big trip planned just the two of them after two years together"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah buzzy. definitely buzzy. i screenshotted the booking like four times haha. i think im just excited. we already started a list of places we wanna eat"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds really buzzy and excited — like it wants to spill outward. What part feels biggest right now: the trip itself, or the fact that it’s your first big one together?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "excited",
+      "body_cue": [],
+      "trigger": "Booked and paid for flights for a first big trip to Portugal just the two of them after two years together"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "honestly the us part. doing something just the two of us. anyway thats it really, feels good to call it what it is. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — it sounds like the “just the two of us” part is the heart of it. We can leave it there, or if you want, we could stay with what that first big trip means to you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "excited",
+      "body_cue": [],
+      "trigger": "Booked and paid for flights for a first big trip to Portugal just the two of them after two years together."
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "nah lets leave it there. gonna go add more spots to the list lol. thanks"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That feels like a nice place to pause. Have fun with the list, and I’m glad you could name it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "excited",
+      "body_cue": [],
+      "trigger": "Booked and paid for flights for a first big trip to Portugal just the two of them after two years together."
+    }
+  ]
+}

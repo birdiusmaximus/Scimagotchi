@@ -1,0 +1,143 @@
+{
+  "cid": "joy__03",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-09T17:41:51.014Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "got some news about money this week. dunno. feels weird to even bring up"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds a bit uneasy and maybe hard to put into words. Does it feel more like weird, awkward, or unsettled?"
+    },
+    {
+      "role": "user",
+      "content": "no its actually good news. thats the weird part. i think im happy about it and dont know what to do with that"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — good news can still feel weird when happiness is unfamiliar. Is it more like pleased, relieved, or just unsure what to do with it?"
+    },
+    {
+      "role": "user",
+      "content": "finally paid off the last of my credit card. like its actually at zero now. been chipping at it for two years. feels kinda quietly proud i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds quietly proud, and maybe a little relieved too. Does it feel more like pride, relief, or a soft kind of satisfaction?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. pride. didnt think id get here. anyway thats it really. just wanted to say it out loud once. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That’s a good place to leave it — quietly proud and said out loud. I’m glad you told me."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xfsterg70ssgu",
+    "conversation_id": "joy__03",
+    "timestamp": "2026-06-09T17:42:09.046Z",
+    "user_words_raw": "quietly proud",
+    "emotion_status": "candidate",
+    "emotion_family": "joy",
+    "emotion_shade": "proud",
+    "secondary_emotions": [
+      "relief"
+    ],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "paid off the last of my credit card",
+    "appraisal_thought": "didn't think I'd get here",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "achievement",
+      "stability",
+      "self-respect"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "Finished paying off debt after two years; wanted to say it out loud once.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "got some news about money this week. dunno. feels weird to even bring up"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds a bit uneasy and maybe hard to put into words. Does it feel more like weird, awkward, or unsettled?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": "got some news about money this week"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "no its actually good news. thats the weird part. i think im happy about it and dont know what to do with that"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That makes sense — good news can still feel weird when happiness is unfamiliar. Is it more like pleased, relieved, or just unsure what to do with it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "happy",
+      "body_cue": [],
+      "trigger": "got some news about money this week"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "finally paid off the last of my credit card. like its actually at zero now. been chipping at it for two years. feels kinda quietly proud i guess"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds quietly proud, and maybe a little relieved too. Does it feel more like pride, relief, or a soft kind of satisfaction?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "paid off the last of my credit card"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah. pride. didnt think id get here. anyway thats it really. just wanted to say it out loud once. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That’s a good place to leave it — quietly proud and said out loud. I’m glad you told me.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "paid off the last of my credit card"
+    }
+  ]
+}

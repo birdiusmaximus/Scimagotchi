@@ -1,0 +1,250 @@
+{
+  "cid": "calm__22",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-09T17:44:58.807Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. i dont really know how to start this. today feels weirdly ok and im not used to that"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that sounds a little unfamiliar, but in a good way. Does “weirdly ok” feel more calm, or more like you’re waiting for something to change?"
+    },
+    {
+      "role": "user",
+      "content": "more like... calm i think? but its weird bc usually im waiting for the other shoe to drop. like i finished cleaning my whole apartment this morning and i just sat on the floor with coffee and nothing was screaming at me to do anything"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds calm and a bit unfamiliar, like there was room to just sit there for once. Does it feel more settled in your body, or more like the noise finally went quiet?"
+    },
+    {
+      "role": "user",
+      "content": "the noise going quiet yeah. my shoulders arent up by my ears for once. its dumb but i kept the radio off and just listened to the building. someone upstairs walking around, the fridge. normal sounds. i didnt feel like i had to fill it"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound dumb to me — it sounds like the quiet had space in it, and your shoulders finally got to drop. If you want, we can leave it there, or stay with what it was like to let the room stay unfilled?"
+    },
+    {
+      "role": "user",
+      "content": "no i think i wanna stay with it a sec. bc honestly the reason it feels so big is my ex moved out like three weeks ago and the place has been a mess and so have i. and this is the first morning it didnt feel like his absence was sitting in the room with me. it just felt like... my apartment"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a shift from his absence sitting there to it feeling like your apartment again. Does that feel more like relief, or something quieter than that?"
+    },
+    {
+      "role": "user",
+      "content": "quieter than relief. relief is too loud a word. its more like... settled? like the dust actually landed instead of swirling. i moved the couch to where i always wanted it and didnt have to ask anyone. small thing but it felt like mine"
+    },
+    {
+      "role": "companion",
+      "content": "That feels settled in a very quiet way — like the dust landing, and the room becoming yours again. Does it feel light in your body, or more like a still kind of okay?"
+    },
+    {
+      "role": "user",
+      "content": "a still kind of okay. theres still a little ache under it if im honest, like i keep waiting to feel sad and it doesnt fully come. but mostly im just sitting here in the quiet not bracing for anything and thats new for me"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a still kind of okay with a little ache underneath, and not bracing for anything feels new. Would you say the quiet feels gentle in your body, or more like a held breath finally loosening?"
+    },
+    {
+      "role": "user",
+      "content": "a held breath finally loosening. yeah. thats exactly it. like ive been holding it for months and didnt notice til it let go this morning on the kitchen floor. i think i might actually be ok. not today ok but like. eventually ok"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a held breath finally loosening, on the kitchen floor, after months of holding it. It might be a small kind of okay that still has room for the ache — do you want to stay with that, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "i think i can leave it here. i dont wanna poke at it too much, i just wanted to notice it before it slipped past. thank you for sitting in the quiet with me. im gonna go finish my coffee while its still warm"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — I’m glad we got to notice it together, and the coffee sounds like a good next thing."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xju7iui5y2e1t",
+    "conversation_id": "calm__22",
+    "timestamp": "2026-06-09T17:45:52.162Z",
+    "user_words_raw": "held breath finally loosening",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [
+      "sadness"
+    ],
+    "valence": "mixed",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "ex moved out three weeks ago; first quiet morning in the apartment felt like theirs again",
+    "appraisal_thought": "my apartment",
+    "body_cue": [
+      "held breath finally loosening"
+    ],
+    "behaviour_action": [
+      "finish my coffee while its still warm"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "safety",
+      "autonomy",
+      "quiet"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "After a breakup, quiet and having the space feel like their own can bring a settled calm with a little ache underneath.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. i dont really know how to start this. today feels weirdly ok and im not used to that"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that sounds a little unfamiliar, but in a good way. Does “weirdly ok” feel more calm, or more like you’re waiting for something to change?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "okay",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "more like... calm i think? but its weird bc usually im waiting for the other shoe to drop. like i finished cleaning my whole apartment this morning and i just sat on the floor with coffee and nothing was screaming at me to do anything"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds calm and a bit unfamiliar, like there was room to just sit there for once. Does it feel more settled in your body, or more like the noise finally went quiet?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "calm",
+      "body_cue": [],
+      "trigger": "finished cleaning the whole apartment"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "the noise going quiet yeah. my shoulders arent up by my ears for once. its dumb but i kept the radio off and just listened to the building. someone upstairs walking around, the fridge. normal sounds. i didnt feel like i had to fill it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That doesn’t sound dumb to me — it sounds like the quiet had space in it, and your shoulders finally got to drop. If you want, we can leave it there, or stay with what it was like to let the room stay unfilled?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "calm",
+      "body_cue": [
+        "my shoulders arent up by my ears"
+      ],
+      "trigger": "finished cleaning my whole apartment"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "no i think i wanna stay with it a sec. bc honestly the reason it feels so big is my ex moved out like three weeks ago and the place has been a mess and so have i. and this is the first morning it didnt feel like his absence was sitting in the room with me. it just felt like... my apartment"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That feels like a shift from his absence sitting there to it feeling like your apartment again. Does that feel more like relief, or something quieter than that?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "his absence stopped feeling present in the room after cleaning the apartment"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "quieter than relief. relief is too loud a word. its more like... settled? like the dust actually landed instead of swirling. i moved the couch to where i always wanted it and didnt have to ask anyone. small thing but it felt like mine"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That feels settled in a very quiet way — like the dust landing, and the room becoming yours again. Does it feel light in your body, or more like a still kind of okay?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "moving the couch and having the apartment feel like hers again after her ex moved out"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "a still kind of okay. theres still a little ache under it if im honest, like i keep waiting to feel sad and it doesnt fully come. but mostly im just sitting here in the quiet not bracing for anything and thats new for me"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like a still kind of okay with a little ache underneath, and not bracing for anything feels new. Would you say the quiet feels gentle in your body, or more like a held breath finally loosening?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "after ex moved out, first morning the apartment felt like hers again"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "a held breath finally loosening. yeah. thats exactly it. like ive been holding it for months and didnt notice til it let go this morning on the kitchen floor. i think i might actually be ok. not today ok but like. eventually ok"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds like a held breath finally loosening, on the kitchen floor, after months of holding it. It might be a small kind of okay that still has room for the ache — do you want to stay with that, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [
+        "held breath finally loosening"
+      ],
+      "trigger": "ex moved out three weeks ago; first quiet morning in the apartment felt like theirs again"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "i think i can leave it here. i dont wanna poke at it too much, i just wanted to notice it before it slipped past. thank you for sitting in the quiet with me. im gonna go finish my coffee while its still warm"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "Of course — I’m glad we got to notice it together, and the coffee sounds like a good next thing.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [
+        "held breath finally loosening"
+      ],
+      "trigger": "ex moved out three weeks ago; first quiet morning in the apartment felt like theirs again"
+    }
+  ]
+}

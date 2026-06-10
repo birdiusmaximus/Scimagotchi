@@ -1,0 +1,147 @@
+{
+  "cid": "shame__07",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-09T18:24:15.457Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i think im just stressed lately. been kind of off"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a stretch of stress and being a bit off. Is it more like pressure, or more like feeling unsettled and not quite yourself?"
+    },
+    {
+      "role": "user",
+      "content": "yeah unsettled i guess. its about my girlfriend. i forgot her birthday last week. like fully forgot until she said something"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds unsettled and maybe a bit embarrassed too. Was it the forgetting itself that hit hardest, or what it seemed to mean to her?"
+    },
+    {
+      "role": "user",
+      "content": "what it meant i think. she didnt even get mad she just looked at me like she wasnt surprised. like she already knew id be the kind of guy who forgets. makes me feel like im not good enough for her"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like shame more than just embarrassment — the moment seemed to land as \"I’m not good enough for her.\" Does it make you want to hide, apologise, or explain yourself?"
+    },
+    {
+      "role": "user",
+      "content": "hide mostly. just want to disappear and not look at her. yeah thats it. ok i gotta go but that actually helped. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it helped, and we can leave it here. That “want to disappear” sounds like it touched a very sharp edge, and you don’t have to stay with it right now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yycek04jm5c6x",
+    "conversation_id": "shame__07",
+    "timestamp": "2026-06-09T18:24:35.470Z",
+    "user_words_raw": "want to disappear",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "inadequate",
+    "secondary_emotions": [
+      "embarrassed"
+    ],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "forgot girlfriend’s birthday and she reacted like she expected it",
+    "appraisal_thought": "I’m not good enough for her",
+    "body_cue": [],
+    "behaviour_action": [
+      "hide",
+      "disappear",
+      "not look at her"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "acceptance",
+      "dignity",
+      "belonging"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Shame came up around forgetting an important date with someone close.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i think im just stressed lately. been kind of off"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a stretch of stress and being a bit off. Is it more like pressure, or more like feeling unsettled and not quite yourself?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "stressed",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah unsettled i guess. its about my girlfriend. i forgot her birthday last week. like fully forgot until she said something"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds unsettled and maybe a bit embarrassed too. Was it the forgetting itself that hit hardest, or what it seemed to mean to her?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "forgot girlfriend’s birthday until she mentioned it"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "what it meant i think. she didnt even get mad she just looked at me like she wasnt surprised. like she already knew id be the kind of guy who forgets. makes me feel like im not good enough for her"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like shame more than just embarrassment — the moment seemed to land as \"I’m not good enough for her.\" Does it make you want to hide, apologise, or explain yourself?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "inadequate",
+      "body_cue": [],
+      "trigger": "forgot girlfriend’s birthday and she reacted as if she expected it"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "hide mostly. just want to disappear and not look at her. yeah thats it. ok i gotta go but that actually helped. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "I’m glad it helped, and we can leave it here. That “want to disappear” sounds like it touched a very sharp edge, and you don’t have to stay with it right now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "inadequate",
+      "body_cue": [],
+      "trigger": "forgot girlfriend’s birthday and she reacted like she expected it"
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "cid": "calm__21",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-09T17:44:56.685Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. honestly not sure why im here lol. someone said this might help. dunno"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that’s okay, we can keep it loose. We can just see what’s been on your mind, if anything."
+    },
+    {
+      "role": "user",
+      "content": "i mean nothing really. work stuff i guess but its fine. its all fine actually thats kind of the weird part haha"
+    },
+    {
+      "role": "companion",
+      "content": "That “all fine” with the weird part still hanging there feels worth noticing. Is it more like calm, blank, or a little unreal?"
+    },
+    {
+      "role": "user",
+      "content": "no not blank. idk. i think im actually like. okay? for once. feels suspicious lol. like im waiting for the catch"
+    },
+    {
+      "role": "companion",
+      "content": "Okay, that sounds like a kind of uneasy okay — like you’re waiting for the catch. Is it more suspicious, or more on-edge?"
+    },
+    {
+      "role": "user",
+      "content": "hm no not on edge either. ok so. i quit my job last week. like actually handed in notice. been miserable there for two years. and i keep waiting to panic about it but it just. hasnt come"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — the waiting-for-panic part feels like the strange piece here. Is it more a pause in your body, or more a feeling of “this hasn’t hit me yet”?"
+    },
+    {
+      "role": "user",
+      "content": "honestly? i think it already hit me and the thing it left behind is just. quiet. like i slept properly for the first time in forever. no sunday dread. its almost embarrassing how light i feel haha"
+    },
+    {
+      "role": "companion",
+      "content": "That quiet lightness sounds real, and maybe a little startling because it’s so different from the old dread. Does it feel more like relief, or just a strange calm?"
+    },
+    {
+      "role": "user",
+      "content": "relief yeah. like a thing i didnt know i was carrying just. got put down. the difficult bit is i dont have another job lined up which should scare me and somehow doesnt"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like relief with a very plain, held-breath kind of ease underneath it. Does it show up as anything in your body, or more as the urge to just let it be?"
+    },
+    {
+      "role": "user",
+      "content": "my shoulders i think. they been up by my ears for two years and theyre just. down now lol. mostly i just wanna let it be. dont wanna poke it and ruin it yknow"
+    },
+    {
+      "role": "companion",
+      "content": "That feels settled and precious — like the calm itself matters because it’s been missing for so long. We can leave it here, or if you want, I can stay with what makes it feel so easy to want to protect."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it here i think. if i keep talking ill start overthinking it and thats kind of my whole thing haha. this was. weirdly nice though. didnt expect that"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, let’s leave it there — that sounds like a good place to stop. Weirdly nice is a lovely note to end on."
+    },
+    {
+      "role": "user",
+      "content": "thanks. ok bye for now"
+    },
+    {
+      "role": "companion",
+      "content": "Bye for now — and thank you for sharing it with me."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xjry1cf952lps",
+    "conversation_id": "calm__21",
+    "timestamp": "2026-06-09T17:45:47.543Z",
+    "user_words_raw": "bye for now",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "settled",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "quitting a miserable job and no longer carrying Sunday dread",
+    "appraisal_thought": "the thing i didnt know i was carrying just got put down",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Conversation ended after a settled relief about leaving a miserable job; user wanted to stop before overthinking.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. honestly not sure why im here lol. someone said this might help. dunno"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that’s okay, we can keep it loose. We can just see what’s been on your mind, if anything.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i mean nothing really. work stuff i guess but its fine. its all fine actually thats kind of the weird part haha"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That “all fine” with the weird part still hanging there feels worth noticing. Is it more like calm, blank, or a little unreal?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "work stuff"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "no not blank. idk. i think im actually like. okay? for once. feels suspicious lol. like im waiting for the catch"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Okay, that sounds like a kind of uneasy okay — like you’re waiting for the catch. Is it more suspicious, or more on-edge?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": "for once feeling okay"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "hm no not on edge either. ok so. i quit my job last week. like actually handed in notice. been miserable there for two years. and i keep waiting to panic about it but it just. hasnt come"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — the waiting-for-panic part feels like the strange piece here. Is it more a pause in your body, or more a feeling of “this hasn’t hit me yet”?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": "quitting a miserable job and waiting to panic about it"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "honestly? i think it already hit me and the thing it left behind is just. quiet. like i slept properly for the first time in forever. no sunday dread. its almost embarrassing how light i feel haha"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That quiet lightness sounds real, and maybe a little startling because it’s so different from the old dread. Does it feel more like relief, or just a strange calm?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "relief",
+      "body_cue": [],
+      "trigger": "quitting a miserable job and no longer having Sunday dread"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "relief yeah. like a thing i didnt know i was carrying just. got put down. the difficult bit is i dont have another job lined up which should scare me and somehow doesnt"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like relief with a very plain, held-breath kind of ease underneath it. Does it show up as anything in your body, or more as the urge to just let it be?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "relief",
+      "body_cue": [],
+      "trigger": "quitting a miserable job and no longer carrying Sunday dread"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "my shoulders i think. they been up by my ears for two years and theyre just. down now lol. mostly i just wanna let it be. dont wanna poke it and ruin it yknow"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That feels settled and precious — like the calm itself matters because it’s been missing for so long. We can leave it here, or if you want, I can stay with what makes it feel so easy to want to protect.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [
+        "shoulders down"
+      ],
+      "trigger": "quitting a miserable job and no longer carrying Sunday dread"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah lets leave it here i think. if i keep talking ill start overthinking it and thats kind of my whole thing haha. this was. weirdly nice though. didnt expect that"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "Yeah, let’s leave it there — that sounds like a good place to stop. Weirdly nice is a lovely note to end on.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [
+        "shoulders down"
+      ],
+      "trigger": "quitting a miserable job and no longer carrying Sunday dread"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "thanks. ok bye for now"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Bye for now — and thank you for sharing it with me.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "quitting a miserable job and no longer carrying Sunday dread"
+    }
+  ]
+}

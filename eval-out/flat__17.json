@@ -1,0 +1,185 @@
+{
+  "cid": "flat__17",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-09T18:27:04.125Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "feeling kinda numb today i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds a bit numb or blank today. Does it feel more like nothing is there, or like it’s out of reach?"
+    },
+    {
+      "role": "user",
+      "content": "out of reach maybe. like hes right there but i dont feel anything"
+    },
+    {
+      "role": "companion",
+      "content": "Out of reach makes sense here — like he’s right there, but nothing is landing. Does it feel more like foggy, shut down, or just very far away?"
+    },
+    {
+      "role": "user",
+      "content": "shut down i think. we used to talk all night now i just sit there"
+    },
+    {
+      "role": "companion",
+      "content": "Shut down fits the shape you’re describing — used to talking all night, now just sitting there. Did something happen before it went quiet, or does it just feel like everything went flat?"
+    },
+    {
+      "role": "user",
+      "content": "idk. nothing big. he asked about my day and i just had nothing to say. felt like a stranger"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds disconnected, almost like the distance showed up as “a stranger.” Does it feel more blank, or more like you pulled back?"
+    },
+    {
+      "role": "user",
+      "content": "pulled back probably. anyway thats it. just wanted to get it down"
+    },
+    {
+      "role": "companion",
+      "content": "Pulled back makes sense, and “just wanted to get it down” feels like a clean place to leave it. We can leave it here, or if you want, I can stay with how that distance feels for a moment."
+    },
+    {
+      "role": "user",
+      "content": "leave it here. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — I’ll leave it here. Thanks for saying it so plainly."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z1yvco183ebu7",
+    "conversation_id": "flat__17",
+    "timestamp": "2026-06-09T18:27:33.231Z",
+    "user_words_raw": "leave it here",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "disconnected",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "he asked about your day",
+    "appraisal_thought": "felt like a stranger",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User wanted to note a feeling of shut down/disconnection in a relationship and then stop there.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "feeling kinda numb today i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds a bit numb or blank today. Does it feel more like nothing is there, or like it’s out of reach?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "out of reach maybe. like hes right there but i dont feel anything"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Out of reach makes sense here — like he’s right there, but nothing is landing. Does it feel more like foggy, shut down, or just very far away?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "shut down i think. we used to talk all night now i just sit there"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Shut down fits the shape you’re describing — used to talking all night, now just sitting there. Did something happen before it went quiet, or does it just feel like everything went flat?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "shut down",
+      "body_cue": [],
+      "trigger": "the change from talking all night to now sitting there"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "idk. nothing big. he asked about my day and i just had nothing to say. felt like a stranger"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds disconnected, almost like the distance showed up as “a stranger.” Does it feel more blank, or more like you pulled back?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "he asked about your day"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "pulled back probably. anyway thats it. just wanted to get it down"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Pulled back makes sense, and “just wanted to get it down” feels like a clean place to leave it. We can leave it here, or if you want, I can stay with how that distance feels for a moment.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "he asked about your day"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "leave it here. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course — I’ll leave it here. Thanks for saying it so plainly.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "he asked about your day"
+    }
+  ]
+}

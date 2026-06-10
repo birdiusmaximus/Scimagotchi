@@ -1,0 +1,245 @@
+{
+  "cid": "calm__24",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-09T17:45:06.040Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk if these things actually do anything but ok. my mum called this morning"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds a bit tentative, like you’re not sure what to make of it. What was the call like?"
+    },
+    {
+      "role": "user",
+      "content": "it was. fine actually. thats kind of the weird part. we havent really talked properly in like. a long time. there was a whole thing"
+    },
+    {
+      "role": "companion",
+      "content": "That “fine actually” feels a little surprising, especially with the long gap and “a whole thing” sitting behind it. Was it mostly calm, or more like careful and a bit guarded?"
+    },
+    {
+      "role": "user",
+      "content": "no thats the thing it wasnt guarded?? i kept waiting for it. like bracing. the whole thing was about my dad's care home stuff last year, who pays, who shows up, i basically did all of it and she. didnt. and we said things"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like you were bracing for guarded, but what was there was more open — and also full of old hurt about doing all of it while she didn’t. Does it feel more like hurt, anger, or both?"
+    },
+    {
+      "role": "user",
+      "content": "see no thats what i thought youd say. and yeah theres hurt under there sure. but honestly right now its. not that? she said sorry. like actually sorry, not the fake kind. and i think i believe her. it just feels. quiet. lighter"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds quieter in a good way, like something in you loosened when she was actually sorry. If you want, we can stay with that lighter feeling for a moment, or leave it there."
+    },
+    {
+      "role": "user",
+      "content": "can we just. sit with it for a sec yeah. i carried that thing for so long. like a knot in my chest about her. and today after she hung up i just sat in the kitchen and the knot was. gone? mostly. felt like i could breathe"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the knot in your chest eased and breathing got easier. Does it feel more open and light, or just very still?"
+    },
+    {
+      "role": "user",
+      "content": "still i think. the loud version of all this is over. its weird tho bc dad's not even really here anymore, the dementia, he wont know we made up. so its just. me and her. and somehow thats enough today. i didnt expect to feel ok about her again"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a quiet kind of settled, with the loud version over and just you and her left in it. We can leave it here, or stay with what it means that that was enough today — which feels right?"
+    },
+    {
+      "role": "user",
+      "content": "maybe just one more sec. i think what it means is. i dont have to keep score anymore. i was so tired of keeping score. she's the only one left who remembers dad the way he was. i dont wanna lose that over who paid what"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like some relief around not having to keep score anymore, and a wish to protect what’s left of him between you. Does it feel more like relief, tenderness, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "relief mostly. with a bit of the tender thing yeah. ok i didnt think id say this but that actually helped a little. i'm gonna go call her back i think. just to talk. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — relief with a little tenderness, and that call feels like the next natural thing. I'm glad we could sit with it; I'll leave it there."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xjze8wonqtynd",
+    "conversation_id": "calm__24",
+    "timestamp": "2026-06-09T17:45:56.967Z",
+    "user_words_raw": "i dont have to keep score anymore",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "relief",
+    "secondary_emotions": [
+      "tenderness"
+    ],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "mother sincerely apologized after a long stretch of tension about dad’s care home arrangements",
+    "appraisal_thought": "I don’t have to keep score anymore.",
+    "body_cue": [],
+    "behaviour_action": [
+      "call her back",
+      "talk"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "relief",
+      "connection",
+      "space"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Tension eased after a sincere apology from mother about care home arrangements; user felt relief and some tenderness.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk if these things actually do anything but ok. my mum called this morning"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds a bit tentative, like you’re not sure what to make of it. What was the call like?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "tentative",
+      "body_cue": [],
+      "trigger": "my mum called this morning"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "it was. fine actually. thats kind of the weird part. we havent really talked properly in like. a long time. there was a whole thing"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That “fine actually” feels a little surprising, especially with the long gap and “a whole thing” sitting behind it. Was it mostly calm, or more like careful and a bit guarded?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "tentative",
+      "body_cue": [],
+      "trigger": "my mum called this morning"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "no thats the thing it wasnt guarded?? i kept waiting for it. like bracing. the whole thing was about my dad's care home stuff last year, who pays, who shows up, i basically did all of it and she. didnt. and we said things"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like you were bracing for guarded, but what was there was more open — and also full of old hurt about doing all of it while she didn’t. Does it feel more like hurt, anger, or both?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "my mum called this morning"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "see no thats what i thought youd say. and yeah theres hurt under there sure. but honestly right now its. not that? she said sorry. like actually sorry, not the fake kind. and i think i believe her. it just feels. quiet. lighter"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds quieter in a good way, like something in you loosened when she was actually sorry. If you want, we can stay with that lighter feeling for a moment, or leave it there.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "mother apologised sincerely about the father’s care home situation last year"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "can we just. sit with it for a sec yeah. i carried that thing for so long. like a knot in my chest about her. and today after she hung up i just sat in the kitchen and the knot was. gone? mostly. felt like i could breathe"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like the knot in your chest eased and breathing got easier. Does it feel more open and light, or just very still?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [
+        "knot in my chest",
+        "could breathe"
+      ],
+      "trigger": "mother apologized sincerely about the father’s care home situation after a long gap and old hurt"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "still i think. the loud version of all this is over. its weird tho bc dad's not even really here anymore, the dementia, he wont know we made up. so its just. me and her. and somehow thats enough today. i didnt expect to feel ok about her again"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels like a quiet kind of settled, with the loud version over and just you and her left in it. We can leave it here, or stay with what it means that that was enough today — which feels right?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "mother sincerely apologized about the father’s care home situation after a long gap"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "maybe just one more sec. i think what it means is. i dont have to keep score anymore. i was so tired of keeping score. she's the only one left who remembers dad the way he was. i dont wanna lose that over who paid what"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds like some relief around not having to keep score anymore, and a wish to protect what’s left of him between you. Does it feel more like relief, tenderness, or something else?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "mother sincerely apologized after a long stretch of tension about dad’s care home arrangements"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "relief mostly. with a bit of the tender thing yeah. ok i didnt think id say this but that actually helped a little. i'm gonna go call her back i think. just to talk. thanks"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That makes sense — relief with a little tenderness, and that call feels like the next natural thing. I'm glad we could sit with it; I'll leave it there.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "relief",
+      "body_cue": [],
+      "trigger": "mother sincerely apologized after a long stretch of tension about dad’s care home arrangements"
+    }
+  ]
+}

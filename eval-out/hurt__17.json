@@ -1,0 +1,171 @@
+{
+  "cid": "hurt__17",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-09T18:21:51.191Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "found texts on his phone. not even gonna pretend im ok"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really raw — like you found something that changed the ground under you. Is it more hurt, anger, or shock right now?"
+    },
+    {
+      "role": "user",
+      "content": "hurt mostly. been with him 3 yrs"
+    },
+    {
+      "role": "companion",
+      "content": "Three years makes this land harder, like the hurt is tied to how much was there to lose. Did it hit as a tight, sinking, or hollow kind of hurt?"
+    },
+    {
+      "role": "user",
+      "content": "hollow. like i dont even know who he is now"
+    },
+    {
+      "role": "companion",
+      "content": "That hollow feeling sounds like the person you knew shifted all at once. Does it make you want to pull away, ask questions, or just go quiet?"
+    },
+    {
+      "role": "user",
+      "content": "go quiet. dont even want to look at him rn"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it sounds like the hurt is asking for distance right now. We can leave it here, or stay with what the silence is protecting for a moment if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it. dont have it in me tonight. thanks tho"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — we can leave it here tonight. Thanks for telling me."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yv8ynlrhyra1h",
+    "conversation_id": "hurt__17",
+    "timestamp": "2026-06-09T18:22:13.146Z",
+    "user_words_raw": "dont have it in me tonight",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "hurt",
+    "secondary_emotions": [
+      "sadness"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "found texts on his phone",
+    "appraisal_thought": "I don't even know who he is now",
+    "body_cue": [],
+    "behaviour_action": [
+      "go quiet",
+      "don't even want to look at him"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "distance",
+      "rest"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "A relationship hurt surfaced after finding messages on a partner's phone; the person wanted distance and to stop for the night.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "found texts on his phone. not even gonna pretend im ok"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds really raw — like you found something that changed the ground under you. Is it more hurt, anger, or shock right now?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "found texts on his phone"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "hurt mostly. been with him 3 yrs"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Three years makes this land harder, like the hurt is tied to how much was there to lose. Did it hit as a tight, sinking, or hollow kind of hurt?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "found texts on his phone"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "hollow. like i dont even know who he is now"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That hollow feeling sounds like the person you knew shifted all at once. Does it make you want to pull away, ask questions, or just go quiet?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [
+        "hollow"
+      ],
+      "trigger": "found texts on his phone"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "go quiet. dont even want to look at him rn"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — it sounds like the hurt is asking for distance right now. We can leave it here, or stay with what the silence is protecting for a moment if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "found texts on his phone"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah lets leave it. dont have it in me tonight. thanks tho"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Of course — we can leave it here tonight. Thanks for telling me.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "found texts on his phone"
+    }
+  ]
+}

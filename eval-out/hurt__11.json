@@ -1,0 +1,209 @@
+{
+  "cid": "hurt__11",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-09T18:21:35.575Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. not really sure what im doing here"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that’s completely okay. We can just take it one step at a time; what’s making you pause?"
+    },
+    {
+      "role": "user",
+      "content": "idk. work stuff. its dumb probably"
+    },
+    {
+      "role": "companion",
+      "content": "Work stuff doesn’t sound dumb to me. I’m wondering if it feels more like pressure, annoyance, or just a vague knot around it?"
+    },
+    {
+      "role": "user",
+      "content": "not pressure really. more like. i got passed over for a promotion i was basically told was mine"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really hurtful — like it was promised, then taken away. Does it feel more like hurt, anger, or both?"
+    },
+    {
+      "role": "user",
+      "content": "hurt i guess. my manager kept telling me to be patient, just keep delivering. then they gave it to someone external. didnt even tell me, i found out from a calendar invite"
+    },
+    {
+      "role": "companion",
+      "content": "That lands like being ignored and blindsided — especially after being told to wait and keep delivering. Did it hit more as feeling dismissed, or as something else?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. dismissed. like i gave them two years of late nights and i wasnt even worth a heads up. makes me feel kind of stupid for trusting them"
+    },
+    {
+      "role": "companion",
+      "content": "That feels dismissed, and there’s a sting of “I wasn’t worth a heads up.” Does it make you want to pull back, or does it land more like a quiet ache?"
+    },
+    {
+      "role": "user",
+      "content": "pull back honestly. already updating my resume. anyway i should go. thanks for listening i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — pulling back after feeling dismissed is a clear shape of this. I can leave it here, or if you want, we can stay with what this trust cost you for one more step."
+    },
+    {
+      "role": "user",
+      "content": "no im good. leave it there. maybe another time"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — we can leave it there. Maybe another time."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yuwv4z9aizn30",
+    "conversation_id": "hurt__11",
+    "timestamp": "2026-06-09T18:22:27.068Z",
+    "user_words_raw": "leave it there",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "dismissed",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "Being passed over for a promotion after being told to wait, and finding out through a calendar invite",
+    "appraisal_thought": "I wasn’t worth a heads up.",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User wanted to end the conversation and may return another time.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. not really sure what im doing here"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that’s completely okay. We can just take it one step at a time; what’s making you pause?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "idk. work stuff. its dumb probably"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Work stuff doesn’t sound dumb to me. I’m wondering if it feels more like pressure, annoyance, or just a vague knot around it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "work stuff"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "not pressure really. more like. i got passed over for a promotion i was basically told was mine"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds really hurtful — like it was promised, then taken away. Does it feel more like hurt, anger, or both?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "being passed over for a promotion after being told it was theirs"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "hurt i guess. my manager kept telling me to be patient, just keep delivering. then they gave it to someone external. didnt even tell me, i found out from a calendar invite"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That lands like being ignored and blindsided — especially after being told to wait and keep delivering. Did it hit more as feeling dismissed, or as something else?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "dismissed",
+      "body_cue": [],
+      "trigger": "being passed over for a promotion after being told it was theirs"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. dismissed. like i gave them two years of late nights and i wasnt even worth a heads up. makes me feel kind of stupid for trusting them"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That feels dismissed, and there’s a sting of “I wasn’t worth a heads up.” Does it make you want to pull back, or does it land more like a quiet ache?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "dismissed",
+      "body_cue": [],
+      "trigger": "Being passed over for a promotion after being told to wait, and finding out through a calendar invite"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "pull back honestly. already updating my resume. anyway i should go. thanks for listening i guess"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That makes sense — pulling back after feeling dismissed is a clear shape of this. I can leave it here, or if you want, we can stay with what this trust cost you for one more step.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "dismissed",
+      "body_cue": [],
+      "trigger": "Being passed over for a promotion after being told to wait, and finding out through a calendar invite"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "no im good. leave it there. maybe another time"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "Of course — we can leave it there. Maybe another time.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "dismissed",
+      "body_cue": [],
+      "trigger": "Being passed over for a promotion after being told to wait, and finding out through a calendar invite"
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "cid": "flat__13",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-09T18:26:52.536Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk why im even opening this lol. nothing really wrong. just kinda blah today"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that “just kinda blah” sounds like it has a real shape, even if it’s hard to pin down. Does it feel more blank, flat, or just off?"
+    },
+    {
+      "role": "user",
+      "content": "ha you sound like my therapist. dunno. flat i guess? like the lights are on but theres nobody buying anything if that makes sense"
+    },
+    {
+      "role": "companion",
+      "content": "That image makes sense — kind of flat and occupied, but not really engaged. Is it more like empty, disconnected, or just going through the motions?"
+    },
+    {
+      "role": "user",
+      "content": "going through the motions yeah. i opened my banking app this morning and just. felt nothing. like staring at a wall. numbers went up numbers went down whatever"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really flat and automatic — like the numbers were there, but nothing was landing. Does it feel more like blankness, or more like being detached from it?"
+    },
+    {
+      "role": "user",
+      "content": "detached. i finally paid off the last of my credit card last week. like the thing i stressed about for two years. and i thought id feel something? relief? anything? nope. just shrugged and closed the app and made toast lol"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds detached and a little surprising — the payoff happened, but the feeling didn’t show up. Do you want to leave it there, or stay with what that “nothing” was like for you?"
+    },
+    {
+      "role": "user",
+      "content": "i mean i can stay i guess. its weird right? i spent so long bracing for the bad that when it was finally fine i forgot how to feel good. like the muscle stopped working or smth. been a bit like that with everything lately not just money"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a bigger flatness than just the money — almost like feeling good has gone out of reach lately. Is it more like shut down, foggy, or just hard to access?"
+    },
+    {
+      "role": "user",
+      "content": "foggy probably. anyway didnt mean to dump all that, was just gonna check the app for like a sec ha. but yeah. thanks. gonna go eat my toast before it gets cold"
+    },
+    {
+      "role": "companion",
+      "content": "Foggy fits, and it makes sense that it showed up around something you’d waited on for so long. Go enjoy your toast — we can leave it here."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z1pafkvvptnts",
+    "conversation_id": "flat__13",
+    "timestamp": "2026-06-09T18:27:25.149Z",
+    "user_words_raw": "foggy probably",
+    "emotion_status": "confirmed",
+    "emotion_family": "flat",
+    "emotion_shade": "foggy",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "paying off the last of a credit card after worrying about it for two years",
+    "appraisal_thought": "I thought I’d feel something, but nothing came",
+    "body_cue": [],
+    "behaviour_action": [
+      "check the app",
+      "eat my toast"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Flat, foggy feeling around a long-awaited financial milestone and a broader numbness lately.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk why im even opening this lol. nothing really wrong. just kinda blah today"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that “just kinda blah” sounds like it has a real shape, even if it’s hard to pin down. Does it feel more blank, flat, or just off?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "ha you sound like my therapist. dunno. flat i guess? like the lights are on but theres nobody buying anything if that makes sense"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That image makes sense — kind of flat and occupied, but not really engaged. Is it more like empty, disconnected, or just going through the motions?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "going through the motions yeah. i opened my banking app this morning and just. felt nothing. like staring at a wall. numbers went up numbers went down whatever"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds really flat and automatic — like the numbers were there, but nothing was landing. Does it feel more like blankness, or more like being detached from it?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": "opening banking app"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "detached. i finally paid off the last of my credit card last week. like the thing i stressed about for two years. and i thought id feel something? relief? anything? nope. just shrugged and closed the app and made toast lol"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds detached and a little surprising — the payoff happened, but the feeling didn’t show up. Do you want to leave it there, or stay with what that “nothing” was like for you?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "detached",
+      "body_cue": [],
+      "trigger": "paid off the last of a credit card after worrying about it for two years"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i mean i can stay i guess. its weird right? i spent so long bracing for the bad that when it was finally fine i forgot how to feel good. like the muscle stopped working or smth. been a bit like that with everything lately not just money"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like a bigger flatness than just the money — almost like feeling good has gone out of reach lately. Is it more like shut down, foggy, or just hard to access?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "detached",
+      "body_cue": [],
+      "trigger": "paying off the last of a credit card after worrying about it for two years"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "foggy probably. anyway didnt mean to dump all that, was just gonna check the app for like a sec ha. but yeah. thanks. gonna go eat my toast before it gets cold"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Foggy fits, and it makes sense that it showed up around something you’d waited on for so long. Go enjoy your toast — we can leave it here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "foggy",
+      "body_cue": [],
+      "trigger": "paying off the last of a credit card after worrying about it for two years"
+    }
+  ]
+}

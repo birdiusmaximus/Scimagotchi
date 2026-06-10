@@ -1,0 +1,200 @@
+{
+  "cid": "pressure__15",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-09T17:46:19.454Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "honestly im just annoyed. i keep getting irritated at small stuff this week and i dont really know why"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a lot of little sparks this week. Is it more like irritation, or something sharper underneath it?"
+    },
+    {
+      "role": "user",
+      "content": "yeah maybe. i dont think im actually angry at anyone. its more like im on edge. like waiting for something to drop"
+    },
+    {
+      "role": "companion",
+      "content": "That feels more tense and watchful than openly angry. Does it show up in your body as that \"on edge\" feeling, or more as the urge to brace for the next thing?"
+    },
+    {
+      "role": "user",
+      "content": "bracing yeah. shoulders up around my ears. i think it started after i had to dig out my old uni transcripts last week for a job thing"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — this sounds like bracing after the transcripts thing, with your shoulders up around your ears. Would you want to stay with it a little more, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "ill stay a sec. seeing those grades again just brought it all back. i flamed out final year. carried way too much, working nights, family stuff, and i just folded. been ten years and one pdf and im right back there"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a sudden drop back into that old final-year place — almost like the pdf pulled the whole thing forward again. Does it feel more like shame, hurt, or anger at what you had to carry?"
+    },
+    {
+      "role": "user",
+      "content": "honestly i dont think it was anger at all now that i say it. it was that i had way too much on me and no slack. like everyone needed something and the work needed everything and there was no version of me that could do all of it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds less like anger and more like pressure and being stretched past any slack. Was the worst part the weight of it, or the sense that there was no version of you who could hold it all?"
+    },
+    {
+      "role": "user",
+      "content": "the second one. that theres no version of me that couldve held it all. i kept thinking i just needed to try harder but there werent enough hours. anyway. that helps actually. didnt realise thats what the edge was. thanks, im gonna get back to it"
+    },
+    {
+      "role": "companion",
+      "content": "That makes a lot of sense — the edge sounds tied to being up against the impossible, not a failure of you. We can leave it there, and I’m glad it got a little clearer."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xljxyphlj6fky",
+    "conversation_id": "pressure__15",
+    "timestamp": "2026-06-09T17:46:55.791Z",
+    "user_words_raw": "there's no version of me that could've held it all",
+    "emotion_status": "confirmed",
+    "emotion_family": "pressure",
+    "emotion_shade": "overwhelmed",
+    "secondary_emotions": [
+      "sadness"
+    ],
+    "valence": "mixed",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "having to dig out old university transcripts for a job thing",
+    "appraisal_thought": "there's no version of me that could've held it all",
+    "body_cue": [
+      "shoulders up around my ears"
+    ],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "clarity",
+      "self-compassion"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Old academic setback gets reactivated by documents tied to a job search; feels like being up against the impossible.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "honestly im just annoyed. i keep getting irritated at small stuff this week and i dont really know why"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a lot of little sparks this week. Is it more like irritation, or something sharper underneath it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "irritated",
+      "body_cue": [],
+      "trigger": "small stuff this week"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah maybe. i dont think im actually angry at anyone. its more like im on edge. like waiting for something to drop"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That feels more tense and watchful than openly angry. Does it show up in your body as that \"on edge\" feeling, or more as the urge to brace for the next thing?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "on edge",
+      "body_cue": [],
+      "trigger": "small stuff this week"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "bracing yeah. shoulders up around my ears. i think it started after i had to dig out my old uni transcripts last week for a job thing"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That makes sense — this sounds like bracing after the transcripts thing, with your shoulders up around your ears. Would you want to stay with it a little more, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "on edge",
+      "body_cue": [
+        "shoulders up around my ears"
+      ],
+      "trigger": "had to dig out my old uni transcripts last week for a job thing"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "ill stay a sec. seeing those grades again just brought it all back. i flamed out final year. carried way too much, working nights, family stuff, and i just folded. been ten years and one pdf and im right back there"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like a sudden drop back into that old final-year place — almost like the pdf pulled the whole thing forward again. Does it feel more like shame, hurt, or anger at what you had to carry?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "seeing old grades while digging out university transcripts for a job thing"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "honestly i dont think it was anger at all now that i say it. it was that i had way too much on me and no slack. like everyone needed something and the work needed everything and there was no version of me that could do all of it"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds less like anger and more like pressure and being stretched past any slack. Was the worst part the weight of it, or the sense that there was no version of you who could hold it all?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [
+        "bracing",
+        "shoulders up around my ears"
+      ],
+      "trigger": "digging out old university transcripts for a job thing"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "the second one. that theres no version of me that couldve held it all. i kept thinking i just needed to try harder but there werent enough hours. anyway. that helps actually. didnt realise thats what the edge was. thanks, im gonna get back to it"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That makes a lot of sense — the edge sounds tied to being up against the impossible, not a failure of you. We can leave it there, and I’m glad it got a little clearer.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [
+        "shoulders up around my ears"
+      ],
+      "trigger": "having to dig out old university transcripts for a job thing"
+    }
+  ]
+}

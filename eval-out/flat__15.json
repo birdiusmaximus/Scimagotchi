@@ -1,0 +1,193 @@
+{
+  "cid": "flat__15",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-09T18:26:54.480Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont really know why im here. been kind of bored lately i guess. nothing feels like anything"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds pretty flat and hard to pin down. Does it feel more like bored, blank, or just nothing getting through?"
+    },
+    {
+      "role": "user",
+      "content": "bored i think. like ive done everything before and none of it matters. work, weekends, whatever. just going through it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like bored with a kind of worn-out flatness underneath it. Is it more the repeating of everything, or the “none of it matters” part?"
+    },
+    {
+      "role": "user",
+      "content": "the none of it matters part i guess. it didnt used to be like this. used to actually care about stuff. dont really know when that switched off"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a switch-off after a time when you really did care. Does it feel more like blank, detached, or just hard to reach now?"
+    },
+    {
+      "role": "user",
+      "content": "hard to reach. honestly it lines up with when my dad died. three years ago now. everyone says it gets better and it kind of did but i just feel like a flat line since. went back to work two weeks after and just never really came back on i think"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like something in you went flat after he died, and has stayed hard to reach since. We can leave it here if you want, or stay with what that flat line has been like since then?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. its weird saying it out loud. i thought i was just bored but its more like i shut the thing off so i could keep functioning and never turned it back. didnt cry at the funeral even. people thought i was handling it well"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a shut-off that helped you keep functioning, and maybe also kept the crying and the showing-it part out of reach. Do you want to stay with what that was like, or leave it there for now?"
+    },
+    {
+      "role": "user",
+      "content": "leave it there for now i think. thats more than ive said about it in a while. didnt expect to land on my dad when i opened this. anyway. thanks. gonna get back to it"
+    },
+    {
+      "role": "companion",
+      "content": "Of course. I’m glad you said it out loud here, and I’ll leave it there."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z1qpl29i59zf4",
+    "conversation_id": "flat__15",
+    "timestamp": "2026-06-09T18:27:28.615Z",
+    "user_words_raw": "shut the thing off",
+    "emotion_status": "confirmed",
+    "emotion_family": "flat",
+    "emotion_shade": "shut off",
+    "secondary_emotions": [
+      "sadness"
+    ],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "my dad died",
+    "appraisal_thought": "I shut the thing off so I could keep functioning and never turned it back",
+    "body_cue": [],
+    "behaviour_action": [
+      "keep functioning"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "permission not to know",
+      "time",
+      "gentleness"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feeling stayed flat after a parent died; went back to work quickly and kept functioning.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont really know why im here. been kind of bored lately i guess. nothing feels like anything"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds pretty flat and hard to pin down. Does it feel more like bored, blank, or just nothing getting through?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "bored i think. like ive done everything before and none of it matters. work, weekends, whatever. just going through it"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like bored with a kind of worn-out flatness underneath it. Is it more the repeating of everything, or the “none of it matters” part?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": "work, weekends, whatever"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "the none of it matters part i guess. it didnt used to be like this. used to actually care about stuff. dont really know when that switched off"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like a switch-off after a time when you really did care. Does it feel more like blank, detached, or just hard to reach now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "work, weekends, whatever"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "hard to reach. honestly it lines up with when my dad died. three years ago now. everyone says it gets better and it kind of did but i just feel like a flat line since. went back to work two weeks after and just never really came back on i think"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like something in you went flat after he died, and has stayed hard to reach since. We can leave it here if you want, or stay with what that flat line has been like since then?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": "my dad died"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. its weird saying it out loud. i thought i was just bored but its more like i shut the thing off so i could keep functioning and never turned it back. didnt cry at the funeral even. people thought i was handling it well"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like a shut-off that helped you keep functioning, and maybe also kept the crying and the showing-it part out of reach. Do you want to stay with what that was like, or leave it there for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "shut off",
+      "body_cue": [],
+      "trigger": "my dad died"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "leave it there for now i think. thats more than ive said about it in a while. didnt expect to land on my dad when i opened this. anyway. thanks. gonna get back to it"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course. I’m glad you said it out loud here, and I’ll leave it there.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "shut off",
+      "body_cue": [],
+      "trigger": "my dad died"
+    }
+  ]
+}

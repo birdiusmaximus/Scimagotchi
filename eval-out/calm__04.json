@@ -1,0 +1,174 @@
+{
+  "cid": "calm__04",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-09T17:43:26.686Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey there, good evening"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, good evening. How’s your evening going?"
+    },
+    {
+      "role": "user",
+      "content": "pretty good honestly. quiet night in. my dad just left after dinner, we had him over"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a calm, good kind of evening — with a bit of connection in it too. What was it like having him over?"
+    },
+    {
+      "role": "user",
+      "content": "really nice actually. me and my dad went thru a rough patch for a few years, didnt talk much. but tonight we just sat and ate and it was easy. no tension. felt settled, like things are ok between us again"
+    },
+    {
+      "role": "companion",
+      "content": "That feels settled and easy — like the rough patch loosened its grip for a while. Did it feel more steady in your body, or more like you could just relax into the evening?"
+    },
+    {
+      "role": "user",
+      "content": "yeah just relaxed into it. shoulders down for once. didnt realize how much id been bracing. anyway thats all really, just wanted to sit with that for a sec. thanks for listening"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad you could sit with it for a second. We can leave it there, or if you want, we can stay with what it meant to notice how much you’d been bracing."
+    },
+    {
+      "role": "user",
+      "content": "lets leave it there for tonight. feels like enough. night :)"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — enough for tonight. Night :)"
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xhufz8e3ni96v",
+    "conversation_id": "calm__04",
+    "timestamp": "2026-06-09T17:43:51.036Z",
+    "user_words_raw": "felt settled",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "dad visited for dinner after a rough patch and they sat and ate without tension",
+    "appraisal_thought": "things are ok between us again",
+    "body_cue": [
+      "shoulders down"
+    ],
+    "behaviour_action": [
+      "relax into it"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "safety",
+      "relief",
+      "space"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "A family dinner after a long rough patch felt easy and tension-free.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey there, good evening"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, good evening. How’s your evening going?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "pretty good honestly. quiet night in. my dad just left after dinner, we had him over"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a calm, good kind of evening — with a bit of connection in it too. What was it like having him over?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "content",
+      "body_cue": [],
+      "trigger": "dad visited for dinner and then left"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "really nice actually. me and my dad went thru a rough patch for a few years, didnt talk much. but tonight we just sat and ate and it was easy. no tension. felt settled, like things are ok between us again"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That feels settled and easy — like the rough patch loosened its grip for a while. Did it feel more steady in your body, or more like you could just relax into the evening?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "dad visited for dinner and they sat and ate without tension"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah just relaxed into it. shoulders down for once. didnt realize how much id been bracing. anyway thats all really, just wanted to sit with that for a sec. thanks for listening"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "I’m glad you could sit with it for a second. We can leave it there, or if you want, we can stay with what it meant to notice how much you’d been bracing.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [
+        "shoulders down"
+      ],
+      "trigger": "dad visited for dinner after a rough patch and they sat and ate without tension"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "lets leave it there for tonight. feels like enough. night :)"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Of course — enough for tonight. Night :)",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [
+        "shoulders down"
+      ],
+      "trigger": "dad visited for dinner after a rough patch and they sat and ate without tension"
+    }
+  ]
+}

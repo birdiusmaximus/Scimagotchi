@@ -1,0 +1,266 @@
+{
+  "cid": "shame__23",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-09T18:25:42.936Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont know. im just kind of annoyed at myself i guess. been a weird week"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a quiet kind of annoyance turned inward. Is it more like frustration, or more like being hard on yourself?"
+    },
+    {
+      "role": "user",
+      "content": "yeah more like hard on myself. i had to ask my brother for money again. like an actual loan. third time this year"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like shame mixed with frustration — having to ask again can really sting. Does it feel more heavy, tight, or like you want to pull back?"
+    },
+    {
+      "role": "user",
+      "content": "tight i guess. heavy too. he didnt even make it a thing he just sent it. which somehow made it worse. like he expects it now"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — tight and heavy, and his being easy about it somehow made it feel sharper. Is the sting more about feeling seen, or about what you think he expects now?"
+    },
+    {
+      "role": "user",
+      "content": "what he expects. hes younger than me. hes got the house the savings all of it. and im 34 borrowing rent money off my little brother. like how did i end up here"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really self-critical, and it lands on the gap between where you are and where you think you should be. Is it more the borrowing itself, or the feeling of being 34 and not where you expected to be?"
+    },
+    {
+      "role": "user",
+      "content": "not where i thought id be. i had a decent job. then the contract ended and i kept telling everyone i had something lined up. i didnt. ive been lying about it for months honestly"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like shame and regret — the job ending, and then carrying the lie for months, both seem to have lodged together. Does it feel more like wanting to hide, or like you want to repair it now?"
+    },
+    {
+      "role": "user",
+      "content": "hide. definitely hide. if i tell the truth then its real and everyone sees i failed. my parents think im doing fine. my brother probably knows somethings off but he hasnt said anything"
+    },
+    {
+      "role": "companion",
+      "content": "That feels very exposed — like the truth would make the failure visible. Is this heavier because it’s about your parents, or because it would change how you see yourself?"
+    },
+    {
+      "role": "user",
+      "content": "how i see myself i think. ive always been the responsible one. the one who has it together. and now im not and i dont know who that makes me"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the shame has gone deeper than the lie — it touches the version of you that was “the responsible one.” Do you want to stay with that, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "yeah i think i should leave it. thats more than ive said out loud in a long time. kind of need to sit with it"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — we can leave it there. That sounds like it took a lot to say out loud, and you can sit with it however you need to."
+    },
+    {
+      "role": "user",
+      "content": "thanks. genuinely. ill come back maybe"
+    },
+    {
+      "role": "companion",
+      "content": "You're welcome. Come back whenever you want."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z07l5ew3fmigj",
+    "conversation_id": "shame__23",
+    "timestamp": "2026-06-09T18:26:38.997Z",
+    "user_words_raw": "genuinely",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "exposed",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "The contract ended and he kept telling people he had something lined up when he didn't.",
+    "appraisal_thought": "If people know the truth, they will see I failed; I’m not the responsible one anymore.",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User tends to pause and sit with hard feelings after saying a lot out loud.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont know. im just kind of annoyed at myself i guess. been a weird week"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a quiet kind of annoyance turned inward. Is it more like frustration, or more like being hard on yourself?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "annoyed",
+      "body_cue": [],
+      "trigger": "a weird week"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah more like hard on myself. i had to ask my brother for money again. like an actual loan. third time this year"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like shame mixed with frustration — having to ask again can really sting. Does it feel more heavy, tight, or like you want to pull back?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "hard on myself",
+      "body_cue": [],
+      "trigger": "having to ask brother for money again"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "tight i guess. heavy too. he didnt even make it a thing he just sent it. which somehow made it worse. like he expects it now"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That makes sense — tight and heavy, and his being easy about it somehow made it feel sharper. Is the sting more about feeling seen, or about what you think he expects now?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [
+        "tight",
+        "heavy"
+      ],
+      "trigger": "having to ask brother for money again"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "what he expects. hes younger than me. hes got the house the savings all of it. and im 34 borrowing rent money off my little brother. like how did i end up here"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds really self-critical, and it lands on the gap between where you are and where you think you should be. Is it more the borrowing itself, or the feeling of being 34 and not where you expected to be?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [
+        "tight",
+        "heavy"
+      ],
+      "trigger": "borrowing rent money from his younger brother while comparing himself to where he expected to be"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "not where i thought id be. i had a decent job. then the contract ended and i kept telling everyone i had something lined up. i didnt. ive been lying about it for months honestly"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like shame and regret — the job ending, and then carrying the lie for months, both seem to have lodged together. Does it feel more like wanting to hide, or like you want to repair it now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "regretful",
+      "body_cue": [
+        "tight",
+        "heavy"
+      ],
+      "trigger": "the contract ended and they kept saying they had something lined up when they didn't"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "hide. definitely hide. if i tell the truth then its real and everyone sees i failed. my parents think im doing fine. my brother probably knows somethings off but he hasnt said anything"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels very exposed — like the truth would make the failure visible. Is this heavier because it’s about your parents, or because it would change how you see yourself?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "exposed",
+      "body_cue": [],
+      "trigger": "The contract ended and they kept saying they had something lined up when they didn't; now their parents think they're doing fine."
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "how i see myself i think. ive always been the responsible one. the one who has it together. and now im not and i dont know who that makes me"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds like the shame has gone deeper than the lie — it touches the version of you that was “the responsible one.” Do you want to stay with that, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "exposed",
+      "body_cue": [],
+      "trigger": "The job ended, he kept saying he had something lined up, and now his parents think he's doing fine."
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah i think i should leave it. thats more than ive said out loud in a long time. kind of need to sit with it"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "Of course — we can leave it there. That sounds like it took a lot to say out loud, and you can sit with it however you need to.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "exposed",
+      "body_cue": [],
+      "trigger": "The contract ended and he kept telling people he had something lined up when he didn't."
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "thanks. genuinely. ill come back maybe"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "You're welcome. Come back whenever you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "exposed",
+      "body_cue": [],
+      "trigger": "The contract ended and he kept telling people he had something lined up when he didn't."
+    }
+  ]
+}

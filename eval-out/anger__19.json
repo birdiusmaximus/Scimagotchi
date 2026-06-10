@@ -1,0 +1,263 @@
+{
+  "cid": "anger__19",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-09T18:17:48.165Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, good to see you. What’s been going on today?"
+    },
+    {
+      "role": "user",
+      "content": "nothing really. just kind of a day"
+    },
+    {
+      "role": "companion",
+      "content": "Sounds pretty quiet and maybe a little flat. Does it feel more like ordinary, or more like hard to name?"
+    },
+    {
+      "role": "user",
+      "content": "hard to name i guess. or i dont really want to get into it"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — we can leave it vague if you want. If you do want to stay with it, is it more blank, foggy, or just not something you want to touch right now?"
+    },
+    {
+      "role": "user",
+      "content": "not something i want to touch. but its been sitting there all day so whatever. i got passed over for the senior role at work. again."
+    },
+    {
+      "role": "companion",
+      "content": "Oof — that sounds like it’s been sitting there as a pretty heavy thing all day. Does it feel more like hurt, frustration, or something a bit shut down?"
+    },
+    {
+      "role": "user",
+      "content": "frustration. no its worse than that. theyve given it to me twice and both times last minute they hand it to someone with half my experience. like what is even the point"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like more than frustration — maybe anger, and a kind of being brushed aside too. What does it make you want to do, if anything?"
+    },
+    {
+      "role": "user",
+      "content": "honestly part of me wants to just walk out. but then i sit there and start wondering if theyre right. if im actually just not good enough and everyone can see it but me. thats the part that gets me"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like anger on one side, and a sharp hit of doubt on the other. Is the anger the part that wants to walk out, or the part that feels brushed aside?"
+    },
+    {
+      "role": "user",
+      "content": "the brushed aside part. like ive been there six years. i train the people they end up promoting over me. and im supposed to just smile and say congrats. its humiliating"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — that sounds humiliating, and it makes sense the brushed-aside part is what’s loudest. If you want, we can stay with what that humiliation is like, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "yeah i think i wanna leave it. ive said more than i meant to already"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — we can leave it right there. That felt like enough for today."
+    },
+    {
+      "role": "user",
+      "content": "thanks. i dont know. it helped a bit i guess. bye"
+    },
+    {
+      "role": "companion",
+      "content": "Of course. Take care, and if you want to come back to it another time, I’ll be here."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yq117ifj6vjrl",
+    "conversation_id": "anger__19",
+    "timestamp": "2026-06-09T18:18:40.526Z",
+    "user_words_raw": "ive said more than i meant to already",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "humiliated",
+    "secondary_emotions": [
+      "hurt"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "being passed over for the senior role again after six years there, while training the people who get promoted",
+    "appraisal_thought": "I’m not good enough and everyone can see it",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "dignity",
+      "fairness",
+      "respect"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feeling brushed aside and humiliated at work after being passed over for promotion multiple times",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, good to see you. What’s been going on today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "nothing really. just kind of a day"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Sounds pretty quiet and maybe a little flat. Does it feel more like ordinary, or more like hard to name?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "hard to name i guess. or i dont really want to get into it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That makes sense — we can leave it vague if you want. If you do want to stay with it, is it more blank, foggy, or just not something you want to touch right now?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "not something i want to touch. but its been sitting there all day so whatever. i got passed over for the senior role at work. again."
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Oof — that sounds like it’s been sitting there as a pretty heavy thing all day. Does it feel more like hurt, frustration, or something a bit shut down?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "shut down",
+      "body_cue": [],
+      "trigger": "getting passed over for the senior role at work again"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "frustration. no its worse than that. theyve given it to me twice and both times last minute they hand it to someone with half my experience. like what is even the point"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like more than frustration — maybe anger, and a kind of being brushed aside too. What does it make you want to do, if anything?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "brushed aside",
+      "body_cue": [],
+      "trigger": "being passed over for the senior role at work again after expecting it twice"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "honestly part of me wants to just walk out. but then i sit there and start wondering if theyre right. if im actually just not good enough and everyone can see it but me. thats the part that gets me"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like anger on one side, and a sharp hit of doubt on the other. Is the anger the part that wants to walk out, or the part that feels brushed aside?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "brushed aside",
+      "body_cue": [],
+      "trigger": "being passed over for the senior role at work again after expecting it twice"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "the brushed aside part. like ive been there six years. i train the people they end up promoting over me. and im supposed to just smile and say congrats. its humiliating"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "Yeah — that sounds humiliating, and it makes sense the brushed-aside part is what’s loudest. If you want, we can stay with what that humiliation is like, or leave it here for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "humiliated",
+      "body_cue": [],
+      "trigger": "being passed over for the senior role at work again after six years there, while training the people who get promoted"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah i think i wanna leave it. ive said more than i meant to already"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "Of course — we can leave it right there. That felt like enough for today.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "humiliated",
+      "body_cue": [],
+      "trigger": "being passed over for the senior role at work again after six years there, while training the people who get promoted"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "thanks. i dont know. it helped a bit i guess. bye"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Of course. Take care, and if you want to come back to it another time, I’ll be here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "humiliated",
+      "body_cue": [],
+      "trigger": "being passed over for the senior role again after six years there, while training the people who get promoted"
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "cid": "joy__12",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-09T17:42:18.927Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi! hope your day's going ok"
+    },
+    {
+      "role": "companion",
+      "content": "Hi — that’s kind of you. My day is steady; how’s yours going?"
+    },
+    {
+      "role": "user",
+      "content": "honestly pretty good. kind of a quiet morning but in a nice way. i actually had this little moment earlier i can't stop thinking about"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a quiet, good moment that stayed with you. What was the little moment?"
+    },
+    {
+      "role": "user",
+      "content": "ok so it's so small it's almost silly. i made coffee and took it out to the back step and there was this patch of sun, and the neighbour's cat just came and sat next to me. didn't want anything. just sat. and i had this rush of like... oh. this is enough. i'm actually content right now"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a quiet kind of contentment, almost like it landed in you as \"this is enough.\" Did it feel more like a soft settling, or more like a warm little lift?"
+    },
+    {
+      "role": "user",
+      "content": "more of a soft settling i think. not fireworks. just like my shoulders came down an inch and my brain went quiet for a sec. i don't get a lot of those lately so i kind of noticed it noticing it, if that makes sense"
+    },
+    {
+      "role": "companion",
+      "content": "Yes, that makes sense — a soft settling, with your shoulders coming down and your brain going quiet for a second. Would you like to stay with that, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "i think i'll stay with it just a beat. it feels worth holding onto. i want to remember that it doesn't take much - sun, coffee, a cat that picked me for no reason. that's kind of the whole thing isn't it"
+    },
+    {
+      "role": "companion",
+      "content": "It does sound like the whole thing: sun, coffee, and a cat that picked you for no reason, all landing as “enough.” What does that moment seem to connect to for you — being seen, or simply being left alone in a good way?"
+    },
+    {
+      "role": "user",
+      "content": "maybe being chosen but with no pressure to be anything. just allowed to sit there. anyway. i feel better having said it out loud. gonna go finish the coffee while it's still warm. thank you for this x"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like being chosen without any demand on you — just allowed to sit there. Glad you said it out loud; enjoy the warm coffee."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xge51xt8nsu9l",
+    "conversation_id": "joy__12",
+    "timestamp": "2026-06-09T17:42:50.613Z",
+    "user_words_raw": "allowed to sit there",
+    "emotion_status": "confirmed",
+    "emotion_family": "joy",
+    "emotion_shade": "content",
+    "secondary_emotions": [
+      "calm"
+    ],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "making coffee, taking it to the back step, a patch of sun, and the neighbour's cat sitting beside them",
+    "appraisal_thought": "this is enough",
+    "body_cue": [
+      "shoulders came down an inch"
+    ],
+    "behaviour_action": [
+      "go finish the coffee while it's still warm"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "rest",
+      "ease",
+      "being chosen",
+      "no pressure",
+      "connection"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "A small, quiet moment of contentment came from simple things and no pressure.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi! hope your day's going ok"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hi — that’s kind of you. My day is steady; how’s yours going?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "honestly pretty good. kind of a quiet morning but in a nice way. i actually had this little moment earlier i can't stop thinking about"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a quiet, good moment that stayed with you. What was the little moment?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "content",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "ok so it's so small it's almost silly. i made coffee and took it out to the back step and there was this patch of sun, and the neighbour's cat just came and sat next to me. didn't want anything. just sat. and i had this rush of like... oh. this is enough. i'm actually content right now"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That feels like a quiet kind of contentment, almost like it landed in you as \"this is enough.\" Did it feel more like a soft settling, or more like a warm little lift?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "content",
+      "body_cue": [],
+      "trigger": "Making coffee, sitting in a patch of sun, and the neighbour's cat sitting beside them without wanting anything"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "more of a soft settling i think. not fireworks. just like my shoulders came down an inch and my brain went quiet for a sec. i don't get a lot of those lately so i kind of noticed it noticing it, if that makes sense"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Yes, that makes sense — a soft settling, with your shoulders coming down and your brain going quiet for a second. Would you like to stay with that, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "content",
+      "body_cue": [
+        "shoulders came down an inch",
+        "brain went quiet for a sec"
+      ],
+      "trigger": "making coffee, a patch of sun, and the neighbour's cat sitting beside you without wanting anything"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i think i'll stay with it just a beat. it feels worth holding onto. i want to remember that it doesn't take much - sun, coffee, a cat that picked me for no reason. that's kind of the whole thing isn't it"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "It does sound like the whole thing: sun, coffee, and a cat that picked you for no reason, all landing as “enough.” What does that moment seem to connect to for you — being seen, or simply being left alone in a good way?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "content",
+      "body_cue": [
+        "shoulders came down an inch",
+        "brain went quiet for a sec"
+      ],
+      "trigger": "making coffee, a patch of sun, and the neighbour's cat sitting beside them without wanting anything"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "maybe being chosen but with no pressure to be anything. just allowed to sit there. anyway. i feel better having said it out loud. gonna go finish the coffee while it's still warm. thank you for this x"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels like being chosen without any demand on you — just allowed to sit there. Glad you said it out loud; enjoy the warm coffee.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "content",
+      "body_cue": [
+        "shoulders came down an inch"
+      ],
+      "trigger": "making coffee, taking it to the back step, a patch of sun, and the neighbour's cat sitting beside them"
+    }
+  ]
+}

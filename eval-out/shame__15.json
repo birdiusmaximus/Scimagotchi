@@ -1,0 +1,192 @@
+{
+  "cid": "shame__15",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-09T18:24:56.135Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "honestly im just kind of annoyed with myself lately. cant shake it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a pretty self-directed kind of annoyance — maybe irritation mixed with something harsher on yourself. What keeps getting hooked by it lately?"
+    },
+    {
+      "role": "user",
+      "content": "yeah maybe not annoyed exactly. its more like i keep replaying this one thing i did a few years back and i just feel stupid about it"
+    },
+    {
+      "role": "companion",
+      "content": "That feels more like shame than plain annoyance, maybe with a sting of embarrassment too. What part of it keeps replaying for you?"
+    },
+    {
+      "role": "user",
+      "content": "its work stuff from like 3 years ago. i was new and i sent this big email to the whole department but i got a name wrong and some numbers wrong. people noticed. i still think about it when im trying to sleep"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like it landed as a very public mistake, and it still comes back at night. Does it make you want to hide, fix it, or just disappear for a moment?"
+    },
+    {
+      "role": "user",
+      "content": "disappear honestly. like i still avoid one of the guys who replied all pointing it out. i just figure he thinks im an idiot. ive been there 3 yrs now and done fine but that one thing sticks"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — one pointed-out mistake can keep its own little shadow, even after years of doing fine. If you want, we can stay with what that reply-all moment still means to you, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "i guess when i actually say it out loud its kind of a small thing. a typo email. nobody else probably remembers it but me. its just my brain decided it was proof im not really competent"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the sting has shifted from the typo itself to what it seemed to prove about you. Does it feel more like being exposed, or like having to carry a harsh sentence about competence?"
+    },
+    {
+      "role": "user",
+      "content": "the sentence one yeah. anyway this actually helped a bit, saying it plainly. i should try to sleep. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it got a little lighter when you said it plainly. You can leave it here, and I hope sleep comes easily."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yz7llzq818z86",
+    "conversation_id": "shame__15",
+    "timestamp": "2026-06-09T18:25:28.651Z",
+    "user_words_raw": "the sentence one",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "self-critical",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "a reply-all email that pointed out a wrong name and wrong numbers in a big department email",
+    "appraisal_thought": "this was proof I'm not really competent",
+    "body_cue": [],
+    "behaviour_action": [
+      "avoid one of the guys who replied all",
+      "disappear"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "dignity",
+      "self-respect",
+      "acceptance"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "A past work email mistake still sticks as a harsh sentence about competence.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "honestly im just kind of annoyed with myself lately. cant shake it"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a pretty self-directed kind of annoyance — maybe irritation mixed with something harsher on yourself. What keeps getting hooked by it lately?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "annoyed",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah maybe not annoyed exactly. its more like i keep replaying this one thing i did a few years back and i just feel stupid about it"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That feels more like shame than plain annoyance, maybe with a sting of embarrassment too. What part of it keeps replaying for you?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "stupid",
+      "body_cue": [],
+      "trigger": "replaying one thing they did a few years back"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "its work stuff from like 3 years ago. i was new and i sent this big email to the whole department but i got a name wrong and some numbers wrong. people noticed. i still think about it when im trying to sleep"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like it landed as a very public mistake, and it still comes back at night. Does it make you want to hide, fix it, or just disappear for a moment?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "sending a big email to the whole department with a wrong name and wrong numbers"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "disappear honestly. like i still avoid one of the guys who replied all pointing it out. i just figure he thinks im an idiot. ive been there 3 yrs now and done fine but that one thing sticks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — one pointed-out mistake can keep its own little shadow, even after years of doing fine. If you want, we can stay with what that reply-all moment still means to you, or leave it here for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "a reply-all pointing out a wrong name and wrong numbers in a big department email"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i guess when i actually say it out loud its kind of a small thing. a typo email. nobody else probably remembers it but me. its just my brain decided it was proof im not really competent"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like the sting has shifted from the typo itself to what it seemed to prove about you. Does it feel more like being exposed, or like having to carry a harsh sentence about competence?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "a reply-all pointing out a wrong name and wrong numbers in a big department email"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "the sentence one yeah. anyway this actually helped a bit, saying it plainly. i should try to sleep. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad it got a little lighter when you said it plainly. You can leave it here, and I hope sleep comes easily.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "a reply-all email that pointed out a wrong name and wrong numbers in a big department email"
+    }
+  ]
+}

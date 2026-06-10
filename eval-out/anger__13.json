@@ -1,0 +1,213 @@
+{
+  "cid": "anger__13",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-09T18:17:38.837Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk why im even opening this lol. nothing wrong. just bored i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that sounds more like a bored, wandering kind of moment than a big feeling. Is it just empty time, or more like you wanted something to land on?"
+    },
+    {
+      "role": "user",
+      "content": "kinda wanted somethin to land on i guess. dunno. bad mood lookin for a reason maybe lol"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a slightly prickly, looking-for-a-reason kind of mood. Does it feel more irritated, restless, or just off?"
+    },
+    {
+      "role": "user",
+      "content": "irritated yeah. everything's mildly annoying today. tho if im honest i checked my bank app this morning n that didnt help my mood lmao"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, irritated fits, and the bank app seems like it gave it a sharper edge this morning. Is it more the annoyance, or the feeling that comes with seeing it?"
+    },
+    {
+      "role": "user",
+      "content": "the feeling. like i did everything right this month n still. my mate texted askin if im in for a weekend away n i had to make some joke abt being broke instead of just saying no i cant afford it. again"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the sting of doing everything right and still having to dodge it with a joke. Does it feel more blocked, embarrassed, or just fed up?"
+    },
+    {
+      "role": "user",
+      "content": "fed up yeah. i work full time n still cant say yes to a normal weekend away. n then i feel like a tit for even bein annoyed about it, like other ppl have it way worse"
+    },
+    {
+      "role": "companion",
+      "content": "Fed up fits, and there’s also that annoyed-with-yourself edge in it. Is it more about the unfairness, or the part where you end up feeling like a tit for being annoyed?"
+    },
+    {
+      "role": "user",
+      "content": "the unfairness i think. doin everything right n it not mattering. anyway i should prob stop moaning into an app lol. but yeah thanks, weirdly helped to actually say it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the unfairness landed right in the middle of it: doing everything right, and it still not mattering. We can leave it there if you want, or stay with what that says about you and what you’ve been carrying."
+    },
+    {
+      "role": "user",
+      "content": "nah lets leave it there. cheers tho. catch ya later"
+    },
+    {
+      "role": "companion",
+      "content": "Cheers — glad you said it, and we can leave it there. Catch you later."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ypu6mod3p8hhy",
+    "conversation_id": "anger__13",
+    "timestamp": "2026-06-09T18:18:20.835Z",
+    "user_words_raw": "doing everything right",
+    "emotion_status": "candidate",
+    "emotion_family": "anger",
+    "emotion_shade": "fed up",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "checking the bank app and seeing they still couldn't afford a normal weekend away despite working full time",
+    "appraisal_thought": "doing everything right and it still not mattering",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "fairness",
+      "respect",
+      "autonomy"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "feeling fed up about money and fairness after checking finances",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk why im even opening this lol. nothing wrong. just bored i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Yeah, that sounds more like a bored, wandering kind of moment than a big feeling. Is it just empty time, or more like you wanted something to land on?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "bored",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "kinda wanted somethin to land on i guess. dunno. bad mood lookin for a reason maybe lol"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a slightly prickly, looking-for-a-reason kind of mood. Does it feel more irritated, restless, or just off?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "off",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "irritated yeah. everything's mildly annoying today. tho if im honest i checked my bank app this morning n that didnt help my mood lmao"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Yeah, irritated fits, and the bank app seems like it gave it a sharper edge this morning. Is it more the annoyance, or the feeling that comes with seeing it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "irritated",
+      "body_cue": [],
+      "trigger": "checked the bank app this morning"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "the feeling. like i did everything right this month n still. my mate texted askin if im in for a weekend away n i had to make some joke abt being broke instead of just saying no i cant afford it. again"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like the sting of doing everything right and still having to dodge it with a joke. Does it feel more blocked, embarrassed, or just fed up?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "checked the bank app this morning and couldn’t afford a weekend away"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "fed up yeah. i work full time n still cant say yes to a normal weekend away. n then i feel like a tit for even bein annoyed about it, like other ppl have it way worse"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Fed up fits, and there’s also that annoyed-with-yourself edge in it. Is it more about the unfairness, or the part where you end up feeling like a tit for being annoyed?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "fed up",
+      "body_cue": [],
+      "trigger": "checked the bank app and couldn’t afford a normal weekend away despite working full time"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "the unfairness i think. doin everything right n it not mattering. anyway i should prob stop moaning into an app lol. but yeah thanks, weirdly helped to actually say it"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like the unfairness landed right in the middle of it: doing everything right, and it still not mattering. We can leave it there if you want, or stay with what that says about you and what you’ve been carrying.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "fed up",
+      "body_cue": [],
+      "trigger": "checking the bank app and seeing they still couldn't afford a normal weekend away despite working full time"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "nah lets leave it there. cheers tho. catch ya later"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "Cheers — glad you said it, and we can leave it there. Catch you later.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "fed up",
+      "body_cue": [],
+      "trigger": "checking the bank app and seeing they still couldn't afford a normal weekend away despite working full time"
+    }
+  ]
+}

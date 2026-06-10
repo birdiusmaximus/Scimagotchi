@@ -1,0 +1,170 @@
+{
+  "cid": "shame__06",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-09T18:24:15.230Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. i dunno. feeling kinda off today i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — “kind of off” feels like the main thing here. Does it seem more blank, foggy, or just hard to name?"
+    },
+    {
+      "role": "user",
+      "content": "no its not foggy. i know exactly what it is. i think i messed things up with my friend maya and i feel like such an idiot"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds more like hurt and shame than just “off.” What happened with Maya?"
+    },
+    {
+      "role": "user",
+      "content": "she told me smth big a while ago, about her and her ex, in confidence. and last week at dinner i kinda let it slip in front of the group. didnt even think. her face just dropped and she hasnt rly texted me back since. i feel awful"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really exposed and guilty — like the moment with her face dropping is still sitting close. Does it make you want to hide, apologise, or fix it?"
+    },
+    {
+      "role": "user",
+      "content": "honestly just wanna hide. but i know i should apologise properly. she trusted me and i blew it. thanks for letting me say it out loud i think i needed that. gonna go text her"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — the hiding and the wanting to apologise both fit here. We can leave it here if you want, or stay with what this says about what mattered to you."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it here. thank you. gonna go message her now"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — I’ll leave it here. Good luck with the message."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yyc2fidexp8rq",
+    "conversation_id": "shame__06",
+    "timestamp": "2026-06-09T18:24:42.691Z",
+    "user_words_raw": "she trusted me and i blew it",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "guilty",
+    "secondary_emotions": [
+      "hurt"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "letting a confidential thing slip in front of the group and seeing her reaction",
+    "appraisal_thought": "I blew it",
+    "body_cue": [],
+    "behaviour_action": [
+      "hide",
+      "apologise"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "repair",
+      "integrity",
+      "trust"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feeling guilty after breaking someone’s trust in a group setting.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. i dunno. feeling kinda off today i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — “kind of off” feels like the main thing here. Does it seem more blank, foggy, or just hard to name?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "off",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "no its not foggy. i know exactly what it is. i think i messed things up with my friend maya and i feel like such an idiot"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds more like hurt and shame than just “off.” What happened with Maya?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "she told me smth big a while ago, about her and her ex, in confidence. and last week at dinner i kinda let it slip in front of the group. didnt even think. her face just dropped and she hasnt rly texted me back since. i feel awful"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds really exposed and guilty — like the moment with her face dropping is still sitting close. Does it make you want to hide, apologise, or fix it?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "guilty",
+      "body_cue": [],
+      "trigger": "letting a confidential thing slip in front of the group and seeing her reaction"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "honestly just wanna hide. but i know i should apologise properly. she trusted me and i blew it. thanks for letting me say it out loud i think i needed that. gonna go text her"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — the hiding and the wanting to apologise both fit here. We can leave it here if you want, or stay with what this says about what mattered to you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "guilty",
+      "body_cue": [],
+      "trigger": "letting a confidential thing slip in front of the group and seeing her reaction"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah lets leave it here. thank you. gonna go message her now"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Of course — I’ll leave it here. Good luck with the message.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "guilty",
+      "body_cue": [],
+      "trigger": "letting a confidential thing slip in front of the group and seeing her reaction"
+    }
+  ]
+}

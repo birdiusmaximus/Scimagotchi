@@ -1,0 +1,274 @@
+{
+  "cid": "pressure__23",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-09T17:47:09.177Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. i think im just kind of tired lately? like burnt out maybe"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that sounds like a lot of tiredness, maybe even that burnt-out kind. Does it feel more like pressure, heavy, or just flat lately?"
+    },
+    {
+      "role": "user",
+      "content": "flat i guess. like i cant be bothered with anything. just want to lie down and not deal"
+    },
+    {
+      "role": "companion",
+      "content": "Flat makes sense here — and that “want to lie down and not deal” sounds like everything has gone a bit far away. Does it feel more like numb, heavy, or shut down?"
+    },
+    {
+      "role": "user",
+      "content": "honestly maybe not flat actually. i keep checking my bank app over and over. like every hour. thats not flat is it"
+    },
+    {
+      "role": "companion",
+      "content": "No — that sounds less flat and more like something is keeping you on watch. What does the bank checking feel like: worried, pressured, or stuck in a loop?"
+    },
+    {
+      "role": "user",
+      "content": "stuck in a loop. its like theres this weight sitting on my chest all day. i got a letter that my rent is going up 340 a month from august and i already dont have room. i keep doing the maths over and over and it never works out"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really stuck and heavy — the letter and the rent increase are the thing setting the loop off. Does it feel more like worry about what happens next, or pressure from the numbers not working out?"
+    },
+    {
+      "role": "user",
+      "content": "pressure. its the numbers. i make 2100 a month after tax and rents going to 1480. then theres my car which i need for work, the loan, food. theres just nothing left and now this. i feel like im being squeezed from every side and theres no give anywhere"
+    },
+    {
+      "role": "companion",
+      "content": "That really does sound squeezed from every side, with the numbers leaving no room at all. It sounds like pressure trying to pin down every pound — does it feel familiar, or is this a new kind of tightness?"
+    },
+    {
+      "role": "user",
+      "content": "familiar. ive been the one holding it together for so long. my mum relies on me too, i send her a bit each month and i cant tell her i cant anymore, it would kill her. so i just keep absorbing it. everyones leaning on me and i dont get to put it down"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a long-held kind of pressure — holding it together, absorbing it, and not getting to put it down. Is the hardest part the money itself, or carrying what everyone else leans on you for?"
+    },
+    {
+      "role": "user",
+      "content": "the carrying. the money is just the thing that makes it real. if it was only me id figure it out, id eat beans for a year whatever. but its that im scared of letting someone down. i lie awake doing budgets in my head at 3am like if i just find the right combination it'll all fit"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like carrying the fear of letting someone down, with the 3am budgeting turning into a kind of relentless search. Is it more like a tight, wired kind of pressure, or a heavy one?"
+    },
+    {
+      "role": "user",
+      "content": "wired. definitely wired. tight and buzzing like i cant switch it off. ive never actually said all that out loud before. it does help a bit just to lay it out i think"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — wired, tight, buzzing, and finally out in the open. We can leave it there for now, or keep close to it a little longer if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. ive still got to actually sort the rent thing but at least i know what im carrying now. thanks for this. means a lot honestly"
+    },
+    {
+      "role": "companion",
+      "content": "I'm glad it helped to name what you were carrying. We can leave it here, and you can come back to it anytime if you want to pick it up again."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xmmg2t1h5cifu",
+    "conversation_id": "pressure__23",
+    "timestamp": "2026-06-09T17:48:01.126Z",
+    "user_words_raw": "i cant switch it off",
+    "emotion_status": "confirmed",
+    "emotion_family": "pressure",
+    "emotion_shade": "wired",
+    "secondary_emotions": [
+      "fear"
+    ],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "rent rising and carrying money pressure for others",
+    "appraisal_thought": "I have to keep holding this or it will fall apart; I can't let someone down",
+    "body_cue": [
+      "tight",
+      "buzzing"
+    ],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "support",
+      "clarity"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User carries ongoing financial pressure and feels responsible for supporting someone close.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. i think im just kind of tired lately? like burnt out maybe"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that sounds like a lot of tiredness, maybe even that burnt-out kind. Does it feel more like pressure, heavy, or just flat lately?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "burnt out",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "flat i guess. like i cant be bothered with anything. just want to lie down and not deal"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Flat makes sense here — and that “want to lie down and not deal” sounds like everything has gone a bit far away. Does it feel more like numb, heavy, or shut down?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "honestly maybe not flat actually. i keep checking my bank app over and over. like every hour. thats not flat is it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "No — that sounds less flat and more like something is keeping you on watch. What does the bank checking feel like: worried, pressured, or stuck in a loop?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "worried",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "stuck in a loop. its like theres this weight sitting on my chest all day. i got a letter that my rent is going up 340 a month from august and i already dont have room. i keep doing the maths over and over and it never works out"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds really stuck and heavy — the letter and the rent increase are the thing setting the loop off. Does it feel more like worry about what happens next, or pressure from the numbers not working out?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "worried",
+      "body_cue": [
+        "weight sitting on my chest all day"
+      ],
+      "trigger": "got a letter that my rent is going up 340 a month from august"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "pressure. its the numbers. i make 2100 a month after tax and rents going to 1480. then theres my car which i need for work, the loan, food. theres just nothing left and now this. i feel like im being squeezed from every side and theres no give anywhere"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That really does sound squeezed from every side, with the numbers leaving no room at all. It sounds like pressure trying to pin down every pound — does it feel familiar, or is this a new kind of tightness?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressure",
+      "body_cue": [],
+      "trigger": "got a letter that my rent is going up 340 a month from august"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "familiar. ive been the one holding it together for so long. my mum relies on me too, i send her a bit each month and i cant tell her i cant anymore, it would kill her. so i just keep absorbing it. everyones leaning on me and i dont get to put it down"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like a long-held kind of pressure — holding it together, absorbing it, and not getting to put it down. Is the hardest part the money itself, or carrying what everyone else leans on you for?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "burdened",
+      "body_cue": [],
+      "trigger": "rent going up, bills and family support leaving no room"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "the carrying. the money is just the thing that makes it real. if it was only me id figure it out, id eat beans for a year whatever. but its that im scared of letting someone down. i lie awake doing budgets in my head at 3am like if i just find the right combination it'll all fit"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds like carrying the fear of letting someone down, with the 3am budgeting turning into a kind of relentless search. Is it more like a tight, wired kind of pressure, or a heavy one?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "relentless",
+      "body_cue": [],
+      "trigger": "having to hold money and not let someone down"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "wired. definitely wired. tight and buzzing like i cant switch it off. ive never actually said all that out loud before. it does help a bit just to lay it out i think"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That makes sense — wired, tight, buzzing, and finally out in the open. We can leave it there for now, or keep close to it a little longer if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "wired",
+      "body_cue": [
+        "tight",
+        "buzzing"
+      ],
+      "trigger": "rent rise and carrying money for others"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "yeah lets leave it there. ive still got to actually sort the rent thing but at least i know what im carrying now. thanks for this. means a lot honestly"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "I'm glad it helped to name what you were carrying. We can leave it here, and you can come back to it anytime if you want to pick it up again.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "wired",
+      "body_cue": [
+        "tight",
+        "buzzing"
+      ],
+      "trigger": "rent rising and carrying money pressure for others"
+    }
+  ]
+}

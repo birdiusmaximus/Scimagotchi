@@ -1,0 +1,263 @@
+{
+  "cid": "fear__21",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-09T17:37:41.564Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. ok i dont really know why im here lol. someone said this thing might help. anyway"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that's alright — we can just start where you are. What’s been on your mind today?"
+    },
+    {
+      "role": "user",
+      "content": "honestly idk. work stuff i guess. its fine. its always fine until its not haha. i dont even know what id say about it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like it might be sitting in that vague, hard-to-pin-down place. Does it feel more like pressure, unease, or just a kind of blankness around work?"
+    },
+    {
+      "role": "user",
+      "content": "pressure i guess? idk. like theres this thing coming up and im just. nope. brain goes blank when i think about it. classic me"
+    },
+    {
+      "role": "companion",
+      "content": "Pressure, and a kind of blanking when the thing comes up — that gives it a shape. What’s the thing that’s coming up?"
+    },
+    {
+      "role": "user",
+      "content": "ok so. theres this promotion thing. my manager basically told me to apply for the senior role and the panel interview is in like 9 days. everyone keeps saying its basically mine which is. cool. great. no pressure there lol"
+    },
+    {
+      "role": "companion",
+      "content": "That really does sound like a lot sitting on one thing — especially with people acting like it’s already decided. Does it feel more like pressure from the panel itself, or from everyone else treating it as “basically yours”?"
+    },
+    {
+      "role": "user",
+      "content": "the everyone else thing. like if its 'basically mine' then theres only one way this goes wrong right. i cant just not get it. id be the person who fumbled the sure thing. my manager went to bat for me and i keep thinking what if i open my mouth in there and theres just. nothing"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like the weight of not wanting to be the person who fumbled the sure thing, and the fear of there being “nothing” when you open your mouth. What part feels loudest right now: the pressure to not let people down, or the blankness itself?"
+    },
+    {
+      "role": "user",
+      "content": "the letting people down one. i think. ugh i dont know. its dumb. its just a job. but my manager said my name in a room i wasnt in and now i owe them this win or i made them look stupid for backing me. and the blank thing scares me cause it actually happens. i froze in a meeting last month and everyone just kinda waited"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the fear is carrying both the pressure to repay your manager and the memory of freezing in front of people. If you want, we can stay with that, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "no its. can stay a sec. i guess the thing nobody knows is i dont even know if i want the role. like its more money and people will be proud and i should want it. but the senior people look miserable and i just. cant say that out loud cause then what was all this for"
+    },
+    {
+      "role": "companion",
+      "content": "That adds another layer: not just pressure, but the awkwardness of not even knowing if you want the role, while everyone expects you to. Is it more the mismatch between what you think you should want and what you actually want?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. the mismatch. its like im scared of failing at something i dont even know i want which is. peak me honestly lol. and i cant tell if im nervous about the interview or hoping i bomb it so the decision gets made for me. thats messed up right"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound messed up to me — it sounds like a real split between pressure to want it and a part of you that wants the decision taken out of your hands. Does it feel more like nerves, or like wanting relief from having to choose?"
+    },
+    {
+      "role": "user",
+      "content": "relief probably. ok thats. more than i meant to say honestly lol. i should go. this was. yeah. thanks weirdly. ill think about it. or i wont and panic in 9 days who knows. bye"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — that makes sense to leave it there. It’s a lot to be holding, and thanks for trusting me with it."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xai3883rbyr5t",
+    "conversation_id": "fear__21",
+    "timestamp": "2026-06-09T17:38:41.093Z",
+    "user_words_raw": "relief",
+    "emotion_status": "confirmed",
+    "emotion_family": "pressure",
+    "emotion_shade": "split pressure",
+    "secondary_emotions": [
+      "fear"
+    ],
+    "valence": "mixed",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "promotion panel interview coming up with people treating it as basically certain",
+    "appraisal_thought": "If this is basically mine, then I can’t be the one who fumbles it.",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "clarity",
+      "permission to pause"
+    ],
+    "confidence_level": "medium",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Worried about a promotion interview, with pressure from others' expectations and uncertainty about wanting the role.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. ok i dont really know why im here lol. someone said this thing might help. anyway"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that's alright — we can just start where you are. What’s been on your mind today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "honestly idk. work stuff i guess. its fine. its always fine until its not haha. i dont even know what id say about it"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like it might be sitting in that vague, hard-to-pin-down place. Does it feel more like pressure, unease, or just a kind of blankness around work?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "vague",
+      "body_cue": [],
+      "trigger": "work stuff"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "pressure i guess? idk. like theres this thing coming up and im just. nope. brain goes blank when i think about it. classic me"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Pressure, and a kind of blanking when the thing comes up — that gives it a shape. What’s the thing that’s coming up?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "pressure",
+      "body_cue": [],
+      "trigger": "a thing coming up at work"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "ok so. theres this promotion thing. my manager basically told me to apply for the senior role and the panel interview is in like 9 days. everyone keeps saying its basically mine which is. cool. great. no pressure there lol"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That really does sound like a lot sitting on one thing — especially with people acting like it’s already decided. Does it feel more like pressure from the panel itself, or from everyone else treating it as “basically yours”?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressure",
+      "body_cue": [],
+      "trigger": "a promotion panel interview in 9 days"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "the everyone else thing. like if its 'basically mine' then theres only one way this goes wrong right. i cant just not get it. id be the person who fumbled the sure thing. my manager went to bat for me and i keep thinking what if i open my mouth in there and theres just. nothing"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That feels like the weight of not wanting to be the person who fumbled the sure thing, and the fear of there being “nothing” when you open your mouth. What part feels loudest right now: the pressure to not let people down, or the blankness itself?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "fear of failing",
+      "body_cue": [],
+      "trigger": "a panel interview for a promotion where others seem to think it is certain"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "the letting people down one. i think. ugh i dont know. its dumb. its just a job. but my manager said my name in a room i wasnt in and now i owe them this win or i made them look stupid for backing me. and the blank thing scares me cause it actually happens. i froze in a meeting last month and everyone just kinda waited"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like the fear is carrying both the pressure to repay your manager and the memory of freezing in front of people. If you want, we can stay with that, or leave it here for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "fear of failing",
+      "body_cue": [],
+      "trigger": "a promotion panel interview coming up in 9 days, with people saying it is basically theirs"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "no its. can stay a sec. i guess the thing nobody knows is i dont even know if i want the role. like its more money and people will be proud and i should want it. but the senior people look miserable and i just. cant say that out loud cause then what was all this for"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That adds another layer: not just pressure, but the awkwardness of not even knowing if you want the role, while everyone expects you to. Is it more the mismatch between what you think you should want and what you actually want?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressure",
+      "body_cue": [],
+      "trigger": "promotion panel interview coming up, with other people treating it as basically certain"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah. the mismatch. its like im scared of failing at something i dont even know i want which is. peak me honestly lol. and i cant tell if im nervous about the interview or hoping i bomb it so the decision gets made for me. thats messed up right"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That doesn’t sound messed up to me — it sounds like a real split between pressure to want it and a part of you that wants the decision taken out of your hands. Does it feel more like nerves, or like wanting relief from having to choose?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "split pressure",
+      "body_cue": [],
+      "trigger": "promotion panel interview coming up with people treating it as basically certain"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "relief probably. ok thats. more than i meant to say honestly lol. i should go. this was. yeah. thanks weirdly. ill think about it. or i wont and panic in 9 days who knows. bye"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Yeah — that makes sense to leave it there. It’s a lot to be holding, and thanks for trusting me with it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "split pressure",
+      "body_cue": [],
+      "trigger": "promotion panel interview coming up with people treating it as basically certain"
+    }
+  ]
+}

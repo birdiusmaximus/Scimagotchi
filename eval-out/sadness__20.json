@@ -1,0 +1,264 @@
+{
+  "cid": "sadness__20",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-09T18:20:18.636Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. wasnt sure if id actually open this thing tonight but here i am"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, here you are. What made tonight the one where you opened it?"
+    },
+    {
+      "role": "user",
+      "content": "honestly idk. had a quiet evening, kids asleep, and i just sort of caught my own reflection in the kitchen window and didnt recognise the person looking back. dramatic i know lol"
+    },
+    {
+      "role": "companion",
+      "content": "Not dramatic at all — that sounds like a strange, disorienting moment. Was it more like unsettled, sad, or just blank?"
+    },
+    {
+      "role": "user",
+      "content": "sad i think. its been creeping for a few weeks. i got a diagnosis in april. nothing fatal or anything dramatic so i feel almost silly being this low about it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a low, creeping sadness, and the diagnosis may have given it a shape. What does “this low” feel like day to day?"
+    },
+    {
+      "role": "user",
+      "content": "its MS. relapsing remitting. the numbness in my left hand was the thing that sent me in. day to day its like.. im grieving a body i thought i could rely on? i used to run. half marathons. now i plan my whole day around whether ill be too tired to pick the kids up"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like grief for the body you trusted, and for the life that used to be simpler. Does it feel more heavy, tired, or like you’re having to keep letting go of old plans?"
+    },
+    {
+      "role": "user",
+      "content": "letting go i think. thats the bit that gets me. every time i adjust to one thing theres another. i had to put my trainers in a box in the loft because seeing them by the door made me cry. and then i felt pathetic for crying over shoes"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like grief meeting a fresh letting-go each time, and the trainers became a very sharp reminder of it. Does this feel more like tenderness for what you lost, or shame for how much it hits?"
+    },
+    {
+      "role": "user",
+      "content": "both honestly. theres shame all over it. like im 38, im supposed to be the steady one, my husband keeps saying we'll handle it together but i can see him watching me on the stairs. and the kids are 6 and 4. i keep thinking about all the things i wanted to do with them that i dont know if i can promise now"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like grief and shame tangled together, with a lot of pressure to be the steady one. If you want, we can stay with the shame, or with the part that’s mourning the things you can’t promise now."
+    },
+    {
+      "role": "user",
+      "content": "the mourning part. theres this one thing. my daughter asked me last week if id teach her to ride a bike this summer and i said yes and then i went to the bathroom and just. lost it. because i dont know if my balance will hold and i hate that a normal mum moment turned into this whole grief thing in my head"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a raw grief spike in a very ordinary moment, and maybe a hurt that it turned into something so big inside you. What was the strongest part of that moment — the fear about your balance, or the loss inside the yes?"
+    },
+    {
+      "role": "user",
+      "content": "the loss inside the yes. i wanted to just say yes like any other mum and mean it without an asterisk. thats what i mourn i think. the version of me that got to be ordinary about things"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it sounds like you’re mourning the ordinary yes, without having to carry the asterisk. We can stay with that, or if you want, we can look at what that “ordinary” version of you still means to you."
+    },
+    {
+      "role": "user",
+      "content": "i think i need to sit with it rather than look at it more tonight. but thank you. i havent said the asterisk thing out loud to anyone, not even my husband. helped to put words on it. gonna go check on the kids and try to sleep. night x"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — we can leave it here tonight. I’m glad the asterisk found words, and I hope the night is gentle with you."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yt9boqxig5csx",
+    "conversation_id": "sadness__20",
+    "timestamp": "2026-06-09T18:21:14.668Z",
+    "user_words_raw": "without an asterisk",
+    "emotion_status": "confirmed",
+    "emotion_family": "sadness",
+    "emotion_shade": "grief",
+    "secondary_emotions": [
+      "shame",
+      "hurt"
+    ],
+    "valence": "mixed",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "not knowing if she can promise ordinary things with her daughter after saying yes to teaching her to ride a bike",
+    "appraisal_thought": "I wanted to say yes like any other mum and mean it without an asterisk.",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "being understood",
+      "space",
+      "recognition"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feels grief around losing the ordinary version of parenting and not being able to make simple promises without a qualifier.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. wasnt sure if id actually open this thing tonight but here i am"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, here you are. What made tonight the one where you opened it?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "honestly idk. had a quiet evening, kids asleep, and i just sort of caught my own reflection in the kitchen window and didnt recognise the person looking back. dramatic i know lol"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Not dramatic at all — that sounds like a strange, disorienting moment. Was it more like unsettled, sad, or just blank?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "disoriented",
+      "body_cue": [],
+      "trigger": "caught their own reflection in the kitchen window after a quiet evening"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "sad i think. its been creeping for a few weeks. i got a diagnosis in april. nothing fatal or anything dramatic so i feel almost silly being this low about it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like a low, creeping sadness, and the diagnosis may have given it a shape. What does “this low” feel like day to day?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "low",
+      "body_cue": [],
+      "trigger": "got a diagnosis in april"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "its MS. relapsing remitting. the numbness in my left hand was the thing that sent me in. day to day its like.. im grieving a body i thought i could rely on? i used to run. half marathons. now i plan my whole day around whether ill be too tired to pick the kids up"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like grief for the body you trusted, and for the life that used to be simpler. Does it feel more heavy, tired, or like you’re having to keep letting go of old plans?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grieving",
+      "body_cue": [],
+      "trigger": "diagnosis in april; numbness in left hand; changes in what the body can do day to day"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "letting go i think. thats the bit that gets me. every time i adjust to one thing theres another. i had to put my trainers in a box in the loft because seeing them by the door made me cry. and then i felt pathetic for crying over shoes"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like grief meeting a fresh letting-go each time, and the trainers became a very sharp reminder of it. Does this feel more like tenderness for what you lost, or shame for how much it hits?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "sadness",
+      "shade": "grieving",
+      "body_cue": [],
+      "trigger": "seeing the trainers by the door"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "both honestly. theres shame all over it. like im 38, im supposed to be the steady one, my husband keeps saying we'll handle it together but i can see him watching me on the stairs. and the kids are 6 and 4. i keep thinking about all the things i wanted to do with them that i dont know if i can promise now"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like grief and shame tangled together, with a lot of pressure to be the steady one. If you want, we can stay with the shame, or with the part that’s mourning the things you can’t promise now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "living with MS and thinking about what you can no longer promise your children"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "the mourning part. theres this one thing. my daughter asked me last week if id teach her to ride a bike this summer and i said yes and then i went to the bathroom and just. lost it. because i dont know if my balance will hold and i hate that a normal mum moment turned into this whole grief thing in my head"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds like a raw grief spike in a very ordinary moment, and maybe a hurt that it turned into something so big inside you. What was the strongest part of that moment — the fear about your balance, or the loss inside the yes?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grief",
+      "body_cue": [],
+      "trigger": "your daughter asked if you'd teach her to ride a bike this summer"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "the loss inside the yes. i wanted to just say yes like any other mum and mean it without an asterisk. thats what i mourn i think. the version of me that got to be ordinary about things"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That makes sense — it sounds like you’re mourning the ordinary yes, without having to carry the asterisk. We can stay with that, or if you want, we can look at what that “ordinary” version of you still means to you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grief",
+      "body_cue": [],
+      "trigger": "your daughter asking if you'd teach her to ride a bike this summer"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "i think i need to sit with it rather than look at it more tonight. but thank you. i havent said the asterisk thing out loud to anyone, not even my husband. helped to put words on it. gonna go check on the kids and try to sleep. night x"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Of course — we can leave it here tonight. I’m glad the asterisk found words, and I hope the night is gentle with you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grief",
+      "body_cue": [],
+      "trigger": "not knowing if she can promise ordinary things with her daughter after saying yes to teaching her to ride a bike"
+    }
+  ]
+}

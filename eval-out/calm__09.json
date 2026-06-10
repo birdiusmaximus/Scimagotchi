@@ -1,0 +1,148 @@
+{
+  "cid": "calm__09",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-09T17:43:58.554Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. logging something. feel ok today. settled i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that sounds pretty settled, maybe even a little steady. Does it feel peaceful, or more just okay?"
+    },
+    {
+      "role": "user",
+      "content": "peaceful. stopped trying to be someone i'm not. quit the side hustle everyone wanted me to keep"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds peaceful in a deep, clear way — like some pressure finally let go. Does it feel lighter in your body, or more like quiet space?"
+    },
+    {
+      "role": "user",
+      "content": "lighter. like i can breathe. dont have to prove anything to them anymore"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds lighter in a very real way — like breathing got easier once you didn’t have to prove anything. Does it feel open and spacious, or more like a relief that’s still settling?"
+    },
+    {
+      "role": "user",
+      "content": "relief still settling. yeah. thats it. thanks, gonna head off"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — relief still settling can be a gentle kind of quiet. We can leave it there, and I hope the rest of your day stays soft."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xij6o04o9ibwi",
+    "conversation_id": "calm__09",
+    "timestamp": "2026-06-09T17:44:16.690Z",
+    "user_words_raw": "relief still settling",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "relief",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "stopped trying to be someone i'm not; quit the side hustle everyone wanted me to keep",
+    "appraisal_thought": "dont have to prove anything to them anymore",
+    "body_cue": [
+      "can breathe"
+    ],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "autonomy",
+      "space",
+      "rest",
+      "self-trust"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feeling eased after dropping expectations from others and choosing their own path.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. logging something. feel ok today. settled i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that sounds pretty settled, maybe even a little steady. Does it feel peaceful, or more just okay?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "peaceful. stopped trying to be someone i'm not. quit the side hustle everyone wanted me to keep"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds peaceful in a deep, clear way — like some pressure finally let go. Does it feel lighter in your body, or more like quiet space?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "peaceful",
+      "body_cue": [],
+      "trigger": "stopped trying to be someone i'm not; quit the side hustle everyone wanted me to keep"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "lighter. like i can breathe. dont have to prove anything to them anymore"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds lighter in a very real way — like breathing got easier once you didn’t have to prove anything. Does it feel open and spacious, or more like a relief that’s still settling?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "peaceful",
+      "body_cue": [
+        "can breathe"
+      ],
+      "trigger": "stopped trying to be someone i'm not; quit the side hustle everyone wanted me to keep"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "relief still settling. yeah. thats it. thanks, gonna head off"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — relief still settling can be a gentle kind of quiet. We can leave it there, and I hope the rest of your day stays soft.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "relief",
+      "body_cue": [
+        "can breathe"
+      ],
+      "trigger": "stopped trying to be someone i'm not; quit the side hustle everyone wanted me to keep"
+    }
+  ]
+}

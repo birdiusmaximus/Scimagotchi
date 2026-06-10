@@ -1,0 +1,144 @@
+{
+  "cid": "joy__08",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-09T17:41:51.527Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so i dont really get how this works but. i think i got into the phd program?? like the one in edinburgh. still kinda processing"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a big thing to be sitting with. It feels like you’re still taking in whether it’s real — what’s the strongest part of it right now?"
+    },
+    {
+      "role": "user",
+      "content": "oh. relief honestly. like ive been refreshing the portal for weeks and the not knowing was eating me alive. but its weird bc now im like... happy but also no idea what my life looks like in a year"
+    },
+    {
+      "role": "companion",
+      "content": "Relief makes a lot of sense here, with a bit of happy too. It sounds like the waiting was the hard part, and now the future feels wide open — what’s the part that feels strongest in you right now?"
+    },
+    {
+      "role": "user",
+      "content": "i mean its kind of asking me the same thing twice lol. but yeah i think the strongest bit is the excited part. new city, new everything. scary but in a good way i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Got it — that sounds more like excited than relief now, with a little scared mixed in. Is it the newness itself that feels good, or the “new city, new everything” part?"
+    },
+    {
+      "role": "user",
+      "content": "yeah the newness. like getting to be a different version of me somewhere else. anyway thats enough poking at it for now i think. thanks tho"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a clean place to leave it. Getting to be a different version of you somewhere else sounds vivid — and we can leave the rest right there for now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xftewqw0jtca0",
+    "conversation_id": "joy__08",
+    "timestamp": "2026-06-09T17:42:10.941Z",
+    "user_words_raw": "the newness",
+    "emotion_status": "confirmed",
+    "emotion_family": "joy",
+    "emotion_shade": "excited",
+    "secondary_emotions": [
+      "fear"
+    ],
+    "valence": "positive",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "getting into the PhD program in Edinburgh and imagining a new city / new life",
+    "appraisal_thought": "getting to be a different version of me somewhere else",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "freedom",
+      "change",
+      "possibility",
+      "self-expression"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User is excited by newness and the idea of becoming a different version of themselves somewhere else.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so i dont really get how this works but. i think i got into the phd program?? like the one in edinburgh. still kinda processing"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a big thing to be sitting with. It feels like you’re still taking in whether it’s real — what’s the strongest part of it right now?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relief",
+      "body_cue": [],
+      "trigger": "possibly being accepted into the PhD program in Edinburgh"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "oh. relief honestly. like ive been refreshing the portal for weeks and the not knowing was eating me alive. but its weird bc now im like... happy but also no idea what my life looks like in a year"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Relief makes a lot of sense here, with a bit of happy too. It sounds like the waiting was the hard part, and now the future feels wide open — what’s the part that feels strongest in you right now?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "relief",
+      "body_cue": [],
+      "trigger": "possibly being accepted into the PhD program in Edinburgh after weeks of uncertainty"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "i mean its kind of asking me the same thing twice lol. but yeah i think the strongest bit is the excited part. new city, new everything. scary but in a good way i guess"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Got it — that sounds more like excited than relief now, with a little scared mixed in. Is it the newness itself that feels good, or the “new city, new everything” part?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "excited",
+      "body_cue": [],
+      "trigger": "possibly getting into the PhD program in Edinburgh and imagining a new city/new life"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah the newness. like getting to be a different version of me somewhere else. anyway thats enough poking at it for now i think. thanks tho"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That feels like a clean place to leave it. Getting to be a different version of you somewhere else sounds vivid — and we can leave the rest right there for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "excited",
+      "body_cue": [],
+      "trigger": "getting into the PhD program in Edinburgh and imagining a new city / new life"
+    }
+  ]
+}

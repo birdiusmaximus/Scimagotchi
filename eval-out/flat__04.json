@@ -1,0 +1,161 @@
+{
+  "cid": "flat__04",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-09T18:26:02.230Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. how's it going"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, good to see you. I’m here and ready to chat — what’s been going on with you lately?"
+    },
+    {
+      "role": "user",
+      "content": "i dunno. honestly not much. i had sunday dinner at my parents place yesterday and i just kind of... felt nothing the whole time"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really flat, like you were there but not quite in it. Does it feel more blank, disconnected, or just hard to name?"
+    },
+    {
+      "role": "user",
+      "content": "disconnected i guess. like i was watching them through glass. my mum was talking about my sister's wedding and everyone was laughing and i just sat there nodding. i couldn't find the part of me that's supposed to care"
+    },
+    {
+      "role": "companion",
+      "content": "Disconnected fits. It sounds like you were there watching through glass while everyone else was in the moment — is the feeling more like shut down, or just far away?"
+    },
+    {
+      "role": "user",
+      "content": "far away. yeah. i don't even know why i'm telling you this. it just helped to say it out loud i think. anyway. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — a far-away kind of disconnected, and saying it out loud seems to have given it shape. We can leave it there if you want, or stay with what that distance is like for you."
+    },
+    {
+      "role": "user",
+      "content": "yeah. let's leave it there. i'm gonna go. thanks for listening"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — glad you said it out loud. Take care, and you can come back anytime."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z0mvug8q3dvqb",
+    "conversation_id": "flat__04",
+    "timestamp": "2026-06-09T18:26:25.396Z",
+    "user_words_raw": "i'm gonna go",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "disconnected",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "Sunday dinner at parents' place; mum talking about sister's wedding while everyone laughed",
+    "appraisal_thought": "I couldn't find the part of me that's supposed to care",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User sometimes wants to leave it there after naming a feeling.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. how's it going"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, good to see you. I’m here and ready to chat — what’s been going on with you lately?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i dunno. honestly not much. i had sunday dinner at my parents place yesterday and i just kind of... felt nothing the whole time"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds really flat, like you were there but not quite in it. Does it feel more blank, disconnected, or just hard to name?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": "sunday dinner at parents' place"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "disconnected i guess. like i was watching them through glass. my mum was talking about my sister's wedding and everyone was laughing and i just sat there nodding. i couldn't find the part of me that's supposed to care"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Disconnected fits. It sounds like you were there watching through glass while everyone else was in the moment — is the feeling more like shut down, or just far away?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "sunday dinner at parents' place; mum talking about sister's wedding and everyone laughing"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "far away. yeah. i don't even know why i'm telling you this. it just helped to say it out loud i think. anyway. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — a far-away kind of disconnected, and saying it out loud seems to have given it shape. We can leave it there if you want, or stay with what that distance is like for you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "Sunday dinner at parents' place; mum talking about sister's wedding while everyone laughed"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. let's leave it there. i'm gonna go. thanks for listening"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Of course — glad you said it out loud. Take care, and you can come back anytime.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "Sunday dinner at parents' place; mum talking about sister's wedding while everyone laughed"
+    }
+  ]
+}

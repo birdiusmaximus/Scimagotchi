@@ -1,0 +1,171 @@
+{
+  "cid": "calm__17",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-09T17:44:23.225Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. just wanna log something. feeling calm i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that sounds like a calm, maybe quietly settled kind of moment. Does it feel peaceful, okay, or more like just unhurried?"
+    },
+    {
+      "role": "user",
+      "content": "peaceful yeah. settled. its about my girlfriend"
+    },
+    {
+      "role": "companion",
+      "content": "Peaceful and settled — and it sounds connected to your girlfriend. What about her gives this calm its shape?"
+    },
+    {
+      "role": "user",
+      "content": "we had a dumb fight last week. talked it out sunday. just feels solid now. like we're okay"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds solid and okay now — like the fight has gone quiet. Does this calm feel easy in your body, or more like a relieved stillness?"
+    },
+    {
+      "role": "user",
+      "content": "relieved stillness i think. shoulders dropped. wasnt sure we'd land it but we did"
+    },
+    {
+      "role": "companion",
+      "content": "Relieved stillness — with your shoulders dropping after not being sure you’d land it. It sounds like the calm came from getting through the fight and finding you were okay after all; if you want, we can stay with that, or leave it here."
+    },
+    {
+      "role": "user",
+      "content": "yeah thats it exactly. good to get it down. leave it here. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — glad it’s down now. I’ll leave it here with you."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xj2b29xcesrs9",
+    "conversation_id": "calm__17",
+    "timestamp": "2026-06-09T17:44:45.108Z",
+    "user_words_raw": "good to get it down",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "relieved stillness",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "talked it out after a dumb fight last week",
+    "appraisal_thought": "wasn't sure we'd land it but we did",
+    "body_cue": [
+      "shoulders dropped"
+    ],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "reassurance",
+      "connection",
+      "space"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Calm after talking through a fight with girlfriend; felt relieved and settled.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. just wanna log something. feeling calm i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that sounds like a calm, maybe quietly settled kind of moment. Does it feel peaceful, okay, or more like just unhurried?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "calm",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "peaceful yeah. settled. its about my girlfriend"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Peaceful and settled — and it sounds connected to your girlfriend. What about her gives this calm its shape?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "peaceful",
+      "body_cue": [],
+      "trigger": "thinking about girlfriend"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "we had a dumb fight last week. talked it out sunday. just feels solid now. like we're okay"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds solid and okay now — like the fight has gone quiet. Does this calm feel easy in your body, or more like a relieved stillness?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "talked it out sunday after a fight last week"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "relieved stillness i think. shoulders dropped. wasnt sure we'd land it but we did"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Relieved stillness — with your shoulders dropping after not being sure you’d land it. It sounds like the calm came from getting through the fight and finding you were okay after all; if you want, we can stay with that, or leave it here.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "relieved stillness",
+      "body_cue": [
+        "shoulders dropped"
+      ],
+      "trigger": "talked it out after a dumb fight last week"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah thats it exactly. good to get it down. leave it here. thanks"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Of course — glad it’s down now. I’ll leave it here with you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "relieved stillness",
+      "body_cue": [
+        "shoulders dropped"
+      ],
+      "trigger": "talked it out after a dumb fight last week"
+    }
+  ]
+}

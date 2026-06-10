@@ -1,0 +1,191 @@
+{
+  "cid": "flat__11",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-09T18:26:47.004Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont really know why im here honestly. work stuff i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds a bit open-ended, with work sitting in the background. What’s been going on there?"
+    },
+    {
+      "role": "user",
+      "content": "idk theres nothing really wrong. i go in, i do the thing, i come home. just feels like nothing"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really flat, like the day is happening but not landing much. Does it feel more blank, numb, or just hard to care?"
+    },
+    {
+      "role": "user",
+      "content": "numb i guess. i got promoted like 4 months ago. team lead. its what i wanted. and i feel absolutely nothing about it"
+    },
+    {
+      "role": "companion",
+      "content": "Numb makes sense here, and the promotion sounds like it should have mattered more than it does. I’m wondering if this feels like numbness, or more like being too used to it to let anything in?"
+    },
+    {
+      "role": "user",
+      "content": "i dont know. i used to actually like the work. now i just sit in meetings managing other people doing the parts i liked. and i smile and nod and feel like im watching it through glass"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really disconnected, like you’re there but behind glass while the part you liked is happening somewhere else. Does it feel more like detached, or more like a kind of quiet loss?"
+    },
+    {
+      "role": "user",
+      "content": "loss. yeah. nobody tells you that you can get what you wanted and just kind of grieve the old thing quietly. feels stupid to even say it out loud"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound stupid to me; it sounds like a quiet grief for the old version of the work. If you want, we can stay with that, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. i dont really know what to do with it but it helped to say it i think. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That’s enough for now, then. I’m glad saying it helped a little."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z1kzx05rmz60o",
+    "conversation_id": "flat__11",
+    "timestamp": "2026-06-09T18:27:18.266Z",
+    "user_words_raw": "grieve the old thing quietly",
+    "emotion_status": "confirmed",
+    "emotion_family": "sadness",
+    "emotion_shade": "quiet grief",
+    "secondary_emotions": [
+      "flat"
+    ],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "getting promoted to team lead and losing the hands-on parts of work",
+    "appraisal_thought": "I got what I wanted, but I’m grieving the old thing quietly.",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "recognition",
+      "permission to grieve",
+      "meaning"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Promotion changed the work and brought a quiet grief for the hands-on part.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont really know why im here honestly. work stuff i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds a bit open-ended, with work sitting in the background. What’s been going on there?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "idk theres nothing really wrong. i go in, i do the thing, i come home. just feels like nothing"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds really flat, like the day is happening but not landing much. Does it feel more blank, numb, or just hard to care?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": "work routine that feels like nothing"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "numb i guess. i got promoted like 4 months ago. team lead. its what i wanted. and i feel absolutely nothing about it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Numb makes sense here, and the promotion sounds like it should have mattered more than it does. I’m wondering if this feels like numbness, or more like being too used to it to let anything in?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": "promotion to team lead four months ago"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "i dont know. i used to actually like the work. now i just sit in meetings managing other people doing the parts i liked. and i smile and nod and feel like im watching it through glass"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds really disconnected, like you’re there but behind glass while the part you liked is happening somewhere else. Does it feel more like detached, or more like a kind of quiet loss?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "moving into team lead work and losing the hands-on parts you liked"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "loss. yeah. nobody tells you that you can get what you wanted and just kind of grieve the old thing quietly. feels stupid to even say it out loud"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That doesn’t sound stupid to me; it sounds like a quiet grief for the old version of the work. If you want, we can stay with that, or leave it here for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "loss",
+      "body_cue": [],
+      "trigger": "getting promoted to team lead and moving away from the hands-on parts of work"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it there. i dont really know what to do with it but it helped to say it i think. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That’s enough for now, then. I’m glad saying it helped a little.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "quiet grief",
+      "body_cue": [],
+      "trigger": "getting promoted to team lead and losing the hands-on parts of work"
+    }
+  ]
+}

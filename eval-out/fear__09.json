@@ -1,0 +1,145 @@
+{
+  "cid": "fear__09",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-09T17:35:57.307Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so. been feeling weird lately. kind of anxious idk"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds a bit uneasy and unclear — like the feeling is there, but still fuzzy. Is it more like worry, on edge, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "worry i guess. more like dread. got a review at work next week and i keep thinking they're gonna realize im not actually good at this"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like dread around the review, and the thought that they might see you as not actually good at this. Does it bring more of a checking, freezing, or wanting-to-avoid feeling?"
+    },
+    {
+      "role": "user",
+      "content": "avoid mostly. i keep not opening the prep doc. like if i dont look at it its not real"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — the dread seems to pull you toward not opening it, almost as if not looking can keep it unreal for a while. Does it feel more like avoiding the fear, or protecting yourself from what the review might confirm?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. protecting i think. anyway thats enough for now. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that feels like protection, and we can leave it here for now. Thanks for telling me about it."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6x87u65xu2zyqf",
+    "conversation_id": "fear__09",
+    "timestamp": "2026-06-09T17:36:18.163Z",
+    "user_words_raw": "protecting",
+    "emotion_status": "confirmed",
+    "emotion_family": "fear",
+    "emotion_shade": "dread",
+    "secondary_emotions": [
+      "pressure"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "a review at work next week",
+    "appraisal_thought": "they're gonna realize im not actually good at this",
+    "body_cue": [],
+    "behaviour_action": [
+      "not opening the prep doc"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "safety",
+      "reassurance",
+      "protection"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Work review is linked with dread and avoidance around preparation.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so. been feeling weird lately. kind of anxious idk"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds a bit uneasy and unclear — like the feeling is there, but still fuzzy. Is it more like worry, on edge, or something else?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "worry i guess. more like dread. got a review at work next week and i keep thinking they're gonna realize im not actually good at this"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like dread around the review, and the thought that they might see you as not actually good at this. Does it bring more of a checking, freezing, or wanting-to-avoid feeling?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [],
+      "trigger": "a work review next week"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "avoid mostly. i keep not opening the prep doc. like if i dont look at it its not real"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That makes sense — the dread seems to pull you toward not opening it, almost as if not looking can keep it unreal for a while. Does it feel more like avoiding the fear, or protecting yourself from what the review might confirm?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [],
+      "trigger": "a review at work next week"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah. protecting i think. anyway thats enough for now. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Yeah, that feels like protection, and we can leave it here for now. Thanks for telling me about it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [],
+      "trigger": "a review at work next week"
+    }
+  ]
+}

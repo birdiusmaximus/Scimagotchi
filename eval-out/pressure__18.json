@@ -1,0 +1,192 @@
+{
+  "cid": "pressure__18",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-09T17:46:36.345Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. um i dont really know how to use this lol. i guess im just kind of all over the place today and someone said writing it out helps so. here i am i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that’s completely fine — we can just keep it loose. What’s been most all over the place today?"
+    },
+    {
+      "role": "user",
+      "content": "ok so its like. my contract at work ends in september and theyve been super vague about whether theyre renewing it. and i moved cities for this job last year. so like everything is kind of up in the air? and i keep going back and forth between being annoyed at them for not telling me and being like terrified that ill have to start over again somewhere new. idk its a lot of both at the same time"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a mix of being stuck in the dark with them and feeling scared about having to start over. Which part is loudest right now — the annoyed part or the terrified part?"
+    },
+    {
+      "role": "user",
+      "content": "honestly the terrified one. like the annoyed thing is almost easier? its cleaner. i can just be mad at my manager and thats simple. but underneath it is this thing where i lie awake doing math about how many months of rent i have saved and what if i have to pack everything up again and i dont even have like. roots here yet, i barely know anyone, and the thought of doing that whole thing over makes me feel exhausted before its even happened. sorry thats a lot"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like terror with a tired, braced edge — like it pulls you into counting, packing, and trying to face the whole thing before it happens. Does it make you want to check, plan, or just freeze?"
+    },
+    {
+      "role": "user",
+      "content": "check, definitely check. like ill refresh my work email at 11pm for no reason. or ill open a job site and just scroll listings in other cities even though i dont even want to leave, i think im just trying to feel like i have a backup so i dont feel so powerless waiting on them. but then it just makes me more wound up. its like i cant sit still in the not-knowing"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — the checking seems to be trying to give you some backup in the not-knowing, even if it leaves you more wound up. Want to leave it there for now, or stay with what the not-knowing is asking for?"
+    },
+    {
+      "role": "user",
+      "content": "yeah maybe i can stay with that for a sec. i think the not-knowing is asking me to just... admit i cant control when they decide. which i hate lol. but maybe the move isnt to find more certainty its to be okay not having it for a few more weeks. like i can ask my manager once for a real timeline and then actually let it go instead of refreshing at midnight. that feels less awful than what im doing now at least"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the not-knowing is asking for permission to stop gripping so hard, even though you hate that. Does that feel more like relief, dread, or both?"
+    },
+    {
+      "role": "user",
+      "content": "both, but lighter than when i sat down. like a little relief that i dont have to solve the whole future tonight, and a little dread cause letting go is scary too. but ok. i think thats enough for now, i feel a bit more like a person again. thank you for this, genuinely"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it feels a bit lighter, and I can leave it here with you. Come back anytime if you want to pick it up again."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xlwsdh2114oqv",
+    "conversation_id": "pressure__18",
+    "timestamp": "2026-06-09T17:47:14.411Z",
+    "user_words_raw": "a bit more like a person again",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [
+      "fear"
+    ],
+    "valence": "mixed",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "uncertainty about whether a work contract will be renewed and what that could mean for their life",
+    "appraisal_thought": "I can’t control when they decide, and I don’t have to solve the whole future tonight.",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "certainty",
+      "control",
+      "reassurance",
+      "support"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Work uncertainty can trigger terror, checking, and exhaustion about having to start over elsewhere.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. um i dont really know how to use this lol. i guess im just kind of all over the place today and someone said writing it out helps so. here i am i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that’s completely fine — we can just keep it loose. What’s been most all over the place today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "ok so its like. my contract at work ends in september and theyve been super vague about whether theyre renewing it. and i moved cities for this job last year. so like everything is kind of up in the air? and i keep going back and forth between being annoyed at them for not telling me and being like terrified that ill have to start over again somewhere new. idk its a lot of both at the same time"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a mix of being stuck in the dark with them and feeling scared about having to start over. Which part is loudest right now — the annoyed part or the terrified part?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "terrified",
+      "body_cue": [],
+      "trigger": "work being vague about whether the contract will be renewed, with the possibility of having to move or start over again"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "honestly the terrified one. like the annoyed thing is almost easier? its cleaner. i can just be mad at my manager and thats simple. but underneath it is this thing where i lie awake doing math about how many months of rent i have saved and what if i have to pack everything up again and i dont even have like. roots here yet, i barely know anyone, and the thought of doing that whole thing over makes me feel exhausted before its even happened. sorry thats a lot"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That feels like terror with a tired, braced edge — like it pulls you into counting, packing, and trying to face the whole thing before it happens. Does it make you want to check, plan, or just freeze?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "terrified",
+      "body_cue": [],
+      "trigger": "work being vague about whether the contract will be renewed, with the possibility of having to move or start over again"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "check, definitely check. like ill refresh my work email at 11pm for no reason. or ill open a job site and just scroll listings in other cities even though i dont even want to leave, i think im just trying to feel like i have a backup so i dont feel so powerless waiting on them. but then it just makes me more wound up. its like i cant sit still in the not-knowing"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — the checking seems to be trying to give you some backup in the not-knowing, even if it leaves you more wound up. Want to leave it there for now, or stay with what the not-knowing is asking for?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "terrified",
+      "body_cue": [],
+      "trigger": "work being vague about whether the contract will be renewed, with the possibility of having to move or start over again"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah maybe i can stay with that for a sec. i think the not-knowing is asking me to just... admit i cant control when they decide. which i hate lol. but maybe the move isnt to find more certainty its to be okay not having it for a few more weeks. like i can ask my manager once for a real timeline and then actually let it go instead of refreshing at midnight. that feels less awful than what im doing now at least"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like the not-knowing is asking for permission to stop gripping so hard, even though you hate that. Does that feel more like relief, dread, or both?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "terrified",
+      "body_cue": [],
+      "trigger": "work being vague about whether the contract will be renewed, with the possibility of having to move or start over again"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "both, but lighter than when i sat down. like a little relief that i dont have to solve the whole future tonight, and a little dread cause letting go is scary too. but ok. i think thats enough for now, i feel a bit more like a person again. thank you for this, genuinely"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad it feels a bit lighter, and I can leave it here with you. Come back anytime if you want to pick it up again.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "uncertainty about whether a work contract will be renewed and what that could mean for their life"
+    }
+  ]
+}

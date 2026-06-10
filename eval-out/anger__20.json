@@ -1,0 +1,281 @@
+{
+  "cid": "anger__20",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-09T18:18:08.170Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. wasnt sure if id actually open this today but here i am i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, glad you opened it. What feels like the main reason you showed up today, if there is one?"
+    },
+    {
+      "role": "user",
+      "content": "honestly i dont even know. just been a weird couple weeks. i keep telling myself im fine and then i snap at people over nothing"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a weird kind of pressure — like you’re holding “I’m fine” together until it breaks into snapping. Does it feel more like pressure, anger, or something else underneath?"
+    },
+    {
+      "role": "user",
+      "content": "no its anger. like proper anger. ive been sitting on it for weeks and its starting to come out sideways at everyone who doesnt deserve it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like proper anger that’s been sitting there for weeks and leaking out sideways. Do you want to stay with it a little, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "i want to stay with it. ok so. its my health. i got diagnosed with an autoimmune thing in march and ive done EVERYTHING right. the diet the meds the rest. and last week bloodwork came back and nothings moved. nothing"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds furious and really blocked — like you did everything asked and still got nothing back. Is it more about feeling let down, or about it being so unfair?"
+    },
+    {
+      "role": "user",
+      "content": "both? but mostly unfair i think. like i gave up wine, coffee, half my social life. my sister eats whatever she wants runs marathons and shes fine. and the consultant just shrugged and said these things take time. take TIME. ive been good for 3 months"
+    },
+    {
+      "role": "companion",
+      "content": "“Take time” sounds like it landed as a shrug on top of everything you’ve already given up. Does the anger feel more hot and sharp, or more clenched and restless?"
+    },
+    {
+      "role": "user",
+      "content": "clenched. like its all in my jaw and my chest. i dont even shout i just go cold and then i find myself being short with my partner who has done literally nothing wrong. he asked how the appointment went and i bit his head off"
+    },
+    {
+      "role": "companion",
+      "content": "Clenched in your jaw and chest, and then it comes out cold and short with your partner — that feels very contained until it spills. Is the urge more to bite back, pull away, or shut everything down?"
+    },
+    {
+      "role": "user",
+      "content": "pull away mostly. i go quiet and i can feel him trying and i just cant let him in. and then i hate myself for that too which makes it worse. its like the anger at my body turns into anger at me"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the anger turning inward too — first at your body, then at yourself for being shut off. If you want, we can stay with that, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "yeah. i think the honest thing is im not actually a bad person for being furious. i did everything right and got nothing and thats allowed to make me angry. the part i want to fix is not making him pay for it"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — the fury has a clear reason, and the piece you’re holding onto is not wanting him to carry it. Does it feel more like protecting him, or like trying to keep the anger from spreading further?"
+    },
+    {
+      "role": "user",
+      "content": "keeping it from spreading i think. anyway. i should probably go actually talk to him instead of typing at a screen. thanks for letting me get it out without telling me to calm down. that helped more than youd think"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it had some room here. Go have that talk if you want, and if you come back to it later, we can pick up from the part that still feels live."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yqhjk157o823b",
+    "conversation_id": "anger__20",
+    "timestamp": "2026-06-09T18:19:02.073Z",
+    "user_words_raw": "keeping it from spreading",
+    "emotion_status": "confirmed",
+    "emotion_family": "anger",
+    "emotion_shade": "protective",
+    "secondary_emotions": [
+      "shame"
+    ],
+    "valence": "mixed",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "doing everything right for months and getting no change in bloodwork, then being asked how the appointment went",
+    "appraisal_thought": "I did everything right and got nothing; I shouldn’t make him pay for it",
+    "body_cue": [
+      "jaw",
+      "chest"
+    ],
+    "behaviour_action": [
+      "go quiet",
+      "pull away",
+      "be short with partner"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "fairness",
+      "respect",
+      "repair",
+      "protection"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "After a disappointing medical appointment, anger tends to turn inward and spill onto a partner; user wants not to make others pay for it.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. wasnt sure if id actually open this today but here i am i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, glad you opened it. What feels like the main reason you showed up today, if there is one?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "honestly i dont even know. just been a weird couple weeks. i keep telling myself im fine and then i snap at people over nothing"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a weird kind of pressure — like you’re holding “I’m fine” together until it breaks into snapping. Does it feel more like pressure, anger, or something else underneath?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "pressure",
+      "body_cue": [],
+      "trigger": "a weird couple weeks; telling themselves they're fine"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "no its anger. like proper anger. ive been sitting on it for weeks and its starting to come out sideways at everyone who doesnt deserve it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like proper anger that’s been sitting there for weeks and leaking out sideways. Do you want to stay with it a little, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "a weird couple weeks"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "i want to stay with it. ok so. its my health. i got diagnosed with an autoimmune thing in march and ive done EVERYTHING right. the diet the meds the rest. and last week bloodwork came back and nothings moved. nothing"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds furious and really blocked — like you did everything asked and still got nothing back. Is it more about feeling let down, or about it being so unfair?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "furious",
+      "body_cue": [],
+      "trigger": "bloodwork came back and nothing's moved"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "both? but mostly unfair i think. like i gave up wine, coffee, half my social life. my sister eats whatever she wants runs marathons and shes fine. and the consultant just shrugged and said these things take time. take TIME. ive been good for 3 months"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "“Take time” sounds like it landed as a shrug on top of everything you’ve already given up. Does the anger feel more hot and sharp, or more clenched and restless?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "furious",
+      "body_cue": [],
+      "trigger": "bloodwork came back unchanged after months of following treatment, and the consultant said these things take time"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "clenched. like its all in my jaw and my chest. i dont even shout i just go cold and then i find myself being short with my partner who has done literally nothing wrong. he asked how the appointment went and i bit his head off"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Clenched in your jaw and chest, and then it comes out cold and short with your partner — that feels very contained until it spills. Is the urge more to bite back, pull away, or shut everything down?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "furious",
+      "body_cue": [
+        "jaw",
+        "chest",
+        "cold"
+      ],
+      "trigger": "bloodwork came back with no change after following treatment, and the consultant said these things take time"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "pull away mostly. i go quiet and i can feel him trying and i just cant let him in. and then i hate myself for that too which makes it worse. its like the anger at my body turns into anger at me"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds like the anger turning inward too — first at your body, then at yourself for being shut off. If you want, we can stay with that, or leave it here for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [
+        "jaw",
+        "chest"
+      ],
+      "trigger": "bloodwork and the consultant saying these things take time, after months of following treatment"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah. i think the honest thing is im not actually a bad person for being furious. i did everything right and got nothing and thats allowed to make me angry. the part i want to fix is not making him pay for it"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That makes sense — the fury has a clear reason, and the piece you’re holding onto is not wanting him to carry it. Does it feel more like protecting him, or like trying to keep the anger from spreading further?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "protective",
+      "body_cue": [],
+      "trigger": "doing everything right for months and getting no change in bloodwork, then being asked how the appointment went"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "keeping it from spreading i think. anyway. i should probably go actually talk to him instead of typing at a screen. thanks for letting me get it out without telling me to calm down. that helped more than youd think"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "I’m glad it had some room here. Go have that talk if you want, and if you come back to it later, we can pick up from the part that still feels live.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "protective",
+      "body_cue": [
+        "jaw",
+        "chest"
+      ],
+      "trigger": "doing everything right for months and getting no change in bloodwork, then being asked how the appointment went"
+    }
+  ]
+}

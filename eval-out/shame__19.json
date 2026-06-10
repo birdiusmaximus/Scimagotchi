@@ -1,0 +1,263 @@
+{
+  "cid": "shame__19",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-09T18:25:10.919Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — good to see you. What’s been going on today?"
+    },
+    {
+      "role": "user",
+      "content": "idk. just kind of a weird day i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds a little off-center, maybe more vague than clearly bad. Does it feel more weird, flat, or a bit unsettled?"
+    },
+    {
+      "role": "user",
+      "content": "unsettled maybe. had a thing at work and i cant stop thinking about it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds unsettled and a bit stuck on the work thing. What part keeps looping back?"
+    },
+    {
+      "role": "user",
+      "content": "we had this review meeting and my manager asked me a basic question abt my own project and i just blanked. completely. everyone was looking at me"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really exposing — like the blank happened right in front of everyone. Was it more the embarrassment of blanking, or the pressure of being looked at?"
+    },
+    {
+      "role": "user",
+      "content": "honestly its not even the meeting. its that it just confirmed what i already think. that im a fraud and everyone's gonna figure out i dont actually know what im doing"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds harsh and exposing, like the moment landed as proof of something about you. Does it feel more like embarrassment, or more like shame about what it says about you?"
+    },
+    {
+      "role": "user",
+      "content": "shame i think. like ive been promoted twice and i still feel like i tricked my way here. i look around and everyone seems to actually get it and im just... pretending. and one day theyll see"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a heavy, self-critical kind of shame, with a fear of being seen as pretending. Does it ever show up most when you’re around people who seem to “get it” more easily?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. and i dont tell anyone bc that would just prove it. so i just carry it around. ive felt like this my whole life honestly, in school too. like im always one wrong answer away from being found out"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a very carried, watchful shame — always bracing for the moment you’ll be “found out.” Does it feel more like you want to hide, or more like you want to explain yourself?"
+    },
+    {
+      "role": "user",
+      "content": "hide. definitely hide. i dont want anyone to see this part. i feel kind of stupid even typing it out tbh"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — this one sounds very tied to hiding and to feeling stupid for even saying it out loud. We can leave it here if you want, or stay with what this has come to mean over time."
+    },
+    {
+      "role": "user",
+      "content": "i think i need to leave it here for now. its a lot. but thanks for not making me feel dumb about it. maybe ill come back"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — we can leave it here. I’m glad you said it, and you’re welcome back anytime."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yzim6842xlmdc",
+    "conversation_id": "shame__19",
+    "timestamp": "2026-06-09T18:26:02.889Z",
+    "user_words_raw": "i feel kind of stupid even typing it out",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "self-critical",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "typing it out and being seen with this feeling",
+    "appraisal_thought": "i feel kind of stupid even typing it out",
+    "body_cue": [],
+    "behaviour_action": [
+      "hide"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "dignity",
+      "acceptance",
+      "understanding"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feels exposed and self-critical when sharing a long-held fraud feeling; prefers to pause when it gets heavy.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — good to see you. What’s been going on today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "idk. just kind of a weird day i guess"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds a little off-center, maybe more vague than clearly bad. Does it feel more weird, flat, or a bit unsettled?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "unsettled maybe. had a thing at work and i cant stop thinking about it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds unsettled and a bit stuck on the work thing. What part keeps looping back?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "unsettled",
+      "body_cue": [],
+      "trigger": "a thing at work"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "we had this review meeting and my manager asked me a basic question abt my own project and i just blanked. completely. everyone was looking at me"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds really exposing — like the blank happened right in front of everyone. Was it more the embarrassment of blanking, or the pressure of being looked at?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "review meeting at work"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "honestly its not even the meeting. its that it just confirmed what i already think. that im a fraud and everyone's gonna figure out i dont actually know what im doing"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds harsh and exposing, like the moment landed as proof of something about you. Does it feel more like embarrassment, or more like shame about what it says about you?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shameful",
+      "body_cue": [],
+      "trigger": "review meeting at work"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "shame i think. like ive been promoted twice and i still feel like i tricked my way here. i look around and everyone seems to actually get it and im just... pretending. and one day theyll see"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like a heavy, self-critical kind of shame, with a fear of being seen as pretending. Does it ever show up most when you’re around people who seem to “get it” more easily?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "review meeting at work"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "yeah. and i dont tell anyone bc that would just prove it. so i just carry it around. ive felt like this my whole life honestly, in school too. like im always one wrong answer away from being found out"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds like a very carried, watchful shame — always bracing for the moment you’ll be “found out.” Does it feel more like you want to hide, or more like you want to explain yourself?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "being around people who seem to get it more easily; school and work moments where a wrong answer feels revealing"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "hide. definitely hide. i dont want anyone to see this part. i feel kind of stupid even typing it out tbh"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That makes sense — this one sounds very tied to hiding and to feeling stupid for even saying it out loud. We can leave it here if you want, or stay with what this has come to mean over time.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "being around people who seem to get it more easily; school and work moments where a wrong answer feels revealing"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "i think i need to leave it here for now. its a lot. but thanks for not making me feel dumb about it. maybe ill come back"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Of course — we can leave it here. I’m glad you said it, and you’re welcome back anytime.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "typing it out and being seen with this feeling"
+    }
+  ]
+}

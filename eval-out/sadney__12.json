@@ -1,0 +1,71 @@
+{
+  "cid": "sadney__12",
+  "emotion": "sadney",
+  "persona": null,
+  "created": "2026-06-09T18:19:45.600Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "yeah. i guess it looks calm from outside but honestly its been a bit of a flat weekend. like the kind where you realise youve not actually spoken to anyone out loud since friday afternoon"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds more like flat and a bit cut off than calm. Does it feel numb, lonely, or just quietly empty?"
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ysk0wuevpgau9",
+    "conversation_id": "sadney__12",
+    "timestamp": "2026-06-09T18:19:47.168Z",
+    "user_words_raw": "a bit of a flat weekend",
+    "emotion_status": "candidate",
+    "emotion_family": "flat",
+    "emotion_shade": "flat",
+    "secondary_emotions": [
+      "hurt"
+    ],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "Not speaking to anyone out loud since Friday afternoon",
+    "appraisal_thought": "It looks calm from outside, but inside it feels like nothing much has been happening and there’s been little contact",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "warmth",
+      "presence"
+    ],
+    "confidence_level": "medium",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "Weekend felt quiet and socially empty",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "yeah. i guess it looks calm from outside but honestly its been a bit of a flat weekend. like the kind where you realise youve not actually spoken to anyone out loud since friday afternoon"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds more like flat and a bit cut off than calm. Does it feel numb, lonely, or just quietly empty?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": "Not speaking to anyone out loud since Friday afternoon"
+    }
+  ]
+}

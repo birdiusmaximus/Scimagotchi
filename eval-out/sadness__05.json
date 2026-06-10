@@ -1,0 +1,144 @@
+{
+  "cid": "sadness__05",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-09T18:18:55.680Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. dunno really why im here lol"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that’s okay. We can just hang out a bit — what’s been on your mind today?"
+    },
+    {
+      "role": "user",
+      "content": "idk. nothing really. just one of those days i guess. found an old box of stuff while cleaning, no big deal"
+    },
+    {
+      "role": "companion",
+      "content": "Mm, sounds like one of those quiet, kind of blank days. Was the box just a box, or did it stir up anything at all?"
+    },
+    {
+      "role": "user",
+      "content": "lol it was my dads old watch and some photos. he passed a few years back. its fine tho, ancient history. i swear i didnt come here to be a downer haha"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like it carried a little more than “just stuff,” even if you’re keeping it light. I’m wondering if it felt more flat, or more like a small sting under the “fine”?"
+    },
+    {
+      "role": "user",
+      "content": "yeah ok. bit of a sting maybe. i keep meaning to wear the watch but i never do. anyway im gonna head off. thanks for letting me ramble"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — a bit of sting, with the watch sitting there as something you keep meaning to wear. We can leave it here, and thanks for telling me about it."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yrhsbxd0xrjqv",
+    "conversation_id": "sadness__05",
+    "timestamp": "2026-06-09T18:19:14.436Z",
+    "user_words_raw": "bit of a sting",
+    "emotion_status": "confirmed",
+    "emotion_family": "sadness",
+    "emotion_shade": "sting",
+    "secondary_emotions": [
+      "hurt"
+    ],
+    "valence": "mixed",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "finding dad’s old watch and photos while cleaning",
+    "appraisal_thought": "ancient history",
+    "body_cue": [],
+    "behaviour_action": [
+      "keep meaning to wear the watch"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "remembering",
+      "space"
+    ],
+    "confidence_level": "medium",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "A parent’s belongings can bring up a small sting, while the person keeps it light.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. dunno really why im here lol"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that’s okay. We can just hang out a bit — what’s been on your mind today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "idk. nothing really. just one of those days i guess. found an old box of stuff while cleaning, no big deal"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Mm, sounds like one of those quiet, kind of blank days. Was the box just a box, or did it stir up anything at all?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "found an old box of stuff while cleaning"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "lol it was my dads old watch and some photos. he passed a few years back. its fine tho, ancient history. i swear i didnt come here to be a downer haha"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like it carried a little more than “just stuff,” even if you’re keeping it light. I’m wondering if it felt more flat, or more like a small sting under the “fine”?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "found dad’s old watch and photos while cleaning"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah ok. bit of a sting maybe. i keep meaning to wear the watch but i never do. anyway im gonna head off. thanks for letting me ramble"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — a bit of sting, with the watch sitting there as something you keep meaning to wear. We can leave it here, and thanks for telling me about it.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "sadness",
+      "shade": "sting",
+      "body_cue": [],
+      "trigger": "finding dad’s old watch and photos while cleaning"
+    }
+  ]
+}

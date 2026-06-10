@@ -1,0 +1,202 @@
+{
+  "cid": "shame__18",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-09T18:25:06.748Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. um i dont really know how to do this lol. i guess im just kind of in my head tonight and a friend said this app helped her so. here i am"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that’s completely okay — we can just take it slowly. What’s been most on your mind tonight?"
+    },
+    {
+      "role": "user",
+      "content": "i think its the future stuff. like everyone my age seems to have it figured out and im 29 and i just. dont. i left my job in march to try to freelance and its not really working and i havent told my parents the full picture yet. theres this part of me thats embarrassed im even still trying and another part thats terrified i waited too long to do something else. both at the same time if that makes sense"
+    },
+    {
+      "role": "companion",
+      "content": "That makes a lot of sense — it sounds like embarrassment and fear are both here, and they’re tangled together. Is one of them louder right now, or do they feel equally close?"
+    },
+    {
+      "role": "user",
+      "content": "ugh i think the embarrassment is louder honestly. like the fear is there underneath but the thing that keeps me up is imagining my sister at thanksgiving asking how the freelance thing is going and me having to do the whole oh its picking up smile. shes a nurse, shes got the house, the whole thing. and i used to be the one everyone thought would do something big and now i just feel like i fumbled it. like i had all this potential and wasted it. sorry this is a lot im just typing whatever comes out"
+    },
+    {
+      "role": "companion",
+      "content": "No need to apologize — I’m hearing something sharp and exposed in that. Does it feel more like wanting to hide, or more like wanting to explain yourself?"
+    },
+    {
+      "role": "user",
+      "content": "hiding for sure. like i literally screen my mums calls sometimes because i dont want to get into it. and the explaining feels pointless cause whatever i say sounds like an excuse even to me. i keep thinking if id just stuck it out at the old job id at least be normal right now. but i also hated that job. so its like i cant even feel sorry for myself cleanly lol. theres always a but"
+    },
+    {
+      "role": "companion",
+      "content": "Hiding feels very present here, and there’s also that stuck, self-arguing feeling — like nothing gets to be simple. Does it feel more heavy and tight, or more restless and buzzy?"
+    },
+    {
+      "role": "user",
+      "content": "heavy and tight i think. like in my chest. its weird seeing it laid out like that, self critical, yeah thats the word for it. i dont actually think i wasted my whole life its just the voice in my head gets really loud at night. i dunno. i think i needed to just say it to something that wasnt gonna tell me to update my linkedin lol"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — the loud part sounds like the night version of the self-critical voice, and it’s a bit quieter once it’s been said out loud. We can leave it here, or stay with that voice a little longer if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there for tonight. the chest thing actually feels a tiny bit looser. thank you for this, genuinely. ok bye for now"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — I’m glad you said it here. I’ll leave it with you for tonight; come back whenever you want."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yzfmransoyxfb",
+    "conversation_id": "shame__18",
+    "timestamp": "2026-06-09T18:25:47.107Z",
+    "user_words_raw": "self critical",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "self-critical",
+    "secondary_emotions": [
+      "fear"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "thinking about the freelance work, the old job, and comparing yourself to what others seem to have figured out",
+    "appraisal_thought": "I fumbled it; I had all this potential and wasted it",
+    "body_cue": [
+      "heavy and tight in my chest"
+    ],
+    "behaviour_action": [
+      "screen my mums calls",
+      "wanting to hide"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "belonging",
+      "dignity",
+      "acceptance",
+      "self-respect"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User feels self-critical about work and future comparisons; tends to hide from family calls.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. um i dont really know how to do this lol. i guess im just kind of in my head tonight and a friend said this app helped her so. here i am"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that’s completely okay — we can just take it slowly. What’s been most on your mind tonight?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i think its the future stuff. like everyone my age seems to have it figured out and im 29 and i just. dont. i left my job in march to try to freelance and its not really working and i havent told my parents the full picture yet. theres this part of me thats embarrassed im even still trying and another part thats terrified i waited too long to do something else. both at the same time if that makes sense"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That makes a lot of sense — it sounds like embarrassment and fear are both here, and they’re tangled together. Is one of them louder right now, or do they feel equally close?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "trying to freelance after leaving a job, not telling parents the full picture, comparing self to peers"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "ugh i think the embarrassment is louder honestly. like the fear is there underneath but the thing that keeps me up is imagining my sister at thanksgiving asking how the freelance thing is going and me having to do the whole oh its picking up smile. shes a nurse, shes got the house, the whole thing. and i used to be the one everyone thought would do something big and now i just feel like i fumbled it. like i had all this potential and wasted it. sorry this is a lot im just typing whatever comes out"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "No need to apologize — I’m hearing something sharp and exposed in that. Does it feel more like wanting to hide, or more like wanting to explain yourself?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "imagining being asked at Thanksgiving about the freelance work and comparing yourself with peers/sister"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "hiding for sure. like i literally screen my mums calls sometimes because i dont want to get into it. and the explaining feels pointless cause whatever i say sounds like an excuse even to me. i keep thinking if id just stuck it out at the old job id at least be normal right now. but i also hated that job. so its like i cant even feel sorry for myself cleanly lol. theres always a but"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Hiding feels very present here, and there’s also that stuck, self-arguing feeling — like nothing gets to be simple. Does it feel more heavy and tight, or more restless and buzzy?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "thinking about the freelance work, the old job, and comparing yourself to what others seem to have figured out"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "heavy and tight i think. like in my chest. its weird seeing it laid out like that, self critical, yeah thats the word for it. i dont actually think i wasted my whole life its just the voice in my head gets really loud at night. i dunno. i think i needed to just say it to something that wasnt gonna tell me to update my linkedin lol"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That makes sense — the loud part sounds like the night version of the self-critical voice, and it’s a bit quieter once it’s been said out loud. We can leave it here, or stay with that voice a little longer if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [
+        "heavy and tight",
+        "in my chest"
+      ],
+      "trigger": "thinking about the freelance work, the old job, and comparing yourself to what others seem to have figured out"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it there for tonight. the chest thing actually feels a tiny bit looser. thank you for this, genuinely. ok bye for now"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course — I’m glad you said it here. I’ll leave it with you for tonight; come back whenever you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [
+        "heavy and tight in my chest"
+      ],
+      "trigger": "thinking about the freelance work, the old job, and comparing yourself to what others seem to have figured out"
+    }
+  ]
+}

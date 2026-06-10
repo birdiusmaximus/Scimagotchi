@@ -1,0 +1,192 @@
+{
+  "cid": "joy__15",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-09T17:42:23.603Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "found a box of old cassette tapes in my parents garage on the weekend. kind of weird going through them"
+    },
+    {
+      "role": "companion",
+      "content": "That does sound a bit uncanny — like the past got physical for a moment. What was the weirdest part of it for you?"
+    },
+    {
+      "role": "user",
+      "content": "nah not uncanny really. more just nostalgic i guess. one of them had my dads handwriting on it, mixtape he made my mum back in like 1989 before they got married"
+    },
+    {
+      "role": "companion",
+      "content": "That feels more nostalgic than uncanny — and his handwriting on a mixtape from before they married gives it a real time-capsule feel. Does it land more as warm, or more as a strange kind of tender?"
+    },
+    {
+      "role": "user",
+      "content": "warm definitely. we actually dug out the old player and put it on. song quality was rough but you could tell he picked every track on purpose. my mum went quiet halfway through, think she forgot he used to do stuff like that"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds warm in a really specific way — rough sound, but a lot of intention underneath it. Did it make you want to sit with it, or share it right away?"
+    },
+    {
+      "role": "user",
+      "content": "kind of wanted to sit with it. honestly made me a bit proud of them? like they've been together 35 years and theres proof right there that it started with him doing this dumb sweet thing. dont really see that side of them day to day"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like pride with a little tenderness in it — a kind of proof that their story has this sweet beginning. Does it feel more like pride, gratitude, or something softer than that?"
+    },
+    {
+      "role": "user",
+      "content": "bit of both i think. ripped a couple of the songs onto my phone so i wouldnt lose them. gonna put the actual tape somewhere safe too. glad i was the one who found it tbh"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a small, keeper kind of moment — you wanted to hold onto it, and be the one who found it. We can leave it there, or I can stay with what it connects to for you."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. that was nice to get out actually. cheers"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — glad it got to be said. Cheers, and you can bring me another small keeper whenever you like."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xgi4hnrzuxhmb",
+    "conversation_id": "joy__15",
+    "timestamp": "2026-06-09T17:42:57.631Z",
+    "user_words_raw": "that was nice to get out",
+    "emotion_status": "confirmed",
+    "emotion_family": "joy",
+    "emotion_shade": "content",
+    "secondary_emotions": [
+      "pride",
+      "gratitude"
+    ],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "finding and playing an old mixtape your dad made for your mum before they married",
+    "appraisal_thought": "this is proof of where it started, and it feels good to hold onto",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "memory",
+      "meaning"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "A warm, meaningful family memory around an old mixtape and keeping it safe.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "found a box of old cassette tapes in my parents garage on the weekend. kind of weird going through them"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That does sound a bit uncanny — like the past got physical for a moment. What was the weirdest part of it for you?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "found a box of old cassette tapes in my parents garage"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "nah not uncanny really. more just nostalgic i guess. one of them had my dads handwriting on it, mixtape he made my mum back in like 1989 before they got married"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That feels more nostalgic than uncanny — and his handwriting on a mixtape from before they married gives it a real time-capsule feel. Does it land more as warm, or more as a strange kind of tender?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "nostalgic",
+      "body_cue": [],
+      "trigger": "found a box of old cassette tapes in my parents garage; one tape had his handwriting on it"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "warm definitely. we actually dug out the old player and put it on. song quality was rough but you could tell he picked every track on purpose. my mum went quiet halfway through, think she forgot he used to do stuff like that"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds warm in a really specific way — rough sound, but a lot of intention underneath it. Did it make you want to sit with it, or share it right away?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "nostalgic",
+      "body_cue": [],
+      "trigger": "they played an old mixtape their dad made for their mum before they married, and their mum went quiet halfway through"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "kind of wanted to sit with it. honestly made me a bit proud of them? like they've been together 35 years and theres proof right there that it started with him doing this dumb sweet thing. dont really see that side of them day to day"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That feels like pride with a little tenderness in it — a kind of proof that their story has this sweet beginning. Does it feel more like pride, gratitude, or something softer than that?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "they played an old mixtape his dad made for his mum before they married, and it showed a side of them they don't usually see day to day"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "bit of both i think. ripped a couple of the songs onto my phone so i wouldnt lose them. gonna put the actual tape somewhere safe too. glad i was the one who found it tbh"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like a small, keeper kind of moment — you wanted to hold onto it, and be the one who found it. We can leave it there, or I can stay with what it connects to for you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "finding a mixtape your dad made for your mum before they married, and hearing it on the old player"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it there. that was nice to get out actually. cheers"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Yeah — glad it got to be said. Cheers, and you can bring me another small keeper whenever you like.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "content",
+      "body_cue": [],
+      "trigger": "finding and playing an old mixtape your dad made for your mum before they married"
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "cid": "joy__24",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-09T17:43:11.700Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. ok so my daughter just told me shes pregnant and i dont even know what im supposed to do with this app but im kind of vibrating right now"
+    },
+    {
+      "role": "companion",
+      "content": "Hey—I'm here with you. That sounds like a lot all at once; is the feeling more like shock, fear, or pressure?"
+    },
+    {
+      "role": "user",
+      "content": "no no its not bad. shes 31, married, theyve been trying. this is good. im gonna be a grandma. i think im just. happy? it doesnt feel real"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like happy that hasn’t quite landed yet. Does it feel more unreal, floaty, or just hard to take in?"
+    },
+    {
+      "role": "user",
+      "content": "hard to take in i guess. she called on the phone, i was literally doing dishes, and she goes mom youre gonna be a grandma and i just stood there with my hands all wet lol. couldnt say anything for a sec"
+    },
+    {
+      "role": "companion",
+      "content": "That image feels vivid — standing there with wet hands, hearing it on the phone, and then going quiet for a second. Did it make you want to laugh, cry, or just stay still for a bit?"
+    },
+    {
+      "role": "user",
+      "content": "honestly i cried after we hung up. which is dumb. but heres the thing thats sitting weird with me, my own mom passed two years ago and she never got to be a great grandma and i keep thinking about that. like the joy has this other thing tangled in it"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound dumb at all — the joy is tangled with missing your mom, and with her not getting to be great grandma. Is the other thing more like grief, or something tender and unfinished?"
+    },
+    {
+      "role": "user",
+      "content": "tender and unfinished yeah. shed have been over the moon. she made these little knit booties for every baby in the family, theres probably still yarn in her closet at dads. and now theres gonna be a baby and shes not. ugh sorry im all over the place"
+    },
+    {
+      "role": "companion",
+      "content": "No apology needed — that sounds tender and unfinished, and the baby makes your mom’s missing feel sharper. Does it sit more in your chest, your throat, or like a quiet ache in the background?"
+    },
+    {
+      "role": "user",
+      "content": "throat. definitely throat. ok i wasnt sure about this app thing my daughter in law actually told me to try it, but its kind of nice saying it out loud to something. i didnt want to dump all this on aubrey, its her happy moment yknow i dont want to make it sad"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — the throat part, and also wanting to keep Aubrey’s moment light while carrying your own missing. It sounds like this joy and grief are sitting together at once."
+    },
+    {
+      "role": "user",
+      "content": "yeah. both at once. i think im gonna call my dad tomorrow and ask if we can find that yarn. maybe i learn to knit, god knows i never had the patience but. it feels like a way to bring her into it somehow. is that silly"
+    },
+    {
+      "role": "companion",
+      "content": "Not silly — it sounds like a way to bring her into this, and keep the missing from being only missing. Does that feel more like comfort, or like making something for her?"
+    },
+    {
+      "role": "user",
+      "content": "making something. for her and for the baby. ok i feel a little lighter. didnt expect that from a phone app honestly. thank you, im gonna go text my daughter back properly now, i kind of just stunned silenced her earlier ha"
+    },
+    {
+      "role": "companion",
+      "content": "That makes a lot of sense — making something for her and for the baby. I’m glad it shifted a little; you can leave it here, or stay with it if you want."
+    },
+    {
+      "role": "user",
+      "content": "ill leave it here for now. thanks, really. grandma. wow. ok bye"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a good place to pause. Bye for now, and thank you for telling me this."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xhiwfn1a7sivd",
+    "conversation_id": "joy__24",
+    "timestamp": "2026-06-09T17:44:05.878Z",
+    "user_words_raw": "both at once",
+    "emotion_status": "confirmed",
+    "emotion_family": "sadness",
+    "emotion_shade": "tender",
+    "secondary_emotions": [
+      "joy"
+    ],
+    "valence": "mixed",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "thinking about a baby arriving while their mother is gone",
+    "appraisal_thought": "it feels like a way to bring her into it somehow",
+    "body_cue": [
+      "throat"
+    ],
+    "behaviour_action": [
+      "call my dad tomorrow",
+      "find the yarn",
+      "learn to knit",
+      "text my daughter back properly"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "mourning",
+      "meaning",
+      "care"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "A family baby arriving is bringing up tender missing; making something feels meaningful.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. ok so my daughter just told me shes pregnant and i dont even know what im supposed to do with this app but im kind of vibrating right now"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey—I'm here with you. That sounds like a lot all at once; is the feeling more like shock, fear, or pressure?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "daughter told them she is pregnant"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "no no its not bad. shes 31, married, theyve been trying. this is good. im gonna be a grandma. i think im just. happy? it doesnt feel real"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like happy that hasn’t quite landed yet. Does it feel more unreal, floaty, or just hard to take in?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "happy",
+      "body_cue": [],
+      "trigger": "daughter is pregnant and user is going to be a grandma"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "hard to take in i guess. she called on the phone, i was literally doing dishes, and she goes mom youre gonna be a grandma and i just stood there with my hands all wet lol. couldnt say anything for a sec"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That image feels vivid — standing there with wet hands, hearing it on the phone, and then going quiet for a second. Did it make you want to laugh, cry, or just stay still for a bit?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "happy",
+      "body_cue": [],
+      "trigger": "daughter called and said they're pregnant, while user was doing dishes"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "honestly i cried after we hung up. which is dumb. but heres the thing thats sitting weird with me, my own mom passed two years ago and she never got to be a great grandma and i keep thinking about that. like the joy has this other thing tangled in it"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That doesn’t sound dumb at all — the joy is tangled with missing your mom, and with her not getting to be great grandma. Is the other thing more like grief, or something tender and unfinished?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grief",
+      "body_cue": [],
+      "trigger": "daughter’s pregnancy news and the thought of mother not living to be a great-grandma"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "tender and unfinished yeah. shed have been over the moon. she made these little knit booties for every baby in the family, theres probably still yarn in her closet at dads. and now theres gonna be a baby and shes not. ugh sorry im all over the place"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "No apology needed — that sounds tender and unfinished, and the baby makes your mom’s missing feel sharper. Does it sit more in your chest, your throat, or like a quiet ache in the background?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grief",
+      "body_cue": [],
+      "trigger": "daughter's pregnancy news bringing up mother's absence"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "throat. definitely throat. ok i wasnt sure about this app thing my daughter in law actually told me to try it, but its kind of nice saying it out loud to something. i didnt want to dump all this on aubrey, its her happy moment yknow i dont want to make it sad"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That makes sense — the throat part, and also wanting to keep Aubrey’s moment light while carrying your own missing. It sounds like this joy and grief are sitting together at once.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grief",
+      "body_cue": [
+        "throat"
+      ],
+      "trigger": "daughter's pregnancy news bringing up mother's absence"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "yeah. both at once. i think im gonna call my dad tomorrow and ask if we can find that yarn. maybe i learn to knit, god knows i never had the patience but. it feels like a way to bring her into it somehow. is that silly"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "Not silly — it sounds like a way to bring her into this, and keep the missing from being only missing. Does that feel more like comfort, or like making something for her?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grief",
+      "body_cue": [
+        "throat"
+      ],
+      "trigger": "daughter's pregnancy news bringing up mother's absence"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "making something. for her and for the baby. ok i feel a little lighter. didnt expect that from a phone app honestly. thank you, im gonna go text my daughter back properly now, i kind of just stunned silenced her earlier ha"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That makes a lot of sense — making something for her and for the baby. I’m glad it shifted a little; you can leave it here, or stay with it if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "tender",
+      "body_cue": [],
+      "trigger": "thinking about a baby arriving while their mother is gone"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "ill leave it here for now. thanks, really. grandma. wow. ok bye"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "That feels like a good place to pause. Bye for now, and thank you for telling me this.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "tender",
+      "body_cue": [
+        "throat"
+      ],
+      "trigger": "thinking about a baby arriving while their mother is gone"
+    }
+  ]
+}

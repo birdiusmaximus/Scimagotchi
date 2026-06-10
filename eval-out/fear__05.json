@@ -1,0 +1,172 @@
+{
+  "cid": "fear__05",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-09T17:35:57.529Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk why im even here lol. nothing important. just been weird lately"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds a bit blurry and hard to pin down. Is it more like “weird” in a blank, off, or disconnected way?"
+    },
+    {
+      "role": "user",
+      "content": "no not blank. more like my stomach drops randomly. like waiting for a shoe to drop or whatever. anyway its probably nothing"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds more like a sudden drop or bracing, not blank. Is there anything that seems to set it off, even a little?"
+    },
+    {
+      "role": "user",
+      "content": "ok dont laugh but i ran into an old coworker last week and it just. dredged stuff up. there was this whole thing at my old job that i kinda blew up and left. thought id buried it lol guess not"
+    },
+    {
+      "role": "companion",
+      "content": "Not laughing — that sounds like it got pulled back up fast. I’m wondering if the drop is tied to that old job thing or to seeing the coworker again?"
+    },
+    {
+      "role": "user",
+      "content": "both i guess. like what if she told everyone she saw me, what if it all comes back up. ugh idk. its dumb i shouldnt still care. anyway i gotta go but this kinda helped weirdly. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound dumb — it sounds like there’s worry about it coming back around, and maybe being seen again in the middle of that old mess. We can leave it here for now if you want, and that’s completely okay."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it. ty for not making it weird. later"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, we can leave it there. Take care, and come back any time."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6x885if9khrr4j",
+    "conversation_id": "fear__05",
+    "timestamp": "2026-06-09T17:37:07.888Z",
+    "user_words_raw": "stomach drops randomly",
+    "emotion_status": "confirmed",
+    "emotion_family": "fear",
+    "emotion_shade": "worried",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "ran into an old coworker after leaving an old job after things “blew up”",
+    "appraisal_thought": "what if she told everyone she saw me, what if it all comes back up",
+    "body_cue": [
+      "stomach drops"
+    ],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "certainty",
+      "protection"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Old job stuff got stirred up after seeing a former coworker; they wanted to leave it there.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk why im even here lol. nothing important. just been weird lately"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds a bit blurry and hard to pin down. Is it more like “weird” in a blank, off, or disconnected way?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "no not blank. more like my stomach drops randomly. like waiting for a shoe to drop or whatever. anyway its probably nothing"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds more like a sudden drop or bracing, not blank. Is there anything that seems to set it off, even a little?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [
+        "stomach drops randomly"
+      ],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "ok dont laugh but i ran into an old coworker last week and it just. dredged stuff up. there was this whole thing at my old job that i kinda blew up and left. thought id buried it lol guess not"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Not laughing — that sounds like it got pulled back up fast. I’m wondering if the drop is tied to that old job thing or to seeing the coworker again?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [
+        "stomach drops randomly"
+      ],
+      "trigger": "ran into an old coworker after leaving an old job after things “blew up”"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "both i guess. like what if she told everyone she saw me, what if it all comes back up. ugh idk. its dumb i shouldnt still care. anyway i gotta go but this kinda helped weirdly. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That doesn’t sound dumb — it sounds like there’s worry about it coming back around, and maybe being seen again in the middle of that old mess. We can leave it here for now if you want, and that’s completely okay.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "worried",
+      "body_cue": [],
+      "trigger": "ran into an old coworker after leaving an old job after things “blew up”"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah lets leave it. ty for not making it weird. later"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Yeah, we can leave it there. Take care, and come back any time.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "worried",
+      "body_cue": [
+        "stomach drops"
+      ],
+      "trigger": "ran into an old coworker after leaving an old job after things “blew up”"
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+{
+  "cid": "joy__21",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-09T17:42:56.998Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. honestly not sure why im here lol. someone said i should try talking to something. i dunno"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that’s okay. We can keep it loose if you want; what’s been on your mind lately?"
+    },
+    {
+      "role": "user",
+      "content": "idk man. on my mind. thats a big question for a wednesday lol. work stuff i guess but its fine. its all fine"
+    },
+    {
+      "role": "companion",
+      "content": "Work stuff, but you’re keeping it at “it’s all fine.” What part of work is sitting closest to the surface today?"
+    },
+    {
+      "role": "user",
+      "content": "ha no its not even bad stuff. opposite kinda. i just dont really know how to talk about it without sounding like a tool"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds a bit exposed, like the words themselves feel awkward to touch. Is it more embarrassment, or just that it feels hard to say out loud?"
+    },
+    {
+      "role": "user",
+      "content": "ok fine. i got offered the lead on a project at work. like the big one. the one ive been wanting for ages. and instead of being normal about it im just. weird. cant even tell people without making a joke"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a mix of excited and self-conscious — the good thing is right there, but so is the “don’t make this weird” feeling. Is the joke-making more about hiding the excitement, or about not wanting to seem full of yourself?"
+    },
+    {
+      "role": "user",
+      "content": "both? i dunno. like part of me is genuinely buzzing. ive wanted this since i started there. but if i say im proud out loud i feel like ill jinx it or look like an idiot. so i just keep going 'oh theyre desperate lol'"
+    },
+    {
+      "role": "companion",
+      "content": "That feels both bright and cautious: buzzing underneath, and a quick step back from saying the pride plainly. Does it feel like it matters because you’ve wanted it for so long, or because saying it out loud makes it feel exposed?"
+    },
+    {
+      "role": "user",
+      "content": "its the wanting it for so long thing. i remember sitting in that office two years ago thinking i will never get a shot at something like this. and now its just. mine. if i dont fumble it. god that sounds intense lol sorry"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound too intense to me — it sounds like the moment has a lot of history in it. Want to stay with the “if I don’t fumble it” part, or leave it here?"
+    },
+    {
+      "role": "user",
+      "content": "no we can stay a sec. the fumble thing is just the easy place to look i think. easier than just going. im proud of myself. like that two years ago version of me would lose it if he knew"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like pride with a shy edge to it — almost easier to point at the risk than to say the proud part cleanly. Does that old version of you feel more like he’d be amazed, or relieved?"
+    },
+    {
+      "role": "user",
+      "content": "relieved. definitely relieved. ok thats. weirdly a lot. didnt think id actually say any of that out loud lol"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it sounds like the proud part finally got a little room to be said plainly. We can leave it here, or stay with what it means that the old you would feel relieved."
+    },
+    {
+      "role": "user",
+      "content": "nah lets leave it there i think. thats plenty for a wednesday haha. thanks though. genuinely. didnt expect that. ok im gonna go tell my mum the actual news instead of a joke for once. cheers"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a good place to stop. And telling your mum the actual news sounds like a small, real step into letting it be true."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xh7nkj38r2s8c",
+    "conversation_id": "joy__21",
+    "timestamp": "2026-06-09T17:43:54.632Z",
+    "user_words_raw": "im proud of myself",
+    "emotion_status": "confirmed",
+    "emotion_family": "joy",
+    "emotion_shade": "proud",
+    "secondary_emotions": [
+      "relief"
+    ],
+    "valence": "positive",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "being offered the lead on a big project at work after wanting it for years",
+    "appraisal_thought": "im proud of myself",
+    "body_cue": [],
+    "behaviour_action": [
+      "telling your mum the actual news"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "recognition",
+      "pride",
+      "relief",
+      "belonging"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "user was offered the lead on a long-wanted project at work and felt proud with relief",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. honestly not sure why im here lol. someone said i should try talking to something. i dunno"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that’s okay. We can keep it loose if you want; what’s been on your mind lately?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "idk man. on my mind. thats a big question for a wednesday lol. work stuff i guess but its fine. its all fine"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Work stuff, but you’re keeping it at “it’s all fine.” What part of work is sitting closest to the surface today?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "stressed",
+      "body_cue": [],
+      "trigger": "work stuff"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "ha no its not even bad stuff. opposite kinda. i just dont really know how to talk about it without sounding like a tool"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds a bit exposed, like the words themselves feel awkward to touch. Is it more embarrassment, or just that it feels hard to say out loud?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "talking about work stuff"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "ok fine. i got offered the lead on a project at work. like the big one. the one ive been wanting for ages. and instead of being normal about it im just. weird. cant even tell people without making a joke"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like a mix of excited and self-conscious — the good thing is right there, but so is the “don’t make this weird” feeling. Is the joke-making more about hiding the excitement, or about not wanting to seem full of yourself?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "getting offered the lead on a project at work"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "both? i dunno. like part of me is genuinely buzzing. ive wanted this since i started there. but if i say im proud out loud i feel like ill jinx it or look like an idiot. so i just keep going 'oh theyre desperate lol'"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That feels both bright and cautious: buzzing underneath, and a quick step back from saying the pride plainly. Does it feel like it matters because you’ve wanted it for so long, or because saying it out loud makes it feel exposed?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-conscious",
+      "body_cue": [],
+      "trigger": "being offered the lead on a project at work"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "its the wanting it for so long thing. i remember sitting in that office two years ago thinking i will never get a shot at something like this. and now its just. mine. if i dont fumble it. god that sounds intense lol sorry"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That doesn’t sound too intense to me — it sounds like the moment has a lot of history in it. Want to stay with the “if I don’t fumble it” part, or leave it here?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-conscious",
+      "body_cue": [],
+      "trigger": "being offered the lead on a project at work"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "no we can stay a sec. the fumble thing is just the easy place to look i think. easier than just going. im proud of myself. like that two years ago version of me would lose it if he knew"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That feels like pride with a shy edge to it — almost easier to point at the risk than to say the proud part cleanly. Does that old version of you feel more like he’d be amazed, or relieved?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-conscious",
+      "body_cue": [],
+      "trigger": "being offered the lead on a project at work"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "relieved. definitely relieved. ok thats. weirdly a lot. didnt think id actually say any of that out loud lol"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That makes sense — it sounds like the proud part finally got a little room to be said plainly. We can leave it here, or stay with what it means that the old you would feel relieved.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-conscious",
+      "body_cue": [],
+      "trigger": "being offered the lead on a big project at work after wanting it for years"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "nah lets leave it there i think. thats plenty for a wednesday haha. thanks though. genuinely. didnt expect that. ok im gonna go tell my mum the actual news instead of a joke for once. cheers"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "That feels like a good place to stop. And telling your mum the actual news sounds like a small, real step into letting it be true.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "being offered the lead on a big project at work after wanting it for years"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "cid": "fear__03",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-09T17:35:57.275Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. not sure why im even typing this"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — you don’t have to know why to say hi. What’s been on your mind lately?"
+    },
+    {
+      "role": "user",
+      "content": "money stuff i guess. cant really sleep about it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like money stuff with a sleepless, kept-up-at-night edge. Is it more worry, pressure, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "worry mostly. my hours got cut at work and rents due in like a week. i dont have it"
+    },
+    {
+      "role": "companion",
+      "content": "Worry makes sense here — hours cut, rent due, and not having it yet sounds like a lot to sit with. Does it feel more like pressure, fear, or both?"
+    },
+    {
+      "role": "user",
+      "content": "both i guess. idk. just scared. anyway thanks. gotta go"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — scared with pressure underneath. We can leave it here for now if you want, and that’s completely okay."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6x87qzcm7gouyo",
+    "conversation_id": "fear__03",
+    "timestamp": "2026-06-09T17:36:13.078Z",
+    "user_words_raw": "scared",
+    "emotion_status": "confirmed",
+    "emotion_family": "fear",
+    "emotion_shade": "scared",
+    "secondary_emotions": [
+      "pressure"
+    ],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "hours got cut at work and rent is due in a week",
+    "appraisal_thought": "I might not be okay with this deadline coming up",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "certainty",
+      "support",
+      "control"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Money and rent pressure after work hours were cut",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. not sure why im even typing this"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — you don’t have to know why to say hi. What’s been on your mind lately?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "money stuff i guess. cant really sleep about it"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like money stuff with a sleepless, kept-up-at-night edge. Is it more worry, pressure, or something else?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "money stuff"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "worry mostly. my hours got cut at work and rents due in like a week. i dont have it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Worry makes sense here — hours cut, rent due, and not having it yet sounds like a lot to sit with. Does it feel more like pressure, fear, or both?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "worry",
+      "body_cue": [],
+      "trigger": "hours got cut at work and rent is due in a week"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "both i guess. idk. just scared. anyway thanks. gotta go"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — scared with pressure underneath. We can leave it here for now if you want, and that’s completely okay.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "scared",
+      "body_cue": [],
+      "trigger": "hours got cut at work and rent is due in a week"
+    }
+  ]
+}

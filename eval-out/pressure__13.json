@@ -1,0 +1,217 @@
+{
+  "cid": "pressure__13",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-09T17:46:14.098Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. idk why im even here lol"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — glad you showed up. You can just hang out here if you want; or tell me what’s been going on."
+    },
+    {
+      "role": "user",
+      "content": "ha. honestly its nothing. just the usual adult fun where the numbers dont math. you know how it is"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that sounds like the kind of “nothing” that still has some weight to it. Is it more frustrating, stressed, or just worn-out?"
+    },
+    {
+      "role": "user",
+      "content": "idk. worn out i guess? rent went up again and my car decided to need like 900 bucks of work right when i thought id be ok this month. its fine im fine its always fine lol"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds worn out in a very “too much at once” way — rent, the car, and trying to hold yourself together through it. Does it feel more heavy, tense, or like you want to just shut down for a minute?"
+    },
+    {
+      "role": "user",
+      "content": "shut down probably. like i do the math at 2am and then just stare at the ceiling. i keep telling myself im an adult i should have this figured out by now but the math just doesnt work no matter how i move it around"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a very 2am kind of stuckness — doing the math, staring at the ceiling, and hitting the same wall. I’m wondering if the hardest part is the numbers not adding up, or that adult part of you saying you should have it figured out by now?"
+    },
+    {
+      "role": "user",
+      "content": "the should have it figured out part i think. like the money is the money whatever. but everyone else seems to be managing and im over here scared to open my banking app. feels dumb saying it out loud honestly"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound dumb to me; it sounds like the shame is getting louder than the money. Is it more the fear of seeing the number, or the feeling of being behind everyone else?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. being behind. like everyone got a manual i didnt. anyway this got way more real than i meant lol. i should prob actually just open the app and look at it instead of dramatizing at 2am. thanks for letting me ramble"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — that “everyone got a manual and I didn’t” sounds like the sharper part of it. We can leave it here, or stay with that feeling of being behind if you want."
+    },
+    {
+      "role": "user",
+      "content": "lets leave it there for now. but uh. thanks, this helped more than i thought it would. ok bye before i get sappy"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — we can leave it right there. Bye for now, and no shame in a little sappy if it shows up."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xlfkvpoqx6402",
+    "conversation_id": "pressure__13",
+    "timestamp": "2026-06-09T17:46:54.537Z",
+    "user_words_raw": "everyone got a manual i didnt",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "inadequate",
+    "secondary_emotions": [
+      "pressure"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "seeing finances compared with others and feeling behind",
+    "appraisal_thought": "everyone else seems to be managing and im over here scared to open my banking app",
+    "body_cue": [],
+    "behaviour_action": [
+      "scared to open my banking app",
+      "stare at the ceiling"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "dignity",
+      "acceptance"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Money stress shows up as feeling behind and scared to check banking app.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. idk why im even here lol"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — glad you showed up. You can just hang out here if you want; or tell me what’s been going on.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "ha. honestly its nothing. just the usual adult fun where the numbers dont math. you know how it is"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Yeah, that sounds like the kind of “nothing” that still has some weight to it. Is it more frustrating, stressed, or just worn-out?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "stressed",
+      "body_cue": [],
+      "trigger": "the numbers dont math"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "idk. worn out i guess? rent went up again and my car decided to need like 900 bucks of work right when i thought id be ok this month. its fine im fine its always fine lol"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds worn out in a very “too much at once” way — rent, the car, and trying to hold yourself together through it. Does it feel more heavy, tense, or like you want to just shut down for a minute?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "worn out",
+      "body_cue": [],
+      "trigger": "rent went up again and the car needs $900 of work"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "shut down probably. like i do the math at 2am and then just stare at the ceiling. i keep telling myself im an adult i should have this figured out by now but the math just doesnt work no matter how i move it around"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like a very 2am kind of stuckness — doing the math, staring at the ceiling, and hitting the same wall. I’m wondering if the hardest part is the numbers not adding up, or that adult part of you saying you should have it figured out by now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "stuck",
+      "body_cue": [],
+      "trigger": "rent went up again and the car needs $900 of work"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "the should have it figured out part i think. like the money is the money whatever. but everyone else seems to be managing and im over here scared to open my banking app. feels dumb saying it out loud honestly"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That doesn’t sound dumb to me; it sounds like the shame is getting louder than the money. Is it more the fear of seeing the number, or the feeling of being behind everyone else?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "seeing their finances compared with others and feeling behind"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. being behind. like everyone got a manual i didnt. anyway this got way more real than i meant lol. i should prob actually just open the app and look at it instead of dramatizing at 2am. thanks for letting me ramble"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Yeah — that “everyone got a manual and I didn’t” sounds like the sharper part of it. We can leave it here, or stay with that feeling of being behind if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "inadequate",
+      "body_cue": [],
+      "trigger": "seeing finances compared with others and feeling behind"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "lets leave it there for now. but uh. thanks, this helped more than i thought it would. ok bye before i get sappy"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "Of course — we can leave it right there. Bye for now, and no shame in a little sappy if it shows up.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "inadequate",
+      "body_cue": [],
+      "trigger": "seeing finances compared with others and feeling behind"
+    }
+  ]
+}

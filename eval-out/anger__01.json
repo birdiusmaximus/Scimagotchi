@@ -1,0 +1,137 @@
+{
+  "cid": "anger__01",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-09T18:17:04.366Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "got passed over for the lead role again. third time"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really disappointing — especially with it happening a third time. Does it feel more like disappointment, frustration, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "not sad. im pissed. they gave it to the guy who started after me"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds angry and unfair — especially with him starting after you. Does it feel more like pissed, insulted, or pushed aside?"
+    },
+    {
+      "role": "user",
+      "content": "pushed aside yeah. like all the late nights didnt count for anything"
+    },
+    {
+      "role": "companion",
+      "content": "Pushed aside fits — like your late nights were made to count for nothing. Does it make you want to push back, or just go quiet?"
+    },
+    {
+      "role": "user",
+      "content": "just needed to get it out. thanks. gotta go"
+    },
+    {
+      "role": "companion",
+      "content": "Got it — I’ll leave it here. Take care."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yp3saynzwawei",
+    "conversation_id": "anger__01",
+    "timestamp": "2026-06-09T18:17:20.693Z",
+    "user_words_raw": "needed to get it out",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "pushed aside",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "they gave it to the guy who started after me",
+    "appraisal_thought": "all the late nights didnt count for anything",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "User wanted to vent about being passed over for a role at work.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "got passed over for the lead role again. third time"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds really disappointing — especially with it happening a third time. Does it feel more like disappointment, frustration, or something else?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "disappointment",
+      "body_cue": [],
+      "trigger": "got passed over for the lead role again"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "not sad. im pissed. they gave it to the guy who started after me"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds angry and unfair — especially with him starting after you. Does it feel more like pissed, insulted, or pushed aside?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "they gave it to the guy who started after me"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "pushed aside yeah. like all the late nights didnt count for anything"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Pushed aside fits — like your late nights were made to count for nothing. Does it make you want to push back, or just go quiet?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "pushed aside",
+      "body_cue": [],
+      "trigger": "they gave it to the guy who started after me"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "just needed to get it out. thanks. gotta go"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Got it — I’ll leave it here. Take care.",
+      "stage": "named",
+      "unlocked": false,
+      "family": null,
+      "shade": "pushed aside",
+      "body_cue": [],
+      "trigger": "they gave it to the guy who started after me"
+    }
+  ]
+}

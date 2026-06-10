@@ -1,0 +1,143 @@
+{
+  "cid": "joy__01",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-09T17:41:50.450Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "got the promotion today"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a big moment. I’m wondering what it’s like for you right now — more pleased, relieved, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "pleased yeah. been grinding for it like two yrs"
+    },
+    {
+      "role": "companion",
+      "content": "That feels well-earned — two years of grinding, and now it’s landed. Does it feel like you want to celebrate it, or just let it sink in quietly?"
+    },
+    {
+      "role": "user",
+      "content": "honestly still sinking in. proud of myself i think. dont say that much"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — proud, and still letting it settle in a bit. Where do you notice that in you, or is it more of a wanting to sit with it quietly?"
+    },
+    {
+      "role": "user",
+      "content": "yeah just gonna sit with it. thanks. gotta run"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — enjoy sitting with it. I’ll leave it there."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xfsi851z90vzw",
+    "conversation_id": "joy__01",
+    "timestamp": "2026-06-09T17:42:06.751Z",
+    "user_words_raw": "sit with it",
+    "emotion_status": "confirmed",
+    "emotion_family": "joy",
+    "emotion_shade": "proud",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "got the promotion today after two years of grinding for it",
+    "appraisal_thought": "this was earned and it matters",
+    "body_cue": [],
+    "behaviour_action": [
+      "sit with it quietly"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "achievement",
+      "recognition",
+      "freedom"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User got a promotion after two years of working for it and felt proud, preferring to sit with it quietly.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "got the promotion today"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a big moment. I’m wondering what it’s like for you right now — more pleased, relieved, or something else?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "pleased",
+      "body_cue": [],
+      "trigger": "got the promotion today"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "pleased yeah. been grinding for it like two yrs"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That feels well-earned — two years of grinding, and now it’s landed. Does it feel like you want to celebrate it, or just let it sink in quietly?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "pleased",
+      "body_cue": [],
+      "trigger": "got the promotion today after two years of grinding for it"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "honestly still sinking in. proud of myself i think. dont say that much"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That makes sense — proud, and still letting it settle in a bit. Where do you notice that in you, or is it more of a wanting to sit with it quietly?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "got the promotion after two years of grinding for it"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah just gonna sit with it. thanks. gotta run"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Of course — enjoy sitting with it. I’ll leave it there.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "got the promotion today after two years of grinding for it"
+    }
+  ]
+}

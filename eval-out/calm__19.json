@@ -1,0 +1,265 @@
+{
+  "cid": "calm__19",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-09T17:44:43.786Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, good to see you. What’s been on your mind today?"
+    },
+    {
+      "role": "user",
+      "content": "not much. dont really know why im here tbh"
+    },
+    {
+      "role": "companion",
+      "content": "That feels pretty open-ended. Are you wanting to just talk a bit, or sort through something that’s not fully clear yet?"
+    },
+    {
+      "role": "user",
+      "content": "idk. sort through i guess. somethings been kind of sitting with me and i cant tell if its a good thing or im just numb"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds a bit hazy — maybe more numb, or maybe something quietly good that hasn’t fully landed yet. What’s the feeling most like if you had to stay broad?"
+    },
+    {
+      "role": "user",
+      "content": "no its not numb actually. its more like... quiet? like the noise stopped. been so used to the noise i dont trust the quiet"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it sounds like quiet after a lot of noise, and not quite trusting it yet. Is it more calm, or more uneasy?"
+    },
+    {
+      "role": "user",
+      "content": "calm i think. thats the weird part. i stopped trying to be someone i wasnt and it actually went ok. nobody left"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a calm that came after dropping something heavy — and maybe a little surprise that nobody left. Do you want to stay with that, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "stay a sec. its just. ive spent like 10 years editing myself for everyone. the voice, the clothes, what i say i want. and last month i just stopped. and the floor didnt fall out"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a quiet relief mixed with disbelief — the floor didn’t fall out when you stopped editing yourself. Does this calm feel more steady now, or still a bit hard to trust?"
+    },
+    {
+      "role": "user",
+      "content": "still hard to trust honestly. part of me keeps waiting for the bill to come. like ok youre relaxed now but the punishment for being yourself is coming. it just. hasnt"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like calm with a watchful edge — waiting for the bill to come, even while nothing has. Is this the kind of calm that feels familiar, or new enough to make you suspicious?"
+    },
+    {
+      "role": "user",
+      "content": "new. i dont think ive ever felt settled like this in my own skin. it almost makes me sad how long i waited. but its mine i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a new kind of settled — and maybe a sadness for how long it took to get here. If you stay with it, does that sadness feel soft, heavy, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "soft. its ok actually. think ive said more than i meant to. but it helped. gonna sit with it. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a soft, okay place to pause. I’m glad it helped; you can sit with it here, and we can leave it there for now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xjhsqfje8ios4",
+    "conversation_id": "calm__19",
+    "timestamp": "2026-06-09T17:45:29.999Z",
+    "user_words_raw": "its mine i guess",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [
+      "sadness"
+    ],
+    "valence": "mixed",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "stopped editing themself and found that nothing fell apart",
+    "appraisal_thought": "this is mine",
+    "body_cue": [],
+    "behaviour_action": [
+      "sit with it"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "autonomy",
+      "safety",
+      "space"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Has been editing themself for years and is noticing a new, hard-to-trust calm after stopping.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, good to see you. What’s been on your mind today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "not much. dont really know why im here tbh"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That feels pretty open-ended. Are you wanting to just talk a bit, or sort through something that’s not fully clear yet?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "idk. sort through i guess. somethings been kind of sitting with me and i cant tell if its a good thing or im just numb"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds a bit hazy — maybe more numb, or maybe something quietly good that hasn’t fully landed yet. What’s the feeling most like if you had to stay broad?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "no its not numb actually. its more like... quiet? like the noise stopped. been so used to the noise i dont trust the quiet"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — it sounds like quiet after a lot of noise, and not quite trusting it yet. Is it more calm, or more uneasy?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "quiet",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "calm i think. thats the weird part. i stopped trying to be someone i wasnt and it actually went ok. nobody left"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like a calm that came after dropping something heavy — and maybe a little surprise that nobody left. Do you want to stay with that, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "calm",
+      "body_cue": [],
+      "trigger": "stopped trying to be someone i wasnt and it actually went ok"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "stay a sec. its just. ive spent like 10 years editing myself for everyone. the voice, the clothes, what i say i want. and last month i just stopped. and the floor didnt fall out"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like a quiet relief mixed with disbelief — the floor didn’t fall out when you stopped editing yourself. Does this calm feel more steady now, or still a bit hard to trust?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "calm",
+      "body_cue": [],
+      "trigger": "last month i just stopped"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "still hard to trust honestly. part of me keeps waiting for the bill to come. like ok youre relaxed now but the punishment for being yourself is coming. it just. hasnt"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds like calm with a watchful edge — waiting for the bill to come, even while nothing has. Is this the kind of calm that feels familiar, or new enough to make you suspicious?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "calm",
+      "body_cue": [],
+      "trigger": "last month i just stopped editing myself"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "new. i dont think ive ever felt settled like this in my own skin. it almost makes me sad how long i waited. but its mine i guess"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That sounds like a new kind of settled — and maybe a sadness for how long it took to get here. If you stay with it, does that sadness feel soft, heavy, or something else?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "stopping editing themself and finding that nothing fell apart"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "soft. its ok actually. think ive said more than i meant to. but it helped. gonna sit with it. thanks"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "That feels like a soft, okay place to pause. I’m glad it helped; you can sit with it here, and we can leave it there for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "stopped editing themself and found that nothing fell apart"
+    }
+  ]
+}

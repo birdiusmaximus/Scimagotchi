@@ -1,0 +1,266 @@
+{
+  "cid": "flat__23",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-09T18:27:41.897Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont really know why im here. nothing feels wrong exactly. just kind of bored i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that makes sense — it sounds more like bored than “something is wrong.” Does it feel more flat, restless, or just kind of empty?"
+    },
+    {
+      "role": "user",
+      "content": "empty maybe. i dunno. like i should care about stuff and i just dont. been like this a few weeks"
+    },
+    {
+      "role": "companion",
+      "content": "Empty feels closer than bored here, and the “I should care” part gives it a little pressure too. Has anything been happening around the time this started, or did it just sort of arrive?"
+    },
+    {
+      "role": "user",
+      "content": "i guess it lines up with the debt thing. found out a few weeks ago i owe way more than i thought. like 19k on cards i didnt really track"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the emptiness may be tied to a pretty hard hit of stress and disappointment. Does it feel more shut down, or more like you’re carrying a heavy, ongoing pressure?"
+    },
+    {
+      "role": "user",
+      "content": "no thats the weird part. its not stress. i feel like i SHOULD be panicking but i just feel nothing. like im reading about someone elses debt"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds very blank, almost detached — like it’s happening at a distance, not inside you. Does it feel more numb, or more unreal?"
+    },
+    {
+      "role": "user",
+      "content": "numb. i open the banking app and just stare at the number and close it. havent even told my partner. we share rent and i just cant make the words happen"
+    },
+    {
+      "role": "companion",
+      "content": "Numb fits, and the staring/closing sounds like going quiet around it. I’m wondering if the words feel stuck, or if it’s more that the whole thing goes far away when you open the app?"
+    },
+    {
+      "role": "user",
+      "content": "the whole thing goes far away. like if i dont feel it then its not really happening. but its happening. the minimum payments are real"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like it goes far away and then comes back as the minimum payments being real. We can leave it there, or stay with what that “not really happening” feeling is like for you—either is fine."
+    },
+    {
+      "role": "user",
+      "content": "can stay a sec. the not feeling it is almost easier honestly. if i let myself actually feel it id have to do something. like call the cards. tell her. i just go flat instead"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — the flatness seems to protect you from the part that would demand action. I’m wondering if this feels like avoidance, or more like a kind of shutdown?"
+    },
+    {
+      "role": "user",
+      "content": "probably both. starts as avoiding then i just go offline in my head. anyway maybe ill open the app again tomorrow and actually look. or tell her. we'll see"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like both: avoiding first, then going offline in your head. You can leave it here for now, or if you want, we can stay with what “offline” is like for you."
+    },
+    {
+      "role": "user",
+      "content": "nah ill leave it here. helped to say it out loud i guess. thanks. gonna go"
+    },
+    {
+      "role": "companion",
+      "content": "Got it — we can leave it right here. I’m glad you said it out loud, and I’ll be here if you want to pick it up again later."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z2rj7e4jkjhhu",
+    "conversation_id": "flat__23",
+    "timestamp": "2026-06-09T18:28:33.374Z",
+    "user_words_raw": "go flat",
+    "emotion_status": "confirmed",
+    "emotion_family": "flat",
+    "emotion_shade": "flat",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "finding out the debt and opening the banking app",
+    "appraisal_thought": "if i dont feel it then its not really happening",
+    "body_cue": [],
+    "behaviour_action": [
+      "open the app",
+      "stare",
+      "close it",
+      "go offline in my head"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "permission not to know",
+      "lower demand",
+      "quiet"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Flatness shows up around money/debt and can feel like going offline to avoid action.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont really know why im here. nothing feels wrong exactly. just kind of bored i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that makes sense — it sounds more like bored than “something is wrong.” Does it feel more flat, restless, or just kind of empty?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "bored",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "empty maybe. i dunno. like i should care about stuff and i just dont. been like this a few weeks"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Empty feels closer than bored here, and the “I should care” part gives it a little pressure too. Has anything been happening around the time this started, or did it just sort of arrive?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "empty",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "i guess it lines up with the debt thing. found out a few weeks ago i owe way more than i thought. like 19k on cards i didnt really track"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like the emptiness may be tied to a pretty hard hit of stress and disappointment. Does it feel more shut down, or more like you’re carrying a heavy, ongoing pressure?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "found out they owe much more than they thought on credit cards"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "no thats the weird part. its not stress. i feel like i SHOULD be panicking but i just feel nothing. like im reading about someone elses debt"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds very blank, almost detached — like it’s happening at a distance, not inside you. Does it feel more numb, or more unreal?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "found out they owe way more than they thought on credit cards"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "numb. i open the banking app and just stare at the number and close it. havent even told my partner. we share rent and i just cant make the words happen"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Numb fits, and the staring/closing sounds like going quiet around it. I’m wondering if the words feel stuck, or if it’s more that the whole thing goes far away when you open the app?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": "finding out the debt and opening the banking app"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "the whole thing goes far away. like if i dont feel it then its not really happening. but its happening. the minimum payments are real"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like it goes far away and then comes back as the minimum payments being real. We can leave it there, or stay with what that “not really happening” feeling is like for you—either is fine.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": "finding out the debt and opening the banking app"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "can stay a sec. the not feeling it is almost easier honestly. if i let myself actually feel it id have to do something. like call the cards. tell her. i just go flat instead"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That makes sense — the flatness seems to protect you from the part that would demand action. I’m wondering if this feels like avoidance, or more like a kind of shutdown?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": "finding out the debt and facing the banking app"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "probably both. starts as avoiding then i just go offline in my head. anyway maybe ill open the app again tomorrow and actually look. or tell her. we'll see"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That sounds like both: avoiding first, then going offline in your head. You can leave it here for now, or if you want, we can stay with what “offline” is like for you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": "finding out the debt and opening the banking app"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "nah ill leave it here. helped to say it out loud i guess. thanks. gonna go"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Got it — we can leave it right here. I’m glad you said it out loud, and I’ll be here if you want to pick it up again later.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": "finding out the debt and opening the banking app"
+    }
+  ]
+}

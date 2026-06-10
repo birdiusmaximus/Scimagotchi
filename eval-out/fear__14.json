@@ -1,0 +1,207 @@
+{
+  "cid": "fear__14",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-09T17:37:01.683Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. i dont really know how to start this. my chest has been tight all day"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that sounds like a tight, uneasy kind of day. Does it feel more tense, worried, or just hard to settle?"
+    },
+    {
+      "role": "user",
+      "content": "worried i think. its my dad. he had a fall last week and theyre running tests and i cant stop thinking about it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds worried, and maybe a bit on edge, with your dad and the tests hanging over you. Is the worry mostly about what the tests might show, or about the waiting itself?"
+    },
+    {
+      "role": "user",
+      "content": "the waiting. god the waiting. its like every time my phone buzzes my stomach drops. hes 71 and he lives alone two hours away and i keep picturing the worst"
+    },
+    {
+      "role": "companion",
+      "content": "The waiting sounds awful — every buzz landing right in your stomach, with your mind jumping straight to the worst. Does it feel like fear, or more like dread and helplessness together?"
+    },
+    {
+      "role": "user",
+      "content": "dread mostly. and helpless yeah. i feel like i should be there but i have my own kids and work and i cant just drop everything. and then i feel guilty on top of the scared"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like dread and helplessness, with guilt layered on top because you can’t be there in the way you feel you should. We can leave it here for now, or stay with what the guilt is saying underneath the scared — whichever fits."
+    },
+    {
+      "role": "user",
+      "content": "i think the guilt is saying im a bad daughter. like if something happens and i wasnt there enough i'll never forgive myself. we havent even been that close the last few years"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like guilt with a sharp, self-blaming edge — “I’m a bad daughter” and “I’ll never forgive myself” — and maybe some hurt in the distance between you. Would you want to stay with that part, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "i think i'll leave it there for tonight. that ones a lot to look at. but it helped to actually say it out loud. thank you. gonna go call him before its too late"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it’s a lot to hold, and I’m glad saying it out loud gave it a little shape. Go make the call; we can pick this up another time if you want."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6x9lpmmc5hqzmu",
+    "conversation_id": "fear__14",
+    "timestamp": "2026-06-09T17:37:33.324Z",
+    "user_words_raw": "the waiting",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "guilty",
+    "secondary_emotions": [
+      "fear",
+      "hurt"
+    ],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "waiting for test results after a dad's fall",
+    "appraisal_thought": "if something happens and i wasnt there enough i'll never forgive myself",
+    "body_cue": [
+      "stomach drops"
+    ],
+    "behaviour_action": [
+      "call him"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "being there",
+      "forgiveness",
+      "repair",
+      "belonging"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Waiting on test results after a parent's fall brings guilt, dread, and fear of not having been there enough.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. i dont really know how to start this. my chest has been tight all day"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that sounds like a tight, uneasy kind of day. Does it feel more tense, worried, or just hard to settle?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [
+        "tight chest"
+      ],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "worried i think. its my dad. he had a fall last week and theyre running tests and i cant stop thinking about it"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds worried, and maybe a bit on edge, with your dad and the tests hanging over you. Is the worry mostly about what the tests might show, or about the waiting itself?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "worried",
+      "body_cue": [
+        "tight chest"
+      ],
+      "trigger": "dad had a fall last week and they’re running tests"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "the waiting. god the waiting. its like every time my phone buzzes my stomach drops. hes 71 and he lives alone two hours away and i keep picturing the worst"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "The waiting sounds awful — every buzz landing right in your stomach, with your mind jumping straight to the worst. Does it feel like fear, or more like dread and helplessness together?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "worried",
+      "body_cue": [
+        "stomach drops"
+      ],
+      "trigger": "waiting for test results after a dad's fall"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "dread mostly. and helpless yeah. i feel like i should be there but i have my own kids and work and i cant just drop everything. and then i feel guilty on top of the scared"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like dread and helplessness, with guilt layered on top because you can’t be there in the way you feel you should. We can leave it here for now, or stay with what the guilt is saying underneath the scared — whichever fits.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [
+        "stomach drops"
+      ],
+      "trigger": "waiting for test results after a dad's fall"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i think the guilt is saying im a bad daughter. like if something happens and i wasnt there enough i'll never forgive myself. we havent even been that close the last few years"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like guilt with a sharp, self-blaming edge — “I’m a bad daughter” and “I’ll never forgive myself” — and maybe some hurt in the distance between you. Would you want to stay with that part, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "guilt",
+      "body_cue": [],
+      "trigger": "waiting for test results after a dad's fall"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "i think i'll leave it there for tonight. that ones a lot to look at. but it helped to actually say it out loud. thank you. gonna go call him before its too late"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That makes sense — it’s a lot to hold, and I’m glad saying it out loud gave it a little shape. Go make the call; we can pick this up another time if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "guilty",
+      "body_cue": [
+        "stomach drops"
+      ],
+      "trigger": "waiting for test results after a dad's fall"
+    }
+  ]
+}

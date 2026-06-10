@@ -1,0 +1,147 @@
+{
+  "cid": "calm__03",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-09T17:43:16.885Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. dont really know how to do this"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that’s completely okay. We can just go slowly, or we can leave it here for now if you want."
+    },
+    {
+      "role": "user",
+      "content": "no its fine. just. i checked my bank this morning and it was ok for once"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a small bit of relief — maybe even a moment of “okay, for once.” What was that like to see?"
+    },
+    {
+      "role": "user",
+      "content": "dunno. quiet i guess. paid the rent and there was still a bit left. havent had that in a while"
+    },
+    {
+      "role": "companion",
+      "content": "Quiet makes sense here — like something in you could rest for a moment after the rent was paid and there was still a bit left. Does that quiet feel more settled, or more like you went still?"
+    },
+    {
+      "role": "user",
+      "content": "settled maybe. like i can breathe for a sec. anyway thats it really. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Settled, with room to breathe for a second — that feels like enough to leave it here. Thanks for telling me."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xhmuqep0i1o5a",
+    "conversation_id": "calm__03",
+    "timestamp": "2026-06-09T17:43:34.208Z",
+    "user_words_raw": "can breathe for a sec",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "paid the rent and there was still a bit left",
+    "appraisal_thought": "I can breathe for a sec.",
+    "body_cue": [
+      "can breathe for a sec"
+    ],
+    "behaviour_action": [
+      "leave it here"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "safety",
+      "relief"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Money felt steadier after rent was paid and there was still some left.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. dont really know how to do this"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that’s completely okay. We can just go slowly, or we can leave it here for now if you want.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "no its fine. just. i checked my bank this morning and it was ok for once"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a small bit of relief — maybe even a moment of “okay, for once.” What was that like to see?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "relief",
+      "body_cue": [],
+      "trigger": "checked bank this morning and it was ok for once"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "dunno. quiet i guess. paid the rent and there was still a bit left. havent had that in a while"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Quiet makes sense here — like something in you could rest for a moment after the rent was paid and there was still a bit left. Does that quiet feel more settled, or more like you went still?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "quiet",
+      "body_cue": [],
+      "trigger": "paid the rent and there was still a bit left"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "settled maybe. like i can breathe for a sec. anyway thats it really. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Settled, with room to breathe for a second — that feels like enough to leave it here. Thanks for telling me.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [
+        "can breathe for a sec"
+      ],
+      "trigger": "paid the rent and there was still a bit left"
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "cid": "anger__23",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-09T18:18:31.301Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont even know why im opening this. just kind of stressed about money i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like money stress, maybe with a bit of not-knowing mixed in. Is it feeling more like pressure, worry, or both?"
+    },
+    {
+      "role": "user",
+      "content": "worry isnt really it. more like im just sick of it. my sister borrowed 2 grand off me back in feb and every time i bring it up shes got a new excuse"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds more like frustration or feeling worn down by the excuses. Does it feel more like pressure, irritation, or a kind of fed-up hurt?"
+    },
+    {
+      "role": "user",
+      "content": "irritation yeah. fed up. she just bought a new phone. posted it on instagram. and i still cant fix my car because that 2 grand was supposed to be my buffer"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that sounds really fed up — like it’s not just the money, it’s the unfairness of seeing her with the phone while your buffer is gone. Does it make you want to push back, shut down, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "push back. but i dont. thats the thing. everyone in my family acts like im the one with the problem if i ask for it back. like im being petty over money. its not petty its MY money"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like anger that’s getting blocked — fed up, and wanting to push back because you feel dismissed. Does it feel more sharp and heated, or more tight and bottled up?"
+    },
+    {
+      "role": "user",
+      "content": "bottled up. i just go quiet at family stuff and pretend its fine. but inside im keeping score. and i hate that. i hate that 2 grand has turned me into someone whos resentful at sunday dinner"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like bottled-up resentment, and also a kind of grief for how much space it’s taking at sunday dinner. Does it feel like it’s about the money itself, or more about being made to carry it alone?"
+    },
+    {
+      "role": "user",
+      "content": "carrying it alone. yeah. its not even the 2 grand really. i could survive without it. its that nobody in my family ever pays me back and im always the responsible one and im just so tired of being the bank that nobody respects"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like resentment with a tired, “I’m the one who gets used” kind of edge. It seems to hit the respect as much as the money; if you want, we can stay with that, or leave it here."
+    },
+    {
+      "role": "user",
+      "content": "the respect. thats the word. i feel invisible until someone needs cash. and then im invisible again. saying it out loud it sounds less like im petty and more like im just hurt about it honestly"
+    },
+    {
+      "role": "companion",
+      "content": "That lands as hurt under the resentment — invisible until someone needs something, then gone again. We can stay with that, or let it rest here if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets let it rest. i think im gonna actually text her tomorrow and just ask plainly. not angry just plain. thanks for this, helped to untangle it a bit"
+    },
+    {
+      "role": "companion",
+      "content": "That feels clear — hurt, and a plain sort of resolve underneath it. I’m glad it helped untangle a bit, and we can leave it there."
+    },
+    {
+      "role": "user",
+      "content": "cheers. night"
+    },
+    {
+      "role": "companion",
+      "content": "Night — take it easy."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yqyl8xls2erw9",
+    "conversation_id": "anger__23",
+    "timestamp": "2026-06-09T18:19:24.791Z",
+    "user_words_raw": "cheers. night",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "hurt",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "being treated like the one who always has cash and feeling invisible until needed",
+    "appraisal_thought": "i’m invisible until someone needs cash",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "brief sign-off after a feeling conversation",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont even know why im opening this. just kind of stressed about money i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like money stress, maybe with a bit of not-knowing mixed in. Is it feeling more like pressure, worry, or both?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "stressed",
+      "body_cue": [],
+      "trigger": "money"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "worry isnt really it. more like im just sick of it. my sister borrowed 2 grand off me back in feb and every time i bring it up shes got a new excuse"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds more like frustration or feeling worn down by the excuses. Does it feel more like pressure, irritation, or a kind of fed-up hurt?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "sister borrowing 2 grand and giving new excuses when it’s brought up"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "irritation yeah. fed up. she just bought a new phone. posted it on instagram. and i still cant fix my car because that 2 grand was supposed to be my buffer"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Yeah, that sounds really fed up — like it’s not just the money, it’s the unfairness of seeing her with the phone while your buffer is gone. Does it make you want to push back, shut down, or something else?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "fed up",
+      "body_cue": [],
+      "trigger": "sister bought a new phone and posted it while owing money that was meant for their buffer"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "push back. but i dont. thats the thing. everyone in my family acts like im the one with the problem if i ask for it back. like im being petty over money. its not petty its MY money"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like anger that’s getting blocked — fed up, and wanting to push back because you feel dismissed. Does it feel more sharp and heated, or more tight and bottled up?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "blocked",
+      "body_cue": [],
+      "trigger": "family treats them like they’re the problem when asking for their money back"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "bottled up. i just go quiet at family stuff and pretend its fine. but inside im keeping score. and i hate that. i hate that 2 grand has turned me into someone whos resentful at sunday dinner"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like bottled-up resentment, and also a kind of grief for how much space it’s taking at sunday dinner. Does it feel like it’s about the money itself, or more about being made to carry it alone?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [],
+      "trigger": "family treats them like the problem when they ask for their money back"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "carrying it alone. yeah. its not even the 2 grand really. i could survive without it. its that nobody in my family ever pays me back and im always the responsible one and im just so tired of being the bank that nobody respects"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like resentment with a tired, “I’m the one who gets used” kind of edge. It seems to hit the respect as much as the money; if you want, we can stay with that, or leave it here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [],
+      "trigger": "family never pays them back and treats them like the bank"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "the respect. thats the word. i feel invisible until someone needs cash. and then im invisible again. saying it out loud it sounds less like im petty and more like im just hurt about it honestly"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That lands as hurt under the resentment — invisible until someone needs something, then gone again. We can stay with that, or let it rest here if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "being treated as the one who always has cash, and feeling invisible except when needed"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah lets let it rest. i think im gonna actually text her tomorrow and just ask plainly. not angry just plain. thanks for this, helped to untangle it a bit"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That feels clear — hurt, and a plain sort of resolve underneath it. I’m glad it helped untangle a bit, and we can leave it there.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "being treated like the one who always has cash and feeling invisible until needed"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "cheers. night"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Night — take it easy.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "being treated like the one who always has cash and feeling invisible until needed"
+    }
+  ]
+}

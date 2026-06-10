@@ -1,0 +1,191 @@
+{
+  "cid": "pressure__16",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-09T17:46:24.132Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk if this is gonna do anything but here goes. my friend keeps texting me and i just dont have it in me rn"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like you’re stretched thin and don’t have much left for replies right now. Is it more like pressure, guilt, or just being worn out?"
+    },
+    {
+      "role": "user",
+      "content": "worn out i guess? like she texts a LOT. paragraphs. and every time its some new crisis and im supposed to drop everything and respond like the perfect supportive friend"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that sounds worn out and pressured by the constant crisis texts. Does it make you want to shut down, dodge it, or just disappear for a bit?"
+    },
+    {
+      "role": "user",
+      "content": "disappear honestly. i left her on read for like 6 hours yesterday and then felt SO guilty. but its like.. when do i get a turn? she never asks how im doing. its all her ex, her job, her landlord, on and on"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like disappearing with guilt on one side, and on the other a hurt kind of \"when do I get a turn?\". Do you want to stay with that, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "ehh i can stay a sec. its weird hearing it back like that. yeah i think i am kinda hurt. we used to be even, you know? now im just her unpaid therapist and i dont know how to say that without blowing the whole thing up"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it sounds hurt, and also careful, like you’re trying not to blow the whole thing up. Is the hardest part the hurt itself, or what you’re afraid saying it would mean for the friendship?"
+    },
+    {
+      "role": "user",
+      "content": "what itd mean i think. like if i set a boundary does she even stick around? maybe i find out shes only here cause i listen. thats the scary part. ugh ok this is more than i expected to say to an app tbh"
+    },
+    {
+      "role": "companion",
+      "content": "That scary part sounds very real: the boundary might reveal whether she’s there for you, or only for what you give. We can leave it there if you want, or stay with what that possibility stirs up for you."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. that was.. actually not nothing. didnt think id get the words out. thanks. gonna go sit with it for a bit"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like enough for now. I'm glad you got the words out, and you can sit with it there."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xlpbb3wirx6tb",
+    "conversation_id": "pressure__16",
+    "timestamp": "2026-06-09T17:46:59.187Z",
+    "user_words_raw": "that was.. actually not nothing",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "fearful hurt",
+    "secondary_emotions": [
+      "vulnerability"
+    ],
+    "valence": "mixed",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "thinking about setting a boundary with a friend who only comes with her own crises",
+    "appraisal_thought": "If I set a boundary, I might find out she only stays because I listen.",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "being seen",
+      "reciprocity",
+      "reassurance"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Friendship feels one-sided; setting boundaries feels risky.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk if this is gonna do anything but here goes. my friend keeps texting me and i just dont have it in me rn"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like you’re stretched thin and don’t have much left for replies right now. Is it more like pressure, guilt, or just being worn out?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "friend keeps texting"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "worn out i guess? like she texts a LOT. paragraphs. and every time its some new crisis and im supposed to drop everything and respond like the perfect supportive friend"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Yeah, that sounds worn out and pressured by the constant crisis texts. Does it make you want to shut down, dodge it, or just disappear for a bit?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "worn out",
+      "body_cue": [],
+      "trigger": "friend keeps texting with crises and expecting immediate support"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "disappear honestly. i left her on read for like 6 hours yesterday and then felt SO guilty. but its like.. when do i get a turn? she never asks how im doing. its all her ex, her job, her landlord, on and on"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like disappearing with guilt on one side, and on the other a hurt kind of \"when do I get a turn?\". Do you want to stay with that, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [],
+      "trigger": "friend sends long crisis texts and never asks how the user is doing"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "ehh i can stay a sec. its weird hearing it back like that. yeah i think i am kinda hurt. we used to be even, you know? now im just her unpaid therapist and i dont know how to say that without blowing the whole thing up"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — it sounds hurt, and also careful, like you’re trying not to blow the whole thing up. Is the hardest part the hurt itself, or what you’re afraid saying it would mean for the friendship?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "friend texts at length with crisis after crisis and does not ask how the user is doing"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "what itd mean i think. like if i set a boundary does she even stick around? maybe i find out shes only here cause i listen. thats the scary part. ugh ok this is more than i expected to say to an app tbh"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That scary part sounds very real: the boundary might reveal whether she’s there for you, or only for what you give. We can leave it there if you want, or stay with what that possibility stirs up for you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "fearful hurt",
+      "body_cue": [],
+      "trigger": "thinking about setting a boundary with a friend who only comes with her own crises"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it there. that was.. actually not nothing. didnt think id get the words out. thanks. gonna go sit with it for a bit"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like enough for now. I'm glad you got the words out, and you can sit with it there.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "fearful hurt",
+      "body_cue": [],
+      "trigger": "thinking about setting a boundary with a friend who only comes with her own crises"
+    }
+  ]
+}

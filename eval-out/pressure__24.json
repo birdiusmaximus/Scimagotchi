@@ -1,0 +1,273 @@
+{
+  "cid": "pressure__24",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-09T17:47:10.208Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so. i dont really know what this is or if its gonna do anything but my sister keeps telling me to journal or whatever and i cant journal so. here i am i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Here is good too. We can just start with whatever’s here, without making it into a journal — what’s been on your mind lately?"
+    },
+    {
+      "role": "user",
+      "content": "idk. on my mind. everything is on my mind thats the problem. its like. my mom had a fall back in march and shes ok mostly but shes not really ok? and somehow im the one. anyway its a lot. does it matter"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a lot to be holding, especially with your mom not really being ok and it landing on you. Does it feel more like pressure, worry, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "pressure yeah. like theres two other siblings right but somehow im the default. i live closest, 20 min, my brother is across the country and my sister has the kids so its like oh well you can do it. the pharmacy the appointments the calling her every day to make sure she ate. and i have my own. i have a job. i have a life supposedly lol"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — the “default” one, with the pharmacy, appointments, and the daily checking, while your own life is still there too. What does that pressure do in you — rush you, tighten you up, or make you want to shut down?"
+    },
+    {
+      "role": "user",
+      "content": "tightens. definitely tightens. like my jaw. my shoulders are up by my ears constantly my partner keeps saying relax your shoulders and i could scream. and theres this thing where my phone buzzes and my stomach just drops before i even look bc its always something. the fall alarm went off twice last week and both times it was nothing she just bumped it but. you cant NOT answer you know"
+    },
+    {
+      "role": "companion",
+      "content": "That tight, braced feeling makes sense here — jaw, shoulders, and that drop when the phone buzzes like you’re never really off-duty. Is it the constant alertness that feels worst, or the not being able to ignore it?"
+    },
+    {
+      "role": "user",
+      "content": "honestly? the part nobody says out loud. its that i resent it. like i love her obviously shes my mom but theres this little ugly voice that goes why is it always me, why dont they, and then i feel like a monster for even thinking it bc shes the one who actually fell, shes the one whos scared, who am i to be tired. and then i just. keep going. and dont say anything"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like resentment tangled right up with guilt — the “why is it always me” voice, and then the part that turns on you for having it. We can leave it there if you want, or stay with what that “little ugly voice” is asking for underneath."
+    },
+    {
+      "role": "user",
+      "content": "no we can stay i guess. underneath. i dont know. i think what it wants is for someone to just notice. like for my brother to call ME and ask how IM doing instead of how moms doing. not even help just. acknowledge that im drowning a little. but i never say that bc then it sounds like im making her thing about me and im not. ugh see this is why i dont do this it just goes in circles"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound like making it about you — it sounds like wanting to be noticed while you’re carrying a lot. Is it more that you want acknowledgment, or that you want someone to step toward you a little?"
+    },
+    {
+      "role": "user",
+      "content": "step toward me. yeah. that one. acknowledgment id settle for but what i actually want is for someone to go hey i got tuesday, you take a night off. nobody steps. ok that. that one kinda got me not gonna lie. i didnt expect to feel that reading it"
+    },
+    {
+      "role": "companion",
+      "content": "That “someone steps in” piece sounds like a real relief point — not just being seen, but having the load actually shared. We can leave it there, or stay with what it touches underneath."
+    },
+    {
+      "role": "user",
+      "content": "no i think i should leave it there before i start actually crying at my kitchen table lol. i dont know what i expected from this. i kind of thought it was gonna be useless honestly but. it did help to say the resentment part out loud somewhere that wasnt gonna look at me weird. maybe ill tell my brother. maybe. baby steps"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it had a place here, and that the resentment could be said without being looked at sideways. Baby steps sounds exactly right."
+    },
+    {
+      "role": "user",
+      "content": "thanks. ok. gonna go relax my shoulders or whatever. bye"
+    },
+    {
+      "role": "companion",
+      "content": "Bye for now. I’m glad you said it here."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xmn82ahalq8vj",
+    "conversation_id": "pressure__24",
+    "timestamp": "2026-06-09T17:48:25.327Z",
+    "user_words_raw": "relax my shoulders",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [
+      "relief"
+    ],
+    "valence": "mixed",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "having a place to say the resentment out loud without being judged",
+    "appraisal_thought": "it helped to say the resentment part out loud somewhere that wasnt gonna look at me weird",
+    "body_cue": [],
+    "behaviour_action": [
+      "go relax my shoulders"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "being seen",
+      "being understood",
+      "not being judged"
+    ],
+    "confidence_level": "medium",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User found it helpful to say the resentment out loud and may tell brother eventually.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so. i dont really know what this is or if its gonna do anything but my sister keeps telling me to journal or whatever and i cant journal so. here i am i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Here is good too. We can just start with whatever’s here, without making it into a journal — what’s been on your mind lately?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "idk. on my mind. everything is on my mind thats the problem. its like. my mom had a fall back in march and shes ok mostly but shes not really ok? and somehow im the one. anyway its a lot. does it matter"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a lot to be holding, especially with your mom not really being ok and it landing on you. Does it feel more like pressure, worry, or something else?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "your mom had a fall in March and you're the one holding a lot of it"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "pressure yeah. like theres two other siblings right but somehow im the default. i live closest, 20 min, my brother is across the country and my sister has the kids so its like oh well you can do it. the pharmacy the appointments the calling her every day to make sure she ate. and i have my own. i have a job. i have a life supposedly lol"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Yeah — the “default” one, with the pharmacy, appointments, and the daily checking, while your own life is still there too. What does that pressure do in you — rush you, tighten you up, or make you want to shut down?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "being the default sibling for your mom’s care while also having your own job and life"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "tightens. definitely tightens. like my jaw. my shoulders are up by my ears constantly my partner keeps saying relax your shoulders and i could scream. and theres this thing where my phone buzzes and my stomach just drops before i even look bc its always something. the fall alarm went off twice last week and both times it was nothing she just bumped it but. you cant NOT answer you know"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That tight, braced feeling makes sense here — jaw, shoulders, and that drop when the phone buzzes like you’re never really off-duty. Is it the constant alertness that feels worst, or the not being able to ignore it?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "tightened, on-edge",
+      "body_cue": [
+        "jaw",
+        "shoulders up by my ears",
+        "stomach drops"
+      ],
+      "trigger": "being the default sibling for your mom’s care, with calls and alerts that can turn into something urgent"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "honestly? the part nobody says out loud. its that i resent it. like i love her obviously shes my mom but theres this little ugly voice that goes why is it always me, why dont they, and then i feel like a monster for even thinking it bc shes the one who actually fell, shes the one whos scared, who am i to be tired. and then i just. keep going. and dont say anything"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like resentment tangled right up with guilt — the “why is it always me” voice, and then the part that turns on you for having it. We can leave it there if you want, or stay with what that “little ugly voice” is asking for underneath.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resentment",
+      "body_cue": [],
+      "trigger": "being the default sibling for mom’s care"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "no we can stay i guess. underneath. i dont know. i think what it wants is for someone to just notice. like for my brother to call ME and ask how IM doing instead of how moms doing. not even help just. acknowledge that im drowning a little. but i never say that bc then it sounds like im making her thing about me and im not. ugh see this is why i dont do this it just goes in circles"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That doesn’t sound like making it about you — it sounds like wanting to be noticed while you’re carrying a lot. Is it more that you want acknowledgment, or that you want someone to step toward you a little?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "overlooked",
+      "body_cue": [],
+      "trigger": "being the default sibling for mom’s care"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "step toward me. yeah. that one. acknowledgment id settle for but what i actually want is for someone to go hey i got tuesday, you take a night off. nobody steps. ok that. that one kinda got me not gonna lie. i didnt expect to feel that reading it"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That “someone steps in” piece sounds like a real relief point — not just being seen, but having the load actually shared. We can leave it there, or stay with what it touches underneath.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "overlooked",
+      "body_cue": [
+        "jaw",
+        "shoulders",
+        "stomach drops"
+      ],
+      "trigger": "being the default sibling for mom’s care"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "no i think i should leave it there before i start actually crying at my kitchen table lol. i dont know what i expected from this. i kind of thought it was gonna be useless honestly but. it did help to say the resentment part out loud somewhere that wasnt gonna look at me weird. maybe ill tell my brother. maybe. baby steps"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "I’m glad it had a place here, and that the resentment could be said without being looked at sideways. Baby steps sounds exactly right.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "understood",
+      "body_cue": [],
+      "trigger": "carrying most of the care for mom while wanting someone else to step in"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "thanks. ok. gonna go relax my shoulders or whatever. bye"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Bye for now. I’m glad you said it here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "having a place to say the resentment out loud without being judged"
+    }
+  ]
+}

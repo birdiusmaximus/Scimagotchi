@@ -1,0 +1,187 @@
+{
+  "cid": "calm__11",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-09T17:44:04.877Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. not really sure what to put here"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that’s completely fine. We can just start wherever feels easiest; what’s been on your mind lately?"
+    },
+    {
+      "role": "user",
+      "content": "work stuff i guess. nothing dramatic. its actually been ok which is kind of the weird part"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds a little oddly unsettled — like “ok” but with a strange edge to it. Does it feel more like uneasy, suspicious, or just hard to settle into?"
+    },
+    {
+      "role": "user",
+      "content": "no not uneasy really. more like. quiet? i finished this big handover at work last week, the thing i was dreading for months. and now its just done. theres nothing in my chest anymore and i dont know what to do with that"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like the big pressure has lifted, and now there’s a quiet emptiness where it used to be. Does it feel more blank, relieved, or a bit disorienting?"
+    },
+    {
+      "role": "user",
+      "content": "relieved i think. yeah. i kept bracing for someone to email me with a problem but its been three days and nothing. i actually slept properly for the first time in ages. its just weird to feel ok and not be waiting for the next thing"
+    },
+    {
+      "role": "companion",
+      "content": "Relieved, with a kind of unfamiliar quiet after months of bracing for the next email. Does it feel more settled in your body, or still a bit strange?"
+    },
+    {
+      "role": "user",
+      "content": "settled maybe. my shoulders arent up by my ears for once. i didnt realise how much i was carrying it until it was gone. kind of nice actually. didnt expect to be saying that"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds settled and a bit gently surprising — the carrying dropped away, and you’re noticing it in your shoulders. Do you want to leave it there for now, or stay with what this relief feels like?"
+    },
+    {
+      "role": "user",
+      "content": "yeah i think ill leave it there. wasnt expecting to actually feel better but i kind of do. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it can be a quiet surprise to feel better after something you were bracing for for so long. I’ll leave it there with you."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xipr17kiveoqs",
+    "conversation_id": "calm__11",
+    "timestamp": "2026-06-09T17:44:38.880Z",
+    "user_words_raw": "feel better",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "settled",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "finished a big handover at work; no follow-up problem arrived after three days",
+    "appraisal_thought": "I don't have to keep waiting for the next thing",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "after a long work handover, relief and a quieter settled feeling came in once it was done",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. not really sure what to put here"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that’s completely fine. We can just start wherever feels easiest; what’s been on your mind lately?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "work stuff i guess. nothing dramatic. its actually been ok which is kind of the weird part"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds a little oddly unsettled — like “ok” but with a strange edge to it. Does it feel more like uneasy, suspicious, or just hard to settle into?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": "work stuff"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "no not uneasy really. more like. quiet? i finished this big handover at work last week, the thing i was dreading for months. and now its just done. theres nothing in my chest anymore and i dont know what to do with that"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That feels like the big pressure has lifted, and now there’s a quiet emptiness where it used to be. Does it feel more blank, relieved, or a bit disorienting?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "finished a big handover at work"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "relieved i think. yeah. i kept bracing for someone to email me with a problem but its been three days and nothing. i actually slept properly for the first time in ages. its just weird to feel ok and not be waiting for the next thing"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Relieved, with a kind of unfamiliar quiet after months of bracing for the next email. Does it feel more settled in your body, or still a bit strange?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "relieved",
+      "body_cue": [],
+      "trigger": "finished a big handover at work; no follow-up problems appeared"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "settled maybe. my shoulders arent up by my ears for once. i didnt realise how much i was carrying it until it was gone. kind of nice actually. didnt expect to be saying that"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds settled and a bit gently surprising — the carrying dropped away, and you’re noticing it in your shoulders. Do you want to leave it there for now, or stay with what this relief feels like?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [
+        "shoulders arent up by my ears"
+      ],
+      "trigger": "finished a big handover at work; no follow-up problem arrived after three days"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah i think ill leave it there. wasnt expecting to actually feel better but i kind of do. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That makes sense — it can be a quiet surprise to feel better after something you were bracing for for so long. I’ll leave it there with you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "finished a big handover at work; no follow-up problem arrived after three days"
+    }
+  ]
+}

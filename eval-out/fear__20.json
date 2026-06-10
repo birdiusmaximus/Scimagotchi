@@ -1,0 +1,284 @@
+{
+  "cid": "fear__20",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-09T17:37:21.144Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey there. how are you today?"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, good to see you. I’m here with you—what’s been on your mind today?"
+    },
+    {
+      "role": "user",
+      "content": "honestly not great. been a weird couple of weeks. work's fine, sleep's been off though. i keep telling myself it's nothing"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds a bit unsettled and hard to pin down, especially with sleep off. Is it more like uneasy, pressured, or just kind of off?"
+    },
+    {
+      "role": "user",
+      "content": "uneasy yeah. but it's more than that. there's this thing i found like three weeks ago. a lump. on the side of my neck, kind of under the jaw. i keep checking it and i can't tell if it's getting bigger or if i'm just making myself crazy"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really uneasy, and the checking makes it feel hard to get a clear read on it. Does it feel more like tense, wired, or pulled into a loop?"
+    },
+    {
+      "role": "user",
+      "content": "pulled into a loop. completely. like i'll be fine for an hour and then my hand just goes up to my neck without me deciding to. and then i'm down a hole. i googled it which i KNOW you're not supposed to do and now i can't unsee the worst version"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the fear has gotten its own rhythm — fine for a while, then the checking pulls you back in. We can stay with that, or leave it here if you want; what feels most true right now?"
+    },
+    {
+      "role": "user",
+      "content": "no i want to stay. the thing i haven't said out loud is i still haven't booked the doctor. it's been three weeks. and i think it's because as long as i don't go i don't have to hear anything. my mum had thyroid cancer at like 40 and i'm 38 now so it's not abstract for me"
+    },
+    {
+      "role": "companion",
+      "content": "That adds a sharper edge to it — not just uncertainty, but the sense of hearing something you really don’t want to hear. Is it feeling more like dread, or like you’re trying to keep the possibility at arm’s length?"
+    },
+    {
+      "role": "user",
+      "content": "both honestly. keeping it at arm's length IS the dread, if that makes sense. like if i say it out loud or book the thing it becomes real. and the worst part is i know logically most lumps are nothing, swollen glands whatever. but logic isn't driving right now. it's 3am me that's driving"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — the dread seems tied to making it real, even while another part of you knows the ordinary explanations. I’m wondering if this feels familiar in the body too, or mostly like a mental spiral?"
+    },
+    {
+      "role": "user",
+      "content": "it's in the body too. chest gets tight, sort of a buzzing under my ribs. and the not sleeping obviously. i wake up at like 4 and the first thing my brain does is go check the neck again. it's exhausting. i'm so tired of carrying this around by myself"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds exhausting — tight chest, buzzing under your ribs, and waking into the same loop again and again. Does it feel more like fear, or more like being worn down by having to carry it alone?"
+    },
+    {
+      "role": "user",
+      "content": "worn down. that's the truer one. the fear i can almost handle in bursts but it's the carrying it for three weeks and not telling anyone, not my partner, no one. saying it here is the first time it's been outside my own head. that actually helps a tiny bit. like it's slightly less huge now"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — the carrying it alone seems to be the heavier part, and saying it out loud has made it feel a little less huge. We can leave it there, or stay with what it’s been like to hold by yourself for three weeks; what feels right?"
+    },
+    {
+      "role": "user",
+      "content": "i think i'll leave it there. but i'm gonna do two things. tell my partner tonight. and book the doctor in the morning, like actually book it. typing that out makes me feel like i have to now which is probably good. thank you. genuinely. needed this more than i realised"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad you said it here, and I’m glad it feels a little less huge now. We can leave it here with that, and you can come back if you want to say more later."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xa0h41pxk16cw",
+    "conversation_id": "fear__20",
+    "timestamp": "2026-06-09T17:38:16.561Z",
+    "user_words_raw": "carrying it around by myself",
+    "emotion_status": "confirmed",
+    "emotion_family": "pressure",
+    "emotion_shade": "worn down",
+    "secondary_emotions": [
+      "fear"
+    ],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "found a lump on the side of the neck under the jaw and has been carrying it alone for three weeks",
+    "appraisal_thought": "if I say it out loud or book the thing it becomes real",
+    "body_cue": [
+      "tight chest",
+      "buzzing under my ribs",
+      "not sleeping"
+    ],
+    "behaviour_action": [
+      "wake up and check the neck again",
+      "not telling anyone",
+      "tell my partner tonight",
+      "book the doctor in the morning"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "support",
+      "clarity"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User has been carrying a health worry alone and feels lighter after saying it out loud.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey there. how are you today?"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, good to see you. I’m here with you—what’s been on your mind today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "honestly not great. been a weird couple of weeks. work's fine, sleep's been off though. i keep telling myself it's nothing"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds a bit unsettled and hard to pin down, especially with sleep off. Is it more like uneasy, pressured, or just kind of off?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": "a weird couple of weeks and sleep's been off"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "uneasy yeah. but it's more than that. there's this thing i found like three weeks ago. a lump. on the side of my neck, kind of under the jaw. i keep checking it and i can't tell if it's getting bigger or if i'm just making myself crazy"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds really uneasy, and the checking makes it feel hard to get a clear read on it. Does it feel more like tense, wired, or pulled into a loop?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": "found a lump on the side of the neck under the jaw"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "pulled into a loop. completely. like i'll be fine for an hour and then my hand just goes up to my neck without me deciding to. and then i'm down a hole. i googled it which i KNOW you're not supposed to do and now i can't unsee the worst version"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like the fear has gotten its own rhythm — fine for a while, then the checking pulls you back in. We can stay with that, or leave it here if you want; what feels most true right now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": "found a lump on the side of the neck under the jaw"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "no i want to stay. the thing i haven't said out loud is i still haven't booked the doctor. it's been three weeks. and i think it's because as long as i don't go i don't have to hear anything. my mum had thyroid cancer at like 40 and i'm 38 now so it's not abstract for me"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That adds a sharper edge to it — not just uncertainty, but the sense of hearing something you really don’t want to hear. Is it feeling more like dread, or like you’re trying to keep the possibility at arm’s length?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [],
+      "trigger": "found a lump on the side of the neck under the jaw; mother had thyroid cancer at 40"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "both honestly. keeping it at arm's length IS the dread, if that makes sense. like if i say it out loud or book the thing it becomes real. and the worst part is i know logically most lumps are nothing, swollen glands whatever. but logic isn't driving right now. it's 3am me that's driving"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That makes sense — the dread seems tied to making it real, even while another part of you knows the ordinary explanations. I’m wondering if this feels familiar in the body too, or mostly like a mental spiral?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [],
+      "trigger": "found a lump on the side of the neck under the jaw; mother had thyroid cancer around age 40; not booking the doctor"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "it's in the body too. chest gets tight, sort of a buzzing under my ribs. and the not sleeping obviously. i wake up at like 4 and the first thing my brain does is go check the neck again. it's exhausting. i'm so tired of carrying this around by myself"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds exhausting — tight chest, buzzing under your ribs, and waking into the same loop again and again. Does it feel more like fear, or more like being worn down by having to carry it alone?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [
+        "tight chest",
+        "buzzing under my ribs",
+        "not sleeping"
+      ],
+      "trigger": "found a lump on the side of the neck under the jaw; mother had thyroid cancer around age 40; not booking the doctor"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "worn down. that's the truer one. the fear i can almost handle in bursts but it's the carrying it for three weeks and not telling anyone, not my partner, no one. saying it here is the first time it's been outside my own head. that actually helps a tiny bit. like it's slightly less huge now"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That makes sense — the carrying it alone seems to be the heavier part, and saying it out loud has made it feel a little less huge. We can leave it there, or stay with what it’s been like to hold by yourself for three weeks; what feels right?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "worn down",
+      "body_cue": [
+        "tight chest",
+        "buzzing under my ribs",
+        "not sleeping"
+      ],
+      "trigger": "found a lump on the side of the neck under the jaw"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "i think i'll leave it there. but i'm gonna do two things. tell my partner tonight. and book the doctor in the morning, like actually book it. typing that out makes me feel like i have to now which is probably good. thank you. genuinely. needed this more than i realised"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "I’m glad you said it here, and I’m glad it feels a little less huge now. We can leave it here with that, and you can come back if you want to say more later.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "worn down",
+      "body_cue": [
+        "tight chest",
+        "buzzing under my ribs",
+        "not sleeping"
+      ],
+      "trigger": "found a lump on the side of the neck under the jaw and has been carrying it alone for three weeks"
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "cid": "joy__20",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-09T17:42:50.470Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey there. its been a weird week honestly, kind of all over the place"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, I’m here. “All over the place” sounds like there’s a lot moving at once — does it feel more scattered, heavy, or tense?"
+    },
+    {
+      "role": "user",
+      "content": "no no its not bad actually, sorry. its more like... good? but in a way i dont totally trust yet. hard to explain"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it sounds good, but a little unsteady or hard to trust yet. What makes it feel hard to trust?"
+    },
+    {
+      "role": "user",
+      "content": "i guess because ive been burned before. so this is health stuff. i had bloodwork done friday and the numbers came back and for the first time in like three years my doctor said everything looks normal. genuinely normal"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like relief with a little cautious disbelief — “genuinely normal” after three years is a big thing to land. Does it feel more relieved, proud, or almost unreal?"
+    },
+    {
+      "role": "user",
+      "content": "all three honestly but theres pride in there i didnt expect. like i actually did the work. cut the drinking way back, started walking every morning even when i hated it, took the meds properly for once. and it WORKED. thats the part thats messing with me a little"
+    },
+    {
+      "role": "companion",
+      "content": "That “it WORKED” sounds like relief, pride, and maybe a little shock all braided together. I’m wondering if there’s a particular part of it that feels hard to trust — the result, or the fact that you did it?"
+    },
+    {
+      "role": "user",
+      "content": "that i did it. i think. ive spent so long being the person who starts things and quits. who knows whats good for them and does the opposite anyway. so theres this voice going dont get cocky, youll just blow it up again like you always do"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like pride rubbing right up against a wary, self-protective voice. Is it the “don’t get cocky” part that feels loudest?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. its loud. but i notice im also kind of using it as a shield? like if i dont let myself feel proud then it cant hurt as bad if i slip. but that also means i never actually get to enjoy the good thing. i did this for three months. thats real"
+    },
+    {
+      "role": "companion",
+      "content": "That feels very real — pride, and a shield trying to keep the disappointment from landing too hard. Does it feel more like a tight guard, or more like a dull bracing?"
+    },
+    {
+      "role": "user",
+      "content": "a tight guard i think. but talking it out loud im realizing i want to let it be allowed to be good even just for tonight. like i earned this one. the slipping can be tomorrows problem"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a small opening after a tight guard — letting the good be good, just for tonight. What does that opening feel like in you, if you notice it?"
+    },
+    {
+      "role": "user",
+      "content": "kind of warm in my chest. lighter than when i sat down. i might actually tell my sister, she watched me struggle the worst. yeah i think im gonna do that"
+    },
+    {
+      "role": "companion",
+      "content": "Warm in your chest, lighter, and wanting to tell your sister — that sounds like the good thing landing. I can leave it there, or if you want we can stay with what it might feel like to share it."
+    },
+    {
+      "role": "user",
+      "content": "no i think im good. that actually really helped, i didnt know it was knotted up like that til i started talking. gonna go call her now. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it sounds like it untied itself enough to become clear. Go call her; I’m glad you noticed it."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xh2ofrfk88pou",
+    "conversation_id": "joy__20",
+    "timestamp": "2026-06-09T17:43:41.471Z",
+    "user_words_raw": "it was knotted up",
+    "emotion_status": "confirmed",
+    "emotion_family": "joy",
+    "emotion_shade": "relief",
+    "secondary_emotions": [
+      "pride"
+    ],
+    "valence": "positive",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "bloodwork came back normal after three years, after three months of health changes",
+    "appraisal_thought": "i did this; it’s real",
+    "body_cue": [
+      "warm in my chest",
+      "lighter than when i sat down"
+    ],
+    "behaviour_action": [
+      "tell my sister",
+      "go call her"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "recognition",
+      "connection"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Health progress after a long stretch of uncertainty; wanted to tell sister who saw the hardest part.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey there. its been a weird week honestly, kind of all over the place"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, I’m here. “All over the place” sounds like there’s a lot moving at once — does it feel more scattered, heavy, or tense?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "no no its not bad actually, sorry. its more like... good? but in a way i dont totally trust yet. hard to explain"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That makes sense — it sounds good, but a little unsteady or hard to trust yet. What makes it feel hard to trust?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "uncertain",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "i guess because ive been burned before. so this is health stuff. i had bloodwork done friday and the numbers came back and for the first time in like three years my doctor said everything looks normal. genuinely normal"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like relief with a little cautious disbelief — “genuinely normal” after three years is a big thing to land. Does it feel more relieved, proud, or almost unreal?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relieved",
+      "body_cue": [],
+      "trigger": "bloodwork came back normal after three years"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "all three honestly but theres pride in there i didnt expect. like i actually did the work. cut the drinking way back, started walking every morning even when i hated it, took the meds properly for once. and it WORKED. thats the part thats messing with me a little"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That “it WORKED” sounds like relief, pride, and maybe a little shock all braided together. I’m wondering if there’s a particular part of it that feels hard to trust — the result, or the fact that you did it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relieved",
+      "body_cue": [],
+      "trigger": "bloodwork came back normal after three years, after making health changes"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "that i did it. i think. ive spent so long being the person who starts things and quits. who knows whats good for them and does the opposite anyway. so theres this voice going dont get cocky, youll just blow it up again like you always do"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like pride rubbing right up against a wary, self-protective voice. Is it the “don’t get cocky” part that feels loudest?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "pride",
+      "body_cue": [],
+      "trigger": "bloodwork came back normal after three years, after making health changes"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. its loud. but i notice im also kind of using it as a shield? like if i dont let myself feel proud then it cant hurt as bad if i slip. but that also means i never actually get to enjoy the good thing. i did this for three months. thats real"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels very real — pride, and a shield trying to keep the disappointment from landing too hard. Does it feel more like a tight guard, or more like a dull bracing?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "pride",
+      "body_cue": [],
+      "trigger": "bloodwork came back normal after three years, after three months of health changes"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "a tight guard i think. but talking it out loud im realizing i want to let it be allowed to be good even just for tonight. like i earned this one. the slipping can be tomorrows problem"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That feels like a small opening after a tight guard — letting the good be good, just for tonight. What does that opening feel like in you, if you notice it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "pride",
+      "body_cue": [],
+      "trigger": "bloodwork came back normal after three years, after three months of health changes"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "kind of warm in my chest. lighter than when i sat down. i might actually tell my sister, she watched me struggle the worst. yeah i think im gonna do that"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "Warm in your chest, lighter, and wanting to tell your sister — that sounds like the good thing landing. I can leave it there, or if you want we can stay with what it might feel like to share it.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "pride",
+      "body_cue": [
+        "warm in my chest",
+        "lighter than when i sat down"
+      ],
+      "trigger": "bloodwork came back normal after three years, after three months of health changes"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "no i think im good. that actually really helped, i didnt know it was knotted up like that til i started talking. gonna go call her now. thanks"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "That makes sense — it sounds like it untied itself enough to become clear. Go call her; I’m glad you noticed it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relief",
+      "body_cue": [
+        "warm in my chest",
+        "lighter than when i sat down"
+      ],
+      "trigger": "bloodwork came back normal after three years, after three months of health changes"
+    }
+  ]
+}

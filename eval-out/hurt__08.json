@@ -1,0 +1,147 @@
+{
+  "cid": "hurt__08",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-09T18:21:18.966Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk if this app actually does anything but ok. my mentor kind of bailed on me"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a rough kind of letdown — maybe hurt, maybe annoyed. What did \"bailed on me\" look like here?"
+    },
+    {
+      "role": "user",
+      "content": "he was supposed to help me figure out the phd applications. like he said he'd write the rec letter and meet to plan it out. then he just. stopped answering. its been like 3 weeks"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like being left hanging after he said he'd show up. Did it land more as hurt, or more as feeling dismissed?"
+    },
+    {
+      "role": "user",
+      "content": "dismissed i guess. like i thought he believed in me and now im not sure i even have a shot if my own advisor cant be bothered. deadlines are in like 2 months and i dont know whats happening with any of it"
+    },
+    {
+      "role": "companion",
+      "content": "That feels dismissed, and also like the ground of the whole thing got shaky when the deadlines are so close. Does it feel more like a tight, urgent kind of hurt, or more like wanting to pull back and not rely on him anymore?"
+    },
+    {
+      "role": "user",
+      "content": "yeah more like pulling back. dont really wanna count on him again. anyway thats more than i expected to say to an app lol. gonna go"
+    },
+    {
+      "role": "companion",
+      "content": "Fair enough — we can leave it there. Thanks for saying it so plainly, and I hope the rest of your day is gentler."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yuk30a5wdaknx",
+    "conversation_id": "hurt__08",
+    "timestamp": "2026-06-09T18:21:38.639Z",
+    "user_words_raw": "dont really wanna count on him again",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "dismissed",
+    "secondary_emotions": [
+      "pressure"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "mentor stopped answering about PhD applications and a recommendation letter for 3 weeks",
+    "appraisal_thought": "I thought he believed in me, and now I'm not sure I even have a shot.",
+    "body_cue": [],
+    "behaviour_action": [
+      "pulling back",
+      "not wanting to count on him again"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "being seen",
+      "trust",
+      "support",
+      "reassurance"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User felt dismissed when someone important stopped responding about graduate school plans.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk if this app actually does anything but ok. my mentor kind of bailed on me"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a rough kind of letdown — maybe hurt, maybe annoyed. What did \"bailed on me\" look like here?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "letdown",
+      "body_cue": [],
+      "trigger": "mentor didn't show up or follow through"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "he was supposed to help me figure out the phd applications. like he said he'd write the rec letter and meet to plan it out. then he just. stopped answering. its been like 3 weeks"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like being left hanging after he said he'd show up. Did it land more as hurt, or more as feeling dismissed?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "let down",
+      "body_cue": [],
+      "trigger": "mentor stopped answering about PhD applications and recommendation letter for 3 weeks"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "dismissed i guess. like i thought he believed in me and now im not sure i even have a shot if my own advisor cant be bothered. deadlines are in like 2 months and i dont know whats happening with any of it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That feels dismissed, and also like the ground of the whole thing got shaky when the deadlines are so close. Does it feel more like a tight, urgent kind of hurt, or more like wanting to pull back and not rely on him anymore?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "dismissed",
+      "body_cue": [],
+      "trigger": "mentor stopped answering about PhD applications and recommendation letter for 3 weeks"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah more like pulling back. dont really wanna count on him again. anyway thats more than i expected to say to an app lol. gonna go"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Fair enough — we can leave it there. Thanks for saying it so plainly, and I hope the rest of your day is gentler.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "dismissed",
+      "body_cue": [],
+      "trigger": "mentor stopped answering about PhD applications and a recommendation letter for 3 weeks"
+    }
+  ]
+}

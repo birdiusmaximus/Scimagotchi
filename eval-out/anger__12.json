@@ -1,0 +1,215 @@
+{
+  "cid": "anger__12",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-09T18:17:37.791Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey there. how's your day going?"
+    },
+    {
+      "role": "companion",
+      "content": "Hey there — nice to see you. My day’s been steady so far; I’m here and curious about yours. How’s your day going?"
+    },
+    {
+      "role": "user",
+      "content": "yeah it's ok i guess. bit of a weird one honestly. been one of those days where small stuff just keeps piling up"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the kind of day that gets quietly heavy. Is it more like stressed and piled-on, or more irritated by all the little things?"
+    },
+    {
+      "role": "user",
+      "content": "honestly more irritated. like properly annoyed. my flatmate left the kitchen a complete state again. third time this week. dishes everywhere, pan still on the hob with stuff burnt into it"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — that sounds properly annoying, especially after the third time this week. Does it feel more like the irritation is in your body as tension or heat, or more like the urge to do something about it?"
+    },
+    {
+      "role": "user",
+      "content": "bit of both? like there's this tightness in my chest and i kind of just stood there staring at it. but it's not even really about the dishes is it. it's that i always end up being the one who deals with it. like why am i the only adult here"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like annoyed protest with a tight chest, and a strong sense of being stuck doing the adult part. What feels sharpest in it — the unfairness, the being left with it, or the \"why am I the only adult here\" part?"
+    },
+    {
+      "role": "user",
+      "content": "the unfairness for sure. i've mentioned it before, gently, and she just says 'oh yeah sorry' and nothing changes. so now i feel like a nag if i bring it up again but i'm also just quietly seething. and i hate that it makes me into this resentful person over a stupid frying pan"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the unfairness has turned into quiet seething, especially after the “sorry” doesn’t lead anywhere. We can leave it here if you want, or I’m curious whether the resentful part feels more like protection or just wearing you down."
+    },
+    {
+      "role": "user",
+      "content": "wearing me down i think. the protection bit was there at the start but now it's just tiring. i think i actually do need to say something properly though, not the gentle version. thanks for letting me get that out, it helped to untangle it a bit"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it sounds worn down now, with the protective edge having faded. We can leave it there, and I’m glad it helped untangle it a bit."
+    },
+    {
+      "role": "user",
+      "content": "yeah. think i'll go scrub that pan before i lose it completely ha. cheers, night"
+    },
+    {
+      "role": "companion",
+      "content": "Night — glad it got a bit clearer. I’ll leave it there."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ypt4zyrw89qff",
+    "conversation_id": "anger__12",
+    "timestamp": "2026-06-09T18:18:19.661Z",
+    "user_words_raw": "scrub that pan",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "resentful",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "flatmate repeatedly leaves the kitchen in a mess and says sorry without anything changing",
+    "appraisal_thought": "why am I the only adult here",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feeling worn down by repeated unfairness with someone close; wanted to say something properly, then chose to stop for the night.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey there. how's your day going?"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey there — nice to see you. My day’s been steady so far; I’m here and curious about yours. How’s your day going?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah it's ok i guess. bit of a weird one honestly. been one of those days where small stuff just keeps piling up"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like the kind of day that gets quietly heavy. Is it more like stressed and piled-on, or more irritated by all the little things?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "small stuff just keeps piling up"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "honestly more irritated. like properly annoyed. my flatmate left the kitchen a complete state again. third time this week. dishes everywhere, pan still on the hob with stuff burnt into it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Yeah — that sounds properly annoying, especially after the third time this week. Does it feel more like the irritation is in your body as tension or heat, or more like the urge to do something about it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "annoyed",
+      "body_cue": [],
+      "trigger": "flatmate leaving the kitchen a complete state again"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "bit of both? like there's this tightness in my chest and i kind of just stood there staring at it. but it's not even really about the dishes is it. it's that i always end up being the one who deals with it. like why am i the only adult here"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like annoyed protest with a tight chest, and a strong sense of being stuck doing the adult part. What feels sharpest in it — the unfairness, the being left with it, or the \"why am I the only adult here\" part?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [
+        "tightness in my chest"
+      ],
+      "trigger": "flatmate left the kitchen a complete state again"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "the unfairness for sure. i've mentioned it before, gently, and she just says 'oh yeah sorry' and nothing changes. so now i feel like a nag if i bring it up again but i'm also just quietly seething. and i hate that it makes me into this resentful person over a stupid frying pan"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like the unfairness has turned into quiet seething, especially after the “sorry” doesn’t lead anywhere. We can leave it here if you want, or I’m curious whether the resentful part feels more like protection or just wearing you down.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [
+        "tightness in my chest"
+      ],
+      "trigger": "flatmate says sorry and nothing changes after repeated kitchen mess"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "wearing me down i think. the protection bit was there at the start but now it's just tiring. i think i actually do need to say something properly though, not the gentle version. thanks for letting me get that out, it helped to untangle it a bit"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That makes sense — it sounds worn down now, with the protective edge having faded. We can leave it there, and I’m glad it helped untangle it a bit.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [
+        "tightness in my chest"
+      ],
+      "trigger": "flatmate repeatedly leaves the kitchen in a mess and says sorry without anything changing"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "yeah. think i'll go scrub that pan before i lose it completely ha. cheers, night"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "Night — glad it got a bit clearer. I’ll leave it there.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "resentful",
+      "body_cue": [],
+      "trigger": "flatmate repeatedly leaves the kitchen in a mess and says sorry without anything changing"
+    }
+  ]
+}

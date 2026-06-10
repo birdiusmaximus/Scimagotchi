@@ -1,0 +1,185 @@
+{
+  "cid": "shame__17",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-09T18:24:56.372Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "logging a feeling. been off all day"
+    },
+    {
+      "role": "companion",
+      "content": "Got it — something has felt off all day. Is it more like flat, uneasy, or just hard to pin down?"
+    },
+    {
+      "role": "user",
+      "content": "hard to pin down. embarrassed mostly. i said something dumb to my girlfriend"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like embarrassment, maybe with a bit of flatness around it. What did it seem to mean in that moment when you said it?"
+    },
+    {
+      "role": "user",
+      "content": "we were w her friends. i got insecure n made this jealous comment abt her ex. came out all wrong. felt like a kid"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds embarrassed and a bit insecure, and “felt like a kid” gives it a smaller, exposed shape. Does it make you want to hide, explain, or repair?"
+    },
+    {
+      "role": "user",
+      "content": "hide tbh. like i wanna disappear n not bring it up. but i also kinda wanna explain so she doesnt think im that guy"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the push and pull of wanting to disappear, and also wanting to explain so she doesn’t see you as “that guy.” Does it feel more like shame about you, or guilt about what you said?"
+    },
+    {
+      "role": "user",
+      "content": "shame abt me. like the comment was small but it made me feel like im not good enough for her. anyway. thats the feeling. logged it"
+    },
+    {
+      "role": "companion",
+      "content": "That lands as shame more than guilt — the comment was small, but it seemed to say something harsh about you. We can leave it there, or stay with what “not good enough for her” touches underneath."
+    },
+    {
+      "role": "user",
+      "content": "lets leave it there. dont wanna dig rn. thanks tho"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — we can leave it there. Thanks for trusting me with it."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yz7lrmrmouaa6",
+    "conversation_id": "shame__17",
+    "timestamp": "2026-06-09T18:25:27.648Z",
+    "user_words_raw": "not good enough for her",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "inadequate",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "said a jealous comment about her ex in front of her friends",
+    "appraisal_thought": "not good enough for her",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feeling of shame after a comment came out wrong in front of friends; wanted to hide and explain.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "logging a feeling. been off all day"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Got it — something has felt off all day. Is it more like flat, uneasy, or just hard to pin down?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "hard to pin down. embarrassed mostly. i said something dumb to my girlfriend"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like embarrassment, maybe with a bit of flatness around it. What did it seem to mean in that moment when you said it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "said something dumb to my girlfriend"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "we were w her friends. i got insecure n made this jealous comment abt her ex. came out all wrong. felt like a kid"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds embarrassed and a bit insecure, and “felt like a kid” gives it a smaller, exposed shape. Does it make you want to hide, explain, or repair?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "said a jealous comment about her ex while with her friends"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "hide tbh. like i wanna disappear n not bring it up. but i also kinda wanna explain so she doesnt think im that guy"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like the push and pull of wanting to disappear, and also wanting to explain so she doesn’t see you as “that guy.” Does it feel more like shame about you, or guilt about what you said?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "said a jealous comment about her ex in front of her friends"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "shame abt me. like the comment was small but it made me feel like im not good enough for her. anyway. thats the feeling. logged it"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That lands as shame more than guilt — the comment was small, but it seemed to say something harsh about you. We can leave it there, or stay with what “not good enough for her” touches underneath.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "inadequate",
+      "body_cue": [],
+      "trigger": "said a jealous comment about her ex in front of her friends"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "lets leave it there. dont wanna dig rn. thanks tho"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course — we can leave it there. Thanks for trusting me with it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "inadequate",
+      "body_cue": [],
+      "trigger": "said a jealous comment about her ex in front of her friends"
+    }
+  ]
+}

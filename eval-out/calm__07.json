@@ -1,0 +1,137 @@
+{
+  "cid": "calm__07",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-09T17:43:47.096Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. been kind of restless lately so figured id try this"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, I’m glad you tried it. Restless sounds like a real kind of energy to sit with — what’s it been like for you lately?"
+    },
+    {
+      "role": "user",
+      "content": "no actually restless isnt the right word. its more like. me and my girlfriend had this big talk last night about where things are going and i kept bracing for it to go bad but it didnt"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a lot of bracing, and then a strange kind of relief when it stayed okay. Was it more the waiting for it to go bad, or the talk itself that kept you on edge?"
+    },
+    {
+      "role": "user",
+      "content": "yeah relief is closer. the waiting mostly. weve been together two years and i thought she wanted out. turns out she just wanted to talk about moving in together. feel kind of settled now honestly"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — the waiting was carrying the weight, and now it’s settled. We can leave it there, or if you want, I can stay with that relief a little longer."
+    },
+    {
+      "role": "user",
+      "content": "nah were good. just needed to say it out loud i think. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — sometimes saying it out loud is the whole point. I’m glad you came by."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xiau6gilu8p6q",
+    "conversation_id": "calm__07",
+    "timestamp": "2026-06-09T17:44:05.828Z",
+    "user_words_raw": "needed to say it out loud",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "settled",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "A big talk with their girlfriend about where things are going, which turned out to be about moving in together",
+    "appraisal_thought": "I thought she wanted out, but she didn’t",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "User sometimes wants to just say a feeling out loud and leave it there.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. been kind of restless lately so figured id try this"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, I’m glad you tried it. Restless sounds like a real kind of energy to sit with — what’s it been like for you lately?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "restless",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "no actually restless isnt the right word. its more like. me and my girlfriend had this big talk last night about where things are going and i kept bracing for it to go bad but it didnt"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a lot of bracing, and then a strange kind of relief when it stayed okay. Was it more the waiting for it to go bad, or the talk itself that kept you on edge?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "bracing",
+      "body_cue": [],
+      "trigger": "a big talk with their girlfriend about where things are going"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah relief is closer. the waiting mostly. weve been together two years and i thought she wanted out. turns out she just wanted to talk about moving in together. feel kind of settled now honestly"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That makes sense — the waiting was carrying the weight, and now it’s settled. We can leave it there, or if you want, I can stay with that relief a little longer.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "A big talk with their girlfriend about where things are going, which turned out to be about moving in together"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "nah were good. just needed to say it out loud i think. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — sometimes saying it out loud is the whole point. I’m glad you came by.",
+      "stage": "named",
+      "unlocked": false,
+      "family": null,
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "A big talk with their girlfriend about where things are going, which turned out to be about moving in together"
+    }
+  ]
+}

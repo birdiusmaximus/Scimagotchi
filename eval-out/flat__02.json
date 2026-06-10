@@ -1,0 +1,142 @@
+{
+  "cid": "flat__02",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-09T18:25:48.504Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk why im even typing this. nothing really. just kind of nothing lately"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a kind of nothing that’s been hanging around. Does it feel more numb, blank, or just hard to name?"
+    },
+    {
+      "role": "user",
+      "content": "blank i guess. like im going thru the motions. wake up go to work come home and i dont feel anything about any of it. and theres this part of me thats almost glad i dont have to feel it but also like whats even the point of all of it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really blank and a bit detached, like you’re moving through the day on autopilot. I’m wondering if the main edge here is the blankness itself, or that quiet “what’s even the point” feeling?"
+    },
+    {
+      "role": "user",
+      "content": "the point thing i think. like i had this promotion i wanted for ages and i finally got it last month and i felt nothing. just nothing. and i keep thinking if that didnt do it then nothing will. im so tired of all of it honestly"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the point has gone very quiet, especially after something you wanted for so long. If you want, we can stay with that “nothing will” feeling for a moment, or leave it here."
+    },
+    {
+      "role": "user",
+      "content": "yeah i think i'll leave it here. dunno if this helped but at least i said it out loud kinda. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — saying it out loud can be its own kind of contact. I’ll leave it here with you."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z0bxaaueeeg8g",
+    "conversation_id": "flat__02",
+    "timestamp": "2026-06-09T18:26:09.973Z",
+    "user_words_raw": "nothing",
+    "emotion_status": "confirmed",
+    "emotion_family": "flat",
+    "emotion_shade": "blank",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "promotion after wanting it for ages",
+    "appraisal_thought": "if that didnt do it then nothing will",
+    "body_cue": [],
+    "behaviour_action": [
+      "going thru the motions"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "permission not to know",
+      "reduced pressure"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User often feels blank and detached after a long-wanted achievement; may want to leave things there after naming it.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk why im even typing this. nothing really. just kind of nothing lately"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a kind of nothing that’s been hanging around. Does it feel more numb, blank, or just hard to name?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "nothing",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "blank i guess. like im going thru the motions. wake up go to work come home and i dont feel anything about any of it. and theres this part of me thats almost glad i dont have to feel it but also like whats even the point of all of it"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds really blank and a bit detached, like you’re moving through the day on autopilot. I’m wondering if the main edge here is the blankness itself, or that quiet “what’s even the point” feeling?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "wake up go to work come home"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "the point thing i think. like i had this promotion i wanted for ages and i finally got it last month and i felt nothing. just nothing. and i keep thinking if that didnt do it then nothing will. im so tired of all of it honestly"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like the point has gone very quiet, especially after something you wanted for so long. If you want, we can stay with that “nothing will” feeling for a moment, or leave it here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "promotion after wanting it for ages"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah i think i'll leave it here. dunno if this helped but at least i said it out loud kinda. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — saying it out loud can be its own kind of contact. I’ll leave it here with you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "promotion after wanting it for ages"
+    }
+  ]
+}

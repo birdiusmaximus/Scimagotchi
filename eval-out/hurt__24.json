@@ -1,0 +1,272 @@
+{
+  "cid": "hurt__24",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-09T18:22:37.042Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk if these things actually do anything but ok"
+    },
+    {
+      "role": "companion",
+      "content": "It sounds a little doubtful, maybe even half-checked-out. What are you talking about?"
+    },
+    {
+      "role": "user",
+      "content": "i dont even know. my sister i guess. its dumb"
+    },
+    {
+      "role": "companion",
+      "content": "Not dumb — it sounds like your sister is the thing that’s pressing on this, even if you’re not sure how to name it yet. Does that feel more blank, annoyed, or hurt?"
+    },
+    {
+      "role": "user",
+      "content": "hurt i guess. idk. its our mums 60th and shes doing this whole big dinner thing and didnt tell me. like at all"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — that sounds hurt, and maybe left out too, because the dinner was happening without you being told. Does it feel more sharp, heavy, or quiet?"
+    },
+    {
+      "role": "user",
+      "content": "heavy. i found out from my cousin. my own cousin texted me asking what time i was coming and i had no clue what she meant. felt like an idiot"
+    },
+    {
+      "role": "companion",
+      "content": "Heavy makes sense here — and that “felt like an idiot” sounds like the sting of being left out and then finding out sideways. Did it make you want to pull back, ask, or go quiet?"
+    },
+    {
+      "role": "user",
+      "content": "pull back probably. thats what i do. but also like why does she always do this. she did the same thing at xmas planned everything with mum and i just get told where to show up. like im a guest at my own familys stuff"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds less like a one-off and more like a familiar kind of being kept at the edge — “a guest at my own family’s stuff.” Would you want to stay with what that brings up, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "stay i think. its just. i dont even know if shes doing it on purpose or if i just dont cross her mind. and i dont know which is worse honestly"
+    },
+    {
+      "role": "companion",
+      "content": "That uncertainty sounds brutal — not knowing whether it’s on purpose or just that you don’t cross her mind. Which part hurts more: the idea of being left out, or the idea of not mattering enough to be remembered?"
+    },
+    {
+      "role": "user",
+      "content": "the not being remembered one. yeah. like im the youngest and ive always sort of been the afterthought and i thought maybe as adults that would change but it just. didnt"
+    },
+    {
+      "role": "companion",
+      "content": "That lands like a deeper kind of hurt — the “afterthought” part, and then the disappointment that it still didn’t change as adults. Does it feel more like a sinking, a tightness, or a kind of numb pullback?"
+    },
+    {
+      "role": "user",
+      "content": "sinking. like in my chest. ugh i didnt think id actually feel anything talking to an app about this but ok. i dunno what i even do with it. i still have to show up to this dinner and pretend its fine"
+    },
+    {
+      "role": "companion",
+      "content": "That sinking in your chest sounds like it’s tying to the part of you that wanted to be remembered, and wasn’t. We can stay with that, or leave it there for now — which feels closer?"
+    },
+    {
+      "role": "user",
+      "content": "leave it there i think. ive said more than i meant to. this helped a bit actually. didnt expect that. anyway. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — I’m glad you told me, and we can leave it right here. Thanks for trusting me with it."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yw8r2gpn6h5mt",
+    "conversation_id": "hurt__24",
+    "timestamp": "2026-06-09T18:23:24.589Z",
+    "user_words_raw": "afterthought",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "unseen",
+    "secondary_emotions": [
+      "sadness"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "being told about family plans indirectly and feeling like an afterthought",
+    "appraisal_thought": "I don’t matter enough to be remembered or included.",
+    "body_cue": [
+      "sinking in my chest"
+    ],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "belonging",
+      "being seen",
+      "care",
+      "trust"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feels hurt when family plans are shared indirectly and they are left feeling like an afterthought.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk if these things actually do anything but ok"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "It sounds a little doubtful, maybe even half-checked-out. What are you talking about?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "doubtful",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i dont even know. my sister i guess. its dumb"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Not dumb — it sounds like your sister is the thing that’s pressing on this, even if you’re not sure how to name it yet. Does that feel more blank, annoyed, or hurt?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "doubtful",
+      "body_cue": [],
+      "trigger": "thinking about sister"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "hurt i guess. idk. its our mums 60th and shes doing this whole big dinner thing and didnt tell me. like at all"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Yeah — that sounds hurt, and maybe left out too, because the dinner was happening without you being told. Does it feel more sharp, heavy, or quiet?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "their sister planning a big dinner for their mum's 60th without telling them"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "heavy. i found out from my cousin. my own cousin texted me asking what time i was coming and i had no clue what she meant. felt like an idiot"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Heavy makes sense here — and that “felt like an idiot” sounds like the sting of being left out and then finding out sideways. Did it make you want to pull back, ask, or go quiet?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [
+        "heavy"
+      ],
+      "trigger": "learning about a big dinner for their mum's 60th from a cousin, after not being told by their sister"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "pull back probably. thats what i do. but also like why does she always do this. she did the same thing at xmas planned everything with mum and i just get told where to show up. like im a guest at my own familys stuff"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds less like a one-off and more like a familiar kind of being kept at the edge — “a guest at my own family’s stuff.” Would you want to stay with what that brings up, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [],
+      "trigger": "finding out about a family dinner through a cousin and being left out of the planning again"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "stay i think. its just. i dont even know if shes doing it on purpose or if i just dont cross her mind. and i dont know which is worse honestly"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That uncertainty sounds brutal — not knowing whether it’s on purpose or just that you don’t cross her mind. Which part hurts more: the idea of being left out, or the idea of not mattering enough to be remembered?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "unseen",
+      "body_cue": [],
+      "trigger": "Finding out about a family dinner through a cousin and not being told directly"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "the not being remembered one. yeah. like im the youngest and ive always sort of been the afterthought and i thought maybe as adults that would change but it just. didnt"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That lands like a deeper kind of hurt — the “afterthought” part, and then the disappointment that it still didn’t change as adults. Does it feel more like a sinking, a tightness, or a kind of numb pullback?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "unseen",
+      "body_cue": [],
+      "trigger": "Finding out about a family dinner through a cousin and not being told directly"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "sinking. like in my chest. ugh i didnt think id actually feel anything talking to an app about this but ok. i dunno what i even do with it. i still have to show up to this dinner and pretend its fine"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That sinking in your chest sounds like it’s tying to the part of you that wanted to be remembered, and wasn’t. We can stay with that, or leave it there for now — which feels closer?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "unseen",
+      "body_cue": [
+        "sinking in my chest"
+      ],
+      "trigger": "being told about family plans indirectly and feeling like an afterthought"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "leave it there i think. ive said more than i meant to. this helped a bit actually. didnt expect that. anyway. thanks"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Of course — I’m glad you told me, and we can leave it right here. Thanks for trusting me with it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "unseen",
+      "body_cue": [
+        "sinking in my chest"
+      ],
+      "trigger": "being told about family plans indirectly and feeling like an afterthought"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+import { ScrollViewStyleReset } from 'expo-router/html';
+import { type PropsWithChildren } from 'react';
+
+/**
+ * Web-only root HTML (Expo Router static web). This is where we load the Adobe
+ * Fonts (Typekit) kit `nvl5gki` — the Eixample display family — used for headings.
+ * Ignored on native, where headings fall back to the system face.
+ */
+export default function Root({ children }: PropsWithChildren) {
+  return (
+    <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="stylesheet" href="https://use.typekit.net/nvl5gki.css" />
+        <ScrollViewStyleReset />
+      </head>
+      <body>{children}</body>
+    </html>
+  );
+}

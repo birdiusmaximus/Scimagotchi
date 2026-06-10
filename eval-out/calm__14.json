@@ -1,0 +1,190 @@
+{
+  "cid": "calm__14",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-09T17:44:20.122Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. not really sure why im opening this but ive got a quiet moment and i wanted to write something down i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that makes sense. A quiet moment can be enough reason on its own; what’s on your mind, if anything?"
+    },
+    {
+      "role": "user",
+      "content": "its my dad. we havent really talked properly in like three years. stupid stuff that piled up. but he called last night and we just. talked. for an hour"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a lot quietly shifting at once. Was the hour more relieving, awkward, or something in between?"
+    },
+    {
+      "role": "user",
+      "content": "no it wasnt hurt really. thats the weird part. i woke up this morning and my chest just felt. lighter? like ive been bracing for something for three years and i didnt even notice til it stopped"
+    },
+    {
+      "role": "companion",
+      "content": "That lighter chest sounds like a release after a long time bracing. Does it feel more like relief, or like surprise at noticing how much you’d been holding?"
+    },
+    {
+      "role": "user",
+      "content": "relief mostly. we didnt even fix anything?? we just talked about dumb normal stuff, the garden, his knee surgery. but it felt like the door isnt locked anymore. i can breathe near it"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like relief with the door unlatched, even if nothing got “fixed.” Does it feel like something you want to stay with for a bit, or is that enough for now?"
+    },
+    {
+      "role": "user",
+      "content": "i think i just wanted to say it out loud somewhere. that it happened. that im allowed to feel okay about it without it meaning everythings perfect now"
+    },
+    {
+      "role": "companion",
+      "content": "That feels very clear — you wanted a place to let it count, without turning it into “everything’s perfect.” We can leave it here, or stay with what it changes for you a little longer if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it here. thank you. genuinely. i feel better having put it somewhere. gonna go call him back actually"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it had a place to land. Go make that call, and we can leave this here."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xizsx60hg7dex",
+    "conversation_id": "calm__14",
+    "timestamp": "2026-06-09T17:44:53.498Z",
+    "user_words_raw": "put it somewhere",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "settled",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "Talking with his dad after three years of not really talking properly",
+    "appraisal_thought": "I can feel okay about this without pretending everything is fixed",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User felt relief after reconnecting with dad after a long gap.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. not really sure why im opening this but ive got a quiet moment and i wanted to write something down i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that makes sense. A quiet moment can be enough reason on its own; what’s on your mind, if anything?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "its my dad. we havent really talked properly in like three years. stupid stuff that piled up. but he called last night and we just. talked. for an hour"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a lot quietly shifting at once. Was the hour more relieving, awkward, or something in between?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "something in between",
+      "body_cue": [],
+      "trigger": "their dad called and they talked for an hour after three years of not really talking properly"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "no it wasnt hurt really. thats the weird part. i woke up this morning and my chest just felt. lighter? like ive been bracing for something for three years and i didnt even notice til it stopped"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That lighter chest sounds like a release after a long time bracing. Does it feel more like relief, or like surprise at noticing how much you’d been holding?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "relief",
+      "body_cue": [
+        "lighter chest"
+      ],
+      "trigger": "their dad called and they talked for an hour after three years of not really talking properly"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "relief mostly. we didnt even fix anything?? we just talked about dumb normal stuff, the garden, his knee surgery. but it felt like the door isnt locked anymore. i can breathe near it"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That feels like relief with the door unlatched, even if nothing got “fixed.” Does it feel like something you want to stay with for a bit, or is that enough for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "relief",
+      "body_cue": [
+        "lighter chest",
+        "i can breathe near it"
+      ],
+      "trigger": "their dad called and they talked for an hour after three years of not really talking properly"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i think i just wanted to say it out loud somewhere. that it happened. that im allowed to feel okay about it without it meaning everythings perfect now"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That feels very clear — you wanted a place to let it count, without turning it into “everything’s perfect.” We can leave it here, or stay with what it changes for you a little longer if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "Talking with his dad after three years of not really talking properly"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it here. thank you. genuinely. i feel better having put it somewhere. gonna go call him back actually"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad it had a place to land. Go make that call, and we can leave this here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "Talking with his dad after three years of not really talking properly"
+    }
+  ]
+}

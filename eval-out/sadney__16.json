@@ -1,0 +1,75 @@
+{
+  "cid": "sadney__16",
+  "emotion": "sadney",
+  "persona": null,
+  "created": "2026-06-09T18:20:09.816Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "both? like i pulled back but only cause it felt like she already left out. i saw on instagram they all went to that lake place last weekend, the one we always said wed go to together. and im just sitting here like was any of it even real to her or was it just me"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like hurt and maybe anger on top of it — pulled back because it already felt like you’d been left out. Was the sharpest part seeing the lake place without you, or the question of whether it was real to her?"
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yt2zrivaahbzb",
+    "conversation_id": "sadney__16",
+    "timestamp": "2026-06-09T18:20:11.751Z",
+    "user_words_raw": "pulled back",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "left out",
+    "secondary_emotions": [
+      "anger"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "seeing on Instagram that they went to the lake place you had both planned to go to",
+    "appraisal_thought": "was any of it even real to her or was it just me",
+    "body_cue": [],
+    "behaviour_action": [
+      "pulled back"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "belonging",
+      "being seen",
+      "trust",
+      "honesty",
+      "closeness"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "feeling left out after seeing others go somewhere they had planned together",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "both? like i pulled back but only cause it felt like she already left out. i saw on instagram they all went to that lake place last weekend, the one we always said wed go to together. and im just sitting here like was any of it even real to her or was it just me"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like hurt and maybe anger on top of it — pulled back because it already felt like you’d been left out. Was the sharpest part seeing the lake place without you, or the question of whether it was real to her?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [],
+      "trigger": "seeing on Instagram that they went to the lake place you had both planned to go to"
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "cid": "pressure__22",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-09T17:47:00.983Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont even know why im here honestly. just feels like everything is piling up and i cant keep up"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really piled up and hard to keep up with. Is it feeling more like pressure, overwhelm, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "overwhelm i guess. like theres too much and not enough of me. every morning i wake up already behind"
+    },
+    {
+      "role": "companion",
+      "content": "“Not enough of me” and waking up already behind makes it sound really heavy. Does it feel more rushed, trapped, or just flooded?"
+    },
+    {
+      "role": "user",
+      "content": "flooded. like the dishes are still in the sink from two days ago and theres laundry on the chair and my mom keeps calling and i havent called her back and i just stand in the kitchen and cant pick where to start"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds flooded, with everything crowding in at once and nothing opening up first. Does it make you want to freeze, rush, or walk away?"
+    },
+    {
+      "role": "user",
+      "content": "freeze. completely. i just scroll my phone instead and then hate myself for it because now its even later and nothing got done. and then the whole cycle again tomorrow"
+    },
+    {
+      "role": "companion",
+      "content": "That freeze-then-scroll loop sounds really stuck and hard on you. Is the sharpest part the freeze itself, or the way it turns into hating yourself afterward?"
+    },
+    {
+      "role": "user",
+      "content": "the hating myself part. because i KNOW its not even that much. like its dishes. its a phone call. people deal with way worse and just do it. why cant i just do it. whats wrong with me"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the harshest part is what you say to yourself afterward. Is it more shame, or more frustration at yourself?"
+    },
+    {
+      "role": "user",
+      "content": "shame probably. like its not just im tired its that im failing at being a person. my mom calls and i let it ring because i dont have anything good to tell her. i dont want her to hear me like this. shes already worried about me"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like shame, and also wanting to keep her from hearing you this way. Is the sharp edge more about failing at being a person, or about being seen by her like this?"
+    },
+    {
+      "role": "user",
+      "content": "being seen by her. she did everything right. raised me on her own working two jobs and never once let the house fall apart. and im sitting here at 31 unable to wash a plate. how do i even tell her that. she'd be so disappointed"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the seeing part is carrying the most weight, with disappointment hanging over it. Want to stay with what it feels like to imagine telling her, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "maybe leave it there. i think i scared myself a little saying it out loud. but it helped. i didnt realize the dishes werent really about the dishes"
+    },
+    {
+      "role": "companion",
+      "content": "I'm glad it helped to say it out loud, and we can leave it there. It sounds like it wasn't really the dishes so much as what they seemed to say about you."
+    },
+    {
+      "role": "user",
+      "content": "yeah. exactly that. thank you. im gonna go wash one plate. just one. and maybe text my mom back. ok bye"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it was about what the dishes seemed to say about you. We can leave it here, and I’ll take your \"just one plate\" as a small, careful step."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xmg0enenl2puq",
+    "conversation_id": "pressure__22",
+    "timestamp": "2026-06-09T17:47:46.685Z",
+    "user_words_raw": "the dishes werent really about the dishes",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "shame",
+    "secondary_emotions": [
+      "hurt"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "thinking about mom hearing how they're doing and imagining disappointment",
+    "appraisal_thought": "I'm failing at being a person; she'd be disappointed if she knew",
+    "body_cue": [],
+    "behaviour_action": [
+      "let it ring",
+      "wash one plate"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "acceptance",
+      "dignity",
+      "belonging",
+      "understanding"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Shame is strongly tied to being seen by mother and fear of disappointing her.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont even know why im here honestly. just feels like everything is piling up and i cant keep up"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds really piled up and hard to keep up with. Is it feeling more like pressure, overwhelm, or something else?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "overwhelm i guess. like theres too much and not enough of me. every morning i wake up already behind"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "“Not enough of me” and waking up already behind makes it sound really heavy. Does it feel more rushed, trapped, or just flooded?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "waking up already behind; too much to keep up with"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "flooded. like the dishes are still in the sink from two days ago and theres laundry on the chair and my mom keeps calling and i havent called her back and i just stand in the kitchen and cant pick where to start"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds flooded, with everything crowding in at once and nothing opening up first. Does it make you want to freeze, rush, or walk away?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "flooded",
+      "body_cue": [],
+      "trigger": "too many unfinished tasks and calls, standing in the kitchen unable to start"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "freeze. completely. i just scroll my phone instead and then hate myself for it because now its even later and nothing got done. and then the whole cycle again tomorrow"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That freeze-then-scroll loop sounds really stuck and hard on you. Is the sharpest part the freeze itself, or the way it turns into hating yourself afterward?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "frozen",
+      "body_cue": [],
+      "trigger": "too many unfinished tasks and calls, standing in the kitchen unable to choose where to start"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "the hating myself part. because i KNOW its not even that much. like its dishes. its a phone call. people deal with way worse and just do it. why cant i just do it. whats wrong with me"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like the harshest part is what you say to yourself afterward. Is it more shame, or more frustration at yourself?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "unfinished chores and a phone call piling up; getting stuck in the kitchen and then comparing yourself to other people"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "shame probably. like its not just im tired its that im failing at being a person. my mom calls and i let it ring because i dont have anything good to tell her. i dont want her to hear me like this. shes already worried about me"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels like shame, and also wanting to keep her from hearing you this way. Is the sharp edge more about failing at being a person, or about being seen by her like this?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "unfinished chores and a phone call piling up"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "being seen by her. she did everything right. raised me on her own working two jobs and never once let the house fall apart. and im sitting here at 31 unable to wash a plate. how do i even tell her that. she'd be so disappointed"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds like the seeing part is carrying the most weight, with disappointment hanging over it. Want to stay with what it feels like to imagine telling her, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "seeing their mom and imagining her disappointment"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "maybe leave it there. i think i scared myself a little saying it out loud. but it helped. i didnt realize the dishes werent really about the dishes"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "I'm glad it helped to say it out loud, and we can leave it there. It sounds like it wasn't really the dishes so much as what they seemed to say about you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "imagining their mom hearing how they're doing and feeling disappointed"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "yeah. exactly that. thank you. im gonna go wash one plate. just one. and maybe text my mom back. ok bye"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "That makes sense — it was about what the dishes seemed to say about you. We can leave it here, and I’ll take your \"just one plate\" as a small, careful step.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "thinking about mom hearing how they're doing and imagining disappointment"
+    }
+  ]
+}

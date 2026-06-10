@@ -1,0 +1,195 @@
+{
+  "cid": "hurt__10",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-09T18:21:35.237Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. i dont really know how to do this lol. i guess im just kind of having a rough one. my body has been letting me down lately and im tired of it"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that sounds like a rough one. I’m hearing some tiredness and disappointment with your body; does that feel more like feeling let down, worn down, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "let down yeah. but also kind of betrayed?? like by my own body sounds dumb. i got diagnosed with this autoimmune thing in february and ive been doing everything right. the diet the meds all of it. and last week the bloodwork came back and its worse not better. i just sat in the car after and couldnt even drive"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound dumb at all — “betrayed” fits the sting of doing everything right and still getting worse bloodwork. Is it more heavy, shocked, or furious when that lands?"
+    },
+    {
+      "role": "user",
+      "content": "furious and heavy at the same time?? if that makes sense. like im so angry but i also just want to lie down and not move. and the thing is i havent even told my partner how bad the numbers are. he keeps saying youre doing amazing babe and i just nod. cause if i say it out loud that it isnt working then its real. and i feel like i let HIM down too somehow which is so backwards i know"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — furious and heavy, with that “if I say it out loud then it’s real” feeling. It sounds like the bad numbers are landing as both betrayal and a kind of letting-him-down; does that fit?"
+    },
+    {
+      "role": "user",
+      "content": "yeah it fits. its weird carrying both. like im mad at my body for quitting on me when i did my part you know but then im also scared that everyones gonna be disappointed when they find out the plan didnt work. my mom calls every sunday asking are the new meds helping and i just say slowly getting there. i dont even know who im protecting anymore. them or me"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a lot to carry — the anger at your body and the fear of disappointing people both at once. I’m wondering if there’s something under the shielding too, like wanting to protect them, protect yourself, or both?"
+    },
+    {
+      "role": "user",
+      "content": "i think... if im honest its both but mostly me. like if i keep it light then i dont have to actually sit in the fact that i might not get better. saying it slow is just protecting myself from the part where i grieve the old body i had. the one that didnt need a pill organiser at 34. ugh. i didnt expect to say all that"
+    },
+    {
+      "role": "companion",
+      "content": "That’s a big truth to say out loud — protecting yourself from the grief of the old body, and that “ugh” of not expecting to say it. If you want, we can leave it here, or stay with what that grief is like for you right now."
+    },
+    {
+      "role": "user",
+      "content": "yeah i think i wanna leave it there for now. thats kind of a lot to have looked at all at once. but honestly it helped to just say the betrayed and the grieving thing instead of pretending its fine. maybe ill actually tell my partner the real numbers this week. idk. thank you for this. ok im gonna go lie down x"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a real place to pause. I’m glad you could say the betrayed and grieving part out loud; go lie down and rest a bit."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yuwj30545snmd",
+    "conversation_id": "hurt__10",
+    "timestamp": "2026-06-09T18:22:12.527Z",
+    "user_words_raw": "betrayed",
+    "emotion_status": "confirmed",
+    "emotion_family": "sadness",
+    "emotion_shade": "grieving",
+    "secondary_emotions": [
+      "hurt",
+      "anger"
+    ],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "bloodwork came back worse after doing everything right with meds and diet",
+    "appraisal_thought": "my body is letting me down and the old body is gone",
+    "body_cue": [],
+    "behaviour_action": [
+      "lie down"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "recognition",
+      "permission to grieve",
+      "rest",
+      "care"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User is dealing with worsening bloodwork after an autoimmune diagnosis and is grieving their old body.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. i dont really know how to do this lol. i guess im just kind of having a rough one. my body has been letting me down lately and im tired of it"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that sounds like a rough one. I’m hearing some tiredness and disappointment with your body; does that feel more like feeling let down, worn down, or something else?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "disappointed",
+      "body_cue": [],
+      "trigger": "body has been letting them down lately"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "let down yeah. but also kind of betrayed?? like by my own body sounds dumb. i got diagnosed with this autoimmune thing in february and ive been doing everything right. the diet the meds all of it. and last week the bloodwork came back and its worse not better. i just sat in the car after and couldnt even drive"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That doesn’t sound dumb at all — “betrayed” fits the sting of doing everything right and still getting worse bloodwork. Is it more heavy, shocked, or furious when that lands?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "sadness",
+      "shade": "betrayed",
+      "body_cue": [],
+      "trigger": "bloodwork came back worse despite doing everything right"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "furious and heavy at the same time?? if that makes sense. like im so angry but i also just want to lie down and not move. and the thing is i havent even told my partner how bad the numbers are. he keeps saying youre doing amazing babe and i just nod. cause if i say it out loud that it isnt working then its real. and i feel like i let HIM down too somehow which is so backwards i know"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That makes sense — furious and heavy, with that “if I say it out loud then it’s real” feeling. It sounds like the bad numbers are landing as both betrayal and a kind of letting-him-down; does that fit?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "betrayed",
+      "body_cue": [],
+      "trigger": "bloodwork came back worse despite doing everything right"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah it fits. its weird carrying both. like im mad at my body for quitting on me when i did my part you know but then im also scared that everyones gonna be disappointed when they find out the plan didnt work. my mom calls every sunday asking are the new meds helping and i just say slowly getting there. i dont even know who im protecting anymore. them or me"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like a lot to carry — the anger at your body and the fear of disappointing people both at once. I’m wondering if there’s something under the shielding too, like wanting to protect them, protect yourself, or both?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "betrayed",
+      "body_cue": [],
+      "trigger": "bloodwork came back worse despite doing everything right"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i think... if im honest its both but mostly me. like if i keep it light then i dont have to actually sit in the fact that i might not get better. saying it slow is just protecting myself from the part where i grieve the old body i had. the one that didnt need a pill organiser at 34. ugh. i didnt expect to say all that"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That’s a big truth to say out loud — protecting yourself from the grief of the old body, and that “ugh” of not expecting to say it. If you want, we can leave it here, or stay with what that grief is like for you right now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grieving",
+      "body_cue": [],
+      "trigger": "seeing that the new meds and effort haven’t improved the bloodwork"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah i think i wanna leave it there for now. thats kind of a lot to have looked at all at once. but honestly it helped to just say the betrayed and the grieving thing instead of pretending its fine. maybe ill actually tell my partner the real numbers this week. idk. thank you for this. ok im gonna go lie down x"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels like a real place to pause. I’m glad you could say the betrayed and grieving part out loud; go lie down and rest a bit.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grieving",
+      "body_cue": [],
+      "trigger": "bloodwork came back worse after doing everything right with meds and diet"
+    }
+  ]
+}

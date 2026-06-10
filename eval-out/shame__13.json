@@ -1,0 +1,195 @@
+{
+  "cid": "shame__13",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-09T18:24:52.415Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. um idk why im even opening this lol"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — no need to know the reason perfectly. We can just start wherever this is coming from."
+    },
+    {
+      "role": "user",
+      "content": "i mean its nothing serious. just money stuff. everyone's broke right haha"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, money stuff can still feel like a lot, even when it’s not “serious.” Is it more annoying, stressful, or just the whole broke-everyone thing?"
+    },
+    {
+      "role": "user",
+      "content": "idk. dont really wanna get into it tbh. its dumb. i borrowed money off my little brother and still havent paid it back"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound dumb to me — it sounds like it’s sitting a bit heavy. Would you want to leave it there, or stay with what makes it feel heavy?"
+    },
+    {
+      "role": "user",
+      "content": "ugh i guess. its like he's 24 and somehow has his stuff together more than me. lent me 600 quid back in feb for rent and i keep 'forgetting' to bring it up. cant even look at him properly at sunday dinners lol"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds embarrassing in a really pointed way — like it’s not just the money, but being seen next to him. Does it make you want to hide, explain, or put it off?"
+    },
+    {
+      "role": "user",
+      "content": "put it off 100%. its like if i bring it up i have to admit i still cant afford it. easier to just crack jokes and change the subject. feels like im the older one who's meant to have it figured out but i dont"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the sting is as much about being the older one who’s meant to have it figured out as the money itself. Does it feel more like embarrassment, or something harsher than that?"
+    },
+    {
+      "role": "user",
+      "content": "yeah harsher. like im failing at being a proper adult or whatever. anyway thats prob enough digging for one night lol. ngl this helped a bit. cheers"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it sounds like it lands as failing at being a proper adult, not just embarrassment. We can leave it here for tonight if you want."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yz4kbr1nmtxua",
+    "conversation_id": "shame__13",
+    "timestamp": "2026-06-09T18:25:22.563Z",
+    "user_words_raw": "failing at being a proper adult",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "failing",
+    "secondary_emotions": [
+      "embarrassed"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "Borrowing money from their little brother and still not paying it back",
+    "appraisal_thought": "I'm failing at being a proper adult",
+    "body_cue": [],
+    "behaviour_action": [
+      "put it off",
+      "crack jokes",
+      "change the subject"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "dignity",
+      "acceptance",
+      "repair"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feels shame around owing money to a younger sibling and comparing themselves to him",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. um idk why im even opening this lol"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — no need to know the reason perfectly. We can just start wherever this is coming from.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i mean its nothing serious. just money stuff. everyone's broke right haha"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Yeah, money stuff can still feel like a lot, even when it’s not “serious.” Is it more annoying, stressful, or just the whole broke-everyone thing?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "stressful",
+      "body_cue": [],
+      "trigger": "money stuff and noticing that everyone is broke"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "idk. dont really wanna get into it tbh. its dumb. i borrowed money off my little brother and still havent paid it back"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That doesn’t sound dumb to me — it sounds like it’s sitting a bit heavy. Would you want to leave it there, or stay with what makes it feel heavy?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "borrowing money from their little brother and still not paying it back"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "ugh i guess. its like he's 24 and somehow has his stuff together more than me. lent me 600 quid back in feb for rent and i keep 'forgetting' to bring it up. cant even look at him properly at sunday dinners lol"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds embarrassing in a really pointed way — like it’s not just the money, but being seen next to him. Does it make you want to hide, explain, or put it off?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "Borrowing money from their little brother and still not paying it back"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "put it off 100%. its like if i bring it up i have to admit i still cant afford it. easier to just crack jokes and change the subject. feels like im the older one who's meant to have it figured out but i dont"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like the sting is as much about being the older one who’s meant to have it figured out as the money itself. Does it feel more like embarrassment, or something harsher than that?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "Borrowing money from their little brother and still not paying it back"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah harsher. like im failing at being a proper adult or whatever. anyway thats prob enough digging for one night lol. ngl this helped a bit. cheers"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That makes sense — it sounds like it lands as failing at being a proper adult, not just embarrassment. We can leave it here for tonight if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "failing",
+      "body_cue": [],
+      "trigger": "Borrowing money from their little brother and still not paying it back"
+    }
+  ]
+}

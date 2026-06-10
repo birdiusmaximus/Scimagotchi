@@ -1,0 +1,267 @@
+{
+  "cid": "flat__20",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-09T18:27:34.576Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. wasn't sure if id actually open this but here i am i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — glad you opened it. What’s been going on that brought you here?"
+    },
+    {
+      "role": "user",
+      "content": "honestly not sure how to answer that. nothings really wrong wrong. work is fine, the people around me are fine. i just feel kind of... flat? like im watching everything from behind glass"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds more like flat and distant than like something clearly wrong. Does it feel more numb, disconnected, or just hard to reach?"
+    },
+    {
+      "role": "user",
+      "content": "numb i think. disconnected too. its been since the diagnosis honestly. they found something on a scan a few weeks ago and ive just been. nothing. everyone keeps asking how im holding up and i dont have an answer because i dont feel anything about it"
+    },
+    {
+      "role": "companion",
+      "content": "Numb and disconnected makes sense here, especially after a diagnosis and a scan finding. Is it more like nothing is getting through, or like the feeling is there but far away?"
+    },
+    {
+      "role": "user",
+      "content": "nothing getting through i think. like there should be fear right? thats the normal thing. and i can name it, i can say the words 'i might be sick' but theres no... drop in my stomach. nothing. i sat in the parking lot after the appointment and just felt completely blank"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds very blank — you can say the words, but the feeling doesn’t land. Is it more like your body goes quiet, or like you go a bit far away from it?"
+    },
+    {
+      "role": "user",
+      "content": "i go far away from it. like im narrating someone elses life. i did all the research, i made a folder, i scheduled the follow up biopsy like its a dentist appointment. very calm and organized. and part of me wonders if thats just me coping or if something in me has actually shut off"
+    },
+    {
+      "role": "companion",
+      "content": "It sounds like far away and very organized, with something maybe shut off after the diagnosis. Did it start to feel that way right after the appointment, or only once the follow-up was real?"
+    },
+    {
+      "role": "user",
+      "content": "it crept in after. the appointment itself i remember feeling my heart going. but then i got home and it was like a switch flipped and ive just been gliding ever since. i think im scared that when the numbness wears off whatevers underneath is going to be a lot"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a switch flipped after you got home, and underneath there may be something a lot bigger waiting. If you want, we can stay with that fear of what comes back, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "maybe just a little longer. its weird to even type this out. i havent said the numb part to anyone. everyone wants me to be brave or falling apart and i dont fit either. i just feel like a flat line on a monitor that should be beeping"
+    },
+    {
+      "role": "companion",
+      "content": "That flat line image says a lot — not brave, not falling apart, just not registering. Does that feel more lonely, or more unreal?"
+    },
+    {
+      "role": "user",
+      "content": "unreal mostly. but lonely underneath that i guess. like im the only one who knows the volumes been turned all the way down. i dont know. saying it here helped a bit. didnt expect that"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds mostly unreal, with lonely underneath — like the volume’s been turned way down and only you can tell. We can leave it there, or stay with the loneliness a little longer if you want."
+    },
+    {
+      "role": "user",
+      "content": "i think ill leave it there for tonight. thank you for not telling me how i should be feeling. i might come back. gonna go sit with the quiet for a bit"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a gentle place to stop for tonight. I’ll be here if you come back and want to pick it up again."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z2lj6n2vet1yx",
+    "conversation_id": "flat__20",
+    "timestamp": "2026-06-09T18:28:42.508Z",
+    "user_words_raw": "sit with the quiet",
+    "emotion_status": "confirmed",
+    "emotion_family": "flat",
+    "emotion_shade": "quiet",
+    "secondary_emotions": [
+      "hurt"
+    ],
+    "valence": "mixed",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "after the appointment and the follow-up becoming real",
+    "appraisal_thought": "I don’t fit either brave or falling apart",
+    "body_cue": [],
+    "behaviour_action": [
+      "sit with the quiet"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "permission not to know",
+      "quiet",
+      "lower demand"
+    ],
+    "confidence_level": "medium",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "After a medical appointment, they felt numb/unreal and later shared it had helped to say it out loud.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. wasn't sure if id actually open this but here i am i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — glad you opened it. What’s been going on that brought you here?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "honestly not sure how to answer that. nothings really wrong wrong. work is fine, the people around me are fine. i just feel kind of... flat? like im watching everything from behind glass"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds more like flat and distant than like something clearly wrong. Does it feel more numb, disconnected, or just hard to reach?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "numb i think. disconnected too. its been since the diagnosis honestly. they found something on a scan a few weeks ago and ive just been. nothing. everyone keeps asking how im holding up and i dont have an answer because i dont feel anything about it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Numb and disconnected makes sense here, especially after a diagnosis and a scan finding. Is it more like nothing is getting through, or like the feeling is there but far away?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": "since the diagnosis and a scan finding a few weeks ago"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "nothing getting through i think. like there should be fear right? thats the normal thing. and i can name it, i can say the words 'i might be sick' but theres no... drop in my stomach. nothing. i sat in the parking lot after the appointment and just felt completely blank"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds very blank — you can say the words, but the feeling doesn’t land. Is it more like your body goes quiet, or like you go a bit far away from it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "the diagnosis and scan finding a few weeks ago"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i go far away from it. like im narrating someone elses life. i did all the research, i made a folder, i scheduled the follow up biopsy like its a dentist appointment. very calm and organized. and part of me wonders if thats just me coping or if something in me has actually shut off"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "It sounds like far away and very organized, with something maybe shut off after the diagnosis. Did it start to feel that way right after the appointment, or only once the follow-up was real?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "the diagnosis and scan finding a few weeks ago"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "it crept in after. the appointment itself i remember feeling my heart going. but then i got home and it was like a switch flipped and ive just been gliding ever since. i think im scared that when the numbness wears off whatevers underneath is going to be a lot"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like a switch flipped after you got home, and underneath there may be something a lot bigger waiting. If you want, we can stay with that fear of what comes back, or leave it here for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "scared",
+      "body_cue": [
+        "heart going"
+      ],
+      "trigger": "getting home after the appointment and the diagnosis felt real"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "maybe just a little longer. its weird to even type this out. i havent said the numb part to anyone. everyone wants me to be brave or falling apart and i dont fit either. i just feel like a flat line on a monitor that should be beeping"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That flat line image says a lot — not brave, not falling apart, just not registering. Does that feel more lonely, or more unreal?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "after the diagnosis and telling people how they’re holding up"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "unreal mostly. but lonely underneath that i guess. like im the only one who knows the volumes been turned all the way down. i dont know. saying it here helped a bit. didnt expect that"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That sounds mostly unreal, with lonely underneath — like the volume’s been turned way down and only you can tell. We can leave it there, or stay with the loneliness a little longer if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unreal",
+      "body_cue": [],
+      "trigger": "after the diagnosis and telling people how they’re holding up"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "i think ill leave it there for tonight. thank you for not telling me how i should be feeling. i might come back. gonna go sit with the quiet for a bit"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "That feels like a gentle place to stop for tonight. I’ll be here if you come back and want to pick it up again.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "quiet",
+      "body_cue": [],
+      "trigger": "after the appointment and the follow-up becoming real"
+    }
+  ]
+}

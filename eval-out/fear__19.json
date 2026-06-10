@@ -1,0 +1,265 @@
+{
+  "cid": "fear__19",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-09T17:37:19.661Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "role": "companion",
+      "content": "Hi — good to see you. What’s been going on today?"
+    },
+    {
+      "role": "user",
+      "content": "nothing really. just kind of a weird day i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds a bit hazy and hard to pin down. Does it feel more weird, flat, or just off?"
+    },
+    {
+      "role": "user",
+      "content": "idk. off maybe. i keep getting this knot in my stomach and i cant tell why"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like an off kind of feeling with a knot in your stomach. Does it seem more like uneasy, tense, or just hard to read?"
+    },
+    {
+      "role": "user",
+      "content": "tense. like im bracing for something. theres this work thing on monday and i cant stop thinking about it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds tense and braced, with monday hanging over it. Does it feel more like pressure, worry, or both?"
+    },
+    {
+      "role": "user",
+      "content": "worry mostly. they want me to present to the whole department and i just keep thinking everyones gonna realise i dont actually know what im doing"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like worry with a sharp edge of being exposed. Is the hardest part the presentation itself, or the thought that they’ll see you as not knowing?"
+    },
+    {
+      "role": "user",
+      "content": "the second one. ive been there two years and i still feel like i snuck in somehow. like one good presentation and theyll finally see i belong or one bad one and the whole thing falls apart"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like worry tied to belonging, with a very fragile sense of “I belong.” Does it feel more like pressure to prove yourself, or fear that one mistake could crack everything?"
+    },
+    {
+      "role": "user",
+      "content": "fear that one mistake cracks everything. its stupid i know. logically im fine at my job. but it never feels like enough. like im always one slip from being found out"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like fear of being found out, with everything feeling one slip away. We can stay with it here, or if you want, we can look at what “found out” seems to mean to you."
+    },
+    {
+      "role": "user",
+      "content": "i dont know if i can look at that right now. its a lot. i think i just needed to say it out loud to someone"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense; we can leave it here for now. I’m glad you said it out loud."
+    },
+    {
+      "role": "user",
+      "content": "yeah. thanks for listening. ill try again later maybe"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that sounds like enough for now. We can come back to it later if you want."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6x9zc59ffs2war",
+    "conversation_id": "fear__19",
+    "timestamp": "2026-06-09T17:38:02.255Z",
+    "user_words_raw": "one slip from being found out",
+    "emotion_status": "confirmed",
+    "emotion_family": "fear",
+    "emotion_shade": "fear of being found out",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "being asked to present to the whole department on Monday",
+    "appraisal_thought": "one mistake could crack everything",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "reassurance",
+      "certainty",
+      "support"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Worries about being exposed at work, especially around presentations.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hi — good to see you. What’s been going on today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "nothing really. just kind of a weird day i guess"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds a bit hazy and hard to pin down. Does it feel more weird, flat, or just off?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "off",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "idk. off maybe. i keep getting this knot in my stomach and i cant tell why"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like an off kind of feeling with a knot in your stomach. Does it seem more like uneasy, tense, or just hard to read?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "off",
+      "body_cue": [
+        "knot in my stomach"
+      ],
+      "trigger": null
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "tense. like im bracing for something. theres this work thing on monday and i cant stop thinking about it"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds tense and braced, with monday hanging over it. Does it feel more like pressure, worry, or both?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "tense",
+      "body_cue": [
+        "knot in my stomach"
+      ],
+      "trigger": "the work thing on monday"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "worry mostly. they want me to present to the whole department and i just keep thinking everyones gonna realise i dont actually know what im doing"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like worry with a sharp edge of being exposed. Is the hardest part the presentation itself, or the thought that they’ll see you as not knowing?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "worried",
+      "body_cue": [],
+      "trigger": "being asked to present to the whole department on Monday"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "the second one. ive been there two years and i still feel like i snuck in somehow. like one good presentation and theyll finally see i belong or one bad one and the whole thing falls apart"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like worry tied to belonging, with a very fragile sense of “I belong.” Does it feel more like pressure to prove yourself, or fear that one mistake could crack everything?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "worried",
+      "body_cue": [],
+      "trigger": "being asked to present to the whole department on Monday"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "fear that one mistake cracks everything. its stupid i know. logically im fine at my job. but it never feels like enough. like im always one slip from being found out"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds like fear of being found out, with everything feeling one slip away. We can stay with it here, or if you want, we can look at what “found out” seems to mean to you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "scared",
+      "body_cue": [],
+      "trigger": "being asked to present to the whole department on Monday"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "i dont know if i can look at that right now. its a lot. i think i just needed to say it out loud to someone"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That makes sense; we can leave it here for now. I’m glad you said it out loud.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "fear of being found out",
+      "body_cue": [],
+      "trigger": "being asked to present to the whole department on Monday"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "yeah. thanks for listening. ill try again later maybe"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Yeah, that sounds like enough for now. We can come back to it later if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "fear of being found out",
+      "body_cue": [],
+      "trigger": "being asked to present to the whole department on Monday"
+    }
+  ]
+}

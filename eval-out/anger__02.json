@@ -1,0 +1,161 @@
+{
+  "cid": "anger__02",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-09T18:17:04.533Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ugh i dont even know why im opening this. just had the worst morning"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds rough. I’m wondering if it feels more like pressure, hurt, or just a heavy kind of morning?"
+    },
+    {
+      "role": "user",
+      "content": "honestly its anger. my flatmate ate the leftovers i was literally saving for lunch today, like the box had my name on it. but also im kind of annoyed at myself for caring this much over food its so stupid"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound stupid at all — I’m hearing anger, and maybe a bit of self-directed annoyance too. Was it more the leftovers themselves, or the feeling of your space not being respected?"
+    },
+    {
+      "role": "user",
+      "content": "yeah its the not being respected thing. its not even the first time. i label stuff and they just... dont care. and then i feel like the annoying flatmate for bringing it up so i just dont say anything which makes it worse"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — that sounds like protest at being dismissed, and then that extra sting of feeling like the “annoying flatmate” for speaking up. Does it go more quiet and resentful, or more hot and ready to push back?"
+    },
+    {
+      "role": "user",
+      "content": "more quiet and resentful tbh. i just go silent and stew. ok saying it out loud it does feel a bit lighter though. maybe ill just actually say something to them tonight. thanks for this"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — quiet resentment can sit heavy until it’s named. We can leave it there, or if you want, we can stay with what it is asking for underneath."
+    },
+    {
+      "role": "user",
+      "content": "nah lets leave it there for now. i feel better. thanks again, gonna go make some actual lunch lol"
+    },
+    {
+      "role": "companion",
+      "content": "Glad we could leave it there. Hope lunch is better than the leftovers situation lol."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yp3o5xlfjdhmm",
+    "conversation_id": "anger__02",
+    "timestamp": "2026-06-09T18:17:31.126Z",
+    "user_words_raw": "make some actual lunch",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "resentful",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "flatmate repeatedly ignores labeled leftovers and boundaries",
+    "appraisal_thought": "my space isn’t being respected",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feeling eased after naming resentment about a flatmate repeatedly ignoring labeled food.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ugh i dont even know why im opening this. just had the worst morning"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds rough. I’m wondering if it feels more like pressure, hurt, or just a heavy kind of morning?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "worst",
+      "body_cue": [],
+      "trigger": "the morning"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "honestly its anger. my flatmate ate the leftovers i was literally saving for lunch today, like the box had my name on it. but also im kind of annoyed at myself for caring this much over food its so stupid"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That doesn’t sound stupid at all — I’m hearing anger, and maybe a bit of self-directed annoyance too. Was it more the leftovers themselves, or the feeling of your space not being respected?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "annoyed",
+      "body_cue": [],
+      "trigger": "flatmate ate the leftovers they were saving for lunch"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah its the not being respected thing. its not even the first time. i label stuff and they just... dont care. and then i feel like the annoying flatmate for bringing it up so i just dont say anything which makes it worse"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Yeah — that sounds like protest at being dismissed, and then that extra sting of feeling like the “annoying flatmate” for speaking up. Does it go more quiet and resentful, or more hot and ready to push back?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "dismissed",
+      "body_cue": [],
+      "trigger": "flatmate repeatedly ignores labeled leftovers and boundaries"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "more quiet and resentful tbh. i just go silent and stew. ok saying it out loud it does feel a bit lighter though. maybe ill just actually say something to them tonight. thanks for this"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — quiet resentment can sit heavy until it’s named. We can leave it there, or if you want, we can stay with what it is asking for underneath.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [],
+      "trigger": "flatmate repeatedly ignores labeled leftovers and boundaries"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "nah lets leave it there for now. i feel better. thanks again, gonna go make some actual lunch lol"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Glad we could leave it there. Hope lunch is better than the leftovers situation lol.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "resentful",
+      "body_cue": [],
+      "trigger": "flatmate repeatedly ignores labeled leftovers and boundaries"
+    }
+  ]
+}

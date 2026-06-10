@@ -1,0 +1,194 @@
+{
+  "cid": "anger__11",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-09T18:17:33.783Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont really know what im doing here. work stuff i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds a bit unsure, maybe even aimless around work. What’s been on your mind there?"
+    },
+    {
+      "role": "user",
+      "content": "its fine. just my manager. nothing new really"
+    },
+    {
+      "role": "companion",
+      "content": "Got it — more of a familiar work thing than a fresh one. We can leave it there, or if you want, I can stay with what “just my manager” feels like to you."
+    },
+    {
+      "role": "user",
+      "content": "i dunno. he took credit for the thing i built. again. in front of the whole team. and i just sat there"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds hurtful and stuck, especially with it happening again in front of everyone. Does it feel more like hurt, anger, or something shut down?"
+    },
+    {
+      "role": "user",
+      "content": "not hurt. angry. i spent three weekends on that dashboard and he says we like its his. and i didnt say anything cause whats the point"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — that sounds like anger, and maybe a kind of worn-down “what’s the point” feeling underneath it. What does that anger make you want to do, if anything?"
+    },
+    {
+      "role": "user",
+      "content": "part of me wants to just stop trying. let him present his own broken stuff for once. but i wont. ill just keep doing it and being invisible"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like frustrated protest turning into something quieter and more resigned — like you’re still carrying it, but no longer expecting it to be seen. Want to stay with what being “invisible” means for you here, or leave it there for now?"
+    },
+    {
+      "role": "user",
+      "content": "leave it there i think. ive said more than i meant to. thanks tho"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — we can leave it right there. Thanks for trusting me with it."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ypq52w9xgc3o2",
+    "conversation_id": "anger__11",
+    "timestamp": "2026-06-09T18:18:08.544Z",
+    "user_words_raw": "being invisible",
+    "emotion_status": "confirmed",
+    "emotion_family": "anger",
+    "emotion_shade": "resigned",
+    "secondary_emotions": [
+      "frustration"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "manager took credit for the thing they built in front of the whole team",
+    "appraisal_thought": "what's the point",
+    "body_cue": [],
+    "behaviour_action": [
+      "stop trying",
+      "keep doing it"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "recognition",
+      "respect",
+      "fairness"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feeling invisible at work when a manager takes credit for their work.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont really know what im doing here. work stuff i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds a bit unsure, maybe even aimless around work. What’s been on your mind there?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "work stuff"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "its fine. just my manager. nothing new really"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Got it — more of a familiar work thing than a fresh one. We can leave it there, or if you want, I can stay with what “just my manager” feels like to you.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "work stuff"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "i dunno. he took credit for the thing i built. again. in front of the whole team. and i just sat there"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds hurtful and stuck, especially with it happening again in front of everyone. Does it feel more like hurt, anger, or something shut down?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "he took credit for the thing i built again in front of the whole team"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "not hurt. angry. i spent three weekends on that dashboard and he says we like its his. and i didnt say anything cause whats the point"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Yeah — that sounds like anger, and maybe a kind of worn-down “what’s the point” feeling underneath it. What does that anger make you want to do, if anything?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "he took credit for the thing i built again in front of the whole team"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "part of me wants to just stop trying. let him present his own broken stuff for once. but i wont. ill just keep doing it and being invisible"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like frustrated protest turning into something quieter and more resigned — like you’re still carrying it, but no longer expecting it to be seen. Want to stay with what being “invisible” means for you here, or leave it there for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "he took credit for the thing i built again in front of the whole team"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "leave it there i think. ive said more than i meant to. thanks tho"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course — we can leave it right there. Thanks for trusting me with it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resigned",
+      "body_cue": [],
+      "trigger": "manager took credit for the thing they built in front of the whole team"
+    }
+  ]
+}

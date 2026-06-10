@@ -1,0 +1,143 @@
+{
+  "cid": "joy__02",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-09T17:41:51.455Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so i think i did a good thing today but also kind of want to crawl into a hole lol. i finally said hi to my neighbor"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a good thing that still felt a bit exposing. Was it more the ‘I did it’ feeling, or the ‘crawl into a hole’ part that was louder?"
+    },
+    {
+      "role": "user",
+      "content": "honestly both at the same time?? like im weirdly proud bc i never do that, ive lived here almost a year and just kept my head down everytime. but also now im cringing thinking did i sound weird, i think i said the weather was nice which omg"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like proud and cringey at once — a good thing that also made you feel exposed. Did the cringing feel more like embarrassment, or more like second-guessing yourself?"
+    },
+    {
+      "role": "user",
+      "content": "more like second guessing i think. but ngl talking about it the proud part is kinda winning now. she smiled back and said something about the dog so like. it was fine. it was actually nice"
+    },
+    {
+      "role": "companion",
+      "content": "It sounds like the proud part has taken the lead, and the whole thing settled into something nice. We can leave it there, or I’m curious what it felt like when she smiled back?"
+    },
+    {
+      "role": "user",
+      "content": "it felt like a tiny win honestly, warm? lol ok i think im good, i just wanted to write it down before i talked myself out of feeling good about it. thank u, this helped"
+    },
+    {
+      "role": "companion",
+      "content": "A tiny win, warm — and worth keeping hold of. We can leave it there, and I’m glad you wrote it down before it slipped away."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xftewrelgf74r",
+    "conversation_id": "joy__02",
+    "timestamp": "2026-06-09T17:42:11.815Z",
+    "user_words_raw": "tiny win",
+    "emotion_status": "confirmed",
+    "emotion_family": "joy",
+    "emotion_shade": "proud",
+    "secondary_emotions": [
+      "calm"
+    ],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "said hi to the neighbor and got a smile back",
+    "appraisal_thought": "it was fine. it was actually nice",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "belonging",
+      "recognition"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feeling proud after a small social moment that went better than expected.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so i think i did a good thing today but also kind of want to crawl into a hole lol. i finally said hi to my neighbor"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a good thing that still felt a bit exposing. Was it more the ‘I did it’ feeling, or the ‘crawl into a hole’ part that was louder?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "finally said hi to my neighbor"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "honestly both at the same time?? like im weirdly proud bc i never do that, ive lived here almost a year and just kept my head down everytime. but also now im cringing thinking did i sound weird, i think i said the weather was nice which omg"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like proud and cringey at once — a good thing that also made you feel exposed. Did the cringing feel more like embarrassment, or more like second-guessing yourself?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "finally said hi to my neighbor"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "more like second guessing i think. but ngl talking about it the proud part is kinda winning now. she smiled back and said something about the dog so like. it was fine. it was actually nice"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "It sounds like the proud part has taken the lead, and the whole thing settled into something nice. We can leave it there, or I’m curious what it felt like when she smiled back?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "finally said hi to my neighbor"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "it felt like a tiny win honestly, warm? lol ok i think im good, i just wanted to write it down before i talked myself out of feeling good about it. thank u, this helped"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "A tiny win, warm — and worth keeping hold of. We can leave it there, and I’m glad you wrote it down before it slipped away.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "said hi to the neighbor and got a smile back"
+    }
+  ]
+}

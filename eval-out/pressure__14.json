@@ -1,0 +1,185 @@
+{
+  "cid": "pressure__14",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-09T17:46:18.589Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. i dont really know why im here. just feeling kind of crushed lately and needed somewhere to put it i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Hey. “Crushed” feels like the main thing here — maybe heavy, worn down, or just too much to carry. Does that fit at all?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. crushed fits. its like everyone needs a piece of me and theres nothing left. my mom got out of the hospital two weeks ago and im the one doing everything now"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a lot landing on you at once — like everything is being asked of you and there isn’t room left for you. Is it more the amount, the responsibility, or feeling alone in it?"
+    },
+    {
+      "role": "user",
+      "content": "alone mostly. i have a brother but he just calls to ask how shes doing and then goes back to his life. im the one driving her to appointments, sorting her meds, cooking. and i still have my own kids and a job. i dont even know when i last sat down"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds so stretched and अके? You’re carrying the driving, meds, cooking, your kids, and your job, with barely a moment to sit down. Does it feel more like being trapped, or like being pulled in every direction?"
+    },
+    {
+      "role": "user",
+      "content": "pulled in every direction. like the second i finish one thing theres three more. and if i stop even for a minute i feel guilty, like im letting someone down. my daughter asked me to help with her science project last night and i just snapped at her. i felt awful"
+    },
+    {
+      "role": "companion",
+      "content": "Pulled in every direction, and then the guilt lands on top of it — that sounds really hard. I’m wondering if the awful part is more the snapping itself, or feeling like there was nowhere else for that to go?"
+    },
+    {
+      "role": "user",
+      "content": "nowhere for it to go. thats exactly it. its all just sitting in me with no outlet. i love them all i do but im scared theres not enough of me to go around and someones gonna get the worst of me. probably already are"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a frightening kind of squeezed-in feeling — caring a lot, and also not having enough room for it anywhere else. We can stay with that, or leave it here for now; what feels right?"
+    },
+    {
+      "role": "user",
+      "content": "i think leave it here for now. i didnt expect to but just saying it out loud helped a little. ill come back. thank you"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — I’m glad you said it out loud, and we can leave it here. I’ll be here when you come back."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xlj5b7vl5fb6p",
+    "conversation_id": "pressure__14",
+    "timestamp": "2026-06-09T17:46:53.417Z",
+    "user_words_raw": "saying it out loud helped a little",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "squeezed-in",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "Having to carry everyone’s needs with no outlet while already stretched thin",
+    "appraisal_thought": "There’s not enough of me to go around, and someone may get the worst of me.",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User may return after needing to put a crowded caregiving feeling into words.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. i dont really know why im here. just feeling kind of crushed lately and needed somewhere to put it i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey. “Crushed” feels like the main thing here — maybe heavy, worn down, or just too much to carry. Does that fit at all?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "crushed",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah. crushed fits. its like everyone needs a piece of me and theres nothing left. my mom got out of the hospital two weeks ago and im the one doing everything now"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a lot landing on you at once — like everything is being asked of you and there isn’t room left for you. Is it more the amount, the responsibility, or feeling alone in it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "crushed",
+      "body_cue": [],
+      "trigger": "mom got out of the hospital two weeks ago and the user is doing everything now"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "alone mostly. i have a brother but he just calls to ask how shes doing and then goes back to his life. im the one driving her to appointments, sorting her meds, cooking. and i still have my own kids and a job. i dont even know when i last sat down"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds so stretched and अके? You’re carrying the driving, meds, cooking, your kids, and your job, with barely a moment to sit down. Does it feel more like being trapped, or like being pulled in every direction?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "stretched",
+      "body_cue": [],
+      "trigger": "mom got out of the hospital two weeks ago and the user is doing everything now"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "pulled in every direction. like the second i finish one thing theres three more. and if i stop even for a minute i feel guilty, like im letting someone down. my daughter asked me to help with her science project last night and i just snapped at her. i felt awful"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Pulled in every direction, and then the guilt lands on top of it — that sounds really hard. I’m wondering if the awful part is more the snapping itself, or feeling like there was nowhere else for that to go?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "stretched",
+      "body_cue": [],
+      "trigger": "Being asked for help with a science project while already carrying care, work, and family demands"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "nowhere for it to go. thats exactly it. its all just sitting in me with no outlet. i love them all i do but im scared theres not enough of me to go around and someones gonna get the worst of me. probably already are"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like a frightening kind of squeezed-in feeling — caring a lot, and also not having enough room for it anywhere else. We can stay with that, or leave it here for now; what feels right?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "squeezed-in",
+      "body_cue": [],
+      "trigger": "Having to carry everyone’s needs with no outlet while already stretched thin"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "i think leave it here for now. i didnt expect to but just saying it out loud helped a little. ill come back. thank you"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course — I’m glad you said it out loud, and we can leave it here. I’ll be here when you come back.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "squeezed-in",
+      "body_cue": [],
+      "trigger": "Having to carry everyone’s needs with no outlet while already stretched thin"
+    }
+  ]
+}

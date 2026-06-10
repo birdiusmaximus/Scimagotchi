@@ -1,0 +1,143 @@
+{
+  "cid": "pressure__08",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-09T17:46:02.339Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk if these things even work but ok. i just feel like theres too much going on rn"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like pressure, maybe a bit flooded. Is it more like too much to do, too much happening, or both?"
+    },
+    {
+      "role": "user",
+      "content": "both i guess. my contract ends in like 8 weeks and i have no idea whats next. cant really plan anything"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really flooded — the ending and the not-knowing are both taking up space. Does it feel more like rushed, trapped, or just stretched thin?"
+    },
+    {
+      "role": "user",
+      "content": "stretched thin yeah. like im job hunting and still doing the actual job and everyone keeps asking what my plans are and i dont have an answer"
+    },
+    {
+      "role": "companion",
+      "content": "That does sound stretched thin — job hunting, doing the job, and having to answer before you have one. Does it make you want to speed up, shut down, or just escape the questions?"
+    },
+    {
+      "role": "user",
+      "content": "escape the questions probably lol. anyway this helped a little more than i thought. gonna get back to it. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — the questions sound like the part you want to get away from. We can leave it here for now, and if you want, you can come back to it another time."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xl6syk8m17zj6",
+    "conversation_id": "pressure__08",
+    "timestamp": "2026-06-09T17:46:23.837Z",
+    "user_words_raw": "escape the questions",
+    "emotion_status": "confirmed",
+    "emotion_family": "pressure",
+    "emotion_shade": "stretched thin",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "job hunting while still doing the actual job, with people asking about plans before there's an answer",
+    "appraisal_thought": "I don't have an answer yet",
+    "body_cue": [],
+    "behaviour_action": [
+      "escape the questions"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "clarity",
+      "permission to pause"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Work transition feels stretched thin, especially around having to answer questions before there is a plan.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk if these things even work but ok. i just feel like theres too much going on rn"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like pressure, maybe a bit flooded. Is it more like too much to do, too much happening, or both?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "flooded",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "both i guess. my contract ends in like 8 weeks and i have no idea whats next. cant really plan anything"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds really flooded — the ending and the not-knowing are both taking up space. Does it feel more like rushed, trapped, or just stretched thin?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "flooded",
+      "body_cue": [],
+      "trigger": "contract ending in about 8 weeks; uncertainty about what comes next and not being able to plan"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "stretched thin yeah. like im job hunting and still doing the actual job and everyone keeps asking what my plans are and i dont have an answer"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That does sound stretched thin — job hunting, doing the job, and having to answer before you have one. Does it make you want to speed up, shut down, or just escape the questions?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "stretched thin",
+      "body_cue": [],
+      "trigger": "contract ending in about 8 weeks, job hunting, still doing the actual job, people asking what the plans are"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "escape the questions probably lol. anyway this helped a little more than i thought. gonna get back to it. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — the questions sound like the part you want to get away from. We can leave it here for now, and if you want, you can come back to it another time.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "stretched thin",
+      "body_cue": [],
+      "trigger": "job hunting while still doing the actual job, with people asking about plans before there's an answer"
+    }
+  ]
+}

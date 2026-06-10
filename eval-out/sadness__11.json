@@ -1,0 +1,195 @@
+{
+  "cid": "sadness__11",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-09T18:19:31.202Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. not really sure how to use this"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that’s okay. You can just talk normally, or name a feeling if one shows up; I’ll follow your lead."
+    },
+    {
+      "role": "user",
+      "content": "i dunno. work stuff i guess. its fine its whatever"
+    },
+    {
+      "role": "companion",
+      "content": "Work stuff, but it feels more like “fine, whatever” than something clear. Is it more brushed-off, tired, or just hard to pin down?"
+    },
+    {
+      "role": "user",
+      "content": "tired mostly. they gave the promotion to someone else. i found out tuesday in a group email of all things"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like tired with a sting to it, especially finding out in a group email. Does it feel more disappointed, hurt, or just worn down?"
+    },
+    {
+      "role": "user",
+      "content": "honestly all of it. i stayed late for two years on that team. covered for everyone. and they didnt even tell me first. like i wasnt worth a heads up"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really disappointing and hurt, especially after how much you gave them. Does it feel more like a hollow drop in your chest, or more like wanting to pull away?"
+    },
+    {
+      "role": "user",
+      "content": "pull away i think. ive just been quiet at my desk. dont really wanna talk to any of them. feels stupid to be this upset over a job"
+    },
+    {
+      "role": "companion",
+      "content": "Pulling back makes sense here — it sounds hurt and disappointed, with a bit of shame around being “this upset.” We can leave it here, or stay with what this is asking for underneath if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there for now. that actually helped a bit. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Of course. I’m glad it helped a bit — we can leave it there."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ys8qnll5exz1t",
+    "conversation_id": "sadness__11",
+    "timestamp": "2026-06-09T18:20:00.912Z",
+    "user_words_raw": "not worth a heads up",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "hurt",
+    "secondary_emotions": [
+      "sadness",
+      "shame"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "They gave the promotion to someone else, and the user found out in a group email after two years of staying late and covering for everyone.",
+    "appraisal_thought": "like i wasnt worth a heads up",
+    "body_cue": [],
+    "behaviour_action": [
+      "pull away",
+      "quiet at my desk"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "being seen",
+      "respect",
+      "repair"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feeling hurt and brushed aside after a promotion was announced by group email.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. not really sure how to use this"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that’s okay. You can just talk normally, or name a feeling if one shows up; I’ll follow your lead.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i dunno. work stuff i guess. its fine its whatever"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Work stuff, but it feels more like “fine, whatever” than something clear. Is it more brushed-off, tired, or just hard to pin down?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "work stuff"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "tired mostly. they gave the promotion to someone else. i found out tuesday in a group email of all things"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like tired with a sting to it, especially finding out in a group email. Does it feel more disappointed, hurt, or just worn down?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "disappointed",
+      "body_cue": [],
+      "trigger": "they gave the promotion to someone else, and you found out in a group email"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "honestly all of it. i stayed late for two years on that team. covered for everyone. and they didnt even tell me first. like i wasnt worth a heads up"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds really disappointing and hurt, especially after how much you gave them. Does it feel more like a hollow drop in your chest, or more like wanting to pull away?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "They gave the promotion to someone else and the user found out in a group email after two years of staying late and covering for everyone."
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "pull away i think. ive just been quiet at my desk. dont really wanna talk to any of them. feels stupid to be this upset over a job"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Pulling back makes sense here — it sounds hurt and disappointed, with a bit of shame around being “this upset.” We can leave it here, or stay with what this is asking for underneath if you want.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "They gave the promotion to someone else and the user found out in a group email after two years of staying late and covering for everyone."
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it there for now. that actually helped a bit. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course. I’m glad it helped a bit — we can leave it there.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "They gave the promotion to someone else, and the user found out in a group email after two years of staying late and covering for everyone."
+    }
+  ]
+}

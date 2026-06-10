@@ -1,0 +1,257 @@
+{
+  "cid": "flat__24",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-09T18:27:47.540Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk why im even typing this. my sister keeps texting me about the family thing this weekend and i just feel nothing about it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really flat and far away. Does it feel more numb, blank, or just hard to name?"
+    },
+    {
+      "role": "user",
+      "content": "blank i guess. like everyone else gets excited or stressed or whatever and im just. there. watching it happen. not really sure these apps do anything but my therapist said try journaling so"
+    },
+    {
+      "role": "companion",
+      "content": "Blank makes sense here — like you’re there, but a bit on the outside of it. Does it feel more like nothing is getting through, or like you’re watching it happen from a distance?"
+    },
+    {
+      "role": "user",
+      "content": "from a distance. yeah. its the dinner this weekend. its my dads thing, his 60th, everyones flying in. and i just keep thinking i should care more and i dont and that feels worse than anything honestly"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like distance plus a sharp kind of self-judgment about not caring enough. Do you want to stay with that part, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "no i can stay. i think. its weird typing to a thing but ok. the not caring isnt new with him. its been like this for years. ever since the stuff with my mom he just kind of checked out and so did i and now we do this fake warm thing at holidays and i smile and i feel completely empty doing it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really empty and a bit split between the smile and what you actually feel. Is the stronger part the emptiness, or the fake-warm feeling?"
+    },
+    {
+      "role": "user",
+      "content": "the emptiness. the fake warm is just the costume. underneath theres just. nothing. and i used to feel SO much about him when i was a kid, like i adored him, and idk where that went. it just turned off at some point and i didnt even notice it leaving"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a turn-off that happened so quietly you only noticed the empty space after. Would you like to stay with that, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "stay i guess. its the only place ive said any of this out loud. sort of. my sister thinks im cold. she does all the emotional labor with him and i just show up and leave. and maybe she's right maybe i am cold. but it doesnt feel like cold from in here it feels like a power outage"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds more like a power outage than cold — not a lack of care, but a cut in what reaches you. Is it more blank, shut down, or just hard to get at?"
+    },
+    {
+      "role": "user",
+      "content": "shut down probably. like it tripped a breaker years ago to protect something and just never flipped back. huh. i havent thought about it like that. that its protecting me from something. ok the power outage thing actually got me a little. didnt expect that from an app ngl"
+    },
+    {
+      "role": "companion",
+      "content": "That lands like something in it made sense, even if it surprised you. We can stay with the shut-down part, or if you want, I can help you look at what it might be protecting you from."
+    },
+    {
+      "role": "user",
+      "content": "maybe not tonight. i think thats a therapist thing not a 11pm phone thing. but ill sit with the breaker idea. its more than i usually get out of these. i still dont know how im gonna get through saturday but i feel a tiny bit less broken about not feeling anything. thats something"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a place to rest with it for tonight. Saturday can stay unanswered for now, and the breaker idea can just sit there."
+    },
+    {
+      "role": "user",
+      "content": "yeah. ok. thanks, weirdly. night"
+    },
+    {
+      "role": "companion",
+      "content": "Night. I’m glad it could sit a little easier before you went."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z2vrej1845nfh",
+    "conversation_id": "flat__24",
+    "timestamp": "2026-06-09T18:28:38.215Z",
+    "user_words_raw": "sat with the breaker idea",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "shut down",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "his 60th birthday dinner this weekend and the years around what happened with his mom",
+    "appraisal_thought": "my shut-down might be protecting me from something",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User uses a 'breaker' image for shut-down around a family member and a difficult upcoming family event.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk why im even typing this. my sister keeps texting me about the family thing this weekend and i just feel nothing about it"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds really flat and far away. Does it feel more numb, blank, or just hard to name?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": "sister keeps texting about the family thing this weekend"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "blank i guess. like everyone else gets excited or stressed or whatever and im just. there. watching it happen. not really sure these apps do anything but my therapist said try journaling so"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Blank makes sense here — like you’re there, but a bit on the outside of it. Does it feel more like nothing is getting through, or like you’re watching it happen from a distance?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "sister keeps texting about the family thing this weekend"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "from a distance. yeah. its the dinner this weekend. its my dads thing, his 60th, everyones flying in. and i just keep thinking i should care more and i dont and that feels worse than anything honestly"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like distance plus a sharp kind of self-judgment about not caring enough. Do you want to stay with that part, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "should care more",
+      "body_cue": [],
+      "trigger": "the dinner this weekend for your dad’s 60th, with everyone flying in"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "no i can stay. i think. its weird typing to a thing but ok. the not caring isnt new with him. its been like this for years. ever since the stuff with my mom he just kind of checked out and so did i and now we do this fake warm thing at holidays and i smile and i feel completely empty doing it"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds really empty and a bit split between the smile and what you actually feel. Is the stronger part the emptiness, or the fake-warm feeling?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "the dinner this weekend for his dad’s 60th, with everyone flying in"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "the emptiness. the fake warm is just the costume. underneath theres just. nothing. and i used to feel SO much about him when i was a kid, like i adored him, and idk where that went. it just turned off at some point and i didnt even notice it leaving"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like a turn-off that happened so quietly you only noticed the empty space after. Would you like to stay with that, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "empty",
+      "body_cue": [],
+      "trigger": "the shift after the stuff with his mom, and the family dinner this weekend"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "stay i guess. its the only place ive said any of this out loud. sort of. my sister thinks im cold. she does all the emotional labor with him and i just show up and leave. and maybe she's right maybe i am cold. but it doesnt feel like cold from in here it feels like a power outage"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds more like a power outage than cold — not a lack of care, but a cut in what reaches you. Is it more blank, shut down, or just hard to get at?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "his 60th birthday dinner this weekend; the long shift after what happened with his mom and how his dad checked out"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "shut down probably. like it tripped a breaker years ago to protect something and just never flipped back. huh. i havent thought about it like that. that its protecting me from something. ok the power outage thing actually got me a little. didnt expect that from an app ngl"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That lands like something in it made sense, even if it surprised you. We can stay with the shut-down part, or if you want, I can help you look at what it might be protecting you from.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "shut down",
+      "body_cue": [],
+      "trigger": "his 60th birthday dinner this weekend and the years around what happened with his mom"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "maybe not tonight. i think thats a therapist thing not a 11pm phone thing. but ill sit with the breaker idea. its more than i usually get out of these. i still dont know how im gonna get through saturday but i feel a tiny bit less broken about not feeling anything. thats something"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That feels like a place to rest with it for tonight. Saturday can stay unanswered for now, and the breaker idea can just sit there.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "shut down",
+      "body_cue": [],
+      "trigger": "his 60th birthday dinner this weekend and the years around what happened with his mom"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "yeah. ok. thanks, weirdly. night"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Night. I’m glad it could sit a little easier before you went.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "shut down",
+      "body_cue": [],
+      "trigger": "his 60th birthday dinner this weekend and the years around what happened with his mom"
+    }
+  ]
+}

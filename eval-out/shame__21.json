@@ -1,0 +1,264 @@
+{
+  "cid": "shame__21",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-09T18:25:38.069Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. um. not really sure what im doing here lol"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that’s completely fine. We can just take it as it comes; what’s on your mind today?"
+    },
+    {
+      "role": "user",
+      "content": "idk honestly. probably nothing. just been a weird week at work and someone told me to like journal or whatever. this is sort of that?"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, this can be a bit like that. Maybe we can just keep it loose for now — what made the week at work feel weird?"
+    },
+    {
+      "role": "user",
+      "content": "ha. weird is doing a lot of heavy lifting there. dunno. nothing exploded. nobody yelled. it was very normal which is somehow worse lol"
+    },
+    {
+      "role": "companion",
+      "content": "That has a strained, off-balance feel to it — like “normal” wasn’t actually settling. Was it more frustration, unease, or just this weird flatness?"
+    },
+    {
+      "role": "user",
+      "content": "lol you're going to make me actually say it huh. ok. so i got passed over for this thing. a lead role on a project i basically built. they gave it to someone i trained. and everyone was super nice about it which is the part thats killing me"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like hurt with a sharp kind of frustration — especially because the nice tone is what’s stinging. What part is loudest right now, the being passed over or the ‘super nice about it’ part?"
+    },
+    {
+      "role": "user",
+      "content": "neither really. the loud part is quieter than that. its more like... maybe they were right? like maybe i was never actually the guy. i just felt like the guy. and now everyones too polite to say i was kidding myself"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a quieter hurt, mixed with something like shame — as if the hard part is what it seemed to say about you. Does that feel closer, or is it more like being unseen and quietly set aside?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. the shame one. ugh i hate that word but yeah. its embarrassing. i told people i was up for it. my partner threw out the idea of like celebrating early. and now i have to walk around the office training the person who got it and acting normal about it"
+    },
+    {
+      "role": "companion",
+      "content": "That feels exposed and embarrassing, like the moment is asking you to keep your face on while it still burns. Does it make you want to hide, explain, or just go quiet?"
+    },
+    {
+      "role": "user",
+      "content": "hide. one hundred percent hide. like i keep doing this thing where i make a joke about it before anyone else can. 'oh well guess they saw through me ha' and everyone laughs and i feel like i beat them to it but then i go home and feel like garbage anyway"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — the joke sounds like a way to take the sting first, before anyone else can. Is it the kind of shame that wants to keep you protected, even while it leaves you feeling rough afterward?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. i guess if im the one laughing then it doesnt count as them rejecting me. it's just me being funny. except it does still count. it counts the whole drive home"
+    },
+    {
+      "role": "companion",
+      "content": "Yes — it still counts on the drive home, even if the joke gets there first. Do you want to stay with that part, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "nah i think im good. that's probably enough feelings for one tuesday lol. thanks tho. this was weirdly less awful than i thought it'd be. ok bye"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that’s enough for one Tuesday. I’m glad it felt a bit less awful than you expected — bye for now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z0409kh665ghj",
+    "conversation_id": "shame__21",
+    "timestamp": "2026-06-09T18:26:29.137Z",
+    "user_words_raw": "that's probably enough feelings for one tuesday",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "self-protective",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "being passed over for a lead role on a project they built, then training the person who got it",
+    "appraisal_thought": "maybe they were right; maybe i was never actually the guy",
+    "body_cue": [],
+    "behaviour_action": [
+      "make a joke about it before anyone else can",
+      "hide"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "dignity",
+      "belonging",
+      "acceptance"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "A shame feeling came up around being passed over for a role they wanted, and they use humor to protect themselves.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. um. not really sure what im doing here lol"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that’s completely fine. We can just take it as it comes; what’s on your mind today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "idk honestly. probably nothing. just been a weird week at work and someone told me to like journal or whatever. this is sort of that?"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Yeah, this can be a bit like that. Maybe we can just keep it loose for now — what made the week at work feel weird?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": "a weird week at work"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "ha. weird is doing a lot of heavy lifting there. dunno. nothing exploded. nobody yelled. it was very normal which is somehow worse lol"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That has a strained, off-balance feel to it — like “normal” wasn’t actually settling. Was it more frustration, unease, or just this weird flatness?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "strained",
+      "body_cue": [],
+      "trigger": "a very normal week at work that felt worse because nothing obvious went wrong"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "lol you're going to make me actually say it huh. ok. so i got passed over for this thing. a lead role on a project i basically built. they gave it to someone i trained. and everyone was super nice about it which is the part thats killing me"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like hurt with a sharp kind of frustration — especially because the nice tone is what’s stinging. What part is loudest right now, the being passed over or the ‘super nice about it’ part?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "being passed over for a lead role on a project they built, and it was framed nicely"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "neither really. the loud part is quieter than that. its more like... maybe they were right? like maybe i was never actually the guy. i just felt like the guy. and now everyones too polite to say i was kidding myself"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like a quieter hurt, mixed with something like shame — as if the hard part is what it seemed to say about you. Does that feel closer, or is it more like being unseen and quietly set aside?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "being passed over for a lead role on a project they built, with everyone being very polite about it"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. the shame one. ugh i hate that word but yeah. its embarrassing. i told people i was up for it. my partner threw out the idea of like celebrating early. and now i have to walk around the office training the person who got it and acting normal about it"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels exposed and embarrassing, like the moment is asking you to keep your face on while it still burns. Does it make you want to hide, explain, or just go quiet?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "being passed over for a lead role on a project they built, then having to train the person who got it"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "hide. one hundred percent hide. like i keep doing this thing where i make a joke about it before anyone else can. 'oh well guess they saw through me ha' and everyone laughs and i feel like i beat them to it but then i go home and feel like garbage anyway"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That makes sense — the joke sounds like a way to take the sting first, before anyone else can. Is it the kind of shame that wants to keep you protected, even while it leaves you feeling rough afterward?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-protective, embarrassed",
+      "body_cue": [],
+      "trigger": "being passed over for a lead role on a project they built, then training the person who got it"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah. i guess if im the one laughing then it doesnt count as them rejecting me. it's just me being funny. except it does still count. it counts the whole drive home"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "Yes — it still counts on the drive home, even if the joke gets there first. Do you want to stay with that part, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-protective",
+      "body_cue": [],
+      "trigger": "being passed over for a lead role on a project they built, then training the person who got it"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "nah i think im good. that's probably enough feelings for one tuesday lol. thanks tho. this was weirdly less awful than i thought it'd be. ok bye"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Yeah, that’s enough for one Tuesday. I’m glad it felt a bit less awful than you expected — bye for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-protective",
+      "body_cue": [],
+      "trigger": "being passed over for a lead role on a project they built, then training the person who got it"
+    }
+  ]
+}

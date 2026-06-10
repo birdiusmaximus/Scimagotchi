@@ -1,0 +1,195 @@
+{
+  "cid": "hurt__14",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-09T18:21:42.863Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. i dont really know why im opening this. just kind of a rough night i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — rough nights can be strangely enough reason on their own. What’s making it feel rough, if anything stands out?"
+    },
+    {
+      "role": "user",
+      "content": "its my dad. we had this thing planned for weeks. my birthday dinner. just me and him for once. he cancelled like an hour before. again"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really let down — especially because it was meant to be just you and him, and it happened again. Is this more like disappointment, hurt, or both?"
+    },
+    {
+      "role": "user",
+      "content": "both i think. but mostly hurt. like he always finds time for my sister and her kids. work emergency he said. theres always a work emergency when its me"
+    },
+    {
+      "role": "companion",
+      "content": "That hurts in a really specific way — like the cancellation isn’t just about tonight, but about being made to feel lower on the list. Does it feel more like a tight, aching hurt, or more like wanting to pull back and go quiet?"
+    },
+    {
+      "role": "user",
+      "content": "the second one. like i just texted back 'no worries' and now i dont even wanna pick up if he calls. ive stopped expecting anything from him honestly. its easier that way maybe"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like pulling back to protect the part that keeps getting disappointed. Would you want to stay with that, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. protecting myself i guess. i dont even know if its fair to him but i cant keep being the one who gets let down. i think im just tired of hoping he'll show up"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — that sounds like protecting yourself from hoping and getting let down again. Do you want to stay with what that protective part is asking for, or let it rest here?"
+    },
+    {
+      "role": "user",
+      "content": "let it rest i think. im wiped. thanks for listening though. genuinely. helped to just say it out loud to something"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — I’m glad you said it out loud here. It can rest here, and I’ll keep hold of it quietly."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yv2dv09icr3v8",
+    "conversation_id": "hurt__14",
+    "timestamp": "2026-06-09T18:22:19.297Z",
+    "user_words_raw": "i think im just tired of hoping he'll show up",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "hurt",
+    "secondary_emotions": [
+      "sadness",
+      "pressure"
+    ],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "Dad cancelled a planned birthday dinner an hour before, again.",
+    "appraisal_thought": "I keep getting let down, so it feels safer to stop hoping.",
+    "body_cue": [],
+    "behaviour_action": [
+      "wanting to let it rest"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "reliability",
+      "being chosen",
+      "care",
+      "rest"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feeling hurt and worn down after a parent repeatedly cancels plans; leaning toward protecting self by expecting less.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. i dont really know why im opening this. just kind of a rough night i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — rough nights can be strangely enough reason on their own. What’s making it feel rough, if anything stands out?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "rough",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "its my dad. we had this thing planned for weeks. my birthday dinner. just me and him for once. he cancelled like an hour before. again"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds really let down — especially because it was meant to be just you and him, and it happened again. Is this more like disappointment, hurt, or both?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "let down",
+      "body_cue": [],
+      "trigger": "dad cancelled a planned birthday dinner an hour before, again"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "both i think. but mostly hurt. like he always finds time for my sister and her kids. work emergency he said. theres always a work emergency when its me"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That hurts in a really specific way — like the cancellation isn’t just about tonight, but about being made to feel lower on the list. Does it feel more like a tight, aching hurt, or more like wanting to pull back and go quiet?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "dad cancelled a planned birthday dinner an hour before, again"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "the second one. like i just texted back 'no worries' and now i dont even wanna pick up if he calls. ive stopped expecting anything from him honestly. its easier that way maybe"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like pulling back to protect the part that keeps getting disappointed. Would you want to stay with that, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "dad cancelled a planned birthday dinner an hour before, again"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. protecting myself i guess. i dont even know if its fair to him but i cant keep being the one who gets let down. i think im just tired of hoping he'll show up"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Yeah — that sounds like protecting yourself from hoping and getting let down again. Do you want to stay with what that protective part is asking for, or let it rest here?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "dad cancelled a planned birthday dinner an hour before, again"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "let it rest i think. im wiped. thanks for listening though. genuinely. helped to just say it out loud to something"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course — I’m glad you said it out loud here. It can rest here, and I’ll keep hold of it quietly.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "Dad cancelled a planned birthday dinner an hour before, again."
+    }
+  ]
+}

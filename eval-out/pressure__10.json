@@ -1,0 +1,194 @@
+{
+  "cid": "pressure__10",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-09T17:46:05.505Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. i dont really know how to do this lol. i guess im just kind of stressed? like my body feels like its falling apart and i dont have time to deal with it"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that sounds really heavy and stretched thin. Is it more like pressure, or more like your body is sounding the alarm?"
+    },
+    {
+      "role": "user",
+      "content": "both?? like ok so i got these test results back a few weeks ago and my doctor wants me to do all this followup stuff, more bloodwork, a scan, see a specialist. and i just. i havent booked any of it. and every day i dont its like this weight gets heavier. but also im scared of what theyll find so theres that too"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like pressure and fear tangled together — the weight of not booking it, and the fear of what they might find. What feels bigger right now: the heaviness of all the follow-up, or the scared part underneath it?"
+    },
+    {
+      "role": "user",
+      "content": "honestly i think theyre feeding each other. like the scared part is WHY i keep not booking, and then not booking makes me feel like a failure who cant even take care of herself, and that makes everything heavier. and i work full time and im supposed to be the put together one for everyone else. my mom calls me to fix HER stuff. i dont have room to be the sick scared one. theres no room"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like fear feeding pressure, and then the pressure turning into shame and heaviness. When you say “there’s no room,” what feels most true — the scared part, the failure part, or the one who has to stay put together?"
+    },
+    {
+      "role": "user",
+      "content": "the put together one i think. thats the oldest one. like ive been her since i was a kid. and if i let myself be scared or sick then who holds it all up?? but god im so tired of holding it. saying that out loud feels weird. ive never actually said theres no room for me to be the scared one. huh"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the old “put together one” has been carrying this for a long time, and there’s a tiredness under it. If you want, we can stay with that, or leave it here for now — what feels right?"
+    },
+    {
+      "role": "user",
+      "content": "can we stay just a sec more. i think i needed to hear that the tired part is allowed to exist. maybe i dont have to book all of it today. maybe i just book the bloodwork. one thing. thats not failing thats just. one thing"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a small opening in the weight — one thing instead of all of it. What does the tired part ask for when it finally gets a little room?"
+    },
+    {
+      "role": "user",
+      "content": "rest. it just wants to rest and not be in charge for five minutes lol. ok. im gonna book the bloodwork tomorrow and let the rest wait. thank you for this, i didnt expect to actually feel a little lighter. ok im gonna go before i cry at my desk haha. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — the tired part just wanted rest, not the whole load. I’m glad we found a little room for it; go gently, and we can leave it here."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xl9aladqipbd1",
+    "conversation_id": "pressure__10",
+    "timestamp": "2026-06-09T17:46:40.997Z",
+    "user_words_raw": "not be in charge for five minutes",
+    "emotion_status": "confirmed",
+    "emotion_family": "pressure",
+    "emotion_shade": "overloaded",
+    "secondary_emotions": [
+      "fear",
+      "shame"
+    ],
+    "valence": "mixed",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "follow-up medical tasks alongside work and family demands, with no room to be the scared or sick one",
+    "appraisal_thought": "there’s no room for me to be the scared one",
+    "body_cue": [],
+    "behaviour_action": [
+      "not be in charge for five minutes"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "rest",
+      "space",
+      "permission to pause"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Often carries the load for others and feels little room to be the vulnerable one; rest matters.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. i dont really know how to do this lol. i guess im just kind of stressed? like my body feels like its falling apart and i dont have time to deal with it"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that sounds really heavy and stretched thin. Is it more like pressure, or more like your body is sounding the alarm?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "stressed",
+      "body_cue": [],
+      "trigger": "not having time to deal with what their body is doing"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "both?? like ok so i got these test results back a few weeks ago and my doctor wants me to do all this followup stuff, more bloodwork, a scan, see a specialist. and i just. i havent booked any of it. and every day i dont its like this weight gets heavier. but also im scared of what theyll find so theres that too"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like pressure and fear tangled together — the weight of not booking it, and the fear of what they might find. What feels bigger right now: the heaviness of all the follow-up, or the scared part underneath it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "scared",
+      "body_cue": [],
+      "trigger": "doctor wants follow-up after test results"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "honestly i think theyre feeding each other. like the scared part is WHY i keep not booking, and then not booking makes me feel like a failure who cant even take care of herself, and that makes everything heavier. and i work full time and im supposed to be the put together one for everyone else. my mom calls me to fix HER stuff. i dont have room to be the sick scared one. theres no room"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That feels like fear feeding pressure, and then the pressure turning into shame and heaviness. When you say “there’s no room,” what feels most true — the scared part, the failure part, or the one who has to stay put together?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "follow-up medical tasks after test results, while carrying work and family demands"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "the put together one i think. thats the oldest one. like ive been her since i was a kid. and if i let myself be scared or sick then who holds it all up?? but god im so tired of holding it. saying that out loud feels weird. ive never actually said theres no room for me to be the scared one. huh"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like the old “put together one” has been carrying this for a long time, and there’s a tiredness under it. If you want, we can stay with that, or leave it here for now — what feels right?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overloaded",
+      "body_cue": [],
+      "trigger": "having to hold together work, family, and medical follow-up without room to be scared or sick"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "can we stay just a sec more. i think i needed to hear that the tired part is allowed to exist. maybe i dont have to book all of it today. maybe i just book the bloodwork. one thing. thats not failing thats just. one thing"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like a small opening in the weight — one thing instead of all of it. What does the tired part ask for when it finally gets a little room?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overloaded",
+      "body_cue": [],
+      "trigger": "having to handle follow-up care alongside work and family demands without room to be the scared or sick one"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "rest. it just wants to rest and not be in charge for five minutes lol. ok. im gonna book the bloodwork tomorrow and let the rest wait. thank you for this, i didnt expect to actually feel a little lighter. ok im gonna go before i cry at my desk haha. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That makes sense — the tired part just wanted rest, not the whole load. I’m glad we found a little room for it; go gently, and we can leave it here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overloaded",
+      "body_cue": [],
+      "trigger": "follow-up medical tasks alongside work and family demands, with no room to be the scared or sick one"
+    }
+  ]
+}

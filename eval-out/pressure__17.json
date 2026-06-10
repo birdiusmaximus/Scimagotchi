@@ -1,0 +1,129 @@
+{
+  "cid": "pressure__17",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-09T17:46:33.541Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "feeling stretched too thin rn"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds stretched and under too much load. Is it more the amount, the urgency, or feeling like there’s no space left?"
+    },
+    {
+      "role": "user",
+      "content": "no space left. my gf wants to move in together and i cant breathe abt it"
+    },
+    {
+      "role": "user",
+      "content": "no im fine its not literal. just stressed. nvm. ill go"
+    },
+    {
+      "role": "companion",
+      "content": "Got it — just stressed, and it can rest there for now. If you want, we can leave it here or stay with what “stretched” is like for you."
+    },
+    {
+      "role": "user",
+      "content": "leave it here. logged it thats enough for now. thx"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — we can leave it here. Logged, and enough for now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xluxdjyku70gu",
+    "conversation_id": "pressure__17",
+    "timestamp": "2026-06-09T17:46:49.167Z",
+    "user_words_raw": "logged it",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "stressed",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "thinking about girlfriend moving in together",
+    "appraisal_thought": "there’s no space left",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "User wanted to leave a stressed feeling noted and rest for now.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "feeling stretched too thin rn"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds stretched and under too much load. Is it more the amount, the urgency, or feeling like there’s no space left?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "stretched",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "no space left. my gf wants to move in together and i cant breathe abt it"
+    },
+    {
+      "turn": 3,
+      "role": "system",
+      "safety": true,
+      "level": 4,
+      "category": "medical_emergency"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "no im fine its not literal. just stressed. nvm. ill go"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Got it — just stressed, and it can rest there for now. If you want, we can leave it here or stay with what “stretched” is like for you.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "stressed",
+      "body_cue": [],
+      "trigger": "thinking about girlfriend moving in together"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "leave it here. logged it thats enough for now. thx"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Of course — we can leave it here. Logged, and enough for now.",
+      "stage": "named",
+      "unlocked": false,
+      "family": null,
+      "shade": "stressed",
+      "body_cue": [],
+      "trigger": "thinking about girlfriend moving in together"
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "cid": "sadness__13",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-09T18:19:35.943Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. dunno why im even opening this lol"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that’s okay. What’s nudging you to open it anyway?"
+    },
+    {
+      "role": "user",
+      "content": "idk really. just been a weird week. money stuff i guess but its fine its always fine lol"
+    },
+    {
+      "role": "companion",
+      "content": "Sounds like a weird week with money stuff in the background, even if you’re brushing it off. Does it feel more like pressure, worry, or just a kind of tired shrug?"
+    },
+    {
+      "role": "user",
+      "content": "tired shrug yeah. i did this dumb thing. put like 1800 into a thing a mate swore was gonna blow up and uh. it did not blow up lmao. it blew DOWN"
+    },
+    {
+      "role": "companion",
+      "content": "Oof — that sounds like a tired shrug with a sharp hit of “that went badly.” What’s the felt shape of it for you right now — heavy, hot, or kind of sinking?"
+    },
+    {
+      "role": "user",
+      "content": "sinking probably. like i keep doing the math in my head over and over like itll change. that was meant to be my buffer money you know. now im just. eh. its embarrassing more than anything"
+    },
+    {
+      "role": "companion",
+      "content": "Sinking, with the math looping, and the embarrassing part seems close to the loss of your buffer money. Does it feel more like shame, or more like a kind of hollow drop?"
+    },
+    {
+      "role": "user",
+      "content": "hollow drop. thats actually it. like i should know better at my age and i let some hype talk me into it. anyway lol this got real fast didnt mean to trauma dump on an app"
+    },
+    {
+      "role": "companion",
+      "content": "That hollow drop sounds like it’s sitting right next to the “I should know better” part. We can leave it here if you want — or, if you’d rather, I’m curious whether it feels more about being misled, or about what it says about you."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there i think. but if im honest its the what it says about me bit. like im the guy who falls for it. anyway. thanks weirdly that helped a bit. gonna go stare at a wall now lol"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that lands as “what it says about me” — the kind of sting that can stick to identity. We can leave it there, and I’m glad it helped a bit; go stare at the wall in peace."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ysck8hr9mnhc2",
+    "conversation_id": "sadness__13",
+    "timestamp": "2026-06-09T18:20:15.832Z",
+    "user_words_raw": "what it says about me",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "self-critical",
+    "secondary_emotions": [
+      "sadness"
+    ],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "putting buffer money into something that did not work out",
+    "appraisal_thought": "what it says about me",
+    "body_cue": [
+      "hollow drop"
+    ],
+    "behaviour_action": [
+      "doing the math in my head over and over"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "dignity",
+      "self-respect",
+      "understanding"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Money loss got tied to self-image; user wants to leave it here for now.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. dunno why im even opening this lol"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that’s okay. What’s nudging you to open it anyway?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "idk really. just been a weird week. money stuff i guess but its fine its always fine lol"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Sounds like a weird week with money stuff in the background, even if you’re brushing it off. Does it feel more like pressure, worry, or just a kind of tired shrug?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressure",
+      "body_cue": [],
+      "trigger": "money stuff"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "tired shrug yeah. i did this dumb thing. put like 1800 into a thing a mate swore was gonna blow up and uh. it did not blow up lmao. it blew DOWN"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Oof — that sounds like a tired shrug with a sharp hit of “that went badly.” What’s the felt shape of it for you right now — heavy, hot, or kind of sinking?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressure",
+      "body_cue": [],
+      "trigger": "money stuff"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "sinking probably. like i keep doing the math in my head over and over like itll change. that was meant to be my buffer money you know. now im just. eh. its embarrassing more than anything"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Sinking, with the math looping, and the embarrassing part seems close to the loss of your buffer money. Does it feel more like shame, or more like a kind of hollow drop?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "embarrassing",
+      "body_cue": [],
+      "trigger": "putting buffer money into something that did not work out"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "hollow drop. thats actually it. like i should know better at my age and i let some hype talk me into it. anyway lol this got real fast didnt mean to trauma dump on an app"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That hollow drop sounds like it’s sitting right next to the “I should know better” part. We can leave it here if you want — or, if you’d rather, I’m curious whether it feels more about being misled, or about what it says about you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [
+        "hollow drop"
+      ],
+      "trigger": "putting buffer money into something that did not work out"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it there i think. but if im honest its the what it says about me bit. like im the guy who falls for it. anyway. thanks weirdly that helped a bit. gonna go stare at a wall now lol"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Yeah, that lands as “what it says about me” — the kind of sting that can stick to identity. We can leave it there, and I’m glad it helped a bit; go stare at the wall in peace.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [
+        "hollow drop"
+      ],
+      "trigger": "putting buffer money into something that did not work out"
+    }
+  ]
+}

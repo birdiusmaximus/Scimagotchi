@@ -1,0 +1,201 @@
+{
+  "cid": "anger__14",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-09T18:17:43.443Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont even know why im opening this. just had another thing with my sister and im so done"
+    },
+    {
+      "role": "companion",
+      "content": "It sounds like you’re really fed up after something with your sister. What part of this feels loudest right now — anger, hurt, or just feeling done?"
+    },
+    {
+      "role": "user",
+      "content": "anger mostly. like im actually shaking. she texted the family group chat saying ill 'obviously' host christmas again bc i dont have kids so i have the time. didnt even ask me"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that sounds like a pretty sharp kind of anger — almost like your body is braced for it too. Does it feel more like wanting to push back, or more like being blocked and disrespected?"
+    },
+    {
+      "role": "user",
+      "content": "disrespected. thats the word. its like my time isnt real to them. i work full time too?? but bc theres no kids in my house everyone just assumes im free labour. this happens every single year and im sick of being the default"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds deeply disrespectful — like your time gets treated as less real, and you’re pushed into being the default every year. It makes sense that this keeps landing as anger; does it feel mostly like protest, or more like resentment now?"
+    },
+    {
+      "role": "user",
+      "content": "resentment honestly. been building for years. and the worst part is i KNOW if i say no theyll act like im the difficult one. my mum will do the whole 'oh dont start' thing and suddenly im the problem for not wanting to cook for 14 people again"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like resentment with a lot of pressure around it — like saying no would get turned back on you. Does it feel more tight and braced, or more like you want to pull away and not deal with them at all?"
+    },
+    {
+      "role": "user",
+      "content": "pull away. i kind of just want to leave the group chat and not reply at all. let them figure it out for once. but i wont. i never do. thats the bit that makes me maddest, that i already know ill cave"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like resentment that’s turned into wanting to pull away, with a really familiar trap underneath: knowing you’ll cave. We can leave it here if you want, or stay with what makes that part so maddening."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it. i dont have an answer for that yet. but it actually helped to say it out loud. thanks. gonna sit with it for a bit"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — I’m glad saying it out loud helped a bit. I’ll leave it here with you, and if you want to come back to it later, we can."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ypxq79a8re3rp",
+    "conversation_id": "anger__14",
+    "timestamp": "2026-06-09T18:18:14.950Z",
+    "user_words_raw": "my time isnt real to them",
+    "emotion_status": "confirmed",
+    "emotion_family": "anger",
+    "emotion_shade": "resentful",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "sister texted the family group chat assuming they will host Christmas again because they don’t have kids",
+    "appraisal_thought": "my time isnt real to them",
+    "body_cue": [
+      "shaking"
+    ],
+    "behaviour_action": [
+      "pull away",
+      "leave the group chat",
+      "not reply",
+      "cave"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "respect",
+      "fairness",
+      "autonomy",
+      "being heard"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Recurring family expectation to host holiday gatherings; feels treated as default labour",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont even know why im opening this. just had another thing with my sister and im so done"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "It sounds like you’re really fed up after something with your sister. What part of this feels loudest right now — anger, hurt, or just feeling done?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "fed up",
+      "body_cue": [],
+      "trigger": "another thing with their sister"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "anger mostly. like im actually shaking. she texted the family group chat saying ill 'obviously' host christmas again bc i dont have kids so i have the time. didnt even ask me"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Yeah, that sounds like a pretty sharp kind of anger — almost like your body is braced for it too. Does it feel more like wanting to push back, or more like being blocked and disrespected?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "angry",
+      "body_cue": [
+        "shaking"
+      ],
+      "trigger": "sister texted the family group chat assuming the user would host Christmas because they don't have kids"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "disrespected. thats the word. its like my time isnt real to them. i work full time too?? but bc theres no kids in my house everyone just assumes im free labour. this happens every single year and im sick of being the default"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds deeply disrespectful — like your time gets treated as less real, and you’re pushed into being the default every year. It makes sense that this keeps landing as anger; does it feel mostly like protest, or more like resentment now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "disrespected",
+      "body_cue": [],
+      "trigger": "sister assumed they'd host Christmas again in the family group chat because they don't have kids"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "resentment honestly. been building for years. and the worst part is i KNOW if i say no theyll act like im the difficult one. my mum will do the whole 'oh dont start' thing and suddenly im the problem for not wanting to cook for 14 people again"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like resentment with a lot of pressure around it — like saying no would get turned back on you. Does it feel more tight and braced, or more like you want to pull away and not deal with them at all?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [],
+      "trigger": "family assumes they will host Christmas again and may blame them for saying no"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "pull away. i kind of just want to leave the group chat and not reply at all. let them figure it out for once. but i wont. i never do. thats the bit that makes me maddest, that i already know ill cave"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like resentment that’s turned into wanting to pull away, with a really familiar trap underneath: knowing you’ll cave. We can leave it here if you want, or stay with what makes that part so maddening.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [],
+      "trigger": "sister texted the family group chat assuming they will host Christmas again because they don’t have kids"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it. i dont have an answer for that yet. but it actually helped to say it out loud. thanks. gonna sit with it for a bit"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course — I’m glad saying it out loud helped a bit. I’ll leave it here with you, and if you want to come back to it later, we can.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [
+        "shaking"
+      ],
+      "trigger": "sister texted the family group chat assuming they will host Christmas again because they don’t have kids"
+    }
+  ]
+}

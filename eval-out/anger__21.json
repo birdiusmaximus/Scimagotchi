@@ -1,0 +1,277 @@
+{
+  "cid": "anger__21",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-09T18:18:19.085Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk why im even opening this lol. work stuff i guess. nothing dramatic"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that sounds like one of those \"not dramatic, but still here\" moments. What does the work stuff feel like right now—more vague, pressured, or just hard to pin down?"
+    },
+    {
+      "role": "user",
+      "content": "ha 'hard to pin down' is the polite version. honestly i dont know. its fine. people are fine. i just keep clenching my jaw apparently, my dentist would be thrilled"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a kind of tight, half-hidden strain, even while you're calling it fine. Is it mostly showing up as the jaw clenching, or is there also a more general tense or wired feeling under it?"
+    },
+    {
+      "role": "user",
+      "content": "wired yeah. like i open my laptop and immediately wanna throw it into the sea. very normal monday energy. dont read into it"
+    },
+    {
+      "role": "companion",
+      "content": "Got it — a wired, “throw it into the sea” kind of Monday, and I’ll stay with your words and not read past them. We can leave it there, or if you want, I can stay with the wired part a little longer."
+    },
+    {
+      "role": "user",
+      "content": "fine. stay with it. its dumb tho. its a guy at work. my manager. or. he was. they restructured and now i report to a person i literally trained two years ago. who keeps cc'ing his boss on everything i say like im a liability"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds less dumb than sharp and insulting — like the wired feeling is getting hooked to being treated as if you're a liability. Is it more anger, or more that uneasy “on edge” feeling?"
+    },
+    {
+      "role": "user",
+      "content": "im not angry. ok thats a lie im a bit angry. its more. ugh. i did everything right? i was the one who stayed late teaching him the systems and now hes the one in the meetings im not invited to and i smile and say congrats and go home and grind my teeth. its so petty i hate that it gets to me"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound petty to me — it sounds like the angry, insulted part is getting pressed by being left out and passed over. Does it feel more like a hard knot in the jaw and teeth, or more like wanting to push back and say something?"
+    },
+    {
+      "role": "user",
+      "content": "push back and say something for sure. except i wont. cause then im the bitter one who couldnt handle getting passed over right. so i just sit there being SO professional. the cc thing tho. that one. like he doesnt trust me. me. i wiped his code at 9pm so he didnt get fired in his first month and now im the risk. cool. great"
+    },
+    {
+      "role": "companion",
+      "content": "That “cool. great.” has a very sharp, almost contemptuous edge — like the cc’ing is hitting both fairness and trust. Is it mostly feeling disrespected, or more like being treated as the risk after you covered for him?"
+    },
+    {
+      "role": "user",
+      "content": "honestly? both. but theres a worse bit i dont say out loud. what if they didnt pass me over by accident. what if they looked at us both and just. picked him. like maybe im the reliable one you dump the work on but not the one you actually rate. and the anger is easier than that. way easier. anger i can do all day"
+    },
+    {
+      "role": "companion",
+      "content": "That lands like hurt under the anger — not just “they picked him,” but “I’m the reliable one they use, not the one they value.” If you want, we can stay with that edge a little longer, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "yeah. ok. that ones true and i dont love that you got it that fast lol. i think i need to sit with it not type at it tho. but. that helped. weirdly. the anger thing being a cover. didnt clock that till just now"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — that sounds like it’s settling into focus: anger on top, hurt underneath. We can leave it here, or if you want, we can stay with the part that feels most true right now."
+    },
+    {
+      "role": "user",
+      "content": "lets leave it here. gonna go grind my teeth somewhere with worse lighting. thanks tho. genuinely. see ya"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, let’s leave it here. I’m glad we found the shape of it a little — and you can come back to it whenever you want. See you."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yqpbzxsclw81e",
+    "conversation_id": "anger__21",
+    "timestamp": "2026-06-09T18:19:21.017Z",
+    "user_words_raw": "the anger thing being a cover",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "hurt",
+    "secondary_emotions": [
+      "anger"
+    ],
+    "valence": "mixed",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "being passed over for the role, seeing the other person chosen and treated as trusted while being cc'd like a liability",
+    "appraisal_thought": "I’m the reliable one they use, not the one they value",
+    "body_cue": [
+      "grind my teeth"
+    ],
+    "behaviour_action": [
+      "go home"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "being seen",
+      "trust",
+      "fairness",
+      "recognition"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feeling hurt beneath anger about being passed over and not trusted at work; the cc'ing felt especially sharp.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk why im even opening this lol. work stuff i guess. nothing dramatic"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Yeah, that sounds like one of those \"not dramatic, but still here\" moments. What does the work stuff feel like right now—more vague, pressured, or just hard to pin down?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "work stuff"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "ha 'hard to pin down' is the polite version. honestly i dont know. its fine. people are fine. i just keep clenching my jaw apparently, my dentist would be thrilled"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a kind of tight, half-hidden strain, even while you're calling it fine. Is it mostly showing up as the jaw clenching, or is there also a more general tense or wired feeling under it?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "tense",
+      "body_cue": [
+        "clenching my jaw"
+      ],
+      "trigger": "work stuff"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "wired yeah. like i open my laptop and immediately wanna throw it into the sea. very normal monday energy. dont read into it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Got it — a wired, “throw it into the sea” kind of Monday, and I’ll stay with your words and not read past them. We can leave it there, or if you want, I can stay with the wired part a little longer.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "wired",
+      "body_cue": [
+        "clenching my jaw"
+      ],
+      "trigger": "opening my laptop for work"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "fine. stay with it. its dumb tho. its a guy at work. my manager. or. he was. they restructured and now i report to a person i literally trained two years ago. who keeps cc'ing his boss on everything i say like im a liability"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds less dumb than sharp and insulting — like the wired feeling is getting hooked to being treated as if you're a liability. Is it more anger, or more that uneasy “on edge” feeling?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "insulted",
+      "body_cue": [],
+      "trigger": "reporting to a person they trained, who cc's his boss on everything they say"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "im not angry. ok thats a lie im a bit angry. its more. ugh. i did everything right? i was the one who stayed late teaching him the systems and now hes the one in the meetings im not invited to and i smile and say congrats and go home and grind my teeth. its so petty i hate that it gets to me"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That doesn’t sound petty to me — it sounds like the angry, insulted part is getting pressed by being left out and passed over. Does it feel more like a hard knot in the jaw and teeth, or more like wanting to push back and say something?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "insulted",
+      "body_cue": [
+        "jaw",
+        "teeth"
+      ],
+      "trigger": "being left out of meetings and reporting to someone they trained, who cc's his boss on their messages"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "push back and say something for sure. except i wont. cause then im the bitter one who couldnt handle getting passed over right. so i just sit there being SO professional. the cc thing tho. that one. like he doesnt trust me. me. i wiped his code at 9pm so he didnt get fired in his first month and now im the risk. cool. great"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That “cool. great.” has a very sharp, almost contemptuous edge — like the cc’ing is hitting both fairness and trust. Is it mostly feeling disrespected, or more like being treated as the risk after you covered for him?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "disrespected",
+      "body_cue": [],
+      "trigger": "being left out of meetings and cc'd on messages as if they were a liability after training and helping a coworker"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "honestly? both. but theres a worse bit i dont say out loud. what if they didnt pass me over by accident. what if they looked at us both and just. picked him. like maybe im the reliable one you dump the work on but not the one you actually rate. and the anger is easier than that. way easier. anger i can do all day"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That lands like hurt under the anger — not just “they picked him,” but “I’m the reliable one they use, not the one they value.” If you want, we can stay with that edge a little longer, or leave it here for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "being passed over after doing the work and wondering they chose someone else on purpose"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah. ok. that ones true and i dont love that you got it that fast lol. i think i need to sit with it not type at it tho. but. that helped. weirdly. the anger thing being a cover. didnt clock that till just now"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "Yeah — that sounds like it’s settling into focus: anger on top, hurt underneath. We can leave it here, or if you want, we can stay with the part that feels most true right now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "being passed over for the role, seeing the other person chosen and treated as trusted while being cc'd like a liability"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "lets leave it here. gonna go grind my teeth somewhere with worse lighting. thanks tho. genuinely. see ya"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Yeah, let’s leave it here. I’m glad we found the shape of it a little — and you can come back to it whenever you want. See you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [
+        "grind my teeth"
+      ],
+      "trigger": "being passed over for the role, seeing the other person chosen and treated as trusted while being cc'd like a liability"
+    }
+  ]
+}

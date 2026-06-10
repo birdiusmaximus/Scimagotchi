@@ -1,0 +1,201 @@
+{
+  "cid": "joy__16",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-09T17:42:27.330Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so i dont really know how these things work lol. a friend told me to try it. not sure what im supposed to say"
+    },
+    {
+      "role": "companion",
+      "content": "That’s totally fine — we can just take it one bit at a time. You can tell me anything that’s on your mind, even if it’s messy or small."
+    },
+    {
+      "role": "user",
+      "content": "idk its been a weirdly good week i guess. my friend maya. we kinda fell out like a year ago. dumb stuff. anyway she texted me out of nowhere"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds unexpectedly good — like a small reopening after a long gap. Did her text feel more like surprise, relief, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "relief yeah. but more than that?? we ended up on the phone for like 2 hours. it just felt like nothing bad ever happened. i didnt realize how much i missed her until i heard her laugh. ok fine maybe this app thing isnt totally pointless"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like relief, and also a kind of missing that only showed itself once you heard her laugh. Did it feel warm and open in your body, or more like wanting to hold onto the moment?"
+    },
+    {
+      "role": "user",
+      "content": "warm i think. like my chest felt lighter. theres this thing where she snorts when she really laughs and i forgot about that completely. we're getting coffee saturday. im actually kind of nervous lol but the good kind"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the good kind of nervous — warm, lighter, and a little tender too. We can stay with it here, or if you want, I can help you notice what exactly feels nervous about Saturday."
+    },
+    {
+      "role": "user",
+      "content": "nah i think its just like. what if its weird in person. but honestly it probably wont be. she sounded like maya. this was kinda nice actually, not gonna lie i didnt expect to say that much"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it sounds like the nervous part is mostly the “what if it’s weird in person” part, with the rest feeling pretty good. We can leave it there, or stay with that Saturday feeling a little longer if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. thanks, this helped more than i thought it would. gonna go text maya back haha"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a clean place to stop. Have a good text back — and if you want, you can bring Saturday back here later."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xgktcntairx1k",
+    "conversation_id": "joy__16",
+    "timestamp": "2026-06-09T17:43:00.806Z",
+    "user_words_raw": "this was kinda nice actually",
+    "emotion_status": "confirmed",
+    "emotion_family": "joy",
+    "emotion_shade": "relieved",
+    "secondary_emotions": [
+      "nervous"
+    ],
+    "valence": "positive",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "a long-fallout friend texted out of nowhere, they talked on the phone for two hours, and they’re getting coffee Saturday",
+    "appraisal_thought": "it felt like nothing bad ever happened",
+    "body_cue": [
+      "chest felt lighter"
+    ],
+    "behaviour_action": [
+      "go text maya back"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "reconnection",
+      "ease"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "A reconnection with someone close brought relief and warmth after a long fallout.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so i dont really know how these things work lol. a friend told me to try it. not sure what im supposed to say"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That’s totally fine — we can just take it one bit at a time. You can tell me anything that’s on your mind, even if it’s messy or small.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "idk its been a weirdly good week i guess. my friend maya. we kinda fell out like a year ago. dumb stuff. anyway she texted me out of nowhere"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds unexpectedly good — like a small reopening after a long gap. Did her text feel more like surprise, relief, or something else?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relieved",
+      "body_cue": [],
+      "trigger": "a friend texted out of nowhere after a long fall-out"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "relief yeah. but more than that?? we ended up on the phone for like 2 hours. it just felt like nothing bad ever happened. i didnt realize how much i missed her until i heard her laugh. ok fine maybe this app thing isnt totally pointless"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like relief, and also a kind of missing that only showed itself once you heard her laugh. Did it feel warm and open in your body, or more like wanting to hold onto the moment?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "relieved",
+      "body_cue": [],
+      "trigger": "A friend texted out of nowhere after a long fall-out, and they talked on the phone for two hours."
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "warm i think. like my chest felt lighter. theres this thing where she snorts when she really laughs and i forgot about that completely. we're getting coffee saturday. im actually kind of nervous lol but the good kind"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like the good kind of nervous — warm, lighter, and a little tender too. We can stay with it here, or if you want, I can help you notice what exactly feels nervous about Saturday.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "excited",
+      "body_cue": [
+        "chest felt lighter"
+      ],
+      "trigger": "A friend texted out of nowhere after a long fall-out, they talked on the phone for two hours, and they're getting coffee Saturday."
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "nah i think its just like. what if its weird in person. but honestly it probably wont be. she sounded like maya. this was kinda nice actually, not gonna lie i didnt expect to say that much"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That makes sense — it sounds like the nervous part is mostly the “what if it’s weird in person” part, with the rest feeling pretty good. We can leave it there, or stay with that Saturday feeling a little longer if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relieved",
+      "body_cue": [
+        "chest felt lighter"
+      ],
+      "trigger": "A friend texted out of nowhere after a long fall-out, they talked on the phone for two hours, and they're getting coffee Saturday."
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it there. thanks, this helped more than i thought it would. gonna go text maya back haha"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels like a clean place to stop. Have a good text back — and if you want, you can bring Saturday back here later.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relieved",
+      "body_cue": [
+        "chest felt lighter"
+      ],
+      "trigger": "a long-fallout friend texted out of nowhere, they talked on the phone for two hours, and they’re getting coffee Saturday"
+    }
+  ]
+}

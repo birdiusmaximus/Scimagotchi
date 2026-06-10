@@ -1,0 +1,145 @@
+{
+  "cid": "anger__05",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-09T18:17:04.448Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk why im even opening this lol"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that’s okay — sometimes opening something is just opening something. What’s been on your mind, if anything?"
+    },
+    {
+      "role": "user",
+      "content": "nothing really. just stuff. my brain decided 11pm was a great time to replay a thing from like years ago, as it does"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that late-night replay can feel very “my brain, why now?” What kind of thing is it replaying — more awkward, sad, or just annoying?"
+    },
+    {
+      "role": "user",
+      "content": "annoying i guess?? like my old manager took credit for this whole project i basically built and i just smiled and said nothing. classic me. cool cool not still mad about it 2 years later or anything haha"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really annoying — and maybe a bit like being brushed aside. What feels strongest in it now: the annoyance, the being credited over, or the “I said nothing” part?"
+    },
+    {
+      "role": "user",
+      "content": "the said nothing part probably. whatever. its done, cant change it. anyway thanks i should sleep"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that “said nothing” part seems to be the sharp bit. Sounds like it can rest here for now — sleep well."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yp3hn95oqyevu",
+    "conversation_id": "anger__05",
+    "timestamp": "2026-06-09T18:17:32.040Z",
+    "user_words_raw": "said nothing",
+    "emotion_status": "confirmed",
+    "emotion_family": "anger",
+    "emotion_shade": "annoying",
+    "secondary_emotions": [
+      "resigned"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "old manager took credit for a project the user built",
+    "appraisal_thought": "its done, cant change it",
+    "body_cue": [],
+    "behaviour_action": [
+      "said nothing"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "respect",
+      "being heard",
+      "fairness"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User can still get pulled up by an old work credit issue, especially at night.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk why im even opening this lol"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that’s okay — sometimes opening something is just opening something. What’s been on your mind, if anything?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "nothing really. just stuff. my brain decided 11pm was a great time to replay a thing from like years ago, as it does"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Yeah, that late-night replay can feel very “my brain, why now?” What kind of thing is it replaying — more awkward, sad, or just annoying?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "a memory replaying at 11pm"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "annoying i guess?? like my old manager took credit for this whole project i basically built and i just smiled and said nothing. classic me. cool cool not still mad about it 2 years later or anything haha"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds really annoying — and maybe a bit like being brushed aside. What feels strongest in it now: the annoyance, the being credited over, or the “I said nothing” part?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "annoying",
+      "body_cue": [],
+      "trigger": "old manager took credit for a project the user built"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "the said nothing part probably. whatever. its done, cant change it. anyway thanks i should sleep"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Yeah, that “said nothing” part seems to be the sharp bit. Sounds like it can rest here for now — sleep well.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "annoying",
+      "body_cue": [],
+      "trigger": "old manager took credit for a project the user built"
+    }
+  ]
+}

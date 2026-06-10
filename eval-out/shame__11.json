@@ -1,0 +1,196 @@
+{
+  "cid": "shame__11",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-09T18:24:52.119Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. not really sure why im here tbh. work stuff i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that makes sense. Work stuff can gather a lot around it; what’s been the part that’s pulling you in here today?"
+    },
+    {
+      "role": "user",
+      "content": "idk. theres a promotion thing. i didnt get it. its fine its whatever"
+    },
+    {
+      "role": "companion",
+      "content": "Mm. “It’s fine” can still have something underneath it — does it feel more like disappointment, frustration, or just a flat shrug?"
+    },
+    {
+      "role": "user",
+      "content": "not disappointment exactly. the guy who got it i kind of trained him. hes younger. so yeah"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — that sounds like it might sting in a very specific way. Is it more the being passed over, the younger part, or that you trained him?"
+    },
+    {
+      "role": "user",
+      "content": "the trained him part. like if i was actually any good it shouldve been me right. makes me feel kind of pathetic honestly. been there 9 years"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds pretty sharp — almost like hurt with a layer of shame on top. When that hits, does it feel more tight, heavy, or hot, or is it more of an urge to pull back?"
+    },
+    {
+      "role": "user",
+      "content": "pull back i think. just kinda want to keep my head down and not be seen. didnt even tell my wife about the promotion"
+    },
+    {
+      "role": "companion",
+      "content": "That makes a lot of sense — it sounds like wanting to hide and keep it private, like being seen would make it sharper. Is there also an urge to explain, or mostly just pull back?"
+    },
+    {
+      "role": "user",
+      "content": "mostly just pull back yeah. anyway i dont really know what else to say about it. its a lot. think im gonna leave it there for now. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, we can leave it there. It sounds like a lot to carry by yourself, and I’m glad you said it here."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yz4jlfc7drlly",
+    "conversation_id": "shame__11",
+    "timestamp": "2026-06-09T18:25:23.087Z",
+    "user_words_raw": "pathetic",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "pathetic",
+    "secondary_emotions": [
+      "hurt"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "Not getting the promotion after training the person who got it.",
+    "appraisal_thought": "If I was actually any good, it should’ve been me.",
+    "body_cue": [],
+    "behaviour_action": [
+      "keep my head down",
+      "not be seen",
+      "didn't even tell my wife"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "dignity",
+      "respect",
+      "recognition",
+      "belonging"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Passed over for a promotion after training the person who got it; wants to keep it private.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. not really sure why im here tbh. work stuff i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that makes sense. Work stuff can gather a lot around it; what’s been the part that’s pulling you in here today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "idk. theres a promotion thing. i didnt get it. its fine its whatever"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Mm. “It’s fine” can still have something underneath it — does it feel more like disappointment, frustration, or just a flat shrug?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "disappointment",
+      "body_cue": [],
+      "trigger": "not getting the promotion"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "not disappointment exactly. the guy who got it i kind of trained him. hes younger. so yeah"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Yeah — that sounds like it might sting in a very specific way. Is it more the being passed over, the younger part, or that you trained him?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "not getting the promotion after training the person who got it"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "the trained him part. like if i was actually any good it shouldve been me right. makes me feel kind of pathetic honestly. been there 9 years"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds pretty sharp — almost like hurt with a layer of shame on top. When that hits, does it feel more tight, heavy, or hot, or is it more of an urge to pull back?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "pathetic",
+      "body_cue": [],
+      "trigger": "Not getting the promotion after training the person who got it"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "pull back i think. just kinda want to keep my head down and not be seen. didnt even tell my wife about the promotion"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That makes a lot of sense — it sounds like wanting to hide and keep it private, like being seen would make it sharper. Is there also an urge to explain, or mostly just pull back?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "pathetic",
+      "body_cue": [],
+      "trigger": "Not getting the promotion after training the person who got it"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "mostly just pull back yeah. anyway i dont really know what else to say about it. its a lot. think im gonna leave it there for now. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Yeah, we can leave it there. It sounds like a lot to carry by yourself, and I’m glad you said it here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "pathetic",
+      "body_cue": [],
+      "trigger": "Not getting the promotion after training the person who got it."
+    }
+  ]
+}

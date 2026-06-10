@@ -1,0 +1,139 @@
+{
+  "cid": "pressure__03",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-09T17:45:30.156Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk just been a rough week i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that sounds like a rough stretch. Want to tell me what’s made it feel that way, or just leave it there for now?"
+    },
+    {
+      "role": "user",
+      "content": "money stuff. car broke down and the repair is like 800 i dont have. and rents due friday"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really heavy and pressuring — the car repair and rent both landing at once. Is it more the pressure, the fear, or the feeling of being stuck?"
+    },
+    {
+      "role": "user",
+      "content": "stuck mostly. like theres no give anywhere. every month im just barely making it and then something like this happens"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like trapped, with no room to breathe — like it keeps happening just as you’re barely making it. Does it feel more tight and boxed in, or more like a need to scramble?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. boxed in. anyway i dont really know what im looking for here. ill figure it out i always do. thanks tho"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, boxed in fits. We can leave it here for now, and I’m glad you said it out loud."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xkhz2s8c765dw",
+    "conversation_id": "pressure__03",
+    "timestamp": "2026-06-09T17:45:48.349Z",
+    "user_words_raw": "boxed in",
+    "emotion_status": "candidate",
+    "emotion_family": "pressure",
+    "emotion_shade": "trapped",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "money trouble, car broke down, rent due soon",
+    "appraisal_thought": "there's no give anywhere",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "Pressure builds when money gets tight and multiple bills hit at once.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk just been a rough week i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Yeah, that sounds like a rough stretch. Want to tell me what’s made it feel that way, or just leave it there for now?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "rough week",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "money stuff. car broke down and the repair is like 800 i dont have. and rents due friday"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds really heavy and pressuring — the car repair and rent both landing at once. Is it more the pressure, the fear, or the feeling of being stuck?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "money trouble, car repair, and rent due soon"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "stuck mostly. like theres no give anywhere. every month im just barely making it and then something like this happens"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like trapped, with no room to breathe — like it keeps happening just as you’re barely making it. Does it feel more tight and boxed in, or more like a need to scramble?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "trapped",
+      "body_cue": [],
+      "trigger": "money trouble, car broke down, rent due soon"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah. boxed in. anyway i dont really know what im looking for here. ill figure it out i always do. thanks tho"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Yeah, boxed in fits. We can leave it here for now, and I’m glad you said it out loud.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "trapped",
+      "body_cue": [],
+      "trigger": "money trouble, car broke down, rent due soon"
+    }
+  ]
+}

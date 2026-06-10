@@ -1,0 +1,141 @@
+{
+  "cid": "anger__03",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-09T18:17:04.843Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dunno. just kind of annoyed i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a fairly quiet kind of annoyed. Is it more like irritated, frustrated, or just something rubbing you the wrong way?"
+    },
+    {
+      "role": "user",
+      "content": "frustrated more like. its money stuff. dont really wanna get into it"
+    },
+    {
+      "role": "companion",
+      "content": "Frustrated makes sense, and we can leave the money stuff right there if you want. If you do want to stay with it, does it feel more blocked, pressured, or just plain stuck?"
+    },
+    {
+      "role": "user",
+      "content": "stuck i guess. my sister still hasnt paid me back the 400 i lent her. been months. and now shes posting holiday pics"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really stuck — like the money part has been hanging there for months, and the holiday pics make it feel sharper. Does it feel more like blocked, resentful, or disrespected?"
+    },
+    {
+      "role": "user",
+      "content": "disrespected yeah. like my money doesnt matter to her. anyway. its fine. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like disrespected, and I can leave it here. Thanks for telling me."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yp4i48yvfc507",
+    "conversation_id": "anger__03",
+    "timestamp": "2026-06-09T18:17:23.978Z",
+    "user_words_raw": "disrespected",
+    "emotion_status": "candidate",
+    "emotion_family": "anger",
+    "emotion_shade": "disrespected",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "sister hasn’t paid back $400 for months; seeing holiday pics",
+    "appraisal_thought": "my money doesnt matter to her",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "respect",
+      "fairness",
+      "being heard"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "Money lent to someone close is still unpaid after months, and social posts made it feel sharper.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dunno. just kind of annoyed i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a fairly quiet kind of annoyed. Is it more like irritated, frustrated, or just something rubbing you the wrong way?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "annoyed",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "frustrated more like. its money stuff. dont really wanna get into it"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Frustrated makes sense, and we can leave the money stuff right there if you want. If you do want to stay with it, does it feel more blocked, pressured, or just plain stuck?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "money stuff"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "stuck i guess. my sister still hasnt paid me back the 400 i lent her. been months. and now shes posting holiday pics"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds really stuck — like the money part has been hanging there for months, and the holiday pics make it feel sharper. Does it feel more like blocked, resentful, or disrespected?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "sister still hasn't paid back $400 after months; seeing holiday pics"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "disrespected yeah. like my money doesnt matter to her. anyway. its fine. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That feels like disrespected, and I can leave it here. Thanks for telling me.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "disrespected",
+      "body_cue": [],
+      "trigger": "sister hasn’t paid back $400 for months; seeing holiday pics"
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "cid": "calm__12",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-09T17:44:10.685Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey there. been a little while since i opened this"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, it’s good to see you. What’s been on your mind lately?"
+    },
+    {
+      "role": "user",
+      "content": "honestly not much. just had a really ordinary tuesday and somehow that felt nice. made coffee, did the dishes, that kind of thing"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds pleasantly ordinary, like a quiet kind of okay. What made it feel nice for you?"
+    },
+    {
+      "role": "user",
+      "content": "i think it's that nothing was urgent for once. work's been a storm for months and this week it just... eased. i opened the kitchen window while the coffee brewed and could hear birds and i just stood there for a sec"
+    },
+    {
+      "role": "companion",
+      "content": "That feels settled and a bit unhurried — like there was finally space to stand there for a second. Does it feel more like rest, or more like relief?"
+    },
+    {
+      "role": "user",
+      "content": "relief i think. the kind where your shoulders drop and you didnt even notice they were up. i've been bracing for so long that just... not bracing feels almost unfamiliar"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like relief, and also a little unfamiliar — like your body learned bracing so well that not doing it feels new. Does this calm feel easy to trust, or a bit strange?"
+    },
+    {
+      "role": "user",
+      "content": "a bit strange if im honest. part of me keeps waiting for the other shoe to drop. but i think im trying to just let it be nice without poking at it. let the ordinary tuesday be enough"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — a bit strange, with part of you waiting for the other shoe to drop, and part of you trying to let the ordinary Tuesday be enough. Do you want to stay with that strange edge, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "i think i'll leave it here. just naming it helped, weirdly. thanks for sitting with me a minute. gonna go finish my coffee while it's warm"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it could have a name. Enjoy the warm coffee."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xisc29obw639q",
+    "conversation_id": "calm__12",
+    "timestamp": "2026-06-09T17:45:22.665Z",
+    "user_words_raw": "just naming it helped, weirdly",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "relief",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "work eased; ordinary Tuesday with coffee, open kitchen window, and birds",
+    "appraisal_thought": "not bracing feels almost unfamiliar; waiting for the other shoe to drop",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Ordinary quiet can feel relieving after a long stretch of work pressure.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey there. been a little while since i opened this"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, it’s good to see you. What’s been on your mind lately?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "honestly not much. just had a really ordinary tuesday and somehow that felt nice. made coffee, did the dishes, that kind of thing"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds pleasantly ordinary, like a quiet kind of okay. What made it feel nice for you?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "an ordinary Tuesday with coffee and dishes"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "i think it's that nothing was urgent for once. work's been a storm for months and this week it just... eased. i opened the kitchen window while the coffee brewed and could hear birds and i just stood there for a sec"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That feels settled and a bit unhurried — like there was finally space to stand there for a second. Does it feel more like rest, or more like relief?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "work eased; opened the kitchen window while coffee brewed and heard birds"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "relief i think. the kind where your shoulders drop and you didnt even notice they were up. i've been bracing for so long that just... not bracing feels almost unfamiliar"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like relief, and also a little unfamiliar — like your body learned bracing so well that not doing it feels new. Does this calm feel easy to trust, or a bit strange?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "relief",
+      "body_cue": [
+        "shoulders drop",
+        "shoulders were up"
+      ],
+      "trigger": "work eased; opened the kitchen window while coffee brewed and heard birds"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "a bit strange if im honest. part of me keeps waiting for the other shoe to drop. but i think im trying to just let it be nice without poking at it. let the ordinary tuesday be enough"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That makes sense — a bit strange, with part of you waiting for the other shoe to drop, and part of you trying to let the ordinary Tuesday be enough. Do you want to stay with that strange edge, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "relief",
+      "body_cue": [
+        "shoulders drop",
+        "bracing"
+      ],
+      "trigger": "work eased; ordinary Tuesday with coffee, open kitchen window, and birds"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "i think i'll leave it here. just naming it helped, weirdly. thanks for sitting with me a minute. gonna go finish my coffee while it's warm"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad it could have a name. Enjoy the warm coffee.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "relief",
+      "body_cue": [],
+      "trigger": "work eased; ordinary Tuesday with coffee, open kitchen window, and birds"
+    }
+  ]
+}

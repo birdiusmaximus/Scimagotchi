@@ -1,0 +1,161 @@
+{
+  "cid": "sadness__16",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-09T18:19:50.349Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so i dont really know how this works lol. someone told me to try it. i guess im just kind of off today"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that makes sense — we can keep it very simple. When you say “off,” is it more like flat, uneasy, or just not quite yourself?"
+    },
+    {
+      "role": "user",
+      "content": "idk maybe flat. its been a weird week. i keep checking my phone like im waiting for something and then i remember theres nothing coming. sorry that doesnt make sense"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense to me — “flat” with a kind of waiting in it, and then the letdown when you notice there’s nothing coming. Does it feel more blank, disconnected, or kind of empty?"
+    },
+    {
+      "role": "user",
+      "content": "empty probably. ok its a friend thing. me and jess used to text constantly, like every day stupid stuff. and it just kind of stopped. no fight nothing. she just got busy with her new group i guess and i didnt want to be the annoying one always reaching out so i stopped too"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like empty with a hurt edge — like the stopping meant something, even if there wasn’t a fight. Does it feel more like left out, or more like you pulled back to not be the annoying one?"
+    },
+    {
+      "role": "user",
+      "content": "the second one. the lake stings but its more like. if i mattered wouldnt she have noticed i went quiet. nobody checked. and i hate that im this bothered by it, were grown adults, people drift, i know that. but it still feels like i lost something"
+    },
+    {
+      "role": "companion",
+      "content": "It sounds like the sting is both the not-being-noticed and the loss itself. If you want, we can stay with that, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. i didnt expect to actually say all that to an app honestly. it didnt fix anything but i guess it helped to put it somewhere. thanks. ill maybe text her. or maybe not. anyway. bye"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that feels like enough for now. I’m glad you put it somewhere, and you can come back if you want to look at it again later."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ysnp1n21gsfdr",
+    "conversation_id": "sadness__16",
+    "timestamp": "2026-06-09T18:20:25.152Z",
+    "user_words_raw": "it helped to put it somewhere",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "left out",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "a friend texted less and the back-and-forth stopped",
+    "appraisal_thought": "if i mattered wouldnt she have noticed i went quiet",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User may return to a friend-distance feeling after saying it out loud.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so i dont really know how this works lol. someone told me to try it. i guess im just kind of off today"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Yeah, that makes sense — we can keep it very simple. When you say “off,” is it more like flat, uneasy, or just not quite yourself?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "off",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "idk maybe flat. its been a weird week. i keep checking my phone like im waiting for something and then i remember theres nothing coming. sorry that doesnt make sense"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That makes sense to me — “flat” with a kind of waiting in it, and then the letdown when you notice there’s nothing coming. Does it feel more blank, disconnected, or kind of empty?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": "it's been a weird week; noticing nothing is coming after checking the phone"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "empty probably. ok its a friend thing. me and jess used to text constantly, like every day stupid stuff. and it just kind of stopped. no fight nothing. she just got busy with her new group i guess and i didnt want to be the annoying one always reaching out so i stopped too"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like empty with a hurt edge — like the stopping meant something, even if there wasn’t a fight. Does it feel more like left out, or more like you pulled back to not be the annoying one?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [],
+      "trigger": "friend texted less and the back-and-forth stopped"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "the second one. the lake stings but its more like. if i mattered wouldnt she have noticed i went quiet. nobody checked. and i hate that im this bothered by it, were grown adults, people drift, i know that. but it still feels like i lost something"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "It sounds like the sting is both the not-being-noticed and the loss itself. If you want, we can stay with that, or leave it here for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [],
+      "trigger": "a friend texted less and the back-and-forth stopped"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah lets leave it there. i didnt expect to actually say all that to an app honestly. it didnt fix anything but i guess it helped to put it somewhere. thanks. ill maybe text her. or maybe not. anyway. bye"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Yeah, that feels like enough for now. I’m glad you put it somewhere, and you can come back if you want to look at it again later.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "left out",
+      "body_cue": [],
+      "trigger": "a friend texted less and the back-and-forth stopped"
+    }
+  ]
+}

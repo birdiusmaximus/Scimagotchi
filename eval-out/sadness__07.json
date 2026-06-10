@@ -1,0 +1,145 @@
+{
+  "cid": "sadness__07",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-09T18:19:18.359Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. i think im just tired or whatever. been a weird week"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — yeah, that sounds like one of those strangely tired weeks. What’s been making it weird?"
+    },
+    {
+      "role": "user",
+      "content": "dunno. me and my girlfriend ended things on sunday. well she ended it. so probably thats it"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it sounds like there’s sadness here, maybe hurt too. Does it feel more like sadness, hurt, or just that flat tiredness?"
+    },
+    {
+      "role": "user",
+      "content": "yeah sad i guess. we were together almost 3 years. i keep waiting for her to text and she just isnt going to"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — that waiting sounds like part of the sadness, and maybe a little hurt too. Does it feel more hollow, restless, or heavy?"
+    },
+    {
+      "role": "user",
+      "content": "heavy mostly. anyway thanks. gonna try to sleep"
+    },
+    {
+      "role": "companion",
+      "content": "Heavy makes sense here. We can leave it there for now, and if you want, we can stay with what this absence is like a little longer another time."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yryup0mhid748",
+    "conversation_id": "sadness__07",
+    "timestamp": "2026-06-09T18:19:37.219Z",
+    "user_words_raw": "heavy mostly",
+    "emotion_status": "confirmed",
+    "emotion_family": "sadness",
+    "emotion_shade": "heavy",
+    "secondary_emotions": [
+      "hurt"
+    ],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "my girlfriend ended things on sunday",
+    "appraisal_thought": "she just isnt going to",
+    "body_cue": [],
+    "behaviour_action": [
+      "waiting for her to text"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "comfort",
+      "recognition"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Recent breakup after a long relationship; still waiting for contact.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. i think im just tired or whatever. been a weird week"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — yeah, that sounds like one of those strangely tired weeks. What’s been making it weird?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "tired",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "dunno. me and my girlfriend ended things on sunday. well she ended it. so probably thats it"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That makes sense — it sounds like there’s sadness here, maybe hurt too. Does it feel more like sadness, hurt, or just that flat tiredness?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "sadness",
+      "body_cue": [],
+      "trigger": "my girlfriend ended it on sunday"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah sad i guess. we were together almost 3 years. i keep waiting for her to text and she just isnt going to"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Yeah — that waiting sounds like part of the sadness, and maybe a little hurt too. Does it feel more hollow, restless, or heavy?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "sadness",
+      "shade": "sadness",
+      "body_cue": [],
+      "trigger": "my girlfriend ended things on sunday"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "heavy mostly. anyway thanks. gonna try to sleep"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Heavy makes sense here. We can leave it there for now, and if you want, we can stay with what this absence is like a little longer another time.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "heavy",
+      "body_cue": [],
+      "trigger": "my girlfriend ended things on sunday"
+    }
+  ]
+}

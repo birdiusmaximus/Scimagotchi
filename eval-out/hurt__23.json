@@ -1,0 +1,264 @@
+{
+  "cid": "hurt__23",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-09T18:22:34.434Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont even know why im opening this. just kind of pissed off i guess. been a long week"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that sounds like a long week turning into irritation. Does it feel more like frustrated, resentful, or just plain pissed off?"
+    },
+    {
+      "role": "user",
+      "content": "frustrated yeah. its money stuff. always money stuff. just feel like im constantly cleaning up after other people"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds frustrating and a bit worn down, like you keep having to clean up after other people. Does it feel more blocked, resentful, or like you have to keep pushing through?"
+    },
+    {
+      "role": "user",
+      "content": "resentful probably. my brother. i lent him 4 grand back in feb for his car repairs and rent he was behind. said he'd pay me back by may"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds resentful, especially with the promise to pay you back by May and it still hanging there. What does that resentment make you want to do — push back, keep quiet, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "thats the thing. i dont even want the money that bad anymore. i saw on instagram he went to vegas last weekend. posted the whole thing. flights, a nice hotel, bottle service"
+    },
+    {
+      "role": "companion",
+      "content": "That makes the resentment feel sharper — not just the missing money, but seeing him spend like that. Does it feel more like wanting to call him out, or more like a quiet bitter disbelief?"
+    },
+    {
+      "role": "user",
+      "content": "honestly its not even really anger. like i keep saying im mad but. idk. i sat there scrolling through his vegas pics and i just felt small. like he didnt even think about me once"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds less like anger now and more like hurt and being made to feel small. Do you want to stay with that, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "no i can stay. its weird to say out loud but yeah. small is the word. i ate ramen for like two weeks in march to cover what i gave him. and he didnt even notice. didnt ask"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds painfully unseen — you were cutting back to cover him, and he never seemed to notice. Was the hardest part that he didn’t ask, or that he didn’t seem to register what you’d given up?"
+    },
+    {
+      "role": "user",
+      "content": "that he didnt register it. the money i can live without. but we used to be close. and now its like im just a bank to him. an atm that doesnt make noise when its empty"
+    },
+    {
+      "role": "companion",
+      "content": "That lands as being reduced to “just a bank,” which sounds especially painful because you used to be close. Does it feel more like being unseen, or more like being used?"
+    },
+    {
+      "role": "user",
+      "content": "both i guess but the used part stings more. like he knew id say yes. he counted on it. and i did. i always do. thats the part i cant shake"
+    },
+    {
+      "role": "companion",
+      "content": "That sting sounds deeper than the money — like he counted on you, and that makes it feel used. What’s the part you can’t shake most: that he knew, or that you said yes again?"
+    },
+    {
+      "role": "user",
+      "content": "that i said yes again. probably will next time too if im honest. anyway. didnt expect to land on that. ok i gotta go but. yeah. thanks for this"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — the part that stays is you saying yes again, even while knowing how it lands. We can leave it there, and thanks for trusting me with it."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yw68w4fac27r5",
+    "conversation_id": "hurt__23",
+    "timestamp": "2026-06-09T18:23:31.512Z",
+    "user_words_raw": "i said yes again",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "used",
+    "secondary_emotions": [
+      "disappointment",
+      "self-blame"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "He counted on them saying yes again after they covered money for him, and the closeness now feels changed.",
+    "appraisal_thought": "I keep saying yes again.",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "respect",
+      "trust",
+      "being seen"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feeling used by someone close after covering money; says yes again despite knowing how it lands.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont even know why im opening this. just kind of pissed off i guess. been a long week"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Yeah, that sounds like a long week turning into irritation. Does it feel more like frustrated, resentful, or just plain pissed off?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "a long week"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "frustrated yeah. its money stuff. always money stuff. just feel like im constantly cleaning up after other people"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds frustrating and a bit worn down, like you keep having to clean up after other people. Does it feel more blocked, resentful, or like you have to keep pushing through?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "money stuff"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "resentful probably. my brother. i lent him 4 grand back in feb for his car repairs and rent he was behind. said he'd pay me back by may"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds resentful, especially with the promise to pay you back by May and it still hanging there. What does that resentment make you want to do — push back, keep quiet, or something else?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [],
+      "trigger": "lending money to brother for car repairs and rent, with promised repayment missed"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "thats the thing. i dont even want the money that bad anymore. i saw on instagram he went to vegas last weekend. posted the whole thing. flights, a nice hotel, bottle service"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes the resentment feel sharper — not just the missing money, but seeing him spend like that. Does it feel more like wanting to call him out, or more like a quiet bitter disbelief?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [],
+      "trigger": "seeing his Instagram posts about a Vegas trip after he said he'd pay you back"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "honestly its not even really anger. like i keep saying im mad but. idk. i sat there scrolling through his vegas pics and i just felt small. like he didnt even think about me once"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds less like anger now and more like hurt and being made to feel small. Do you want to stay with that, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "small",
+      "body_cue": [],
+      "trigger": "seeing his Vegas photos after lending him money and expecting repayment"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "no i can stay. its weird to say out loud but yeah. small is the word. i ate ramen for like two weeks in march to cover what i gave him. and he didnt even notice. didnt ask"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds painfully unseen — you were cutting back to cover him, and he never seemed to notice. Was the hardest part that he didn’t ask, or that he didn’t seem to register what you’d given up?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "unseen",
+      "body_cue": [],
+      "trigger": "Seeing his Vegas photos after lending him money and not being repaid"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "that he didnt register it. the money i can live without. but we used to be close. and now its like im just a bank to him. an atm that doesnt make noise when its empty"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That lands as being reduced to “just a bank,” which sounds especially painful because you used to be close. Does it feel more like being unseen, or more like being used?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "unseen",
+      "body_cue": [],
+      "trigger": "Seeing that he didn't register the sacrifice and now seems to treat the relationship like a source of money"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "both i guess but the used part stings more. like he knew id say yes. he counted on it. and i did. i always do. thats the part i cant shake"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That sting sounds deeper than the money — like he counted on you, and that makes it feel used. What’s the part you can’t shake most: that he knew, or that you said yes again?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "used",
+      "body_cue": [],
+      "trigger": "He counted on them saying yes again after they covered money for him, and the closeness now feels changed."
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "that i said yes again. probably will next time too if im honest. anyway. didnt expect to land on that. ok i gotta go but. yeah. thanks for this"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "That makes sense — the part that stays is you saying yes again, even while knowing how it lands. We can leave it there, and thanks for trusting me with it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "used",
+      "body_cue": [],
+      "trigger": "He counted on them saying yes again after they covered money for him, and the closeness now feels changed."
+    }
+  ]
+}

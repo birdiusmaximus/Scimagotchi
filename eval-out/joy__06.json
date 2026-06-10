@@ -1,0 +1,143 @@
+{
+  "cid": "joy__06",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-09T17:41:51.672Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok i kind of just need to tell someone. my best friend flew in to surprise me for my bday and im still smiling like an idiot"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds so lovely — a real surprise to carry around with you. What's the part that's making you smile most?"
+    },
+    {
+      "role": "user",
+      "content": "i think just that she remembered. weve been kinda bad at keeping up this year, life got busy n stuff. but she got on a plane. like she actually showed up at my door with a stupid cake"
+    },
+    {
+      "role": "companion",
+      "content": "That lands as really touched and delighted — she remembered, and then she actually showed up. Does it feel more warm and full, or more like a little stunned laugh?"
+    },
+    {
+      "role": "user",
+      "content": "honestly both lol. i kind of teared up and then laughed at myself. its warm. makes me feel like im not as forgettable as i sometimes think"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds warm and a little tender too — like being remembered reached a place that matters. We can leave it there, or stay with that \"not as forgettable\" feeling if you want."
+    },
+    {
+      "role": "user",
+      "content": "naw i think im good. just needed to say it out loud. shes asleep on my couch rn lol. thanks for listening ok bye"
+    },
+    {
+      "role": "companion",
+      "content": "Aw, I’m glad you got to say it out loud. Enjoy the couch nap and the birthday glow — bye for now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xftehb6d6fpn1",
+    "conversation_id": "joy__06",
+    "timestamp": "2026-06-09T17:42:10.058Z",
+    "user_words_raw": "just needed to say it out loud",
+    "emotion_status": "confirmed",
+    "emotion_family": "joy",
+    "emotion_shade": "content",
+    "secondary_emotions": [
+      "gratitude"
+    ],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "best friend surprised them by flying in for their birthday after a year of being bad at keeping up",
+    "appraisal_thought": "she remembered me, even with the distance this year",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "belonging",
+      "being remembered"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "A close friend surprised them for their birthday after a busy year of drifting a bit.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok i kind of just need to tell someone. my best friend flew in to surprise me for my bday and im still smiling like an idiot"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds so lovely — a real surprise to carry around with you. What's the part that's making you smile most?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "delighted",
+      "body_cue": [],
+      "trigger": "best friend flew in to surprise them for their birthday"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i think just that she remembered. weve been kinda bad at keeping up this year, life got busy n stuff. but she got on a plane. like she actually showed up at my door with a stupid cake"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That lands as really touched and delighted — she remembered, and then she actually showed up. Does it feel more warm and full, or more like a little stunned laugh?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "touched",
+      "body_cue": [],
+      "trigger": "best friend flew in to surprise them for their birthday"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "honestly both lol. i kind of teared up and then laughed at myself. its warm. makes me feel like im not as forgettable as i sometimes think"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds warm and a little tender too — like being remembered reached a place that matters. We can leave it there, or stay with that \"not as forgettable\" feeling if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "touched",
+      "body_cue": [],
+      "trigger": "best friend remembered their birthday and flew in to surprise them after a busy year of not keeping up"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "naw i think im good. just needed to say it out loud. shes asleep on my couch rn lol. thanks for listening ok bye"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Aw, I’m glad you got to say it out loud. Enjoy the couch nap and the birthday glow — bye for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "content",
+      "body_cue": [],
+      "trigger": "best friend surprised them by flying in for their birthday after a year of being bad at keeping up"
+    }
+  ]
+}

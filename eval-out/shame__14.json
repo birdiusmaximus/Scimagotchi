@@ -1,0 +1,192 @@
+{
+  "cid": "shame__14",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-09T18:24:53.135Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. i dont really know why im here. just had a rough night with my family and i cant shake this feeling"
+    },
+    {
+      "role": "companion",
+      "content": "Hey. A rough night with family can leave a feeling hanging around long after it’s over — what does it feel closest to right now?"
+    },
+    {
+      "role": "user",
+      "content": "i guess... small. like im never enough for them. it was my dads birthday dinner and my sister had it all planned out and i just. i forgot to bring the thing i was supposed to. the cake. everyone had to wait and my mom gave me that look"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really painful and small in a sharp, ashamed kind of way. Is it more like embarrassment, disappointment, or feeling let down?"
+    },
+    {
+      "role": "user",
+      "content": "embarrassment yeah but its deeper than that. like i KNOW its just a cake. but its not about the cake is it. its that look means see, this is who she is. she cant even do the one simple thing. and i felt like i was 12 again"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds deeper than embarrassment — more like being exposed and judged, almost turned small again. Did it make you want to hide, explain, or just disappear?"
+    },
+    {
+      "role": "user",
+      "content": "disappear. honestly i just wanted to leave. i laughed it off and ran out to buy a cake from the gas station and the whole drive i was crying and telling myself how pathetic i am. like 34 years old and still the family screwup"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like shame that went straight to “I’m the family screwup,” and it makes sense it hit so hard after that look. We can leave it there for now, or if you want, we can stay with what that moment seemed to say about you."
+    },
+    {
+      "role": "user",
+      "content": "can we stay for a sec. i think the part that gets me is... no one actually said anything mean. it was just a look. but i filled in the rest. ive been doing that my whole life with them. maybe the story isnt even theirs anymore its just mine"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really lonely — like the look became a whole story you’ve had to carry for a long time. What does that story say about you, if you let it speak plainly?"
+    },
+    {
+      "role": "user",
+      "content": "it says im a disappointment. that im careless and i let people down. but saying it out loud like that it sounds so harsh. id never say that to anyone else. i dont know. i think i needed to just hear it for what it is. thank you for sitting with me. im gonna go to bed"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a hard story to hold, and also like you saw how harsh it is. We can leave it there for now, and I’m glad you told me."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yz54pjwfvo1lm",
+    "conversation_id": "shame__14",
+    "timestamp": "2026-06-09T18:25:35.312Z",
+    "user_words_raw": "im a disappointment",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "self-critical",
+    "secondary_emotions": [
+      "hurt"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "a family birthday dinner where your mom gave you a look after you forgot the cake",
+    "appraisal_thought": "im a disappointment",
+    "body_cue": [],
+    "behaviour_action": [
+      "wanting to leave"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "dignity",
+      "understanding"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Shame can get tied to family moments and old stories about being a disappointment.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. i dont really know why im here. just had a rough night with my family and i cant shake this feeling"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey. A rough night with family can leave a feeling hanging around long after it’s over — what does it feel closest to right now?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": null,
+      "body_cue": [],
+      "trigger": "a rough night with family"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i guess... small. like im never enough for them. it was my dads birthday dinner and my sister had it all planned out and i just. i forgot to bring the thing i was supposed to. the cake. everyone had to wait and my mom gave me that look"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds really painful and small in a sharp, ashamed kind of way. Is it more like embarrassment, disappointment, or feeling let down?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "forgot to bring the cake to a family birthday dinner and your mom gave you that look"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "embarrassment yeah but its deeper than that. like i KNOW its just a cake. but its not about the cake is it. its that look means see, this is who she is. she cant even do the one simple thing. and i felt like i was 12 again"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds deeper than embarrassment — more like being exposed and judged, almost turned small again. Did it make you want to hide, explain, or just disappear?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "forgot to bring the cake to a family birthday dinner and your mom gave you that look"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "disappear. honestly i just wanted to leave. i laughed it off and ran out to buy a cake from the gas station and the whole drive i was crying and telling myself how pathetic i am. like 34 years old and still the family screwup"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like shame that went straight to “I’m the family screwup,” and it makes sense it hit so hard after that look. We can leave it there for now, or if you want, we can stay with what that moment seemed to say about you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "forgot to bring the cake to a family birthday dinner and your mom gave you that look"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "can we stay for a sec. i think the part that gets me is... no one actually said anything mean. it was just a look. but i filled in the rest. ive been doing that my whole life with them. maybe the story isnt even theirs anymore its just mine"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds really lonely — like the look became a whole story you’ve had to carry for a long time. What does that story say about you, if you let it speak plainly?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "a family birthday dinner where your mom gave you a look after you forgot the cake"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "it says im a disappointment. that im careless and i let people down. but saying it out loud like that it sounds so harsh. id never say that to anyone else. i dont know. i think i needed to just hear it for what it is. thank you for sitting with me. im gonna go to bed"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like a hard story to hold, and also like you saw how harsh it is. We can leave it there for now, and I’m glad you told me.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "a family birthday dinner where your mom gave you a look after you forgot the cake"
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "cid": "pressure__12",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-09T17:46:14.018Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey there. how's it going today?"
+    },
+    {
+      "role": "companion",
+      "content": "Hey there — good to see you. I’m here and ready to talk; what’s been going on with you today?"
+    },
+    {
+      "role": "user",
+      "content": "honestly not bad? i think. it's one of those days where everything's fine on paper but i can't really sit still. been meaning to check this app out for a while"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds a bit restless — everything fine on paper, but your body not quite settling. Is it more like jittery, keyed up, or just hard to sit still?"
+    },
+    {
+      "role": "user",
+      "content": "keyed up i think. like my brain keeps making the list even when i'm not asking it to. it's stupid stuff really — i've got the building inspection thing monday, my mum's coming to stay thursday and the spare room is basically a storage unit right now, and i still haven't sorted the car thing. none of it's huge on its own"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds keyed up and stretched — like the list keeps running even though each thing is small on its own. What feels like the loudest item right now, if any?"
+    },
+    {
+      "role": "user",
+      "content": "the room, probably. but it's not really the room. it's that mum's going to walk in and see the state of it and i'll feel like i'm 19 again and can't keep my life together. she won't even say anything, that's the worst part. i just hold all of it like it has to be perfect before anyone sees"
+    },
+    {
+      "role": "companion",
+      "content": "That feels less like the room and more like being seen through her eyes — and having to be perfect before anyone walks in. Is this closer to pressure, or to shame?"
+    },
+    {
+      "role": "user",
+      "content": "maybe a bit of both but mostly the pressure i think. like i've put this weight on myself that everything has to be sorted and held together and there's no room to just be a person who has a messy spare room. it's exhausting carrying it tbh"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds exhausting — like you’re carrying this held-together standard all the time. Does it feel more like a tight, heavy sort of pressure, or like an urge to hide until it’s sorted?"
+    },
+    {
+      "role": "user",
+      "content": "tight and heavy, yeah. the hiding thing is part of it but mostly it just sits on my chest. i don't know. saying it out loud helps a bit actually. maybe the room can just be a 20 min job and not a referendum on whether i'm an adult lol"
+    },
+    {
+      "role": "companion",
+      "content": "That’s tight and heavy, and it sits on your chest — I’m glad naming it helped a little. We can leave it there, or stay with what that chest-heavy pressure seems to be asking for underneath; which feels right?"
+    },
+    {
+      "role": "user",
+      "content": "i think i'll leave it there for now. the chest thing's already a bit lighter just from putting words to it. thank you, genuinely. gonna go make a dent in that room while i've got the nerve x"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad putting words to it gave it a bit more room. Leave it there for now, and good luck with the room x"
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xlfpjy1fgyau8",
+    "conversation_id": "pressure__12",
+    "timestamp": "2026-06-09T17:46:54.409Z",
+    "user_words_raw": "it just sits on my chest",
+    "emotion_status": "confirmed",
+    "emotion_family": "pressure",
+    "emotion_shade": "heavy",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "mum coming to stay and the spare room being messy",
+    "appraisal_thought": "it has to be perfect before anyone sees",
+    "body_cue": [
+      "sits on my chest"
+    ],
+    "behaviour_action": [
+      "hiding"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "permission to pause",
+      "self-acceptance"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Pressure shows up around being seen with a messy space; mum’s visit is a trigger.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey there. how's it going today?"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey there — good to see you. I’m here and ready to talk; what’s been going on with you today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "honestly not bad? i think. it's one of those days where everything's fine on paper but i can't really sit still. been meaning to check this app out for a while"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds a bit restless — everything fine on paper, but your body not quite settling. Is it more like jittery, keyed up, or just hard to sit still?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "restless",
+      "body_cue": [
+        "can't really sit still"
+      ],
+      "trigger": "one of those days where everything's fine on paper"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "keyed up i think. like my brain keeps making the list even when i'm not asking it to. it's stupid stuff really — i've got the building inspection thing monday, my mum's coming to stay thursday and the spare room is basically a storage unit right now, and i still haven't sorted the car thing. none of it's huge on its own"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds keyed up and stretched — like the list keeps running even though each thing is small on its own. What feels like the loudest item right now, if any?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "keyed up",
+      "body_cue": [],
+      "trigger": "building inspection monday, mum coming thursday, spare room clutter, car thing still unsorted"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "the room, probably. but it's not really the room. it's that mum's going to walk in and see the state of it and i'll feel like i'm 19 again and can't keep my life together. she won't even say anything, that's the worst part. i just hold all of it like it has to be perfect before anyone sees"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That feels less like the room and more like being seen through her eyes — and having to be perfect before anyone walks in. Is this closer to pressure, or to shame?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-conscious",
+      "body_cue": [],
+      "trigger": "mum coming to stay and seeing the spare room as it is"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "maybe a bit of both but mostly the pressure i think. like i've put this weight on myself that everything has to be sorted and held together and there's no room to just be a person who has a messy spare room. it's exhausting carrying it tbh"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds exhausting — like you’re carrying this held-together standard all the time. Does it feel more like a tight, heavy sort of pressure, or like an urge to hide until it’s sorted?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressured",
+      "body_cue": [],
+      "trigger": "mum coming to stay and seeing the spare room as it is"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "tight and heavy, yeah. the hiding thing is part of it but mostly it just sits on my chest. i don't know. saying it out loud helps a bit actually. maybe the room can just be a 20 min job and not a referendum on whether i'm an adult lol"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That’s tight and heavy, and it sits on your chest — I’m glad naming it helped a little. We can leave it there, or stay with what that chest-heavy pressure seems to be asking for underneath; which feels right?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "heavy",
+      "body_cue": [
+        "sits on my chest"
+      ],
+      "trigger": "mum coming to stay and the spare room being messy"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "i think i'll leave it there for now. the chest thing's already a bit lighter just from putting words to it. thank you, genuinely. gonna go make a dent in that room while i've got the nerve x"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "I’m glad putting words to it gave it a bit more room. Leave it there for now, and good luck with the room x",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "heavy",
+      "body_cue": [
+        "sits on my chest"
+      ],
+      "trigger": "mum coming to stay and the spare room being messy"
+    }
+  ]
+}

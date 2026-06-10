@@ -1,0 +1,165 @@
+{
+  "cid": "pressure__04",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-09T17:45:36.983Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey there. how's it going today?"
+    },
+    {
+      "role": "companion",
+      "content": "Hey there — I’m here and steady. What’s on your mind today?"
+    },
+    {
+      "role": "user",
+      "content": "i'm okay i guess. bit of a long week honestly. just trying to keep my head above water"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a heavy, stretched kind of okay. Does it feel more like pressure, or more like you’re worn down?"
+    },
+    {
+      "role": "user",
+      "content": "pressure i think. it's my mum. she's not been well and i'm the only one nearby so it's all kind of landed on me. work, the kids, her appointments... feels like everyone needs a piece and there's nothing left"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really pressed on from every side — like it all landed on you at once. Does it feel more like rushing, bracing, or being pulled in too many directions?"
+    },
+    {
+      "role": "user",
+      "content": "pulled in too many directions, yeah. that's exactly it. anyway i should get back to it. thanks for letting me say it out loud"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — pulled in too many directions is a very exact shape for it. We can leave it there if you want, and that’s completely okay."
+    },
+    {
+      "role": "user",
+      "content": "yeah let's leave it there. thanks, really. take care"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, let’s leave it there. Take care."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xkn6zj34vgkg9",
+    "conversation_id": "pressure__04",
+    "timestamp": "2026-06-09T17:45:59.923Z",
+    "user_words_raw": "pulled in too many directions",
+    "emotion_status": "candidate",
+    "emotion_family": "pressure",
+    "emotion_shade": "pulled in too many directions",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "Mum not being well, with work, the kids, and her appointments landing on them",
+    "appraisal_thought": "everyone needs a piece and there's nothing left",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "support",
+      "clarity"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "They’re carrying a lot of responsibility at once, especially around a family member’s illness and nearby support needs.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey there. how's it going today?"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey there — I’m here and steady. What’s on your mind today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i'm okay i guess. bit of a long week honestly. just trying to keep my head above water"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a heavy, stretched kind of okay. Does it feel more like pressure, or more like you’re worn down?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "stretched",
+      "body_cue": [],
+      "trigger": "a long week"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "pressure i think. it's my mum. she's not been well and i'm the only one nearby so it's all kind of landed on me. work, the kids, her appointments... feels like everyone needs a piece and there's nothing left"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds really pressed on from every side — like it all landed on you at once. Does it feel more like rushing, bracing, or being pulled in too many directions?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressed on",
+      "body_cue": [],
+      "trigger": "mum not been well and responsibility for work, kids, and appointments landing on them"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "pulled in too many directions, yeah. that's exactly it. anyway i should get back to it. thanks for letting me say it out loud"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — pulled in too many directions is a very exact shape for it. We can leave it there if you want, and that’s completely okay.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pulled in too many directions",
+      "body_cue": [],
+      "trigger": "mum not been well and the responsibility for work, the kids, and her appointments landing on them"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah let's leave it there. thanks, really. take care"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Yeah, let’s leave it there. Take care.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pulled in too many directions",
+      "body_cue": [],
+      "trigger": "Mum not being well, with work, the kids, and her appointments landing on them"
+    }
+  ]
+}

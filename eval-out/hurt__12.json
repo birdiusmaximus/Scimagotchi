@@ -1,0 +1,217 @@
+{
+  "cid": "hurt__12",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-09T18:21:39.981Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey there. how's it going today?"
+    },
+    {
+      "role": "companion",
+      "content": "Hey there — I’m here with you, steady and curious. What’s been going on for you today?"
+    },
+    {
+      "role": "user",
+      "content": "honestly not the best. it's been kind of a weird week. nothing dramatic, just... off i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds a little off and hard to pin down. Does it feel more blank, foggy, or just not quite like yourself?"
+    },
+    {
+      "role": "user",
+      "content": "no it's not foggy actually. i think i know exactly what it is, i've just been avoiding saying it. my friend dani had this birthday dinner saturday and i found out afterwards i wasn't invited. like a whole group of us, people i thought i was close with, and i just wasn't on the list"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds hurtful — especially with people you thought you were close with. Does it feel more like hurt, left out, or a bit embarrassed too?"
+    },
+    {
+      "role": "user",
+      "content": "all of it really. but mostly just... let down? like i saw the photos on instagram before anyone even said anything to me. and dani and i have known each other since uni. i would've invited her without thinking twice. it makes me question whether i read the whole friendship wrong"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like let down and hurt, with a sting of being unseen too. What does it make you want to do — pull back, ask about it, or go quiet?"
+    },
+    {
+      "role": "user",
+      "content": "my instinct is to just pull back and say nothing. pretend i didn't see. but that feels like the cowardly version. part of me wants to ask dani directly but i'm scared the answer is just that i matter less to them than i thought"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a painful mix of wanting to pull back and wanting the truth. I’m wondering if the sharpest part is not knowing whether it was about the invite, or about what it seemed to say about how much you matter to them?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. that's exactly it. it's not the dinner, i don't even love big dinners. it's what it seems to say. but saying it out loud like this makes it feel a bit smaller somehow. maybe one missed invite isn't the whole story of a 7 year friendship"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — the dinner itself is smaller than the meaning it took on. We can leave it there, or stay with what this might be asking for underneath; either way is fine."
+    },
+    {
+      "role": "user",
+      "content": "i think i'll leave it there for now. but thank you, really. this helped more than i expected. i might actually text dani tomorrow. ok, gonna go. take care x"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — I’m glad it helped. Take care, and you can come back to it anytime."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yv00ghocnvm2y",
+    "conversation_id": "hurt__12",
+    "timestamp": "2026-06-09T18:22:17.473Z",
+    "user_words_raw": "what it seems to say",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "let down",
+    "secondary_emotions": [
+      "hurt",
+      "mixed"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "finding out after the fact that they weren’t invited to a friend’s birthday dinner and seeing photos on Instagram",
+    "appraisal_thought": "it seems to say I matter less to them than I thought",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "belonging",
+      "care",
+      "being seen",
+      "trust"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "A missed invite with someone close brought up feeling let down and questioning the friendship.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey there. how's it going today?"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey there — I’m here with you, steady and curious. What’s been going on for you today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "honestly not the best. it's been kind of a weird week. nothing dramatic, just... off i guess"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds a little off and hard to pin down. Does it feel more blank, foggy, or just not quite like yourself?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "off",
+      "body_cue": [],
+      "trigger": "a weird week with nothing dramatic"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "no it's not foggy actually. i think i know exactly what it is, i've just been avoiding saying it. my friend dani had this birthday dinner saturday and i found out afterwards i wasn't invited. like a whole group of us, people i thought i was close with, and i just wasn't on the list"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds hurtful — especially with people you thought you were close with. Does it feel more like hurt, left out, or a bit embarrassed too?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [],
+      "trigger": "finding out afterwards that they weren't invited to a friend's birthday dinner with a group they thought they were close to"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "all of it really. but mostly just... let down? like i saw the photos on instagram before anyone even said anything to me. and dani and i have known each other since uni. i would've invited her without thinking twice. it makes me question whether i read the whole friendship wrong"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like let down and hurt, with a sting of being unseen too. What does it make you want to do — pull back, ask about it, or go quiet?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "let down",
+      "body_cue": [],
+      "trigger": "finding out after the fact that they weren’t invited to a friend’s birthday dinner and seeing photos on Instagram"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "my instinct is to just pull back and say nothing. pretend i didn't see. but that feels like the cowardly version. part of me wants to ask dani directly but i'm scared the answer is just that i matter less to them than i thought"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like a painful mix of wanting to pull back and wanting the truth. I’m wondering if the sharpest part is not knowing whether it was about the invite, or about what it seemed to say about how much you matter to them?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "let down",
+      "body_cue": [],
+      "trigger": "finding out after the fact that they weren’t invited to a friend’s birthday dinner and seeing photos on Instagram"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. that's exactly it. it's not the dinner, i don't even love big dinners. it's what it seems to say. but saying it out loud like this makes it feel a bit smaller somehow. maybe one missed invite isn't the whole story of a 7 year friendship"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That makes sense — the dinner itself is smaller than the meaning it took on. We can leave it there, or stay with what this might be asking for underneath; either way is fine.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "let down",
+      "body_cue": [],
+      "trigger": "finding out after the fact that they weren’t invited to a friend’s birthday dinner and seeing photos on Instagram"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "i think i'll leave it there for now. but thank you, really. this helped more than i expected. i might actually text dani tomorrow. ok, gonna go. take care x"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "Of course — I’m glad it helped. Take care, and you can come back to it anytime.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "let down",
+      "body_cue": [],
+      "trigger": "finding out after the fact that they weren’t invited to a friend’s birthday dinner and seeing photos on Instagram"
+    }
+  ]
+}

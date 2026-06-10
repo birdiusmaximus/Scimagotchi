@@ -1,0 +1,189 @@
+{
+  "cid": "flat__12",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-09T18:26:53.129Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. wasnt sure if id actually open this but here i am i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — glad you opened it. No need to make it into anything yet; we can just take it as it comes."
+    },
+    {
+      "role": "user",
+      "content": "yeah. honestly i dont even really know what id say. things are fine i think. work is fine, home is fine. its all just kind of... grey lately"
+    },
+    {
+      "role": "companion",
+      "content": "Grey makes sense. Does it feel more flat and blank, or more like dull and tired?"
+    },
+    {
+      "role": "user",
+      "content": "blank i think. not tired exactly. i did this whole thing last weekend, drove out to see the fireworks with friends, everyone was so into it and i just stood there. like i was watching myself be there. i kept waiting to feel something and it just never came"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really blank, and a bit far away from yourself. Is it more like detached, or like nothing was getting through?"
+    },
+    {
+      "role": "user",
+      "content": "nothing getting through, yeah. thats it exactly. its not that im sad about it. its just that the volume on everything got turned way down. i smile and say the right things and nobody notices but inside its just quiet. has been for weeks now and i cant even point to a reason"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds very quiet and muted inside, with the outside version still running on its own. We can leave it there, or if you want, I can stay with what it’s like when the volume is turned down like that."
+    },
+    {
+      "role": "user",
+      "content": "you can stay with it for a sec. i guess the scary part is its starting to feel normal. like im forgetting what the volume up even felt like"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like it’s becoming familiar in a worrying way. Does it feel more like forgetting, or like being pulled farther away from it?"
+    },
+    {
+      "role": "user",
+      "content": "more like forgetting i think. anyway. i dont know what i expected typing this out. it didnt fix anything but it was kind of nice to say it where i didnt have to pretend. thanks for that. im gonna head off"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad you said it here, and you don’t have to keep going. It can rest there for now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z1pql7rursrf0",
+    "conversation_id": "flat__12",
+    "timestamp": "2026-06-09T18:27:29.845Z",
+    "user_words_raw": "the volume on everything got turned way down",
+    "emotion_status": "confirmed",
+    "emotion_family": "flat",
+    "emotion_shade": "muted",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "weeks of feeling muted and blank, with no clear reason",
+    "appraisal_thought": "the volume on everything got turned way down",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "permission not to know",
+      "less pressure",
+      "quiet"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Has been feeling muted and blank for weeks, with no clear reason; said it was nice to say it without pretending.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. wasnt sure if id actually open this but here i am i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — glad you opened it. No need to make it into anything yet; we can just take it as it comes.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah. honestly i dont even really know what id say. things are fine i think. work is fine, home is fine. its all just kind of... grey lately"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Grey makes sense. Does it feel more flat and blank, or more like dull and tired?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "grey",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "blank i think. not tired exactly. i did this whole thing last weekend, drove out to see the fireworks with friends, everyone was so into it and i just stood there. like i was watching myself be there. i kept waiting to feel something and it just never came"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds really blank, and a bit far away from yourself. Is it more like detached, or like nothing was getting through?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "seeing the fireworks with friends"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "nothing getting through, yeah. thats it exactly. its not that im sad about it. its just that the volume on everything got turned way down. i smile and say the right things and nobody notices but inside its just quiet. has been for weeks now and i cant even point to a reason"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds very quiet and muted inside, with the outside version still running on its own. We can leave it there, or if you want, I can stay with what it’s like when the volume is turned down like that.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "muted",
+      "body_cue": [],
+      "trigger": "has been for weeks now and i cant even point to a reason"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "you can stay with it for a sec. i guess the scary part is its starting to feel normal. like im forgetting what the volume up even felt like"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like it’s becoming familiar in a worrying way. Does it feel more like forgetting, or like being pulled farther away from it?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "muted",
+      "body_cue": [],
+      "trigger": "has been for weeks now and i cant even point to a reason"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "more like forgetting i think. anyway. i dont know what i expected typing this out. it didnt fix anything but it was kind of nice to say it where i didnt have to pretend. thanks for that. im gonna head off"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad you said it here, and you don’t have to keep going. It can rest there for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "muted",
+      "body_cue": [],
+      "trigger": "weeks of feeling muted and blank, with no clear reason"
+    }
+  ]
+}

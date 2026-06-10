@@ -1,0 +1,259 @@
+{
+  "cid": "flat__21",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-09T18:27:36.657Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk man i dont even know why im here lol"
+    },
+    {
+      "role": "companion",
+      "content": "That feels pretty open-ended, maybe even a bit unmoored. Want to tell me what brought you in, or just hang out for a minute?"
+    },
+    {
+      "role": "user",
+      "content": "lol unmoored thats a fancy word for it. i guess. dunno. work stuff probably but its not even like anything bad happened so"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like work is hovering there, even if nothing dramatic happened. Does it feel more like vague pressure, or just hard to pin down?"
+    },
+    {
+      "role": "user",
+      "content": "neither? thats the thing. its not pressure. i got promoted like 3 months ago. senior analyst. everyone keeps saying congrats and i just kinda. nod. feel nothing about it honestly"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds pretty flat around the promotion, like the word “congrats” is landing on something that doesn’t really answer back. Does it feel more numb, blank, or just hard to connect to?"
+    },
+    {
+      "role": "user",
+      "content": "ha doesnt answer back. yeah. i mean i worked for that thing for two years. and now i just sit in the meetings and its like im watching it happen to someone else. like im behind glass or whatever. sorry this is dumb"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound dumb to me; it sounds very “behind glass.” Does it feel more detached, or more like you’re watching yourself from a distance?"
+    },
+    {
+      "role": "user",
+      "content": "watching myself i think. like there used to be this guy who actually cared about the work. got excited about a clean dataset lol. and i cant find him. i go through the day fine. answer emails. smile in standups. and then i get home and its just. nothing in there"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like someone who used to care has gone quiet, and the “nothing in there” is the part that stands out most. Does it feel more empty, or more like you’re carrying on automatically?"
+    },
+    {
+      "role": "user",
+      "content": "empty. the automatic part is easy honestly thats not the problem. its that i hit the goal. the thing i wanted. and theres just a hole where the happy was supposed to be. and im scared thats just. it now? like is this just what work is forever"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like empty with a hole where the happy was supposed to be, and the scary part is wondering if that’s how work will stay. Does it feel familiar to you, or new with this promotion?"
+    },
+    {
+      "role": "user",
+      "content": "kinda new but kinda not. like maybe it was creeping in before and the promotion just turned the lights on so i could see it. i dont even know what id want instead. thats the embarrassing part. i got the thing and i still feel like im missing something and i cant name it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the empty part is clearer now, and the missing thing is still unnamed. Does it feel more like a wanting, a meaning, or just a blank spot?"
+    },
+    {
+      "role": "user",
+      "content": "meaning maybe. like the dataset thing wasnt about the dataset it was that it meant something to me. and now its just numbers for someone elses slide deck. huh. i didnt really think about it like that til just now"
+    },
+    {
+      "role": "companion",
+      "content": "Yes — that sounds less like the numbers themselves and more like the meaning got lifted out of them. If you want, we can stay with that, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. i didnt expect to actually land on something. the meaning got lifted out. gonna sit with that. thanks weird little app. ttyl"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — that seems like the shape of it. I’ll leave it there with you; ttyl."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z2neer83qznsw",
+    "conversation_id": "flat__21",
+    "timestamp": "2026-06-09T18:28:36.805Z",
+    "user_words_raw": "the meaning got lifted out",
+    "emotion_status": "confirmed",
+    "emotion_family": "flat",
+    "emotion_shade": "empty",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "getting promoted to senior analyst after working toward it for two years",
+    "appraisal_thought": "the meaning got lifted out",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "meaning"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Work achievement felt empty once the personal meaning was gone",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk man i dont even know why im here lol"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That feels pretty open-ended, maybe even a bit unmoored. Want to tell me what brought you in, or just hang out for a minute?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "lol unmoored thats a fancy word for it. i guess. dunno. work stuff probably but its not even like anything bad happened so"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like work is hovering there, even if nothing dramatic happened. Does it feel more like vague pressure, or just hard to pin down?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "work stuff"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "neither? thats the thing. its not pressure. i got promoted like 3 months ago. senior analyst. everyone keeps saying congrats and i just kinda. nod. feel nothing about it honestly"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds pretty flat around the promotion, like the word “congrats” is landing on something that doesn’t really answer back. Does it feel more numb, blank, or just hard to connect to?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": "getting promoted to senior analyst and people congratulating them"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "ha doesnt answer back. yeah. i mean i worked for that thing for two years. and now i just sit in the meetings and its like im watching it happen to someone else. like im behind glass or whatever. sorry this is dumb"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That doesn’t sound dumb to me; it sounds very “behind glass.” Does it feel more detached, or more like you’re watching yourself from a distance?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "detached",
+      "body_cue": [],
+      "trigger": "being promoted to senior analyst and sitting in meetings afterward"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "watching myself i think. like there used to be this guy who actually cared about the work. got excited about a clean dataset lol. and i cant find him. i go through the day fine. answer emails. smile in standups. and then i get home and its just. nothing in there"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like someone who used to care has gone quiet, and the “nothing in there” is the part that stands out most. Does it feel more empty, or more like you’re carrying on automatically?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "empty",
+      "body_cue": [],
+      "trigger": "being promoted to senior analyst and then sitting in meetings afterward"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "empty. the automatic part is easy honestly thats not the problem. its that i hit the goal. the thing i wanted. and theres just a hole where the happy was supposed to be. and im scared thats just. it now? like is this just what work is forever"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like empty with a hole where the happy was supposed to be, and the scary part is wondering if that’s how work will stay. Does it feel familiar to you, or new with this promotion?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "empty",
+      "body_cue": [],
+      "trigger": "getting promoted to senior analyst after working toward it for two years"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "kinda new but kinda not. like maybe it was creeping in before and the promotion just turned the lights on so i could see it. i dont even know what id want instead. thats the embarrassing part. i got the thing and i still feel like im missing something and i cant name it"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds like the empty part is clearer now, and the missing thing is still unnamed. Does it feel more like a wanting, a meaning, or just a blank spot?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "empty",
+      "body_cue": [],
+      "trigger": "getting promoted to senior analyst after working toward it for two years"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "meaning maybe. like the dataset thing wasnt about the dataset it was that it meant something to me. and now its just numbers for someone elses slide deck. huh. i didnt really think about it like that til just now"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "Yes — that sounds less like the numbers themselves and more like the meaning got lifted out of them. If you want, we can stay with that, or leave it here for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "empty",
+      "body_cue": [],
+      "trigger": "getting promoted to senior analyst after working toward it for two years"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "yeah lets leave it there. i didnt expect to actually land on something. the meaning got lifted out. gonna sit with that. thanks weird little app. ttyl"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Yeah — that seems like the shape of it. I’ll leave it there with you; ttyl.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "empty",
+      "body_cue": [],
+      "trigger": "getting promoted to senior analyst after working toward it for two years"
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "cid": "hurt__13",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-09T18:21:41.304Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk why im even here lol. someone said this app helps you 'process feelings' or whatever"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — we can keep it simple, no pressure to “process” anything. What’s been on your mind lately?"
+    },
+    {
+      "role": "user",
+      "content": "honestly nothing. well. money stuff i guess but its dumb, everyone deals with it. not a big deal"
+    },
+    {
+      "role": "companion",
+      "content": "Money stuff is there, even if it feels dumb or small. Does it feel more like pressure, worry, or just something you’re trying not to make a big thing out of?"
+    },
+    {
+      "role": "user",
+      "content": "nah not pressure. more like... ugh i dont even know how to say it. lent my brother money. a lot. like more than i should have. and now hes just. ghosting me about it lol classic"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds more like hurt mixed with annoyance than plain pressure. Is it the ghosting, the amount, or the feeling of having given more than you should have that lands hardest?"
+    },
+    {
+      "role": "user",
+      "content": "i mean its 4 grand so. not nothing. but its not even the money really? like id have given it to him anyway. its that he wont even text me back. saw my message and just. nothing. like im some bill collector and not his sister"
+    },
+    {
+      "role": "companion",
+      "content": "That lands as hurt and being dismissed — the silence seems to matter more than the 4 grand. Did it feel more like being unseen, or like he turned you into something impersonal?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. unseen i guess. like i was always the one who showed up for him and now its like im an inconvenience. cant even get a 'hey sorry im broke right now'. that would be FINE. its the silence that gets me. anyway lol sorry didnt mean to dump"
+    },
+    {
+      "role": "companion",
+      "content": "No need to apologise — that sounds really raw. I’m wondering if the part that hurts most is the silence itself, or what it seems to say about how he sees you?"
+    },
+    {
+      "role": "user",
+      "content": "what it says about how he sees me probably. that i dont matter unless im useful. ok thats. enough therapy for one night lol. thanks tho. this kinda helped weirdly. gonna go"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it leaves a sharp kind of hurt. We can leave it there for tonight, and I’m glad it helped a little."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yv14d8sw5r90s",
+    "conversation_id": "hurt__13",
+    "timestamp": "2026-06-09T18:22:18.352Z",
+    "user_words_raw": "i dont matter unless im useful",
+    "emotion_status": "candidate",
+    "emotion_family": "hurt",
+    "emotion_shade": "unseen",
+    "secondary_emotions": [
+      "sadness"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "brother saw the message and didn’t text back about repaying money",
+    "appraisal_thought": "I don’t matter unless I’m useful.",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "being seen",
+      "repair",
+      "honesty"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "Feels unseen when someone close goes silent after asking for money.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk why im even here lol. someone said this app helps you 'process feelings' or whatever"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — we can keep it simple, no pressure to “process” anything. What’s been on your mind lately?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "honestly nothing. well. money stuff i guess but its dumb, everyone deals with it. not a big deal"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Money stuff is there, even if it feels dumb or small. Does it feel more like pressure, worry, or just something you’re trying not to make a big thing out of?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressure",
+      "body_cue": [],
+      "trigger": "money stuff"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "nah not pressure. more like... ugh i dont even know how to say it. lent my brother money. a lot. like more than i should have. and now hes just. ghosting me about it lol classic"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds more like hurt mixed with annoyance than plain pressure. Is it the ghosting, the amount, or the feeling of having given more than you should have that lands hardest?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "lent money to brother and he is ghosting about paying it back"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "i mean its 4 grand so. not nothing. but its not even the money really? like id have given it to him anyway. its that he wont even text me back. saw my message and just. nothing. like im some bill collector and not his sister"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That lands as hurt and being dismissed — the silence seems to matter more than the 4 grand. Did it feel more like being unseen, or like he turned you into something impersonal?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "dismissed",
+      "body_cue": [],
+      "trigger": "brother saw the message and didn’t text back about repaying money"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. unseen i guess. like i was always the one who showed up for him and now its like im an inconvenience. cant even get a 'hey sorry im broke right now'. that would be FINE. its the silence that gets me. anyway lol sorry didnt mean to dump"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "No need to apologise — that sounds really raw. I’m wondering if the part that hurts most is the silence itself, or what it seems to say about how he sees you?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "unseen",
+      "body_cue": [],
+      "trigger": "brother saw the message and didn’t text back about repaying money"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "what it says about how he sees me probably. that i dont matter unless im useful. ok thats. enough therapy for one night lol. thanks tho. this kinda helped weirdly. gonna go"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That makes sense — it leaves a sharp kind of hurt. We can leave it there for tonight, and I’m glad it helped a little.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "unseen",
+      "body_cue": [],
+      "trigger": "brother saw the message and didn’t text back about repaying money"
+    }
+  ]
+}

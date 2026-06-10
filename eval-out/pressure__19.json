@@ -1,0 +1,257 @@
+{
+  "cid": "pressure__19",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-09T17:46:38.822Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — good to see you. What’s been going on today?"
+    },
+    {
+      "role": "user",
+      "content": "idk. nothing really. just kind of a lot lately i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds a bit like being in the middle of a lot, even if nothing specific is standing out. Does it feel more like pressure, or more like you’ve gone a bit flat?"
+    },
+    {
+      "role": "user",
+      "content": "pressure probably. like im supposed to have it together by now and i dont"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really pressuring — like there’s an expectation hanging over you. Is it more the “supposed to” part, or the “I don’t” part?"
+    },
+    {
+      "role": "user",
+      "content": "the i dont part. everyone i grew up with has like. real careers. houses. and im 31 and still doing the same temp stuff i did at 24"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds heavy and comparing, like the gap itself is what’s stinging. Does it feel more like being behind, or like you’re getting measured against everyone else?"
+    },
+    {
+      "role": "user",
+      "content": "both. my sister just got engaged and bought a place and at the dinner everyone kept asking me what im doing and i just. didnt have an answer. felt like a kid at the adults table"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a mix of pressure and shame, with the dinner making it feel sharper. Did it leave you wanting to shrink, go quiet, or get out of there?"
+    },
+    {
+      "role": "user",
+      "content": "shrink. i just went quiet and helped clear plates so i didnt have to talk. like if im useful in the kitchen nobody asks the real questions"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — being useful in the kitchen gave you a way to disappear from the questions. Does it feel familiar, like a place you know how to go when things get too exposing?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. ive done it my whole life. easier to be the one helping than the one being looked at. but then i go home and feel like garbage anyway"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a long-used way of staying out of view, even if it doesn’t protect you from the after-feeling. Does the “garbage” feel more like shame, disappointment, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "disappointment in myself i think. like i had potential or whatever and i just. didnt do anything with it. ugh idk this is a lot. didnt mean to dump all this"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like disappointment turning inward, and the “didn’t mean to dump all this” has a self-critical edge too. We can leave it here if you want, or stay with what this says about the “potential” part?"
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. im kinda tired. thanks for listening tho. means more than youd think"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — we can leave it there. I’m glad you told me, and I’ll keep this thread in mind for next time."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xlyplyrfqv46m",
+    "conversation_id": "pressure__19",
+    "timestamp": "2026-06-09T17:47:25.013Z",
+    "user_words_raw": "means more than youd think",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "being asked what they were doing at dinner while others talked about careers, engagement, and buying a place",
+    "appraisal_thought": "I had potential and I didn’t do anything with it",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Can return to the pattern of staying useful/helping when feeling exposed, and the self-critical disappointment afterward.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — good to see you. What’s been going on today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "idk. nothing really. just kind of a lot lately i guess"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds a bit like being in the middle of a lot, even if nothing specific is standing out. Does it feel more like pressure, or more like you’ve gone a bit flat?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "pressure probably. like im supposed to have it together by now and i dont"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds really pressuring — like there’s an expectation hanging over you. Is it more the “supposed to” part, or the “I don’t” part?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressured",
+      "body_cue": [],
+      "trigger": "feeling expected to have it together by now"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "the i dont part. everyone i grew up with has like. real careers. houses. and im 31 and still doing the same temp stuff i did at 24"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds heavy and comparing, like the gap itself is what’s stinging. Does it feel more like being behind, or like you’re getting measured against everyone else?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "heavy",
+      "body_cue": [],
+      "trigger": "seeing others have careers and houses while still doing temp work"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "both. my sister just got engaged and bought a place and at the dinner everyone kept asking me what im doing and i just. didnt have an answer. felt like a kid at the adults table"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like a mix of pressure and shame, with the dinner making it feel sharper. Did it leave you wanting to shrink, go quiet, or get out of there?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "being asked what they're doing at dinner while others talked about careers, engagement, and buying a place"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "shrink. i just went quiet and helped clear plates so i didnt have to talk. like if im useful in the kitchen nobody asks the real questions"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That makes sense — being useful in the kitchen gave you a way to disappear from the questions. Does it feel familiar, like a place you know how to go when things get too exposing?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "exposed",
+      "body_cue": [],
+      "trigger": "being asked what they were doing at dinner while others talked about careers, engagement, and buying a place"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "yeah. ive done it my whole life. easier to be the one helping than the one being looked at. but then i go home and feel like garbage anyway"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds like a long-used way of staying out of view, even if it doesn’t protect you from the after-feeling. Does the “garbage” feel more like shame, disappointment, or something else?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "being asked what they were doing at dinner while others talked about careers, engagement, and buying a place"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "disappointment in myself i think. like i had potential or whatever and i just. didnt do anything with it. ugh idk this is a lot. didnt mean to dump all this"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That sounds like disappointment turning inward, and the “didn’t mean to dump all this” has a self-critical edge too. We can leave it here if you want, or stay with what this says about the “potential” part?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "being asked what they were doing at dinner while others talked about careers, engagement, and buying a place"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "yeah lets leave it there. im kinda tired. thanks for listening tho. means more than youd think"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Of course — we can leave it there. I’m glad you told me, and I’ll keep this thread in mind for next time.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "being asked what they were doing at dinner while others talked about careers, engagement, and buying a place"
+    }
+  ]
+}

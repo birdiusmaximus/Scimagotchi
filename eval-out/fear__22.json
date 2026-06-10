@@ -1,0 +1,252 @@
+{
+  "cid": "fear__22",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-09T17:37:51.040Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. i dont really know how to start this. been feeling kind of off all week"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that’s a perfectly fine place to start. “Off” can mean a few different things — more flat, uneasy, or just not quite yourself; which is closest?"
+    },
+    {
+      "role": "user",
+      "content": "no its not flat really. more like uneasy. like theres this knot in my chest that wont go away. i keep checking my phone for no reason"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds more like uneasy than flat, with a knot in your chest and that phone-checking loop. Did anything seem to set it off, or did it just start hanging around?"
+    },
+    {
+      "role": "user",
+      "content": "i think i know what it is but it feels stupid to even say. my landlord texted last week asking to 'have a chat' about the lease. thats it. just those words. and ive been spiraling ever since"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound stupid — “have a chat” can hang in the air in a very particular way. I’m wondering if this is more about uncertainty, or about what that message might mean?"
+    },
+    {
+      "role": "user",
+      "content": "what it might mean i think. ive lived here 6 years. rents gone up everywhere. if he wants me out or wants to jack the rent i literally cant afford anywhere else in this city. and i havent replied yet. its been 5 days. i just keep staring at the text"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the fear is latched onto what that text could mean for your home and your options. Does it feel more like dread, or more like being on edge while you wait?"
+    },
+    {
+      "role": "user",
+      "content": "honestly both. theres this dread underneath like i already know its bad news. but then theres the on edge part where every time my phone buzzes my stomach drops. and the worst part is i KNOW not replying makes it worse. but i cant. im scared if i open that conversation it becomes real"
+    },
+    {
+      "role": "companion",
+      "content": "That makes a lot of sense — the dread feels like bad news already, and the buzzing-phone part feels raw and on edge. If you want, we can stay with that, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "no i wanna stay with it for a sec. i think whats really under it is. this is the first place ive ever felt like mine you know? after my divorce i rebuilt my whole life in this little apartment. and the idea of losing it feels like losing the proof that i made it on my own"
+    },
+    {
+      "role": "companion",
+      "content": "That feels bigger than the lease now — like the apartment is tied to proof that you made it on your own. Is it more the fear of losing the place, or the meaning it carries about your life?"
+    },
+    {
+      "role": "user",
+      "content": "the meaning. definitely the meaning. an apartment is just walls but this one is mine. i guess thats why i froze. saying it out loud helps though. its not really about the rent. its about whether im gonna be ok if the thing i built gets taken away"
+    },
+    {
+      "role": "companion",
+      "content": "That lands very clearly — it’s about whether you’ll still be okay if something that feels like proof gets taken away. We can leave it there, or if you want, we can stay with what “okay” means here."
+    },
+    {
+      "role": "user",
+      "content": "i think i need to sit with that one on my own for a bit. but thank you. i didnt expect to figure out what was actually scaring me. maybe ill text him back tonight. ok. gonna go. thanks for this"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a clear place to pause. I’m glad you found the shape of what was scaring you, and I can leave it here with you."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xaoj1huf2wfm6",
+    "conversation_id": "fear__22",
+    "timestamp": "2026-06-09T17:38:35.090Z",
+    "user_words_raw": "the thing i built gets taken away",
+    "emotion_status": "confirmed",
+    "emotion_family": "fear",
+    "emotion_shade": "dread",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "landlord texted about having a chat regarding the lease",
+    "appraisal_thought": "If I lose this place, I may lose the proof that I made it on my own.",
+    "body_cue": [],
+    "behaviour_action": [
+      "froze",
+      "staring at the text",
+      "not replying"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "security",
+      "stability",
+      "proof",
+      "control"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "A home is tied to proof of having rebuilt life after divorce.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. i dont really know how to start this. been feeling kind of off all week"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that’s a perfectly fine place to start. “Off” can mean a few different things — more flat, uneasy, or just not quite yourself; which is closest?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "off",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "no its not flat really. more like uneasy. like theres this knot in my chest that wont go away. i keep checking my phone for no reason"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds more like uneasy than flat, with a knot in your chest and that phone-checking loop. Did anything seem to set it off, or did it just start hanging around?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [
+        "knot in my chest"
+      ],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "i think i know what it is but it feels stupid to even say. my landlord texted last week asking to 'have a chat' about the lease. thats it. just those words. and ive been spiraling ever since"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That doesn’t sound stupid — “have a chat” can hang in the air in a very particular way. I’m wondering if this is more about uncertainty, or about what that message might mean?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [
+        "knot in my chest"
+      ],
+      "trigger": "landlord texted asking to 'have a chat' about the lease"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "what it might mean i think. ive lived here 6 years. rents gone up everywhere. if he wants me out or wants to jack the rent i literally cant afford anywhere else in this city. and i havent replied yet. its been 5 days. i just keep staring at the text"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like the fear is latched onto what that text could mean for your home and your options. Does it feel more like dread, or more like being on edge while you wait?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [
+        "knot in my chest"
+      ],
+      "trigger": "landlord texted asking to 'have a chat' about the lease"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "honestly both. theres this dread underneath like i already know its bad news. but then theres the on edge part where every time my phone buzzes my stomach drops. and the worst part is i KNOW not replying makes it worse. but i cant. im scared if i open that conversation it becomes real"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That makes a lot of sense — the dread feels like bad news already, and the buzzing-phone part feels raw and on edge. If you want, we can stay with that, or leave it here for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [
+        "stomach drops"
+      ],
+      "trigger": "landlord texted about 'have a chat' regarding the lease"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "no i wanna stay with it for a sec. i think whats really under it is. this is the first place ive ever felt like mine you know? after my divorce i rebuilt my whole life in this little apartment. and the idea of losing it feels like losing the proof that i made it on my own"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels bigger than the lease now — like the apartment is tied to proof that you made it on your own. Is it more the fear of losing the place, or the meaning it carries about your life?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [],
+      "trigger": "landlord texted about \"have a chat\" regarding the lease"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "the meaning. definitely the meaning. an apartment is just walls but this one is mine. i guess thats why i froze. saying it out loud helps though. its not really about the rent. its about whether im gonna be ok if the thing i built gets taken away"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That lands very clearly — it’s about whether you’ll still be okay if something that feels like proof gets taken away. We can leave it there, or if you want, we can stay with what “okay” means here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [
+        "froze"
+      ],
+      "trigger": "landlord texted about having a chat regarding the lease"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "i think i need to sit with that one on my own for a bit. but thank you. i didnt expect to figure out what was actually scaring me. maybe ill text him back tonight. ok. gonna go. thanks for this"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That feels like a clear place to pause. I’m glad you found the shape of what was scaring you, and I can leave it here with you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [],
+      "trigger": "landlord texted about having a chat regarding the lease"
+    }
+  ]
+}

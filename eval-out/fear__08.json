@@ -1,0 +1,145 @@
+{
+  "cid": "fear__08",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-09T17:35:57.596Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk if these things even work but ok. cant really sleep lately"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a rough kind of unsettled. Is it more like your mind won’t settle, or your body won’t let go?"
+    },
+    {
+      "role": "user",
+      "content": "mind mostly. just keeps spinning about work stuff. my contract ends in like two months and theres no word on renewal"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds pretty anxious and on edge, with work hanging there in the background. Does it feel more like worry about not knowing, or dread about what the no-word might mean?"
+    },
+    {
+      "role": "user",
+      "content": "the not knowing i think. like i cant plan anything. rent, whether to even look elsewhere. just floating. anyway its prob fine"
+    },
+    {
+      "role": "companion",
+      "content": "That floating-not-knowing makes sense here — it sounds like the part that’s hardest is not being able to plan. Would you say it’s more restless, or more stuck?"
+    },
+    {
+      "role": "user",
+      "content": "stuck yeah. ok this actually helped a little, didnt expect that. gonna try to sleep. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it helped a little. We can leave it here for now, and I hope sleep comes quietly."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6x8865ljkig3b3",
+    "conversation_id": "fear__08",
+    "timestamp": "2026-06-09T17:36:15.825Z",
+    "user_words_raw": "just floating",
+    "emotion_status": "confirmed",
+    "emotion_family": "fear",
+    "emotion_shade": "uncertain",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "contract ends in about two months and there’s no word on renewal",
+    "appraisal_thought": "I can’t plan anything",
+    "body_cue": [],
+    "behaviour_action": [
+      "can’t plan anything",
+      "floating",
+      "stuck"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "certainty",
+      "control",
+      "support"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Work uncertainty tends to make them feel stuck and unable to plan, especially around rent and renewal.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk if these things even work but ok. cant really sleep lately"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a rough kind of unsettled. Is it more like your mind won’t settle, or your body won’t let go?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "mind mostly. just keeps spinning about work stuff. my contract ends in like two months and theres no word on renewal"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds pretty anxious and on edge, with work hanging there in the background. Does it feel more like worry about not knowing, or dread about what the no-word might mean?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "on edge",
+      "body_cue": [],
+      "trigger": "contract ends in about two months and there’s no word on renewal"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "the not knowing i think. like i cant plan anything. rent, whether to even look elsewhere. just floating. anyway its prob fine"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That floating-not-knowing makes sense here — it sounds like the part that’s hardest is not being able to plan. Would you say it’s more restless, or more stuck?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "uncertain",
+      "body_cue": [],
+      "trigger": "contract ends in about two months and there’s no word on renewal"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "stuck yeah. ok this actually helped a little, didnt expect that. gonna try to sleep. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "I’m glad it helped a little. We can leave it here for now, and I hope sleep comes quietly.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uncertain",
+      "body_cue": [],
+      "trigger": "contract ends in about two months and there’s no word on renewal"
+    }
+  ]
+}

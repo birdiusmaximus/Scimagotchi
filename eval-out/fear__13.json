@@ -1,0 +1,193 @@
+{
+  "cid": "fear__13",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-09T17:37:00.814Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk why im even opening this lol. nothings wrong really"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that “nothings wrong really” sounds like it might still be worth a look. Is it more like a vague pull, or just curiosity?"
+    },
+    {
+      "role": "user",
+      "content": "more like. i keep checking my bank app at like 2am for no reason haha. its a fun lil hobby"
+    },
+    {
+      "role": "companion",
+      "content": "Haha, that sounds a bit compulsive and a bit funny at the same time. What’s it like when you do it at 2am — restless, automatic, or just oddly soothing?"
+    },
+    {
+      "role": "user",
+      "content": "dunno. not soothing lol. its like i think the number changed while i was asleep. spoiler: it didnt. rent comes out friday and im like £80 short maybe? math is hard when ur tired"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds more like a worried checking loop than a fun hobby. Did something happen that made Friday feel sharp, or is it mainly the £80 that’s sitting there at 2am?"
+    },
+    {
+      "role": "user",
+      "content": "i mean its always a bit tight but my hours got cut at work so. yeah. and if rent bounces theres a fee and then im more short next month and you can see where this is going lol. its fine tho ill figure it out probably"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the worry is getting pulled along by the cut hours and the “what if rent bounces” chain. Would you like to leave it there, or stay with what it’s starting to feel like?"
+    },
+    {
+      "role": "user",
+      "content": "honestly the spiral is the worst part. like the £80 isnt even the thing, its that little voice going what if this is just my life now. that ones not as funny"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that sounds like the real sting is the spiral and that “what if this is just my life now” voice. It doesn’t sound funny at all — do you want to stay with that part, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "nah i think im gonna leave it there. but uh. weirdly helped to say it out loud or. type it out loud. whatever this is. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it helped to put it into words, even in this weird typed-out way. We can leave it here."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6x9l4h1yhjz5cs",
+    "conversation_id": "fear__13",
+    "timestamp": "2026-06-09T17:37:40.841Z",
+    "user_words_raw": "the spiral is the worst part",
+    "emotion_status": "confirmed",
+    "emotion_family": "fear",
+    "emotion_shade": "worried",
+    "secondary_emotions": [
+      "pressure"
+    ],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "hours got cut at work and rent comes out friday",
+    "appraisal_thought": "what if this is just my life now",
+    "body_cue": [],
+    "behaviour_action": [
+      "checking my bank app"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "certainty",
+      "control",
+      "reassurance"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Money worry gets worse in the late-night spiral, especially around rent and reduced hours.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk why im even opening this lol. nothings wrong really"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that “nothings wrong really” sounds like it might still be worth a look. Is it more like a vague pull, or just curiosity?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "more like. i keep checking my bank app at like 2am for no reason haha. its a fun lil hobby"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Haha, that sounds a bit compulsive and a bit funny at the same time. What’s it like when you do it at 2am — restless, automatic, or just oddly soothing?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "dunno. not soothing lol. its like i think the number changed while i was asleep. spoiler: it didnt. rent comes out friday and im like £80 short maybe? math is hard when ur tired"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds more like a worried checking loop than a fun hobby. Did something happen that made Friday feel sharp, or is it mainly the £80 that’s sitting there at 2am?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "worried",
+      "body_cue": [],
+      "trigger": "rent comes out friday and im like £80 short maybe"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "i mean its always a bit tight but my hours got cut at work so. yeah. and if rent bounces theres a fee and then im more short next month and you can see where this is going lol. its fine tho ill figure it out probably"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like the worry is getting pulled along by the cut hours and the “what if rent bounces” chain. Would you like to leave it there, or stay with what it’s starting to feel like?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "worried",
+      "body_cue": [],
+      "trigger": "hours got cut at work and rent comes out friday"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "honestly the spiral is the worst part. like the £80 isnt even the thing, its that little voice going what if this is just my life now. that ones not as funny"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Yeah, that sounds like the real sting is the spiral and that “what if this is just my life now” voice. It doesn’t sound funny at all — do you want to stay with that part, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "worried",
+      "body_cue": [],
+      "trigger": "hours got cut at work and rent comes out friday"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "nah i think im gonna leave it there. but uh. weirdly helped to say it out loud or. type it out loud. whatever this is. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad it helped to put it into words, even in this weird typed-out way. We can leave it here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "worried",
+      "body_cue": [],
+      "trigger": "hours got cut at work and rent comes out friday"
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "cid": "sadness__19",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-09T18:20:06.780Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, it’s good to see you. What’s been on your mind today?"
+    },
+    {
+      "role": "user",
+      "content": "idk. not much"
+    },
+    {
+      "role": "companion",
+      "content": "Got it — a quiet kind of nothing-much. If there’s anything sitting in the background, you can just say it plain."
+    },
+    {
+      "role": "user",
+      "content": "i guess i just feel kind of useless lately. like whats even the point of me"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really heavy and self-turning. I'm wondering if it feels more like useless, or more like hopeless?"
+    },
+    {
+      "role": "user",
+      "content": "more like... i dont recognize myself anymore. i used to be the person who had it together. people came to me"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a painful kind of loss — not just “useless,” but not recognizing yourself in the role you used to have. What seems most gone: the steadiness, or being the person others came to?"
+    },
+    {
+      "role": "user",
+      "content": "i got let go in march. i was a team lead for 6 years. now im just. nothing. nobody asks me anything anymore"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like shame and loss tangled together — being let go, and then feeling like the person others used to turn to has gone quiet. Does it make you want to hide, explain, or just go still?"
+    },
+    {
+      "role": "user",
+      "content": "go still mostly. i dont even tell people. i let my wife think im fine. i just miss who i was"
+    },
+    {
+      "role": "companion",
+      "content": "That “go still” feels important — like the feeling turns you quiet, and the missing is about who you were, not just the job. What does “go still” look like for you: going quiet, avoiding, or freezing up?"
+    },
+    {
+      "role": "user",
+      "content": "going quiet i think. i sit in the car in the driveway some mornings like im still going somewhere. then i just dont"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds very quiet and stuck, like the start of going somewhere but then not being able to cross into the day. Would it help to leave it here for now, or stay with what the driveway means to you?"
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it. i didnt mean to say all that. thanks though"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — we can leave it right there. Thanks for trusting me with it."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yt05utyh10ac9",
+    "conversation_id": "sadness__19",
+    "timestamp": "2026-06-09T18:20:54.640Z",
+    "user_words_raw": "we can leave it",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "inadequate",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "being let go after 6 years as a team lead and no longer being asked for input",
+    "appraisal_thought": "i'm nothing / i miss who i was",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User may want to stop after briefly sharing a quiet, stuck feeling about job loss and identity.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, it’s good to see you. What’s been on your mind today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "idk. not much"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Got it — a quiet kind of nothing-much. If there’s anything sitting in the background, you can just say it plain.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "i guess i just feel kind of useless lately. like whats even the point of me"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds really heavy and self-turning. I'm wondering if it feels more like useless, or more like hopeless?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "useless",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "more like... i dont recognize myself anymore. i used to be the person who had it together. people came to me"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like a painful kind of loss — not just “useless,” but not recognizing yourself in the role you used to have. What seems most gone: the steadiness, or being the person others came to?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "inadequate",
+      "body_cue": [],
+      "trigger": "not recognizing yourself after once being the person who had it together and others came to"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i got let go in march. i was a team lead for 6 years. now im just. nothing. nobody asks me anything anymore"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like shame and loss tangled together — being let go, and then feeling like the person others used to turn to has gone quiet. Does it make you want to hide, explain, or just go still?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "inadequate",
+      "body_cue": [],
+      "trigger": "being let go after years as a team lead, and no longer being asked for input"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "go still mostly. i dont even tell people. i let my wife think im fine. i just miss who i was"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That “go still” feels important — like the feeling turns you quiet, and the missing is about who you were, not just the job. What does “go still” look like for you: going quiet, avoiding, or freezing up?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "inadequate",
+      "body_cue": [],
+      "trigger": "being let go after 6 years as a team lead and no longer being asked for input"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "going quiet i think. i sit in the car in the driveway some mornings like im still going somewhere. then i just dont"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds very quiet and stuck, like the start of going somewhere but then not being able to cross into the day. Would it help to leave it here for now, or stay with what the driveway means to you?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "inadequate",
+      "body_cue": [],
+      "trigger": "being let go after 6 years as a team lead and no longer being asked for input"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah lets leave it. i didnt mean to say all that. thanks though"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "Of course — we can leave it right there. Thanks for trusting me with it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "inadequate",
+      "body_cue": [],
+      "trigger": "being let go after 6 years as a team lead and no longer being asked for input"
+    }
+  ]
+}

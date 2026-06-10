@@ -1,0 +1,193 @@
+{
+  "cid": "flat__16",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-09T18:26:56.989Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so i guess i just type here. not really sure what this is supposed to do tbh"
+    },
+    {
+      "role": "companion",
+      "content": "Yep — you can just type here. I’ll follow along with whatever you bring up, whether it’s a question, a thought, or a feeling."
+    },
+    {
+      "role": "user",
+      "content": "i dont even know. i guess i just feel kind of flat lately. like nothing. its not even sad really its just. nothing"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds very flat and blank, like “nothing” is the closest word right now. Does it feel more blank, numb, or disconnected?"
+    },
+    {
+      "role": "user",
+      "content": "disconnected i think. theres this friend, maddie, we used to talk every day basically. and now i look at our texts and its like. who is this person. i feel nothing reaching out anymore. and idk why that doesnt bother me more??"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds more disconnected than sad — like the thread to her is there, but it doesn’t reach you the same way. Did something happen before it started feeling like this, or did it just go quiet?"
+    },
+    {
+      "role": "user",
+      "content": "kind of both? she moved to seattle in like february for a job. nothing bad happened we didnt fight or anything. but the calls got shorter and now its mostly just memes. and i keep meaning to actually text her back but i just. dont. and then i feel weird about it. or i guess i dont feel anything which is the weird part"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like it’s turned into a kind of quiet distance — not a fight, more a drift, and the “weird” part may be how little you can feel about it. Does it feel more blank, or a bit shut down?"
+    },
+    {
+      "role": "user",
+      "content": "shut down maybe. like i put it in a box. honestly i thought this app was gonna be kind of dumb but. i dont know. the drift word is right. it wasnt a thing that happened it just sort of dissolved and i didnt do anything to stop it which feels bad to say out loud"
+    },
+    {
+      "role": "companion",
+      "content": "That “dissolved” feeling lands — and the part that feels bad to say out loud sounds like it’s right there with it. We can leave it here, or stay with what it connects to for you; which feels closer?"
+    },
+    {
+      "role": "user",
+      "content": "i think i'll leave it there for now. this was kind of more than i expected honestly. maybe i'll just text her back. thanks i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — we can leave it here, and I’m glad you said it out loud. “Thanks i guess” feels like a quiet stopping point."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z1sx3edlys9i5",
+    "conversation_id": "flat__16",
+    "timestamp": "2026-06-09T18:27:34.936Z",
+    "user_words_raw": "put it in a box",
+    "emotion_status": "confirmed",
+    "emotion_family": "flat",
+    "emotion_shade": "shut down",
+    "secondary_emotions": [
+      "hurt"
+    ],
+    "valence": "mixed",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "A close friend moved away, the calls got shorter, and the connection slowly dissolved into memes and delayed replies.",
+    "appraisal_thought": "It dissolved and I didn’t do anything to stop it, which feels bad to say out loud.",
+    "body_cue": [],
+    "behaviour_action": [
+      "put it in a box"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "permission not to know",
+      "gentleness",
+      "less pressure"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Friendship drifted after a move; user felt shut down and let it dissolve without stopping it.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so i guess i just type here. not really sure what this is supposed to do tbh"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Yep — you can just type here. I’ll follow along with whatever you bring up, whether it’s a question, a thought, or a feeling.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i dont even know. i guess i just feel kind of flat lately. like nothing. its not even sad really its just. nothing"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds very flat and blank, like “nothing” is the closest word right now. Does it feel more blank, numb, or disconnected?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "disconnected i think. theres this friend, maddie, we used to talk every day basically. and now i look at our texts and its like. who is this person. i feel nothing reaching out anymore. and idk why that doesnt bother me more??"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds more disconnected than sad — like the thread to her is there, but it doesn’t reach you the same way. Did something happen before it started feeling like this, or did it just go quiet?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "a close friendship feeling distant over time"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "kind of both? she moved to seattle in like february for a job. nothing bad happened we didnt fight or anything. but the calls got shorter and now its mostly just memes. and i keep meaning to actually text her back but i just. dont. and then i feel weird about it. or i guess i dont feel anything which is the weird part"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like it’s turned into a kind of quiet distance — not a fight, more a drift, and the “weird” part may be how little you can feel about it. Does it feel more blank, or a bit shut down?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "A close friend moved away and the contact slowly became shorter and more casual."
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "shut down maybe. like i put it in a box. honestly i thought this app was gonna be kind of dumb but. i dont know. the drift word is right. it wasnt a thing that happened it just sort of dissolved and i didnt do anything to stop it which feels bad to say out loud"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That “dissolved” feeling lands — and the part that feels bad to say out loud sounds like it’s right there with it. We can leave it here, or stay with what it connects to for you; which feels closer?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "A close friend moved away and the contact slowly became shorter and more casual."
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "i think i'll leave it there for now. this was kind of more than i expected honestly. maybe i'll just text her back. thanks i guess"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That makes sense — we can leave it here, and I’m glad you said it out loud. “Thanks i guess” feels like a quiet stopping point.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "shut down",
+      "body_cue": [],
+      "trigger": "A close friend moved away, the calls got shorter, and the connection slowly dissolved into memes and delayed replies."
+    }
+  ]
+}

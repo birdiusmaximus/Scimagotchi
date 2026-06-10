@@ -1,0 +1,161 @@
+{
+  "cid": "pressure__01",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-09T17:45:06.987Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "work is just a lot right now"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a lot to be carrying. Is it more the amount of work, or the pressure of it?"
+    },
+    {
+      "role": "user",
+      "content": "amount i guess. boss dumped a whole launch on me, deadline friday and im solo on it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really overloaded — a whole launch, a Friday deadline, and doing it solo. Does it feel more stretched, rushed, or trapped?"
+    },
+    {
+      "role": "user",
+      "content": "stretched. theres just no way one person does all that by friday"
+    },
+    {
+      "role": "companion",
+      "content": "Stretched makes sense here — like there isn’t enough room for one person to hold all of that by Friday. Does it feel like you want to speed up, shut down, or push back?"
+    },
+    {
+      "role": "user",
+      "content": "push back probably. anyway just needed to get that out. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it sounds like something you wanted to push back against, and you’ve gotten it out for now. We can leave it here, or stay with what that push back is about if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it here. gotta get back to it. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Got it — we can leave it here. Hope the rest of the day is as manageable as it can be."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xk0691y97mxku",
+    "conversation_id": "pressure__01",
+    "timestamp": "2026-06-09T17:45:29.233Z",
+    "user_words_raw": "gotta get back to it",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "stretched",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "boss dumped a whole launch on me, deadline friday, solo on it",
+    "appraisal_thought": "there's no way one person does all that by friday",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Workload felt stretched by a solo launch with a Friday deadline; user wanted to push back and then rest the topic.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "work is just a lot right now"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a lot to be carrying. Is it more the amount of work, or the pressure of it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "work being a lot right now"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "amount i guess. boss dumped a whole launch on me, deadline friday and im solo on it"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds really overloaded — a whole launch, a Friday deadline, and doing it solo. Does it feel more stretched, rushed, or trapped?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overloaded",
+      "body_cue": [],
+      "trigger": "boss dumped a whole launch on me, deadline friday, solo on it"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "stretched. theres just no way one person does all that by friday"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Stretched makes sense here — like there isn’t enough room for one person to hold all of that by Friday. Does it feel like you want to speed up, shut down, or push back?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "stretched",
+      "body_cue": [],
+      "trigger": "boss dumped a whole launch on me, deadline friday, solo on it"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "push back probably. anyway just needed to get that out. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — it sounds like something you wanted to push back against, and you’ve gotten it out for now. We can leave it here, or stay with what that push back is about if you want.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "stretched",
+      "body_cue": [],
+      "trigger": "boss dumped a whole launch on me, deadline friday, solo on it"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah lets leave it here. gotta get back to it. thanks"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Got it — we can leave it here. Hope the rest of the day is as manageable as it can be.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "stretched",
+      "body_cue": [],
+      "trigger": "boss dumped a whole launch on me, deadline friday, solo on it"
+    }
+  ]
+}

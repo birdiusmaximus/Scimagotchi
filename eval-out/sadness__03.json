@@ -1,0 +1,166 @@
+{
+  "cid": "sadness__03",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-09T18:18:42.414Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. not sure why im here honestly"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that’s completely okay. We can just start with whatever’s here, if anything is."
+    },
+    {
+      "role": "user",
+      "content": "dunno. money stuff i guess. dont really wanna get into it"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, we can leave the money stuff alone. What feels easiest to say about it, if anything?"
+    },
+    {
+      "role": "user",
+      "content": "car broke down. 1200 to fix it and i just dont have it. feel like im failing at the basic stuff"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a lot of pressure — and that “failing at the basic stuff” line carries a lot. Is it feeling more like heavy pressure, or more like shame?"
+    },
+    {
+      "role": "user",
+      "content": "shame i guess. everyone my age has it figured out and im just... stuck. anyway. i should go"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like shame, and maybe a stuck kind of pressure underneath it. We can leave it here if you want, or stay with the stuck part a little more."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it. thanks tho. didnt expect to say that out loud"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — and I’m glad you could say it out loud. We can leave it right there."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yr713885t5dke",
+    "conversation_id": "sadness__03",
+    "timestamp": "2026-06-09T18:19:04.938Z",
+    "user_words_raw": "didnt expect to say that out loud",
+    "emotion_status": "candidate",
+    "emotion_family": "shame",
+    "emotion_shade": "shame",
+    "secondary_emotions": [
+      "pressure"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "car broke down and it will cost 1200 to fix it",
+    "appraisal_thought": "everyone my age has it figured out and im just... stuck",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "acceptance",
+      "dignity"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "Money and car repair brought up shame about being stuck and behind others.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. not sure why im here honestly"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that’s completely okay. We can just start with whatever’s here, if anything is.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "dunno. money stuff i guess. dont really wanna get into it"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Yeah, we can leave the money stuff alone. What feels easiest to say about it, if anything?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "money stuff"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "car broke down. 1200 to fix it and i just dont have it. feel like im failing at the basic stuff"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like a lot of pressure — and that “failing at the basic stuff” line carries a lot. Is it feeling more like heavy pressure, or more like shame?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "car broke down and it will cost 1200 to fix"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "shame i guess. everyone my age has it figured out and im just... stuck. anyway. i should go"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like shame, and maybe a stuck kind of pressure underneath it. We can leave it here if you want, or stay with the stuck part a little more.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "car broke down and it will cost 1200 to fix"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah lets leave it. thanks tho. didnt expect to say that out loud"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That makes sense — and I’m glad you could say it out loud. We can leave it right there.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "car broke down and it will cost 1200 to fix it"
+    }
+  ]
+}

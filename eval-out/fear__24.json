@@ -1,0 +1,243 @@
+{
+  "cid": "fear__24",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-09T17:37:56.819Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. not really sure how this works tbh. someone told me to try it"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that’s completely fine — we can just talk normally. What’s bringing you here today?"
+    },
+    {
+      "role": "user",
+      "content": "idk. work stuff i guess. or family. its been a weird couple weeks. cant really turn my brain off at night"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a lot is still moving around in your head at night. Is it more work, family, or the weirdness of the last couple weeks that feels loudest?"
+    },
+    {
+      "role": "user",
+      "content": "family. its my dad. he had a fall like 2 weeks ago and theyre doing scans and nobody will give me a straight answer about what theyre actually looking for"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really unsettled — not knowing what they’re looking for can make it hard to rest. Does it feel more like worry, or more like being left in the dark?"
+    },
+    {
+      "role": "user",
+      "content": "both? i mean my sister keeps saying its fine its routine but shes the one whos actually there. im 4 hours away. and i keep googling stuff i shouldnt and then i cant sleep and then im useless at work the next day. honestly not sure typing at an app is gonna fix any of that"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds very uneasy and stuck in the not-knowing — the googling and the sleep loss seem to be part of the same loop. Does it feel more like restlessness in your body, or more like a need to keep checking?"
+    },
+    {
+      "role": "user",
+      "content": "checking probably. i look at my phone like every 20 min waiting for my sister to text. and theres this thing underneath it i dont really say out loud which is. he's getting older and i live far away on purpose kind of and if something actually happens im gonna feel like i wasnt there"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like checking on the outside and something much more personal underneath — maybe guilt, or worry about what being far away means. Does “I wasn’t there” feel like the sharpest part?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. that one. cause i moved away after a bad stretch with him, we didnt talk for like a year once, and we're ok now mostly but its not. warm. and now the clock might be running and i dont know if i fix that or if its even fixable and im scared i'll run out of time before i figure it out"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like fear mixed with something hurt and unfinished — and the “running out of time” part feels really sharp. Do you want to stay with that, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "honestly i didnt expect to say that part to a phone. um. maybe just stay a sec. i dont need it solved i think i just needed to say the time thing out loud cause i cant say it to my sister shed cry"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — saying the “time” part out loud seems to have given it a little shape. I can stay with it for a moment, or we can leave it right there."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. i think im gonna text her and just ask to call dad tonight. small thing but. thanks. this was less weird than i thought"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a small, clear landing. I’m glad it was less weird than you expected."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xas1maii5xcwt",
+    "conversation_id": "fear__24",
+    "timestamp": "2026-06-09T17:38:46.579Z",
+    "user_words_raw": "the time thing",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [
+      "fear",
+      "hurt"
+    ],
+    "valence": "mixed",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "thinking about dad and wanting to say the time part out loud",
+    "appraisal_thought": "the time might be running out and I may not know whether this is fixable",
+    "body_cue": [],
+    "behaviour_action": [
+      "text her",
+      "ask to call dad tonight"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "clarity",
+      "permission to stop"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Talked about fear around time running out with someone far away and a need to say it out loud.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. not really sure how this works tbh. someone told me to try it"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that’s completely fine — we can just talk normally. What’s bringing you here today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "idk. work stuff i guess. or family. its been a weird couple weeks. cant really turn my brain off at night"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a lot is still moving around in your head at night. Is it more work, family, or the weirdness of the last couple weeks that feels loudest?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "work stuff, family, and a weird couple of weeks"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "family. its my dad. he had a fall like 2 weeks ago and theyre doing scans and nobody will give me a straight answer about what theyre actually looking for"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds really unsettled — not knowing what they’re looking for can make it hard to rest. Does it feel more like worry, or more like being left in the dark?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": "father’s fall, scans, and not getting a straight answer"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "both? i mean my sister keeps saying its fine its routine but shes the one whos actually there. im 4 hours away. and i keep googling stuff i shouldnt and then i cant sleep and then im useless at work the next day. honestly not sure typing at an app is gonna fix any of that"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds very uneasy and stuck in the not-knowing — the googling and the sleep loss seem to be part of the same loop. Does it feel more like restlessness in your body, or more like a need to keep checking?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": "dad's fall, scans, and not getting a straight answer"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "checking probably. i look at my phone like every 20 min waiting for my sister to text. and theres this thing underneath it i dont really say out loud which is. he's getting older and i live far away on purpose kind of and if something actually happens im gonna feel like i wasnt there"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like checking on the outside and something much more personal underneath — maybe guilt, or worry about what being far away means. Does “I wasn’t there” feel like the sharpest part?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": "dad's fall, scans, and not getting a straight answer"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. that one. cause i moved away after a bad stretch with him, we didnt talk for like a year once, and we're ok now mostly but its not. warm. and now the clock might be running and i dont know if i fix that or if its even fixable and im scared i'll run out of time before i figure it out"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like fear mixed with something hurt and unfinished — and the “running out of time” part feels really sharp. Do you want to stay with that, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": "dad's fall, scans, and not getting a straight answer"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "honestly i didnt expect to say that part to a phone. um. maybe just stay a sec. i dont need it solved i think i just needed to say the time thing out loud cause i cant say it to my sister shed cry"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That makes sense — saying the “time” part out loud seems to have given it a little shape. I can stay with it for a moment, or we can leave it right there.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": "dad’s fall, scans, and not getting a straight answer"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah lets leave it there. i think im gonna text her and just ask to call dad tonight. small thing but. thanks. this was less weird than i thought"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That feels like a small, clear landing. I’m glad it was less weird than you expected.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "thinking about dad and wanting to say the time part out loud"
+    }
+  ]
+}

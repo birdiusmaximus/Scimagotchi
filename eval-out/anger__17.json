@@ -1,0 +1,161 @@
+{
+  "cid": "anger__17",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-09T18:17:45.111Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "logging something. annoyed at my gf"
+    },
+    {
+      "role": "companion",
+      "content": "Got it — annoyed at your girlfriend. Is it more like irritated, frustrated, or feeling pushed past a line?"
+    },
+    {
+      "role": "user",
+      "content": "frustrated. she canceled on me again. third time"
+    },
+    {
+      "role": "companion",
+      "content": "Third time makes the frustration feel a lot sharper. Does it feel more like wanting to push back, or more like being let down?"
+    },
+    {
+      "role": "user",
+      "content": "push back i guess. we had plans for my bday dinner and she bailed for work again"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like frustration with a strong urge to push back — especially with your birthday dinner getting dropped again for work. What does the push back feel like in the moment?"
+    },
+    {
+      "role": "user",
+      "content": "like i wanna text her something sharp. but i know i wont. just sick of being second to her job"
+    },
+    {
+      "role": "companion",
+      "content": "That feels sharp and tired at once — like protest against being put second to her job. You could leave it here, or if you want, we can stay with what it’s asking for underneath."
+    },
+    {
+      "role": "user",
+      "content": "nah lets leave it here. just needed to get it out. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — I’m glad you got it out. We can leave it right there."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ypysd9u42clyw",
+    "conversation_id": "anger__17",
+    "timestamp": "2026-06-09T18:18:05.285Z",
+    "user_words_raw": "needed to get it out",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "resentful",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "she canceled on my birthday dinner for work again after canceling three times",
+    "appraisal_thought": "being second to her job",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "wanted to vent about feeling second to someone’s job",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "logging something. annoyed at my gf"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Got it — annoyed at your girlfriend. Is it more like irritated, frustrated, or feeling pushed past a line?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "annoyed",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "frustrated. she canceled on me again. third time"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Third time makes the frustration feel a lot sharper. Does it feel more like wanting to push back, or more like being let down?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "she canceled on me again, third time"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "push back i guess. we had plans for my bday dinner and she bailed for work again"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like frustration with a strong urge to push back — especially with your birthday dinner getting dropped again for work. What does the push back feel like in the moment?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "she bailed for work again on my birthday dinner, after canceling three times"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "like i wanna text her something sharp. but i know i wont. just sick of being second to her job"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That feels sharp and tired at once — like protest against being put second to her job. You could leave it here, or if you want, we can stay with what it’s asking for underneath.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [],
+      "trigger": "she canceled on my birthday dinner for work again after canceling three times"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "nah lets leave it here. just needed to get it out. thanks"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Of course — I’m glad you got it out. We can leave it right there.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "resentful",
+      "body_cue": [],
+      "trigger": "she canceled on my birthday dinner for work again after canceling three times"
+    }
+  ]
+}

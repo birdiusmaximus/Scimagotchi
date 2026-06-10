@@ -1,0 +1,161 @@
+{
+  "cid": "flat__08",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-09T18:26:25.222Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk man. been feeling kind of nothing lately. just flat"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds pretty flat and hard to reach. Does it feel more blank, numb, or just far away?"
+    },
+    {
+      "role": "user",
+      "content": "blank i guess? like i should be panicking about stuff but theres just. nothing there. not sure this app thing even helps tbh"
+    },
+    {
+      "role": "companion",
+      "content": "Blank makes sense here, and I’m hearing the “nothing there” part too. Do you want to keep it broad, or stay with the part that feels like this app might not help?"
+    },
+    {
+      "role": "user",
+      "content": "i dont know. graduate in like a month and everyones asking whats next and i just. shrug. no job no plan no feelings about it. should care right"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds blank in a very specific way: a shrug where you’d expect feeling. Is it more like blank, or more like everything about “what’s next” is just out of reach?"
+    },
+    {
+      "role": "user",
+      "content": "out of reach yeah. like its happening to someone else. anyway. dunno what i expected typing into an app lol. gonna head off"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that sounds out of reach and a bit distant from you. We can leave it here, or if you want, I can stay with that “someone else” feeling for one more turn."
+    },
+    {
+      "role": "user",
+      "content": "nah leave it here. that was. weirdly okay actually. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Okay — we can leave it right there. I’m glad it was weirdly okay."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z14e5drziimfz",
+    "conversation_id": "flat__08",
+    "timestamp": "2026-06-09T18:26:52.073Z",
+    "user_words_raw": "weirdly okay",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "disconnected",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "graduating soon and people asking what's next",
+    "appraisal_thought": "it's happening to someone else",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User may prefer to stop after brief reflection.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk man. been feeling kind of nothing lately. just flat"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds pretty flat and hard to reach. Does it feel more blank, numb, or just far away?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "blank i guess? like i should be panicking about stuff but theres just. nothing there. not sure this app thing even helps tbh"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Blank makes sense here, and I’m hearing the “nothing there” part too. Do you want to keep it broad, or stay with the part that feels like this app might not help?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "i dont know. graduate in like a month and everyones asking whats next and i just. shrug. no job no plan no feelings about it. should care right"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds blank in a very specific way: a shrug where you’d expect feeling. Is it more like blank, or more like everything about “what’s next” is just out of reach?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "graduating soon and people asking what's next"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "out of reach yeah. like its happening to someone else. anyway. dunno what i expected typing into an app lol. gonna head off"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Yeah, that sounds out of reach and a bit distant from you. We can leave it here, or if you want, I can stay with that “someone else” feeling for one more turn.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "graduating soon and people asking what's next"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "nah leave it here. that was. weirdly okay actually. thanks"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Okay — we can leave it right there. I’m glad it was weirdly okay.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "graduating soon and people asking what's next"
+    }
+  ]
+}

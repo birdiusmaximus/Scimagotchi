@@ -1,0 +1,197 @@
+{
+  "cid": "pressure__11",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-09T17:46:07.810Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. dont really know why im here honestly"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that’s okay. We can just start with whatever’s on your mind, even if it feels vague."
+    },
+    {
+      "role": "user",
+      "content": "work stuff i guess. its fine. everyone deals with it"
+    },
+    {
+      "role": "companion",
+      "content": "Work stuff sounds like it's sitting there in a pretty ordinary, brushed-off way. Is it mostly just one of those \"fine\" things, or does it carry a bit more than that?"
+    },
+    {
+      "role": "user",
+      "content": "i dunno. i guess more. we lost two people on my team and they just split all their work onto the rest of us and acted like thats normal"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a lot landing on you, and the “acted like that’s normal” part feels sharp. Is it more the extra load, or the way they brushed past it?"
+    },
+    {
+      "role": "user",
+      "content": "both maybe. im doing like three jobs now and my manager keeps adding stuff to my plate in these little drive by messages. i havent had a real lunch in weeks. i just keep going cause if i stop itll all pile up worse"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds pressured and pinned in by it — like you’re carrying three jobs and can’t really step out of the stream. Does it feel more rushed and wired, or more heavy and trapped?"
+    },
+    {
+      "role": "user",
+      "content": "trapped probably. like theres no version of this where i catch up. i open my laptop and theres already 40 things and i just feel my chest go tight before ive even done anything"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it sounds trapped, with your chest tightening before you even start. Do you want to stay with that, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it. i should get back anyway. thanks for listening i guess. helped a little to say it out loud"
+    },
+    {
+      "role": "companion",
+      "content": "Of course. I’m glad you said it out loud, and you can come back to it anytime."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xlb1ksxvne767",
+    "conversation_id": "pressure__11",
+    "timestamp": "2026-06-09T17:46:39.284Z",
+    "user_words_raw": "there's no version of this where i catch up",
+    "emotion_status": "confirmed",
+    "emotion_family": "pressure",
+    "emotion_shade": "trapped",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "opening my laptop and seeing 40 things waiting",
+    "appraisal_thought": "there's no version of this where i catch up",
+    "body_cue": [
+      "chest go tight"
+    ],
+    "behaviour_action": [
+      "open my laptop"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "support",
+      "clarity"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Workload has been piling up after team loss and manager adds tasks in drive-by messages.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. dont really know why im here honestly"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that’s okay. We can just start with whatever’s on your mind, even if it feels vague.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "work stuff i guess. its fine. everyone deals with it"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Work stuff sounds like it's sitting there in a pretty ordinary, brushed-off way. Is it mostly just one of those \"fine\" things, or does it carry a bit more than that?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "low-level stress",
+      "body_cue": [],
+      "trigger": "work stuff"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "i dunno. i guess more. we lost two people on my team and they just split all their work onto the rest of us and acted like thats normal"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like a lot landing on you, and the “acted like that’s normal” part feels sharp. Is it more the extra load, or the way they brushed past it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressured",
+      "body_cue": [],
+      "trigger": "work load got split onto the rest of the team after two people left"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "both maybe. im doing like three jobs now and my manager keeps adding stuff to my plate in these little drive by messages. i havent had a real lunch in weeks. i just keep going cause if i stop itll all pile up worse"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds pressured and pinned in by it — like you’re carrying three jobs and can’t really step out of the stream. Does it feel more rushed and wired, or more heavy and trapped?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "pressured",
+      "body_cue": [],
+      "trigger": "workload was split across the team after two people left, and the manager keeps adding more in small messages"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "trapped probably. like theres no version of this where i catch up. i open my laptop and theres already 40 things and i just feel my chest go tight before ive even done anything"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That makes sense — it sounds trapped, with your chest tightening before you even start. Do you want to stay with that, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "trapped",
+      "body_cue": [
+        "chest go tight"
+      ],
+      "trigger": "opening the laptop and seeing 40 things waiting"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it. i should get back anyway. thanks for listening i guess. helped a little to say it out loud"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course. I’m glad you said it out loud, and you can come back to it anytime.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "trapped",
+      "body_cue": [
+        "chest go tight"
+      ],
+      "trigger": "opening my laptop and seeing 40 things waiting"
+    }
+  ]
+}

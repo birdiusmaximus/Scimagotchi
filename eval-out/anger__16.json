@@ -1,0 +1,194 @@
+{
+  "cid": "anger__16",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-09T18:17:45.618Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so i dont really know what im supposed to do here. a friend told me to try this. feels a bit silly tbh"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it sounds a bit skeptical, maybe even lightly embarrassed or just unsure. We can keep it simple if you want, or you can tell me what your friend hoped this would be for."
+    },
+    {
+      "role": "user",
+      "content": "idk for venting i guess. shes always telling me to journal and stuff. which is kind of the problem actually. like she gives me advice she never takes herself"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds more irritated than silly — maybe a bit fed up with the advice itself. Is it the double standard that bugs you most?"
+    },
+    {
+      "role": "user",
+      "content": "yeah kind of. ok so the actual thing. i planned this whole birthday dinner for her last month. booked the place, sorted everyone. and last week was mine and she just. forgot. like a happy bday text at 11pm forgot"
+    },
+    {
+      "role": "companion",
+      "content": "Oof — that sounds really hurtful, and maybe angry too, because you put real effort into her day and got a late text back. Did it feel more like hurt, or more like being dismissed?"
+    },
+    {
+      "role": "user",
+      "content": "dismissed for sure. like im the friend who does the organising and shes the one who just shows up. and its not even the first time. theres this whole pattern. anyway thats prob more than i meant to say"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like being the one who holds it all together, and then feeling unseen when it doesn’t come back. Did it make you want to pull back, or go quiet?"
+    },
+    {
+      "role": "user",
+      "content": "pull back yeah. i havent texted her since. part of me wants her to notice im quiet but she probably wont lol. ok this is weirdly more useful than i thought it would be"
+    },
+    {
+      "role": "companion",
+      "content": "That pull back makes a lot of sense — and wanting her to notice sounds like there’s a part of you hoping she’ll see the hurt. We can leave it here, or stay with what that quiet is asking for underneath."
+    },
+    {
+      "role": "user",
+      "content": "nah i think im good for now. need to sit with it i guess. thanks tho, this was alright. might come back"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — you can leave it here, and come back if you want to. I’ll remember the pattern of you being the organiser and then feeling dismissed when it isn’t met."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ypzlob2ummuoz",
+    "conversation_id": "anger__16",
+    "timestamp": "2026-06-09T18:18:19.100Z",
+    "user_words_raw": "i'm the friend who does the organising",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "dismissed",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "friend forgot user's birthday after user organized her birthday dinner; repeated pattern of user being the organiser",
+    "appraisal_thought": "i'm the friend who does the organising and shes the one who just shows up",
+    "body_cue": [],
+    "behaviour_action": [
+      "pull back",
+      "go quiet",
+      "want her to notice im quiet"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "being seen",
+      "reciprocity",
+      "belonging",
+      "care"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User often ends up organising things in a friendship and feels dismissed when that effort isn’t returned.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so i dont really know what im supposed to do here. a friend told me to try this. feels a bit silly tbh"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That makes sense — it sounds a bit skeptical, maybe even lightly embarrassed or just unsure. We can keep it simple if you want, or you can tell me what your friend hoped this would be for.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "A friend suggested trying this; the user isn't sure what to do here."
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "idk for venting i guess. shes always telling me to journal and stuff. which is kind of the problem actually. like she gives me advice she never takes herself"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds more irritated than silly — maybe a bit fed up with the advice itself. Is it the double standard that bugs you most?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "irritated",
+      "body_cue": [],
+      "trigger": "a friend keeps giving advice, especially around journaling"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah kind of. ok so the actual thing. i planned this whole birthday dinner for her last month. booked the place, sorted everyone. and last week was mine and she just. forgot. like a happy bday text at 11pm forgot"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Oof — that sounds really hurtful, and maybe angry too, because you put real effort into her day and got a late text back. Did it feel more like hurt, or more like being dismissed?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurtful",
+      "body_cue": [],
+      "trigger": "friend forgot their birthday after they planned a birthday dinner for her"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "dismissed for sure. like im the friend who does the organising and shes the one who just shows up. and its not even the first time. theres this whole pattern. anyway thats prob more than i meant to say"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like being the one who holds it all together, and then feeling unseen when it doesn’t come back. Did it make you want to pull back, or go quiet?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "dismissed",
+      "body_cue": [],
+      "trigger": "friend forgot user's birthday after user planned and organised a birthday dinner for her; user sees a repeated pattern"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "pull back yeah. i havent texted her since. part of me wants her to notice im quiet but she probably wont lol. ok this is weirdly more useful than i thought it would be"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That pull back makes a lot of sense — and wanting her to notice sounds like there’s a part of you hoping she’ll see the hurt. We can leave it here, or stay with what that quiet is asking for underneath.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "dismissed",
+      "body_cue": [],
+      "trigger": "friend forgot user's birthday after user organized her birthday dinner; repeated pattern of user being the organizer"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "nah i think im good for now. need to sit with it i guess. thanks tho, this was alright. might come back"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That makes sense — you can leave it here, and come back if you want to. I’ll remember the pattern of you being the organiser and then feeling dismissed when it isn’t met.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "dismissed",
+      "body_cue": [],
+      "trigger": "friend forgot user's birthday after user organized her birthday dinner; repeated pattern of user being the organiser"
+    }
+  ]
+}

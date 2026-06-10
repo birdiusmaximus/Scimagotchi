@@ -1,0 +1,74 @@
+{
+  "cid": "smoke_test_1",
+  "emotion": "fear",
+  "persona": "smoke test",
+  "created": "2026-06-09T17:19:29.779Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "I cannot stop thinking about the exam tomorrow, my hands are shaking"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really keyed-up and uneasy. Is it mostly the exam itself, or the shaking that’s taking up the most space right now?"
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6wn2ebr0dusyy2",
+    "conversation_id": "smoke_test_1",
+    "timestamp": "2026-06-09T17:19:31.811Z",
+    "user_words_raw": "my hands are shaking",
+    "emotion_status": "confirmed",
+    "emotion_family": "fear",
+    "emotion_shade": "uneasy",
+    "secondary_emotions": [
+      "pressure"
+    ],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "the exam tomorrow",
+    "appraisal_thought": "I cannot stop thinking about the exam tomorrow",
+    "body_cue": [
+      "my hands are shaking"
+    ],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "certainty",
+      "preparedness"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "An exam coming up tomorrow seems to bring strong unease and shaking.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "I cannot stop thinking about the exam tomorrow, my hands are shaking"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds really keyed-up and uneasy. Is it mostly the exam itself, or the shaking that’s taking up the most space right now?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [
+        "my hands are shaking"
+      ],
+      "trigger": "the exam tomorrow"
+    }
+  ]
+}

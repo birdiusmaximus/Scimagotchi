@@ -1,0 +1,185 @@
+{
+  "cid": "sadness__12",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-09T18:19:31.451Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey there"
+    },
+    {
+      "role": "companion",
+      "content": "Hey there — good to see you. What’s up today?"
+    },
+    {
+      "role": "user",
+      "content": "not much really. kind of a slow sunday. just sort of pottering around the flat. how are you, do you even have days lol"
+    },
+    {
+      "role": "companion",
+      "content": "A slow Sunday has a certain shape to it — quiet, drifting, a bit unhurried. I don’t have days the way you do, but I can stay with this one with you if you want."
+    },
+    {
+      "role": "user",
+      "content": "quietly empty i think. its silly but i made a proper dinner for myself last night, lit a candle, the whole thing, and halfway through i just felt this wave of sadness. like who is this even for. eating nice food alone at my own table just made it worse somehow"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds quietly empty, and a bit sad in a sharp way. I’m wondering if it felt more like sadness, loneliness, or a kind of “who is this for” hurt?"
+    },
+    {
+      "role": "user",
+      "content": "the who is this for hurt, yeah. thats it exactly. i used to cook for other people all the time and now its just. me. i dont think im depressed or anything dramatic, its more like a low grey hum thats been there a while and last night i actually noticed it"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it sounds like a quiet, lingering hurt tied to being the one at the table now. Does that grey hum feel more heavy, hollow, or like a missing someone?"
+    },
+    {
+      "role": "user",
+      "content": "hollow more than heavy. and yeah. missing the noise of someone else being there i think, more than a specific person. anyway. i didnt mean to get all maudlin on a sunday lol. it actually helped a bit just to say it out loud, or, type it out loud i suppose"
+    },
+    {
+      "role": "companion",
+      "content": "Hollow, and missing the noise of someone else being there — that feels clear. We can leave it here, or stay with it a little more if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there i think. thank you, genuinely. i feel a tiny bit lighter. maybe ill text a friend before it gets dark. take care x"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — I’m glad saying it made some room. Take care x"
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ysaerjfm4mw6h",
+    "conversation_id": "sadness__12",
+    "timestamp": "2026-06-09T18:20:18.240Z",
+    "user_words_raw": "a tiny bit lighter",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "hollow",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "eating a proper dinner alone at own table",
+    "appraisal_thought": "who is this even for",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feeling eased a little after naming a quiet, hollow sadness",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey there"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey there — good to see you. What’s up today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "not much really. kind of a slow sunday. just sort of pottering around the flat. how are you, do you even have days lol"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "A slow Sunday has a certain shape to it — quiet, drifting, a bit unhurried. I don’t have days the way you do, but I can stay with this one with you if you want.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "slow and unhurried",
+      "body_cue": [],
+      "trigger": "slow Sunday"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "quietly empty i think. its silly but i made a proper dinner for myself last night, lit a candle, the whole thing, and halfway through i just felt this wave of sadness. like who is this even for. eating nice food alone at my own table just made it worse somehow"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds quietly empty, and a bit sad in a sharp way. I’m wondering if it felt more like sadness, loneliness, or a kind of “who is this for” hurt?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "quietly empty",
+      "body_cue": [],
+      "trigger": "eating nice food alone at my own table"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "the who is this for hurt, yeah. thats it exactly. i used to cook for other people all the time and now its just. me. i dont think im depressed or anything dramatic, its more like a low grey hum thats been there a while and last night i actually noticed it"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — it sounds like a quiet, lingering hurt tied to being the one at the table now. Does that grey hum feel more heavy, hollow, or like a missing someone?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "quietly empty",
+      "body_cue": [],
+      "trigger": "eating nice food alone at my own table"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "hollow more than heavy. and yeah. missing the noise of someone else being there i think, more than a specific person. anyway. i didnt mean to get all maudlin on a sunday lol. it actually helped a bit just to say it out loud, or, type it out loud i suppose"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Hollow, and missing the noise of someone else being there — that feels clear. We can leave it here, or stay with it a little more if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "hollow",
+      "body_cue": [],
+      "trigger": "eating a proper dinner alone at own table"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it there i think. thank you, genuinely. i feel a tiny bit lighter. maybe ill text a friend before it gets dark. take care x"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course — I’m glad saying it made some room. Take care x",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "hollow",
+      "body_cue": [],
+      "trigger": "eating a proper dinner alone at own table"
+    }
+  ]
+}

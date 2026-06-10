@@ -1,7 +1,8 @@
 :root {
+  /* Adobe Fonts (Typekit nvl5gki) — Eixample display family, used for headings */
   --font-display:
-    Spline Sans, Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-    Segoe UI Symbol, Noto Color Emoji;
+    'eixample-glaces-contrast-1', 'SF Pro Rounded', ui-sans-serif, system-ui, sans-serif;
+  --font-display-narrow: 'eixample-dip-narrow', 'SF Pro Rounded', ui-sans-serif, system-ui, sans-serif;
   --font-mono:
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   --font-rounded: 'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif;

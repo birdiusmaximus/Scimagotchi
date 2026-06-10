@@ -1,0 +1,257 @@
+{
+  "cid": "pressure__20",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-09T17:46:56.472Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. um. is this thing on lol"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — yep, I’m here. What’s up?"
+    },
+    {
+      "role": "user",
+      "content": "not much. just kind of a long day. honestly a long couple weeks lol. how does this work exactly, do i just like... talk to you"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — you can just talk to me. If something feels present, we can follow it together; if not, we can just keep it casual."
+    },
+    {
+      "role": "user",
+      "content": "ok yeah. i think there is something. i dont even really know how to say it. theres just a lot going on with my health right now and i feel kind of stretched in every direction"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds stretched thin and hard to pin down. Is it more like pressure, worry, or just too much at once?"
+    },
+    {
+      "role": "user",
+      "content": "too much at once i think. like. ok so ive got this autoimmune thing, diagnosed last year, and managing it is basically a part time job. theres meds twice a day, this elimination diet my specialist put me on, i have to track symptoms in an app, and i just got a letter that i need a new round of bloodwork plus an mri because my numbers were off. and i work full time. and i have to be the one organizing all of it bc no one else will"
+    },
+    {
+      "role": "companion",
+      "content": "That does sound like a lot coming at you at once — meds, diet, tracking, tests, and work, all with you holding the organizing. Does it feel more heavy, rushed, or trapped?"
+    },
+    {
+      "role": "user",
+      "content": "trapped. yeah. thats the word. because its not like a project that ends. its just my body now and it doesnt stop. i wake up already behind. and i feel guilty even complaining bc people have it so much worse and at least i HAVE a diagnosis and meds that sort of work"
+    },
+    {
+      "role": "companion",
+      "content": "That trapped feeling makes sense — like you wake up already behind, with no real off switch. Is the sharpest part the guilt, or the sense that it never stops?"
+    },
+    {
+      "role": "user",
+      "content": "the never stopping. the guilt is just noise on top. its more that i used to be the person who could handle anything, take on everyone elses stuff too, and now i can barely manage my own body. the mri scares me bc what if the numbers being off means its progressing. and i havent told anyone how much it actually takes out of me. i just keep going"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the scared part is tied to the numbers and what they might mean, while the bigger weight is having to keep going without telling anyone how much it takes. Does that feel right, or is there one part that feels even louder?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. that feels right. the keeping going alone part is the loudest i think. saying it out loud like this is kind of a lot honestly. i dont think ive admitted that even to myself"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a big thing to say out loud, and I can let it rest here if you want. If you want to stay with it, I’m wondering what the “keeping going alone” part has been asking of you."
+    },
+    {
+      "role": "user",
+      "content": "i think it's been asking me to prove im still strong. that if i let anyone see how hard it is then its real and im actually sick. which is dumb. but. yeah. i think i need to maybe tell my sister at least. i think i can let it rest there for tonight. that was more than i expected to say"
+    },
+    {
+      "role": "companion",
+      "content": "That’s not dumb — it sounds like the “strong” part and the “this is real” part have been carrying a lot. We can let it rest here for tonight."
+    },
+    {
+      "role": "user",
+      "content": "thank you. genuinely. ok. im gonna go drink some water and maybe text my sister. night"
+    },
+    {
+      "role": "companion",
+      "content": "Night. I’m glad you told me, and I hope the rest of the evening stays gentle."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xmcdar6m04ivj",
+    "conversation_id": "pressure__20",
+    "timestamp": "2026-06-09T17:47:44.958Z",
+    "user_words_raw": "that was more than i expected to say",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "scared",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "living with an autoimmune condition and having to manage it alone",
+    "appraisal_thought": "If I let anyone see how hard it is, then it’s real and I’m actually sick.",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User has been talking about living with a body condition, feeling trapped, and keeping it to themselves; may tell a sister.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. um. is this thing on lol"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — yep, I’m here. What’s up?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "not much. just kind of a long day. honestly a long couple weeks lol. how does this work exactly, do i just like... talk to you"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Yeah — you can just talk to me. If something feels present, we can follow it together; if not, we can just keep it casual.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "ok yeah. i think there is something. i dont even really know how to say it. theres just a lot going on with my health right now and i feel kind of stretched in every direction"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds stretched thin and hard to pin down. Is it more like pressure, worry, or just too much at once?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "stretched",
+      "body_cue": [],
+      "trigger": "a lot going on with my health right now"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "too much at once i think. like. ok so ive got this autoimmune thing, diagnosed last year, and managing it is basically a part time job. theres meds twice a day, this elimination diet my specialist put me on, i have to track symptoms in an app, and i just got a letter that i need a new round of bloodwork plus an mri because my numbers were off. and i work full time. and i have to be the one organizing all of it bc no one else will"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That does sound like a lot coming at you at once — meds, diet, tracking, tests, and work, all with you holding the organizing. Does it feel more heavy, rushed, or trapped?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "managing health stuff while working full time and organizing everything yourself"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "trapped. yeah. thats the word. because its not like a project that ends. its just my body now and it doesnt stop. i wake up already behind. and i feel guilty even complaining bc people have it so much worse and at least i HAVE a diagnosis and meds that sort of work"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That trapped feeling makes sense — like you wake up already behind, with no real off switch. Is the sharpest part the guilt, or the sense that it never stops?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "trapped",
+      "body_cue": [],
+      "trigger": "managing an autoimmune condition with meds, diet, tests, work, and having to organize it all alone"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "the never stopping. the guilt is just noise on top. its more that i used to be the person who could handle anything, take on everyone elses stuff too, and now i can barely manage my own body. the mri scares me bc what if the numbers being off means its progressing. and i havent told anyone how much it actually takes out of me. i just keep going"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like the scared part is tied to the numbers and what they might mean, while the bigger weight is having to keep going without telling anyone how much it takes. Does that feel right, or is there one part that feels even louder?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "scared",
+      "body_cue": [],
+      "trigger": "being responsible for managing an autoimmune condition, new bloodwork and MRI after off numbers, and carrying it mostly alone"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "yeah. that feels right. the keeping going alone part is the loudest i think. saying it out loud like this is kind of a lot honestly. i dont think ive admitted that even to myself"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That feels like a big thing to say out loud, and I can let it rest here if you want. If you want to stay with it, I’m wondering what the “keeping going alone” part has been asking of you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "scared",
+      "body_cue": [],
+      "trigger": "being responsible for managing an autoimmune condition, with new bloodwork and MRI after off numbers, while carrying it alone"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "i think it's been asking me to prove im still strong. that if i let anyone see how hard it is then its real and im actually sick. which is dumb. but. yeah. i think i need to maybe tell my sister at least. i think i can let it rest there for tonight. that was more than i expected to say"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That’s not dumb — it sounds like the “strong” part and the “this is real” part have been carrying a lot. We can let it rest here for tonight.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "scared",
+      "body_cue": [],
+      "trigger": "living with an autoimmune condition and having to manage it alone"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "thank you. genuinely. ok. im gonna go drink some water and maybe text my sister. night"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Night. I’m glad you told me, and I hope the rest of the evening stays gentle.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "scared",
+      "body_cue": [],
+      "trigger": "living with an autoimmune condition and having to manage it alone"
+    }
+  ]
+}

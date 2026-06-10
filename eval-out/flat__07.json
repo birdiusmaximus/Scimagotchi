@@ -1,0 +1,139 @@
+{
+  "cid": "flat__07",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-09T18:26:25.660Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i think im just tired or burnt out or something. with my girlfriend lately i dont really feel much"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds a bit flat and worn down, especially with your girlfriend. Does it feel more tired, burned out, or kind of numb?"
+    },
+    {
+      "role": "user",
+      "content": "burnt out i guess. like we used to argue at least. now she talks and i just sit there. nod. dont feel anything either way"
+    },
+    {
+      "role": "companion",
+      "content": "Burnt out fits, and it sounds like you’ve gone quiet inside with her — sitting there, nodding, not feeling much either way. Does it feel more like blankness, or like you’re too worn out to react?"
+    },
+    {
+      "role": "user",
+      "content": "blankness yeah. thats closer. shes right next to me and its like theres nothing there. cant remember the last time i actually felt close to her"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really blank and distant, with her right next to you but not feeling close. Does it feel like nothing is there, or more like the closeness is out of reach?"
+    },
+    {
+      "role": "user",
+      "content": "nothing there i think. out of reach would mean i want it back. not sure i even feel that. anyway. thanks. i should go"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it sounds like “nothing there” is the closest fit right now. We can leave it here, and that’s completely okay."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z14osvc1trifs",
+    "conversation_id": "flat__07",
+    "timestamp": "2026-06-09T18:26:46.639Z",
+    "user_words_raw": "nothing there",
+    "emotion_status": "confirmed",
+    "emotion_family": "flat",
+    "emotion_shade": "blank",
+    "secondary_emotions": [
+      "disconnected"
+    ],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "with girlfriend lately",
+    "appraisal_thought": "nothing there",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feeling blank and distant with girlfriend; closeness feels absent.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i think im just tired or burnt out or something. with my girlfriend lately i dont really feel much"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds a bit flat and worn down, especially with your girlfriend. Does it feel more tired, burned out, or kind of numb?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": "lately with my girlfriend"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "burnt out i guess. like we used to argue at least. now she talks and i just sit there. nod. dont feel anything either way"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Burnt out fits, and it sounds like you’ve gone quiet inside with her — sitting there, nodding, not feeling much either way. Does it feel more like blankness, or like you’re too worn out to react?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "burnt out",
+      "body_cue": [],
+      "trigger": "with my girlfriend lately"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "blankness yeah. thats closer. shes right next to me and its like theres nothing there. cant remember the last time i actually felt close to her"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds really blank and distant, with her right next to you but not feeling close. Does it feel like nothing is there, or more like the closeness is out of reach?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "with girlfriend lately"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "nothing there i think. out of reach would mean i want it back. not sure i even feel that. anyway. thanks. i should go"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — it sounds like “nothing there” is the closest fit right now. We can leave it here, and that’s completely okay.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "with girlfriend lately"
+    }
+  ]
+}

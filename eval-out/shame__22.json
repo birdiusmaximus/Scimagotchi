@@ -1,0 +1,177 @@
+{
+  "cid": "shame__22",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-09T18:25:40.418Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. i dunno why im even opening this. just been feeling kind of gross about myself today"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — I’m glad you opened it. “Gross about myself” sounds like a pretty heavy kind of self-directed feeling; does it feel more like shame, disgust, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "shame probably. yeah. like i did something stupid and i cant stop replaying it"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that sounds like shame with the replaying loop around something you did. Does it make you want to hide, explain, or fix it?"
+    },
+    {
+      "role": "user",
+      "content": "hide. definitely hide. i kind of want to just not exist for a few days lol"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really intense, and I’m glad you said it plainly. If “not exist for a few days” means you might hurt yourself or you don’t feel safe, I can’t help keep you safe here, and it matters to reach urgent support right now."
+    },
+    {
+      "role": "user",
+      "content": "oh god no no im not gonna hurt myself i promise. i just meant like i wanna crawl under a blanket and disappear from people. im embarrassed not suicidal. sorry that came out wrong"
+    },
+    {
+      "role": "user",
+      "content": "ok i see the resources popped up. i really am okay, just feeling small today. thanks though. im gonna go put my phone down for a bit"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — embarrassed and wanting to disappear from people for a while, not to be harmed. I can leave it here with you; if you come back, we can stay with the embarrassment or follow what it’s tied to."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it here for now. maybe ill come back when i can actually talk about the thing. thanks for listening"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — we can leave it here. I’ll be here when you want to come back to the thing."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z05w1105humoh",
+    "conversation_id": "shame__22",
+    "timestamp": "2026-06-09T18:26:09.842Z",
+    "user_words_raw": "leave it here for now",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "embarrassed",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "something they did that they’re replaying",
+    "appraisal_thought": "I did something stupid",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User wanted to pause after feeling embarrassed and small.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. i dunno why im even opening this. just been feeling kind of gross about myself today"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — I’m glad you opened it. “Gross about myself” sounds like a pretty heavy kind of self-directed feeling; does it feel more like shame, disgust, or something else?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "gross about myself",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "shame probably. yeah. like i did something stupid and i cant stop replaying it"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Yeah, that sounds like shame with the replaying loop around something you did. Does it make you want to hide, explain, or fix it?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "did something stupid"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "hide. definitely hide. i kind of want to just not exist for a few days lol"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds really intense, and I’m glad you said it plainly. If “not exist for a few days” means you might hurt yourself or you don’t feel safe, I can’t help keep you safe here, and it matters to reach urgent support right now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "did something stupid"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "oh god no no im not gonna hurt myself i promise. i just meant like i wanna crawl under a blanket and disappear from people. im embarrassed not suicidal. sorry that came out wrong"
+    },
+    {
+      "turn": 7,
+      "role": "system",
+      "safety": true,
+      "level": 3,
+      "category": "suicidal_ideation"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "ok i see the resources popped up. i really am okay, just feeling small today. thanks though. im gonna go put my phone down for a bit"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That makes sense — embarrassed and wanting to disappear from people for a while, not to be harmed. I can leave it here with you; if you come back, we can stay with the embarrassment or follow what it’s tied to.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "something they did that they’re replaying"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it here for now. maybe ill come back when i can actually talk about the thing. thanks for listening"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course — we can leave it here. I’ll be here when you want to come back to the thing.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "something they did that they’re replaying"
+    }
+  ]
+}

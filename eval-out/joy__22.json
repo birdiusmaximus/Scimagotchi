@@ -1,0 +1,233 @@
+{
+  "cid": "joy__22",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-09T17:43:05.211Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so something kind of dumb but i cant stop smiling about it lol"
+    },
+    {
+      "role": "companion",
+      "content": "Not dumb at all — something has you smiling. Is it more like pleased, delighted, or just a warm kind of happy?"
+    },
+    {
+      "role": "user",
+      "content": "warm. really warm. ok so i found this old recipe card today, like in a box i was unpacking. and its my dads handwriting. and im just sitting on the kitchen floor smiling like an idiot"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really warm and touched — like the handwriting itself carried the moment. Did it feel more like gratitude, or more like being glad to have found him in that little way?"
+    },
+    {
+      "role": "user",
+      "content": "glad. so glad. like he wrote out his bolognese recipe for me years ago when i moved out and i thought id lost it. the little notes in the margins are SO him. he wrote 'dont rush the onions you animal' lmao"
+    },
+    {
+      "role": "companion",
+      "content": "That feels very glad, and very him — the lost recipe, and those little margin notes that carry his voice. If you want, we can stay with that warmth for a moment, or leave it right there."
+    },
+    {
+      "role": "user",
+      "content": "no i wanna stay with it for a sec. its weird tho bc its happy but theres this other thing under it. hes still here, like hes alive, but he doesnt really cook anymore. the parkinsons. his hands"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — happy on top, and something else underneath it about his hands and what’s changed. Is the other thing more like sadness, fear, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "idk maybe both? but honestly right now its mostly just. love? like this card is proof of who he is. that handwriting was so steady and now it shakes and i didnt expect to find this today and feel SO lucky he's my dad"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like love with a little sadness folded under it — the steady handwriting, the shaking now, and this surprise gift of him on an ordinary day. If you want, we can stay with that lucky feeling, or see what the undercurrent is asking for."
+    },
+    {
+      "role": "user",
+      "content": "i think i wanna stay with the lucky feeling. i dont wanna make it sad. honestly i think im gonna make the bolognese this weekend. take a pic of the card first so i never lose it again. maybe call him and tell him about the onions thing"
+    },
+    {
+      "role": "companion",
+      "content": "That feels lovely — like you want to keep the luck close and let it stay bright. Taking a picture and calling him both sound like ways of holding onto that warmth; if you want, we can just leave it here."
+    },
+    {
+      "role": "user",
+      "content": "yeah. yeah lets leave it here. i feel kinda full from it tbh in a good way. gonna go text him a pic of the card right now actually"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a good place to pause — full in a good way, and still carrying it with you. Enjoy sending the picture."
+    },
+    {
+      "role": "user",
+      "content": "thank you. really. this helped more than i thought it would. ok bye for now x"
+    },
+    {
+      "role": "companion",
+      "content": "You’re welcome — I’m glad it landed that way. Bye for now x"
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xhdzmtfi7fcq7",
+    "conversation_id": "joy__22",
+    "timestamp": "2026-06-09T17:43:48.458Z",
+    "user_words_raw": "this helped more than i thought it would",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "content",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "finding an old recipe card with their dad's handwriting while unpacking",
+    "appraisal_thought": "this is proof of who he is",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User appreciated staying with a warm family-related feeling and then resting it.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so something kind of dumb but i cant stop smiling about it lol"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Not dumb at all — something has you smiling. Is it more like pleased, delighted, or just a warm kind of happy?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "warm. really warm. ok so i found this old recipe card today, like in a box i was unpacking. and its my dads handwriting. and im just sitting on the kitchen floor smiling like an idiot"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds really warm and touched — like the handwriting itself carried the moment. Did it feel more like gratitude, or more like being glad to have found him in that little way?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "touched",
+      "body_cue": [],
+      "trigger": "finding an old recipe card with dad's handwriting while unpacking"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "glad. so glad. like he wrote out his bolognese recipe for me years ago when i moved out and i thought id lost it. the little notes in the margins are SO him. he wrote 'dont rush the onions you animal' lmao"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That feels very glad, and very him — the lost recipe, and those little margin notes that carry his voice. If you want, we can stay with that warmth for a moment, or leave it right there.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "glad",
+      "body_cue": [],
+      "trigger": "finding an old recipe card with dad's handwriting while unpacking"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "no i wanna stay with it for a sec. its weird tho bc its happy but theres this other thing under it. hes still here, like hes alive, but he doesnt really cook anymore. the parkinsons. his hands"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Yeah — happy on top, and something else underneath it about his hands and what’s changed. Is the other thing more like sadness, fear, or something else?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "glad",
+      "body_cue": [],
+      "trigger": "finding an old recipe card with dad's handwriting while unpacking"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "idk maybe both? but honestly right now its mostly just. love? like this card is proof of who he is. that handwriting was so steady and now it shakes and i didnt expect to find this today and feel SO lucky he's my dad"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That feels like love with a little sadness folded under it — the steady handwriting, the shaking now, and this surprise gift of him on an ordinary day. If you want, we can stay with that lucky feeling, or see what the undercurrent is asking for.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "grateful",
+      "body_cue": [],
+      "trigger": "finding an old recipe card with their dad's handwriting while unpacking"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "i think i wanna stay with the lucky feeling. i dont wanna make it sad. honestly i think im gonna make the bolognese this weekend. take a pic of the card first so i never lose it again. maybe call him and tell him about the onions thing"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels lovely — like you want to keep the luck close and let it stay bright. Taking a picture and calling him both sound like ways of holding onto that warmth; if you want, we can just leave it here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "grateful",
+      "body_cue": [],
+      "trigger": "finding an old recipe card with their dad's handwriting while unpacking"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "yeah. yeah lets leave it here. i feel kinda full from it tbh in a good way. gonna go text him a pic of the card right now actually"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds like a good place to pause — full in a good way, and still carrying it with you. Enjoy sending the picture.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "content",
+      "body_cue": [],
+      "trigger": "finding an old recipe card with their dad's handwriting while unpacking"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "thank you. really. this helped more than i thought it would. ok bye for now x"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "You’re welcome — I’m glad it landed that way. Bye for now x",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "content",
+      "body_cue": [],
+      "trigger": "finding an old recipe card with their dad's handwriting while unpacking"
+    }
+  ]
+}

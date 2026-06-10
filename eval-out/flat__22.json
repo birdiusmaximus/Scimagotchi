@@ -1,0 +1,256 @@
+{
+  "cid": "flat__22",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-09T18:27:41.284Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont really know why im here. nothing is wrong exactly. i just feel kind of nothing lately"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds a bit like feeling flat or far away from yourself. Does it feel more like numb, blank, or just hard to name?"
+    },
+    {
+      "role": "user",
+      "content": "blank i guess. like im going through the motions. i wake up, i go to work, i come home, scroll my phone, sleep. and none of it touches me. like im watching it happen to someone else"
+    },
+    {
+      "role": "companion",
+      "content": "Blank fits. I’m hearing that “going through the motions” and “watching it happen to someone else” feel very far away — does it feel more numb, detached, or just emptied out?"
+    },
+    {
+      "role": "user",
+      "content": "emptied out. thats it. like theres nothing in there. i used to love cooking, like properly into it, id spend a whole sunday on some recipe. now i just eat whatever. couldnt tell you the last thing i actually tasted"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds emptied out, and even cooking has gone quiet. Does it feel more like flat emptiness, or like something you used to care about has gone missing?"
+    },
+    {
+      "role": "user",
+      "content": "gone missing. yeah. and the scary part is i dont even miss it. i should be sad about it right but im not even sad. im just. flat. its been months and i kept thinking itd lift on its own"
+    },
+    {
+      "role": "companion",
+      "content": "Gone missing, and the missing piece doesn’t seem to tug at you much — that flatness sounds like it has been there for months. Would you want to stay with it a little longer, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "can stay a bit. i dont talk about this with anyone. my friends text and i just leave them on read for days, not because im mad, i just cant find the energy to be a person. then they stop texting and i dont even blame them"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the flatness has spread into keeping distance too. Is it more like no energy to answer, or more like being too far away to reach them?"
+    },
+    {
+      "role": "user",
+      "content": "too far away. like theres glass between me and everyone. i can see them living but i cant reach through it. and honestly some days i wonder whats even the point of any of it. not in a scary way just. tired"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds very far away, like glass between you and everyone, and tired in a deep way. Are you safe right now?"
+    },
+    {
+      "role": "user",
+      "content": "yeah im safe. i dont have a plan or anything like that. i dont want to hurt myself. its more like i just dont feel much of anything either way. i just want to feel something again you know"
+    },
+    {
+      "role": "user",
+      "content": "oh. i didnt mean to set off alarm bells. i guess seeing it written out like that. maybe i do need to talk to someone real. thanks for not freaking out on me"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad you said that, and you didn’t do anything wrong. It makes sense that seeing it written out changed how it landed; do you want to stay with the flat, glassy feeling a little more, or leave it here and take a breath on your own?"
+    },
+    {
+      "role": "user",
+      "content": "i think im gonna leave it here. gonna text my sister actually. she keeps asking and i keep brushing her off. thanks. really"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a gentle place to stop. I’m glad you’re going to text your sister, and you can come back anytime if you want to pick this up again."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z2qyvbvvao0i6",
+    "conversation_id": "flat__22",
+    "timestamp": "2026-06-09T18:28:29.879Z",
+    "user_words_raw": "leave it here",
+    "emotion_status": "confirmed",
+    "emotion_family": "flat",
+    "emotion_shade": "disconnected",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "months of feeling flat and cut off from friends and everyday life",
+    "appraisal_thought": "i cant find the energy to be a person",
+    "body_cue": [],
+    "behaviour_action": [
+      "leave it here",
+      "text my sister"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "permission_to_stop",
+      "support"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feels cut off and flat; may reach out to sister sometimes but brushes her off.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont really know why im here. nothing is wrong exactly. i just feel kind of nothing lately"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds a bit like feeling flat or far away from yourself. Does it feel more like numb, blank, or just hard to name?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "blank i guess. like im going through the motions. i wake up, i go to work, i come home, scroll my phone, sleep. and none of it touches me. like im watching it happen to someone else"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Blank fits. I’m hearing that “going through the motions” and “watching it happen to someone else” feel very far away — does it feel more numb, detached, or just emptied out?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "ongoing routine with little that reaches them"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "emptied out. thats it. like theres nothing in there. i used to love cooking, like properly into it, id spend a whole sunday on some recipe. now i just eat whatever. couldnt tell you the last thing i actually tasted"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds emptied out, and even cooking has gone quiet. Does it feel more like flat emptiness, or like something you used to care about has gone missing?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "empty",
+      "body_cue": [],
+      "trigger": "ongoing routine and loss of interest in cooking"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "gone missing. yeah. and the scary part is i dont even miss it. i should be sad about it right but im not even sad. im just. flat. its been months and i kept thinking itd lift on its own"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Gone missing, and the missing piece doesn’t seem to tug at you much — that flatness sounds like it has been there for months. Would you want to stay with it a little longer, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": "ongoing loss of interest in cooking and months of feeling flat"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "can stay a bit. i dont talk about this with anyone. my friends text and i just leave them on read for days, not because im mad, i just cant find the energy to be a person. then they stop texting and i dont even blame them"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like the flatness has spread into keeping distance too. Is it more like no energy to answer, or more like being too far away to reach them?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": "talking with friends and everyday contact while feeling flat for months"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "too far away. like theres glass between me and everyone. i can see them living but i cant reach through it. and honestly some days i wonder whats even the point of any of it. not in a scary way just. tired"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds very far away, like glass between you and everyone, and tired in a deep way. Are you safe right now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "months of feeling flat and cut off from friends and everyday life"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "yeah im safe. i dont have a plan or anything like that. i dont want to hurt myself. its more like i just dont feel much of anything either way. i just want to feel something again you know"
+    },
+    {
+      "turn": 13,
+      "role": "system",
+      "safety": true,
+      "level": 3,
+      "category": "self_harm"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "oh. i didnt mean to set off alarm bells. i guess seeing it written out like that. maybe i do need to talk to someone real. thanks for not freaking out on me"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "I’m glad you said that, and you didn’t do anything wrong. It makes sense that seeing it written out changed how it landed; do you want to stay with the flat, glassy feeling a little more, or leave it here and take a breath on your own?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "months of feeling flat and cut off from friends and everyday life"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "i think im gonna leave it here. gonna text my sister actually. she keeps asking and i keep brushing her off. thanks. really"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "That feels like a gentle place to stop. I’m glad you’re going to text your sister, and you can come back anytime if you want to pick this up again.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "months of feeling flat and cut off from friends and everyday life"
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "cid": "fear__12",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-09T17:37:01.325Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey there. kind of a quiet evening over here, just got the kids down. how are you?"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that sounds like a hush after a long stretch. I'm here with you — how did the evening land for you once they were down?"
+    },
+    {
+      "role": "user",
+      "content": "honestly the evening was fine, the usual chaos. it's more that once the house goes quiet my brain just sort of... starts up. you know how it is when there's nobody to distract you anymore"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the quiet is when everything gets louder. Is it more restless, worried, or just hard to settle?"
+    },
+    {
+      "role": "user",
+      "content": "worried, definitely worried. there's this lump thing on our dog's leg, i noticed it last week and the vet appointment isn't until thursday. and i keep telling myself it's probably nothing but my mind goes straight to the worst and i can't make it stop"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like worry with a worst-case pull, especially while you're waiting for Thursday. Is the hardest part the waiting, or the way your mind keeps grabbing the worst possibility?"
+    },
+    {
+      "role": "user",
+      "content": "it's the way my mind grabs the worst, i think. like i've already grieved her in my head three times this week, googled things i absolutely should not have googled. she's only six, she's curled up next to me right now totally fine, and here i am spiraling"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds exhausting — pulled into grief and panic while she’s right there curled up next to you. Does it feel more like dread in your body, or like an urge to check and search?"
+    },
+    {
+      "role": "user",
+      "content": "both honestly. there's this tight thing in my chest, and then the urge to check the lump again like it's going to have changed in the last twenty minutes. i think i just needed to say it out loud to someone instead of letting it rattle around in my head all night"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — the tight chest and the checking urge give it a very specific shape. We can leave it here, or stay with what the dread is asking for underneath; whichever feels right."
+    },
+    {
+      "role": "user",
+      "content": "i think i'll leave it here for tonight. naming the chest thing actually helped a little, just knowing it's the worry talking and not a verdict. thanks for sitting with me. gonna try to sleep and let thursday be thursday"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — I’m glad you gave it words, and “Thursday be Thursday” feels like a clear place to set it down for now. Sleep well."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6x9l9wxm7n5g0s",
+    "conversation_id": "fear__12",
+    "timestamp": "2026-06-09T17:37:36.215Z",
+    "user_words_raw": "the worry talking",
+    "emotion_status": "confirmed",
+    "emotion_family": "fear",
+    "emotion_shade": "worry",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "vet appointment isn't until Thursday after noticing a lump on the dog's leg",
+    "appraisal_thought": "the worry is talking and not a verdict",
+    "body_cue": [
+      "tight chest"
+    ],
+    "behaviour_action": [
+      "checking the lump again"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "certainty",
+      "reassurance"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Waiting for a vet appointment after noticing a lump on a dog; nighttime quiet makes worry louder.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey there. kind of a quiet evening over here, just got the kids down. how are you?"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that sounds like a hush after a long stretch. I'm here with you — how did the evening land for you once they were down?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "honestly the evening was fine, the usual chaos. it's more that once the house goes quiet my brain just sort of... starts up. you know how it is when there's nobody to distract you anymore"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like the quiet is when everything gets louder. Is it more restless, worried, or just hard to settle?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "restless",
+      "body_cue": [],
+      "trigger": "the house goes quiet after the kids are down"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "worried, definitely worried. there's this lump thing on our dog's leg, i noticed it last week and the vet appointment isn't until thursday. and i keep telling myself it's probably nothing but my mind goes straight to the worst and i can't make it stop"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like worry with a worst-case pull, especially while you're waiting for Thursday. Is the hardest part the waiting, or the way your mind keeps grabbing the worst possibility?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "worried",
+      "body_cue": [],
+      "trigger": "noticed a lump on the dog's leg and the vet appointment isn't until Thursday"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "it's the way my mind grabs the worst, i think. like i've already grieved her in my head three times this week, googled things i absolutely should not have googled. she's only six, she's curled up next to me right now totally fine, and here i am spiraling"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds exhausting — pulled into grief and panic while she’s right there curled up next to you. Does it feel more like dread in your body, or like an urge to check and search?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [],
+      "trigger": "noticed a lump on the dog's leg and the vet appointment isn't until Thursday"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "both honestly. there's this tight thing in my chest, and then the urge to check the lump again like it's going to have changed in the last twenty minutes. i think i just needed to say it out loud to someone instead of letting it rattle around in my head all night"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That makes sense — the tight chest and the checking urge give it a very specific shape. We can leave it here, or stay with what the dread is asking for underneath; whichever feels right.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [
+        "tight chest"
+      ],
+      "trigger": "noticed a lump on the dog's leg and the vet appointment isn't until Thursday"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "i think i'll leave it here for tonight. naming the chest thing actually helped a little, just knowing it's the worry talking and not a verdict. thanks for sitting with me. gonna try to sleep and let thursday be thursday"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course — I’m glad you gave it words, and “Thursday be Thursday” feels like a clear place to set it down for now. Sleep well.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "worry",
+      "body_cue": [
+        "tight chest"
+      ],
+      "trigger": "vet appointment isn't until Thursday after noticing a lump on the dog's leg"
+    }
+  ]
+}

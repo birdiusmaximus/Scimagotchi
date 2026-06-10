@@ -1,0 +1,198 @@
+{
+  "cid": "sadness__18",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-09T18:19:54.685Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. i dont really know how to start this or if im even doing it right lol. i guess ive just been feeling kind of off lately and someone said writing stuff out might help"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, you’re doing it right enough already. “Kind of off” is a real place to start — what does that feel like most, if you had to point at it?"
+    },
+    {
+      "role": "user",
+      "content": "i think its like... heavy? but also kind of empty at the same time which doesnt even make sense. my contract at work ends in like 6 weeks and they havent said anything about renewing it and ive just been spiralling. i moved cities for this job and now i dont know if i should even be unpacking the rest of my boxes you know"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like heavy and empty at once, with the job uncertainty making it spiral. Does it feel more heavy, more empty, or a bit of both?"
+    },
+    {
+      "role": "user",
+      "content": "both i guess?? sorry i feel like im not explaining it well. its like the heavy part is the not knowing, like i refresh my email a hundred times a day waiting for them to tell me something. and the empty part is more like... i gave up my old apartment and my friends are all back home and if this doesnt work out i basically uprooted my whole life for nothing. and im 31 and i feel like i should have this figured out by now"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like pressure on top of emptiness — the waiting, and then the “I uprooted my whole life for nothing” part. Does it feel more like a tight, restless kind of heavy, or more like a hollow, shut-down empty?"
+    },
+    {
+      "role": "user",
+      "content": "honestly the restless tight one during the day and then the hollow one at night when im just sitting in this half empty apartment. i keep doing this thing where i imagine telling my mum it didnt work out and having to move back and i can already hear her being all supportive about it which somehow makes it worse?? like i dont want to be the person who needs rescuing again"
+    },
+    {
+      "role": "companion",
+      "content": "That adds a hurt, I think — not just the move, but the feeling of becoming “the person who needs rescuing again.” Does that fit, or is it more like shame or frustration?"
+    },
+    {
+      "role": "user",
+      "content": "yeah shame probably. theres this whole history where i kind of bounced around jobs in my twenties and my family was always there to catch me and i told myself this move was the grown up version of me finally doing something on my own. so if it falls apart its not just a job its like proof i still cant. ugh sorry this got way deeper than i meant it to"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like shame tied to “proof i still cant,” and the move carrying more than just a job. You can leave it here if you want, or we can stay with what this would mean if it fell apart — what would you want me to follow?"
+    },
+    {
+      "role": "user",
+      "content": "yeah i think i should leave it there for tonight, my brain is kind of fried. but it did help to actually say the shame part out loud instead of just letting it rattle around. thank you for listening, im gonna try to sleep"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — I’m glad you named the shame part, and we can leave it here for tonight. Sleep sounds like the right next place."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ysqvqkp4p4183",
+    "conversation_id": "sadness__18",
+    "timestamp": "2026-06-09T18:20:34.820Z",
+    "user_words_raw": "shame part out loud",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "shame",
+    "secondary_emotions": [
+      "pressure",
+      "hurt"
+    ],
+    "valence": "mixed",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "contract ending soon with no word about renewal after moving cities for the job",
+    "appraisal_thought": "if it falls apart, it means i still cant",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "integrity",
+      "belonging",
+      "self-respect"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feeling shame around work uncertainty, tied to proving adulthood after moving cities.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. i dont really know how to start this or if im even doing it right lol. i guess ive just been feeling kind of off lately and someone said writing stuff out might help"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, you’re doing it right enough already. “Kind of off” is a real place to start — what does that feel like most, if you had to point at it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "off",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i think its like... heavy? but also kind of empty at the same time which doesnt even make sense. my contract at work ends in like 6 weeks and they havent said anything about renewing it and ive just been spiralling. i moved cities for this job and now i dont know if i should even be unpacking the rest of my boxes you know"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like heavy and empty at once, with the job uncertainty making it spiral. Does it feel more heavy, more empty, or a bit of both?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "off",
+      "body_cue": [],
+      "trigger": "contract ending soon and no word about renewal after moving cities for the job"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "both i guess?? sorry i feel like im not explaining it well. its like the heavy part is the not knowing, like i refresh my email a hundred times a day waiting for them to tell me something. and the empty part is more like... i gave up my old apartment and my friends are all back home and if this doesnt work out i basically uprooted my whole life for nothing. and im 31 and i feel like i should have this figured out by now"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like pressure on top of emptiness — the waiting, and then the “I uprooted my whole life for nothing” part. Does it feel more like a tight, restless kind of heavy, or more like a hollow, shut-down empty?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "pressure",
+      "body_cue": [],
+      "trigger": "contract ending soon with no word about renewal after moving cities for the job"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "honestly the restless tight one during the day and then the hollow one at night when im just sitting in this half empty apartment. i keep doing this thing where i imagine telling my mum it didnt work out and having to move back and i can already hear her being all supportive about it which somehow makes it worse?? like i dont want to be the person who needs rescuing again"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That adds a hurt, I think — not just the move, but the feeling of becoming “the person who needs rescuing again.” Does that fit, or is it more like shame or frustration?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [
+        "restless tight one during the day",
+        "hollow one at night"
+      ],
+      "trigger": "contract ending soon with no word about renewal after moving cities for the job"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah shame probably. theres this whole history where i kind of bounced around jobs in my twenties and my family was always there to catch me and i told myself this move was the grown up version of me finally doing something on my own. so if it falls apart its not just a job its like proof i still cant. ugh sorry this got way deeper than i meant it to"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That feels like shame tied to “proof i still cant,” and the move carrying more than just a job. You can leave it here if you want, or we can stay with what this would mean if it fell apart — what would you want me to follow?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [
+        "restless tight one during the day",
+        "hollow one at night"
+      ],
+      "trigger": "contract ending soon with no word about renewal after moving cities for the job"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah i think i should leave it there for tonight, my brain is kind of fried. but it did help to actually say the shame part out loud instead of just letting it rattle around. thank you for listening, im gonna try to sleep"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That makes sense — I’m glad you named the shame part, and we can leave it here for tonight. Sleep sounds like the right next place.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "contract ending soon with no word about renewal after moving cities for the job"
+    }
+  ]
+}

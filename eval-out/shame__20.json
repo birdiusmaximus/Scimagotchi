@@ -1,0 +1,257 @@
+{
+  "cid": "shame__20",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-09T18:25:34.296Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. wasnt sure if i'd actually open this tonight but here i am i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, I'm glad you showed up. What’s it like to be here tonight?"
+    },
+    {
+      "role": "user",
+      "content": "honestly kind of tired. been a long week. my brain wont shut up tho so. thought maybe typing it out would help. how are you, do you even have like a day or"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like tired, with your brain still buzzing in the background. And I don’t have days the way you do, but I’m here with you tonight—what’s the loudest thing in your head right now?"
+    },
+    {
+      "role": "user",
+      "content": "loudest thing. ugh. ok. i had a doctors appt this week. bloodwork came back and my numbers are bad. like the kind of bad where she said the word prediabetic and gave me a Look. and ive just been carrying that around since"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds heavy to carry around, especially with the Look still stuck to it. Is it more the word itself, or what it seemed to mean coming from her?"
+    },
+    {
+      "role": "user",
+      "content": "its what it meant. or what i made it mean. like she didnt say youre a failure obviously. she was nice about it. but i sat in the car after and just felt this wave of like. you did this to yourself. you knew better. youre 34 and you cant even keep your own body in order"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a sharp turn inward, like the judgment landed on you from the inside. Does it feel more like shame, guilt, or both?"
+    },
+    {
+      "role": "user",
+      "content": "both probably but mostly shame. guilt is like i did a bad thing. this is more like i AM the bad thing. and the part i havent said out loud to anyone is. my dad had the same thing. diabetes. lost a toe, then his eyesight went, then he was gone at 61. and ive spent my whole adult life telling myself i wasnt gonna be him and now the numbers are basically saying. you are."
+    },
+    {
+      "role": "companion",
+      "content": "That’s a hard kind of shame — it sounds like it’s tying your numbers to your dad’s story. Does it feel more like wanting to hide, or like that sinking “you are” feeling in your body?"
+    },
+    {
+      "role": "user",
+      "content": "the hiding. definitely the hiding. i havent told my partner the actual numbers. i said it went fine. which is a lie. and i keep thinking if i just fix it quietly then nobody has to know i let it get this bad. but thats so messed up right. im hiding a health thing from the person who loves me because im embarrassed of my own blood"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense as hiding, and the embarrassment sounds very close to the surface. We can stay with that, or leave it here for now — what feels truest?"
+    },
+    {
+      "role": "user",
+      "content": "no can we stay a sec. i think i needed to actually type that out. cause saying it like that. hiding it because im embarrassed of my own blood. it sounds. i dont know. it sounds like something i'd be gentle about if a friend said it to me. and im not being gentle about it at all toward me"
+    },
+    {
+      "role": "companion",
+      "content": "That lands with a lot of self-harshness, and I’m hearing a gentler voice toward a friend than toward you. What does it feel like underneath that harshness — shame, fear, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "fear. under all of it its just fear. i dont actually think im a bad person i think im scared of becoming my dad and scared of dying the way he did and the shame is just. easier to hold than the fear i guess. huh. i didnt know that til just now"
+    },
+    {
+      "role": "companion",
+      "content": "That’s a clear shift — the shame sounds like the easier thing to hold, with fear underneath it. We can stay with that fear for a moment, or let it rest here if that’s enough for now."
+    },
+    {
+      "role": "user",
+      "content": "i think ill let it rest there. thats. yeah thats enough for tonight. maybe ill tell her the real numbers tomorrow. maybe. no promises. but thank you for this. i mean it. didnt expect to actually find the bottom of it. night"
+    },
+    {
+      "role": "companion",
+      "content": "Goodnight. I’m glad we found the bottom of it, and it can rest here for tonight."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z00t5hlm9zntm",
+    "conversation_id": "shame__20",
+    "timestamp": "2026-06-09T18:26:35.761Z",
+    "user_words_raw": "found the bottom of it",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "scared",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "bloodwork came back bad and it connects to their dad’s illness and death",
+    "appraisal_thought": "I’m scared of becoming my dad and dying the way he did",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User often wants to stop once the feeling feels understood.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. wasnt sure if i'd actually open this tonight but here i am i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, I'm glad you showed up. What’s it like to be here tonight?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "honestly kind of tired. been a long week. my brain wont shut up tho so. thought maybe typing it out would help. how are you, do you even have like a day or"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like tired, with your brain still buzzing in the background. And I don’t have days the way you do, but I’m here with you tonight—what’s the loudest thing in your head right now?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "restless",
+      "body_cue": [],
+      "trigger": "a long week"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "loudest thing. ugh. ok. i had a doctors appt this week. bloodwork came back and my numbers are bad. like the kind of bad where she said the word prediabetic and gave me a Look. and ive just been carrying that around since"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds heavy to carry around, especially with the Look still stuck to it. Is it more the word itself, or what it seemed to mean coming from her?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "burdened",
+      "body_cue": [],
+      "trigger": "bad bloodwork and being told 'prediabetic' at a doctor’s appointment"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "its what it meant. or what i made it mean. like she didnt say youre a failure obviously. she was nice about it. but i sat in the car after and just felt this wave of like. you did this to yourself. you knew better. youre 34 and you cant even keep your own body in order"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like a sharp turn inward, like the judgment landed on you from the inside. Does it feel more like shame, guilt, or both?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "bloodwork came back bad at a doctor’s appointment and she said 'prediabetic'"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "both probably but mostly shame. guilt is like i did a bad thing. this is more like i AM the bad thing. and the part i havent said out loud to anyone is. my dad had the same thing. diabetes. lost a toe, then his eyesight went, then he was gone at 61. and ive spent my whole adult life telling myself i wasnt gonna be him and now the numbers are basically saying. you are."
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That’s a hard kind of shame — it sounds like it’s tying your numbers to your dad’s story. Does it feel more like wanting to hide, or like that sinking “you are” feeling in your body?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "bloodwork came back bad at a doctor’s appointment and she said 'prediabetic'"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "the hiding. definitely the hiding. i havent told my partner the actual numbers. i said it went fine. which is a lie. and i keep thinking if i just fix it quietly then nobody has to know i let it get this bad. but thats so messed up right. im hiding a health thing from the person who loves me because im embarrassed of my own blood"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That makes sense as hiding, and the embarrassment sounds very close to the surface. We can stay with that, or leave it here for now — what feels truest?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "bloodwork came back bad and the doctor said prediabetic"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "no can we stay a sec. i think i needed to actually type that out. cause saying it like that. hiding it because im embarrassed of my own blood. it sounds. i dont know. it sounds like something i'd be gentle about if a friend said it to me. and im not being gentle about it at all toward me"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That lands with a lot of self-harshness, and I’m hearing a gentler voice toward a friend than toward you. What does it feel like underneath that harshness — shame, fear, or something else?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "bloodwork came back bad and the doctor said prediabetic"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "fear. under all of it its just fear. i dont actually think im a bad person i think im scared of becoming my dad and scared of dying the way he did and the shame is just. easier to hold than the fear i guess. huh. i didnt know that til just now"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That’s a clear shift — the shame sounds like the easier thing to hold, with fear underneath it. We can stay with that fear for a moment, or let it rest here if that’s enough for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "scared",
+      "body_cue": [],
+      "trigger": "bloodwork came back bad and it connects to their dad’s illness and death"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "i think ill let it rest there. thats. yeah thats enough for tonight. maybe ill tell her the real numbers tomorrow. maybe. no promises. but thank you for this. i mean it. didnt expect to actually find the bottom of it. night"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Goodnight. I’m glad we found the bottom of it, and it can rest here for tonight.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "scared",
+      "body_cue": [],
+      "trigger": "bloodwork came back bad and it connects to their dad’s illness and death"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "cid": "hurt__09",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-09T18:21:34.301Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "didnt get the promotion. they gave it to someone i trained"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really disappointing — and maybe sharp with the “someone I trained” part. Does it feel more like hurt, frustration, or both?"
+    },
+    {
+      "role": "user",
+      "content": "both i guess. mostly just makes me feel like im not good enough. like whats the point"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a heavy mix of hurt and disappointment, with a thought of “I’m not good enough.” Does it feel more heavy, hollow, or tired in you right now?"
+    },
+    {
+      "role": "user",
+      "content": "tired. just done with today honestly"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that sounds tired and worn out, like today has just gone flat. You could leave it there for now if you want, or we can stay with it a little longer — what part feels most done?"
+    },
+    {
+      "role": "user",
+      "content": "nah im good. gonna leave it there. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — we can leave it there. Thanks for trusting me with it."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yuvz7vc330k17",
+    "conversation_id": "hurt__09",
+    "timestamp": "2026-06-09T18:21:55.059Z",
+    "user_words_raw": "just done with today honestly",
+    "emotion_status": "candidate",
+    "emotion_family": "sadness",
+    "emotion_shade": "tired",
+    "secondary_emotions": [
+      "hurt",
+      "disappointment"
+    ],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "didn't get the promotion; it was given to someone they trained",
+    "appraisal_thought": "I'm not good enough",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "recognition",
+      "respect",
+      "rest"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "A promotion disappointment that felt personal and draining",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "didnt get the promotion. they gave it to someone i trained"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds really disappointing — and maybe sharp with the “someone I trained” part. Does it feel more like hurt, frustration, or both?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "disappointment",
+      "body_cue": [],
+      "trigger": "didn't get the promotion; it was given to someone they trained"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "both i guess. mostly just makes me feel like im not good enough. like whats the point"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a heavy mix of hurt and disappointment, with a thought of “I’m not good enough.” Does it feel more heavy, hollow, or tired in you right now?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "disappointment",
+      "body_cue": [],
+      "trigger": "didn't get the promotion; it was given to someone they trained"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "tired. just done with today honestly"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Yeah, that sounds tired and worn out, like today has just gone flat. You could leave it there for now if you want, or we can stay with it a little longer — what part feels most done?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "tired",
+      "body_cue": [],
+      "trigger": "didn't get the promotion; it was given to someone they trained"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "nah im good. gonna leave it there. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Of course — we can leave it there. Thanks for trusting me with it.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "tired",
+      "body_cue": [],
+      "trigger": "didn't get the promotion; it was given to someone they trained"
+    }
+  ]
+}

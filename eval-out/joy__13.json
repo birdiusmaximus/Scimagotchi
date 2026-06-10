@@ -1,0 +1,200 @@
+{
+  "cid": "joy__13",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-09T17:42:21.159Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. honestly not even sure why im here lol"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that’s completely fine. We can just take it as it comes; what’s been on your mind lately?"
+    },
+    {
+      "role": "user",
+      "content": "idk man. its kinda dumb. nothing bad happened for once which is weird for me ha"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds a bit strange, maybe even off — like “nothing bad happened” is the part that stands out. Does it feel more weird, relieved, or unsettled?"
+    },
+    {
+      "role": "user",
+      "content": "no no not unsettled. more like. ok dont laugh. i paid off my stupid credit card. like the whole thing. zero balance"
+    },
+    {
+      "role": "companion",
+      "content": "I’m not laughing — that’s a real moment. It sounds like a kind of “wait, really?” feeling; does it feel more relieved, proud, or just plain weird?"
+    },
+    {
+      "role": "user",
+      "content": "lol probably all three. i kept refreshing the app like the number was gonna change back. 4 grand. took me like 14 months of eating sad lunches at my desk"
+    },
+    {
+      "role": "companion",
+      "content": "That makes a lot of sense — relieved, proud, and weird all at once, especially with the app-refreshing. Did it feel like a lightness in your chest or more like an urge to keep checking it?"
+    },
+    {
+      "role": "user",
+      "content": "yeah the chest thing actually. like i could breathe. didnt tell anyone tho, felt weird to brag about not being in debt anymore haha. but it IS kind of a big deal i guess"
+    },
+    {
+      "role": "companion",
+      "content": "It does sound like a big deal — something good landed, and you could feel it in your chest. Do you want to stay with that for a moment, or leave it here?"
+    },
+    {
+      "role": "user",
+      "content": "nah i think im good. honestly didnt expect to feel anything talking to an app lol but that was kinda nice. lemme go let myself enjoy the zero before i find something new to spend on. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it landed that way. Enjoy the zero — that sounds like a small, bright kind of victory."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xgghnmcc2jrn8",
+    "conversation_id": "joy__13",
+    "timestamp": "2026-06-09T17:42:52.873Z",
+    "user_words_raw": "the zero",
+    "emotion_status": "confirmed",
+    "emotion_family": "joy",
+    "emotion_shade": "proud",
+    "secondary_emotions": [
+      "relieved"
+    ],
+    "valence": "positive",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "paid off the whole credit card and saw a zero balance",
+    "appraisal_thought": "this is a big deal",
+    "body_cue": [
+      "lightness in your chest"
+    ],
+    "behaviour_action": [
+      "kept refreshing the app"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "freedom",
+      "achievement",
+      "relief"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Paid off a credit card and felt proud, relieved, and a bit weird about it.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. honestly not even sure why im here lol"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that’s completely fine. We can just take it as it comes; what’s been on your mind lately?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "idk man. its kinda dumb. nothing bad happened for once which is weird for me ha"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds a bit strange, maybe even off — like “nothing bad happened” is the part that stands out. Does it feel more weird, relieved, or unsettled?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "off",
+      "body_cue": [],
+      "trigger": "nothing bad happened for once"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "no no not unsettled. more like. ok dont laugh. i paid off my stupid credit card. like the whole thing. zero balance"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "I’m not laughing — that’s a real moment. It sounds like a kind of “wait, really?” feeling; does it feel more relieved, proud, or just plain weird?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relieved",
+      "body_cue": [],
+      "trigger": "paid off the whole credit card and now has a zero balance"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "lol probably all three. i kept refreshing the app like the number was gonna change back. 4 grand. took me like 14 months of eating sad lunches at my desk"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes a lot of sense — relieved, proud, and weird all at once, especially with the app-refreshing. Did it feel like a lightness in your chest or more like an urge to keep checking it?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "relieved",
+      "body_cue": [],
+      "trigger": "paid off the whole credit card and saw a zero balance"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah the chest thing actually. like i could breathe. didnt tell anyone tho, felt weird to brag about not being in debt anymore haha. but it IS kind of a big deal i guess"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "It does sound like a big deal — something good landed, and you could feel it in your chest. Do you want to stay with that for a moment, or leave it here?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relieved",
+      "body_cue": [
+        "could breathe",
+        "lightness in your chest"
+      ],
+      "trigger": "paid off the whole credit card and saw a zero balance"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "nah i think im good. honestly didnt expect to feel anything talking to an app lol but that was kinda nice. lemme go let myself enjoy the zero before i find something new to spend on. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad it landed that way. Enjoy the zero — that sounds like a small, bright kind of victory.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [
+        "lightness in your chest"
+      ],
+      "trigger": "paid off the whole credit card and saw a zero balance"
+    }
+  ]
+}

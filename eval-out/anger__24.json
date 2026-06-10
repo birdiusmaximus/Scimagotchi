@@ -1,0 +1,261 @@
+{
+  "cid": "anger__24",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-09T18:18:34.007Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so i dont really know what this is supposed to do. my sister told me to try it lol. not sure i buy any of this honestly"
+    },
+    {
+      "role": "companion",
+      "content": "Fair enough — it’s okay to be unsure, and I can just talk normally. What did your sister say it was for?"
+    },
+    {
+      "role": "user",
+      "content": "she said it helps you like figure out what youre feeling or whatever. she does all this journaling stuff. im not really a feelings person. i just feel kind of wound up lately i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Wound up sounds like there’s something here, even if it doesn’t come with neat feelings words yet. Does it feel more like stress, irritation, or just a sort of restless edge?"
+    },
+    {
+      "role": "user",
+      "content": "irritation probably. honestly more than that. its my mom. she keeps doing this thing where she calls my brother the responsible one to my face and i just. like im standing right there"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds more like irritation with a sharp sting in it, especially hearing that in front of you. Does it feel more like anger, hurt, or both?"
+    },
+    {
+      "role": "user",
+      "content": "both i guess but mostly angry. like im 31 and i still get compared to him. and the kicker is i literally drove her to every appointment when she had her surgery. took time off. he showed up once with flowers and somehow HES the responsible one"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — that feels deeply unfair, and I’m wondering if the anger goes tight or hot when she says it?"
+    },
+    {
+      "role": "user",
+      "content": "i dont know what hot vs tight even means. see this is the stuff that makes me roll my eyes. its just angry. it sits in my chest and i go quiet and then i stew about it for like 3 days"
+    },
+    {
+      "role": "companion",
+      "content": "That’s really clear: angry, sitting in your chest, and going quiet while you stew on it for days. Want to stay with that a little more, or leave it there?"
+    },
+    {
+      "role": "user",
+      "content": "i mean. the stewing is the part that gets me honestly. i never say anything. i just take it and then im short with my wife later and she has no idea why. and then i feel like a jerk on top of being mad. its a whole thing"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the anger doesn’t just stay angry — it hangs around until it spills into the rest of the day, and then you’re left with that jerk feeling too. If you want, we can stay with the stewing part, or we can leave it here."
+    },
+    {
+      "role": "user",
+      "content": "the thing underneath is i think i actually want her to notice. like just once. say hey thanks for being there. i know shes not gonna. shes never been like that. but i keep waiting for it anyway which is dumb"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound dumb to me — it sounds like wanting to be seen, even while expecting not to be. Do you want to stay with that wanting, or leave it here?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. wanting to be seen. that ones a little close honestly. ok i didnt think id say that out loud. i think im good for now though. this is more than i usually do"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad you said it out loud. We can leave it here for now, and that’s completely okay."
+    },
+    {
+      "role": "user",
+      "content": "alright. not gonna lie this was less annoying than i expected. dont tell my sister she was right lol. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Glad it was less annoying than expected. Your secret’s safe with me."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yr0ogm1kunzdn",
+    "conversation_id": "anger__24",
+    "timestamp": "2026-06-09T18:19:26.519Z",
+    "user_words_raw": "less annoying than i expected",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "wanting to be seen",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "being compared to his brother and not having his care acknowledged",
+    "appraisal_thought": "I want her to notice me and say thanks for being there.",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User may return to talking about wanting to be seen and being quiet when hurt.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so i dont really know what this is supposed to do. my sister told me to try it lol. not sure i buy any of this honestly"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Fair enough — it’s okay to be unsure, and I can just talk normally. What did your sister say it was for?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "she said it helps you like figure out what youre feeling or whatever. she does all this journaling stuff. im not really a feelings person. i just feel kind of wound up lately i guess"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Wound up sounds like there’s something here, even if it doesn’t come with neat feelings words yet. Does it feel more like stress, irritation, or just a sort of restless edge?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "wound up",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "irritation probably. honestly more than that. its my mom. she keeps doing this thing where she calls my brother the responsible one to my face and i just. like im standing right there"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds more like irritation with a sharp sting in it, especially hearing that in front of you. Does it feel more like anger, hurt, or both?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "irritation",
+      "body_cue": [],
+      "trigger": "their mom calling their brother the responsible one to their face"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "both i guess but mostly angry. like im 31 and i still get compared to him. and the kicker is i literally drove her to every appointment when she had her surgery. took time off. he showed up once with flowers and somehow HES the responsible one"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Yeah — that feels deeply unfair, and I’m wondering if the anger goes tight or hot when she says it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "irritation",
+      "body_cue": [],
+      "trigger": "their mom calling their brother the responsible one to their face"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i dont know what hot vs tight even means. see this is the stuff that makes me roll my eyes. its just angry. it sits in my chest and i go quiet and then i stew about it for like 3 days"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That’s really clear: angry, sitting in your chest, and going quiet while you stew on it for days. Want to stay with that a little more, or leave it there?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "angry",
+      "body_cue": [
+        "sits in my chest"
+      ],
+      "trigger": "their mom calling their brother the responsible one to their face"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "i mean. the stewing is the part that gets me honestly. i never say anything. i just take it and then im short with my wife later and she has no idea why. and then i feel like a jerk on top of being mad. its a whole thing"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like the anger doesn’t just stay angry — it hangs around until it spills into the rest of the day, and then you’re left with that jerk feeling too. If you want, we can stay with the stewing part, or we can leave it here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [
+        "sits in my chest"
+      ],
+      "trigger": "my mom keeps calling my brother the responsible one to my face"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "the thing underneath is i think i actually want her to notice. like just once. say hey thanks for being there. i know shes not gonna. shes never been like that. but i keep waiting for it anyway which is dumb"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That doesn’t sound dumb to me — it sounds like wanting to be seen, even while expecting not to be. Do you want to stay with that wanting, or leave it here?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "wanting to be noticed",
+      "body_cue": [],
+      "trigger": "mother calling brother the responsible one to their face"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah. wanting to be seen. that ones a little close honestly. ok i didnt think id say that out loud. i think im good for now though. this is more than i usually do"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "I’m glad you said it out loud. We can leave it here for now, and that’s completely okay.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "wanting to be seen",
+      "body_cue": [],
+      "trigger": "being compared to his brother and not having his care acknowledged"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "alright. not gonna lie this was less annoying than i expected. dont tell my sister she was right lol. thanks"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Glad it was less annoying than expected. Your secret’s safe with me.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "wanting to be seen",
+      "body_cue": [],
+      "trigger": "being compared to his brother and not having his care acknowledged"
+    }
+  ]
+}

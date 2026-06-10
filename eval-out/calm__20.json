@@ -1,0 +1,241 @@
+{
+  "cid": "calm__20",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-09T17:44:53.769Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey there. been a little while since i opened this"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, good to see you again. What’s been going on since you last opened it?"
+    },
+    {
+      "role": "user",
+      "content": "honestly not much. work, the usual. but something shifted this week and i havent really sat with it yet. been kind of avoiding sitting still i think"
+    },
+    {
+      "role": "companion",
+      "content": "There’s a sense of something shifting, and maybe some avoiding around it too. Is it more like unsettled, pressured, or a bit off?"
+    },
+    {
+      "role": "user",
+      "content": "no thats the strange part. its not unsettled at all. its more like... relief? but a heavy kind. like i forgot what it feels like to not be braced for bad news"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like relief with weight still on it, almost as if your body hasn’t fully let go of bracing yet. Does it feel more like easing, or more like waiting for the other shoe to drop?"
+    },
+    {
+      "role": "user",
+      "content": "easing i think. slowly. i had a biopsy three weeks ago. found a lump back in april and the waiting was. god. and the call came monday and it was benign"
+    },
+    {
+      "role": "companion",
+      "content": "That’s a very particular kind of relief — the waiting easing after weeks of bracing. If you want, we can stay with what it’s like now, or leave it here for today."
+    },
+    {
+      "role": "user",
+      "content": "can we stay a sec. the weird thing is i thought id cry or feel light. but i just feel quiet. and a little guilty almost? like i spent two months rehearsing the worst and now i dont know what to do with all that fear that has nowhere to go"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like quiet with a little guilt, and maybe some leftover fear that has nowhere to land. What feels strongest in that moment — the quiet, the guilt, or the unused fear?"
+    },
+    {
+      "role": "user",
+      "content": "the quiet i think. its almost too big. like the silence after a fire alarm finally stops. my partner kept saying lets celebrate but i couldnt. i just wanted to sit in the car in the parking lot for a while"
+    },
+    {
+      "role": "companion",
+      "content": "That quiet sounds enormous, like the room after a fire alarm finally stops. Want to stay with that stillness a little more, or leave it there?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. i think naming it helps actually. its safe. thats the word. i can put my body down for a minute. i didnt realize how long ive been holding my shoulders up by my ears"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — safe, and your body finally putting its shoulders down by your ears for a minute. Does it feel more like rest now, or like a careful pause?"
+    },
+    {
+      "role": "user",
+      "content": "a careful pause for now. but maybe rest soon. i might go find my partner and let them hug me actually. think im ready. thank you for sitting in the parking lot with me, that helped more than i expected"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a careful pause turning toward rest. I’m glad the parking-lot stillness could hold that with you."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xjpx1qjvl4q6b",
+    "conversation_id": "calm__20",
+    "timestamp": "2026-06-09T17:45:46.290Z",
+    "user_words_raw": "careful pause",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "careful pause",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "the biopsy came back benign after weeks of waiting",
+    "appraisal_thought": "safe",
+    "body_cue": [],
+    "behaviour_action": [
+      "go find my partner and let them hug me"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "rest",
+      "comfort",
+      "space"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "After a benign biopsy result, they moved from intense waiting into a quiet, safe pause and then toward comfort with their partner.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey there. been a little while since i opened this"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, good to see you again. What’s been going on since you last opened it?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "honestly not much. work, the usual. but something shifted this week and i havent really sat with it yet. been kind of avoiding sitting still i think"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "There’s a sense of something shifting, and maybe some avoiding around it too. Is it more like unsettled, pressured, or a bit off?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "unsettled",
+      "body_cue": [],
+      "trigger": "something shifted this week"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "no thats the strange part. its not unsettled at all. its more like... relief? but a heavy kind. like i forgot what it feels like to not be braced for bad news"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like relief with weight still on it, almost as if your body hasn’t fully let go of bracing yet. Does it feel more like easing, or more like waiting for the other shoe to drop?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relief",
+      "body_cue": [],
+      "trigger": "something shifted this week"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "easing i think. slowly. i had a biopsy three weeks ago. found a lump back in april and the waiting was. god. and the call came monday and it was benign"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That’s a very particular kind of relief — the waiting easing after weeks of bracing. If you want, we can stay with what it’s like now, or leave it here for today.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relief",
+      "body_cue": [],
+      "trigger": "biopsy result came back benign after weeks of waiting about a lump"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "can we stay a sec. the weird thing is i thought id cry or feel light. but i just feel quiet. and a little guilty almost? like i spent two months rehearsing the worst and now i dont know what to do with all that fear that has nowhere to go"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like quiet with a little guilt, and maybe some leftover fear that has nowhere to land. What feels strongest in that moment — the quiet, the guilt, or the unused fear?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relief",
+      "body_cue": [],
+      "trigger": "biopsy result came back benign after weeks of waiting about a lump"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "the quiet i think. its almost too big. like the silence after a fire alarm finally stops. my partner kept saying lets celebrate but i couldnt. i just wanted to sit in the car in the parking lot for a while"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That quiet sounds enormous, like the room after a fire alarm finally stops. Want to stay with that stillness a little more, or leave it there?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "quiet",
+      "body_cue": [],
+      "trigger": "the biopsy call came back benign after weeks of waiting"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "yeah. i think naming it helps actually. its safe. thats the word. i can put my body down for a minute. i didnt realize how long ive been holding my shoulders up by my ears"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That makes sense — safe, and your body finally putting its shoulders down by your ears for a minute. Does it feel more like rest now, or like a careful pause?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "safe enough",
+      "body_cue": [
+        "holding my shoulders up by my ears"
+      ],
+      "trigger": "the biopsy came back benign after weeks of waiting"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "a careful pause for now. but maybe rest soon. i might go find my partner and let them hug me actually. think im ready. thank you for sitting in the parking lot with me, that helped more than i expected"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That sounds like a careful pause turning toward rest. I’m glad the parking-lot stillness could hold that with you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "careful pause",
+      "body_cue": [],
+      "trigger": "the biopsy came back benign after weeks of waiting"
+    }
+  ]
+}

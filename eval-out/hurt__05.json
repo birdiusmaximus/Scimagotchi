@@ -1,0 +1,141 @@
+{
+  "cid": "hurt__05",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-09T18:21:08.768Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk why im even here lol"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a kind of “what am I doing here?” moment, maybe flat or worn out. What’s been going on around it?"
+    },
+    {
+      "role": "user",
+      "content": "nothing really. just one of those days where ur brain decides to play the greatest hits if u know what i mean"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — one of those replay days, where the same tracks keep looping. Does it feel more like flat, or more like everything is buzzing underneath it?"
+    },
+    {
+      "role": "user",
+      "content": "dunno. buzzing i guess. its dumb its like ten years ago my best friend just stopped talking to me one day. never told me why. anyway lol ancient history"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound dumb at all — it sounds like a buzzy old hurt, especially with it still having a place in the background. Does it feel more like hurt, anger, or something hard to pin down?"
+    },
+    {
+      "role": "user",
+      "content": "hurt i guess. like what did i even do u know. anyway this got heavier than i meant lol. thanks tho. gonna go"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — the hurt seems tied to that “what did I do?” feeling, and it’s okay to leave it here. Thanks for telling me."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yucaykuusphl6",
+    "conversation_id": "hurt__05",
+    "timestamp": "2026-06-09T18:21:27.467Z",
+    "user_words_raw": "what did i even do",
+    "emotion_status": "candidate",
+    "emotion_family": "hurt",
+    "emotion_shade": "hurt",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "best friend stopped talking one day, years ago",
+    "appraisal_thought": "what did I even do",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "being seen",
+      "trust",
+      "repair"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "A long-ago friendship silence can still feel heavy",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk why im even here lol"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a kind of “what am I doing here?” moment, maybe flat or worn out. What’s been going on around it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "nothing really. just one of those days where ur brain decides to play the greatest hits if u know what i mean"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Yeah — one of those replay days, where the same tracks keep looping. Does it feel more like flat, or more like everything is buzzing underneath it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "one of those days"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "dunno. buzzing i guess. its dumb its like ten years ago my best friend just stopped talking to me one day. never told me why. anyway lol ancient history"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That doesn’t sound dumb at all — it sounds like a buzzy old hurt, especially with it still having a place in the background. Does it feel more like hurt, anger, or something hard to pin down?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "best friend stopped talking one day, years ago"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "hurt i guess. like what did i even do u know. anyway this got heavier than i meant lol. thanks tho. gonna go"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — the hurt seems tied to that “what did I do?” feeling, and it’s okay to leave it here. Thanks for telling me.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "best friend stopped talking one day, years ago"
+    }
+  ]
+}

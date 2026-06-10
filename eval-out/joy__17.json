@@ -1,0 +1,169 @@
+{
+  "cid": "joy__17",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-09T17:42:24.724Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "feeling good today"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds nice. Is it more bright and excited, or more quiet and settled?"
+    },
+    {
+      "role": "user",
+      "content": "quiet and settled i guess. me and my girlfriend just hit two years"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds quietly warm and special — like contentment with a little glow in it. Did it feel more like gratitude, pride, or something tender?"
+    },
+    {
+      "role": "user",
+      "content": "tender mostly. we just stayed in, made pasta, nothing fancy. felt right tho"
+    },
+    {
+      "role": "companion",
+      "content": "That feels tender and content, with a simple kind of rightness. Did it make you want to lean in, relax, or just savour it?"
+    },
+    {
+      "role": "user",
+      "content": "just savour it. kinda surprised it still feels easy after two yrs"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a quiet, easy kind of tender — and a little surprised by how steady it still feels. Does that feel like relief, gratitude, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "gratitude yeah. ok thats it, just wanted to put it down somewhere. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a small, steady gratitude — and it makes sense to just leave it here. I’m glad you put it somewhere."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xgitn8i72qve7",
+    "conversation_id": "joy__17",
+    "timestamp": "2026-06-09T17:42:46.041Z",
+    "user_words_raw": "gratitude",
+    "emotion_status": "confirmed",
+    "emotion_family": "joy",
+    "emotion_shade": "gratitude",
+    "secondary_emotions": [
+      "content"
+    ],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "two-year anniversary with girlfriend; stayed in and made pasta",
+    "appraisal_thought": "it still feels easy after two years",
+    "body_cue": [],
+    "behaviour_action": [
+      "savour it"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "appreciation",
+      "steadiness"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feels grateful and steady in a long-term relationship; likes simple, low-key moments.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "feeling good today"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds nice. Is it more bright and excited, or more quiet and settled?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "quiet and settled i guess. me and my girlfriend just hit two years"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds quietly warm and special — like contentment with a little glow in it. Did it feel more like gratitude, pride, or something tender?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "content",
+      "body_cue": [],
+      "trigger": "two-year anniversary with girlfriend"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "tender mostly. we just stayed in, made pasta, nothing fancy. felt right tho"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That feels tender and content, with a simple kind of rightness. Did it make you want to lean in, relax, or just savour it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "content",
+      "body_cue": [],
+      "trigger": "two-year anniversary with girlfriend; staying in and making pasta"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "just savour it. kinda surprised it still feels easy after two yrs"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like a quiet, easy kind of tender — and a little surprised by how steady it still feels. Does that feel like relief, gratitude, or something else?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "content",
+      "body_cue": [],
+      "trigger": "two-year anniversary with girlfriend; stayed in and made pasta"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "gratitude yeah. ok thats it, just wanted to put it down somewhere. thanks"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That feels like a small, steady gratitude — and it makes sense to just leave it here. I’m glad you put it somewhere.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "gratitude",
+      "body_cue": [],
+      "trigger": "two-year anniversary with girlfriend; stayed in and made pasta"
+    }
+  ]
+}

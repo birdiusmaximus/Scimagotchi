@@ -1,0 +1,191 @@
+{
+  "cid": "fear__16",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-09T17:37:02.919Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk if this thing actually does anything but ok. hi i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — fair enough, and hi. What’s on your mind today?"
+    },
+    {
+      "role": "user",
+      "content": "i dont even know. its dumb. its just like. my friend hasnt texted me back in like 4 days and my brain is being weird about it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like it’s gotten under your skin a bit. Is it more like worry, hurt, or annoyance?"
+    },
+    {
+      "role": "user",
+      "content": "worry i think. like not mad at her. more like. did i do something. we had this weird kinda flat hangout last week and i made a joke that maybe landed bad and now its just silence and my head keeps replaying it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like worry and a bit of self-checking, especially around that flat hangout and the joke. Does it feel more like you’re waiting for signs you messed up, or like you’re bracing for something awkward?"
+    },
+    {
+      "role": "user",
+      "content": "bracing for awkward yeah. like every time my phone buzzes i think its her and im half scared to open it. which is kinda pathetic for a friendship thats been like 6 years lol"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound pathetic to me; it sounds like you’re bracing for awkward every time your phone moves. Do you want to stay with that, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "i mean. saying it out loud it does sound like im just spiraling over nothing. shes probably just busy. ill maybe just text her something normal instead of sitting here overthinking"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — hearing it out loud can make it look smaller. We can leave it there, or if you want, we can stay with the part that still feels stuck."
+    },
+    {
+      "role": "user",
+      "content": "nah were good. honestly didnt think talking to an app would help but i feel a bit less wound up. thanks, im gonna go text her"
+    },
+    {
+      "role": "companion",
+      "content": "I'm glad it eased a little. Go text her, and if you want to come back later, I'll be here."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6x9mbsm2owepn6",
+    "conversation_id": "fear__16",
+    "timestamp": "2026-06-09T17:37:35.515Z",
+    "user_words_raw": "a bit less wound up",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [
+      "relief"
+    ],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "friend hasn't texted back after a flat hangout and a joke that might have landed badly",
+    "appraisal_thought": "she's probably just busy",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "reassurance",
+      "certainty",
+      "connection"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "A friendship uncertainty eased after talking it through; user planned to send a normal text.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk if this thing actually does anything but ok. hi i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — fair enough, and hi. What’s on your mind today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i dont even know. its dumb. its just like. my friend hasnt texted me back in like 4 days and my brain is being weird about it"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like it’s gotten under your skin a bit. Is it more like worry, hurt, or annoyance?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "fear",
+      "shade": null,
+      "body_cue": [],
+      "trigger": "their friend hasn’t texted back for 4 days"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "worry i think. like not mad at her. more like. did i do something. we had this weird kinda flat hangout last week and i made a joke that maybe landed bad and now its just silence and my head keeps replaying it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like worry and a bit of self-checking, especially around that flat hangout and the joke. Does it feel more like you’re waiting for signs you messed up, or like you’re bracing for something awkward?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "worried",
+      "body_cue": [],
+      "trigger": "friend hasn’t texted back for 4 days after a flat hangout and a joke that might have landed badly"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "bracing for awkward yeah. like every time my phone buzzes i think its her and im half scared to open it. which is kinda pathetic for a friendship thats been like 6 years lol"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That doesn’t sound pathetic to me; it sounds like you’re bracing for awkward every time your phone moves. Do you want to stay with that, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "worried",
+      "body_cue": [],
+      "trigger": "friend hasn’t texted back after a flat hangout and a joke that might have landed badly"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i mean. saying it out loud it does sound like im just spiraling over nothing. shes probably just busy. ill maybe just text her something normal instead of sitting here overthinking"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Yeah — hearing it out loud can make it look smaller. We can leave it there, or if you want, we can stay with the part that still feels stuck.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "worried",
+      "body_cue": [],
+      "trigger": "friend hasn’t texted back after a flat hangout and a joke that might have landed badly"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "nah were good. honestly didnt think talking to an app would help but i feel a bit less wound up. thanks, im gonna go text her"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I'm glad it eased a little. Go text her, and if you want to come back later, I'll be here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "friend hasn't texted back after a flat hangout and a joke that might have landed badly"
+    }
+  ]
+}

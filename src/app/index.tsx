@@ -1,98 +1,111 @@
-import * as Device from 'expo-device';
-import { Platform, StyleSheet } from 'react-native';
+import { Feather } from '@expo/vector-icons';
+import { useRouter } from 'expo-router';
+import { StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { AnimatedIcon } from '@/components/animated-icon';
-import { HintRow } from '@/components/hint-row';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { WebBadge } from '@/components/web-badge';
-import { BottomTabInset, MaxContentWidth, Spacing } from '@/constants/theme';
+import { ChatInput } from '@/components/ChatInput';
+import { CompanionOrb } from '@/components/CompanionOrb';
+import { GradientBackground } from '@/components/GradientBackground';
+import { SuggestionChip } from '@/components/SuggestionChip';
+import { TopBar } from '@/components/TopBar';
+import { Txt } from '@/components/Txt';
+import { useStore } from '@/state/store';
+import { palette, spacing } from '@/theme/tokens';
 
-function getDevMenuHint() {
-  if (Platform.OS === 'web') {
-    return <ThemedText type="small">use browser devtools</ThemedText>;
-  }
-  if (Device.isDevice) {
-    return (
-      <ThemedText type="small">
-        shake device or press <ThemedText type="code">m</ThemedText> in terminal
-      </ThemedText>
-    );
-  }
-  const shortcut = Platform.OS === 'android' ? 'cmd+m (or ctrl+m)' : 'cmd+d';
-  return (
-    <ThemedText type="small">
-      press <ThemedText type="code">{shortcut}</ThemedText>
-    </ThemedText>
-  );
+/** Start a fresh conversation, then either greet (chip) or send the typed text. */
+function openChat(kind: 'greet' | 'say', text: string, go: (cid: string) => void) {
+  const s = useStore.getState();
+  s.newConversation(); // sets conversationId synchronously
+  const cid = useStore.getState().conversationId as string;
+  if (kind === 'greet') s.greet(text);
+  else s.send(text);
+  go(cid);
 }
 
-export default function HomeScreen() {
+const CHIPS: { icon: keyof typeof Feather.glyphMap; label: string; opener: string }[] = [
+  {
+    icon: 'cloud',
+    label: 'I feel off',
+    opener: 'I’m here. We can start anywhere — what feels most present right now?',
+  },
+  {
+    icon: 'zap',
+    label: 'Vent a little',
+    opener: 'Go ahead — tell me what happened, in your own words. I’m listening.',
+  },
+  {
+    icon: 'help-circle',
+    label: 'I’m not sure',
+    opener: 'That’s allowed. We don’t need the right word yet. Is it more heavy, tense, blank, or restless?',
+  },
+  {
+    icon: 'sun',
+    label: 'Checking in',
+    opener: 'I’m glad you’re here. How are you feeling right now?',
+  },
+];
+
+/** Now — the companion home. Matches the v0.1 visual reference. */
+export default function NowScreen() {
+  const router = useRouter();
+  const userName = useStore((s) => s.userName);
+
   return (
-    <ThemedView style={styles.container}>
-      <SafeAreaView style={styles.safeArea}>
-        <ThemedView style={styles.heroSection}>
-          <AnimatedIcon />
-          <ThemedText type="title" style={styles.title}>
-            Welcome to&nbsp;Expo
-          </ThemedText>
-        </ThemedView>
+    <View style={styles.root}>
+      <GradientBackground />
+      <SafeAreaView style={styles.safe}>
+        <TopBar onLeft={() => router.push('/menu')} onRight={() => router.push('/settings')} />
 
-        <ThemedText type="code" style={styles.code}>
-          get started
-        </ThemedText>
+        <View style={styles.greeting}>
+          <Txt variant="subtitle" align="center">
+            Hello{userName ? `, ${userName}` : ''}
+          </Txt>
+          <Txt variant="h1" align="center">
+            How are you feeling today?
+          </Txt>
+        </View>
 
-        <ThemedView type="backgroundElement" style={styles.stepContainer}>
-          <HintRow
-            title="Try editing"
-            hint={<ThemedText type="code">src/app/index.tsx</ThemedText>}
-          />
-          <HintRow title="Dev tools" hint={getDevMenuHint()} />
-          <HintRow
-            title="Fresh start"
-            hint={<ThemedText type="code">npm run reset-project</ThemedText>}
-          />
-        </ThemedView>
+        <View style={styles.orbWrap}>
+          <CompanionOrb size={160} interactive />
+        </View>
 
-        {Platform.OS === 'web' && <WebBadge />}
+        <View style={styles.chips}>
+          {CHIPS.map((c) => (
+            <SuggestionChip
+              key={c.label}
+              icon={c.icon}
+              label={c.label}
+              onPress={() => openChat('greet', c.opener, (cid) => router.push({ pathname: '/chat', params: { cid } }))}
+            />
+          ))}
+        </View>
+
+        <ChatInput onSubmit={(t) => openChat('say', t, (cid) => router.push({ pathname: '/chat', params: { cid } }))} />
       </SafeAreaView>
-    </ThemedView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  root: { flex: 1 },
+  safe: {
     flex: 1,
+    paddingHorizontal: spacing.lg,
+    paddingBottom: spacing.md,
+    gap: spacing.md,
+  },
+  greeting: {
+    gap: 4,
+    marginTop: spacing.xs,
+  },
+  orbWrap: {
+    flex: 1,
+    alignItems: 'center',
     justifyContent: 'center',
+  },
+  chips: {
     flexDirection: 'row',
-  },
-  safeArea: {
-    flex: 1,
-    paddingHorizontal: Spacing.four,
-    alignItems: 'center',
-    gap: Spacing.three,
-    paddingBottom: BottomTabInset + Spacing.three,
-    maxWidth: MaxContentWidth,
-  },
-  heroSection: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    flex: 1,
-    paddingHorizontal: Spacing.four,
-    gap: Spacing.four,
-  },
-  title: {
-    textAlign: 'center',
-  },
-  code: {
-    textTransform: 'uppercase',
-  },
-  stepContainer: {
-    gap: Spacing.three,
-    alignSelf: 'stretch',
-    paddingHorizontal: Spacing.three,
-    paddingVertical: Spacing.four,
-    borderRadius: Spacing.four,
+    flexWrap: 'wrap',
+    gap: spacing.sm,
   },
 });

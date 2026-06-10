@@ -1,0 +1,282 @@
+{
+  "cid": "calm__23",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-09T17:45:04.280Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "honestly not sure why im even here. things are weirdly fine for once. paid off the last of my credit card thursday and i feel kind of numb about it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds oddly flat for something that should have felt like a moment. Does it feel more numb, blank, or just hard to take in?"
+    },
+    {
+      "role": "user",
+      "content": "numb i guess. or maybe not even that. like i keep waiting for the relief to hit and it just. doesnt. ive been in debt since i was 19. thats almost 8 years"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like waiting for relief and getting a kind of empty pause instead. Is it more heavy and stuck, or more like you can’t quite reach the feeling yet?"
+    },
+    {
+      "role": "user",
+      "content": "cant reach it i think. its weird because the number on the app was finally 0 and i just stared at it. took a screenshot like i needed proof. been doing the math in my head every single night for years, what i owe, what the interest is, what i can skip eating so i can pay more"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the 0 was real, but your mind was still living in the math. I’m wondering if this feels more like stunned, or like something is still braced and waiting?"
+    },
+    {
+      "role": "user",
+      "content": "braced. yeah. like my whole body is still ready for the next bill or the next emergency that puts me back under. ive never once not been in debt as an adult. i dont know how to just. exist without that weight. what would i even do with that headspace"
+    },
+    {
+      "role": "companion",
+      "content": "That braced feeling makes sense here — like your body hasn’t been told it’s over yet. We can stay with that, or leave it here if you want; does it feel more like waiting, or like not knowing how to be without the weight?"
+    },
+    {
+      "role": "user",
+      "content": "not knowing how to be without it. but theres something else under it too if im honest. like a quiet thing. i drove home thursday and the road was empty and i had the windows down and for a second my chest wasnt tight. first time in years i think. i almost didnt recognize it"
+    },
+    {
+      "role": "companion",
+      "content": "That quiet thing feels important too — almost unfamiliar, like your body noticed space before your mind caught up. Does it feel more like relief, or something softer and harder to name?"
+    },
+    {
+      "role": "user",
+      "content": "relief maybe. but the kind thats almost scary because i dont trust it yet. like if i let myself feel it the floor drops out again. but it was there. that loose feeling in my shoulders. i could breathe all the way down for once"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like relief that doesn’t quite feel safe yet, with your shoulders letting go and your breath going all the way down. We can leave it there, or if you want, I can stay with whether it feels familiar or still a little unbelievable."
+    },
+    {
+      "role": "user",
+      "content": "still unbelievable. but i want to let it be real. i think i came in here saying i was numb because feeling the good thing is harder than i expected. like i earned the right to relax and i dont know how. 8 years of bracing doesnt just switch off"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — the hard part here may be that the good feeling is new enough to seem almost unreal. Does it feel more like numbness, or like your body is protecting itself from trusting it too fast?"
+    },
+    {
+      "role": "user",
+      "content": "protecting itself yeah. that lands. its not numb its just careful. maybe the relief gets to be real slowly. i dont have to feel it all at once. just that one breath in the car was enough proof for now"
+    },
+    {
+      "role": "companion",
+      "content": "That feels careful, not numb — like relief is allowed in small pieces, and that breath in the car was enough proof for now. We can leave it there, or stay with what that carefulness is asking for underneath; what feels truest?"
+    },
+    {
+      "role": "user",
+      "content": "lets leave it there. i think i just needed to say it out loud to someone. the breath was enough. thanks for helping me find the actual word for it. gonna go sit with it for a bit"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a clean place to pause — the word found its shape, and the breath was enough. Go sit with it for a bit; I’ll be here if you want to return to it."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xjy3bba0rgefw",
+    "conversation_id": "calm__23",
+    "timestamp": "2026-06-09T17:46:04.833Z",
+    "user_words_raw": "the breath was enough",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "careful",
+    "secondary_emotions": [
+      "relief"
+    ],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "driving home on an empty road with the windows down",
+    "appraisal_thought": "i dont have to feel it all at once",
+    "body_cue": [
+      "loose feeling in my shoulders",
+      "could breathe all the way down"
+    ],
+    "behaviour_action": [
+      "go sit with it for a bit"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "safety",
+      "rest",
+      "clarity"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User is learning to trust relief slowly after years of bracing.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "honestly not sure why im even here. things are weirdly fine for once. paid off the last of my credit card thursday and i feel kind of numb about it"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds oddly flat for something that should have felt like a moment. Does it feel more numb, blank, or just hard to take in?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": "paid off the last of my credit card"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "numb i guess. or maybe not even that. like i keep waiting for the relief to hit and it just. doesnt. ive been in debt since i was 19. thats almost 8 years"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like waiting for relief and getting a kind of empty pause instead. Is it more heavy and stuck, or more like you can’t quite reach the feeling yet?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": "paid off the last of my credit card"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "cant reach it i think. its weird because the number on the app was finally 0 and i just stared at it. took a screenshot like i needed proof. been doing the math in my head every single night for years, what i owe, what the interest is, what i can skip eating so i can pay more"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like the 0 was real, but your mind was still living in the math. I’m wondering if this feels more like stunned, or like something is still braced and waiting?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": "the credit card balance finally hit 0 after years of debt"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "braced. yeah. like my whole body is still ready for the next bill or the next emergency that puts me back under. ive never once not been in debt as an adult. i dont know how to just. exist without that weight. what would i even do with that headspace"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That braced feeling makes sense here — like your body hasn’t been told it’s over yet. We can stay with that, or leave it here if you want; does it feel more like waiting, or like not knowing how to be without the weight?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "braced",
+      "body_cue": [
+        "my whole body is still ready"
+      ],
+      "trigger": "the credit card balance finally hit 0 after years of debt"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "not knowing how to be without it. but theres something else under it too if im honest. like a quiet thing. i drove home thursday and the road was empty and i had the windows down and for a second my chest wasnt tight. first time in years i think. i almost didnt recognize it"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That quiet thing feels important too — almost unfamiliar, like your body noticed space before your mind caught up. Does it feel more like relief, or something softer and harder to name?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "quiet, unfamiliar",
+      "body_cue": [
+        "chest wasnt tight"
+      ],
+      "trigger": "driving home with the windows down and the road empty after paying off the last credit card"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "relief maybe. but the kind thats almost scary because i dont trust it yet. like if i let myself feel it the floor drops out again. but it was there. that loose feeling in my shoulders. i could breathe all the way down for once"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like relief that doesn’t quite feel safe yet, with your shoulders letting go and your breath going all the way down. We can leave it there, or if you want, I can stay with whether it feels familiar or still a little unbelievable.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "relief",
+      "body_cue": [
+        "loose feeling in my shoulders",
+        "could breathe all the way down"
+      ],
+      "trigger": "driving home on an empty road with the windows down after years of carrying debt"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "still unbelievable. but i want to let it be real. i think i came in here saying i was numb because feeling the good thing is harder than i expected. like i earned the right to relax and i dont know how. 8 years of bracing doesnt just switch off"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That makes sense — the hard part here may be that the good feeling is new enough to seem almost unreal. Does it feel more like numbness, or like your body is protecting itself from trusting it too fast?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": "the first real relief after years of debt and bracing"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "protecting itself yeah. that lands. its not numb its just careful. maybe the relief gets to be real slowly. i dont have to feel it all at once. just that one breath in the car was enough proof for now"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That feels careful, not numb — like relief is allowed in small pieces, and that breath in the car was enough proof for now. We can leave it there, or stay with what that carefulness is asking for underneath; what feels truest?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "careful",
+      "body_cue": [
+        "loose feeling in my shoulders",
+        "could breathe all the way down"
+      ],
+      "trigger": "driving home on an empty road with the windows down"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "lets leave it there. i think i just needed to say it out loud to someone. the breath was enough. thanks for helping me find the actual word for it. gonna go sit with it for a bit"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "That feels like a clean place to pause — the word found its shape, and the breath was enough. Go sit with it for a bit; I’ll be here if you want to return to it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "careful",
+      "body_cue": [
+        "loose feeling in my shoulders",
+        "could breathe all the way down"
+      ],
+      "trigger": "driving home on an empty road with the windows down"
+    }
+  ]
+}

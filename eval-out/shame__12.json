@@ -1,0 +1,217 @@
+{
+  "cid": "shame__12",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-09T18:24:50.033Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey there. how are you today?"
+    },
+    {
+      "role": "companion",
+      "content": "Hey there — I’m glad you said hi. I’m here with you; what’s been on your mind today?"
+    },
+    {
+      "role": "user",
+      "content": "i'm okay i guess. it's been one of those weeks where everything feels kind of low-grade off, you know? nothing dramatic. just... blah"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that sounds like a low, blah kind of week. Is it more like feeling flat, heavy, or a bit disappointed?"
+    },
+    {
+      "role": "user",
+      "content": "honestly disappointed. but more in myself than anything. like there's this thing i keep replaying from a few days ago and i can't shake it. it's so small it's almost embarrassing to even bring up"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like disappointment turning inward, and the replaying makes it feel sticky. What’s the small thing that keeps coming back?"
+    },
+    {
+      "role": "user",
+      "content": "so we had people over for dinner saturday. and one of my partner's friends asked what i do and i just... fumbled it completely. went red, talked in circles, made this weird self-deprecating joke that landed flat. everyone just sort of nodded politely. and i've been cringing about it ever since. like who can't even answer a basic question about themselves"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like embarrassment mixed with a sharp hit of disappointment in yourself. Was the sting mostly in the red, the flat nods, or the part where it kept replaying afterward?"
+    },
+    {
+      "role": "user",
+      "content": "i think it's the replaying. the moment itself was like two seconds. but my brain keeps going back like it's proof of something. that i'm not... i dunno. that i'm somehow not enough, not put together the way other people seem to be. it's never just about the dinner"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it sounds like the moment got turned into a bigger story about not being enough. Does this feel more like shame about you, or guilt about how the moment went?"
+    },
+    {
+      "role": "user",
+      "content": "shame about me, definitely. not guilt. nobody was hurt, it's not like i did anything wrong. it's just this quiet feeling that i'm the one who's lacking. saying it out loud it does sound a bit harsh though. i wouldn't talk to anyone else like that"
+    },
+    {
+      "role": "companion",
+      "content": "That does sound harsh, and very personal. If you want, we can stay with what it’s saying about you for a moment, or leave it here."
+    },
+    {
+      "role": "user",
+      "content": "i think i'll leave it here for now. but that bit about how i wouldn't say it to anyone else kind of stuck. gonna sit with that. thanks for listening, it helped to actually say it instead of just looping on it"
+    },
+    {
+      "role": "companion",
+      "content": "I'm glad you said it out loud, and we can leave it here. That little mismatch — how you spoke to yourself versus anyone else — feels like the part that stayed with you."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yz2uhmk8rct6i",
+    "conversation_id": "shame__12",
+    "timestamp": "2026-06-09T18:25:28.279Z",
+    "user_words_raw": "i wouldn't talk to anyone else like that",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "self-critical",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "A dinner guest asked what they do, and they felt they fumbled the answer.",
+    "appraisal_thought": "I'm the one who's lacking; I'm not enough or put together like other people.",
+    "body_cue": [],
+    "behaviour_action": [
+      "replaying it mentally"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "dignity",
+      "self-respect",
+      "being understood"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "A social moment got replayed and turned into self-critical shame about being lacking.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey there. how are you today?"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey there — I’m glad you said hi. I’m here with you; what’s been on your mind today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i'm okay i guess. it's been one of those weeks where everything feels kind of low-grade off, you know? nothing dramatic. just... blah"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Yeah, that sounds like a low, blah kind of week. Is it more like feeling flat, heavy, or a bit disappointed?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "low",
+      "body_cue": [],
+      "trigger": "one of those weeks where everything feels kind of low-grade off"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "honestly disappointed. but more in myself than anything. like there's this thing i keep replaying from a few days ago and i can't shake it. it's so small it's almost embarrassing to even bring up"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like disappointment turning inward, and the replaying makes it feel sticky. What’s the small thing that keeps coming back?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "sadness",
+      "shade": "disappointed",
+      "body_cue": [],
+      "trigger": "something from a few days ago"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "so we had people over for dinner saturday. and one of my partner's friends asked what i do and i just... fumbled it completely. went red, talked in circles, made this weird self-deprecating joke that landed flat. everyone just sort of nodded politely. and i've been cringing about it ever since. like who can't even answer a basic question about themselves"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like embarrassment mixed with a sharp hit of disappointment in yourself. Was the sting mostly in the red, the flat nods, or the part where it kept replaying afterward?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [
+        "went red"
+      ],
+      "trigger": "A friend asked what they do at dinner and they felt they fumbled the answer"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i think it's the replaying. the moment itself was like two seconds. but my brain keeps going back like it's proof of something. that i'm not... i dunno. that i'm somehow not enough, not put together the way other people seem to be. it's never just about the dinner"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That makes sense — it sounds like the moment got turned into a bigger story about not being enough. Does this feel more like shame about you, or guilt about how the moment went?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "inadequate",
+      "body_cue": [],
+      "trigger": "A dinner guest asked what they do, and they felt they fumbled the answer."
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "shame about me, definitely. not guilt. nobody was hurt, it's not like i did anything wrong. it's just this quiet feeling that i'm the one who's lacking. saying it out loud it does sound a bit harsh though. i wouldn't talk to anyone else like that"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That does sound harsh, and very personal. If you want, we can stay with what it’s saying about you for a moment, or leave it here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "A dinner guest asked what they do, and they felt they fumbled the answer."
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "i think i'll leave it here for now. but that bit about how i wouldn't say it to anyone else kind of stuck. gonna sit with that. thanks for listening, it helped to actually say it instead of just looping on it"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "I'm glad you said it out loud, and we can leave it here. That little mismatch — how you spoke to yourself versus anyone else — feels like the part that stayed with you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "A dinner guest asked what they do, and they felt they fumbled the answer."
+    }
+  ]
+}

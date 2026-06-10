@@ -1,0 +1,268 @@
+{
+  "cid": "sadness__22",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-09T18:20:34.166Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. i dont really know why im here. just feeling kind of heavy today i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Hey. That sounds like a heavy kind of day, even if the shape of it isn’t clear yet. Does it feel more like sad, low, or just weighed down?"
+    },
+    {
+      "role": "user",
+      "content": "weighed down maybe. like theres this thing sitting on my chest that wont move. i keep trying to just get on with the day but it keeps pulling me back"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds very weighed down — like something sitting on your chest and pulling you back. Is it more of a heavy body feeling, or an urge to stop and give up on pushing through for a bit?"
+    },
+    {
+      "role": "user",
+      "content": "both honestly. i just want to lie down and not do anything. its stupid because nothing even big happened. my houseplant died. the big one in the corner. ive had it like 6 years"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound stupid to me — something mattered, and losing the big one in the corner seems to have hit hard. Do you want to stay with what it meant to you, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "i dont know. i feel pathetic crying over a plant. my mum gave it to me when i moved into this flat. she passed two years ago. i think ive been keeping it alive like its part of her or something"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like it was carrying your mum with it, so losing it may be touching both grief and the ache of being without her. Would you like to stay with that, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. i kept telling myself if i could just keep it going then a part of her was still here in the room with me. and i overwatered it. i looked it up after. root rot. i killed the last thing she gave me"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like it’s turned into guilt as well as grief — the plant was the last thing she gave you, and now it feels tied to having lost her again. Does this feel more like guilt, or more like missing her?"
+    },
+    {
+      "role": "user",
+      "content": "missing her. god i miss her so much. the plant was just easier to focus on. i havent properly cried about her since the funeral and now im sat on the kitchen floor over a dead fern like an idiot"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like missing her has been sitting there for a long time, and the fern was the thing that let it surface. We can stay with that, or we can leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "maybe its not about the idiot part. maybe i just needed to let myself feel it. ive been holding it in for two years because everyone expected me to be ok by now"
+    },
+    {
+      "role": "companion",
+      "content": "That makes a lot of sense — it sounds like the feeling has been waiting under the “be ok by now” pressure. Is it more the holding it in that feels heavy, or the missing her itself?"
+    },
+    {
+      "role": "user",
+      "content": "the holding it in. but it feels a tiny bit lighter having said it out loud. i think im gonna keep the pot. maybe plant something new in it. she wouldve liked that"
+    },
+    {
+      "role": "companion",
+      "content": "That seems tender — keeping the pot sounds like a way of letting her stay present without forcing the same loss to carry everything. If you want, we can leave it here, or stay with what planting something new might mean to you."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it here i think. im pretty wrung out. thank you for sitting with me though. i didnt expect to actually cry today but i think i needed to. gonna go make a tea and just sit for a bit"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad you said it out loud, and I’ll leave it here with you. Tea and sitting quietly sounds like enough for now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ytlfpup3nndq3",
+    "conversation_id": "sadness__22",
+    "timestamp": "2026-06-09T18:21:24.104Z",
+    "user_words_raw": "pretty wrung out",
+    "emotion_status": "confirmed",
+    "emotion_family": "sadness",
+    "emotion_shade": "wrung out",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "holding it in for two years; feeling the pressure to be okay by now",
+    "appraisal_thought": "everyone expected me to be ok by now",
+    "body_cue": [],
+    "behaviour_action": [
+      "go make a tea",
+      "sit for a bit"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "recognition",
+      "space",
+      "comfort"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "A bereavement feeling that surfaced after holding it in; the person may return to it through small memorial objects.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. i dont really know why im here. just feeling kind of heavy today i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey. That sounds like a heavy kind of day, even if the shape of it isn’t clear yet. Does it feel more like sad, low, or just weighed down?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "heavy",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "weighed down maybe. like theres this thing sitting on my chest that wont move. i keep trying to just get on with the day but it keeps pulling me back"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds very weighed down — like something sitting on your chest and pulling you back. Is it more of a heavy body feeling, or an urge to stop and give up on pushing through for a bit?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "weighed down",
+      "body_cue": [
+        "thing sitting on my chest"
+      ],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "both honestly. i just want to lie down and not do anything. its stupid because nothing even big happened. my houseplant died. the big one in the corner. ive had it like 6 years"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That doesn’t sound stupid to me — something mattered, and losing the big one in the corner seems to have hit hard. Do you want to stay with what it meant to you, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "sadness",
+      "shade": "grieving",
+      "body_cue": [
+        "thing sitting on my chest"
+      ],
+      "trigger": "my houseplant died"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "i dont know. i feel pathetic crying over a plant. my mum gave it to me when i moved into this flat. she passed two years ago. i think ive been keeping it alive like its part of her or something"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like it was carrying your mum with it, so losing it may be touching both grief and the ache of being without her. Would you like to stay with that, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grieving",
+      "body_cue": [],
+      "trigger": "the houseplant died; it was a gift from their mum who died two years ago"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. i kept telling myself if i could just keep it going then a part of her was still here in the room with me. and i overwatered it. i looked it up after. root rot. i killed the last thing she gave me"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like it’s turned into guilt as well as grief — the plant was the last thing she gave you, and now it feels tied to having lost her again. Does this feel more like guilt, or more like missing her?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "guilt",
+      "body_cue": [],
+      "trigger": "the houseplant died; it was the last thing their mum gave them"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "missing her. god i miss her so much. the plant was just easier to focus on. i havent properly cried about her since the funeral and now im sat on the kitchen floor over a dead fern like an idiot"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like missing her has been sitting there for a long time, and the fern was the thing that let it surface. We can stay with that, or we can leave it here for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grieving",
+      "body_cue": [],
+      "trigger": "the houseplant died; it was the last thing their mum gave them"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "maybe its not about the idiot part. maybe i just needed to let myself feel it. ive been holding it in for two years because everyone expected me to be ok by now"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That makes a lot of sense — it sounds like the feeling has been waiting under the “be ok by now” pressure. Is it more the holding it in that feels heavy, or the missing her itself?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "heavy",
+      "body_cue": [],
+      "trigger": "everyone expected me to be ok by now"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "the holding it in. but it feels a tiny bit lighter having said it out loud. i think im gonna keep the pot. maybe plant something new in it. she wouldve liked that"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That seems tender — keeping the pot sounds like a way of letting her stay present without forcing the same loss to carry everything. If you want, we can leave it here, or stay with what planting something new might mean to you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "tender",
+      "body_cue": [],
+      "trigger": "the plant died, and it connects to losing the last thing she gave me"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "yeah lets leave it here i think. im pretty wrung out. thank you for sitting with me though. i didnt expect to actually cry today but i think i needed to. gonna go make a tea and just sit for a bit"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "I’m glad you said it out loud, and I’ll leave it here with you. Tea and sitting quietly sounds like enough for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "wrung out",
+      "body_cue": [],
+      "trigger": "holding it in for two years; feeling the pressure to be okay by now"
+    }
+  ]
+}

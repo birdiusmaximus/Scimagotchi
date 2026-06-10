@@ -1,0 +1,272 @@
+{
+  "cid": "shame__24",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-09T18:25:44.535Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk if this is gonna do anything but ok. hi i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Hi — I’m here. What’s been on your mind, if anything?"
+    },
+    {
+      "role": "user",
+      "content": "nothing really. just. idk. my sister had a thing this weekend and i didnt go. its fine its whatever"
+    },
+    {
+      "role": "companion",
+      "content": "It sounds like this might be sitting in that vague, hard-to-name place. Was it more like fine on the surface, but a bit off underneath?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. like everyone was there my mom my brother all the cousins and im the only one who flaked. again. my mom didnt even text me about it she just put up photos"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds a bit like hurt and being left out, maybe with some shame in the mix. Does it feel more sharp or more blank?"
+    },
+    {
+      "role": "user",
+      "content": "no not left out. more like. its my fault. im the one who doesnt show up. theyre not wrong to stop expecting me. like im the disappointment kid you know. the one who cant get it together"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds heavy and self-blaming, almost like being the one who “doesn’t show up.” What does that feeling make you want to do — pull away, defend yourself, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "pull away obviously. thats what i always do. its easier to just not go than to show up and have everyone clock that im still a mess. 34 and still the kid who couldnt finish anything. my brothers a dad now. and i couldnt even drive 40 min for a bbq"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really exposed and harsh, like pulling away keeps you from being seen as the “mess” or the “disappointment kid.” Does it feel more like wanting to hide, or wanting to disappear for a bit?"
+    },
+    {
+      "role": "user",
+      "content": "hide. definitely hide. if they cant see me they cant be let down again. honestly didnt think typing this to an app would do anything but. that ones kind of true. hiding so i dont have to watch their faces do the thing"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like hiding to avoid seeing their faces do the thing, and to not have to feel that let-down again. Is this feeling more about being seen as a disappointment, or about wanting to protect yourself from that moment?"
+    },
+    {
+      "role": "user",
+      "content": "both i guess. mostly protecting myself. but theres this other thing. like part of me thinks if i stay away long enough theyll just. accept that im like this. lower the bar so i cant disappoint them anymore. which is so messed up when i say it out loud"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a painful kind of settling — wanting them to lower the bar so you can’t disappoint them again. Does that feel more like relief, or more like giving up on being seen differently?"
+    },
+    {
+      "role": "user",
+      "content": "giving up. yeah. saying it like that makes my chest hurt a little. i dont actually want them to give up on me. i just dont know how to walk back in after this long without it being a whole thing"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like giving up in one part, while another part still doesn’t want them to give up on you. If you want, we can stay with just that chest-hurt feeling, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it. thats enough for tonight. didnt expect to feel that much typing at a screen. thanks i guess. ok. bye"
+    },
+    {
+      "role": "companion",
+      "content": "Okay — we can leave it there. That felt like a lot for tonight, and I’m glad you said so; bye for now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z08us69w9nfm5",
+    "conversation_id": "shame__24",
+    "timestamp": "2026-06-09T18:26:38.990Z",
+    "user_words_raw": "that ones kind of true",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "giving up",
+    "secondary_emotions": [
+      "hurt"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "thinking about walking back in after being away for a long time",
+    "appraisal_thought": "if i stay away long enough theyll just accept that im like this",
+    "body_cue": [
+      "my chest hurt a little"
+    ],
+    "behaviour_action": [
+      "pull away",
+      "hide"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "belonging",
+      "acceptance",
+      "dignity"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "They often pull away and hide when they fear being let down or seen as a disappointment.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk if this is gonna do anything but ok. hi i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hi — I’m here. What’s been on your mind, if anything?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "nothing really. just. idk. my sister had a thing this weekend and i didnt go. its fine its whatever"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "It sounds like this might be sitting in that vague, hard-to-name place. Was it more like fine on the surface, but a bit off underneath?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "not going to the sister's thing this weekend"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah. like everyone was there my mom my brother all the cousins and im the only one who flaked. again. my mom didnt even text me about it she just put up photos"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds a bit like hurt and being left out, maybe with some shame in the mix. Does it feel more sharp or more blank?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [],
+      "trigger": "not going to the sister's thing this weekend; seeing photos posted by mom"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "no not left out. more like. its my fault. im the one who doesnt show up. theyre not wrong to stop expecting me. like im the disappointment kid you know. the one who cant get it together"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds heavy and self-blaming, almost like being the one who “doesn’t show up.” What does that feeling make you want to do — pull away, defend yourself, or something else?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "disappointment",
+      "body_cue": [],
+      "trigger": "not going to sister's thing this weekend; seeing photos posted by mom"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "pull away obviously. thats what i always do. its easier to just not go than to show up and have everyone clock that im still a mess. 34 and still the kid who couldnt finish anything. my brothers a dad now. and i couldnt even drive 40 min for a bbq"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds really exposed and harsh, like pulling away keeps you from being seen as the “mess” or the “disappointment kid.” Does it feel more like wanting to hide, or wanting to disappear for a bit?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "not going to sister's thing this weekend and seeing family photos from mom"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "hide. definitely hide. if they cant see me they cant be let down again. honestly didnt think typing this to an app would do anything but. that ones kind of true. hiding so i dont have to watch their faces do the thing"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like hiding to avoid seeing their faces do the thing, and to not have to feel that let-down again. Is this feeling more about being seen as a disappointment, or about wanting to protect yourself from that moment?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "not going to sister's thing and seeing family photos from mom"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "both i guess. mostly protecting myself. but theres this other thing. like part of me thinks if i stay away long enough theyll just. accept that im like this. lower the bar so i cant disappoint them anymore. which is so messed up when i say it out loud"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds like a painful kind of settling — wanting them to lower the bar so you can’t disappoint them again. Does that feel more like relief, or more like giving up on being seen differently?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "not going to sister's thing and seeing family photos from mom"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "giving up. yeah. saying it like that makes my chest hurt a little. i dont actually want them to give up on me. i just dont know how to walk back in after this long without it being a whole thing"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That sounds like giving up in one part, while another part still doesn’t want them to give up on you. If you want, we can stay with just that chest-hurt feeling, or leave it here for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [
+        "my chest hurt a little"
+      ],
+      "trigger": "thinking about walking back in after being away for a long time"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "yeah lets leave it. thats enough for tonight. didnt expect to feel that much typing at a screen. thanks i guess. ok. bye"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Okay — we can leave it there. That felt like a lot for tonight, and I’m glad you said so; bye for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "giving up",
+      "body_cue": [
+        "my chest hurt a little"
+      ],
+      "trigger": "thinking about walking back in after being away for a long time"
+    }
+  ]
+}

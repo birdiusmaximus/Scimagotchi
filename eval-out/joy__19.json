@@ -1,0 +1,264 @@
+{
+  "cid": "joy__19",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-09T17:42:32.889Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "role": "companion",
+      "content": "Hi — good to see you. What’s on your mind today?"
+    },
+    {
+      "role": "user",
+      "content": "nothing really. idk why im even on here"
+    },
+    {
+      "role": "companion",
+      "content": "That feels pretty blank or unsure, maybe even a little disconnected. Do you want to keep it broad for now?"
+    },
+    {
+      "role": "user",
+      "content": "i mean. something kind of happened today but its dumb"
+    },
+    {
+      "role": "companion",
+      "content": "It doesn’t sound dumb if it stuck with you. What happened today?"
+    },
+    {
+      "role": "user",
+      "content": "my old art teacher emailed me out of nowhere. she put one of my drawings in like a little gallery thing at the school. she said i was the realest artist she ever taught or whatever"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a sudden, bright kind of moment — being noticed like that by someone from before. What was it like to read her words?"
+    },
+    {
+      "role": "user",
+      "content": "honestly i didnt know what to do with it. i kind of just stared at it. i havent drawn anything in like two years. i dont even think of myself as an artist anymore"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like it landed in a strange way — maybe pleased, and also paused or uncertain. Did it feel more like a warm spark, or more like a stop-and-stare kind of moment?"
+    },
+    {
+      "role": "user",
+      "content": "a warm spark i guess. but it kind of hurt too? like she saw something in me that i let go of. and a tiny part of me felt proud and i dont even feel like im allowed to feel that"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a warm spark with a hurt edge — proud, and also a little cut by what she still saw. Do you want to stay with that, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "i dont know. maybe ill stay a sec. its weird saying it out loud. proud feels like too big a word for me"
+    },
+    {
+      "role": "companion",
+      "content": "Maybe “proud” feels too big, and something smaller fits better. Is it more like pleased, touched, or quietly glad?"
+    },
+    {
+      "role": "user",
+      "content": "touched. yeah. that one. like someone remembered the version of me i miss"
+    },
+    {
+      "role": "companion",
+      "content": "Touched makes sense — like being remembered by someone who still sees that version of you. Did it feel more warm in the moment, or more like a ache for the version you miss?"
+    },
+    {
+      "role": "user",
+      "content": "both i think. its a lot. im gonna go but. thanks. i think i needed to say it somewhere"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — both warm and aching, and a lot to hold at once. I’m glad you said it here; we can leave it there for now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xgp0su5q08v12",
+    "conversation_id": "joy__19",
+    "timestamp": "2026-06-09T17:43:20.499Z",
+    "user_words_raw": "someone remembered the version of me i miss",
+    "emotion_status": "confirmed",
+    "emotion_family": "joy",
+    "emotion_shade": "touched",
+    "secondary_emotions": [
+      "hurt",
+      "sadness"
+    ],
+    "valence": "mixed",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "an old art teacher emailed unexpectedly about one of their drawings being shown at the school and praised them",
+    "appraisal_thought": "someone remembered the version of me i miss",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "recognition",
+      "belonging"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "An old teacher’s praise brought up feeling touched, proud, and hurt about a lost creative self.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hi — good to see you. What’s on your mind today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "nothing really. idk why im even on here"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That feels pretty blank or unsure, maybe even a little disconnected. Do you want to keep it broad for now?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "i mean. something kind of happened today but its dumb"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "It doesn’t sound dumb if it stuck with you. What happened today?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "something happened today"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "my old art teacher emailed me out of nowhere. she put one of my drawings in like a little gallery thing at the school. she said i was the realest artist she ever taught or whatever"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like a sudden, bright kind of moment — being noticed like that by someone from before. What was it like to read her words?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "pleased",
+      "body_cue": [],
+      "trigger": "old art teacher emailed about putting one of their drawings in a little gallery thing at the school"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "honestly i didnt know what to do with it. i kind of just stared at it. i havent drawn anything in like two years. i dont even think of myself as an artist anymore"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like it landed in a strange way — maybe pleased, and also paused or uncertain. Did it feel more like a warm spark, or more like a stop-and-stare kind of moment?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "pleased",
+      "body_cue": [],
+      "trigger": "old art teacher emailed unexpectedly and said one of their drawings was being put in a little gallery thing at the school"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "a warm spark i guess. but it kind of hurt too? like she saw something in me that i let go of. and a tiny part of me felt proud and i dont even feel like im allowed to feel that"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like a warm spark with a hurt edge — proud, and also a little cut by what she still saw. Do you want to stay with that, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "old art teacher emailed unexpectedly and said one of their drawings was being put in a little gallery thing at the school"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "i dont know. maybe ill stay a sec. its weird saying it out loud. proud feels like too big a word for me"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "Maybe “proud” feels too big, and something smaller fits better. Is it more like pleased, touched, or quietly glad?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "an old art teacher emailed unexpectedly to say one of their drawings was being shown at the school and called them the realest artist she ever taught"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "touched. yeah. that one. like someone remembered the version of me i miss"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "Touched makes sense — like being remembered by someone who still sees that version of you. Did it feel more warm in the moment, or more like a ache for the version you miss?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "touched",
+      "body_cue": [],
+      "trigger": "an old art teacher emailed unexpectedly about one of their drawings being shown at the school and praised them"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "both i think. its a lot. im gonna go but. thanks. i think i needed to say it somewhere"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "That makes sense — both warm and aching, and a lot to hold at once. I’m glad you said it here; we can leave it there for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "touched",
+      "body_cue": [],
+      "trigger": "an old art teacher emailed unexpectedly about one of their drawings being shown at the school and praised them"
+    }
+  ]
+}

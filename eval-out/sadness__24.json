@@ -1,0 +1,266 @@
+{
+  "cid": "sadness__24",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-09T18:20:34.985Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "honestly not sure what this is even supposed to do but ok. my mom hasnt spoken to me in like 3 weeks"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a kind of hurt or distance. Has it felt more like being left hanging, or more like you're just numb about it?"
+    },
+    {
+      "role": "user",
+      "content": "i mean. left hanging i guess? but its not even like a fight really. its more complicated. its since my dad passed in march and we just. we dont know how to be a family without him there i think"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like being left hanging, with grief tangled into it. What’s the felt part for you — heavy, hollow, tight, or more like wanting to pull away?"
+    },
+    {
+      "role": "user",
+      "content": "hollow mostly. like theres this hole where he used to be and my mom just went quiet and i dont know if shes mad at me or just cant. i was the one who found him you know. and weve never talked about that part"
+    },
+    {
+      "role": "companion",
+      "content": "That hollow place sounds very real, and not knowing whether she’s mad or just unable to speak leaves it hanging open. Does it make you want to pull away, or to reach for her and ask?"
+    },
+    {
+      "role": "user",
+      "content": "thats the thing i dont know. half of me wants to call her and half of me is scared shell pick up and theres just nothing to say. or worse shell blame me somehow. for not getting there faster. even tho the doctors said it wouldnt have mattered"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a mix of fear and hurt, with a lot hanging on that call. I’m wondering if the hardest part is the silence, or the fear she could turn it back on you?"
+    },
+    {
+      "role": "user",
+      "content": "i think its the silence. cause i can argue back against blame you know. but the silence i cant do anything with. its like ive lost both of them in a way. and everyones acting like 3 months is enough time and i should be fine and going to my brothers thing this weekend like nothings wrong"
+    },
+    {
+      "role": "companion",
+      "content": "That silence sounds like the sharpest part, and being treated like you should be fine makes it feel even more alone. Is it more like being unseen, or more like being left with something no one knows how to hold with you?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. that second one. nobody knows how to hold it with me. my friends try but they get this look. and my mom should be the one person who gets it cause she lost him too but shes locked herself away and i cant reach her. god this is more than i meant to say to a phone app"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like being left with something too heavy to carry alone, especially when the one person who should know it is shut away. We can leave it here if you want, or stay with that feeling of not being able to reach her—what feels truest?"
+    },
+    {
+      "role": "user",
+      "content": "maybe stay just a sec. i think i needed to say it out loud somewhere that wasnt gonna give me the look. i dont really know what im supposed to do about my mom tho. i cant make her talk"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — saying it somewhere without getting the look sounds like a relief in itself. We can just stay with the part you can’t make her talk; does that feel more like helplessness, or like you’ve been shut out?"
+    },
+    {
+      "role": "user",
+      "content": "helplessness probably. cause i dont think shes trying to shut me out. i think shes just drowning too and we cant both keep each other up. anyway. im gonna go i think. brothers thing tomorrow. thanks for not telling me to feel better"
+    },
+    {
+      "role": "companion",
+      "content": "Helplessness, then — like you can see she’s drowning too, and there’s only so much either of you can hold. I’ll leave it there; go gently into tomorrow."
+    },
+    {
+      "role": "user",
+      "content": "yeah. thanks. ok bye"
+    },
+    {
+      "role": "companion",
+      "content": "Okay. I’ll leave it here with you."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ytmbne0ixe6ou",
+    "conversation_id": "sadness__24",
+    "timestamp": "2026-06-09T18:21:30.242Z",
+    "user_words_raw": "nobody knows how to hold it with me",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "helplessness",
+    "secondary_emotions": [
+      "sadness"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "mother grieving after father’s death; being expected to attend brother’s event while still hurting; unable to reach mother",
+    "appraisal_thought": "nobody knows how to hold it with me",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "being seen",
+      "support",
+      "belonging",
+      "repair"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User is carrying grief and feels unable to reach a grieving parent; expects pressure around a family event.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "honestly not sure what this is even supposed to do but ok. my mom hasnt spoken to me in like 3 weeks"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a kind of hurt or distance. Has it felt more like being left hanging, or more like you're just numb about it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [],
+      "trigger": "mom hasn't spoken to them in about 3 weeks"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i mean. left hanging i guess? but its not even like a fight really. its more complicated. its since my dad passed in march and we just. we dont know how to be a family without him there i think"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like being left hanging, with grief tangled into it. What’s the felt part for you — heavy, hollow, tight, or more like wanting to pull away?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [],
+      "trigger": "mom hasn't spoken to them in about 3 weeks after dad passed in March"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "hollow mostly. like theres this hole where he used to be and my mom just went quiet and i dont know if shes mad at me or just cant. i was the one who found him you know. and weve never talked about that part"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That hollow place sounds very real, and not knowing whether she’s mad or just unable to speak leaves it hanging open. Does it make you want to pull away, or to reach for her and ask?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [
+        "hollow"
+      ],
+      "trigger": "mom going quiet after dad died in March; never talking about finding him"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "thats the thing i dont know. half of me wants to call her and half of me is scared shell pick up and theres just nothing to say. or worse shell blame me somehow. for not getting there faster. even tho the doctors said it wouldnt have mattered"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like a mix of fear and hurt, with a lot hanging on that call. I’m wondering if the hardest part is the silence, or the fear she could turn it back on you?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "thinking about calling mom after dad died and fearing being blamed"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i think its the silence. cause i can argue back against blame you know. but the silence i cant do anything with. its like ive lost both of them in a way. and everyones acting like 3 months is enough time and i should be fine and going to my brothers thing this weekend like nothings wrong"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That silence sounds like the sharpest part, and being treated like you should be fine makes it feel even more alone. Is it more like being unseen, or more like being left with something no one knows how to hold with you?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "silence / unseen",
+      "body_cue": [],
+      "trigger": "mom not speaking after dad died; people acting like they should be fine"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. that second one. nobody knows how to hold it with me. my friends try but they get this look. and my mom should be the one person who gets it cause she lost him too but shes locked herself away and i cant reach her. god this is more than i meant to say to a phone app"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like being left with something too heavy to carry alone, especially when the one person who should know it is shut away. We can leave it here if you want, or stay with that feeling of not being able to reach her—what feels truest?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "left alone",
+      "body_cue": [],
+      "trigger": "mom locked herself away after dad died; friends reacting with a look; people expecting them to be fine"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "maybe stay just a sec. i think i needed to say it out loud somewhere that wasnt gonna give me the look. i dont really know what im supposed to do about my mom tho. i cant make her talk"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That makes sense — saying it somewhere without getting the look sounds like a relief in itself. We can just stay with the part you can’t make her talk; does that feel more like helplessness, or like you’ve been shut out?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "left alone",
+      "body_cue": [],
+      "trigger": "mom locked herself away after dad died; friends reacting with a look; people expecting them to be fine"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "helplessness probably. cause i dont think shes trying to shut me out. i think shes just drowning too and we cant both keep each other up. anyway. im gonna go i think. brothers thing tomorrow. thanks for not telling me to feel better"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "Helplessness, then — like you can see she’s drowning too, and there’s only so much either of you can hold. I’ll leave it there; go gently into tomorrow.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "helplessness",
+      "body_cue": [],
+      "trigger": "mother grieving after father’s death; pressure to attend brother’s event while still hurting"
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "yeah. thanks. ok bye"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Okay. I’ll leave it here with you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "helplessness",
+      "body_cue": [],
+      "trigger": "mother grieving after father’s death; being expected to attend brother’s event while still hurting; unable to reach mother"
+    }
+  ]
+}

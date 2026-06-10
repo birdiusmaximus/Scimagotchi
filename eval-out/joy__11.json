@@ -1,0 +1,209 @@
+{
+  "cid": "joy__11",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-09T17:42:18.699Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. not really sure what im doing here tbh"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that's alright. We can just start with whatever feels most natural to say."
+    },
+    {
+      "role": "user",
+      "content": "i guess something happened at work. its fine. probably not even worth talking about"
+    },
+    {
+      "role": "companion",
+      "content": "Something at work is still on your mind, even if it feels “not worth talking about.” What was it, in the smallest version?"
+    },
+    {
+      "role": "user",
+      "content": "no its not a bad thing actually. thats the weird part. i got picked to lead this project. like the big one. my manager said my name in front of everyone"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a lot of attention landing on you at once. Does it feel more like pressure, surprise, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "honestly. and this feels stupid to say. but im kind of proud? like i worked really hard and someone noticed. i havent let myself feel that in a long time"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound stupid at all — it sounds like pride, and maybe a little relief too. What part of it feels hardest to let yourself have?"
+    },
+    {
+      "role": "user",
+      "content": "i think the hardest part is just. believing i deserve it? theres this voice that says it was luck or theyll figure out im not that good. easier to just brush it off than sit with the good part"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like pride getting pulled against doubt — like the good part is hard to hold onto. Does that voice feel more sharp, or more quiet and nagging?"
+    },
+    {
+      "role": "user",
+      "content": "quiet and nagging mostly. always there in the background. anyway this is more than i meant to say. i think im gonna let myself just be a little proud today. thanks for listening"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a small, real kind of letting-in. We can leave it there, or stay with it a little longer if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. thats enough for today. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That’s enough for today, and I’m glad you let it be here. Take care."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xge3vajsu877n",
+    "conversation_id": "joy__11",
+    "timestamp": "2026-06-09T17:42:55.879Z",
+    "user_words_raw": "that's enough for today",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "proud",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "being picked to lead a big project in front of everyone",
+    "appraisal_thought": "someone noticed, but I’m not sure I deserve it",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "User sometimes prefers to end after a brief emotional check-in.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. not really sure what im doing here tbh"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that's alright. We can just start with whatever feels most natural to say.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i guess something happened at work. its fine. probably not even worth talking about"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Something at work is still on your mind, even if it feels “not worth talking about.” What was it, in the smallest version?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "putting-it-aside",
+      "body_cue": [],
+      "trigger": "something happened at work"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "no its not a bad thing actually. thats the weird part. i got picked to lead this project. like the big one. my manager said my name in front of everyone"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like a lot of attention landing on you at once. Does it feel more like pressure, surprise, or something else?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressure",
+      "body_cue": [],
+      "trigger": "got picked to lead a big project in front of everyone"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "honestly. and this feels stupid to say. but im kind of proud? like i worked really hard and someone noticed. i havent let myself feel that in a long time"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That doesn’t sound stupid at all — it sounds like pride, and maybe a little relief too. What part of it feels hardest to let yourself have?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "being picked to lead a big project in front of everyone"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i think the hardest part is just. believing i deserve it? theres this voice that says it was luck or theyll figure out im not that good. easier to just brush it off than sit with the good part"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like pride getting pulled against doubt — like the good part is hard to hold onto. Does that voice feel more sharp, or more quiet and nagging?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "being picked to lead a big project in front of everyone"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "quiet and nagging mostly. always there in the background. anyway this is more than i meant to say. i think im gonna let myself just be a little proud today. thanks for listening"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels like a small, real kind of letting-in. We can leave it there, or stay with it a little longer if you want.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "being picked to lead a big project in front of everyone"
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "yeah lets leave it there. thats enough for today. thanks"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That’s enough for today, and I’m glad you let it be here. Take care.",
+      "stage": "named",
+      "unlocked": false,
+      "family": null,
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "being picked to lead a big project in front of everyone"
+    }
+  ]
+}

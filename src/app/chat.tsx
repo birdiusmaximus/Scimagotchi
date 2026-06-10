@@ -4,6 +4,7 @@ import { KeyboardAvoidingView, Platform, ScrollView, StyleSheet, View } from 're
 import Animated, { Easing, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import { ChatChips } from '@/components/ChatChips';
 import { ChatInput } from '@/components/ChatInput';
 import { CompanionOrb } from '@/components/CompanionOrb';
 import { EmotionUnlockCard } from '@/components/EmotionUnlockCard';
@@ -53,6 +54,23 @@ export default function ChatScreen() {
     progressStage: family ? (progress[family]?.current_stage ?? null) : null,
   });
   const tintFamilies = visualTintFamilies(draftEvent);
+
+  // Continuation chips (engine brief §7.3, §16.2): offered sparingly — only when
+  // the companion reflected WITHOUT asking a question, and nothing else is open.
+  const [chipsDismissedFor, setChipsDismissedFor] = useState<string | null>(null);
+  const last = messages[messages.length - 1];
+  const showChips =
+    !!last &&
+    last.role === 'companion' &&
+    !last.content.includes('?') &&
+    messages.some((m) => m.role === 'user') && // only after a real exchange, not the bare opener
+    !sending &&
+    !unlock &&
+    !memoryDraft &&
+    !safetyVisible &&
+    !safetyCheck &&
+    chipsDismissedFor !== last.id;
+  const canSave = !!draftEvent && !!(draftEvent.memory_note || draftEvent.user_words_raw);
 
   const scrollRef = useRef<ScrollView>(null);
 
@@ -142,6 +160,16 @@ export default function ChatScreen() {
                   onSave={() => useStore.getState().confirmMemoryDraft()}
                   onEdit={(t) => useStore.getState().editMemoryDraft(t)}
                   onReject={() => useStore.getState().rejectMemoryDraft()}
+                />
+              ) : null}
+
+              {showChips ? (
+                <ChatChips
+                  canSave={canSave}
+                  onKeepGoing={() => last && setChipsDismissedFor(last.id)}
+                  onSave={() => useStore.getState().saveCurrentToMemory()}
+                  onNotQuite={() => useStore.getState().send('hmm, that’s not quite it')}
+                  onDone={() => useStore.getState().send('I think I’ll leave it here for now')}
                 />
               ) : null}
 

@@ -1,14 +1,17 @@
 import { Feather } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import { useMemo, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { ChatInput } from '@/components/ChatInput';
 import { CompanionOrb } from '@/components/CompanionOrb';
 import { GradientBackground } from '@/components/GradientBackground';
+import { ReturningThread } from '@/components/ReturningThread';
 import { SuggestionChip } from '@/components/SuggestionChip';
 import { TopBar } from '@/components/TopBar';
 import { Txt } from '@/components/Txt';
+import type { CompanionVisualState } from '@/services/ai/companionVisualState';
 import { useStore } from '@/state/store';
 import { palette, spacing } from '@/theme/tokens';
 
@@ -45,10 +48,38 @@ const CHIPS: { icon: keyof typeof Feather.glyphMap; label: string; opener: strin
   },
 ];
 
+/** A tentative, comparison-not-assertion callback to a kept memory (§12.5). */
+function returningOpener(summary: string): string {
+  return `When we last talked, you kept this: “${summary.replace(/[.\s]+$/, '')}.” Want to stay with that thread, or is today something else?`;
+}
+
 /** Now — the companion home. Matches the v0.1 visual reference. */
 export default function NowScreen() {
   const router = useRouter();
   const userName = useStore((s) => s.userName);
+  const progress = useStore((s) => s.progress);
+  const memoryCards = useStore((s) => s.memoryCards);
+  const [threadDismissed, setThreadDismissed] = useState(false);
+
+  // The orb quietly reflects how far the companion has grown — a learned texture,
+  // not a mood it imposes on you (engine brief §13, §18). No tint on the home orb.
+  const homeVisual: CompanionVisualState = useMemo(() => {
+    const rows = Object.values(progress).filter(Boolean);
+    if (rows.some((p) => p!.current_stage === 'deepened')) return 'deepened';
+    if (rows.some((p) => p!.current_stage === 'returning')) return 'returning_shape';
+    return 'idle_calm';
+  }, [progress]);
+
+  // The most recent memory the user chose to keep — offered as a gentle thread.
+  const lastMemory = useMemo(() => {
+    const saved = memoryCards.filter(
+      (c) => (c.confirmation_status === 'user_confirmed' || c.confirmation_status === 'user_edited') && c.muted !== 1,
+    );
+    saved.sort((a, b) => b.created_at.localeCompare(a.created_at));
+    return saved[0] ?? null;
+  }, [memoryCards]);
+
+  const go = (cid: string) => router.push({ pathname: '/chat', params: { cid } });
 
   return (
     <View style={styles.root}>
@@ -65,22 +96,25 @@ export default function NowScreen() {
           </Txt>
         </View>
 
+        {lastMemory && !threadDismissed ? (
+          <ReturningThread
+            summary={lastMemory.summary}
+            onPickUp={() => openChat('greet', returningOpener(lastMemory.summary), go)}
+            onDismiss={() => setThreadDismissed(true)}
+          />
+        ) : null}
+
         <View style={styles.orbWrap}>
-          <CompanionOrb size={160} interactive />
+          <CompanionOrb size={160} interactive visual={homeVisual} />
         </View>
 
         <View style={styles.chips}>
           {CHIPS.map((c) => (
-            <SuggestionChip
-              key={c.label}
-              icon={c.icon}
-              label={c.label}
-              onPress={() => openChat('greet', c.opener, (cid) => router.push({ pathname: '/chat', params: { cid } }))}
-            />
+            <SuggestionChip key={c.label} icon={c.icon} label={c.label} onPress={() => openChat('greet', c.opener, go)} />
           ))}
         </View>
 
-        <ChatInput onSubmit={(t) => openChat('say', t, (cid) => router.push({ pathname: '/chat', params: { cid } }))} />
+        <ChatInput onSubmit={(t) => openChat('say', t, go)} />
       </SafeAreaView>
     </View>
   );

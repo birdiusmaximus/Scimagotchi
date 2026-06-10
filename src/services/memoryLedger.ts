@@ -14,7 +14,7 @@
 
 import { classifySafety } from '@/services/ai/safetyClassifier';
 import type { CompanionTurn } from '@/services/ai/companionEngine';
-import type { EmotionFamilyId, MemoryCard } from '@/types/models';
+import type { EmotionEvent, EmotionFamilyId, MemoryCard } from '@/types/models';
 import { nowIso } from '@/utils/date';
 import { genId } from '@/utils/ids';
 
@@ -100,6 +100,25 @@ export function draftFromTurn(turn: CompanionTurn, userText: string, conversatio
   }
 
   return null;
+}
+
+/**
+ * Explicit "Save this" (a UI chip) — draft from the current working event on
+ * demand, independent of whether this turn unlocked. Still honours the
+ * do-not-store / safety / sensitivity blocks; returns null when there's nothing
+ * safe to keep yet.
+ */
+export function manualDraft(ev: EmotionEvent | null, conversationId: string): MemoryCard | null {
+  if (!ev || ev.do_not_store === 1 || ev.safety_flag !== 'none') return null;
+  const summary = ev.memory_note ?? (ev.user_words_raw ? `“${ev.user_words_raw}” felt worth keeping.` : null);
+  if (!summary || memoryBlocked(summary)) return null;
+  return baseCard({
+    source_conversation_id: conversationId,
+    type: ev.mixed_confirmed === 1 ? 'mixed_pattern' : 'emotional_pattern',
+    summary,
+    user_words: ev.user_words_raw ? [ev.user_words_raw] : [],
+    emotion_family: ev.emotion_family,
+  });
 }
 
 /**

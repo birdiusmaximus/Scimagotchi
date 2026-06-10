@@ -34,7 +34,7 @@ import {
   settingsRepo,
 } from '@/services/db/repos';
 import { advanceProgress, migrateStage } from '@/services/ai/progressionEngine';
-import { draftFromRejection, draftFromTurn, relevantMemory } from '@/services/memoryLedger';
+import { draftFromRejection, draftFromTurn, manualDraft, relevantMemory } from '@/services/memoryLedger';
 import { buildWeeklySummary } from '@/services/weeklySummary';
 import { UK_SUPPORT_ROUTES } from '@/data/safetyResources';
 import type {
@@ -99,6 +99,7 @@ interface AppState {
   confirmMemoryDraft: () => Promise<void>;
   editMemoryDraft: (summary: string) => Promise<void>;
   rejectMemoryDraft: () => void;
+  saveCurrentToMemory: () => void;
   deleteMemoryCard: (id: string) => Promise<void>;
   setUserName: (name: string) => Promise<void>;
   setReminders: (on: boolean) => Promise<void>;
@@ -438,6 +439,15 @@ export const useStore = create<AppState>((set, get) => ({
   },
 
   rejectMemoryDraft: () => set({ memoryDraft: null }),
+
+  /** "Save this" chip — surface an editable draft from the current understanding. */
+  saveCurrentToMemory: () => {
+    if (get().memoryDraft) return; // a draft is already on offer
+    const convId = get().conversationId;
+    if (!convId) return;
+    const draft = manualDraft(get().draftEvent, convId);
+    if (draft) set({ memoryDraft: draft });
+  },
 
   deleteMemoryCard: async (id) => {
     set((s) => ({ memoryCards: s.memoryCards.filter((c) => c.id !== id) }));

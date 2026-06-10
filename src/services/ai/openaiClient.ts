@@ -9,6 +9,7 @@
  */
 
 import { detectFamily, emptyEvent, type CompanionInput, type CompanionTurn } from '@/services/ai/companionEngine';
+import { mixedConfirmed, sanitizeStrands } from '@/services/ai/mixedEmotion';
 import { routeMode } from '@/services/ai/modeRouter';
 import { buildSystemPrompt, COMPANION_OUTPUT_SCHEMA } from '@/services/ai/prompts';
 import { isDuplicateReply, varietyDirective, varietySignals, type ResponseShape } from '@/services/ai/responsePolicy';
@@ -38,6 +39,7 @@ type Parsed = {
   user_confirmed_label: boolean;
   rejected_shades: string[];
   mixed_relation: MixedRelation | null;
+  strands: unknown;
   asked_question: boolean;
   response_shape: ResponseShape;
 };
@@ -138,6 +140,11 @@ export async function openaiGenerateTurn(
   const rejected = new Set([...(ev.user_rejected_shades ?? []), ...(p.rejected_shades ?? [])].map((s) => s.trim()).filter(Boolean));
   ev.user_rejected_shades = [...rejected];
   if (p.user_confirmed_label) ev.user_confirmation = 'yes';
+
+  // Mixed-emotion engine (brief §9): strands may be proposed freely; the mixed
+  // structure is CONFIRMED (savable) only per the §9.3 rules.
+  ev.strands = sanitizeStrands(p.strands);
+  ev.mixed_confirmed = mixedConfirmed(ev, prev ?? null) ? 1 : 0;
 
   // ── Deterministic staging with the First-Shape confirmation gate ───────────
   const prevStage: UnlockStage = prev?.unlock_stage ?? 'noticed';

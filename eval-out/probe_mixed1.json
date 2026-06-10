@@ -1,0 +1,147 @@
+{
+  "cid": "probe_mixed1",
+  "emotion": null,
+  "persona": null,
+  "created": "2026-06-10T10:55:56.203Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "im relieved the surgery is over but also really sad at the same time"
+    },
+    {
+      "role": "companion",
+      "content": "Relief and sadness are both here at once. Does one of them sit more in front, or are they just together?"
+    },
+    {
+      "role": "user",
+      "content": "theyre just together honestly. both at once"
+    },
+    {
+      "role": "companion",
+      "content": "They’re sitting together, both at once. We can leave it there, or if you want, I can stay with the shape of that mix a little longer."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq7ydodvt1gwxs7u",
+    "conversation_id": "probe_mixed1",
+    "timestamp": "2026-06-10T10:56:23.757Z",
+    "user_words_raw": "both at once",
+    "emotion_status": "candidate",
+    "emotion_family": "sadness",
+    "emotion_shade": "sad",
+    "secondary_emotions": [
+      "calm"
+    ],
+    "valence": "mixed",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "the surgery being over",
+    "appraisal_thought": "it is over, and something about that is sad",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "recognition",
+      "space"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": "simultaneous",
+    "strands": [
+      {
+        "family": "calm",
+        "shade": "relief",
+        "salience": "equal",
+        "source": "companion_hypothesis"
+      },
+      {
+        "family": "sadness",
+        "shade": "sad",
+        "salience": "equal",
+        "source": "user_stated"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "shaped",
+    "memory_note": "Mixed feelings after surgery ended; relief and sadness present together.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "im relieved the surgery is over but also really sad at the same time"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Relief and sadness are both here at once. Does one of them sit more in front, or are they just together?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "sad",
+      "body_cue": [],
+      "trigger": "the surgery being over",
+      "label_source": "user_stated",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "relieved",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": "sad",
+          "salience": "foreground",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "theyre just together honestly. both at once"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "They’re sitting together, both at once. We can leave it there, or if you want, I can stay with the shape of that mix a little longer.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "sad",
+      "body_cue": [],
+      "trigger": "the surgery being over",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "relief",
+          "salience": "equal",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": "sad",
+          "salience": "equal",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    }
+  ]
+}

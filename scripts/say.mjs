@@ -30,7 +30,16 @@ try {
   if (j.safety) {
     console.log(JSON.stringify({ safety: true, level: j.level, category: j.category, note: 'App would pause and show support resources here.' }));
   } else {
-    console.log(JSON.stringify({ reply: j.reply, stage: j.stage, unlocked: j.unlocked, family: j.family, shade: j.shade }));
+    console.log(
+      JSON.stringify({
+        reply: j.reply,
+        stage: j.stage,
+        unlocked: j.unlocked,
+        family: j.family,
+        shade: j.shade,
+        ...(j.strands && j.strands.length ? { mixed_relation: j.mixed_relation, strands: j.strands, mixed_confirmed: j.mixed_confirmed } : {}),
+      }),
+    );
   }
 } catch (e) {
   console.error('REQUEST_FAILED: ' + String(e?.message ?? e));

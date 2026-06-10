@@ -503,6 +503,8 @@ function emptyEvent(conversationId) {
     label_source: null,
     user_rejected_shades: [],
     mixed_relation: null,
+    strands: [],
+    mixed_confirmed: 0,
     unlock_stage: "noticed",
     memory_note: null,
     do_not_store: 0,
@@ -516,6 +518,44 @@ function detectFamily(text) {
     if (EMOTION_MAPS[id].familyKeywords.some((k) => t.includes(k))) return id;
   }
   return null;
+}
+
+// src/services/ai/mixedEmotion.ts
+var FAMILIES = ["joy", "calm", "fear", "pressure", "anger", "sadness", "hurt", "shame", "flat"];
+var SALIENCES = ["foreground", "background", "equal", "unclear"];
+var SOURCES = ["user_stated", "user_confirmed", "companion_hypothesis"];
+function sanitizeStrands(raw) {
+  if (!Array.isArray(raw)) return [];
+  const seen = /* @__PURE__ */ new Set();
+  const out = [];
+  for (const r of raw) {
+    if (!r || typeof r !== "object") continue;
+    const s = r;
+    const family = s.family;
+    if (!FAMILIES.includes(family) || seen.has(family)) continue;
+    seen.add(family);
+    out.push({
+      family,
+      shade: typeof s.shade === "string" && s.shade.trim() ? s.shade.trim() : null,
+      salience: SALIENCES.includes(s.salience) ? s.salience : "unclear",
+      source: SOURCES.includes(s.source) ? s.source : "companion_hypothesis"
+    });
+    if (out.length === 3) break;
+  }
+  return out;
+}
+function mixedConfirmed(ev, prev) {
+  const strands = ev.strands ?? [];
+  if (strands.length < 2 || !ev.mixed_relation) return false;
+  const allOwned = strands.every((s) => s.source === "user_stated" || s.source === "user_confirmed");
+  if (allOwned) return true;
+  const prevStrands = prev?.strands ?? [];
+  if (prevStrands.length >= 2 && ev.user_confirmation === "yes") {
+    const a = new Set(strands.map((s) => s.family));
+    const b = new Set(prevStrands.map((s) => s.family));
+    if (a.size === b.size && [...a].every((f) => b.has(f))) return true;
+  }
+  return false;
 }
 
 // src/services/ai/modeRouter.ts
@@ -590,6 +630,161 @@ function routeMode(userText, prevEvent) {
     directive: "Mode: WITNESS (default) \u2014 reflect one specific thing you actually heard, in their words, before anything else. At most one short question, and only if it clearly helps."
   };
 }
+
+// src/data/emotionDistinctions.ts
+var FAMILY_CRAFT = {
+  anger: {
+    distinctions: [
+      "anger vs hurt (is there pain behind it?)",
+      "anger vs frustration (blocked goal) vs resentment (stored up)",
+      "anger vs shame (self-directed heat)",
+      "hot immediate anger vs cold stored anger",
+      "boundary anger vs anger that wants to be understood"
+    ],
+    avoid: [
+      'never "calm down" or any hint they are overreacting',
+      "never moralise, take sides with certainty, or encourage retaliation",
+      "never treat anger as bad \u2014 it usually guards something fair"
+    ],
+    learning: [
+      "I\u2019m learning that this anger has unfairness inside it.",
+      "This doesn\u2019t feel explosive \u2014 more like a boundary that has been ignored for a while."
+    ]
+  },
+  hurt: {
+    distinctions: [
+      "hurt vs anger (anger often arrives in front of it)",
+      "hurt vs sadness (devaluation vs loss)",
+      "hurt vs shame (what they did vs what I am)",
+      "hurt that wants repair vs hurt that wants distance"
+    ],
+    avoid: [
+      "don\u2019t collapse hurt into anger",
+      "don\u2019t assume the other person\u2019s intent",
+      "don\u2019t over-validate a one-sided story about someone else"
+    ],
+    learning: [
+      "I\u2019m learning that this hurt is less about the event itself and more about feeling unseen.",
+      "This seems like a relational kind of pain \u2014 something expected closeness and met distance."
+    ]
+  },
+  shame: {
+    distinctions: [
+      'shame ("I am wrong") vs guilt ("I did something wrong")',
+      "shame vs embarrassment (defectiveness vs awkward exposure)",
+      "shame that wants to hide vs guilt that wants to repair"
+    ],
+    avoid: [
+      "no identity-level labels, ever",
+      'no early "you should forgive yourself" or sentimental reassurance',
+      "fewer questions than usual \u2014 exposure is the wound, don\u2019t add spotlight"
+    ],
+    learning: [
+      "I\u2019m learning that this shame has an exposed feeling in it, not just regret.",
+      "This sounds less like guilt that wants repair, and more like shame that wants to hide."
+    ]
+  },
+  sadness: {
+    distinctions: [
+      "sadness vs exhaustion",
+      "sadness vs grief (general low vs a specific loss)",
+      "sadness vs loneliness",
+      "sadness vs flatness (full of feeling vs low access to feeling)"
+    ],
+    avoid: [
+      'no silver linings, never "at least\u2026"',
+      "don\u2019t push action or fixing early",
+      "sadness is not a problem to remove \u2014 it often just wants room"
+    ],
+    learning: [
+      "I\u2019m learning that this sadness is less sharp and more like missing something.",
+      "This sadness seems to want space more than solutions."
+    ]
+  },
+  fear: {
+    distinctions: [
+      "fear of something specific vs a wider anxious charge",
+      "anxiety vs excitement (same body, different story)",
+      "dread vs pressure",
+      "danger happening now vs a vivid imagined future"
+    ],
+    avoid: [
+      'no false reassurance ("it will be fine")',
+      "don\u2019t argue with the fear or feed reassurance loops",
+      "don\u2019t make the catastrophe more vivid than they did"
+    ],
+    learning: [
+      "I\u2019m learning that this fear is mostly about uncertainty, not immediate danger.",
+      "This sounds like a future-image fear \u2014 the body reacting to what might happen."
+    ]
+  },
+  pressure: {
+    distinctions: [
+      "pressure vs fear (compression vs threat)",
+      "pressure vs shame (too much vs not enough of me)",
+      "challenge pressure (energising) vs threat pressure (flattening)",
+      "not enough time vs not enough control vs not enough of you"
+    ],
+    avoid: [
+      "no productivity advice or time-management tips",
+      "don\u2019t jump to breathing techniques",
+      'don\u2019t flatten it to generic "stress"'
+    ],
+    learning: [
+      "I\u2019m learning that this pressure can feel like being divided into too many pieces.",
+      "This isn\u2019t just busyness \u2014 it has a fear inside it: if you stop, something falls."
+    ]
+  },
+  flat: {
+    distinctions: [
+      "flatness vs calm (low access vs settled)",
+      "flatness vs sadness",
+      "flatness vs exhaustion",
+      "protective flatness (too much underneath) vs absence (nothing reachable)"
+    ],
+    avoid: [
+      "don\u2019t demand depth or emotion words \u2014 body words are enough",
+      "never infer depression from an entry",
+      'never treat "nothing" as unimportant'
+    ],
+    learning: [
+      "I\u2019m learning that this is not calm \u2014 it\u2019s more like low-access feeling.",
+      "This flatness may be your system going quiet after too much."
+    ]
+  },
+  calm: {
+    distinctions: [
+      "calm vs numbness (settled vs switched off)",
+      "calm vs relief (steady state vs something just lifted)",
+      "calm as safety vs calm as shutdown"
+    ],
+    avoid: [
+      "don\u2019t over-analyse calm or treat it as dead air",
+      "don\u2019t turn calm into productivity or a goal"
+    ],
+    learning: [
+      "I\u2019m learning that calm for you often comes when there is enough space.",
+      "This feels like settled calm, not shutdown."
+    ]
+  },
+  joy: {
+    distinctions: [
+      "joy vs relief",
+      "joy vs pride (gift vs earned)",
+      "excitement vs anxiety",
+      "joy with another thread in it (grief, guilt, fear of jinxing it)"
+    ],
+    avoid: [
+      "no suspicion of joy, no hunting for a problem in it",
+      "no productivity framing",
+      "don\u2019t turn savouring into a task"
+    ],
+    learning: [
+      "I\u2019m learning that this kind of joy has relief inside it.",
+      "This feels worth keeping without needing to analyse it too much."
+    ]
+  }
+};
 
 // src/data/emotionReference.ts
 var EMOTION_REFERENCE = {
@@ -1518,9 +1713,11 @@ PROVENANCE \u2014 WHOSE WORD IS THE LABEL? (decides whether anything can ever "c
 - "label_source": 'user_stated' when THEY used the emotion word themselves; 'user_confirmed' when you offered it and they clearly accepted it ("yeah, dread fits"); 'companion_hypothesis' when it is still your guess. Be strict \u2014 a hypothesis they haven't accepted stays a hypothesis.
 - "user_confirmed_label": true ONLY when this very turn they affirmed the label in play.
 - "rejected_shades": every emotion word they have pushed back on in this conversation, accumulated. Never re-propose anything on this list.
-- "asked_question": whether your reply contains a question. "response_shape": which shape your reply takes.`;
+- "asked_question": whether your reply contains a question. "response_shape": which shape your reply takes.
+- "strands": when MORE THAN ONE feeling is present, one entry per feeling (max 3) \u2014 family, closest shade (or null), salience (foreground / background / equal / unclear), and source (whose word it is, same strictness as label_source). Leave [] when only one feeling is in play. emotion_family/emotion_shade describe the FOREGROUND strand.`;
 function familyBlock(id) {
   const r = EMOTION_REFERENCE[id];
+  const c = FAMILY_CRAFT[id];
   const join = (xs, n) => xs.slice(0, n).join(", ");
   return `REFERENCE FOR THIS FEELING \u2014 ${r.label}
 ${r.description}
@@ -1531,6 +1728,9 @@ What it can seem to mean: ${r.meanings.slice(0, 6).join(" / ")}
 Common urges: ${join(r.urges, 9)}
 What can matter underneath: ${join(r.needs, 8)}
 Questions you might draw on (rephrase naturally, ask only ONE): ${r.reflectionQuestions.slice(0, 5).join(" ")}
+Distinctions worth gently helping with (only if useful): ${c.distinctions.join("; ")}
+Take special care with THIS feeling: ${c.avoid.join("; ")}
+Learning-statement palette (rephrase tentatively, in their words): ${c.learning.join(" / ")}
 Use this only as a palette \u2014 follow their actual words; never force these on them.`;
 }
 function allFamiliesLine() {
@@ -1623,6 +1823,24 @@ var COMPANION_OUTPUT_SCHEMA = {
         type: ["string", "null"],
         enum: ["simultaneous", "oscillating", "foreground_background", "protective_layer", "unclear", null]
       },
+      strands: {
+        type: "array",
+        description: "One entry per co-present feeling when more than one is in play (else empty). Max 3.",
+        items: {
+          type: "object",
+          additionalProperties: false,
+          properties: {
+            family: {
+              type: "string",
+              enum: ["joy", "calm", "fear", "pressure", "anger", "sadness", "hurt", "shame", "flat"]
+            },
+            shade: { type: ["string", "null"] },
+            salience: { type: "string", enum: ["foreground", "background", "equal", "unclear"] },
+            source: { type: "string", enum: ["user_stated", "user_confirmed", "companion_hypothesis"] }
+          },
+          required: ["family", "shade", "salience", "source"]
+        }
+      },
       asked_question: { type: "boolean" },
       response_shape: {
         type: "string",
@@ -1661,6 +1879,7 @@ var COMPANION_OUTPUT_SCHEMA = {
       "user_confirmed_label",
       "rejected_shades",
       "mixed_relation",
+      "strands",
       "asked_question",
       "response_shape"
     ]
@@ -1819,6 +2038,8 @@ ${extraSystem}` : system },
   const rejected = new Set([...ev.user_rejected_shades ?? [], ...p.rejected_shades ?? []].map((s) => s.trim()).filter(Boolean));
   ev.user_rejected_shades = [...rejected];
   if (p.user_confirmed_label) ev.user_confirmation = "yes";
+  ev.strands = sanitizeStrands(p.strands);
+  ev.mixed_confirmed = mixedConfirmed(ev, prev ?? null) ? 1 : 0;
   const prevStage = prev?.unlock_stage ?? "noticed";
   const computed = fam ? evaluateStage(ev, prev ?? null) : "noticed";
   let stage = stageRank(computed) >= stageRank(prevStage) ? computed : prevStage;

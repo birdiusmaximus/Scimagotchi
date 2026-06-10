@@ -1,0 +1,107 @@
+{
+  "cid": "probe_mixed2",
+  "emotion": null,
+  "persona": null,
+  "created": "2026-06-10T10:56:23.820Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "im so angry at my brother but honestly i think im just hurt underneath it"
+    },
+    {
+      "role": "companion",
+      "content": "I’m holding both — the anger at your brother and the hurt underneath it. Does the hurt feel more in the foreground, or is the anger still doing most of the work?"
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq7ye8tcp48y83m0",
+    "conversation_id": "probe_mixed2",
+    "timestamp": "2026-06-10T10:56:25.632Z",
+    "user_words_raw": "hurt underneath it",
+    "emotion_status": "candidate",
+    "emotion_family": "anger",
+    "emotion_shade": "angry",
+    "secondary_emotions": [
+      "hurt"
+    ],
+    "valence": "mixed",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "brother",
+    "appraisal_thought": "hurt underneath it",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "respect",
+      "recognition",
+      "repair"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "anger",
+        "shade": "angry",
+        "salience": "foreground",
+        "source": "user_stated"
+      },
+      {
+        "family": "hurt",
+        "shade": null,
+        "salience": "background",
+        "source": "user_stated"
+      }
+    ],
+    "mixed_confirmed": 1,
+    "unlock_stage": "shaped",
+    "memory_note": "Feeling anger toward a brother, with hurt underneath.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "im so angry at my brother but honestly i think im just hurt underneath it"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "I’m holding both — the anger at your brother and the hurt underneath it. Does the hurt feel more in the foreground, or is the anger still doing most of the work?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "angry",
+      "body_cue": [],
+      "trigger": "brother",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "angry",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    }
+  ]
+}

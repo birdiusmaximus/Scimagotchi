@@ -63,6 +63,8 @@ export function emptyEvent(conversationId: string): EmotionEvent {
     label_source: null,
     user_rejected_shades: [],
     mixed_relation: null,
+    strands: [],
+    mixed_confirmed: 0,
     unlock_stage: 'noticed',
     memory_note: null,
     do_not_store: 0,
@@ -101,6 +103,7 @@ function clone(ev: EmotionEvent): EmotionEvent {
     need_value: [...ev.need_value],
     evidence_basis: [...ev.evidence_basis],
     user_rejected_shades: [...(ev.user_rejected_shades ?? [])],
+    strands: (ev.strands ?? []).map((s) => ({ ...s })),
   };
 }
 

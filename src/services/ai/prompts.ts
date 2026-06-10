@@ -9,6 +9,7 @@
  * per-emotion reference and the user's own words.
  */
 
+import { FAMILY_CRAFT } from '@/data/emotionDistinctions';
 import { EMOTION_REFERENCE } from '@/data/emotionReference';
 import type { EmotionEvent, EmotionFamilyId } from '@/types/models';
 
@@ -104,10 +105,12 @@ PROVENANCE — WHOSE WORD IS THE LABEL? (decides whether anything can ever "coun
 - "label_source": 'user_stated' when THEY used the emotion word themselves; 'user_confirmed' when you offered it and they clearly accepted it ("yeah, dread fits"); 'companion_hypothesis' when it is still your guess. Be strict — a hypothesis they haven't accepted stays a hypothesis.
 - "user_confirmed_label": true ONLY when this very turn they affirmed the label in play.
 - "rejected_shades": every emotion word they have pushed back on in this conversation, accumulated. Never re-propose anything on this list.
-- "asked_question": whether your reply contains a question. "response_shape": which shape your reply takes.`;
+- "asked_question": whether your reply contains a question. "response_shape": which shape your reply takes.
+- "strands": when MORE THAN ONE feeling is present, one entry per feeling (max 3) — family, closest shade (or null), salience (foreground / background / equal / unclear), and source (whose word it is, same strictness as label_source). Leave [] when only one feeling is in play. emotion_family/emotion_shade describe the FOREGROUND strand.`;
 
 function familyBlock(id: EmotionFamilyId): string {
   const r = EMOTION_REFERENCE[id];
+  const c = FAMILY_CRAFT[id];
   const join = (xs: string[], n: number) => xs.slice(0, n).join(', ');
   return `REFERENCE FOR THIS FEELING — ${r.label}
 ${r.description}
@@ -118,6 +121,9 @@ What it can seem to mean: ${r.meanings.slice(0, 6).join(' / ')}
 Common urges: ${join(r.urges, 9)}
 What can matter underneath: ${join(r.needs, 8)}
 Questions you might draw on (rephrase naturally, ask only ONE): ${r.reflectionQuestions.slice(0, 5).join(' ')}
+Distinctions worth gently helping with (only if useful): ${c.distinctions.join('; ')}
+Take special care with THIS feeling: ${c.avoid.join('; ')}
+Learning-statement palette (rephrase tentatively, in their words): ${c.learning.join(' / ')}
 Use this only as a palette — follow their actual words; never force these on them.`;
 }
 
@@ -225,6 +231,24 @@ export const COMPANION_OUTPUT_SCHEMA = {
         type: ['string', 'null'],
         enum: ['simultaneous', 'oscillating', 'foreground_background', 'protective_layer', 'unclear', null],
       },
+      strands: {
+        type: 'array',
+        description: 'One entry per co-present feeling when more than one is in play (else empty). Max 3.',
+        items: {
+          type: 'object',
+          additionalProperties: false,
+          properties: {
+            family: {
+              type: 'string',
+              enum: ['joy', 'calm', 'fear', 'pressure', 'anger', 'sadness', 'hurt', 'shame', 'flat'],
+            },
+            shade: { type: ['string', 'null'] },
+            salience: { type: 'string', enum: ['foreground', 'background', 'equal', 'unclear'] },
+            source: { type: 'string', enum: ['user_stated', 'user_confirmed', 'companion_hypothesis'] },
+          },
+          required: ['family', 'shade', 'salience', 'source'],
+        },
+      },
       asked_question: { type: 'boolean' },
       response_shape: {
         type: 'string',
@@ -263,6 +287,7 @@ export const COMPANION_OUTPUT_SCHEMA = {
       'user_confirmed_label',
       'rejected_shades',
       'mixed_relation',
+      'strands',
       'asked_question',
       'response_shape',
     ],

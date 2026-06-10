@@ -1,0 +1,107 @@
+{
+  "cid": "probe_mixed3",
+  "emotion": null,
+  "persona": null,
+  "created": "2026-06-10T11:03:41.031Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "one minute im excited about moving cities and the next im panicking about it"
+    },
+    {
+      "role": "companion",
+      "content": "I’m holding both — excitement and panic are moving back and forth here. Is it more oscillating, or does one sit underneath the other?"
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq7ynmhn9lfjrrvp",
+    "conversation_id": "probe_mixed3",
+    "timestamp": "2026-06-10T11:03:43.259Z",
+    "user_words_raw": "one minute im excited about moving cities and the next im panicking about it",
+    "emotion_status": "candidate",
+    "emotion_family": "fear",
+    "emotion_shade": "panic",
+    "secondary_emotions": [
+      "joy"
+    ],
+    "valence": "mixed",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "moving cities",
+    "appraisal_thought": "something big is changing and I might not be ready",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "certainty",
+      "support",
+      "preparation"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": "oscillating",
+    "strands": [
+      {
+        "family": "joy",
+        "shade": "excited",
+        "salience": "foreground",
+        "source": "user_stated"
+      },
+      {
+        "family": "fear",
+        "shade": "panic",
+        "salience": "foreground",
+        "source": "user_stated"
+      }
+    ],
+    "mixed_confirmed": 1,
+    "unlock_stage": "shaped",
+    "memory_note": "Feeling mixed about an upcoming move; excitement and panic are both present.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "one minute im excited about moving cities and the next im panicking about it"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "I’m holding both — excitement and panic are moving back and forth here. Is it more oscillating, or does one sit underneath the other?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "panic",
+      "body_cue": [],
+      "trigger": "moving cities",
+      "label_source": "user_stated",
+      "mixed_relation": "oscillating",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "excited",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": "panic",
+          "salience": "foreground",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    }
+  ]
+}

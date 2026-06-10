@@ -47,8 +47,10 @@
     "web": "expo start --web",
     "ai-proxy": "node --env-file=.env scripts/ai-proxy.mjs",
     "lint": "expo lint",
-    "bundle:eval": "esbuild src/services/ai/openaiClient.ts --bundle --platform=node --format=esm --tsconfig=tsconfig.json --outfile=scripts/companion-bundle.mjs && esbuild src/services/ai/safety.ts --bundle --platform=node --format=esm --tsconfig=tsconfig.json --outfile=scripts/safety-bundle.mjs",
-    "test:safety": "npm run bundle:eval --silent && node scripts/safety-regression.mjs"
+    "bundle:eval": "esbuild src/services/ai/openaiClient.ts --bundle --platform=node --format=esm --tsconfig=tsconfig.json --outfile=scripts/companion-bundle.mjs && esbuild src/services/ai/safety.ts --bundle --platform=node --format=esm --tsconfig=tsconfig.json --outfile=scripts/safety-bundle.mjs && esbuild src/services/ai/engine.ts --bundle --platform=node --format=esm --tsconfig=tsconfig.json --outfile=scripts/engine-bundle.mjs",
+    "test:safety": "npm run bundle:eval --silent && node scripts/safety-regression.mjs",
+    "test:engine": "npm run bundle:eval --silent && node scripts/engine-regression.mjs",
+    "test:all": "npm run bundle:eval --silent && node scripts/safety-regression.mjs && node scripts/engine-regression.mjs"
   },
   "private": true
 }

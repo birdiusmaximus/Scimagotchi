@@ -1,0 +1,82 @@
+{
+  "cid": "probe_joy",
+  "emotion": null,
+  "persona": null,
+  "created": "2026-06-10T11:03:43.315Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i feel really good today. proud even, i finally finished the marathon"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a bright, earned kind of good — maybe pride is the centre of it. What part of finishing the marathon lands most for you?"
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq7yno42ywuhdoqp",
+    "conversation_id": "probe_joy",
+    "timestamp": "2026-06-10T11:03:45.362Z",
+    "user_words_raw": "proud even",
+    "emotion_status": "candidate",
+    "emotion_family": "joy",
+    "emotion_shade": "proud",
+    "secondary_emotions": [
+      "happy",
+      "relieved"
+    ],
+    "valence": "positive",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "finally finished the marathon",
+    "appraisal_thought": "this was worth it; I did something hard",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "achievement",
+      "recognition",
+      "freedom"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "shaped",
+    "memory_note": "Finished a marathon and felt proud about it.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i feel really good today. proud even, i finally finished the marathon"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That feels like a bright, earned kind of good — maybe pride is the centre of it. What part of finishing the marathon lands most for you?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "finally finished the marathon",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

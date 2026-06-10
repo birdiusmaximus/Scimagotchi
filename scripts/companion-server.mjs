@@ -149,6 +149,10 @@ const server = http.createServer(async (req, res) => {
         shade: turn.event.emotion_shade,
         body_cue: turn.event.body_cue,
         trigger: turn.event.trigger_event,
+        label_source: turn.event.label_source,
+        mixed_relation: turn.event.mixed_relation,
+        strands: turn.event.strands,
+        mixed_confirmed: turn.event.mixed_confirmed,
       });
       c.history.push({ role: 'user', content: String(text) });
       c.history.push({ role: 'companion', content: turn.reply });
@@ -161,6 +165,9 @@ const server = http.createServer(async (req, res) => {
         unlocked: turn.unlocked,
         family: turn.event.emotion_family,
         shade: turn.event.emotion_shade,
+        mixed_relation: turn.event.mixed_relation,
+        strands: (turn.event.strands ?? []).map((s) => `${s.family}${s.shade ? ':' + s.shade : ''}/${s.salience}/${s.source}`),
+        mixed_confirmed: turn.event.mixed_confirmed === 1,
       });
     } catch (e) {
       return json(500, { error: String(e?.message ?? e) });

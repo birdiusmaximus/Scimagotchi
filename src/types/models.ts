@@ -24,6 +24,14 @@ export type EmotionStatus = 'confirmed' | 'candidate' | 'unclear' | 'none';
 export type LabelSource = 'user_stated' | 'user_confirmed' | 'companion_hypothesis';
 /** How two strands of a mixed feeling relate (engine brief §9.1). */
 export type MixedRelation = 'simultaneous' | 'oscillating' | 'foreground_background' | 'protective_layer' | 'unclear';
+
+/** One strand of a (possibly mixed) feeling (engine brief §8.3). */
+export interface EmotionStrand {
+  family: EmotionFamilyId;
+  shade: string | null;
+  salience: 'foreground' | 'background' | 'equal' | 'unclear';
+  source: LabelSource;
+}
 export type Confidence = 'high' | 'medium' | 'low' | 'unknown';
 export type SafetyFlag = 'none' | 'mild_concern' | 'urgent_review';
 export type MessageRole = 'user' | 'companion' | 'system';
@@ -82,6 +90,10 @@ export interface EmotionEvent {
   user_rejected_shades: string[];
   /** How co-present feelings relate, when the user has shown more than one strand. */
   mixed_relation: MixedRelation | null;
+  /** One entry per co-present feeling when more than one is in play (else empty). */
+  strands: EmotionStrand[];
+  /** 1 once the mixed structure is user-confirmed per §9.3 — only then may it be saved/counted. */
+  mixed_confirmed: 0 | 1;
   unlock_stage: UnlockStage;
   memory_note: string | null;
   do_not_store: 0 | 1;

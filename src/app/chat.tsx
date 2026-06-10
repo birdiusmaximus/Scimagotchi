@@ -14,6 +14,7 @@ import { MemoryDraftCard } from '@/components/MemoryDraftCard';
 import { MessageBubble } from '@/components/MessageBubble';
 import { TypingBubble } from '@/components/TypingBubble';
 import { Txt } from '@/components/Txt';
+import { useGoBack } from '@/hooks/useGoBack';
 import { selectVisualState, visualTintFamilies } from '@/services/ai/companionVisualState';
 import { useStore } from '@/state/store';
 import { palette, radii, spacing } from '@/theme/tokens';
@@ -26,6 +27,7 @@ import { palette, radii, spacing } from '@/theme/tokens';
  */
 export default function ChatScreen() {
   const router = useRouter();
+  const goBack = useGoBack();
   const params = useLocalSearchParams<{ cid?: string }>();
   const cid = typeof params.cid === 'string' ? params.cid : null;
 
@@ -92,7 +94,7 @@ export default function ChatScreen() {
       <GradientBackground />
       <SafeAreaView style={styles.safe}>
         <View style={styles.header}>
-          <IconButton name="chevron-left" onPress={() => (router.canGoBack() ? router.back() : router.replace('/'))} />
+          <IconButton name="chevron-left" onPress={goBack} />
         </View>
 
         {/* Character — top third, the focus */}

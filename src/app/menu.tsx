@@ -8,6 +8,7 @@ import { Glass } from '@/components/Glass';
 import { IconButton } from '@/components/IconButton';
 import { PressableScale } from '@/components/PressableScale';
 import { Txt } from '@/components/Txt';
+import { useGoBack } from '@/hooks/useGoBack';
 import { palette, radii, spacing } from '@/theme/tokens';
 
 const ITEMS: { label: string; icon: keyof typeof Feather.glyphMap; route: Href; hint: string }[] = [
@@ -20,12 +21,13 @@ const ITEMS: { label: string; icon: keyof typeof Feather.glyphMap; route: Href; 
 
 export default function MenuScreen() {
   const router = useRouter();
+  const goBack = useGoBack();
   return (
     <View style={styles.root}>
       <GradientBackground />
       <SafeAreaView style={styles.safe}>
         <View style={styles.bar}>
-          <IconButton name="chevron-left" onPress={() => router.back()} />
+          <IconButton name="chevron-left" onPress={goBack} />
           <Txt variant="subtitle">Menu</Txt>
           <View style={{ width: 44 }} />
         </View>

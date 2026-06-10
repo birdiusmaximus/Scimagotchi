@@ -1,5 +1,4 @@
 import { Feather } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { ActivityIndicator, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -7,6 +6,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { GradientBackground } from '@/components/GradientBackground';
 import { Glass } from '@/components/Glass';
 import { IconButton } from '@/components/IconButton';
+import { useGoBack } from '@/hooks/useGoBack';
 import { PressableScale } from '@/components/PressableScale';
 import { Txt } from '@/components/Txt';
 import {
@@ -26,7 +26,7 @@ const PRESETS: { key: RangePreset; label: string }[] = [
 ];
 
 export default function ExportScreen() {
-  const router = useRouter();
+  const goBack = useGoBack();
   const [preset, setPreset] = useState<RangePreset>('month');
   const [data, setData] = useState<TherapyExportData | null>(null);
   const [busy, setBusy] = useState(false);
@@ -57,7 +57,7 @@ export default function ExportScreen() {
       <GradientBackground />
       <SafeAreaView style={styles.safe}>
         <View style={styles.bar}>
-          <IconButton name="chevron-left" onPress={() => router.back()} />
+          <IconButton name="chevron-left" onPress={goBack} />
           <Txt variant="subtitle">Therapy notes</Txt>
           <View style={{ width: 44 }} />
         </View>

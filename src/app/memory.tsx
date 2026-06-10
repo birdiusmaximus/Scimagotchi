@@ -8,6 +8,7 @@ import { GradientBackground } from '@/components/GradientBackground';
 import { Glass } from '@/components/Glass';
 import { IconButton } from '@/components/IconButton';
 import { Txt } from '@/components/Txt';
+import { useGoBack } from '@/hooks/useGoBack';
 import { EMOTION_MAPS, FAMILY_COLORS } from '@/data/emotionMaps';
 import { emotionEventsRepo } from '@/services/db/repos';
 import { palette, radii, spacing } from '@/theme/tokens';
@@ -16,6 +17,7 @@ import { dayKey, prettyTime } from '@/utils/date';
 
 export default function MemoryScreen() {
   const router = useRouter();
+  const goBack = useGoBack();
   const todayKey = dayKey();
   const now = new Date();
 
@@ -58,7 +60,7 @@ export default function MemoryScreen() {
       <GradientBackground />
       <SafeAreaView style={styles.safe}>
         <View style={styles.bar}>
-          <IconButton name="chevron-left" onPress={() => router.back()} />
+          <IconButton name="chevron-left" onPress={goBack} />
           <Txt variant="subtitle">Memory</Txt>
           <View style={{ width: 44 }} />
         </View>

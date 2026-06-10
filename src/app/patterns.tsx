@@ -1,11 +1,12 @@
 import { Feather } from '@expo/vector-icons';
-import { useFocusEffect, useRouter } from 'expo-router';
+import { useFocusEffect } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { GradientBackground } from '@/components/GradientBackground';
 import { IconButton } from '@/components/IconButton';
+import { useGoBack } from '@/hooks/useGoBack';
 import { Txt } from '@/components/Txt';
 import { WeeklySummaryView } from '@/components/WeeklySummaryView';
 import { buildWeeklySummary } from '@/services/weeklySummary';
@@ -14,7 +15,7 @@ import type { WeeklySummary } from '@/types/models';
 import { prettyWeekRange, startOfWeek } from '@/utils/date';
 
 export default function PatternsScreen() {
-  const router = useRouter();
+  const goBack = useGoBack();
   const [weekStart, setWeekStart] = useState(() => startOfWeek());
   const [summary, setSummary] = useState<WeeklySummary | null>(null);
 
@@ -46,7 +47,7 @@ export default function PatternsScreen() {
       <GradientBackground />
       <SafeAreaView style={styles.safe}>
         <View style={styles.bar}>
-          <IconButton name="chevron-left" onPress={() => router.back()} />
+          <IconButton name="chevron-left" onPress={goBack} />
           <Txt variant="subtitle">Patterns</Txt>
           <View style={{ width: 44 }} />
         </View>

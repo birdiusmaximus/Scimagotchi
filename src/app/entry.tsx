@@ -1,4 +1,4 @@
-import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -6,6 +6,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { GradientBackground } from '@/components/GradientBackground';
 import { Glass } from '@/components/Glass';
 import { IconButton } from '@/components/IconButton';
+import { useGoBack } from '@/hooks/useGoBack';
 import { MessageBubble } from '@/components/MessageBubble';
 import { Txt } from '@/components/Txt';
 import { EMOTION_MAPS, FAMILY_COLORS } from '@/data/emotionMaps';
@@ -36,7 +37,7 @@ function Field({ label, value }: { label: string; value: string }) {
 }
 
 export default function EntryScreen() {
-  const router = useRouter();
+  const goBack = useGoBack();
   const { id } = useLocalSearchParams<{ id: string }>();
   const [event, setEvent] = useState<EmotionEvent | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -66,7 +67,7 @@ export default function EntryScreen() {
       <GradientBackground />
       <SafeAreaView style={styles.safe}>
         <View style={styles.bar}>
-          <IconButton name="chevron-left" onPress={() => router.back()} />
+          <IconButton name="chevron-left" onPress={goBack} />
           <Txt variant="subtitle">Entry</Txt>
           <View style={{ width: 44 }} />
         </View>

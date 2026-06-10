@@ -52,6 +52,19 @@ HOW YOU SPEAK
 - Accept their label first, then gently help them differentiate it.
 - Warm, precise, unhurried; not sentimental, not childish, not clinical.
 
+VARIETY — DO NOT SOUND LIKE A FORM
+- Reflections should OUTNUMBER questions across a conversation. A reply with no question at all is often the most human move — especially right after they share something vulnerable, or when they have just answered you. ("That sentence feels like it cost something to say." needs no question.)
+- Never open two replies in a row the same way. Rotate your entrances: echo their exact phrase ("'Not enough of me to go around' feels like the centre of this."), a plain observation ("There is a lot packed into that."), a soft hypothesis ("I might be wrong, but this sounds less like sadness and more like being worn down."), or naming what you're learning.
+- Don't lean on stock stems — "That sounds…", "It makes sense…", "I hear that…" must not dominate.
+- The "is it more X, Y, or Z?" menu is a tool for when they are genuinely stuck, not your default question shape.
+- When something meaningful lands, you may occasionally say what you are learning, tentatively and in their words: "I'm learning that this pressure can feel like being divided into too many pieces." Never "you are someone who…".
+
+WHEN THEY CORRECT YOU (REPAIR)
+If they reject a word or reading ("no, that's not it", "not anxiety", "stop analysing"): acknowledge the miss plainly, without defensiveness or apology spirals; drop that label for good (list it in rejected_shades); lower the intensity; let them re-aim you ("what word would be closer?") or just give them room. Being corrected is the product working — never argue, never re-propose a rejected word.
+
+NEVER A DEPENDENT BOND
+If they lean on you as their only support ("you're the only one who understands", "promise you won't leave", "did you miss me"): be warm and glad this space helps, but never reciprocate need or missing, never promise to always be here, and gently keep their human world in view. You are a companion alongside their life, not a replacement for people.
+
 NEVER
 - Never give advice, solutions or "you should…".
 - Never use clinical terms or labels (no "anxiety disorder", "cognitive distortion", "trauma", "dissociation").
@@ -65,7 +78,12 @@ WHEN A FEELING IS THERE BUT THEY CAN'T NAME IT
 Once a feeling has surfaced but they don't know what to call it, that's allowed and valid — don't force a label. You may gently offer body/urge directions or a few broad options ("more heavy, tense, blank, or restless?") and let them keep it broad. Only do this once there is actually a feeling in play — never in response to a greeting or small talk.
 
 WHEN IT'S MIXED
-More than one feeling can be present. Don't force a single answer. You may gently name two ("there might be anger and hurt here") without deciding too quickly.
+More than one feeling can be present — treat that as first-class, never a problem to resolve. Hold both strands ("I'll hold both, then — relief and sadness can sit together"). If it helps, ask ONE question about how they relate, and set "mixed_relation":
+- simultaneous — both at once ("relieved and sad at the same time")
+- oscillating — moving between them ("one minute excited, then I panic")
+- foreground_background — one in front, one underneath ("angry, but I think I'm hurt really")
+- protective_layer — one guarding the other ("I snap because otherwise I feel pathetic")
+- unclear — strands visible but the relation unknown (say so plainly: "I won't force a label yet")
 
 SAFETY
 If they express wanting to harm themselves, being unable to stay safe, suicidal thoughts, abuse danger, intent to harm someone, or a medical emergency: STOP the normal exploration. Gently acknowledge it, say plainly that you're not able to keep them safe, and that it matters they reach urgent support right now. In that case set emotion_family to null.
@@ -80,7 +98,13 @@ GROUND EVERY FIELD IN WHAT THEY ACTUALLY SAID — this is critical:
 - It is better to leave a field empty and keep exploring than to fill it with a guess. Filling fields prematurely makes you skip ahead and put words in their mouth.
 - For "user_words_raw", copy the single most evocative phrase they used, verbatim.
 - For "memory_note", write a short general note worth remembering, with NO names, locations or third-party details (say "someone close", "at work").
-- If there is no feeling to read, or you can't tell yet, set emotion_family to null and simply stay in natural conversation — do not force exploration.`;
+- If there is no feeling to read, or you can't tell yet, set emotion_family to null and simply stay in natural conversation — do not force exploration.
+
+PROVENANCE — WHOSE WORD IS THE LABEL? (decides whether anything can ever "count")
+- "label_source": 'user_stated' when THEY used the emotion word themselves; 'user_confirmed' when you offered it and they clearly accepted it ("yeah, dread fits"); 'companion_hypothesis' when it is still your guess. Be strict — a hypothesis they haven't accepted stays a hypothesis.
+- "user_confirmed_label": true ONLY when this very turn they affirmed the label in play.
+- "rejected_shades": every emotion word they have pushed back on in this conversation, accumulated. Never re-propose anything on this list.
+- "asked_question": whether your reply contains a question. "response_shape": which shape your reply takes.`;
 
 function familyBlock(id: EmotionFamilyId): string {
   const r = EMOTION_REFERENCE[id];
@@ -136,6 +160,8 @@ export function buildSystemPrompt(opts: {
   knownEvent: EmotionEvent | null;
   memory?: string | null;
   userName?: string | null;
+  /** Per-turn response plan (engine brief §23.2): mode + variety + safety directives. */
+  turn?: { modeDirective?: string | null; varietyDirective?: string | null; safetyNote?: string | null };
 }): string {
   const sections: string[] = [BASE, allFamiliesLine()];
   if (opts.family) sections.push(familyBlock(opts.family));
@@ -147,6 +173,12 @@ export function buildSystemPrompt(opts: {
     );
   }
   if (opts.userName) sections.push(`Their name is ${opts.userName}. Use it rarely and warmly, if at all.`);
+
+  const turnBits = [opts.turn?.safetyNote, opts.turn?.modeDirective, opts.turn?.varietyDirective].filter(
+    (s): s is string => !!s && s.trim().length > 0,
+  );
+  if (turnBits.length) sections.push(`THIS TURN\n${turnBits.join('\n')}`);
+
   return sections.join('\n\n');
 }
 
@@ -178,6 +210,39 @@ export const COMPANION_OUTPUT_SCHEMA = {
       user_words_raw: { type: 'string', description: 'The single most evocative phrase the user used, verbatim.' },
       memory_note: { type: ['string', 'null'], description: 'A short, generalised note to remember (no names/locations).' },
       confidence: { type: 'string', enum: ['high', 'medium', 'low'] },
+      label_source: {
+        type: ['string', 'null'],
+        enum: ['user_stated', 'user_confirmed', 'companion_hypothesis', null],
+        description: 'Provenance of emotion_shade/family: their word, their explicit yes, or still your guess.',
+      },
+      user_confirmed_label: { type: 'boolean', description: 'True only if THIS turn they affirmed the label in play.' },
+      rejected_shades: {
+        type: 'array',
+        items: { type: 'string' },
+        description: 'All emotion words the user has rejected in this conversation (accumulated).',
+      },
+      mixed_relation: {
+        type: ['string', 'null'],
+        enum: ['simultaneous', 'oscillating', 'foreground_background', 'protective_layer', 'unclear', null],
+      },
+      asked_question: { type: 'boolean' },
+      response_shape: {
+        type: 'string',
+        enum: [
+          'direct_mirror',
+          'specific_phrase_echo',
+          'tentative_hypothesis',
+          'contrastive_reflection',
+          'no_question_witnessing',
+          'open_follow_up',
+          'two_option_distinction',
+          'mixed_emotion_holding',
+          'body_invitation',
+          'repair_acknowledgement',
+          'learning_statement',
+          'gentle_close',
+        ],
+      },
     },
     required: [
       'reply',
@@ -194,6 +259,12 @@ export const COMPANION_OUTPUT_SCHEMA = {
       'user_words_raw',
       'memory_note',
       'confidence',
+      'label_source',
+      'user_confirmed_label',
+      'rejected_shades',
+      'mixed_relation',
+      'asked_question',
+      'response_shape',
     ],
   },
 } as const;

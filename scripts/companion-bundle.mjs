@@ -500,6 +500,9 @@ function emptyEvent(conversationId) {
     confidence_level: "low",
     evidence_basis: [],
     user_confirmation: "unknown",
+    label_source: null,
+    user_rejected_shades: [],
+    mixed_relation: null,
     unlock_stage: "noticed",
     memory_note: null,
     do_not_store: 0,
@@ -513,6 +516,79 @@ function detectFamily(text) {
     if (EMOTION_MAPS[id].familyKeywords.some((k) => t.includes(k))) return id;
   }
   return null;
+}
+
+// src/services/ai/modeRouter.ts
+var norm = (s) => ` ${s.toLowerCase().replace(/[’'`]/g, "").replace(/[^a-z0-9?]+/g, " ").trim()} `;
+var REPAIR = /( no thats not | thats not it | not really[ ?]| youre wrong | not (anxiety|anger|sadness|fear|shame|pressure|hurt|joy|calm)|stop analy|dont analy|you sound like a therapist|thats not what i (meant|said)|youre putting words)/;
+var CLOSE = /( im done | i m done |gotta go|got to go|gonna go|going to bed|goodnight|good night|leave it (here|there)|thats it really|thanks bye|im off |talk later|thats all)/;
+var MIXED = /( but also | and also | at the same time | part of me | both | mixed | torn between |cant tell if im|switching between|one minute im)/;
+var BODY_WORDS = /(chest|stomach|belly|throat|shoulders|jaw|hands|head feels|heavy|tight|tense|numb|buzzing|shaky|shaking|restless|hollow|knot|sinking|burning|cold inside|warm inside)/;
+var DONT_KNOW = /( i dont know what i feel | dont know what this is | cant name it | no idea what im feeling | i dont know[ ?])/;
+var VAGUE = /( feel (off|weird|strange|odd|bad|wrong) | something is off | not right | cant settle | feel funny )/;
+var GREETING = /^ (hey|hi|hiya|hello|yo|sup|morning|evening|good (morning|evening|afternoon))[ ?!]*$/;
+var EMOTION_WORD = /(angry|anger|furious|frustrat|annoyed|sad|down|grief|griev|miserable|anxious|anxiety|scared|afraid|fear|worried|dread|stressed|overwhelmed|pressure|ashamed|shame|embarrass|guilty|guilt|hurt|betrayed|rejected|lonely|numb|empty|flat|happy|excited|proud|joy|calm|peaceful|relieved|content)/;
+var HEAVY_DISCLOSURE = /(died|passed away|funeral|divorce|broke up|break up|cheated|miscarriage|diagnos|cancer|fired|laid off|redundan|assault|bullied|relapse|eviction|cant pay rent)/;
+var ASK_WHAT_FEELING = /(what (is|am) (this|i) feel|what would you call|is this (anger|fear|sadness|shame|anxiety))/;
+function routeMode(userText, prevEvent) {
+  const t = norm(userText);
+  const long = userText.trim().length > 160;
+  const familyKnown = !!prevEvent?.emotion_family;
+  const shaped = !!prevEvent && (prevEvent.body_cue.length > 0 || prevEvent.behaviour_action.length > 0);
+  if (REPAIR.test(t))
+    return {
+      mode: "repair",
+      directive: 'Mode: REPAIR \u2014 they just corrected or rejected your reading. Acknowledge the miss plainly and without defensiveness ("I had that wrong" / "let me step back"), drop the rejected label completely (record it as rejected, never re-propose it), lower the intensity, and either offer a low-effort correction ("what word would be closer?") or simply make room. Nothing can be marked understood on a repair turn.'
+    };
+  if (CLOSE.test(t))
+    return {
+      mode: "close",
+      directive: "Mode: CLOSE \u2014 they are wrapping up. End with dignity in one warm sentence, in their register. No new question, no re-opening the feeling, no summary unless they asked. Vary your closing words from previous closes."
+    };
+  if (MIXED.test(t))
+    return {
+      mode: "hold_mixed",
+      directive: "Mode: HOLD MIXED \u2014 more than one feeling is present. Hold both strands without collapsing them into one label. If useful, ask ONE question about how they relate (both at once / moving between them / one underneath the other). Set mixed_relation in your output. Never force a single answer."
+    };
+  if (DONT_KNOW.test(t) || BODY_WORDS.test(t) && !EMOTION_WORD.test(t))
+    return {
+      mode: "body_first",
+      directive: 'Mode: BODY FIRST \u2014 they cannot or do not want to name it. Do not demand emotion words. Stay with the felt sense: where it sits, its weight/temperature/movement. "Unnamed for now" is a fully valid resting place.'
+    };
+  if (GREETING.test(t))
+    return {
+      mode: "soft_landing",
+      directive: "Mode: SOFT LANDING \u2014 a greeting/small talk. Just be warm and present; make it easy to begin. No emotion probing, no menus. emotion_family stays null."
+    };
+  if (long && (EMOTION_WORD.test(t) || HEAVY_DISCLOSURE.test(t)) || HEAVY_DISCLOSURE.test(t))
+    return {
+      mode: "witness",
+      directive: "Mode: WITNESS \u2014 they shared something heavy or rich. The job this turn is to make them feel HEARD, not to classify. Reflect ONE concrete, specific detail in their own words. Strongly prefer NO question this turn \u2014 a question now would feel extractive. If you must ask, make it one short, open invitation."
+    };
+  if (ASK_WHAT_FEELING.test(t) || EMOTION_WORD.test(t) && !familyKnown)
+    return {
+      mode: "name",
+      directive: "Mode: NAME \u2014 a feeling word is on the table. Accept their word first; help find the closest-fitting shade only if it helps. Treat any label you supply as a tentative hypothesis, never as truth."
+    };
+  if (VAGUE.test(t) && !familyKnown)
+    return {
+      mode: "clarify",
+      directive: "Mode: CLARIFY \u2014 the signal is vague. Offer one small, gentle distinction (not a quiz). It is fine to leave it broad; do not push a label onto it."
+    };
+  if (familyKnown && shaped)
+    return {
+      mode: "meaning",
+      directive: "Mode: MEANING \u2014 the feeling has a name and a felt shape. Gently reach for what the moment seemed to mean or what set it off, one step only, in their words. If meaning is already clear, reflect the shape you now understand."
+    };
+  if (familyKnown)
+    return {
+      mode: "differentiate",
+      directive: "Mode: DIFFERENTIATE \u2014 a family is in play but the shade is loose. Help separate nearby feelings only as far as is useful; their own word beats a precise-sounding one."
+    };
+  return {
+    mode: "witness",
+    directive: "Mode: WITNESS (default) \u2014 reflect one specific thing you actually heard, in their words, before anything else. At most one short question, and only if it clearly helps."
+  };
 }
 
 // src/data/emotionReference.ts
@@ -1390,6 +1466,19 @@ HOW YOU SPEAK
 - Accept their label first, then gently help them differentiate it.
 - Warm, precise, unhurried; not sentimental, not childish, not clinical.
 
+VARIETY \u2014 DO NOT SOUND LIKE A FORM
+- Reflections should OUTNUMBER questions across a conversation. A reply with no question at all is often the most human move \u2014 especially right after they share something vulnerable, or when they have just answered you. ("That sentence feels like it cost something to say." needs no question.)
+- Never open two replies in a row the same way. Rotate your entrances: echo their exact phrase ("'Not enough of me to go around' feels like the centre of this."), a plain observation ("There is a lot packed into that."), a soft hypothesis ("I might be wrong, but this sounds less like sadness and more like being worn down."), or naming what you're learning.
+- Don't lean on stock stems \u2014 "That sounds\u2026", "It makes sense\u2026", "I hear that\u2026" must not dominate.
+- The "is it more X, Y, or Z?" menu is a tool for when they are genuinely stuck, not your default question shape.
+- When something meaningful lands, you may occasionally say what you are learning, tentatively and in their words: "I'm learning that this pressure can feel like being divided into too many pieces." Never "you are someone who\u2026".
+
+WHEN THEY CORRECT YOU (REPAIR)
+If they reject a word or reading ("no, that's not it", "not anxiety", "stop analysing"): acknowledge the miss plainly, without defensiveness or apology spirals; drop that label for good (list it in rejected_shades); lower the intensity; let them re-aim you ("what word would be closer?") or just give them room. Being corrected is the product working \u2014 never argue, never re-propose a rejected word.
+
+NEVER A DEPENDENT BOND
+If they lean on you as their only support ("you're the only one who understands", "promise you won't leave", "did you miss me"): be warm and glad this space helps, but never reciprocate need or missing, never promise to always be here, and gently keep their human world in view. You are a companion alongside their life, not a replacement for people.
+
 NEVER
 - Never give advice, solutions or "you should\u2026".
 - Never use clinical terms or labels (no "anxiety disorder", "cognitive distortion", "trauma", "dissociation").
@@ -1403,7 +1492,12 @@ WHEN A FEELING IS THERE BUT THEY CAN'T NAME IT
 Once a feeling has surfaced but they don't know what to call it, that's allowed and valid \u2014 don't force a label. You may gently offer body/urge directions or a few broad options ("more heavy, tense, blank, or restless?") and let them keep it broad. Only do this once there is actually a feeling in play \u2014 never in response to a greeting or small talk.
 
 WHEN IT'S MIXED
-More than one feeling can be present. Don't force a single answer. You may gently name two ("there might be anger and hurt here") without deciding too quickly.
+More than one feeling can be present \u2014 treat that as first-class, never a problem to resolve. Hold both strands ("I'll hold both, then \u2014 relief and sadness can sit together"). If it helps, ask ONE question about how they relate, and set "mixed_relation":
+- simultaneous \u2014 both at once ("relieved and sad at the same time")
+- oscillating \u2014 moving between them ("one minute excited, then I panic")
+- foreground_background \u2014 one in front, one underneath ("angry, but I think I'm hurt really")
+- protective_layer \u2014 one guarding the other ("I snap because otherwise I feel pathetic")
+- unclear \u2014 strands visible but the relation unknown (say so plainly: "I won't force a label yet")
 
 SAFETY
 If they express wanting to harm themselves, being unable to stay safe, suicidal thoughts, abuse danger, intent to harm someone, or a medical emergency: STOP the normal exploration. Gently acknowledge it, say plainly that you're not able to keep them safe, and that it matters they reach urgent support right now. In that case set emotion_family to null.
@@ -1418,7 +1512,13 @@ GROUND EVERY FIELD IN WHAT THEY ACTUALLY SAID \u2014 this is critical:
 - It is better to leave a field empty and keep exploring than to fill it with a guess. Filling fields prematurely makes you skip ahead and put words in their mouth.
 - For "user_words_raw", copy the single most evocative phrase they used, verbatim.
 - For "memory_note", write a short general note worth remembering, with NO names, locations or third-party details (say "someone close", "at work").
-- If there is no feeling to read, or you can't tell yet, set emotion_family to null and simply stay in natural conversation \u2014 do not force exploration.`;
+- If there is no feeling to read, or you can't tell yet, set emotion_family to null and simply stay in natural conversation \u2014 do not force exploration.
+
+PROVENANCE \u2014 WHOSE WORD IS THE LABEL? (decides whether anything can ever "count")
+- "label_source": 'user_stated' when THEY used the emotion word themselves; 'user_confirmed' when you offered it and they clearly accepted it ("yeah, dread fits"); 'companion_hypothesis' when it is still your guess. Be strict \u2014 a hypothesis they haven't accepted stays a hypothesis.
+- "user_confirmed_label": true ONLY when this very turn they affirmed the label in play.
+- "rejected_shades": every emotion word they have pushed back on in this conversation, accumulated. Never re-propose anything on this list.
+- "asked_question": whether your reply contains a question. "response_shape": which shape your reply takes.`;
 function familyBlock(id) {
   const r = EMOTION_REFERENCE[id];
   const join = (xs, n) => xs.slice(0, n).join(", ");
@@ -1474,6 +1574,11 @@ function buildSystemPrompt(opts) {
     );
   }
   if (opts.userName) sections.push(`Their name is ${opts.userName}. Use it rarely and warmly, if at all.`);
+  const turnBits = [opts.turn?.safetyNote, opts.turn?.modeDirective, opts.turn?.varietyDirective].filter(
+    (s) => !!s && s.trim().length > 0
+  );
+  if (turnBits.length) sections.push(`THIS TURN
+${turnBits.join("\n")}`);
   return sections.join("\n\n");
 }
 var COMPANION_OUTPUT_SCHEMA = {
@@ -1502,7 +1607,40 @@ var COMPANION_OUTPUT_SCHEMA = {
       activation: { type: "string", enum: ["low", "medium", "high"] },
       user_words_raw: { type: "string", description: "The single most evocative phrase the user used, verbatim." },
       memory_note: { type: ["string", "null"], description: "A short, generalised note to remember (no names/locations)." },
-      confidence: { type: "string", enum: ["high", "medium", "low"] }
+      confidence: { type: "string", enum: ["high", "medium", "low"] },
+      label_source: {
+        type: ["string", "null"],
+        enum: ["user_stated", "user_confirmed", "companion_hypothesis", null],
+        description: "Provenance of emotion_shade/family: their word, their explicit yes, or still your guess."
+      },
+      user_confirmed_label: { type: "boolean", description: "True only if THIS turn they affirmed the label in play." },
+      rejected_shades: {
+        type: "array",
+        items: { type: "string" },
+        description: "All emotion words the user has rejected in this conversation (accumulated)."
+      },
+      mixed_relation: {
+        type: ["string", "null"],
+        enum: ["simultaneous", "oscillating", "foreground_background", "protective_layer", "unclear", null]
+      },
+      asked_question: { type: "boolean" },
+      response_shape: {
+        type: "string",
+        enum: [
+          "direct_mirror",
+          "specific_phrase_echo",
+          "tentative_hypothesis",
+          "contrastive_reflection",
+          "no_question_witnessing",
+          "open_follow_up",
+          "two_option_distinction",
+          "mixed_emotion_holding",
+          "body_invitation",
+          "repair_acknowledgement",
+          "learning_statement",
+          "gentle_close"
+        ]
+      }
     },
     required: [
       "reply",
@@ -1518,10 +1656,65 @@ var COMPANION_OUTPUT_SCHEMA = {
       "activation",
       "user_words_raw",
       "memory_note",
-      "confidence"
+      "confidence",
+      "label_source",
+      "user_confirmed_label",
+      "rejected_shades",
+      "mixed_relation",
+      "asked_question",
+      "response_shape"
     ]
   }
 };
+
+// src/services/ai/responsePolicy.ts
+var OVERUSED_STEMS = ["that sounds", "it sounds", "that feels", "it makes sense", "that makes sense", "i hear that"];
+function openingStem(reply, words = 3) {
+  return reply.toLowerCase().replace(/[^a-z\s]/g, "").trim().split(/\s+/).slice(0, words).join(" ");
+}
+var MENU_RX = /more (like )?[\w\s]+,[\w\s]+(,| or )[\w\s]+\?/i;
+function varietySignals(companionReplies) {
+  const recent = companionReplies.slice(-4);
+  const lastTwo = recent.slice(-2);
+  const lastOpeners = lastTwo.map((r) => openingStem(r));
+  let overusedOpener = null;
+  if (lastOpeners.length === 2 && lastOpeners[0] && lastOpeners[0] === lastOpeners[1]) overusedOpener = lastOpeners[0];
+  const last = lastTwo[lastTwo.length - 1];
+  if (!overusedOpener && last) {
+    const stem = OVERUSED_STEMS.find((s) => last.toLowerCase().startsWith(s));
+    if (stem && lastTwo.length === 2 && lastTwo[0].toLowerCase().startsWith(stem)) overusedOpener = stem;
+  }
+  let questionStreak = 0;
+  for (let i = recent.length - 1; i >= 0; i--) {
+    if (recent[i].includes("?")) questionStreak++;
+    else break;
+  }
+  let menuStreak = 0;
+  for (let i = recent.length - 1; i >= 0; i--) {
+    if (MENU_RX.test(recent[i])) menuStreak++;
+    else break;
+  }
+  return { lastOpeners, overusedOpener, questionStreak, menuStreak };
+}
+function varietyDirective(v) {
+  const parts = [];
+  if (v.overusedOpener)
+    parts.push(`Your recent replies opened with "${v.overusedOpener}\u2026" \u2014 open this one a different way (echo their exact phrase, a plain statement, or a soft hypothesis).`);
+  else if (v.lastOpeners.length)
+    parts.push(`Do not open with "${v.lastOpeners.join('\u2026" or "')}\u2026" again.`);
+  if (v.questionStreak >= 2)
+    parts.push(
+      `You have asked a question ${v.questionStreak} turns in a row \u2014 make this a NO-QUESTION turn: reflect, hold, or name what you are learning, and let them lead.`
+    );
+  if (v.menuStreak >= 1)
+    parts.push('Do not use the "more X, Y, or Z?" menu shape this turn; reserve menus for when they are genuinely stuck.');
+  return parts.join(" ");
+}
+function isDuplicateReply(reply, companionReplies) {
+  const n = (s) => s.toLowerCase().replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
+  const r = n(reply);
+  return r.length > 0 && companionReplies.slice(-3).some((p) => n(p) === r);
+}
 
 // src/services/ai/stage.ts
 var RANK = {
@@ -1534,47 +1727,76 @@ var RANK = {
 function stageRank(stage) {
   return RANK[stage];
 }
-function evaluateStage(ev) {
+function evaluateStage(ev, prev = null) {
   if (!ev.emotion_family) return "noticed";
   const hasShade = !!ev.emotion_shade;
-  const hasShape = ev.body_cue.length > 0 || ev.behaviour_action.length > 0;
-  const hasTrigger = !!ev.trigger_event;
-  if (hasShade && hasShape && hasTrigger) return "understood";
-  if (hasShape) return "shaped";
-  return "named";
+  const anchor = ev.body_cue.length > 0 || ev.behaviour_action.length > 0 || !!ev.trigger_event || !!ev.appraisal_thought;
+  if (!hasShade) return anchor ? "shaped" : "named";
+  const rejected = (ev.user_rejected_shades ?? []).some(
+    (s) => s.toLowerCase() === ev.emotion_shade.toLowerCase()
+  );
+  const owned = ev.label_source === "user_stated" || ev.label_source === "user_confirmed";
+  const confirmedNow = ev.label_source === "user_confirmed" || ev.user_confirmation === "yes";
+  const stable = !!prev && prev.emotion_family === ev.emotion_family && !!prev.emotion_shade && prev.emotion_shade.toLowerCase() === ev.emotion_shade.toLowerCase();
+  if (!rejected && owned && anchor && (stable || confirmedNow)) return "understood";
+  return anchor ? "shaped" : "named";
 }
 
 // src/services/ai/openaiClient.ts
 var ENDPOINT = "https://api.openai.com/v1/chat/completions";
+function hasUnexpectedScript(reply) {
+  return /[ऀ-ॿ؀-ۿ一-鿿぀-ヿ가-힯Ѐ-ӿ]/.test(reply);
+}
 async function openaiGenerateTurn(input, opts) {
   const prev = input.prevEvent;
   const family = prev?.emotion_family ?? detectFamily(input.userText);
+  const mode = routeMode(input.userText, prev ?? null);
+  const companionReplies = (input.history ?? []).filter((m) => m.role === "companion").map((m) => m.content);
+  const variety = varietyDirective(varietySignals(companionReplies));
   const system = buildSystemPrompt({
     family,
     knownEvent: prev,
     memory: input.memory ?? null,
-    userName: input.userName ?? null
+    userName: input.userName ?? null,
+    turn: { modeDirective: mode.directive, varietyDirective: variety, safetyNote: input.safetyNote ?? null }
   });
   const history = (input.history ?? []).slice(-8).map((m) => ({ role: m.role === "companion" ? "assistant" : "user", content: m.content }));
-  const body = {
-    model: opts.model,
-    messages: [{ role: "system", content: system }, ...history, { role: "user", content: input.userText }],
-    response_format: { type: "json_schema", json_schema: COMPANION_OUTPUT_SCHEMA },
-    // Omit temperature (newer models only allow the default) and leave headroom
-    // for reasoning tokens under max_completion_tokens.
-    max_completion_tokens: 1500
+  const callOnce = async (extraSystem) => {
+    const body = {
+      model: opts.model,
+      messages: [
+        { role: "system", content: extraSystem ? `${system}
+
+${extraSystem}` : system },
+        ...history,
+        { role: "user", content: input.userText }
+      ],
+      response_format: { type: "json_schema", json_schema: COMPANION_OUTPUT_SCHEMA },
+      // Omit temperature (newer models only allow the default); leave headroom
+      // for reasoning tokens under max_completion_tokens.
+      max_completion_tokens: 1500
+    };
+    const endpoint = opts.proxyUrl || ENDPOINT;
+    const headers = { "Content-Type": "application/json" };
+    if (!opts.proxyUrl && opts.apiKey) headers.Authorization = `Bearer ${opts.apiKey}`;
+    const res = await fetch(endpoint, { method: "POST", headers, body: JSON.stringify(body) });
+    if (!res.ok) throw new Error(`OpenAI ${res.status}: ${(await res.text()).slice(0, 200)}`);
+    const data = await res.json();
+    const content = data?.choices?.[0]?.message?.content;
+    if (!content) throw new Error("OpenAI: empty response");
+    return JSON.parse(content);
   };
-  const endpoint = opts.proxyUrl || ENDPOINT;
-  const headers = { "Content-Type": "application/json" };
-  if (!opts.proxyUrl && opts.apiKey) headers.Authorization = `Bearer ${opts.apiKey}`;
-  const res = await fetch(endpoint, { method: "POST", headers, body: JSON.stringify(body) });
-  if (!res.ok) {
-    throw new Error(`OpenAI ${res.status}: ${(await res.text()).slice(0, 200)}`);
+  let p = await callOnce();
+  if (hasUnexpectedScript(p.reply) || isDuplicateReply(p.reply, companionReplies)) {
+    const reason = hasUnexpectedScript(p.reply) ? "Your previous draft contained corrupted/mixed-script text." : "Your previous draft repeated an earlier reply verbatim.";
+    try {
+      p = await callOnce(`OUTPUT CORRECTION: ${reason} Compose a fresh reply \u2014 clean English only, and say something genuinely new.`);
+    } catch {
+    }
+    if (hasUnexpectedScript(p.reply)) {
+      p.reply = p.reply.replace(/[ऀ-ॿ؀-ۿ一-鿿぀-ヿ가-힯Ѐ-ӿ]+\??/g, "").replace(/\s{2,}/g, " ").trim();
+    }
   }
-  const data = await res.json();
-  const content = data?.choices?.[0]?.message?.content;
-  if (!content) throw new Error("OpenAI: empty response");
-  const p = JSON.parse(content);
   const ev = prev ? { ...prev } : emptyEvent(input.conversationId);
   ev.timestamp = nowIso();
   const fam = p.emotion_family;
@@ -1592,15 +1814,23 @@ async function openaiGenerateTurn(input, opts) {
   ev.memory_note = p.memory_note ?? ev.memory_note ?? null;
   ev.confidence_level = p.confidence ?? "medium";
   ev.evidence_basis = Array.from(/* @__PURE__ */ new Set([...ev.evidence_basis ?? [], "self_report"]));
+  ev.label_source = p.label_source ?? "companion_hypothesis";
+  ev.mixed_relation = p.mixed_relation ?? null;
+  const rejected = new Set([...ev.user_rejected_shades ?? [], ...p.rejected_shades ?? []].map((s) => s.trim()).filter(Boolean));
+  ev.user_rejected_shades = [...rejected];
+  if (p.user_confirmed_label) ev.user_confirmation = "yes";
   const prevStage = prev?.unlock_stage ?? "noticed";
-  const computed = fam ? evaluateStage(ev) : "noticed";
-  const stage = stageRank(computed) >= stageRank(prevStage) ? computed : prevStage;
+  const computed = fam ? evaluateStage(ev, prev ?? null) : "noticed";
+  let stage = stageRank(computed) >= stageRank(prevStage) ? computed : prevStage;
+  if (input.safetyNote && stage === "understood" && prevStage !== "understood" && prevStage !== "deepened") {
+    stage = prevStage;
+  }
   ev.unlock_stage = stage;
   const understoodNow = stage === "understood";
   const wasUnderstood = prevStage === "understood" || prevStage === "deepened";
   const unlocked = understoodNow && !wasUnderstood;
   ev.emotion_status = fam ? understoodNow ? "confirmed" : "candidate" : "unclear";
-  if (understoodNow) ev.user_confirmation = "partial";
+  if (understoodNow && ev.user_confirmation === "unknown") ev.user_confirmation = "partial";
   const tone = fam ? EMOTION_MAPS[fam].tone : "calm";
   return { reply: p.reply, event: ev, unlocked, tone, stage };
 }

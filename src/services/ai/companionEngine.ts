@@ -31,6 +31,8 @@ export interface CompanionInput {
   /** compact digest of what the companion remembers about this person */
   memory?: string | null;
   userName?: string | null;
+  /** safety-layer directive for this turn (post-check resume, dependency boundary) */
+  safetyNote?: string | null;
 }
 
 export function emptyEvent(conversationId: string): EmotionEvent {
@@ -58,6 +60,9 @@ export function emptyEvent(conversationId: string): EmotionEvent {
     confidence_level: 'low',
     evidence_basis: [],
     user_confirmation: 'unknown',
+    label_source: null,
+    user_rejected_shades: [],
+    mixed_relation: null,
     unlock_stage: 'noticed',
     memory_note: null,
     do_not_store: 0,
@@ -95,6 +100,7 @@ function clone(ev: EmotionEvent): EmotionEvent {
     social_context: [...ev.social_context],
     need_value: [...ev.need_value],
     evidence_basis: [...ev.evidence_basis],
+    user_rejected_shades: [...(ev.user_rejected_shades ?? [])],
   };
 }
 
@@ -154,6 +160,7 @@ export function nextTurn(userText: string, prev: EmotionEvent | null, conversati
     ev.valence = map.valence;
     ev.activation = map.activation;
     ev.user_words_raw = userText.trim();
+    ev.label_source = 'user_stated'; // keyword detection literally matched their own word
     ev.evidence_basis.push('self_report');
     return { reply: map.shapeQuestion, event: ev, unlocked: false, tone: map.tone, stage: 'named' };
   }

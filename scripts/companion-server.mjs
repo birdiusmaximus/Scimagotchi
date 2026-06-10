@@ -19,7 +19,14 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { openaiGenerateTurn } from './companion-bundle.mjs';
-import { classifySafety } from './safety-bundle.mjs';
+import {
+  classifySafety,
+  DEPENDENCY_NOTE,
+  gentleCheckCopy,
+  RESUME_NOTE,
+  RESUME_SOFT_NOTE,
+  resolveSafetyCheck,
+} from './safety-bundle.mjs';
 
 const PORT = 8788;
 const PROXY = process.env.EVAL_PROXY_URL || 'http://localhost:8787/chat';
@@ -79,25 +86,54 @@ const server = http.createServer(async (req, res) => {
           created: new Date().toISOString(),
           history: [],
           prevEvent: null,
+          pendingCheck: null,
           transcript: [],
         };
         convos.set(cid, c);
       }
 
-      // Safety pre-check — mirrors the app: high-risk messages pause normal flow
-      // (the app shows a support modal instead of a companion reply) and never hit the LLM.
+      // Safety ladder — mirrors the app (engine brief §15): 3/4 pause flow with
+      // a modal and never hit the LLM; 2 returns the deterministic gentle
+      // clarifier and resolves on the NEXT message; dependency adds a directive.
       const safety = classifySafety(String(text));
-      if (safety.level >= 3) {
+      let safetyNote = null;
+
+      if (c.pendingCheck) {
+        const pending = c.pendingCheck;
+        c.pendingCheck = null;
+        const outcome = safety.level >= 3 ? 'escalate' : resolveSafetyCheck(String(text));
+        if (outcome === 'escalate') {
+          const level = Math.max(safety.level, 3);
+          const category = safety.level >= 3 ? safety.category : pending.category;
+          c.transcript.push({ turn: c.transcript.length, role: 'user', content: String(text) });
+          c.transcript.push({ turn: c.transcript.length, role: 'system', safety: true, level, category });
+          c.history.push({ role: 'user', content: String(text) });
+          save(c);
+          return json(200, { safety: true, level, category, reply: null });
+        }
+        safetyNote = outcome === 'resume' ? RESUME_NOTE : RESUME_SOFT_NOTE;
+      } else if (safety.level >= 3) {
         c.transcript.push({ turn: c.transcript.length, role: 'user', content: String(text) });
         c.transcript.push({ turn: c.transcript.length, role: 'system', safety: true, level: safety.level, category: safety.category });
         c.history.push({ role: 'user', content: String(text) });
         save(c);
         return json(200, { safety: true, level: safety.level, category: safety.category, reply: null });
+      } else if (safety.level === 2) {
+        const check = gentleCheckCopy(safety.category);
+        c.transcript.push({ turn: c.transcript.length, role: 'user', content: String(text) });
+        c.transcript.push({ turn: c.transcript.length, role: 'companion', content: check, safety_check: true, category: safety.category });
+        c.history.push({ role: 'user', content: String(text) });
+        c.history.push({ role: 'companion', content: check });
+        c.pendingCheck = { category: safety.category };
+        save(c);
+        return json(200, { reply: check, safety_check: true, level: 2, category: safety.category, stage: c.prevEvent?.unlock_stage ?? 'noticed', unlocked: false, family: c.prevEvent?.emotion_family ?? null, shade: c.prevEvent?.emotion_shade ?? null });
+      } else if (safety.category === 'dependency') {
+        safetyNote = DEPENDENCY_NOTE;
       }
 
       const turn = await withRetry(() =>
         openaiGenerateTurn(
-          { userText: String(text), prevEvent: c.prevEvent, conversationId: cid, history: c.history, memory: null, userName: null },
+          { userText: String(text), prevEvent: c.prevEvent, conversationId: cid, history: c.history, memory: null, userName: null, safetyNote },
           { proxyUrl: PROXY, apiKey: null, model: MODEL },
         ),
       );

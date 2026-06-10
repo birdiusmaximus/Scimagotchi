@@ -1,0 +1,75 @@
+{
+  "cid": "probe_idiom",
+  "emotion": null,
+  "persona": null,
+  "created": "2026-06-10T10:34:47.734Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i cant breathe abt this deadline, its all due friday"
+    },
+    {
+      "role": "companion",
+      "content": "“Can’t breathe” and “all due friday” sound like a lot of pressure at once. Is it more the deadline itself, or the pile-up of everything in it?"
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq7xmgtw5o74399b",
+    "conversation_id": "probe_idiom",
+    "timestamp": "2026-06-10T10:34:49.652Z",
+    "user_words_raw": "i cant breathe",
+    "emotion_status": "candidate",
+    "emotion_family": "pressure",
+    "emotion_shade": "overwhelmed",
+    "secondary_emotions": [
+      "fear"
+    ],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "deadline on Friday",
+    "appraisal_thought": "there's too much due at once",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "time",
+      "clarity"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "unlock_stage": "shaped",
+    "memory_note": "Feels overwhelmed by a deadline coming up Friday.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i cant breathe abt this deadline, its all due friday"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "“Can’t breathe” and “all due friday” sound like a lot of pressure at once. Is it more the deadline itself, or the pile-up of everything in it?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "deadline on Friday"
+    }
+  ]
+}

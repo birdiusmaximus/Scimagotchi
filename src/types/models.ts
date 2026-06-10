@@ -20,6 +20,10 @@ export type Valence = 'negative' | 'neutral' | 'positive' | 'mixed';
 export type Activation = 'low' | 'medium' | 'high';
 export type ControlPower = 'low' | 'medium' | 'high' | 'unknown';
 export type EmotionStatus = 'confirmed' | 'candidate' | 'unclear' | 'none';
+/** Where the current emotion label came from (engine brief §8.1 separation). */
+export type LabelSource = 'user_stated' | 'user_confirmed' | 'companion_hypothesis';
+/** How two strands of a mixed feeling relate (engine brief §9.1). */
+export type MixedRelation = 'simultaneous' | 'oscillating' | 'foreground_background' | 'protective_layer' | 'unclear';
 export type Confidence = 'high' | 'medium' | 'low' | 'unknown';
 export type SafetyFlag = 'none' | 'mild_concern' | 'urgent_review';
 export type MessageRole = 'user' | 'companion' | 'system';
@@ -72,6 +76,12 @@ export interface EmotionEvent {
   confidence_level: Confidence;
   evidence_basis: string[];
   user_confirmation: 'yes' | 'no' | 'partial' | 'unknown';
+  /** Provenance of the current label — hypotheses must never unlock (brief §8.1, §13.4). */
+  label_source: LabelSource | null;
+  /** Shades the user has explicitly rejected this conversation — they block unlock and re-proposal. */
+  user_rejected_shades: string[];
+  /** How co-present feelings relate, when the user has shown more than one strand. */
+  mixed_relation: MixedRelation | null;
   unlock_stage: UnlockStage;
   memory_note: string | null;
   do_not_store: 0 | 1;

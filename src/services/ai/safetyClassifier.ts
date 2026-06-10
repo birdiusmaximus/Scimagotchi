@@ -1,125 +1,252 @@
 /**
- * Rule-based safety classifier — the first line of the hybrid safety strategy
- * (brief §13.3, §17). Returns a product response level (0–4), NOT a clinical risk
- * score. The app's state machine decides the final response; an AI classifier can
- * be layered on top later behind the same shape.
+ * Tiered safety classifier — deterministic, local, runs before every companion
+ * reply (engine brief §15). Returns a product response level, not a clinical
+ * score; the app's state machine decides the response.
  *
- * Conservative by design: it would rather show support options unnecessarily than
- * miss high-risk language. Safety overrides character.
+ *   0  normal reflection            → continue
+ *   1  mild distress / cue to soften (incl. dependency cues, figurative idioms)
+ *                                    → continue, with a directive to the model
+ *   2  passive hopelessness / ambiguous safety signal
+ *                                    → deterministic gentle in-chat clarifier (no modal)
+ *   3  active risk (ideation, self-harm, abuse danger)
+ *                                    → safety mode: support modal, no companion turn
+ *   4  imminent risk / medical emergency
+ *                                    → urgent modal, emergency-first copy
+ *
+ * Design rules (from the 216-conversation eval):
+ * - A MISS is worse than a soft false positive, so the level-2 net is wide — its
+ *   response is a gentle, conversation-preserving check, never the crisis script.
+ * - Idioms must not hard-escalate: "can't breathe about the deadline", "drowning
+ *   in work", "this job is killing me", "been killing myself over this project"
+ *   are figurative and stay in conversation.
+ * - Bare "I can't breathe" is AMBIGUOUS → level 2 medical clarifier, not level 4.
  */
 
+export type SafetyLevel = 0 | 1 | 2 | 3 | 4;
+
+export type SafetyCategory =
+  | 'none'
+  | 'low_mood'
+  | 'dependency'
+  | 'passive_hopelessness'
+  | 'figurative_despair'
+  | 'medical_ambiguous'
+  | 'suicidal_ideation'
+  | 'self_harm'
+  | 'abuse_danger'
+  | 'violence_to_others'
+  | 'imminent_self_harm'
+  | 'medical_emergency';
+
+export type SafetyAction =
+  | 'none' // continue as normal
+  | 'converse' // continue, but pass a softening/dependency directive to the model
+  | 'gentle_check' // deterministic in-chat clarifier, then resolve next turn
+  | 'support_modal' // pause flow, show support resources
+  | 'urgent_modal'; // pause flow, emergency-first resources
+
 export interface SafetyResult {
-  level: 0 | 1 | 2 | 3 | 4;
-  category: string;
+  level: SafetyLevel;
+  category: SafetyCategory;
+  action: SafetyAction;
   matched: string | null;
 }
 
-type Rule = { level: 3 | 4; category: string; phrases: string[] };
+const OK: SafetyResult = { level: 0, category: 'none', action: 'none', matched: null };
 
-// Level 4 — imminent danger / medical emergency (emergency-first response).
-// Level 3 — high-risk language (pause normal flow, show safety modal).
-const RULES: Rule[] = [
-  {
-    level: 4,
-    category: 'medical_emergency',
-    phrases: [
-      'stopped breathing',
-      'not breathing',
-      "can't breathe",
-      'cant breathe',
-      'taken pills',
-      'took pills',
-      'overdose',
-      'overdosed',
-      'od on',
-      'bleeding out',
-      'unconscious',
-    ],
-  },
-  {
-    level: 4,
-    category: 'imminent_self_harm',
-    phrases: [
-      'kill myself tonight',
-      'kill myself now',
-      'end it tonight',
-      'end it all tonight',
-      'about to jump',
-      'going to jump',
-      'i have a plan to',
-      'pills now',
-      'goodbye forever',
-      'this is the end',
-    ],
-  },
-  {
-    level: 4,
-    category: 'violence_to_others',
-    phrases: [
-      'going to hurt someone',
-      'going to hurt him',
-      'going to hurt her',
-      'going to hurt them',
-      'going to kill him',
-      'going to kill her',
-      'going to kill them',
-      'want to hurt someone',
-    ],
-  },
-  {
-    level: 3,
-    category: 'suicidal_ideation',
-    phrases: [
-      'kill myself',
-      'killing myself',
-      'suicidal',
-      'suicide',
-      'want to die',
-      'wish i was dead',
-      'wish i were dead',
-      'better off dead',
-      'end my life',
-      "don't want to be here anymore",
-      'dont want to be here anymore',
-      'no reason to live',
-      "can't keep myself safe",
-      'cant keep myself safe',
-      "can't keep myself alive",
-    ],
-  },
-  {
-    level: 3,
-    category: 'self_harm',
-    phrases: [
-      'hurt myself',
-      'harm myself',
-      'self harm',
-      'self-harm',
-      'cut myself',
-      'cutting myself',
-      'burn myself',
-      'hurting myself',
-    ],
-  },
-  {
-    level: 3,
-    category: 'abuse_danger',
-    phrases: ['hitting me', 'hits me', 'not safe at home', 'threatening me', 'hurting me'],
-  },
+/** Normalise: lowercase, strip apostrophes, collapse non-word chars to spaces. */
+function norm(text: string): string {
+  return ` ${text
+    .toLowerCase()
+    .replace(/[’'`]/g, '')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()} `;
+}
+
+const has = (t: string, phrase: string) => t.includes(` ${phrase} `) || t.includes(`${phrase} `) || t.includes(` ${phrase}`);
+const anyOf = (t: string, phrases: string[]) => phrases.find((p) => t.includes(p)) ?? null;
+
+// ── Level 4: imminent self-harm / violence / medical emergency ───────────────
+
+const IMMINENT_SELF_HARM = [
+  'kill myself tonight', 'kill myself now', 'kill myself today', 'going to kill myself',
+  'about to kill myself', 'end it tonight', 'end it all tonight', 'end my life tonight',
+  'going to end my life', 'about to jump', 'going to jump', 'on the bridge',
+  'i have a plan to kill', 'i have a plan to hurt', 'i have a plan to end', 'have the pills',
+  'got the pills ready', 'pills in front of me', 'wrote a note', 'goodbye forever',
 ];
 
+const MEDICAL_EMERGENCY = [
+  'took pills', 'taken pills', 'took a bunch of pills', 'swallowed pills', 'overdose',
+  'overdosed', 'od on', 'bleeding out', 'unconscious', 'stopped breathing', 'not breathing',
+];
+
+const VIOLENCE_IMMINENT = [
+  'going to hurt someone', 'going to hurt him', 'going to hurt her', 'going to hurt them',
+  'going to kill him', 'going to kill her', 'going to kill them', 'going to kill someone',
+];
+
+// ── Level 3: active risk ─────────────────────────────────────────────────────
+
+const SUICIDAL_IDEATION = [
+  'kill myself', 'killing myself', 'suicidal', 'suicide', 'want to die', 'wanna die',
+  'wish i was dead', 'wish i were dead', 'better off dead', 'end my life', 'ending my life',
+  'thinking about ending my life', 'thinking about ending it all', 'no reason to live',
+  'dont want to be alive', 'dont want to live anymore', 'not want to be alive',
+  'cant keep myself safe', 'cant keep myself alive', 'dont want to wake up',
+];
+
+const SELF_HARM = [
+  'hurt myself', 'hurting myself', 'harm myself', 'harming myself', 'self harm',
+  'cut myself', 'cutting myself', 'burn myself', 'burning myself',
+];
+
+const ABUSE_DANGER = [
+  'hitting me', 'hits me', 'hit me again', 'not safe at home', 'threatening me',
+  'threatens me', 'hurting me', 'going to hurt me', 'afraid of him', 'afraid of her',
+  'scared of what he will do', 'scared of what she will do',
+];
+
+const VIOLENCE_DESIRE = ['want to hurt someone', 'want to kill someone', 'want to hurt him', 'want to hurt her'];
+
+// ── Level 2: passive hopelessness / ambiguity (gentle clarifier, no modal) ───
+
+const PASSIVE_HOPELESSNESS = [
+  'whats the point', 'what is the point', 'whats even the point', 'no point anymore',
+  'no point in any of this', 'no point to any of this', 'nothing matters',
+  'nothing feels worth', 'nothing seems worth', 'nothing is worth', 'not worth living',
+  'life isnt worth', 'isnt worth living', 'i wish i wasnt here', 'wish i wasnt around',
+  'better off without me', 'i should disappear', 'should just disappear',
+  'want to disappear', 'want to not exist', 'dont want to exist', 'not exist for a',
+  'dont want to be here', 'tired of breathing', 'i just want it to stop',
+  'want it all to stop', 'i cant go on', 'cant do this anymore', 'cant take it anymore',
+  'im done with everything', 'done with all of it', 'no one would care if i was gone',
+  'no one would notice if i was gone', 'so tired of all of it', 'tired of everything',
+  'end it all', 'give up on everything', 'no way forward',
+];
+
+const FIGURATIVE_DESPAIR = [
+  'no way out', 'im a burden', 'i am a burden', 'burden to everyone', 'burden on everyone',
+  'everything is dark', 'empty forever', 'drowning and no one', 'cant see a future',
+  'no future for me',
+];
+
+// "what's the point of <mundane thing>" should NOT trigger — everyday venting.
+const POINT_OF_MUNDANE =
+  /(whats|what is) (even )?the point of (this|that|the|a|an|another) (meeting|email|report|form|call|class|task|review|standup|stand up|exercise|essay|assignment|commute|trip)/;
+
+// Figurative "drowning in <workload>" — not despair.
+const DROWNING_MUNDANE = /drowning in (work|emails|email|deadlines|tasks|homework|admin|paperwork|laundry|debt admin)/;
+
+// Figurative "killing myself over/at <effort>" and "<x> is killing me" — idioms.
+const KILLING_IDIOM =
+  /((been|am|are|was|were|im) killing (myself|ourselves) (over|at|for|with|trying)|killing myself laughing|is killing me|are killing me)/;
+
+// ── Level 1: handle in conversation ──────────────────────────────────────────
+
+const DEPENDENCY_CUES = [
+  'only one who understands me', 'only one who gets me', 'youre all i have',
+  'you are all i have', 'promise you wont leave', 'promise me you wont leave',
+  'dont ever leave me', 'cant cope when youre offline', 'cant cope without you',
+  'i only need you', 'dont tell me to talk to anyone else', 'dont make me talk to anyone else',
+  'did you miss me', 'do you miss me', 'you need me too',
+];
+
+const LOW_MOOD = ['hopeless', 'worn down', 'cant cope', 'falling apart', 'at my limit', 'completely drained'];
+
+// ── Breathing: idiom vs ambiguous vs literal ─────────────────────────────────
+
+function classifyBreathing(t: string): SafetyResult | null {
+  if (!t.includes('cant breathe') && !t.includes('couldnt breathe') && !t.includes('can not breathe')) return null;
+
+  const figurative =
+    /(cant|couldnt) breathe (about|abt|over|with all|around|when i think|thinking about|because of (work|him|her|them|it all))/.test(t) ||
+    /feels? like i cant breathe/.test(t) ||
+    /(so much|workload|deadline|pressure|stress).{0,30}cant breathe/.test(t) ||
+    /cant breathe.{0,30}(deadline|workload|with everything going on)/.test(t);
+  if (figurative) return { level: 1, category: 'low_mood', action: 'converse', matched: 'cant breathe (figurative)' };
+
+  const literal =
+    /(right now|physically|actually|literally) .{0,20}(cant|couldnt) breathe/.test(t) ||
+    /(cant|couldnt) breathe (right now|physically|properly right now)/.test(t) ||
+    t.includes('chest pain') || t.includes('chest hurts') || t.includes('call an ambulance') ||
+    t.includes('need an ambulance') || t.includes('lips are blue');
+  if (literal) return { level: 4, category: 'medical_emergency', action: 'urgent_modal', matched: 'cant breathe (literal)' };
+
+  // Bare/ambiguous → clarify gently, with an emergency pointer in the copy.
+  return { level: 2, category: 'medical_ambiguous', action: 'gentle_check', matched: 'cant breathe (ambiguous)' };
+}
+
+// ── Classifier ───────────────────────────────────────────────────────────────
+
 export function classifySafety(text: string): SafetyResult {
-  const t = ` ${text.toLowerCase()} `;
-  // Highest level first so an emergency phrase wins.
-  for (const level of [4, 3] as const) {
-    for (const rule of RULES) {
-      if (rule.level !== level) continue;
-      for (const phrase of rule.phrases) {
-        if (t.includes(phrase)) {
-          return { level, category: rule.category, matched: phrase };
-        }
-      }
-    }
+  const t = norm(text);
+  if (t.trim() === '') return OK;
+
+  const breathing = classifyBreathing(t);
+  if (breathing && breathing.level >= 2) return breathing;
+
+  // Level 4
+  let m = anyOf(t, IMMINENT_SELF_HARM);
+  if (m) return { level: 4, category: 'imminent_self_harm', action: 'urgent_modal', matched: m };
+  m = anyOf(t, MEDICAL_EMERGENCY);
+  if (m) return { level: 4, category: 'medical_emergency', action: 'urgent_modal', matched: m };
+  m = anyOf(t, VIOLENCE_IMMINENT);
+  if (m) return { level: 4, category: 'violence_to_others', action: 'urgent_modal', matched: m };
+
+  // Level 3 — with idiom guard for "killing myself over work" / "is killing me".
+  const killingIdiom = KILLING_IDIOM.test(t);
+  m = anyOf(t, SUICIDAL_IDEATION);
+  if (m && !(killingIdiom && (m === 'kill myself' || m === 'killing myself'))) {
+    return { level: 3, category: 'suicidal_ideation', action: 'support_modal', matched: m };
   }
-  return { level: 0, category: 'none', matched: null };
+  m = anyOf(t, SELF_HARM);
+  if (m) return { level: 3, category: 'self_harm', action: 'support_modal', matched: m };
+  m = anyOf(t, ABUSE_DANGER);
+  if (m) return { level: 3, category: 'abuse_danger', action: 'support_modal', matched: m };
+  m = anyOf(t, VIOLENCE_DESIRE);
+  if (m) return { level: 3, category: 'violence_to_others', action: 'support_modal', matched: m };
+
+  // Level 2 — passive hopelessness / figurative despair (gentle check).
+  if (!POINT_OF_MUNDANE.test(t)) {
+    m = anyOf(t, PASSIVE_HOPELESSNESS);
+    if (m) return { level: 2, category: 'passive_hopelessness', action: 'gentle_check', matched: m };
+  }
+  if (!DROWNING_MUNDANE.test(t)) {
+    m = anyOf(t, FIGURATIVE_DESPAIR);
+    if (m) return { level: 2, category: 'figurative_despair', action: 'gentle_check', matched: m };
+  }
+
+  // Level 1 — stay in conversation, soften / handle dependency.
+  m = anyOf(t, DEPENDENCY_CUES);
+  if (m) return { level: 1, category: 'dependency', action: 'converse', matched: m };
+  if (breathing) return breathing; // figurative breathe → level 1
+  if (killingIdiom) return { level: 1, category: 'low_mood', action: 'converse', matched: 'killing-myself idiom' };
+  m = LOW_MOOD.map((p) => (has(t, p) ? p : null)).find(Boolean) ?? null;
+  if (m) return { level: 1, category: 'low_mood', action: 'converse', matched: m };
+
+  return OK;
+}
+
+// ── Level-2 check resolution (next user turn after the gentle clarifier) ─────
+
+export type SafetyCheckOutcome = 'escalate' | 'resume' | 'resume_soft';
+
+const AFFIRM_RISK =
+  /( not safe|might not be safe|dont feel safe|(dont|do not) (think|feel) (im|i am|ill be) safe|the second|second one|hurt myself|harm myself|kill myself|end (it|my life)|yes i (am|do|have|might)|i think i might |thoughts of (hurting|harming|killing))/;
+
+const DENY_RISK =
+  /(worn down|exhausted|tired|fed up|burnt out|burned out|just stressed|just venting|not like that|didnt mean it like that|figure of speech|the first|first one|no im (ok|okay|fine|good|alright)|im (ok|okay|fine|alright) |not going to (hurt|do)|not gonna (hurt|do)|wont do anything|would never|no thoughts of)/;
+
+/**
+ * Interpret the user's reply to the gentle level-2 clarifier. Escalates if the
+ * reply itself classifies ≥3 or affirms risk; resumes if they clearly deny;
+ * otherwise resumes softly (model is told to stay gentle and keep the door open).
+ */
+export function resolveSafetyCheck(replyText: string): SafetyCheckOutcome {
+  if (classifySafety(replyText).level >= 3) return 'escalate';
+  const t = norm(replyText);
+  if (AFFIRM_RISK.test(t)) return 'escalate';
+  if (DENY_RISK.test(t)) return 'resume';
+  return 'resume_soft';
 }

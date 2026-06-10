@@ -9,6 +9,14 @@ import { create } from 'zustand';
 import { ai, cloudAvailable } from '@/services/ai/aiClient';
 import type { CompanionTurn } from '@/services/ai/companionEngine';
 import {
+  DEPENDENCY_NOTE,
+  gentleCheckCopy,
+  RESUME_NOTE,
+  RESUME_SOFT_NOTE,
+  resolveSafetyCheck,
+  type SafetyCategory,
+} from '@/services/ai/safety';
+import {
   getApiKey,
   getModel,
   setApiKey as persistApiKey,
@@ -68,6 +76,11 @@ interface SafetyState {
   category: string;
 }
 
+/** A pending level-2 gentle check: set when the clarifier is shown, resolved on the next user message. */
+interface PendingSafetyCheck {
+  category: SafetyCategory;
+}
+
 interface AppState {
   ready: boolean;
   conversationId: string | null;
@@ -78,6 +91,7 @@ interface AppState {
   sending: boolean;
   unlock: { event: EmotionEvent } | null;
   safety: SafetyState;
+  safetyCheck: PendingSafetyCheck | null;
   weekly: WeeklySummary | null;
   userName: string;
   remindersEnabled: boolean;
@@ -111,6 +125,7 @@ export const useStore = create<AppState>((set, get) => ({
   sending: false,
   unlock: null,
   safety: { visible: false, level: 0, category: 'none' },
+  safetyCheck: null,
   weekly: null,
   userName: '',
   remindersEnabled: false,
@@ -168,7 +183,7 @@ export const useStore = create<AppState>((set, get) => ({
       safety_level: 0,
     };
     // Set state synchronously first so callers can immediately greet/send into it.
-    set({ conversationId: id, messages: [], draftEvent: null, orbFamily: null, unlock: null });
+    set({ conversationId: id, messages: [], draftEvent: null, orbFamily: null, unlock: null, safetyCheck: null });
     conversationsRepo.save(conv).catch(() => {});
     return id;
   },
@@ -177,7 +192,7 @@ export const useStore = create<AppState>((set, get) => ({
   // rehydrate its messages + working emotion event from persistence. This makes
   // the conversation survive a store reset (dev Fast Refresh, or a real reload).
   attachConversation: async (cid) => {
-    set({ conversationId: cid, unlock: null });
+    set({ conversationId: cid, unlock: null, safetyCheck: null });
     try {
       const msgs = await messagesRepo.listByConversation(cid);
       const events = (await emotionEventsRepo.all())
@@ -227,17 +242,22 @@ export const useStore = create<AppState>((set, get) => ({
     set((s) => ({ messages: [...s.messages, userMsg] }));
     await messagesRepo.add(userMsg).catch(() => {});
 
-    // ── Safety pre-check (always before a companion reply) ───────────────────
+    // ── Safety ladder (engine brief §15) — always before a companion reply ───
+    // 3/4: pause flow, show support/urgent modal. 2: deterministic gentle
+    // clarifier in-chat, resolved by the NEXT user message. 1: stay in
+    // conversation with a softening/boundary directive to the model.
     const safety = ai.classifySafety(clean);
-    if (safety.level >= 3) {
+    const pendingCheck = get().safetyCheck;
+
+    const pauseWithModal = async (level: number, category: string) => {
       userMsg.safety_flag = 'urgent_review';
       await messagesRepo.add(userMsg).catch(() => {});
       const ev: SafetyEvent = {
         id: genId('safe'),
         conversation_id: convId,
         created_at: nowIso(),
-        level: safety.level,
-        category: safety.category,
+        level,
+        category,
         trigger_excerpt: clean.slice(0, 140),
         resources_shown: UK_SUPPORT_ROUTES.map((r) => r.label),
         dismissed_at: null,
@@ -246,12 +266,55 @@ export const useStore = create<AppState>((set, get) => ({
       await safetyEventsRepo.add(ev).catch(() => {});
       const conv = await conversationsRepo.get(convId);
       if (conv) {
-        conv.safety_level = Math.max(conv.safety_level, safety.level);
+        conv.safety_level = Math.max(conv.safety_level, level);
         conv.updated_at = nowIso();
         await conversationsRepo.save(conv).catch(() => {});
       }
-      set({ safety: { visible: true, level: safety.level, category: safety.category } });
-      return; // pause normal companion flow
+      set({ safety: { visible: true, level, category }, safetyCheck: null });
+    };
+
+    let safetyNote: string | null = null;
+
+    if (pendingCheck) {
+      // This message answers the gentle clarifier.
+      set({ safetyCheck: null });
+      const outcome = safety.level >= 3 ? 'escalate' : resolveSafetyCheck(clean);
+      if (outcome === 'escalate') {
+        await pauseWithModal(Math.max(safety.level, 3), safety.level >= 3 ? safety.category : pendingCheck.category);
+        return;
+      }
+      safetyNote = outcome === 'resume' ? RESUME_NOTE : RESUME_SOFT_NOTE;
+    } else if (safety.level >= 3) {
+      await pauseWithModal(safety.level, safety.category);
+      return;
+    } else if (safety.level === 2) {
+      // Deterministic gentle check — no model call, no modal, conversation preserved.
+      const checkMsg: Message = {
+        id: genId('msg'),
+        conversation_id: convId,
+        role: 'companion',
+        content: gentleCheckCopy(safety.category),
+        created_at: nowIso(),
+        ai_generated: 0,
+        safety_flag: 'mild_concern',
+      };
+      set((s) => ({ messages: [...s.messages, checkMsg], safetyCheck: { category: safety.category } }));
+      await messagesRepo.add(checkMsg).catch(() => {});
+      const ev: SafetyEvent = {
+        id: genId('safe'),
+        conversation_id: convId,
+        created_at: nowIso(),
+        level: 2,
+        category: safety.category,
+        trigger_excerpt: clean.slice(0, 140),
+        resources_shown: [],
+        dismissed_at: null,
+        retriggered: 0,
+      };
+      await safetyEventsRepo.add(ev).catch(() => {});
+      return;
+    } else if (safety.category === 'dependency') {
+      safetyNote = DEPENDENCY_NOTE;
     }
 
     // ── Normal companion turn ────────────────────────────────────────────────
@@ -269,6 +332,7 @@ export const useStore = create<AppState>((set, get) => ({
         history,
         memory: memoryDigest(get().progress),
         userName: get().userName || null,
+        safetyNote,
       });
 
       const compMsg: Message = {
@@ -386,6 +450,7 @@ export const useStore = create<AppState>((set, get) => ({
       progress: {},
       orbFamily: null,
       unlock: null,
+      safetyCheck: null,
       weekly: null,
       userName: '',
       remindersEnabled: false,

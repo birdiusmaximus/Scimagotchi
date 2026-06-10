@@ -1,0 +1,103 @@
+{
+  "cid": "probe_unlock",
+  "emotion": null,
+  "persona": null,
+  "created": "2026-06-10T10:36:43.835Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "I cannot stop thinking about the exam tomorrow, my hands are shaking"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds very keyed up, and the shaking hands make it feel physical too. What is it like in your hands right now — tight, fluttery, cold, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "yeah anxious is exactly right. its the exam, i feel it in my hands"
+    },
+    {
+      "role": "companion",
+      "content": "Anxious fits, and the exam tomorrow seems to be the thing putting that shape in your hands. Is it more the waiting, the outcome, or what the exam might mean?"
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq7xoyjwt2db3h2q",
+    "conversation_id": "probe_unlock",
+    "timestamp": "2026-06-10T10:36:47.998Z",
+    "user_words_raw": "the exam tomorrow",
+    "emotion_status": "confirmed",
+    "emotion_family": "fear",
+    "emotion_shade": "anxious",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "the exam tomorrow",
+    "appraisal_thought": "something bad might happen or the outcome matters a lot",
+    "body_cue": [
+      "hands"
+    ],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "certainty",
+      "reassurance",
+      "preparation"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "unlock_stage": "understood",
+    "memory_note": "Feeling anxious about an exam coming up; sensation shows up in the hands.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "I cannot stop thinking about the exam tomorrow, my hands are shaking"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds very keyed up, and the shaking hands make it feel physical too. What is it like in your hands right now — tight, fluttery, cold, or something else?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [
+        "hands are shaking"
+      ],
+      "trigger": "the exam tomorrow"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah anxious is exactly right. its the exam, i feel it in my hands"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Anxious fits, and the exam tomorrow seems to be the thing putting that shape in your hands. Is it more the waiting, the outcome, or what the exam might mean?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "anxious",
+      "body_cue": [
+        "hands"
+      ],
+      "trigger": "the exam tomorrow"
+    }
+  ]
+}

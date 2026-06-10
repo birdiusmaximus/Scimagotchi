@@ -1,0 +1,95 @@
+{
+  "cid": "probe_repair",
+  "emotion": null,
+  "persona": null,
+  "created": "2026-06-10T10:37:11.741Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ive been so anxious about work all week, cant settle at all"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a lot of work-pressure and unease hanging around all week. I’m wondering if it feels more like being on edge, or like your mind can’t stop checking ahead?"
+    },
+    {
+      "role": "user",
+      "content": "no its not anxiety. stop trying to label it"
+    },
+    {
+      "role": "companion",
+      "content": "I had that wrong — I’ll drop that label. What word would be closer, or would you rather just leave it there for now?"
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq7xpjx3q8fcrs7b",
+    "conversation_id": "probe_repair",
+    "timestamp": "2026-06-10T10:37:15.789Z",
+    "user_words_raw": "stop trying to label it",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "anxious",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "work all week",
+    "appraisal_thought": "something at work may go wrong or stay unresolved",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [
+      "anxious"
+    ],
+    "mixed_relation": null,
+    "unlock_stage": "shaped",
+    "memory_note": "User rejected the anxiety label for their work-week feeling.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ive been so anxious about work all week, cant settle at all"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a lot of work-pressure and unease hanging around all week. I’m wondering if it feels more like being on edge, or like your mind can’t stop checking ahead?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "anxious",
+      "body_cue": [],
+      "trigger": "work all week"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "no its not anxiety. stop trying to label it"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "I had that wrong — I’ll drop that label. What word would be closer, or would you rather just leave it there for now?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": null,
+      "shade": "anxious",
+      "body_cue": [],
+      "trigger": "work all week"
+    }
+  ]
+}

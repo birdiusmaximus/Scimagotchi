@@ -15,6 +15,7 @@ export type Collection =
   | 'messages'
   | 'emotion_events'
   | 'emotion_progress'
+  | 'memory_cards'
   | 'weekly_summaries'
   | 'safety_events'
   | 'app_settings';
@@ -33,6 +34,7 @@ const COLLECTIONS: Collection[] = [
   'messages',
   'emotion_events',
   'emotion_progress',
+  'memory_cards',
   'weekly_summaries',
   'safety_events',
   'app_settings',

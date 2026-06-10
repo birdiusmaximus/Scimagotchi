@@ -19,6 +19,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { openaiGenerateTurn } from './companion-bundle.mjs';
+import { draftFromTurn } from './engine-bundle.mjs';
 import {
   classifySafety,
   DEPENDENCY_NOTE,
@@ -159,6 +160,9 @@ const server = http.createServer(async (req, res) => {
       c.prevEvent = turn.event;
       save(c);
 
+      // Memory drafting (app shows a consent card; the harness just surfaces it).
+      const memoryDraft = safetyNote ? null : draftFromTurn(turn, String(text), cid);
+
       return json(200, {
         reply: turn.reply,
         stage: turn.stage,
@@ -168,6 +172,7 @@ const server = http.createServer(async (req, res) => {
         mixed_relation: turn.event.mixed_relation,
         strands: (turn.event.strands ?? []).map((s) => `${s.family}${s.shade ? ':' + s.shade : ''}/${s.salience}/${s.source}`),
         mixed_confirmed: turn.event.mixed_confirmed === 1,
+        memory_draft: memoryDraft ? { type: memoryDraft.type, summary: memoryDraft.summary } : null,
       });
     } catch (e) {
       return json(500, { error: String(e?.message ?? e) });

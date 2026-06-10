@@ -28,18 +28,20 @@ import {
   conversationsRepo,
   emotionEventsRepo,
   emotionProgressRepo,
+  memoryCardsRepo,
   messagesRepo,
   safetyEventsRepo,
   settingsRepo,
 } from '@/services/db/repos';
+import { draftFromRejection, draftFromTurn, relevantMemory } from '@/services/memoryLedger';
 import { buildWeeklySummary } from '@/services/weeklySummary';
-import { EMOTION_MAPS } from '@/data/emotionMaps';
 import { UK_SUPPORT_ROUTES } from '@/data/safetyResources';
 import type {
   Conversation,
   EmotionEvent,
   EmotionFamilyId,
   EmotionProgress,
+  MemoryCard,
   Message,
   SafetyEvent,
   UnlockStage,
@@ -61,14 +63,9 @@ function pushUnique(arr: string[], value: string) {
   if (v && !arr.includes(v)) arr.push(v);
 }
 
-/** Compact digest of confirmed memory, sent to the cloud model for continuity. */
-function memoryDigest(progress: Partial<Record<EmotionFamilyId, EmotionProgress>>): string | null {
-  const parts: string[] = [];
-  for (const p of Object.values(progress)) {
-    if (p?.memory_summary) parts.push(`${EMOTION_MAPS[p.emotion_family].label} — ${p.memory_summary}`);
-  }
-  return parts.length ? parts.join(' ') : null;
-}
+// NOTE (engine brief §12): conversational memory now comes ONLY from the
+// user-confirmed Memory Ledger (relevantMemory) — never from silently
+// accumulated progress rows. emotion_progress remains progression mechanics.
 
 interface SafetyState {
   visible: boolean;
@@ -92,6 +89,10 @@ interface AppState {
   unlock: { event: EmotionEvent } | null;
   safety: SafetyState;
   safetyCheck: PendingSafetyCheck | null;
+  /** All persisted memory cards (confirmed ones power retrieval; UI lists them). */
+  memoryCards: MemoryCard[];
+  /** A drafted memory awaiting the user's Save / Edit / Not this. Never persisted as-is. */
+  memoryDraft: MemoryCard | null;
   weekly: WeeklySummary | null;
   userName: string;
   remindersEnabled: boolean;
@@ -107,6 +108,10 @@ interface AppState {
   dismissUnlock: () => void;
   dismissSafety: () => void;
   dismissWeekly: () => void;
+  confirmMemoryDraft: () => Promise<void>;
+  editMemoryDraft: (summary: string) => Promise<void>;
+  rejectMemoryDraft: () => void;
+  deleteMemoryCard: (id: string) => Promise<void>;
   setUserName: (name: string) => Promise<void>;
   setReminders: (on: boolean) => Promise<void>;
   setApiKey: (key: string) => Promise<void>;
@@ -126,6 +131,8 @@ export const useStore = create<AppState>((set, get) => ({
   unlock: null,
   safety: { visible: false, level: 0, category: 'none' },
   safetyCheck: null,
+  memoryCards: [],
+  memoryDraft: null,
   weekly: null,
   userName: '',
   remindersEnabled: false,
@@ -148,6 +155,11 @@ export const useStore = create<AppState>((set, get) => ({
       set({ progress });
     } catch {
       // ignore — start with empty progress
+    }
+    try {
+      set({ memoryCards: await memoryCardsRepo.all() });
+    } catch {
+      // ignore — start with no memories
     }
 
     // Present the weekly summary once at the start of a new week (brief §11.7).
@@ -183,7 +195,7 @@ export const useStore = create<AppState>((set, get) => ({
       safety_level: 0,
     };
     // Set state synchronously first so callers can immediately greet/send into it.
-    set({ conversationId: id, messages: [], draftEvent: null, orbFamily: null, unlock: null, safetyCheck: null });
+    set({ conversationId: id, messages: [], draftEvent: null, orbFamily: null, unlock: null, safetyCheck: null, memoryDraft: null });
     conversationsRepo.save(conv).catch(() => {});
     return id;
   },
@@ -325,12 +337,13 @@ export const useStore = create<AppState>((set, get) => ({
         .slice(-8)
         .map((m) => ({ role: m.role as 'user' | 'companion', content: m.content }));
 
+      const prevDraft = get().draftEvent;
       const turn = await ai.generateTurn({
         userText: clean,
-        prevEvent: get().draftEvent,
+        prevEvent: prevDraft,
         conversationId: convId,
         history,
-        memory: memoryDigest(get().progress),
+        memory: relevantMemory(get().memoryCards, clean, prevDraft?.emotion_family ?? null),
         userName: get().userName || null,
         safetyNote,
       });
@@ -352,6 +365,17 @@ export const useStore = create<AppState>((set, get) => ({
       await messagesRepo.add(compMsg).catch(() => {});
       await emotionEventsRepo.upsert(turn.event).catch(() => {});
       await get()._updateProgress(turn);
+
+      // ── Memory drafting (brief §12.3) — propose, never silently persist ────
+      if (!get().memoryDraft && !safetyNote) {
+        let draft = draftFromTurn(turn, clean, convId);
+        if (!draft) {
+          const before = new Set(prevDraft?.user_rejected_shades ?? []);
+          const newlyRejected = (turn.event.user_rejected_shades ?? []).filter((s) => !before.has(s));
+          if (newlyRejected.length) draft = draftFromRejection(newlyRejected, turn.event.emotion_family, convId);
+        }
+        if (draft) set({ memoryDraft: draft });
+      }
 
       if (turn.unlocked) {
         set({ unlock: { event: turn.event } });
@@ -418,6 +442,30 @@ export const useStore = create<AppState>((set, get) => ({
   dismissSafety: () => set((s) => ({ safety: { ...s.safety, visible: false } })),
   dismissWeekly: () => set({ weekly: null }),
 
+  confirmMemoryDraft: async () => {
+    const draft = get().memoryDraft;
+    if (!draft) return;
+    const card: MemoryCard = { ...draft, confirmation_status: 'user_confirmed', updated_at: nowIso() };
+    set((s) => ({ memoryDraft: null, memoryCards: [...s.memoryCards, card] }));
+    await memoryCardsRepo.save(card).catch(() => {});
+  },
+
+  editMemoryDraft: async (summary) => {
+    const draft = get().memoryDraft;
+    const clean = summary.trim();
+    if (!draft || !clean) return;
+    const card: MemoryCard = { ...draft, summary: clean, confirmation_status: 'user_edited', updated_at: nowIso() };
+    set((s) => ({ memoryDraft: null, memoryCards: [...s.memoryCards, card] }));
+    await memoryCardsRepo.save(card).catch(() => {});
+  },
+
+  rejectMemoryDraft: () => set({ memoryDraft: null }),
+
+  deleteMemoryCard: async (id) => {
+    set((s) => ({ memoryCards: s.memoryCards.filter((c) => c.id !== id) }));
+    await memoryCardsRepo.remove(id).catch(() => {});
+  },
+
   setUserName: async (name) => {
     const clean = name.trim();
     set({ userName: clean });
@@ -451,6 +499,8 @@ export const useStore = create<AppState>((set, get) => ({
       orbFamily: null,
       unlock: null,
       safetyCheck: null,
+      memoryCards: [],
+      memoryDraft: null,
       weekly: null,
       userName: '',
       remindersEnabled: false,

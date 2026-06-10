@@ -10,6 +10,7 @@ import { EmotionUnlockCard } from '@/components/EmotionUnlockCard';
 import { Glass } from '@/components/Glass';
 import { GradientBackground } from '@/components/GradientBackground';
 import { IconButton } from '@/components/IconButton';
+import { MemoryDraftCard } from '@/components/MemoryDraftCard';
 import { MessageBubble } from '@/components/MessageBubble';
 import { TypingBubble } from '@/components/TypingBubble';
 import { Txt } from '@/components/Txt';
@@ -32,6 +33,7 @@ export default function ChatScreen() {
   const sending = useStore((s) => s.sending);
   const unlock = useStore((s) => s.unlock);
   const conversationId = useStore((s) => s.conversationId);
+  const memoryDraft = useStore((s) => s.memoryDraft);
 
   const scrollRef = useRef<ScrollView>(null);
 
@@ -114,6 +116,15 @@ export default function ChatScreen() {
                   {sending ? <TypingBubble /> : null}
                 </ScrollView>
               )}
+
+              {memoryDraft && !unlock ? (
+                <MemoryDraftCard
+                  draft={memoryDraft}
+                  onSave={() => useStore.getState().confirmMemoryDraft()}
+                  onEdit={(t) => useStore.getState().editMemoryDraft(t)}
+                  onReject={() => useStore.getState().rejectMemoryDraft()}
+                />
+              ) : null}
 
               <View style={styles.inputWrap}>
                 <ChatInput autoFocus refocusSignal={speak.key} onSubmit={(t) => useStore.getState().send(t)} />

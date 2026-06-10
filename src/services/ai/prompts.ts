@@ -175,7 +175,9 @@ export function buildSystemPrompt(opts: {
   if (known) sections.push(known);
   if (opts.memory) {
     sections.push(
-      `WHAT YOU REMEMBER ABOUT THIS PERSON (refer to it naturally if relevant, e.g. "from what you've told me before…", never "I know that you…"): ${opts.memory}`,
+      `WHAT YOU REMEMBER (only things this person chose to keep — use at most one, only if genuinely relevant):
+${opts.memory}
+Callback rules: phrase it lightly and tentatively, comparing not asserting — "last time you called this 'not enough of me to go around' — is this close to that shape, or different?". NEVER "you always…", never present a remembered pattern as a fact about them, never quote intimate detail when a light reference works. If nothing fits naturally, use none of it.`,
     );
   }
   if (opts.userName) sections.push(`Their name is ${opts.userName}. Use it rarely and warmly, if at all.`);

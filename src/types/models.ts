@@ -141,6 +141,43 @@ export interface WeeklySummary {
   pdf_export_path?: string | null;
 }
 
+/** What kind of thing a memory card records (engine brief §12.2). */
+export type MemoryCardType =
+  | 'emotional_pattern'
+  | 'body_cue_pattern'
+  | 'trigger_pattern'
+  | 'shade_distinction'
+  | 'mixed_pattern'
+  | 'repair_instruction'
+  | 'support_preference'
+  | 'language_preference'
+  | 'do_not_suggest';
+
+export type MemoryConfirmation = 'draft' | 'user_confirmed' | 'user_edited' | 'user_rejected' | 'expired';
+export type MemoryRetention = 'session_only' | 'expires' | 'persistent_until_deleted';
+
+/**
+ * One user-owned memory (engine brief §12). Cards are DRAFTED by the engine but
+ * become durable only through explicit user confirmation — never silently.
+ */
+export interface MemoryCard {
+  id: string;
+  created_at: string;
+  updated_at: string;
+  source_conversation_id: string | null;
+  type: MemoryCardType;
+  /** The memory itself, in user-facing language (no names/locations/third parties). */
+  summary: string;
+  /** The user's own phrases backing it. */
+  user_words: string[];
+  emotion_family: EmotionFamilyId | null;
+  confirmation_status: MemoryConfirmation;
+  sensitivity: 'low' | 'moderate' | 'high';
+  retention: MemoryRetention;
+  expires_at: string | null;
+  muted: 0 | 1;
+}
+
 export interface AppSettings {
   id: string; // always 'app'
   user_name?: string | null;

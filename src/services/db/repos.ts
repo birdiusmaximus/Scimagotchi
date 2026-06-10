@@ -10,6 +10,7 @@ import type {
   Conversation,
   EmotionEvent,
   EmotionProgress,
+  MemoryCard,
   Message,
   SafetyEvent,
   WeeklySummary,
@@ -57,6 +58,13 @@ export const emotionProgressRepo = {
 export const safetyEventsRepo = {
   add: (s: SafetyEvent) => db().put('safety_events', s),
   all: () => db().getAll<SafetyEvent>('safety_events'),
+};
+
+export const memoryCardsRepo = {
+  save: (c: MemoryCard) => db().put('memory_cards', c),
+  get: (id: string) => db().getById<MemoryCard>('memory_cards', id),
+  all: () => db().getAll<MemoryCard>('memory_cards'),
+  remove: (id: string) => db().remove('memory_cards', id),
 };
 
 export const weeklySummariesRepo = {

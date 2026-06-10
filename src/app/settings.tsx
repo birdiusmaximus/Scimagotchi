@@ -24,6 +24,10 @@ export default function SettingsScreen() {
   const router = useRouter();
   const userName = useStore((s) => s.userName);
   const remindersEnabled = useStore((s) => s.remindersEnabled);
+  const memoryCards = useStore((s) => s.memoryCards);
+  const savedMemories = memoryCards.filter(
+    (c) => c.confirmation_status === 'user_confirmed' || c.confirmation_status === 'user_edited',
+  );
 
   const [name, setName] = useState(userName);
   const [confirmDelete, setConfirmDelete] = useState(false);
@@ -93,6 +97,35 @@ export default function SettingsScreen() {
             <Txt variant="small" color={palette.inkSoft} style={{ marginTop: spacing.sm }}>
               Deleting the app deletes all of this data.
             </Txt>
+          </Glass>
+
+          {/* Companion memory — user-owned; inspect & delete (engine brief §12) */}
+          <SectionLabel>What the companion remembers</SectionLabel>
+          <Glass radius={radii.lg} contentStyle={styles.cardPad}>
+            {savedMemories.length === 0 ? (
+              <Txt variant="small" color={palette.inkSoft}>
+                Nothing yet. When something meaningful lands in a conversation, the companion will offer to keep it —
+                only what you approve is remembered.
+              </Txt>
+            ) : (
+              savedMemories.map((c, i) => (
+                <View key={c.id} style={[styles.memoryRow, i > 0 && styles.memoryRowDivider]}>
+                  <View style={{ flex: 1, paddingRight: spacing.sm }}>
+                    <Txt variant="label" color={palette.inkOnGlass}>
+                      {c.summary}
+                    </Txt>
+                    {c.user_words.length ? (
+                      <Txt variant="small" color={palette.inkSoft}>
+                        your words: “{c.user_words[0]}”
+                      </Txt>
+                    ) : null}
+                  </View>
+                  <PressableScale hitSlop={8} onPress={() => useStore.getState().deleteMemoryCard(c.id)}>
+                    <Feather name="trash-2" size={16} color={DANGER} />
+                  </PressableScale>
+                </View>
+              ))
+            )}
           </Glass>
 
           {/* Export */}
@@ -190,6 +223,8 @@ const styles = StyleSheet.create({
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } as any,
   privacy: { lineHeight: 22 },
+  memoryRow: { flexDirection: 'row', alignItems: 'center', paddingVertical: 8 },
+  memoryRowDivider: { borderTopWidth: 1, borderTopColor: 'rgba(120,120,160,0.14)' },
   confirmRow: { flexDirection: 'row', gap: spacing.sm, marginTop: spacing.md },
   btn: { flex: 1, alignItems: 'center', paddingVertical: 12, borderRadius: radii.pill },
   btnGhost: { backgroundColor: 'rgba(255,255,255,0.6)' },

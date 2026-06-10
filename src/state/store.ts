@@ -33,6 +33,7 @@ import {
   safetyEventsRepo,
   settingsRepo,
 } from '@/services/db/repos';
+import { advanceProgress, migrateStage } from '@/services/ai/progressionEngine';
 import { draftFromRejection, draftFromTurn, relevantMemory } from '@/services/memoryLedger';
 import { buildWeeklySummary } from '@/services/weeklySummary';
 import { UK_SUPPORT_ROUTES } from '@/data/safetyResources';
@@ -44,28 +45,15 @@ import type {
   MemoryCard,
   Message,
   SafetyEvent,
-  UnlockStage,
   WeeklySummary,
 } from '@/types/models';
 import { nowIso, startOfWeek, weekKeyOf } from '@/utils/date';
 import { genId } from '@/utils/ids';
 
-const STAGE_RANK: Record<UnlockStage, number> = {
-  noticed: 0,
-  named: 1,
-  shaped: 2,
-  understood: 3,
-  deepened: 4,
-};
-
-function pushUnique(arr: string[], value: string) {
-  const v = value.trim();
-  if (v && !arr.includes(v)) arr.push(v);
-}
-
 // NOTE (engine brief §12): conversational memory now comes ONLY from the
 // user-confirmed Memory Ledger (relevantMemory) — never from silently
-// accumulated progress rows. emotion_progress remains progression mechanics.
+// accumulated progress rows. emotion_progress remains progression mechanics
+// (the §13 stage ladder, owned by progressionEngine.ts).
 
 interface SafetyState {
   visible: boolean;
@@ -117,7 +105,7 @@ interface AppState {
   setApiKey: (key: string) => Promise<void>;
   setModel: (model: string) => Promise<void>;
   resetAllData: () => Promise<void>;
-  _updateProgress: (turn: CompanionTurn) => Promise<void>;
+  _updateProgress: (turn: CompanionTurn, conversationId: string, suppress: boolean) => Promise<void>;
 }
 
 export const useStore = create<AppState>((set, get) => ({
@@ -151,7 +139,16 @@ export const useStore = create<AppState>((set, get) => ({
     try {
       const list = await emotionProgressRepo.all();
       const progress: Partial<Record<EmotionFamilyId, EmotionProgress>> = {};
-      for (const p of list) progress[p.emotion_family] = p;
+      for (const raw of list) {
+        // Migrate legacy 5-stage rows onto the §13 8-stage model in place.
+        const p: EmotionProgress = {
+          ...raw,
+          current_stage: migrateStage(raw.current_stage as string),
+          return_count: raw.return_count ?? 0,
+          last_conversation_id: raw.last_conversation_id ?? null,
+        };
+        progress[p.emotion_family] = p;
+      }
       set({ progress });
     } catch {
       // ignore — start with empty progress
@@ -364,7 +361,7 @@ export const useStore = create<AppState>((set, get) => ({
       }));
       await messagesRepo.add(compMsg).catch(() => {});
       await emotionEventsRepo.upsert(turn.event).catch(() => {});
-      await get()._updateProgress(turn);
+      await get()._updateProgress(turn, convId, !!safetyNote);
 
       // ── Memory drafting (brief §12.3) — propose, never silently persist ────
       if (!get().memoryDraft && !safetyNote) {
@@ -392,50 +389,31 @@ export const useStore = create<AppState>((set, get) => ({
     }
   },
 
-  _updateProgress: async (turn) => {
-    const ev = turn.event;
-    const fam = ev.emotion_family;
-    if (!fam) return;
+  _updateProgress: async (turn, conversationId, suppress) => {
+    const fam = turn.event.emotion_family;
+    const existing = fam
+      ? (get().progress[fam] ?? (await emotionProgressRepo.get(fam).catch(() => null)))
+      : null;
 
-    const existing = get().progress[fam] ?? (await emotionProgressRepo.get(fam).catch(() => null));
-    const p: EmotionProgress =
-      existing ?? {
-        id: fam,
-        emotion_family: fam,
-        current_stage: 'noticed',
-        introduced_at: nowIso(),
-        first_shape_at: null,
-        deepened_at: null,
-        confirmed_shades: [],
-        common_triggers: [],
-        common_body_cues: [],
-        common_user_phrases: [],
-        memory_summary: null,
-        updated_at: nowIso(),
-      };
+    const result = advanceProgress(existing, turn, conversationId, { suppress });
 
-    if (STAGE_RANK[turn.stage] > STAGE_RANK[p.current_stage]) {
-      p.current_stage = turn.stage;
+    if (fam) {
+      await emotionProgressRepo.save(result.progress).catch(() => {});
+      set((s) => ({ progress: { ...s.progress, [fam]: result.progress } }));
     }
 
-    if (turn.unlocked) {
-      if (p.first_shape_at) {
-        p.current_stage = 'deepened';
-        p.deepened_at = nowIso();
-      } else {
-        p.current_stage = 'understood';
-        p.first_shape_at = nowIso();
+    // Capability evidence counters (§13.1) — accumulated on the settings doc.
+    const deltas = Object.entries(result.capabilities);
+    if (deltas.length) {
+      try {
+        const settings = await settingsRepo.get();
+        const caps = { ...(settings.capabilities ?? {}) };
+        for (const [k, v] of deltas) caps[k as keyof typeof caps] = (caps[k as keyof typeof caps] ?? 0) + (v ?? 0);
+        await settingsRepo.save({ ...settings, capabilities: caps, updated_at: nowIso() });
+      } catch {
+        // counters are best-effort
       }
-      if (ev.emotion_shade) pushUnique(p.confirmed_shades, ev.emotion_shade);
-      if (ev.trigger_event) pushUnique(p.common_triggers, ev.trigger_event);
-      ev.body_cue.forEach((b) => pushUnique(p.common_body_cues, b));
-      if (ev.user_words_raw) pushUnique(p.common_user_phrases, ev.user_words_raw);
-      p.memory_summary = ev.memory_note;
     }
-
-    p.updated_at = nowIso();
-    await emotionProgressRepo.save(p).catch(() => {});
-    set((s) => ({ progress: { ...s.progress, [fam]: p } }));
   },
 
   dismissUnlock: () => set({ unlock: null }),

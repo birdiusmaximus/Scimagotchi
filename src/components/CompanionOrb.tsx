@@ -15,6 +15,7 @@ import Animated, {
 } from 'react-native-reanimated';
 
 import { FAMILY_COLORS } from '@/data/emotionMaps';
+import type { CompanionVisualState } from '@/services/ai/companionVisualState';
 import { gradients } from '@/theme/tokens';
 import type { EmotionFamilyId } from '@/types/models';
 
@@ -22,6 +23,10 @@ type Props = {
   size?: number;
   /** Subtly tints the orb's hue toward this emotion (not a full colour change). */
   family?: EmotionFamilyId | null;
+  /** Foreground + (optional) background strand hues for mixed states (overrides family). */
+  tintFamilies?: EmotionFamilyId[];
+  /** What the orb should communicate (engine brief §18); ambience only, never reward. */
+  visual?: CompanionVisualState;
   /** Enable touch reactions: eyes follow the finger, poke recoil, pet to close. */
   interactive?: boolean;
   /** Bump `key` (with a sentence count) to make the orb react as it "speaks". */
@@ -67,7 +72,15 @@ const OrbGradientLayer = memo(function OrbGradientLayer({ kind }: { kind: 'base'
  * tint shifts its hue with the emotion, and `speak` nudges it once per sentence so
  * it feels like it's reacting as it talks.
  */
-export function CompanionOrb({ size = 156, family = null, interactive = false, speak, style }: Props) {
+export function CompanionOrb({
+  size = 156,
+  family = null,
+  tintFamilies,
+  visual = 'idle_calm',
+  interactive = false,
+  speak,
+  style,
+}: Props) {
   const floatY = useSharedValue(0);
   const breathe = useSharedValue(0);
   const aura = useSharedValue(0);
@@ -84,6 +97,9 @@ export function CompanionOrb({ size = 156, family = null, interactive = false, s
   const dragY = useSharedValue(0);
   const tint = useSharedValue(0); // emotion hue strength
   const speakV = useSharedValue(0); // per-sentence reaction
+  const tintFactor = useSharedValue(1); // halved when the feeling is still uncertain
+  const recede = useSharedValue(0); // safety_receded: companion steps back
+  const secondTint = useSharedValue(0); // background strand hue (mixed states)
 
   useEffect(() => {
     floatY.value = withRepeat(withTiming(1, { duration: 2800, easing: Easing.inOut(Easing.sin) }), -1, true);
@@ -95,10 +111,24 @@ export function CompanionOrb({ size = 156, family = null, interactive = false, s
     );
   }, [floatY, breathe, aura, blink]);
 
-  // Ease the emotion tint in/out when the family changes.
+  const primaryFamily = tintFamilies?.[0] ?? family;
+  const secondFamily = tintFamilies?.[1] ?? null;
+
+  // Ease the emotion tints in/out when the families change.
   useEffect(() => {
-    tint.value = withTiming(family ? 1 : 0, { duration: 800, easing: Easing.inOut(Easing.sin) });
-  }, [family, tint]);
+    tint.value = withTiming(primaryFamily ? 1 : 0, { duration: 800, easing: Easing.inOut(Easing.sin) });
+    secondTint.value = withTiming(secondFamily ? 1 : 0, { duration: 800, easing: Easing.inOut(Easing.sin) });
+  }, [primaryFamily, secondFamily, tint, secondTint]);
+
+  // Visual state (engine brief §18): ambience shifts, never reward effects.
+  useEffect(() => {
+    tintFactor.value = withTiming(visual === 'uncertain' ? 0.5 : 1, { duration: 600 });
+    recede.value = withTiming(visual === 'safety_receded' ? 1 : 0, { duration: 500, easing: Easing.inOut(Easing.sin) });
+    if (visual === 'first_shape' || visual === 'returning_shape') {
+      // A single stabilising glow as a shape lands / a familiar shape returns.
+      glow.value = withSequence(withTiming(1, { duration: 320 }), withTiming(0, { duration: 1200 }));
+    }
+  }, [visual, tintFactor, recede, glow]);
 
   // React once per sentence as the companion speaks.
   useEffect(() => {
@@ -122,6 +152,7 @@ export function CompanionOrb({ size = 156, family = null, interactive = false, s
   const MAX_HL = size * 0.045;
 
   const containerStyle = useAnimatedStyle(() => ({
+    opacity: 1 - recede.value * 0.35,
     transform: [
       { translateX: dragX.value + recoilX.value },
       {
@@ -136,7 +167,8 @@ export function CompanionOrb({ size = 156, family = null, interactive = false, s
           interpolate(breathe.value, [0, 1], [1, 1.045]) +
           poke.value * 0.04 -
           petting.value * 0.03 +
-          speakV.value * 0.02,
+          speakV.value * 0.02 -
+          recede.value * 0.08,
       },
     ],
   }));
@@ -146,7 +178,8 @@ export function CompanionOrb({ size = 156, family = null, interactive = false, s
     transform: [{ scale: interpolate(aura.value, [0, 1], [1, 1.07]) + glow.value * 0.06 + petting.value * 0.03 }],
   }));
 
-  const tintStyle = useAnimatedStyle(() => ({ opacity: tint.value * 0.24 }));
+  const tintStyle = useAnimatedStyle(() => ({ opacity: tint.value * 0.24 * tintFactor.value }));
+  const secondTintStyle = useAnimatedStyle(() => ({ opacity: secondTint.value * 0.13 * tintFactor.value }));
 
   const eyeStyle = useAnimatedStyle(() => {
     const closed = 0.07;
@@ -169,7 +202,8 @@ export function CompanionOrb({ size = 156, family = null, interactive = false, s
     ],
   }));
 
-  const tintColor = family ? FAMILY_COLORS[family] : 'transparent';
+  const tintColor = primaryFamily ? FAMILY_COLORS[primaryFamily] : 'transparent';
+  const secondColor = secondFamily ? FAMILY_COLORS[secondFamily] : 'transparent';
 
   const content = (
     <View style={[styles.wrap, { width: haloSize, height: haloSize, pointerEvents: interactive ? 'auto' : 'none' }, style]}>
@@ -181,8 +215,19 @@ export function CompanionOrb({ size = 156, family = null, interactive = false, s
       <Animated.View style={containerStyle}>
         <View style={[styles.orb, { width: size, height: size, borderRadius: size / 2, boxShadow: BASE_GLOW }]}>
           <OrbGradientLayer kind="base" />
-          {/* Subtle emotion hue */}
+          {/* Subtle emotion hue (foreground strand) */}
           <Animated.View style={[StyleSheet.absoluteFill, { backgroundColor: tintColor }, tintStyle]} />
+          {/* Background strand of a mixed feeling — a second, fainter hue layered in */}
+          <Animated.View style={[StyleSheet.absoluteFill, { backgroundColor: secondColor }, secondTintStyle]} />
+          {/* Deepened: a faint inner ring — new internal texture, not a trophy */}
+          {visual === 'deepened' ? (
+            <View
+              style={[
+                styles.deepRing,
+                { width: size * 0.62, height: size * 0.62, borderRadius: (size * 0.62) / 2, top: size * 0.19, left: size * 0.19 },
+              ]}
+            />
+          ) : null}
           <Animated.View style={[styles.highlight, { width: size * 0.4, height: size * 0.26 }, highlightStyle]} />
           <OrbGradientLayer kind="sheen" />
 
@@ -282,4 +327,5 @@ const styles = StyleSheet.create({
   },
   eyeRow: { flexDirection: 'row', gap: 21, alignItems: 'center' },
   eye: { backgroundColor: '#FBFCFF', boxShadow: '0px 2px 4px rgba(42,42,85,0.18)' },
+  deepRing: { position: 'absolute', borderWidth: 1.5, borderColor: 'rgba(255,255,255,0.35)' },
 });

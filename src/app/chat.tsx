@@ -14,6 +14,7 @@ import { MemoryDraftCard } from '@/components/MemoryDraftCard';
 import { MessageBubble } from '@/components/MessageBubble';
 import { TypingBubble } from '@/components/TypingBubble';
 import { Txt } from '@/components/Txt';
+import { selectVisualState, visualTintFamilies } from '@/services/ai/companionVisualState';
 import { useStore } from '@/state/store';
 import { palette, radii, spacing } from '@/theme/tokens';
 
@@ -34,6 +35,22 @@ export default function ChatScreen() {
   const unlock = useStore((s) => s.unlock);
   const conversationId = useStore((s) => s.conversationId);
   const memoryDraft = useStore((s) => s.memoryDraft);
+  const draftEvent = useStore((s) => s.draftEvent);
+  const safetyVisible = useStore((s) => s.safety.visible);
+  const safetyCheck = useStore((s) => s.safetyCheck);
+  const progress = useStore((s) => s.progress);
+
+  // Companion visual state (engine brief §18) — derived, ambience only.
+  const family = draftEvent?.emotion_family ?? null;
+  const visual = selectVisualState({
+    safetyVisible,
+    safetyCheckPending: !!safetyCheck,
+    sending,
+    unlockShowing: !!unlock,
+    draftEvent,
+    progressStage: family ? (progress[family]?.current_stage ?? null) : null,
+  });
+  const tintFamilies = visualTintFamilies(draftEvent);
 
   const scrollRef = useRef<ScrollView>(null);
 
@@ -80,7 +97,7 @@ export default function ChatScreen() {
 
         {/* Character — top third, the focus */}
         <View style={styles.stage}>
-          <CompanionOrb size={150} interactive family={orbFamily} speak={speak} />
+          <CompanionOrb size={150} interactive family={orbFamily} tintFamilies={tintFamilies} visual={visual} speak={speak} />
         </View>
 
         {/* Discussion window — lower two-thirds */}

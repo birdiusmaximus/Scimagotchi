@@ -15,7 +15,22 @@ export type EmotionFamilyId =
   | 'shame'
   | 'flat';
 
+/** Turn-level stage of the in-conversation walk (event.unlock_stage). */
 export type UnlockStage = 'noticed' | 'named' | 'shaped' | 'understood' | 'deepened';
+
+/** Per-family progression across sessions (engine brief §13.2). */
+export type EmotionProgressStage =
+  | 'unseen'
+  | 'noticed'
+  | 'named'
+  | 'first_shape'
+  | 'rooted'
+  | 'distinguished'
+  | 'returning'
+  | 'deepened';
+
+/** User emotional capabilities the engine tracks evidence for (engine brief §13.1). */
+export type EmotionalCapability = 'noticing' | 'naming' | 'differentiating' | 'contextualising' | 'integrating';
 export type Valence = 'negative' | 'neutral' | 'positive' | 'mixed';
 export type Activation = 'low' | 'medium' | 'high';
 export type ControlPower = 'low' | 'medium' | 'high' | 'unknown';
@@ -103,10 +118,17 @@ export interface EmotionEvent {
 export interface EmotionProgress {
   id: string; // equals the emotion_family id (one row per family)
   emotion_family: EmotionFamilyId;
-  current_stage: UnlockStage;
+  current_stage: EmotionProgressStage;
   introduced_at: string;
   first_shape_at?: string | null;
+  rooted_at?: string | null;
+  distinguished_at?: string | null;
+  returning_at?: string | null;
   deepened_at?: string | null;
+  /** How many separate conversations this family has shown up in (drives Returning). */
+  return_count: number;
+  /** The last conversation that touched this family (so returns are counted once per convo). */
+  last_conversation_id: string | null;
   confirmed_shades: string[];
   common_triggers: string[];
   common_body_cues: string[];
@@ -185,6 +207,8 @@ export interface AppSettings {
   age_confirmed_18?: 0 | 1;
   reminders_enabled?: 0 | 1;
   inactivity_days_before_reminder?: number;
+  /** Evidence counters for the user's emotional capabilities (engine brief §13.1). */
+  capabilities?: Partial<Record<EmotionalCapability, number>>;
   created_at?: string;
   updated_at?: string;
 }

@@ -38,10 +38,15 @@ const DISCLAIMER =
   'This summary is generated from your self-reflections. It is not a clinical interpretation, diagnosis or treatment recommendation.';
 
 const STAGE_LABEL: Record<string, string> = {
+  unseen: 'Not yet explored',
   noticed: 'Noticed',
   named: 'Named',
   shaped: 'Shaped',
   understood: 'First shape understood',
+  first_shape: 'First shape understood',
+  rooted: 'Connected to its context',
+  distinguished: 'Distinguished from nearby feelings',
+  returning: 'A returning, familiar shape',
   deepened: 'Deepened pattern',
 };
 

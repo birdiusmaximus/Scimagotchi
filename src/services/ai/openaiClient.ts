@@ -17,6 +17,7 @@ import { evaluateStage, stageRank } from '@/services/ai/stage';
 import { EMOTION_MAPS } from '@/data/emotionMaps';
 import type { EmotionFamilyId, LabelSource, MixedRelation, UnlockStage } from '@/types/models';
 import { nowIso } from '@/utils/date';
+import { stripEmDashes } from '@/utils/text';
 
 const ENDPOINT = 'https://api.openai.com/v1/chat/completions';
 
@@ -130,7 +131,8 @@ export async function openaiGenerateTurn(
   ev.valence = p.valence ?? 'neutral';
   ev.activation = p.activation ?? 'medium';
   if (p.user_words_raw && p.user_words_raw.trim()) ev.user_words_raw = p.user_words_raw.trim();
-  ev.memory_note = p.memory_note ?? ev.memory_note ?? null;
+  const note = p.memory_note ?? ev.memory_note ?? null;
+  ev.memory_note = note ? stripEmDashes(note) : null;
   ev.confidence_level = p.confidence ?? 'medium';
   ev.evidence_basis = Array.from(new Set([...(ev.evidence_basis ?? []), 'self_report']));
 
@@ -168,5 +170,5 @@ export async function openaiGenerateTurn(
 
   const tone = fam ? EMOTION_MAPS[fam].tone : 'calm';
 
-  return { reply: p.reply, event: ev, unlocked, tone, stage };
+  return { reply: stripEmDashes(p.reply), event: ev, unlocked, tone, stage };
 }

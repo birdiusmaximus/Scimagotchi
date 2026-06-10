@@ -714,6 +714,12 @@ function composeWeeklySummary(input) {
     pdf_export_path: null
   };
 }
+
+// src/utils/text.ts
+function stripEmDashes(text) {
+  if (!text) return text;
+  return text.replace(/\s*[—–―‒]\s*/g, ", ").replace(/\s+,/g, ",").replace(/,\s*,/g, ", ").replace(/,\s*([.!?;:])/g, "$1").replace(/,\s*$/g, "").replace(/\s{2,}/g, " ").trim();
+}
 export {
   PROGRESS_RANK,
   activeCards,
@@ -732,6 +738,7 @@ export {
   sanitizeStrands,
   selectVisualState,
   stageRank,
+  stripEmDashes,
   varietyDirective,
   varietySignals,
   visualTintFamilies

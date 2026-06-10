@@ -103,25 +103,6 @@ export function draftFromTurn(turn: CompanionTurn, userText: string, conversatio
 }
 
 /**
- * Explicit "Save this" (a UI chip) — draft from the current working event on
- * demand, independent of whether this turn unlocked. Still honours the
- * do-not-store / safety / sensitivity blocks; returns null when there's nothing
- * safe to keep yet.
- */
-export function manualDraft(ev: EmotionEvent | null, conversationId: string): MemoryCard | null {
-  if (!ev || ev.do_not_store === 1 || ev.safety_flag !== 'none') return null;
-  const summary = ev.memory_note ?? (ev.user_words_raw ? `“${ev.user_words_raw}” felt worth keeping.` : null);
-  if (!summary || memoryBlocked(summary)) return null;
-  return baseCard({
-    source_conversation_id: conversationId,
-    type: ev.mixed_confirmed === 1 ? 'mixed_pattern' : 'emotional_pattern',
-    summary,
-    user_words: ev.user_words_raw ? [ev.user_words_raw] : [],
-    emotion_family: ev.emotion_family,
-  });
-}
-
-/**
  * A correction worth not repeating (§12.3): when the user rejects a label, the
  * rejection itself may be offered as memory ("'anxious' isn't their word for this").
  * Drafted only when the rejection is NEW this turn.

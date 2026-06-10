@@ -35,7 +35,7 @@ import {
 } from '@/services/db/repos';
 import type { ConversationMode } from '@/services/ai/modeRouter';
 import { advanceProgress, migrateStage } from '@/services/ai/progressionEngine';
-import { draftFromRejection, draftFromTurn, manualDraft, relevantMemory } from '@/services/memoryLedger';
+import { draftFromRejection, draftFromTurn, relevantMemory } from '@/services/memoryLedger';
 import { buildWeeklySummary } from '@/services/weeklySummary';
 import { UK_SUPPORT_ROUTES } from '@/data/safetyResources';
 import type {
@@ -50,6 +50,7 @@ import type {
 } from '@/types/models';
 import { nowIso, startOfWeek, weekKeyOf } from '@/utils/date';
 import { genId } from '@/utils/ids';
+import { stripEmDashes } from '@/utils/text';
 
 // NOTE (engine brief §12): conversational memory now comes ONLY from the
 // user-confirmed Memory Ledger (relevantMemory) — never from silently
@@ -102,7 +103,6 @@ interface AppState {
   confirmMemoryDraft: () => Promise<void>;
   editMemoryDraft: (summary: string) => Promise<void>;
   rejectMemoryDraft: () => void;
-  saveCurrentToMemory: () => void;
   deleteMemoryCard: (id: string) => Promise<void>;
   setUserName: (name: string) => Promise<void>;
   setReminders: (on: boolean) => Promise<void>;
@@ -226,7 +226,7 @@ export const useStore = create<AppState>((set, get) => ({
       id: genId('msg'),
       conversation_id: convId,
       role: 'companion',
-      content: text,
+      content: stripEmDashes(text),
       created_at: nowIso(),
       ai_generated: 1,
       safety_flag: 'none',
@@ -307,7 +307,7 @@ export const useStore = create<AppState>((set, get) => ({
         id: genId('msg'),
         conversation_id: convId,
         role: 'companion',
-        content: gentleCheckCopy(safety.category),
+        content: stripEmDashes(gentleCheckCopy(safety.category)),
         created_at: nowIso(),
         ai_generated: 0,
         safety_flag: 'mild_concern',
@@ -358,7 +358,7 @@ export const useStore = create<AppState>((set, get) => ({
         id: genId('msg'),
         conversation_id: convId,
         role: 'companion',
-        content: turn.reply,
+        content: stripEmDashes(turn.reply),
         created_at: nowIso(),
         ai_generated: 1,
         safety_flag: 'none',
@@ -447,15 +447,6 @@ export const useStore = create<AppState>((set, get) => ({
   },
 
   rejectMemoryDraft: () => set({ memoryDraft: null }),
-
-  /** "Save this" chip — surface an editable draft from the current understanding. */
-  saveCurrentToMemory: () => {
-    if (get().memoryDraft) return; // a draft is already on offer
-    const convId = get().conversationId;
-    if (!convId) return;
-    const draft = manualDraft(get().draftEvent, convId);
-    if (draft) set({ memoryDraft: draft });
-  },
 
   deleteMemoryCard: async (id) => {
     set((s) => ({ memoryCards: s.memoryCards.filter((c) => c.id !== id) }));

@@ -8,26 +8,21 @@ import { palette, radii } from '@/theme/tokens';
 
 /**
  * Low-friction continuation chips offered after the companion reflects without
- * asking a question (engine brief §7.3, §16.2). One tap to keep going, keep a
- * moment, gently correct, or close — agency without typing.
+ * asking a question (engine brief §7.3, §16.2). One tap to keep going, gently
+ * correct, or close — agency without typing.
  */
 export function ChatChips({
-  canSave,
   onKeepGoing,
-  onSave,
   onNotQuite,
   onDone,
 }: {
-  canSave: boolean;
   onKeepGoing: () => void;
-  onSave: () => void;
   onNotQuite: () => void;
   onDone: () => void;
 }) {
   return (
     <Animated.View entering={FadeIn.duration(300)} style={styles.row}>
       <Chip label="Keep going" onPress={onKeepGoing} />
-      {canSave ? <Chip label="Save this" onPress={onSave} /> : null}
       <Chip label="Not quite" onPress={onNotQuite} />
       <Chip label="I’m done" onPress={onDone} />
     </Animated.View>

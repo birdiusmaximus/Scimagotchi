@@ -5,7 +5,7 @@
  *
  * Run: npm run test:engine   (rebundles, then executes). Exit 1 on failure.
  */
-import { evaluateStage, mixedConfirmed, routeMode, sanitizeStrands, varietySignals } from './engine-bundle.mjs';
+import { evaluateStage, mixedConfirmed, routeMode, sanitizeStrands, stripEmDashes, varietySignals } from './engine-bundle.mjs';
 
 let pass = 0;
 let fail = 0;
@@ -114,6 +114,16 @@ check('router: entry hint soft_landing for check-in', routeMode('not much, just 
 // ...but explicit signals and heavy disclosures still override the hint
 check('router: repair overrides entry hint', routeMode("no that's not it", null, 'witness').mode, 'repair');
 check('router: heavy disclosure overrides a light check-in hint', routeMode('my mum passed away yesterday', null, 'soft_landing').mode, 'witness');
+
+// ── Em-dash stripping (companion never shows long dashes) ────────────────────
+check('strip: spaced em dash -> comma', stripEmDashes('Go ahead — say whatever’s there'), 'Go ahead, say whatever’s there');
+check('strip: en dash too', stripEmDashes('worn down – not the other thing'), 'worn down, not the other thing');
+check('strip: dash before a question', stripEmDashes('I’m here — what’s on your mind?'), 'I’m here, what’s on your mind?');
+check('strip: tight em dash', stripEmDashes('a lot—really a lot'), 'a lot, really a lot');
+check('strip: trailing dash leaves no trailing comma', stripEmDashes('okay then —'), 'okay then');
+check('strip: dash before full stop collapses', stripEmDashes('that’s it —.'), 'that’s it.');
+check('strip: keeps ordinary hyphens', stripEmDashes('self-harm and worn-down feelings'), 'self-harm and worn-down feelings');
+check('strip: no dash is unchanged', stripEmDashes('That feels like a lot today.'), 'That feels like a lot today.');
 
 // ── Variety signals ──────────────────────────────────────────────────────────
 const v = varietySignals([

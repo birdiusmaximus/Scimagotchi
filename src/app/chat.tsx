@@ -70,7 +70,6 @@ export default function ChatScreen() {
     !safetyVisible &&
     !safetyCheck &&
     chipsDismissedFor !== last.id;
-  const canSave = !!draftEvent && !!(draftEvent.memory_note || draftEvent.user_words_raw);
 
   const scrollRef = useRef<ScrollView>(null);
 
@@ -165,9 +164,7 @@ export default function ChatScreen() {
 
               {showChips ? (
                 <ChatChips
-                  canSave={canSave}
                   onKeepGoing={() => last && setChipsDismissedFor(last.id)}
-                  onSave={() => useStore.getState().saveCurrentToMemory()}
                   onNotQuite={() => useStore.getState().send('hmm, that’s not quite it')}
                   onDone={() => useStore.getState().send('I think I’ll leave it here for now')}
                 />

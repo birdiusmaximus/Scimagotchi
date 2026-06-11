@@ -32,33 +32,65 @@ function openChat(kind: 'greet' | 'say', text: string, go: (cid: string) => void
  * Each door sets a distinct stance (engine brief §6): vent → just listen,
  * "off" → help identify it, "not sure" → find it via the body/situation,
  * check-in → light and glad. The opener AND the first turn's mode both follow.
+ * Each door has several openers so the same tap doesn't always say the same
+ * thing — a small thing that keeps the companion from feeling mechanical.
  */
-const CHIPS: { icon: keyof typeof Feather.glyphMap; label: string; opener: string; entry: ConversationMode }[] = [
+const CHIPS: { icon: keyof typeof Feather.glyphMap; label: string; openers: string[]; entry: ConversationMode }[] = [
   {
     icon: 'cloud',
     label: 'I feel off',
     entry: 'clarify',
-    opener: 'Something feels off — that’s a real place to start. Can you say a little about what’s going on, even roughly?',
+    openers: [
+      'Something feels off, and that’s a real place to start. Can you say a little about what’s going on, even roughly?',
+      'Off is a real thing to feel. What’s it attached to, if anything comes to mind?',
+      'Okay, something isn’t sitting right. Want to start with what happened, or just how it feels?',
+      'Let’s start from off, then. What’s been going on today?',
+    ],
   },
   {
     icon: 'zap',
     label: 'Vent a little',
     entry: 'witness',
-    opener: 'Go ahead — say whatever’s there, however it comes out. I’m just here to listen.',
+    openers: [
+      'Go ahead, say whatever’s there, however it comes out. I’m just here to listen.',
+      'I’m listening. Let it out however it wants to come.',
+      'No need to make it tidy. Say what’s on your chest.',
+      'Okay, vent away. I’m not going anywhere.',
+    ],
   },
   {
     icon: 'help-circle',
     label: 'I’m not sure',
     entry: 'body_first',
-    opener: 'That’s okay — we don’t need a name for it yet. Want to start with what’s been happening, or how it sits in your body?',
+    openers: [
+      'That’s okay, we don’t need a name for it yet. Want to start with what’s been happening, or how it sits in your body?',
+      'Not knowing is a fine place to begin. What does it feel like, even roughly, before we name it?',
+      'We can leave it unnamed for now. What was going on when you noticed it?',
+      'That’s alright. Where do you feel it, or what brought it on?',
+    ],
   },
   {
     icon: 'sun',
     label: 'Checking in',
     entry: 'soft_landing',
-    opener: 'I’m really glad you’re here. What’s on your mind today?',
+    openers: [
+      'I’m really glad you’re here. What’s on your mind today?',
+      'Good to see you. How’s today landing for you?',
+      'Hey, glad you checked in. What’s here right now?',
+      'Nice to have you. What’s today been like?',
+    ],
   },
 ];
+
+// Remember the last opener used per door so a re-tap never repeats it verbatim.
+const lastOpenerIdx: Record<string, number> = {};
+function pickOpener(label: string, openers: string[]): string {
+  if (openers.length <= 1) return openers[0];
+  let i = Math.floor(Math.random() * openers.length);
+  if (i === lastOpenerIdx[label]) i = (i + 1) % openers.length;
+  lastOpenerIdx[label] = i;
+  return openers[i];
+}
 
 /** A tentative, comparison-not-assertion callback to a kept memory (§12.5). */
 function returningOpener(summary: string): string {
@@ -126,7 +158,7 @@ export default function NowScreen() {
 
         <View style={styles.chips}>
           {CHIPS.map((c) => (
-            <SuggestionChip key={c.label} icon={c.icon} label={c.label} onPress={() => openChat('greet', c.opener, go, c.entry)} />
+            <SuggestionChip key={c.label} icon={c.icon} label={c.label} onPress={() => openChat('greet', pickOpener(c.label, c.openers), go, c.entry)} />
           ))}
         </View>
 

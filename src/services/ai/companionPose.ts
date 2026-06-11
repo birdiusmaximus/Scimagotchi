@@ -83,10 +83,10 @@ const arm = (x: number, y: number, scale: number, rotate: number, opacity: numbe
  * down, recede = in + faded.
  */
 export const POSE_TARGETS: Record<CompanionMotionState, CompanionPose> = {
-  // Calm: two satellites floating beside the body, a touch below its centre line
-  // (detached, never underneath like feet).
-  calm: { body: b(0, 0, 1, 0), leftArm: arm(-0.6, 0.28, 1, 0, 0.95), rightArm: arm(0.6, 0.28, 1, 0, 0.95), glow: { scale: 1, opacity: 0.55 } },
-  greeting: { body: b(0, -0.02, 1.01, 0), leftArm: arm(-0.6, 0.28, 1, 0, 0.95), rightArm: arm(0.66, 0.04, 1.04, 14, 1), glow: { scale: 1.05, opacity: 0.62 } },
+  // Calm: two satellites resting low at the body's lower flanks, just barely
+  // overlapping it (in the foreground), never underneath like feet.
+  calm: { body: b(0, 0, 1, 0), leftArm: arm(-0.48, 0.4, 1, 0, 0.95), rightArm: arm(0.48, 0.4, 1, 0, 0.95), glow: { scale: 1, opacity: 0.55 } },
+  greeting: { body: b(0, -0.02, 1.01, 0), leftArm: arm(-0.48, 0.4, 1, 0, 0.95), rightArm: arm(0.66, 0.04, 1.04, 14, 1), glow: { scale: 1.05, opacity: 0.62 } },
   listening: { body: b(0, -0.02, 1.01, 0), leftArm: arm(-0.74, 0.16, 1.02, -6, 1), rightArm: arm(0.74, 0.16, 1.02, 6, 1), glow: { scale: 1.06, opacity: 0.65 } },
   thinking: { body: b(0, 0, 0.995, 0), leftArm: arm(-0.46, 0.3, 0.94, 4, 0.9), rightArm: arm(0.46, 0.3, 0.94, -4, 0.9), glow: { scale: 1.08, opacity: 0.7 } },
   curious: { body: b(0, -0.045, 1.025, 1), leftArm: arm(-0.7, 0.16, 1.03, -5, 1), rightArm: arm(0.76, 0.1, 1.05, 7, 1), glow: { scale: 1.08, opacity: 0.72 } },

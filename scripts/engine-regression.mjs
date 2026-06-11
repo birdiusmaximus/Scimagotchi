@@ -7,6 +7,7 @@
  */
 import {
   askedForNamingHelp,
+  composeLearningSentence,
   detectShadeRejection,
   dropTrailingQuestion,
   evaluateStage,
@@ -134,6 +135,25 @@ check('pushback: a bare "no" does NOT trigger rejection (too broad)',
 check('pushback: acceptance does not trigger rejection',
   detectShadeRejection('yeah thats it', { emotion_shade: 'dread' }), null);
 check('pushback: nothing in play -> null', detectShadeRejection('no that doesnt fit', { emotion_shade: null }), null);
+
+// ── Companion learning sentence (v0.4 §6.5) ──────────────────────────────────
+const ls1 = composeLearningSentence(ev({ emotion_family: 'pressure', user_phrase: 'pulled thin', trigger_event: 'everyone needs a piece of me' }), 'first_shape');
+check('learn: uses the family word in their language', /pressure can feel like/i.test(ls1), true);
+check('learn: embeds the user\'s exact phrase', ls1.includes('pulled thin'), true);
+check('learn: embeds the situation', /everyone needs a piece of me/.test(ls1), true);
+check('learn: ends as a sentence', /[.!?]$/.test(ls1), true);
+check('learn: no em or en dashes', !/[—–]/.test(ls1), true);
+check('learn: no "you are someone who" overclaim', !/you are someone who/i.test(ls1), true);
+const ls2 = composeLearningSentence(ev({ emotion_family: 'fear', user_phrase: 'waiting in the not knowing', trigger_event: null, body_cue: [], appraisal_thought: null, user_words_raw: '' }), 'first_shape');
+check('learn: phrase-only -> "first shape ... you\'ve shown me"', /first shape of fear you'?ve shown me/i.test(ls2), true);
+check('learn: phrase-only embeds the phrase', ls2.includes('waiting in the not knowing'), true);
+const lsMix = composeLearningSentence(ev({ strands: [{ family: 'anger', shade: null, salience: 'equal', source: 'user_stated' }, { family: 'hurt', shade: null, salience: 'equal', source: 'user_stated' }] }), 'mixed');
+check('learn: mixed names both families', /anger and hurt|hurt and anger/i.test(lsMix), true);
+check('learn: mixed says neither has to win', /neither has to win/i.test(lsMix), true);
+const lsDeep = composeLearningSentence(ev({ emotion_family: 'sadness', user_phrase: 'a quiet heaviness', trigger_event: 'sundays' }), 'deepened');
+check('learn: deepened reads as knowing it better', /know this a little better/i.test(lsDeep), true);
+check('learn: empty-ish event still yields a safe sentence',
+  /first shape/i.test(composeLearningSentence(ev({ emotion_family: 'calm', user_phrase: null, user_words_raw: '', trigger_event: null, body_cue: [], appraisal_thought: null, need_value: [] }), 'first_shape')), true);
 
 // ── Ownership backstop: the user must name/confirm the feeling (stage.ts) ─────
 check('owned: described situation, never named the feeling -> not owned',

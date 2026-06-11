@@ -30,5 +30,6 @@ export { activeCards, draftFromRejection, draftFromTurn, memoryBlocked, relevant
 export { advanceProgress, emptyProgress, migrateStage, PROGRESS_RANK } from '@/services/ai/progressionEngine';
 export { selectVisualState, visualTintFamilies, type CompanionVisualState } from '@/services/ai/companionVisualState';
 export { expressionFor } from '@/services/ai/orbExpression';
+export { composeLearningSentence, type LearningKind } from '@/services/ai/learningSentence';
 export { composeWeeklySummary } from '@/services/ai/weeklyNarrative';
 export { stripEmDashes } from '@/utils/text';

@@ -7,6 +7,7 @@ import { PressableScale } from '@/components/PressableScale';
 import { Txt } from '@/components/Txt';
 import { EMOTION_MAPS } from '@/data/emotionMaps';
 import type { CompanionVisualState } from '@/services/ai/companionVisualState';
+import { composeLearningSentence, type LearningKind } from '@/services/ai/learningSentence';
 import type { UnlockKind } from '@/state/store';
 import { gradients, palette, radii, spacing } from '@/theme/tokens';
 import type { EmotionEvent, EmotionFamilyId } from '@/types/models';
@@ -16,6 +17,8 @@ type Props = {
   kind?: UnlockKind;
   onKeepExploring: () => void;
   onDone: () => void;
+  /** "That isn't quite it" — let the user correct a first shape (§6.3 / Phase 4). */
+  onNotQuite?: () => void;
 };
 
 const familyHead = (f: EmotionFamilyId | null | undefined) =>
@@ -27,35 +30,30 @@ const familyHead = (f: EmotionFamilyId | null | undefined) =>
  * colour and a short line appears. No fireworks, scores or achievement language;
  * it grows CLEARER, not happier.
  */
-export function EmotionUnlockCard({ event, kind = 'first_shape', onKeepExploring, onDone }: Props) {
+export function EmotionUnlockCard({ event, kind = 'first_shape', onKeepExploring, onDone, onNotQuite }: Props) {
   const familyWord = familyHead(event.emotion_family) ?? 'This';
-  const shapeWord = event.body_cue[0];
 
-  // Per-ceremony copy + the orb's expressive state.
+  // Per-ceremony copy + the orb's expressive state. The body is now the companion's
+  // learning sentence (§6.5) — what it learned, in the user's own words.
   let kicker = 'FIRST SHAPE';
   let headline = `${familyWord} has its first shape.`;
-  let body: string | null = shapeWord
-    ? `You described it as ${shapeWord}${event.emotion_shade ? `, closer to ${event.emotion_shade}.` : '.'}`
-    : null;
   let orbVisual: CompanionVisualState = 'first_shape';
   let tintFamilies: EmotionFamilyId[] | undefined;
 
   if (kind === 'deepened') {
     kicker = 'DEEPENED';
     headline = `${familyWord} deepened.`;
-    body = event.emotion_shade
-      ? `Today you showed me a different shade of it: ${event.emotion_shade}.`
-      : 'A familiar feeling, with a little more shape now.';
     orbVisual = 'deepened';
   } else if (kind === 'mixed') {
     const fams = [...new Set((event.strands ?? []).map((s) => s.family))].slice(0, 2);
     const words = fams.map(familyHead).filter(Boolean) as string[];
     kicker = 'TWO FEELINGS';
     headline = words.length >= 2 ? `${words[0]} and ${words[1]} can sit together.` : 'Two feelings can sit together.';
-    body = 'I am learning that neither one has to win.';
     orbVisual = 'mixed_strands';
     if (fams.length) tintFamilies = fams;
   }
+
+  const body = composeLearningSentence(event, kind as LearningKind);
 
   return (
     <View style={styles.backdrop}>
@@ -99,6 +97,14 @@ export function EmotionUnlockCard({ event, kind = 'first_shape', onKeepExploring
             </LinearGradient>
           </PressableScale>
         </View>
+
+        {onNotQuite ? (
+          <PressableScale onPress={onNotQuite} style={styles.notQuite}>
+            <Txt variant="small" color={palette.inkSoft} align="center">
+              That isn’t quite it
+            </Txt>
+          </PressableScale>
+        ) : null}
       </Glass>
     </View>
   );
@@ -135,4 +141,5 @@ const styles = StyleSheet.create({
   },
   btnGhost: { backgroundColor: 'rgba(255,255,255,0.6)' },
   btnSolid: { overflow: 'hidden' },
+  notQuite: { marginTop: spacing.sm, paddingVertical: spacing.xs, alignSelf: 'center' },
 });

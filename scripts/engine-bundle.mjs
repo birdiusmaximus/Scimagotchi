@@ -1329,6 +1329,46 @@ function stripEmDashes(text) {
   return text.replace(/\s*[—–―‒]\s*/g, ", ").replace(/\s+,/g, ",").replace(/,\s*,/g, ", ").replace(/,\s*([.!?;:])/g, "$1").replace(/,\s*$/g, "").replace(/\s{2,}/g, " ").trim();
 }
 
+// src/services/ai/learningSentence.ts
+function familyWord(f) {
+  return f && EMOTION_MAPS[f] ? EMOTION_MAPS[f].label.split(/[\s&]/)[0].toLowerCase() : "this";
+}
+function frag(s, max = 90) {
+  let t = (s ?? "").trim().replace(/^["'“”‘’]+|["'“”‘’]+$/g, "").replace(/[\s,;:.!?]+$/g, "").trim();
+  if (t.length > max) t = t.slice(0, max).replace(/\s+\S*$/, "").trim();
+  return t;
+}
+function textureOf(ev) {
+  return frag(ev.body_cue?.[0] ?? ev.appraisal_thought ?? ev.need_value?.[0] ?? "", 60);
+}
+function finish(s) {
+  const t = stripEmDashes(s).replace(/\s+/g, " ").trim();
+  return /[.!?]$/.test(t) ? t : `${t}.`;
+}
+function composeLearningSentence(ev, kind = "first_shape") {
+  const fam = familyWord(ev.emotion_family);
+  const phrase = frag(ev.user_phrase ?? ev.user_words_raw ?? "");
+  const context = frag(ev.trigger_event ?? "", 70);
+  const texture = textureOf(ev);
+  if (kind === "mixed") {
+    const fams = [...new Set((ev.strands ?? []).map((s) => s.family))].slice(0, 2).map(familyWord);
+    if (fams.length >= 2 && fams[0] !== fams[1]) {
+      return finish(`I am learning that ${fams[0]} and ${fams[1]} can sit in you at the same time, and neither has to win`);
+    }
+    return finish("I am learning that more than one feeling can sit in you at once, and neither has to win");
+  }
+  if (kind === "deepened") {
+    if (phrase && context) return finish(`I know this a little better now: ${phrase}, the way it comes up when ${context}`);
+    if (phrase) return finish(`I know this a little better now: ${phrase}`);
+    return finish(`I know this ${fam} a little better now than I did before`);
+  }
+  if (phrase && context) return finish(`I think I'm learning that for you, ${fam} can feel like ${phrase}, especially when ${context}`);
+  if (phrase && texture) return finish(`This one has a shape now: ${phrase}, with ${texture} in it, not just ${fam}`);
+  if (phrase) return finish(`I think this is the first shape of ${fam} you've shown me: ${phrase}`);
+  if (context) return finish(`I think this is the first shape of ${fam} you've shown me, the way it comes up when ${context}`);
+  return finish(`I think this is the first shape of ${fam} you've shown me`);
+}
+
 // src/services/ai/weeklyNarrative.ts
 var FAMILY_WORD = {
   joy: "joy",
@@ -1407,6 +1447,7 @@ export {
   activeCards,
   advanceProgress,
   askedForNamingHelp,
+  composeLearningSentence,
   composeWeeklySummary,
   detectShadeRejection,
   draftFromRejection,

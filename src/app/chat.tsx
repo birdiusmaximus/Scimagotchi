@@ -185,6 +185,12 @@ export default function ChatScreen() {
           event={unlock.event}
           kind={unlock.kind}
           onKeepExploring={() => useStore.getState().dismissUnlock()}
+          onNotQuite={() => {
+            // Correcting a first shape (§6.3): dismiss the ceremony and tell the
+            // companion plainly, so the pushback flow records it and reopens gently.
+            useStore.getState().dismissUnlock();
+            useStore.getState().send('that’s not quite the word for it');
+          }}
           onDone={() => {
             useStore.getState().dismissUnlock();
             // If the companion kept something this session, show it transparently

@@ -35,6 +35,8 @@ export interface CompanionInput {
   safetyNote?: string | null;
   /** stance chosen at the door (home chip) — biases the first turn's conversation mode */
   entryHint?: import('@/services/ai/modeRouter').ConversationMode | null;
+  /** a continuation chip the user tapped this turn ("stay with it" / "not quite" / "done") */
+  intent?: import('@/services/ai/modeRouter').ChipIntent | null;
 }
 
 export function emptyEvent(conversationId: string): EmotionEvent {

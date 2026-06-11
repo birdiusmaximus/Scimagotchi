@@ -69,7 +69,10 @@ export default function ChatScreen() {
 
   // Continuation chips (engine brief §7.3, §16.2): offered sparingly — only when
   // the companion reflected WITHOUT asking a question, and nothing else is open.
+  // Tapping one is a lightweight intent (stay with it / not quite / done), not a
+  // canned message — it asks the companion engine for the right next turn.
   const [chipsDismissedFor, setChipsDismissedFor] = useState<string | null>(null);
+  const [closed, setClosed] = useState(false);
   const last = messages[messages.length - 1];
   const showChips =
     !!last &&
@@ -80,6 +83,7 @@ export default function ChatScreen() {
     !unlock &&
     !safetyVisible &&
     !safetyCheck &&
+    !closed &&
     chipsDismissedFor !== last.id;
 
   const scrollRef = useRef<ScrollView>(null);
@@ -166,14 +170,24 @@ export default function ChatScreen() {
 
               {showChips ? (
                 <ChatChips
-                  onKeepGoing={() => last && setChipsDismissedFor(last.id)}
-                  onNotQuite={() => useStore.getState().send('hmm, that’s not quite it')}
-                  onDone={() => useStore.getState().send('I think I’ll leave it here for now')}
+                  onKeepGoing={() => useStore.getState().send('Let’s stay with it.', { intent: 'keep_going' })}
+                  onNotQuite={() => useStore.getState().send('Hmm, not quite.', { intent: 'not_quite' })}
+                  onDone={() => {
+                    setClosed(true);
+                    useStore.getState().send('I think I’ll leave it here.', { intent: 'done' });
+                  }}
                 />
               ) : null}
 
               <View style={styles.inputWrap}>
-                <ChatInput autoFocus refocusSignal={speak.key} onSubmit={(t) => useStore.getState().send(t)} />
+                <ChatInput
+                  autoFocus
+                  refocusSignal={speak.key}
+                  onSubmit={(t) => {
+                    setClosed(false);
+                    useStore.getState().send(t);
+                  }}
+                />
               </View>
             </Glass>
           </Animated.View>
@@ -186,10 +200,11 @@ export default function ChatScreen() {
           kind={unlock.kind}
           onKeepExploring={() => useStore.getState().dismissUnlock()}
           onNotQuite={() => {
-            // Correcting a first shape (§6.3): dismiss the ceremony and tell the
-            // companion plainly, so the pushback flow records it and reopens gently.
+            // Correcting a first shape (§6.3): dismiss the ceremony and run the same
+            // repair intent as the chip, so the reading is dropped and reopened gently.
             useStore.getState().dismissUnlock();
-            useStore.getState().send('that’s not quite the word for it');
+            setClosed(false);
+            useStore.getState().send('Hmm, not quite.', { intent: 'not_quite' });
           }}
           onDone={() => {
             useStore.getState().dismissUnlock();

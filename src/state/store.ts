@@ -33,7 +33,7 @@ import {
   safetyEventsRepo,
   settingsRepo,
 } from '@/services/db/repos';
-import type { ConversationMode } from '@/services/ai/modeRouter';
+import type { ChipIntent, ConversationMode } from '@/services/ai/modeRouter';
 import { advanceProgress, migrateStage, PROGRESS_RANK, type AdvanceResult } from '@/services/ai/progressionEngine';
 import { draftFromRejection, draftFromTurn, relevantMemory } from '@/services/memoryLedger';
 import { buildWeeklySummary } from '@/services/weeklySummary';
@@ -93,6 +93,9 @@ interface AppState {
   memoryCards: MemoryCard[];
   /** Stance chosen at the door (home chip) — biases the first companion turn, then clears. */
   entryMode: ConversationMode | null;
+  /** Lightweight repair state after a "Not quite": the reading the user waved off, and
+   * their preferred word once they give one. Session-scoped; never auto-saved to memory. */
+  repair: { rejected: string; preferred: string | null } | null;
   weekly: WeeklySummary | null;
   userName: string;
   remindersEnabled: boolean;
@@ -104,7 +107,7 @@ interface AppState {
   newConversation: () => Promise<string>;
   attachConversation: (cid: string) => Promise<void>;
   greet: (text: string) => Promise<void>;
-  send: (text: string) => Promise<void>;
+  send: (text: string, opts?: { intent?: ChipIntent | null }) => Promise<void>;
   dismissUnlock: () => void;
   dismissSafety: () => void;
   dismissWeekly: () => void;
@@ -131,6 +134,7 @@ export const useStore = create<AppState>((set, get) => ({
   safetyClarified: false,
   memoryCards: [],
   entryMode: null,
+  repair: null,
   weekly: null,
   userName: '',
   remindersEnabled: false,
@@ -202,7 +206,7 @@ export const useStore = create<AppState>((set, get) => ({
       safety_level: 0,
     };
     // Set state synchronously first so callers can immediately greet/send into it.
-    set({ conversationId: id, messages: [], draftEvent: null, orbFamily: null, unlock: null, safetyCheck: null, safetyClarified: false, entryMode: null });
+    set({ conversationId: id, messages: [], draftEvent: null, orbFamily: null, unlock: null, safetyCheck: null, safetyClarified: false, entryMode: null, repair: null });
     conversationsRepo.save(conv).catch(() => {});
     return id;
   },
@@ -240,9 +244,10 @@ export const useStore = create<AppState>((set, get) => ({
     await messagesRepo.add(msg).catch(() => {});
   },
 
-  send: async (text) => {
+  send: async (text, opts) => {
     const clean = text.trim();
     if (!clean || get().sending) return;
+    const intent = opts?.intent ?? null;
 
     const convId = get().conversationId ?? (await get().newConversation());
 
@@ -352,7 +357,24 @@ export const useStore = create<AppState>((set, get) => ({
         .slice(-8)
         .map((m) => ({ role: m.role as 'user' | 'companion', content: m.content }));
 
-      const prevDraft = get().draftEvent;
+      let prevDraft = get().draftEvent;
+      // "Not quite" — the user is correcting the companion's reading. Before the
+      // repair turn, mark the current interpretation rejected and not user-owned, so
+      // it cannot unlock or be saved and is never re-proposed (§ state requirements).
+      if (intent === 'not_quite' && prevDraft?.emotion_family) {
+        const rejectedFamily = prevDraft.emotion_family;
+        const rejectedShade = prevDraft.emotion_shade?.trim() || null;
+        const rejected = new Set(prevDraft.user_rejected_shades ?? []);
+        if (rejectedShade) rejected.add(rejectedShade);
+        prevDraft = {
+          ...prevDraft,
+          user_rejected_shades: [...rejected],
+          label_source: 'companion_hypothesis',
+          shade_source: 'companion_hypothesis',
+          user_confirmation: 'no',
+        };
+        set({ draftEvent: prevDraft, repair: { rejected: rejectedShade ?? rejectedFamily, preferred: null } });
+      }
       // The entry-chip stance biases only the first turn, then clears.
       const entryHint = get().entryMode;
       if (entryHint) set({ entryMode: null });
@@ -365,6 +387,7 @@ export const useStore = create<AppState>((set, get) => ({
         userName: get().userName || null,
         safetyNote,
         entryHint,
+        intent,
       });
 
       const compMsg: Message = {
@@ -385,13 +408,24 @@ export const useStore = create<AppState>((set, get) => ({
       await emotionEventsRepo.upsert(turn.event).catch(() => {});
       const adv = await get()._updateProgress(turn, convId, !!safetyNote);
 
+      // A typed correction may give us the word the companion was reaching for —
+      // record it as the preferred session label (never auto-saved to memory).
+      if (intent === null && get().repair && turn.event.emotion_family) {
+        const owned = turn.event.label_source === 'user_stated' || turn.event.label_source === 'user_confirmed';
+        const word = turn.event.emotion_shade?.trim() || turn.event.emotion_family;
+        if (owned && word && word.toLowerCase() !== get().repair!.rejected.toLowerCase()) {
+          set((s) => ({ repair: s.repair ? { ...s.repair, preferred: word } : null }));
+        }
+      }
+
       // ── Auto-learned memory (brief §12.3, simplified) ──────────────────────
       // The companion remembers settled moments on its own — a first shape, a
       // confirmed mixed structure, an explicit "remember this", or a correction
       // it shouldn't repeat. No Save / Edit / Not this prompt (it felt
       // repetitive); the user can delete any memory, and sensitive content is
       // still never stored (handled inside the drafters via memoryBlocked).
-      if (!safetyNote) {
+      // "Not quite" never silently creates a memory (§ state requirements).
+      if (!safetyNote && intent !== 'not_quite') {
         let learned = draftFromTurn(turn, clean, convId);
         if (!learned) {
           const before = new Set(prevDraft?.user_rejected_shades ?? []);
@@ -507,6 +541,7 @@ export const useStore = create<AppState>((set, get) => ({
       safetyClarified: false,
       memoryCards: [],
       entryMode: null,
+      repair: null,
       weekly: null,
       userName: '',
       remindersEnabled: false,

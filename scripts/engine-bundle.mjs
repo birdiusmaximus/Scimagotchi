@@ -79,6 +79,25 @@ function routeMode(userText, prevEvent, entryHint = null) {
   if (familyKnown) return decide("differentiate");
   return decide("witness");
 }
+var KEEP_GOING_DIRECTIVE = 'Mode: STAY WITH IT \u2014 they tapped a button to keep exploring THIS feeling with you, not to start something new. Do NOT restate your last reflection. Build directly on their most recent words, metaphor, or the emotional shape already in play, in their own wording. Offer exactly ONE short, gentle follow-up that opens just ONE of these doors: a finer shade of the feeling, where it sits in the body or its sensory shape, what set it off, what it means or connects to, a nearby feeling it borders, whether a second strand is tangled in, or a personal memory or phrase for it. If the feeling is a GOOD one, sometimes invite them to savour and stay in it rather than analyse it ("do you want to just linger with that for a second, rather than pull it apart?"). One question only. No advice, no lists, no clinical words.';
+function intentDecision(intent, prevEvent = null) {
+  if (intent === "not_quite") {
+    return {
+      mode: "repair",
+      directive: DIRECTIVES.repair + ' They signalled this by tapping "Not quite", so respond to THAT: name the miss lightly (no over-apology, no defending your guess, never "as an AI"), and make a low-effort correction welcome, offering a few NEARBY alternatives only if it helps. Use "maybe / closer / fit / shape" language and treat the correction as progress. If they have waved off a word more than once, stop offering labels and invite them to describe it in their own, even if messy.'
+    };
+  }
+  if (intent === "done") {
+    return {
+      mode: "close",
+      directive: DIRECTIVES.close + ' They tapped "I am done". Give ONE short, warm closing reflection in their register and stop. Ask no question (the single allowed exception is a gentle one-line offer to keep this, and only if a clear shape was actually found). No guilt, no neediness, never that you will miss them.'
+    };
+  }
+  const familyKnown = !!prevEvent?.emotion_family;
+  const shaped = !!prevEvent && (prevEvent.body_cue.length > 0 || prevEvent.behaviour_action.length > 0);
+  const mode = familyKnown ? shaped ? "meaning" : "differentiate" : "clarify";
+  return { mode, directive: KEEP_GOING_DIRECTIVE };
+}
 
 // src/services/ai/responsePolicy.ts
 var OVERUSED_STEMS = ["that sounds", "it sounds", "that feels", "it makes sense", "that makes sense", "i hear that"];
@@ -1457,6 +1476,7 @@ export {
   evaluateStage,
   expressionFor,
   firstShapeEvidence,
+  intentDecision,
   isDuplicateReply,
   isOptionMenu,
   labelIsUserOwned,

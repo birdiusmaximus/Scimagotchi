@@ -14,6 +14,7 @@ import {
   EXIT_CUE,
   expressionFor,
   firstShapeEvidence,
+  intentDecision,
   isOptionMenu,
   labelIsUserOwned,
   mixedConfirmed,
@@ -226,6 +227,24 @@ check('router: entry hint soft_landing for check-in', routeMode('not much, just 
 // ...but explicit signals and heavy disclosures still override the hint
 check('router: repair overrides entry hint', routeMode("no that's not it", null, 'witness').mode, 'repair');
 check('router: heavy disclosure overrides a light check-in hint', routeMode('my mum passed away yesterday', null, 'soft_landing').mode, 'witness');
+
+// ── Continuation-chip intents (Stay with it / Not quite / I'm done) ──────────
+const kgKnown = intentDecision('keep_going', ev({ label_source: 'user_stated' }));
+check('intent: keep_going (shaped) -> meaning mode', kgKnown.mode, 'meaning');
+check('intent: keep_going directive is STAY WITH IT', /stay with it/i.test(kgKnown.directive), true);
+check('intent: keep_going asks exactly one question, no advice', /one question only|one question/i.test(kgKnown.directive) && /no advice/i.test(kgKnown.directive), true);
+check('intent: keep_going invites savouring for good feelings', /savour|linger/i.test(kgKnown.directive), true);
+check('intent: keep_going with no family yet -> clarify mode', intentDecision('keep_going', null).mode, 'clarify');
+check('intent: keep_going unshaped-but-known -> differentiate',
+  intentDecision('keep_going', ev({ label_source: 'user_stated', body_cue: [], behaviour_action: [], trigger_event: null })).mode, 'differentiate');
+const nq = intentDecision('not_quite', ev());
+check('intent: not_quite -> repair mode', nq.mode, 'repair');
+check('intent: not_quite acknowledges the miss / drops the label', /not quite/i.test(nq.directive) && /rejected|drop the rejected|never re-propose/i.test(nq.directive), true);
+check('intent: not_quite uses maybe/closer/fit language', /closer|fit|shape|maybe/i.test(nq.directive), true);
+const dn = intentDecision('done', ev());
+check('intent: done -> close mode', dn.mode, 'close');
+check('intent: done asks no question (except optional save)', /no question|ask no question/i.test(dn.directive), true);
+check('intent: done forbids guilt / neediness', /no guilt|no neediness|never that you will miss/i.test(dn.directive), true);
 
 // ── Em-dash stripping (companion never shows long dashes) ────────────────────
 check('strip: spaced em dash -> comma', stripEmDashes('Go ahead — say whatever’s there'), 'Go ahead, say whatever’s there');

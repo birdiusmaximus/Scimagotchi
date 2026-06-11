@@ -32,7 +32,7 @@ export function ChatChips({
 }) {
   return (
     <Animated.View entering={FadeIn.duration(300)} style={styles.row}>
-      <Chip label="Keep going" colors={TINTS.keep} onPress={onKeepGoing} />
+      <Chip label="Stay with it" colors={TINTS.keep} onPress={onKeepGoing} />
       <Chip label="Not quite" colors={TINTS.notQuite} onPress={onNotQuite} />
       <Chip label="I’m done" colors={TINTS.done} onPress={onDone} />
     </Animated.View>

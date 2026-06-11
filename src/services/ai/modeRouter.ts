@@ -25,6 +25,9 @@ export interface ModeDecision {
   directive: string;
 }
 
+/** A continuation chip the user tapped — a lightweight conversational intent. */
+export type ChipIntent = 'keep_going' | 'not_quite' | 'done';
+
 const norm = (s: string) => ` ${s.toLowerCase().replace(/[’'`]/g, '').replace(/[^a-z0-9?]+/g, ' ').trim()} `;
 
 const REPAIR =
@@ -126,4 +129,45 @@ export function routeMode(
   if (familyKnown && shaped) return decide('meaning');
   if (familyKnown) return decide('differentiate');
   return decide('witness');
+}
+
+const KEEP_GOING_DIRECTIVE =
+  'Mode: STAY WITH IT — they tapped a button to keep exploring THIS feeling with you, not to start something new. Do NOT restate ' +
+  'your last reflection. Build directly on their most recent words, metaphor, or the emotional shape already in play, in their own wording. ' +
+  'Offer exactly ONE short, gentle follow-up that opens just ONE of these doors: a finer shade of the feeling, where it sits in the body or ' +
+  'its sensory shape, what set it off, what it means or connects to, a nearby feeling it borders, whether a second strand is tangled in, or a ' +
+  'personal memory or phrase for it. If the feeling is a GOOD one, sometimes invite them to savour and stay in it rather than analyse it ' +
+  '("do you want to just linger with that for a second, rather than pull it apart?"). One question only. No advice, no lists, no clinical words.';
+
+/**
+ * Map a tapped continuation chip to a turn directive (the button-intent path,
+ * separate from the text heuristics in routeMode). NOT_QUITE and DONE reuse the
+ * repair/close directives; KEEP_GOING is a dedicated "stay with it" deepening.
+ */
+export function intentDecision(intent: ChipIntent, prevEvent: EmotionEvent | null = null): ModeDecision {
+  if (intent === 'not_quite') {
+    return {
+      mode: 'repair',
+      directive:
+        DIRECTIVES.repair +
+        ' They signalled this by tapping "Not quite", so respond to THAT: name the miss lightly (no over-apology, no defending your guess, ' +
+        'never "as an AI"), and make a low-effort correction welcome, offering a few NEARBY alternatives only if it helps. Use "maybe / closer ' +
+        '/ fit / shape" language and treat the correction as progress. If they have waved off a word more than once, stop offering labels and ' +
+        'invite them to describe it in their own, even if messy.',
+    };
+  }
+  if (intent === 'done') {
+    return {
+      mode: 'close',
+      directive:
+        DIRECTIVES.close +
+        ' They tapped "I am done". Give ONE short, warm closing reflection in their register and stop. Ask no question (the single allowed ' +
+        'exception is a gentle one-line offer to keep this, and only if a clear shape was actually found). No guilt, no neediness, never that you will miss them.',
+    };
+  }
+  // keep_going — label the mode by where they are, but the directive carries the behaviour.
+  const familyKnown = !!prevEvent?.emotion_family;
+  const shaped = !!prevEvent && (prevEvent.body_cue.length > 0 || prevEvent.behaviour_action.length > 0);
+  const mode: ConversationMode = familyKnown ? (shaped ? 'meaning' : 'differentiate') : 'clarify';
+  return { mode, directive: KEEP_GOING_DIRECTIVE };
 }

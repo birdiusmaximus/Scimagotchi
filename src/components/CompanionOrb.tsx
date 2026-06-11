@@ -7,6 +7,7 @@ import Animated, {
   Easing,
   interpolate,
   useAnimatedStyle,
+  useDerivedValue,
   useSharedValue,
   withDelay,
   withRepeat,
@@ -28,6 +29,7 @@ import type { CompanionVisualState } from '@/services/ai/companionVisualState';
 import { expressionFor } from '@/services/ai/orbExpression';
 import { gradients } from '@/theme/tokens';
 import type { EmotionFamilyId } from '@/types/models';
+import { withAlpha } from '@/utils/color';
 
 // Production easing curves (from the remotion best-practices skill): a crisp
 // ease-out for settling into a pose, a balanced ease-in-out for calm loops.
@@ -35,6 +37,8 @@ const EASE_OUT = Easing.bezier(0.16, 1, 0.3, 1);
 const EASE_IN_OUT = Easing.bezier(0.45, 0, 0.55, 1);
 // A gentle spring for arm follow-through: light mass, mild overshoot, soft settle.
 const ARM_SPRING = { damping: 13, stiffness: 95, mass: 0.9 } as const;
+// A laggier spring for the arms trailing the body while it is dragged about.
+const TRAIL_SPRING = { damping: 13, stiffness: 70, mass: 1.1 } as const;
 
 type Props = {
   size?: number;
@@ -87,6 +91,24 @@ const OrbGradientLayer = memo(function OrbGradientLayer({ kind }: { kind: 'base'
     />
   ) : (
     <LinearGradient colors={SHEEN_COLORS} start={SHEEN_START} end={SHEEN_END} style={StyleSheet.absoluteFill} />
+  );
+});
+
+/**
+ * The emotion hue, rendered as its own gradient (lighter toward the highlight, fuller
+ * toward the base) so the orb clearly BECOMES the feeling's colour — joy gold, calm
+ * teal, sadness blue — instead of a muddy flat wash over the violet. Memoised by
+ * colour so it renders once per emotion, not every animation frame. The white
+ * sheen/highlight layered on top keep it glossy. Colours mirror the Patterns screen.
+ */
+const EmotionTintLayer = memo(function EmotionTintLayer({ color }: { color: string }) {
+  return (
+    <LinearGradient
+      colors={[withAlpha(color, 0.7), withAlpha(color, 0.9), withAlpha(color, 0.99)]}
+      start={ORB_GRADIENT_START}
+      end={ORB_GRADIENT_END}
+      style={StyleSheet.absoluteFill}
+    />
   );
 });
 
@@ -353,31 +375,41 @@ export function CompanionOrb({
     ],
   }));
 
+  // Drag follow-through: the arms chase the body's drag/recoil with a soft, laggy
+  // spring, so they trail behind and settle after it instead of staying centred
+  // while the body moves away.
+  const armTrailX = useDerivedValue(() => withSpring(dragX.value + recoilX.value, TRAIL_SPRING));
+  const armTrailY = useDerivedValue(() => withSpring(dragY.value + recoilY.value, TRAIL_SPRING));
+
   // Satellite arm orbs: pose position + a small independent idle drift, gently
-  // coupled to the breath. Left drifts on `drift`, right on `breathe`, so the two
-  // never move in lockstep.
+  // coupled to the breath, plus the trailing drag offset. Left drifts on `drift`,
+  // right on `breathe`, so the two never move in lockstep.
   const idle = rm ? 0 : 1;
   const armLStyle = useAnimatedStyle(() => ({
     opacity: aLo.value,
     transform: [
-      { translateX: aLx.value + (drift.value - 0.5) * 2 * MOTION_CONFIG.idleAmplitude * size * idle },
-      { translateY: aLy.value + interpolate(floatY.value, [0, 1], [-3, 3]) * idle },
+      { translateX: aLx.value + armTrailX.value + (drift.value - 0.5) * 2 * MOTION_CONFIG.idleAmplitude * size * idle },
+      { translateY: aLy.value + armTrailY.value + interpolate(floatY.value, [0, 1], [-3, 3]) * idle },
       { scale: aLs.value + interpolate(breathe.value, [0, 1], [0, 0.03]) * idle },
-      { rotate: `${aLr.value}deg` },
+      { rotate: `${aLr.value + armTrailX.value * 0.08}deg` }, // slight arc as they trail
     ],
   }));
   const armRStyle = useAnimatedStyle(() => ({
     opacity: aRo.value,
     transform: [
-      { translateX: aRx.value - (breathe.value - 0.5) * 2 * MOTION_CONFIG.idleAmplitude * size * idle },
-      { translateY: aRy.value + interpolate(floatY.value, [0, 1], [3, -3]) * idle },
+      { translateX: aRx.value + armTrailX.value - (breathe.value - 0.5) * 2 * MOTION_CONFIG.idleAmplitude * size * idle },
+      { translateY: aRy.value + armTrailY.value + interpolate(floatY.value, [0, 1], [3, -3]) * idle },
       { scale: aRs.value + interpolate(breathe.value, [0, 1], [0, 0.03]) * idle },
-      { rotate: `${aRr.value}deg` },
+      { rotate: `${aRr.value + armTrailX.value * 0.08}deg` },
     ],
   }));
 
-  const tintStyle = useAnimatedStyle(() => ({ opacity: tint.value * 0.24 * tintFactor.value }));
-  const secondTintStyle = useAnimatedStyle(() => ({ opacity: secondTint.value * 0.13 * tintFactor.value }));
+  // Emotion hue: the orb visibly becomes the feeling — joy gold, calm teal, sadness
+  // blue, etc. — matching the per-emotion colours on the Patterns screen. The primary
+  // hue is a full gradient layer (its own alpha carries the strength); a mixed feeling
+  // washes a second hue over it. Both halve while the feeling is still uncertain.
+  const tintStyle = useAnimatedStyle(() => ({ opacity: tint.value * tintFactor.value }));
+  const secondTintStyle = useAnimatedStyle(() => ({ opacity: secondTint.value * 0.4 * tintFactor.value }));
 
   const eyeStyle = useAnimatedStyle(() => {
     const closed = 0.07;
@@ -400,7 +432,9 @@ export function CompanionOrb({
     ],
   }));
 
-  const tintColor = primaryFamily ? FAMILY_COLORS[primaryFamily] : 'transparent';
+  // Default to the orb's own violet when no family, so the tint layer always has a
+  // valid colour to render and fade in/out (its opacity is gated by tint.value).
+  const tintColor = primaryFamily ? FAMILY_COLORS[primaryFamily] : '#6E5BF2';
   const secondColor = secondFamily ? FAMILY_COLORS[secondFamily] : 'transparent';
 
   const content = (
@@ -425,7 +459,9 @@ export function CompanionOrb({
           ]}
         >
           <OrbGradientLayer kind="base" />
-          <Animated.View style={[StyleSheet.absoluteFill, { backgroundColor: tintColor }, tintStyle]} />
+          <Animated.View style={[StyleSheet.absoluteFill, tintStyle]}>
+            <EmotionTintLayer color={tintColor} />
+          </Animated.View>
           <Animated.View style={[StyleSheet.absoluteFill, { backgroundColor: secondColor }, secondTintStyle]} />
         </Animated.View>
       ))}
@@ -433,9 +469,11 @@ export function CompanionOrb({
       <Animated.View style={containerStyle}>
         <View style={[styles.orb, { width: size, height: size, borderRadius: size / 2, boxShadow: BASE_GLOW }]}>
           <OrbGradientLayer kind="base" />
-          {/* Subtle emotion hue (foreground strand) */}
-          <Animated.View style={[StyleSheet.absoluteFill, { backgroundColor: tintColor }, tintStyle]} />
-          {/* Background strand of a mixed feeling — a second, fainter hue layered in */}
+          {/* Emotion hue (foreground strand) — the orb becomes the feeling's colour */}
+          <Animated.View style={[StyleSheet.absoluteFill, tintStyle]}>
+            <EmotionTintLayer color={tintColor} />
+          </Animated.View>
+          {/* Background strand of a mixed feeling — a second hue washed over the first */}
           <Animated.View style={[StyleSheet.absoluteFill, { backgroundColor: secondColor }, secondTintStyle]} />
           <Animated.View style={[styles.highlight, { width: size * 0.4, height: size * 0.26 }, highlightStyle]} />
           <OrbGradientLayer kind="sheen" />

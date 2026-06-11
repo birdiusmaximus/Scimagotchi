@@ -35,6 +35,7 @@ import {
 } from '@/services/db/repos';
 import type { ChipIntent, ConversationMode } from '@/services/ai/modeRouter';
 import { advanceProgress, migrateStage, PROGRESS_RANK, type AdvanceResult } from '@/services/ai/progressionEngine';
+import { hasEmotionAnchor, isUncertain } from '@/services/ai/stage';
 import { draftFromRejection, draftFromTurn, relevantMemory } from '@/services/memoryLedger';
 import { buildWeeklySummary } from '@/services/weeklySummary';
 import { UK_SUPPORT_ROUTES } from '@/data/safetyResources';
@@ -248,6 +249,9 @@ export const useStore = create<AppState>((set, get) => ({
     const clean = text.trim();
     if (!clean || get().sending) return;
     const intent = opts?.intent ?? null;
+    // The user is unsure this turn ("not sure", "i dont know"): the companion stays
+    // curious, never learns — no stage advance, no deepening, no memory.
+    const uncertain = !intent && isUncertain(clean);
 
     const convId = get().conversationId ?? (await get().newConversation());
 
@@ -406,7 +410,10 @@ export const useStore = create<AppState>((set, get) => ({
       }));
       await messagesRepo.add(compMsg).catch(() => {});
       await emotionEventsRepo.upsert(turn.event).catch(() => {});
-      const adv = await get()._updateProgress(turn, convId, !!safetyNote);
+      // Suppress stage progression on safety-sensitive, tapped-chip, or uncertain
+      // turns — the companion only learns from real, user-owned emotional evidence,
+      // never from a button tap or "not sure".
+      const adv = await get()._updateProgress(turn, convId, !!safetyNote || !!intent || uncertain);
 
       // A typed correction may give us the word the companion was reaching for —
       // record it as the preferred session label (never auto-saved to memory).
@@ -424,8 +431,10 @@ export const useStore = create<AppState>((set, get) => ({
       // it shouldn't repeat. No Save / Edit / Not this prompt (it felt
       // repetitive); the user can delete any memory, and sensitive content is
       // still never stored (handled inside the drafters via memoryBlocked).
-      // "Not quite" never silently creates a memory (§ state requirements).
-      if (!safetyNote && intent !== 'not_quite') {
+      // A button tap ("Stay with it" / "Not quite" / "I'm done") or an unsure turn
+      // ("not sure") never silently creates a memory — the companion only keeps real,
+      // user-owned emotional moments.
+      if (!safetyNote && !intent && !uncertain) {
         let learned = draftFromTurn(turn, clean, convId);
         if (!learned) {
           const before = new Set(prevDraft?.user_rejected_shades ?? []);
@@ -455,12 +464,17 @@ export const useStore = create<AppState>((set, get) => ({
         }
       } else if (
         !safetyNote &&
+        !intent &&
+        !uncertain &&
         adv?.advanced &&
         PROGRESS_RANK[adv.from] >= PROGRESS_RANK.first_shape &&
-        (adv.to === 'distinguished' || adv.to === 'deepened' || adv.to === 'returning')
+        (adv.to === 'distinguished' || adv.to === 'deepened' || adv.to === 'returning') &&
+        hasEmotionAnchor(turn.event)
       ) {
         // Deepening (brief §6.5): an already-understood feeling gained a new shade,
         // distinction, mixed structure, or returned. A quieter, intimate ceremony.
+        // Never from a button tap, an unsure turn, or a turn with no real anchor —
+        // so it can never show "I know this better now: not sure".
         set({ unlock: { event: turn.event, kind: turn.event.mixed_confirmed === 1 ? 'mixed' : 'deepened' } });
       }
     } finally {

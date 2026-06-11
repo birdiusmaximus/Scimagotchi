@@ -21,6 +21,8 @@ export {
   detectShadeRejection,
   evaluateStage,
   firstShapeEvidence,
+  hasEmotionAnchor,
+  isUncertain,
   labelIsUserOwned,
   shadeIsUserOwned,
   SLOW_PATH_FAMILIES,

@@ -561,6 +561,102 @@ function mixedConfirmed(ev, prev) {
   return false;
 }
 
+// src/services/ai/stage.ts
+var RANK = {
+  noticed: 0,
+  named: 1,
+  shaped: 2,
+  understood: 3,
+  deepened: 4
+};
+function stageRank(stage) {
+  return RANK[stage];
+}
+var SLOW_PATH_FAMILIES = /* @__PURE__ */ new Set(["flat", "shame"]);
+function firstShapeEvidence(ev, prev = null) {
+  const userOwnedLabel = ev.label_source === "user_stated" || ev.label_source === "user_confirmed";
+  const concreteSituation = !!ev.trigger_event;
+  const userPhraseOrMetaphor = !!(ev.user_phrase && ev.user_phrase.trim()) || (ev.user_words_raw ?? "").trim().split(/\s+/).filter(Boolean).length >= 3;
+  const bodyCue = ev.body_cue.length > 0 || ev.behaviour_action.length > 0;
+  const meaningOrAppraisal = !!ev.appraisal_thought || ev.need_value.length > 0;
+  const mixedEmotionDistinction = ev.mixed_confirmed === 1 || (ev.strands?.length ?? 0) >= 2;
+  const repeatedConfirmation = !!prev && prev.emotion_family === ev.emotion_family && !!prev.emotion_shade && !!ev.emotion_shade && prev.emotion_shade.toLowerCase() === ev.emotion_shade.toLowerCase();
+  const userAcceptedReflection = ev.label_source === "user_confirmed" || ev.user_confirmation === "yes";
+  const materialCount = [
+    concreteSituation,
+    userPhraseOrMetaphor,
+    bodyCue,
+    meaningOrAppraisal,
+    mixedEmotionDistinction
+  ].filter(Boolean).length;
+  return {
+    userOwnedLabel,
+    concreteSituation,
+    userPhraseOrMetaphor,
+    bodyCue,
+    meaningOrAppraisal,
+    mixedEmotionDistinction,
+    repeatedConfirmation,
+    userAcceptedReflection,
+    materialCount
+  };
+}
+function evaluateStage(ev, prev = null) {
+  if (!ev.emotion_family) return "noticed";
+  const hasShade = !!ev.emotion_shade;
+  const anchor = ev.body_cue.length > 0 || ev.behaviour_action.length > 0 || !!ev.trigger_event || !!ev.appraisal_thought;
+  if (!hasShade) return anchor ? "shaped" : "named";
+  const rejected = (ev.user_rejected_shades ?? []).some(
+    (s) => s.toLowerCase() === ev.emotion_shade.toLowerCase()
+  );
+  const e = firstShapeEvidence(ev, prev);
+  const stabilityOk = e.repeatedConfirmation || e.userAcceptedReflection;
+  const slow = SLOW_PATH_FAMILIES.has(ev.emotion_family);
+  const enoughMaterial = slow ? e.materialCount >= 3 || e.repeatedConfirmation && e.materialCount >= 2 : e.materialCount >= 2;
+  if (!rejected && e.userOwnedLabel && stabilityOk && enoughMaterial) return "understood";
+  return anchor ? "shaped" : "named";
+}
+var ACCEPT_SHADE = /\b(yes|yeah|yep|exactly|thats? (it|right|the (one|word))|that fits|that'?s the word|the right word|good word)\b/;
+function shadeIsUserOwned(shade, userText, history, opts) {
+  if (!shade || !shade.trim()) return false;
+  const w = shade.toLowerCase().trim();
+  const said = (text) => ` ${text.toLowerCase()} `.includes(` ${w} `) || new RegExp(`\\b${w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i").test(text);
+  if (said(userText)) return true;
+  if (history.some((m) => m.role === "user" && said(m.content))) return true;
+  const proposed = (opts?.proposedShade ?? "").toLowerCase().trim();
+  if (proposed && proposed === w && ACCEPT_SHADE.test(` ${userText.toLowerCase().replace(/[’'`]/g, "'")} `)) return true;
+  return false;
+}
+var SHADE_REJECT = /\b(not (really|quite|it|that|the word)|that'?s not (it|right|the word|quite it)|doesn'?t (fit|feel right|sound right|quite fit)|isn'?t (it|right|the word)|wrong word|no not|not the right word)\b/;
+function detectShadeRejection(userText, prev) {
+  if (!prev?.emotion_shade) return null;
+  const t = ` ${userText.toLowerCase().replace(/[’'`]/g, "'")} `;
+  return SHADE_REJECT.test(t) ? prev.emotion_shade : null;
+}
+var UNCERTAIN_RX = /\b(not sure|no idea|no clue|i dont know|i don'?t know|dunno|idk|hard to say|hard to put|cant tell|cannot tell|cant say|not really sure|not quite sure|unsure|unclear|i can'?t name it|dont have (a|the) word|cant find the word)\b/;
+var HEDGE_RX = /^(maybe|kind of|kinda|sort of|sorta|i guess|not really|dunno|idk|unsure|hard to say|hmm|who knows)[.!?\s]*$/;
+function isUncertain(userText) {
+  const norm2 = (userText || "").toLowerCase().replace(/[’'`]/g, "'").trim();
+  return UNCERTAIN_RX.test(` ${norm2} `) || HEDGE_RX.test(norm2);
+}
+var AFFIRM_LABEL = /\b(yes|yeah|yep|yup|exactly|totally|definitely|for sure|that'?s it|that'?s right|spot on|pretty much|sounds right|that fits|fits|correct)\b/;
+function labelIsUserOwned(fam, userText, history, prev) {
+  const named = (text) => {
+    const t = ` ${text.toLowerCase()} `;
+    return EMOTION_MAPS[fam].familyKeywords.some((w) => t.includes(w));
+  };
+  if (named(userText)) return true;
+  if (history.some((m) => m.role === "user" && named(m.content))) return true;
+  if (prev?.emotion_family === fam && AFFIRM_LABEL.test(` ${userText.toLowerCase()} `)) return true;
+  return false;
+}
+var ACCEPT_LABEL = /\b(thats? (it|right|closer|the one|exactly it)|that fits|that does fit|i think (it is|its|thats) (it|right)?|probably (that|it)|yeah thats (it|right)|yes thats (it|right))\b/;
+function userConfirmsLabel(userText, prev) {
+  if (!prev?.emotion_family) return false;
+  const t = ` ${userText.toLowerCase().replace(/[’'`]/g, "'")} `;
+  return ACCEPT_LABEL.test(t);
+}
+
 // src/services/ai/modeRouter.ts
 var norm = (s) => ` ${s.toLowerCase().replace(/[’'`]/g, "").replace(/[^a-z0-9?]+/g, " ").trim()} `;
 var REPAIR = /( no thats not | thats not it | not really[ ?]| youre wrong | not (anxiety|anger|sadness|fear|shame|pressure|hurt|joy|calm)|stop analy|dont analy|you sound like a therapist|thats not what i (meant|said)|youre putting words)/;
@@ -594,7 +690,7 @@ function routeMode(userText, prevEvent, entryHint = null) {
   if (REPAIR.test(t)) return decide("repair");
   if (CLOSE.test(t)) return decide("close");
   if (MIXED.test(t)) return decide("hold_mixed");
-  if (DONT_KNOW.test(t) || BODY_WORDS.test(t) && !EMOTION_WORD.test(t)) return decide("body_first");
+  if (DONT_KNOW.test(t) || isUncertain(userText) || BODY_WORDS.test(t) && !EMOTION_WORD.test(t)) return decide("body_first");
   if (GREETING.test(t)) return decide("soft_landing");
   if (long && (EMOTION_WORD.test(t) || HEAVY_DISCLOSURE.test(t)) || HEAVY_DISCLOSURE.test(t)) return decide("witness");
   if (entryHint && !familyKnown) return decide(entryHint);
@@ -2083,96 +2179,6 @@ function softenUnownedEmotionReply(reply, event) {
   return r;
 }
 
-// src/services/ai/stage.ts
-var RANK = {
-  noticed: 0,
-  named: 1,
-  shaped: 2,
-  understood: 3,
-  deepened: 4
-};
-function stageRank(stage) {
-  return RANK[stage];
-}
-var SLOW_PATH_FAMILIES = /* @__PURE__ */ new Set(["flat", "shame"]);
-function firstShapeEvidence(ev, prev = null) {
-  const userOwnedLabel = ev.label_source === "user_stated" || ev.label_source === "user_confirmed";
-  const concreteSituation = !!ev.trigger_event;
-  const userPhraseOrMetaphor = !!(ev.user_phrase && ev.user_phrase.trim()) || (ev.user_words_raw ?? "").trim().split(/\s+/).filter(Boolean).length >= 3;
-  const bodyCue = ev.body_cue.length > 0 || ev.behaviour_action.length > 0;
-  const meaningOrAppraisal = !!ev.appraisal_thought || ev.need_value.length > 0;
-  const mixedEmotionDistinction = ev.mixed_confirmed === 1 || (ev.strands?.length ?? 0) >= 2;
-  const repeatedConfirmation = !!prev && prev.emotion_family === ev.emotion_family && !!prev.emotion_shade && !!ev.emotion_shade && prev.emotion_shade.toLowerCase() === ev.emotion_shade.toLowerCase();
-  const userAcceptedReflection = ev.label_source === "user_confirmed" || ev.user_confirmation === "yes";
-  const materialCount = [
-    concreteSituation,
-    userPhraseOrMetaphor,
-    bodyCue,
-    meaningOrAppraisal,
-    mixedEmotionDistinction
-  ].filter(Boolean).length;
-  return {
-    userOwnedLabel,
-    concreteSituation,
-    userPhraseOrMetaphor,
-    bodyCue,
-    meaningOrAppraisal,
-    mixedEmotionDistinction,
-    repeatedConfirmation,
-    userAcceptedReflection,
-    materialCount
-  };
-}
-function evaluateStage(ev, prev = null) {
-  if (!ev.emotion_family) return "noticed";
-  const hasShade = !!ev.emotion_shade;
-  const anchor = ev.body_cue.length > 0 || ev.behaviour_action.length > 0 || !!ev.trigger_event || !!ev.appraisal_thought;
-  if (!hasShade) return anchor ? "shaped" : "named";
-  const rejected = (ev.user_rejected_shades ?? []).some(
-    (s) => s.toLowerCase() === ev.emotion_shade.toLowerCase()
-  );
-  const e = firstShapeEvidence(ev, prev);
-  const stabilityOk = e.repeatedConfirmation || e.userAcceptedReflection;
-  const slow = SLOW_PATH_FAMILIES.has(ev.emotion_family);
-  const enoughMaterial = slow ? e.materialCount >= 3 || e.repeatedConfirmation && e.materialCount >= 2 : e.materialCount >= 2;
-  if (!rejected && e.userOwnedLabel && stabilityOk && enoughMaterial) return "understood";
-  return anchor ? "shaped" : "named";
-}
-var ACCEPT_SHADE = /\b(yes|yeah|yep|exactly|thats? (it|right|the (one|word))|that fits|that'?s the word|the right word|good word)\b/;
-function shadeIsUserOwned(shade, userText, history, opts) {
-  if (!shade || !shade.trim()) return false;
-  const w = shade.toLowerCase().trim();
-  const said = (text) => ` ${text.toLowerCase()} `.includes(` ${w} `) || new RegExp(`\\b${w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i").test(text);
-  if (said(userText)) return true;
-  if (history.some((m) => m.role === "user" && said(m.content))) return true;
-  const proposed = (opts?.proposedShade ?? "").toLowerCase().trim();
-  if (proposed && proposed === w && ACCEPT_SHADE.test(` ${userText.toLowerCase().replace(/[’'`]/g, "'")} `)) return true;
-  return false;
-}
-var SHADE_REJECT = /\b(not (really|quite|it|that|the word)|that'?s not (it|right|the word|quite it)|doesn'?t (fit|feel right|sound right|quite fit)|isn'?t (it|right|the word)|wrong word|no not|not the right word)\b/;
-function detectShadeRejection(userText, prev) {
-  if (!prev?.emotion_shade) return null;
-  const t = ` ${userText.toLowerCase().replace(/[’'`]/g, "'")} `;
-  return SHADE_REJECT.test(t) ? prev.emotion_shade : null;
-}
-var AFFIRM_LABEL = /\b(yes|yeah|yep|yup|exactly|totally|definitely|for sure|that'?s it|that'?s right|spot on|pretty much|sounds right|that fits|fits|correct)\b/;
-function labelIsUserOwned(fam, userText, history, prev) {
-  const named = (text) => {
-    const t = ` ${text.toLowerCase()} `;
-    return EMOTION_MAPS[fam].familyKeywords.some((w) => t.includes(w));
-  };
-  if (named(userText)) return true;
-  if (history.some((m) => m.role === "user" && named(m.content))) return true;
-  if (prev?.emotion_family === fam && AFFIRM_LABEL.test(` ${userText.toLowerCase()} `)) return true;
-  return false;
-}
-var ACCEPT_LABEL = /\b(thats? (it|right|closer|the one|exactly it)|that fits|that does fit|i think (it is|its|thats) (it|right)?|probably (that|it)|yeah thats (it|right)|yes thats (it|right))\b/;
-function userConfirmsLabel(userText, prev) {
-  if (!prev?.emotion_family) return false;
-  const t = ` ${userText.toLowerCase().replace(/[’'`]/g, "'")} `;
-  return ACCEPT_LABEL.test(t);
-}
-
 // src/utils/text.ts
 function stripEmDashes(text) {
   if (!text) return text;
@@ -2187,6 +2193,7 @@ function hasUnexpectedScript(reply) {
 async function openaiGenerateTurn(input, opts) {
   const prev = input.prevEvent;
   const family = prev?.emotion_family ?? detectFamily(input.userText);
+  const uncertainTurn = !input.intent && isUncertain(input.userText);
   const mode = input.intent ? intentDecision(input.intent, prev ?? null) : routeMode(input.userText, prev ?? null, input.entryHint ?? null);
   const companionReplies = (input.history ?? []).filter((m) => m.role === "companion").map((m) => m.content);
   const variety = varietyDirective(varietySignals(companionReplies));
@@ -2255,7 +2262,7 @@ ${extraSystem}` : system },
   ev.need_value = p.need_value ?? [];
   ev.valence = p.valence ?? "neutral";
   ev.activation = p.activation ?? "medium";
-  if (!input.intent && p.user_words_raw && p.user_words_raw.trim()) ev.user_words_raw = p.user_words_raw.trim();
+  if (!input.intent && !uncertainTurn && p.user_words_raw && p.user_words_raw.trim()) ev.user_words_raw = p.user_words_raw.trim();
   const note = p.memory_note ?? ev.memory_note ?? null;
   ev.memory_note = note ? stripEmDashes(note) : null;
   ev.confidence_level = p.confidence ?? "medium";
@@ -2286,15 +2293,15 @@ ${extraSystem}` : system },
   ev.shade_source = !ev.emotion_shade ? null : saidShade ? "user_stated" : shadeOwned ? "user_confirmed" : "companion_hypothesis";
   ev.candidate_shade = ev.emotion_shade && ev.shade_source === "companion_hypothesis" ? ev.emotion_shade : null;
   if (!input.intent) {
-    const ownPhrase = (ev.user_words_raw ?? "").trim() || (input.userText ?? "").trim();
-    ev.user_phrase = ownPhrase ? stripEmDashes(ownPhrase).slice(0, 240) : ev.user_phrase ?? null;
+    const ownPhrase = uncertainTurn ? "" : (ev.user_words_raw ?? "").trim() || (input.userText ?? "").trim();
+    if (ownPhrase) ev.user_phrase = stripEmDashes(ownPhrase).slice(0, 240);
   }
   ev.strands = sanitizeStrands(p.strands);
   ev.mixed_confirmed = mixedConfirmed(ev, prev ?? null) ? 1 : 0;
   const prevStage = prev?.unlock_stage ?? "noticed";
   const computed = fam ? evaluateStage(ev, prev ?? null) : "noticed";
   let stage = stageRank(computed) >= stageRank(prevStage) ? computed : prevStage;
-  const blockUnlock = !!input.safetyNote || !!input.intent;
+  const blockUnlock = !!input.safetyNote || !!input.intent || uncertainTurn;
   if (blockUnlock && stage === "understood" && prevStage !== "understood" && prevStage !== "deepened") {
     stage = prevStage;
   }

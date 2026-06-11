@@ -36,216 +36,6 @@ function mixedConfirmed(ev, prev) {
   return false;
 }
 
-// src/services/ai/modeRouter.ts
-var norm = (s) => ` ${s.toLowerCase().replace(/[’'`]/g, "").replace(/[^a-z0-9?]+/g, " ").trim()} `;
-var REPAIR = /( no thats not | thats not it | not really[ ?]| youre wrong | not (anxiety|anger|sadness|fear|shame|pressure|hurt|joy|calm)|stop analy|dont analy|you sound like a therapist|thats not what i (meant|said)|youre putting words)/;
-var CLOSE = /( im done | i m done |gotta go|got to go|gonna go|going to bed|goodnight|good night|leave it (here|there)|thats it really|thanks bye|im off |talk later|thats all)/;
-var MIXED = /( but also | and also | at the same time | part of me | both | mixed | torn between |cant tell if im|switching between|one minute im)/;
-var BODY_WORDS = /(chest|stomach|belly|throat|shoulders|jaw|hands|head feels|heavy|tight|tense|numb|buzzing|shaky|shaking|restless|hollow|knot|sinking|burning|cold inside|warm inside)/;
-var DONT_KNOW = /( i dont know what i feel | dont know what this is | cant name it | no idea what im feeling | i dont know[ ?])/;
-var VAGUE = /( feel (off|weird|strange|odd|bad|wrong) | something is off | not right | cant settle | feel funny )/;
-var GREETING = /^ (hey|hi|hiya|hello|yo|sup|morning|evening|good (morning|evening|afternoon))[ ?!]*$/;
-var EMOTION_WORD = /(angry|anger|furious|frustrat|annoyed|sad|down|grief|griev|miserable|anxious|anxiety|scared|afraid|fear|worried|dread|stressed|overwhelmed|pressure|ashamed|shame|embarrass|guilty|guilt|hurt|betrayed|rejected|lonely|numb|empty|flat|happy|excited|proud|joy|calm|peaceful|relieved|content)/;
-var HEAVY_DISCLOSURE = /(died|passed away|funeral|divorce|broke up|break up|cheated|miscarriage|diagnos|cancer|fired|laid off|redundan|assault|bullied|relapse|eviction|cant pay rent)/;
-var ASK_WHAT_FEELING = /(what (is|am) (this|i) feel|what would you call|is this (anger|fear|sadness|shame|anxiety))/;
-var DIRECTIVES = {
-  repair: 'Mode: REPAIR \u2014 they just corrected or rejected your reading. Acknowledge the miss plainly and without defensiveness ("I had that wrong" / "let me step back"), drop the rejected label completely (record it as rejected, never re-propose it), lower the intensity, and either offer a low-effort correction ("what word would be closer?") or simply make room. Nothing can be marked understood on a repair turn.',
-  close: "Mode: CLOSE \u2014 they are wrapping up. End with dignity in one warm sentence, in their register. No new question, no re-opening the feeling, no summary unless they asked. Vary your closing words from previous closes.",
-  hold_mixed: "Mode: HOLD MIXED \u2014 more than one feeling is present. Hold both strands without collapsing them into one label. If useful, ask ONE question about how they relate (both at once / moving between them / one underneath the other). Set mixed_relation in your output. Never force a single answer.",
-  body_first: 'Mode: BODY FIRST \u2014 they cannot or do not want to name it. Do not demand emotion words. Help them find it gently by starting from the felt sense \u2014 where it sits, its weight/temperature/movement \u2014 or what was happening when it showed up. "Unnamed for now" is a fully valid resting place; ask one soft, concrete question, never a quiz.',
-  soft_landing: `Mode: SOFT LANDING \u2014 a light check-in or greeting. Be warm and genuinely glad they came, and make it easy to begin ("good to hear from you \u2014 what's on your mind?"). No emotion probing, no menus, no analysis. emotion_family stays null until something surfaces.`,
-  witness: "Mode: WITNESS \u2014 make them feel HEARD before anything else; you are here to listen, not to classify. Reflect ONE concrete, specific detail in their own words. Strongly prefer NO question this turn \u2014 a question now would feel extractive. If you must, make it one short, open invitation to say more.",
-  name: "Mode: NAME \u2014 a feeling word is on the table. Accept their word first; help find the closest-fitting shade only if it helps. Treat any label you supply as a tentative hypothesis, never as truth.",
-  clarify: 'Mode: CLARIFY \u2014 they sense something but it is vague ("off", "not right"). Help them identify it: reflect what you heard, then offer ONE small, gentle distinction or open question toward what it might be. It is fine to leave it broad; never push a label on.',
-  meaning: "Mode: MEANING \u2014 the feeling has a name and a felt shape. Gently reach for what the moment seemed to mean or what set it off, one step only, in their words. If meaning is already clear, reflect the shape you now understand.",
-  differentiate: "Mode: DIFFERENTIATE \u2014 a family is in play but the shade is loose. Help separate nearby feelings only as far as is useful; their own word beats a precise-sounding one."
-};
-function routeMode(userText, prevEvent, entryHint = null) {
-  const t = norm(userText);
-  const long = userText.trim().length > 160;
-  const familyKnown = !!prevEvent?.emotion_family;
-  const shaped = !!prevEvent && (prevEvent.body_cue.length > 0 || prevEvent.behaviour_action.length > 0);
-  const decide = (mode) => ({ mode, directive: DIRECTIVES[mode] });
-  if (REPAIR.test(t)) return decide("repair");
-  if (CLOSE.test(t)) return decide("close");
-  if (MIXED.test(t)) return decide("hold_mixed");
-  if (DONT_KNOW.test(t) || BODY_WORDS.test(t) && !EMOTION_WORD.test(t)) return decide("body_first");
-  if (GREETING.test(t)) return decide("soft_landing");
-  if (long && (EMOTION_WORD.test(t) || HEAVY_DISCLOSURE.test(t)) || HEAVY_DISCLOSURE.test(t)) return decide("witness");
-  if (entryHint && !familyKnown) return decide(entryHint);
-  if (ASK_WHAT_FEELING.test(t) || EMOTION_WORD.test(t) && !familyKnown) return decide("name");
-  if (VAGUE.test(t) && !familyKnown) return decide("clarify");
-  if (familyKnown && shaped) return decide("meaning");
-  if (familyKnown) return decide("differentiate");
-  return decide("witness");
-}
-var KEEP_GOING_DIRECTIVE = 'Mode: STAY WITH IT \u2014 they tapped a button to keep exploring THIS feeling, not to start over. FIRST re-read what they have ALREADY told you in this conversation, especially their last substantive message, and take it ONE STEP DEEPER from there. You have already heard a lot from them: do NOT re-ask anything they have answered, do NOT repeat a question you have asked before, and never ask them to "say it in their own words" again if they already have. Respond to the SPECIFIC thing they last said \u2014 reflect it back a little more precisely \u2014 and only then, if a question genuinely helps, open just ONE new door from it: what it costs them, what it protects or needs, what it connects to or reminds them of, a finer shade, where it sits in the body, a nearby feeling, or a tangled second strand. If the feeling is a GOOD one, sometimes simply invite them to savour and stay in it rather than analyse it ("do you want to just linger with that for a second?"). At most ONE question, using their own words. No advice, no lists, no clinical language, no restating your last reflection.';
-function intentDecision(intent, prevEvent = null) {
-  if (intent === "not_quite") {
-    return {
-      mode: "repair",
-      directive: DIRECTIVES.repair + ' They signalled this by tapping "Not quite", so respond to THAT: name the miss lightly (no over-apology, no defending your guess, never "as an AI"), and make a low-effort correction welcome, offering a few NEARBY alternatives only if it helps. Use "maybe / closer / fit / shape" language and treat the correction as progress. If they have waved off a word more than once, stop offering labels and invite them to describe it in their own, even if messy.'
-    };
-  }
-  if (intent === "done") {
-    return {
-      mode: "close",
-      directive: DIRECTIVES.close + ' They tapped "I am done". Give ONE short, warm closing reflection in their register and stop. Ask no question (the single allowed exception is a gentle one-line offer to keep this, and only if a clear shape was actually found). No guilt, no neediness, never that you will miss them.'
-    };
-  }
-  const familyKnown = !!prevEvent?.emotion_family;
-  const shaped = !!prevEvent && (prevEvent.body_cue.length > 0 || prevEvent.behaviour_action.length > 0);
-  const mode = familyKnown ? shaped ? "meaning" : "differentiate" : "clarify";
-  return { mode, directive: KEEP_GOING_DIRECTIVE };
-}
-
-// src/services/ai/responsePolicy.ts
-var OVERUSED_STEMS = ["that sounds", "it sounds", "that feels", "it makes sense", "that makes sense", "i hear that"];
-function openingStem(reply, words = 3) {
-  return reply.toLowerCase().replace(/[^a-z\s]/g, "").trim().split(/\s+/).slice(0, words).join(" ");
-}
-var MENU_RX = /more (like )?[\w\s]+,[\w\s]+(,| or )[\w\s]+\?/i;
-var EITHER_OR_RX = /\bis it (more |closer to |really )?[\w'’,\s]+\bor\b[\w'’\s]+\?/i;
-var CENTRE_RX = /(centre of (this|it)|center of (this|it)|sits at the centre|at the (centre|heart) of (this|it)|shape of this|(theres|there'?s|there is) a lot packed into)/i;
-var quoteFirst = (reply) => /^\s*["'“‘]/.test(reply);
-var OPTION_MENU_PATTERNS = [
-  MENU_RX,
-  // "more X, Y, or Z?"
-  EITHER_OR_RX,
-  // "is it more X or Y?"
-  /\b(is|does) (it|this|that) [\w'’,\s]+\bor\b[\w'’\s]+\?/i,
-  // "is it X or Y?" / "does it feel X, or Y?"
-  /\bmore (like )?[\w'’,\s]+\bor\b[\w'’\s]+\?/i,
-  // "more X or Y?"
-  /[\w'’]+, [\w'’\s]+,? or [\w'’\s]+\?/i,
-  // any "X, Y, or Z?" comma list (incl. "...or something else?")
-  /\b(side by side|one underneath|one in front of)[\w'’\s]*\?/i
-  // mixed-emotion menu
-];
-function isOptionMenu(reply) {
-  return OPTION_MENU_PATTERNS.some((rx) => rx.test(reply || ""));
-}
-var OPEN_QUESTIONS = [
-  "What word feels closest?",
-  "How would you say it in your own words?",
-  "What part of it feels loudest?",
-  "What is the shape of it, even roughly?",
-  "Would you rather keep it unnamed for now?"
-];
-var EXIT_CUE = /\b(gotta go|got to go|gonna go|going to bed|off to bed|goodnight|good night|im done|i'?m done|leave it (here|there)|talk later|im off|head off|heading off|going now|bye|see you|night night|gtg)\b/i;
-function askedForNamingHelp(userText) {
-  return /\b(what('?s| is) the word|help me name|put (a )?word|name it for me|what (would|do) you call|give me a word|what word)\b/i.test(userText || "");
-}
-function replaceOptionMenu(reply, altIndex = 0) {
-  const parts = reply.trim().split(/(?<=[.!?])\s+/);
-  for (let i = parts.length - 1; i >= 0; i--) {
-    if (isOptionMenu(parts[i])) {
-      parts[i] = OPEN_QUESTIONS[(altIndex % OPEN_QUESTIONS.length + OPEN_QUESTIONS.length) % OPEN_QUESTIONS.length];
-      return parts.join(" ").trim();
-    }
-  }
-  return reply.trim();
-}
-function varietySignals(companionReplies) {
-  const recent = companionReplies.slice(-4);
-  const last3 = companionReplies.slice(-3);
-  const lastTwo = recent.slice(-2);
-  const lastOpeners = lastTwo.map((r) => openingStem(r));
-  let overusedOpener = null;
-  if (lastOpeners.length === 2 && lastOpeners[0] && lastOpeners[0] === lastOpeners[1]) overusedOpener = lastOpeners[0];
-  const last = lastTwo[lastTwo.length - 1];
-  if (!overusedOpener && last) {
-    const stem = OVERUSED_STEMS.find((s) => last.toLowerCase().startsWith(s));
-    if (stem && lastTwo.length === 2 && lastTwo[0].toLowerCase().startsWith(stem)) overusedOpener = stem;
-  }
-  let questionStreak = 0;
-  for (let i = recent.length - 1; i >= 0; i--) {
-    if (recent[i].includes("?")) questionStreak++;
-    else break;
-  }
-  let menuStreak = 0;
-  for (let i = recent.length - 1; i >= 0; i--) {
-    if (MENU_RX.test(recent[i])) menuStreak++;
-    else break;
-  }
-  return {
-    lastOpeners,
-    overusedOpener,
-    questionStreak,
-    menuStreak,
-    quoteFirstInLast3: last3.filter(quoteFirst).length,
-    eitherOrInLast3: last3.filter((r) => EITHER_OR_RX.test(r)).length,
-    centrePhrasesInConvo: companionReplies.filter((r) => CENTRE_RX.test(r)).length,
-    optionMenusInConvo: companionReplies.filter(isOptionMenu).length
-  };
-}
-function varietyDirective(v) {
-  const parts = [];
-  if (v.overusedOpener)
-    parts.push(`Your recent replies opened with "${v.overusedOpener}\u2026" \u2014 open this one a different way (a plain statement, a soft hypothesis, or simple witnessing).`);
-  else if (v.lastOpeners.length)
-    parts.push(`Do not open with "${v.lastOpeners.join('\u2026" or "')}\u2026" again.`);
-  if (v.quoteFirstInLast3 >= 1)
-    parts.push("Do NOT open this reply by quoting the person back; you did that recently. Begin with a plain observation, a soft hypothesis, or simple witnessing.");
-  if (v.questionStreak >= 2)
-    parts.push(
-      `You have asked a question ${v.questionStreak} turns in a row \u2014 make this a NO-QUESTION turn: reflect, hold, or name what you are learning, and let them lead.`
-    );
-  if (v.eitherOrInLast3 >= 1)
-    parts.push('Do NOT ask an "is it more X or Y?" question this turn; you used that shape recently. Reflect or witness instead.');
-  if (v.menuStreak >= 1)
-    parts.push('Do not use the "more X, Y, or Z?" menu shape this turn; reserve menus for when they are genuinely stuck.');
-  if (v.centrePhrasesInConvo >= 1)
-    parts.push('Do NOT use "centre of this", "the heart of this", "the shape of this", or "a lot packed into that" again in this conversation.');
-  if (v.optionMenusInConvo >= 1)
-    parts.push(
-      'You have already offered an option menu ("is it more X, Y, or...?") this conversation. Do NOT offer another. Stay with their experience: reflect, witness, or ask in their own words ("what word feels closest?"), not from a list of yours.'
-    );
-  return parts.join(" ");
-}
-function dropTrailingQuestion(reply) {
-  const trimmed = reply.trim();
-  const parts = trimmed.split(/(?<=[.!?])\s+/);
-  if (parts.length > 1 && /\?\s*["'”’]?\s*$/.test(parts[parts.length - 1])) {
-    return parts.slice(0, -1).join(" ").trim();
-  }
-  return trimmed;
-}
-function isDuplicateReply(reply, companionReplies) {
-  const n = (s) => s.toLowerCase().replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
-  const r = n(reply);
-  return r.length > 0 && companionReplies.slice(-3).some((p) => n(p) === r);
-}
-var Q_STOP = new Set(
-  "the a an is it that this you your to of in on and or for what how do does did feel feels feeling like about would could is it more most some something else part bit there here when where i im its was were be been being just really right now your".split(
-    " "
-  )
-);
-var questionSentences = (s) => (String(s || "").match(/[^.!?]*\?/g) ?? []).map((q) => q.trim());
-var normQuestion = (q) => q.toLowerCase().replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
-var sigWords = (q) => new Set(normQuestion(q).split(" ").filter((w) => w.length > 2 && !Q_STOP.has(w)));
-function repeatsEarlierQuestion(reply, priorCompanionReplies) {
-  const qs = questionSentences(reply);
-  if (!qs.length) return false;
-  const priorQs = priorCompanionReplies.flatMap(questionSentences);
-  for (const q of qs) {
-    const nq = normQuestion(q);
-    if (nq.length < 8) continue;
-    const a2 = sigWords(q);
-    for (const pq of priorQs) {
-      if (normQuestion(pq) === nq) return true;
-      const b3 = sigWords(pq);
-      if (a2.size >= 2 && b3.size >= 2) {
-        let inter = 0;
-        for (const w of a2) if (b3.has(w)) inter++;
-        const union = (/* @__PURE__ */ new Set([...a2, ...b3])).size;
-        if (inter / union >= 0.6) return true;
-      }
-    }
-  }
-  return false;
-}
-
 // src/data/emotionMaps.ts
 var ANGER_MAP = {
   id: "anger",
@@ -699,53 +489,6 @@ var EMOTION_MAPS = {
   calm: CALM_MAP
 };
 
-// src/services/ai/replyOwnership.ts
-var escapeRx = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-function emotionWordsFor(event) {
-  const out = [];
-  if (event.emotion_shade) out.push(event.emotion_shade.toLowerCase());
-  if (event.emotion_family) out.push(EMOTION_MAPS[event.emotion_family].label.split(/[\s&]/)[0].toLowerCase());
-  return [...new Set(out)].map(escapeRx).filter(Boolean);
-}
-var TENTATIVE = /(might|maybe|perhaps|could be|i wonder|wondering|not sure|or is it|or not|does (that|this) fit|or something else|don'?t want to name|seems like it (might|could)|i think it (might|could)|possibly|if (that|it) fits|leave it unnamed|keep it unnamed|don'?t have to name)/i;
-function declarativeFrames(words) {
-  const W = `(?:${words.join("|")})`;
-  return [
-    new RegExp(`\\b(?:this|that|it)(?:'s| is| was) (?:a |an |the |some |a kind of |a sort of )?${W}\\b`, "i"),
-    new RegExp(`\\b(?:you are|you're|youre) (?:feeling )?${W}\\b`, "i"),
-    new RegExp(`\\b(?:carries|holding|full of|comes from) (?:some |the )?${W}\\b`, "i"),
-    new RegExp(`\\bthe ${W} (?:underneath|under it|beneath|is the centre|is the heart|is clear|here is clear)\\b`, "i"),
-    new RegExp(`\\b(?:the )?shape of (?:${W}|being |feeling )`, "i"),
-    new RegExp(`\\b${W} is (?:the centre|the heart|clear|underneath|what'?s here)\\b`, "i")
-  ];
-}
-var sentences = (reply) => reply.split(/(?<=[.!?])\s+/);
-function replyContainsDeclarativeEmotionAssertion(reply, event) {
-  const words = emotionWordsFor(event);
-  if (!words.length) return false;
-  const frames = declarativeFrames(words);
-  return sentences(reply).some((s) => !TENTATIVE.test(s) && frames.some((rx) => rx.test(s)));
-}
-function needsOwnershipRepair(reply, event, isOwned) {
-  if (isOwned) return false;
-  if (!event.emotion_family && !event.emotion_shade) return false;
-  return replyContainsDeclarativeEmotionAssertion(reply, event);
-}
-function softenUnownedEmotionReply(reply, event) {
-  const words = emotionWordsFor(event);
-  if (!words.length) return reply;
-  const W = `(?:${words.join("|")})`;
-  let r = reply;
-  r = r.replace(
-    new RegExp(`\\b(this|that|it)(?:'s| is| was) ((?:a |an |the |some |a kind of |a sort of )?${W})\\b`, "gi"),
-    (_m, subj, rest) => `${subj} might be ${rest}`
-  );
-  r = r.replace(new RegExp(`\\b(?:you are|you're|youre) (?:feeling )?(${W})\\b`, "gi"), (_m, w) => `you might be feeling ${w}`);
-  r = r.replace(new RegExp(`\\bthe (${W}) (underneath|under it|beneath|is the centre|is the heart|is clear)\\b`, "gi"), (_m, w) => `maybe some ${w}`);
-  r = r.replace(new RegExp(`\\b(${W}) is (?:the centre|the heart|clear|underneath|what'?s here)\\b`, "gi"), (_m, w) => `there might be ${w} here`);
-  return r;
-}
-
 // src/services/ai/stage.ts
 var RANK = {
   noticed: 0,
@@ -818,6 +561,16 @@ function detectShadeRejection(userText, prev) {
   const t = ` ${userText.toLowerCase().replace(/[’'`]/g, "'")} `;
   return SHADE_REJECT.test(t) ? prev.emotion_shade : null;
 }
+var UNCERTAIN_RX = /\b(not sure|no idea|no clue|i dont know|i don'?t know|dunno|idk|hard to say|hard to put|cant tell|cannot tell|cant say|not really sure|not quite sure|unsure|unclear|i can'?t name it|dont have (a|the) word|cant find the word)\b/;
+var HEDGE_RX = /^(maybe|kind of|kinda|sort of|sorta|i guess|not really|dunno|idk|unsure|hard to say|hmm|who knows)[.!?\s]*$/;
+function isUncertain(userText) {
+  const norm3 = (userText || "").toLowerCase().replace(/[’'`]/g, "'").trim();
+  return UNCERTAIN_RX.test(` ${norm3} `) || HEDGE_RX.test(norm3);
+}
+function hasEmotionAnchor(ev) {
+  const ownedShade = !!ev.emotion_shade && (ev.shade_source === "user_stated" || ev.shade_source === "user_confirmed");
+  return (ev.body_cue?.length ?? 0) > 0 || (ev.behaviour_action?.length ?? 0) > 0 || !!ev.trigger_event || !!ev.appraisal_thought || (ev.need_value?.length ?? 0) > 0 || ownedShade || ev.mixed_confirmed === 1 || (ev.strands?.length ?? 0) >= 2;
+}
 var AFFIRM_LABEL = /\b(yes|yeah|yep|yup|exactly|totally|definitely|for sure|that'?s it|that'?s right|spot on|pretty much|sounds right|that fits|fits|correct)\b/;
 function labelIsUserOwned(fam, userText, history, prev) {
   const named = (text) => {
@@ -834,6 +587,263 @@ function userConfirmsLabel(userText, prev) {
   if (!prev?.emotion_family) return false;
   const t = ` ${userText.toLowerCase().replace(/[’'`]/g, "'")} `;
   return ACCEPT_LABEL.test(t);
+}
+
+// src/services/ai/modeRouter.ts
+var norm = (s) => ` ${s.toLowerCase().replace(/[’'`]/g, "").replace(/[^a-z0-9?]+/g, " ").trim()} `;
+var REPAIR = /( no thats not | thats not it | not really[ ?]| youre wrong | not (anxiety|anger|sadness|fear|shame|pressure|hurt|joy|calm)|stop analy|dont analy|you sound like a therapist|thats not what i (meant|said)|youre putting words)/;
+var CLOSE = /( im done | i m done |gotta go|got to go|gonna go|going to bed|goodnight|good night|leave it (here|there)|thats it really|thanks bye|im off |talk later|thats all)/;
+var MIXED = /( but also | and also | at the same time | part of me | both | mixed | torn between |cant tell if im|switching between|one minute im)/;
+var BODY_WORDS = /(chest|stomach|belly|throat|shoulders|jaw|hands|head feels|heavy|tight|tense|numb|buzzing|shaky|shaking|restless|hollow|knot|sinking|burning|cold inside|warm inside)/;
+var DONT_KNOW = /( i dont know what i feel | dont know what this is | cant name it | no idea what im feeling | i dont know[ ?])/;
+var VAGUE = /( feel (off|weird|strange|odd|bad|wrong) | something is off | not right | cant settle | feel funny )/;
+var GREETING = /^ (hey|hi|hiya|hello|yo|sup|morning|evening|good (morning|evening|afternoon))[ ?!]*$/;
+var EMOTION_WORD = /(angry|anger|furious|frustrat|annoyed|sad|down|grief|griev|miserable|anxious|anxiety|scared|afraid|fear|worried|dread|stressed|overwhelmed|pressure|ashamed|shame|embarrass|guilty|guilt|hurt|betrayed|rejected|lonely|numb|empty|flat|happy|excited|proud|joy|calm|peaceful|relieved|content)/;
+var HEAVY_DISCLOSURE = /(died|passed away|funeral|divorce|broke up|break up|cheated|miscarriage|diagnos|cancer|fired|laid off|redundan|assault|bullied|relapse|eviction|cant pay rent)/;
+var ASK_WHAT_FEELING = /(what (is|am) (this|i) feel|what would you call|is this (anger|fear|sadness|shame|anxiety))/;
+var DIRECTIVES = {
+  repair: 'Mode: REPAIR \u2014 they just corrected or rejected your reading. Acknowledge the miss plainly and without defensiveness ("I had that wrong" / "let me step back"), drop the rejected label completely (record it as rejected, never re-propose it), lower the intensity, and either offer a low-effort correction ("what word would be closer?") or simply make room. Nothing can be marked understood on a repair turn.',
+  close: "Mode: CLOSE \u2014 they are wrapping up. End with dignity in one warm sentence, in their register. No new question, no re-opening the feeling, no summary unless they asked. Vary your closing words from previous closes.",
+  hold_mixed: "Mode: HOLD MIXED \u2014 more than one feeling is present. Hold both strands without collapsing them into one label. If useful, ask ONE question about how they relate (both at once / moving between them / one underneath the other). Set mixed_relation in your output. Never force a single answer.",
+  body_first: 'Mode: BODY FIRST \u2014 they cannot or do not want to name it. Do not demand emotion words. Help them find it gently by starting from the felt sense \u2014 where it sits, its weight/temperature/movement \u2014 or what was happening when it showed up. "Unnamed for now" is a fully valid resting place; ask one soft, concrete question, never a quiz.',
+  soft_landing: `Mode: SOFT LANDING \u2014 a light check-in or greeting. Be warm and genuinely glad they came, and make it easy to begin ("good to hear from you \u2014 what's on your mind?"). No emotion probing, no menus, no analysis. emotion_family stays null until something surfaces.`,
+  witness: "Mode: WITNESS \u2014 make them feel HEARD before anything else; you are here to listen, not to classify. Reflect ONE concrete, specific detail in their own words. Strongly prefer NO question this turn \u2014 a question now would feel extractive. If you must, make it one short, open invitation to say more.",
+  name: "Mode: NAME \u2014 a feeling word is on the table. Accept their word first; help find the closest-fitting shade only if it helps. Treat any label you supply as a tentative hypothesis, never as truth.",
+  clarify: 'Mode: CLARIFY \u2014 they sense something but it is vague ("off", "not right"). Help them identify it: reflect what you heard, then offer ONE small, gentle distinction or open question toward what it might be. It is fine to leave it broad; never push a label on.',
+  meaning: "Mode: MEANING \u2014 the feeling has a name and a felt shape. Gently reach for what the moment seemed to mean or what set it off, one step only, in their words. If meaning is already clear, reflect the shape you now understand.",
+  differentiate: "Mode: DIFFERENTIATE \u2014 a family is in play but the shade is loose. Help separate nearby feelings only as far as is useful; their own word beats a precise-sounding one."
+};
+function routeMode(userText, prevEvent, entryHint = null) {
+  const t = norm(userText);
+  const long = userText.trim().length > 160;
+  const familyKnown = !!prevEvent?.emotion_family;
+  const shaped = !!prevEvent && (prevEvent.body_cue.length > 0 || prevEvent.behaviour_action.length > 0);
+  const decide = (mode) => ({ mode, directive: DIRECTIVES[mode] });
+  if (REPAIR.test(t)) return decide("repair");
+  if (CLOSE.test(t)) return decide("close");
+  if (MIXED.test(t)) return decide("hold_mixed");
+  if (DONT_KNOW.test(t) || isUncertain(userText) || BODY_WORDS.test(t) && !EMOTION_WORD.test(t)) return decide("body_first");
+  if (GREETING.test(t)) return decide("soft_landing");
+  if (long && (EMOTION_WORD.test(t) || HEAVY_DISCLOSURE.test(t)) || HEAVY_DISCLOSURE.test(t)) return decide("witness");
+  if (entryHint && !familyKnown) return decide(entryHint);
+  if (ASK_WHAT_FEELING.test(t) || EMOTION_WORD.test(t) && !familyKnown) return decide("name");
+  if (VAGUE.test(t) && !familyKnown) return decide("clarify");
+  if (familyKnown && shaped) return decide("meaning");
+  if (familyKnown) return decide("differentiate");
+  return decide("witness");
+}
+var KEEP_GOING_DIRECTIVE = 'Mode: STAY WITH IT \u2014 they tapped a button to keep exploring THIS feeling, not to start over. FIRST re-read what they have ALREADY told you in this conversation, especially their last substantive message, and take it ONE STEP DEEPER from there. You have already heard a lot from them: do NOT re-ask anything they have answered, do NOT repeat a question you have asked before, and never ask them to "say it in their own words" again if they already have. Respond to the SPECIFIC thing they last said \u2014 reflect it back a little more precisely \u2014 and only then, if a question genuinely helps, open just ONE new door from it: what it costs them, what it protects or needs, what it connects to or reminds them of, a finer shade, where it sits in the body, a nearby feeling, or a tangled second strand. If the feeling is a GOOD one, sometimes simply invite them to savour and stay in it rather than analyse it ("do you want to just linger with that for a second?"). At most ONE question, using their own words. No advice, no lists, no clinical language, no restating your last reflection.';
+function intentDecision(intent, prevEvent = null) {
+  if (intent === "not_quite") {
+    return {
+      mode: "repair",
+      directive: DIRECTIVES.repair + ' They signalled this by tapping "Not quite", so respond to THAT: name the miss lightly (no over-apology, no defending your guess, never "as an AI"), and make a low-effort correction welcome, offering a few NEARBY alternatives only if it helps. Use "maybe / closer / fit / shape" language and treat the correction as progress. If they have waved off a word more than once, stop offering labels and invite them to describe it in their own, even if messy.'
+    };
+  }
+  if (intent === "done") {
+    return {
+      mode: "close",
+      directive: DIRECTIVES.close + ' They tapped "I am done". Give ONE short, warm closing reflection in their register and stop. Ask no question (the single allowed exception is a gentle one-line offer to keep this, and only if a clear shape was actually found). No guilt, no neediness, never that you will miss them.'
+    };
+  }
+  const familyKnown = !!prevEvent?.emotion_family;
+  const shaped = !!prevEvent && (prevEvent.body_cue.length > 0 || prevEvent.behaviour_action.length > 0);
+  const mode = familyKnown ? shaped ? "meaning" : "differentiate" : "clarify";
+  return { mode, directive: KEEP_GOING_DIRECTIVE };
+}
+
+// src/services/ai/responsePolicy.ts
+var OVERUSED_STEMS = ["that sounds", "it sounds", "that feels", "it makes sense", "that makes sense", "i hear that"];
+function openingStem(reply, words = 3) {
+  return reply.toLowerCase().replace(/[^a-z\s]/g, "").trim().split(/\s+/).slice(0, words).join(" ");
+}
+var MENU_RX = /more (like )?[\w\s]+,[\w\s]+(,| or )[\w\s]+\?/i;
+var EITHER_OR_RX = /\bis it (more |closer to |really )?[\w'’,\s]+\bor\b[\w'’\s]+\?/i;
+var CENTRE_RX = /(centre of (this|it)|center of (this|it)|sits at the centre|at the (centre|heart) of (this|it)|shape of this|(theres|there'?s|there is) a lot packed into)/i;
+var quoteFirst = (reply) => /^\s*["'“‘]/.test(reply);
+var OPTION_MENU_PATTERNS = [
+  MENU_RX,
+  // "more X, Y, or Z?"
+  EITHER_OR_RX,
+  // "is it more X or Y?"
+  /\b(is|does) (it|this|that) [\w'’,\s]+\bor\b[\w'’\s]+\?/i,
+  // "is it X or Y?" / "does it feel X, or Y?"
+  /\bmore (like )?[\w'’,\s]+\bor\b[\w'’\s]+\?/i,
+  // "more X or Y?"
+  /[\w'’]+, [\w'’\s]+,? or [\w'’\s]+\?/i,
+  // any "X, Y, or Z?" comma list (incl. "...or something else?")
+  /\b(side by side|one underneath|one in front of)[\w'’\s]*\?/i
+  // mixed-emotion menu
+];
+function isOptionMenu(reply) {
+  return OPTION_MENU_PATTERNS.some((rx) => rx.test(reply || ""));
+}
+var OPEN_QUESTIONS = [
+  "What word feels closest?",
+  "How would you say it in your own words?",
+  "What part of it feels loudest?",
+  "What is the shape of it, even roughly?",
+  "Would you rather keep it unnamed for now?"
+];
+var EXIT_CUE = /\b(gotta go|got to go|gonna go|going to bed|off to bed|goodnight|good night|im done|i'?m done|leave it (here|there)|talk later|im off|head off|heading off|going now|bye|see you|night night|gtg)\b/i;
+function askedForNamingHelp(userText) {
+  return /\b(what('?s| is) the word|help me name|put (a )?word|name it for me|what (would|do) you call|give me a word|what word)\b/i.test(userText || "");
+}
+function replaceOptionMenu(reply, altIndex = 0) {
+  const parts = reply.trim().split(/(?<=[.!?])\s+/);
+  for (let i = parts.length - 1; i >= 0; i--) {
+    if (isOptionMenu(parts[i])) {
+      parts[i] = OPEN_QUESTIONS[(altIndex % OPEN_QUESTIONS.length + OPEN_QUESTIONS.length) % OPEN_QUESTIONS.length];
+      return parts.join(" ").trim();
+    }
+  }
+  return reply.trim();
+}
+function varietySignals(companionReplies) {
+  const recent = companionReplies.slice(-4);
+  const last3 = companionReplies.slice(-3);
+  const lastTwo = recent.slice(-2);
+  const lastOpeners = lastTwo.map((r) => openingStem(r));
+  let overusedOpener = null;
+  if (lastOpeners.length === 2 && lastOpeners[0] && lastOpeners[0] === lastOpeners[1]) overusedOpener = lastOpeners[0];
+  const last = lastTwo[lastTwo.length - 1];
+  if (!overusedOpener && last) {
+    const stem = OVERUSED_STEMS.find((s) => last.toLowerCase().startsWith(s));
+    if (stem && lastTwo.length === 2 && lastTwo[0].toLowerCase().startsWith(stem)) overusedOpener = stem;
+  }
+  let questionStreak = 0;
+  for (let i = recent.length - 1; i >= 0; i--) {
+    if (recent[i].includes("?")) questionStreak++;
+    else break;
+  }
+  let menuStreak = 0;
+  for (let i = recent.length - 1; i >= 0; i--) {
+    if (MENU_RX.test(recent[i])) menuStreak++;
+    else break;
+  }
+  return {
+    lastOpeners,
+    overusedOpener,
+    questionStreak,
+    menuStreak,
+    quoteFirstInLast3: last3.filter(quoteFirst).length,
+    eitherOrInLast3: last3.filter((r) => EITHER_OR_RX.test(r)).length,
+    centrePhrasesInConvo: companionReplies.filter((r) => CENTRE_RX.test(r)).length,
+    optionMenusInConvo: companionReplies.filter(isOptionMenu).length
+  };
+}
+function varietyDirective(v) {
+  const parts = [];
+  if (v.overusedOpener)
+    parts.push(`Your recent replies opened with "${v.overusedOpener}\u2026" \u2014 open this one a different way (a plain statement, a soft hypothesis, or simple witnessing).`);
+  else if (v.lastOpeners.length)
+    parts.push(`Do not open with "${v.lastOpeners.join('\u2026" or "')}\u2026" again.`);
+  if (v.quoteFirstInLast3 >= 1)
+    parts.push("Do NOT open this reply by quoting the person back; you did that recently. Begin with a plain observation, a soft hypothesis, or simple witnessing.");
+  if (v.questionStreak >= 2)
+    parts.push(
+      `You have asked a question ${v.questionStreak} turns in a row \u2014 make this a NO-QUESTION turn: reflect, hold, or name what you are learning, and let them lead.`
+    );
+  if (v.eitherOrInLast3 >= 1)
+    parts.push('Do NOT ask an "is it more X or Y?" question this turn; you used that shape recently. Reflect or witness instead.');
+  if (v.menuStreak >= 1)
+    parts.push('Do not use the "more X, Y, or Z?" menu shape this turn; reserve menus for when they are genuinely stuck.');
+  if (v.centrePhrasesInConvo >= 1)
+    parts.push('Do NOT use "centre of this", "the heart of this", "the shape of this", or "a lot packed into that" again in this conversation.');
+  if (v.optionMenusInConvo >= 1)
+    parts.push(
+      'You have already offered an option menu ("is it more X, Y, or...?") this conversation. Do NOT offer another. Stay with their experience: reflect, witness, or ask in their own words ("what word feels closest?"), not from a list of yours.'
+    );
+  return parts.join(" ");
+}
+function dropTrailingQuestion(reply) {
+  const trimmed = reply.trim();
+  const parts = trimmed.split(/(?<=[.!?])\s+/);
+  if (parts.length > 1 && /\?\s*["'”’]?\s*$/.test(parts[parts.length - 1])) {
+    return parts.slice(0, -1).join(" ").trim();
+  }
+  return trimmed;
+}
+function isDuplicateReply(reply, companionReplies) {
+  const n = (s) => s.toLowerCase().replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
+  const r = n(reply);
+  return r.length > 0 && companionReplies.slice(-3).some((p) => n(p) === r);
+}
+var Q_STOP = new Set(
+  "the a an is it that this you your to of in on and or for what how do does did feel feels feeling like about would could is it more most some something else part bit there here when where i im its was were be been being just really right now your".split(
+    " "
+  )
+);
+var questionSentences = (s) => (String(s || "").match(/[^.!?]*\?/g) ?? []).map((q) => q.trim());
+var normQuestion = (q) => q.toLowerCase().replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
+var sigWords = (q) => new Set(normQuestion(q).split(" ").filter((w) => w.length > 2 && !Q_STOP.has(w)));
+function repeatsEarlierQuestion(reply, priorCompanionReplies) {
+  const qs = questionSentences(reply);
+  if (!qs.length) return false;
+  const priorQs = priorCompanionReplies.flatMap(questionSentences);
+  for (const q of qs) {
+    const nq = normQuestion(q);
+    if (nq.length < 8) continue;
+    const a2 = sigWords(q);
+    for (const pq of priorQs) {
+      if (normQuestion(pq) === nq) return true;
+      const b3 = sigWords(pq);
+      if (a2.size >= 2 && b3.size >= 2) {
+        let inter = 0;
+        for (const w of a2) if (b3.has(w)) inter++;
+        const union = (/* @__PURE__ */ new Set([...a2, ...b3])).size;
+        if (inter / union >= 0.6) return true;
+      }
+    }
+  }
+  return false;
+}
+
+// src/services/ai/replyOwnership.ts
+var escapeRx = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+function emotionWordsFor(event) {
+  const out = [];
+  if (event.emotion_shade) out.push(event.emotion_shade.toLowerCase());
+  if (event.emotion_family) out.push(EMOTION_MAPS[event.emotion_family].label.split(/[\s&]/)[0].toLowerCase());
+  return [...new Set(out)].map(escapeRx).filter(Boolean);
+}
+var TENTATIVE = /(might|maybe|perhaps|could be|i wonder|wondering|not sure|or is it|or not|does (that|this) fit|or something else|don'?t want to name|seems like it (might|could)|i think it (might|could)|possibly|if (that|it) fits|leave it unnamed|keep it unnamed|don'?t have to name)/i;
+function declarativeFrames(words) {
+  const W = `(?:${words.join("|")})`;
+  return [
+    new RegExp(`\\b(?:this|that|it)(?:'s| is| was) (?:a |an |the |some |a kind of |a sort of )?${W}\\b`, "i"),
+    new RegExp(`\\b(?:you are|you're|youre) (?:feeling )?${W}\\b`, "i"),
+    new RegExp(`\\b(?:carries|holding|full of|comes from) (?:some |the )?${W}\\b`, "i"),
+    new RegExp(`\\bthe ${W} (?:underneath|under it|beneath|is the centre|is the heart|is clear|here is clear)\\b`, "i"),
+    new RegExp(`\\b(?:the )?shape of (?:${W}|being |feeling )`, "i"),
+    new RegExp(`\\b${W} is (?:the centre|the heart|clear|underneath|what'?s here)\\b`, "i")
+  ];
+}
+var sentences = (reply) => reply.split(/(?<=[.!?])\s+/);
+function replyContainsDeclarativeEmotionAssertion(reply, event) {
+  const words = emotionWordsFor(event);
+  if (!words.length) return false;
+  const frames = declarativeFrames(words);
+  return sentences(reply).some((s) => !TENTATIVE.test(s) && frames.some((rx) => rx.test(s)));
+}
+function needsOwnershipRepair(reply, event, isOwned) {
+  if (isOwned) return false;
+  if (!event.emotion_family && !event.emotion_shade) return false;
+  return replyContainsDeclarativeEmotionAssertion(reply, event);
+}
+function softenUnownedEmotionReply(reply, event) {
+  const words = emotionWordsFor(event);
+  if (!words.length) return reply;
+  const W = `(?:${words.join("|")})`;
+  let r = reply;
+  r = r.replace(
+    new RegExp(`\\b(this|that|it)(?:'s| is| was) ((?:a |an |the |some |a kind of |a sort of )?${W})\\b`, "gi"),
+    (_m, subj, rest) => `${subj} might be ${rest}`
+  );
+  r = r.replace(new RegExp(`\\b(?:you are|you're|youre) (?:feeling )?(${W})\\b`, "gi"), (_m, w) => `you might be feeling ${w}`);
+  r = r.replace(new RegExp(`\\bthe (${W}) (underneath|under it|beneath|is the centre|is the heart|is clear)\\b`, "gi"), (_m, w) => `maybe some ${w}`);
+  r = r.replace(new RegExp(`\\b(${W}) is (?:the centre|the heart|clear|underneath|what'?s here)\\b`, "gi"), (_m, w) => `there might be ${w} here`);
+  return r;
 }
 
 // src/services/ai/safetyClassifier.ts
@@ -1488,7 +1498,8 @@ function finish(s) {
 }
 function composeLearningSentence(ev, kind = "first_shape") {
   const fam = familyWord(ev.emotion_family);
-  const phrase = frag(ev.user_phrase ?? ev.user_words_raw ?? "");
+  const rawPhrase = frag(ev.user_phrase ?? ev.user_words_raw ?? "");
+  const phrase = isUncertain(rawPhrase) ? "" : rawPhrase;
   const context = frag(ev.trigger_event ?? "", 70);
   const texture = textureOf(ev);
   if (kind === "mixed") {
@@ -1713,12 +1724,14 @@ export {
   evaluateStage,
   expressionFor,
   firstShapeEvidence,
+  hasEmotionAnchor,
   intentDecision,
   isDifficultFamily,
   isDuplicateReply,
   isEmotionLearned,
   isOptionMenu,
   isPositiveFamily,
+  isUncertain,
   labelIsUserOwned,
   learnedFamilies,
   memoryBlocked,

@@ -165,6 +165,48 @@ export function detectShadeRejection(userText: string, prev: Pick<EmotionEvent, 
   return SHADE_REJECT.test(t) ? prev.emotion_shade : null;
 }
 
+// The user is signalling uncertainty rather than emotional content ("not sure",
+// "i dont know", "hard to say", "maybe"). Uncertainty is welcome — but it must make
+// the companion MORE curious, never more confident: no stage advance, no unlock, no
+// memory, no "I know this better now: not sure". (NOT the "not quite" rejection, which
+// is handled separately.)
+const UNCERTAIN_RX =
+  /\b(not sure|no idea|no clue|i dont know|i don'?t know|dunno|idk|hard to say|hard to put|cant tell|cannot tell|cant say|not really sure|not quite sure|unsure|unclear|i can'?t name it|dont have (a|the) word|cant find the word)\b/;
+// Bare hedges that read as uncertainty when they are essentially the whole reply.
+const HEDGE_RX = /^(maybe|kind of|kinda|sort of|sorta|i guess|not really|dunno|idk|unsure|hard to say|hmm|who knows)[.!?\s]*$/;
+
+/** True when the user's turn is primarily uncertainty (not a feeling or detail). */
+export function isUncertain(userText: string): boolean {
+  const norm = (userText || '').toLowerCase().replace(/[’'`]/g, "'").trim();
+  return UNCERTAIN_RX.test(` ${norm} `) || HEDGE_RX.test(norm);
+}
+
+/**
+ * Does the event carry a REAL, user-owned emotional anchor (detail beyond a bare
+ * label or uncertainty)? Required before a learned moment (first shape / deepening)
+ * may be shown or saved, so the companion never "learns" from an empty or unsure
+ * turn. A body cue, an urge, a trigger, a meaning, a need, an owned shade, or a
+ * confirmed mix all count.
+ */
+export function hasEmotionAnchor(
+  ev: Pick<
+    EmotionEvent,
+    'body_cue' | 'behaviour_action' | 'trigger_event' | 'appraisal_thought' | 'need_value' | 'shade_source' | 'emotion_shade' | 'mixed_confirmed' | 'strands'
+  >,
+): boolean {
+  const ownedShade = !!ev.emotion_shade && (ev.shade_source === 'user_stated' || ev.shade_source === 'user_confirmed');
+  return (
+    (ev.body_cue?.length ?? 0) > 0 ||
+    (ev.behaviour_action?.length ?? 0) > 0 ||
+    !!ev.trigger_event ||
+    !!ev.appraisal_thought ||
+    (ev.need_value?.length ?? 0) > 0 ||
+    ownedShade ||
+    ev.mixed_confirmed === 1 ||
+    (ev.strands?.length ?? 0) >= 2
+  );
+}
+
 /** Affirmation of a label the companion already proposed ("yeah, that's it"). */
 const AFFIRM_LABEL =
   /\b(yes|yeah|yep|yup|exactly|totally|definitely|for sure|that'?s it|that'?s right|spot on|pretty much|sounds right|that fits|fits|correct)\b/;

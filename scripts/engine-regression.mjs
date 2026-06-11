@@ -14,8 +14,10 @@ import {
   EXIT_CUE,
   expressionFor,
   firstShapeEvidence,
+  hasEmotionAnchor,
   intentDecision,
   isOptionMenu,
+  isUncertain,
   labelIsUserOwned,
   mixedConfirmed,
   ambientMotion,
@@ -150,6 +152,27 @@ check('pushback: a bare "no" does NOT trigger rejection (too broad)',
 check('pushback: acceptance does not trigger rejection',
   detectShadeRejection('yeah thats it', { emotion_shade: 'dread' }), null);
 check('pushback: nothing in play -> null', detectShadeRejection('no that doesnt fit', { emotion_shade: null }), null);
+
+// ── Uncertainty + emotion-anchor gates (unlock/deepening bug fix) ─────────────
+check('uncertain: "not sure" is uncertainty', isUncertain('not sure'), true);
+check('uncertain: "i dont know" is uncertainty', isUncertain("i don't know"), true);
+check('uncertain: "hard to say" is uncertainty', isUncertain('hard to say honestly'), true);
+check('uncertain: bare "maybe" is uncertainty', isUncertain('maybe'), true);
+check('uncertain: bare "i guess" is uncertainty', isUncertain('i guess'), true);
+check('uncertain: "unclear" is uncertainty', isUncertain('it is all a bit unclear'), true);
+check('uncertain: a clear feeling is NOT uncertainty', isUncertain('i am quite ashamed of myself'), false);
+check('uncertain: real detail is NOT uncertainty', isUncertain('i want to hide'), false);
+check('uncertain: "not quite" alone is NOT uncertainty (it is a rejection)', isUncertain('not quite'), false);
+check('uncertain: "maybe it is anger" (with content) is NOT bare-hedge uncertainty', isUncertain('maybe it is anger'), false);
+// hasEmotionAnchor: a learned moment needs a real, user-owned anchor
+check('anchor: a body cue counts', hasEmotionAnchor(ev({ body_cue: ['tight chest'] })), true);
+check('anchor: a trigger counts', hasEmotionAnchor(ev({ trigger_event: 'they saw me fail', body_cue: [] })), true);
+check('anchor: an appraisal counts', hasEmotionAnchor(ev({ appraisal_thought: 'i am bad', trigger_event: null, body_cue: [] })), true);
+check('anchor: a user-owned shade counts', hasEmotionAnchor(ev({ emotion_shade: 'exposed', shade_source: 'user_stated', trigger_event: null, body_cue: [], appraisal_thought: null })), true);
+check('anchor: a companion-only shade does NOT count', hasEmotionAnchor(ev({ emotion_shade: 'exposed', shade_source: 'companion_hypothesis', trigger_event: null, body_cue: [], appraisal_thought: null, need_value: [], strands: [], mixed_confirmed: 0 })), false);
+check('anchor: an empty/unsure turn has no anchor', hasEmotionAnchor(ev({ emotion_shade: null, trigger_event: null, body_cue: [], behaviour_action: [], appraisal_thought: null, need_value: [], strands: [], mixed_confirmed: 0 })), false);
+// composeLearningSentence must never echo "not sure" as a learned phrase
+check('learn: never builds a sentence from "not sure"', composeLearningSentence(ev({ emotion_family: 'shame', user_phrase: 'not sure', trigger_event: null, body_cue: [], appraisal_thought: null, user_words_raw: 'not sure' }), 'deepened').toLowerCase().includes('not sure'), false);
 
 // ── Companion learning sentence (v0.4 §6.5) ──────────────────────────────────
 const ls1 = composeLearningSentence(ev({ emotion_family: 'pressure', user_phrase: 'pulled thin', trigger_event: 'everyone needs a piece of me' }), 'first_shape');

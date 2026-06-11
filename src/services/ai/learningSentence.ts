@@ -10,6 +10,7 @@
  */
 
 import { EMOTION_MAPS } from '@/data/emotionMaps';
+import { isUncertain } from '@/services/ai/stage';
 import type { EmotionEvent, EmotionFamilyId } from '@/types/models';
 import { stripEmDashes } from '@/utils/text';
 
@@ -45,7 +46,10 @@ function finish(s: string): string {
  */
 export function composeLearningSentence(ev: EmotionEvent, kind: LearningKind = 'first_shape'): string {
   const fam = familyWord(ev.emotion_family);
-  const phrase = frag(ev.user_phrase ?? ev.user_words_raw ?? '');
+  // Never build a "learned" sentence from uncertainty ("not sure") — drop it and
+  // fall back to a phrase-free template (a last guard; the modal shouldn't even show).
+  const rawPhrase = frag(ev.user_phrase ?? ev.user_words_raw ?? '');
+  const phrase = isUncertain(rawPhrase) ? '' : rawPhrase;
   const context = frag(ev.trigger_event ?? '', 70);
   const texture = textureOf(ev);
 

@@ -28,6 +28,7 @@ import { needsOwnershipRepair, softenUnownedEmotionReply } from '@/services/ai/r
 import {
   detectShadeRejection,
   evaluateStage,
+  isUncertain,
   labelIsUserOwned,
   shadeIsUserOwned,
   stageRank,
@@ -75,6 +76,10 @@ export async function openaiGenerateTurn(
 ): Promise<CompanionTurn> {
   const prev = input.prevEvent;
   const family = prev?.emotion_family ?? detectFamily(input.userText);
+  // The user is expressing uncertainty this turn ("not sure", "i dont know"): the
+  // companion gets more curious, never more confident — no unlock, and their unsure
+  // words must not be stored as the feeling's phrase.
+  const uncertainTurn = !input.intent && isUncertain(input.userText);
 
   // ── Deterministic pre-stages: mode + variety + safety directives ───────────
   // A tapped continuation chip drives the mode directly (reliable intent), instead
@@ -165,8 +170,9 @@ export async function openaiGenerateTurn(
   ev.valence = p.valence ?? 'neutral';
   ev.activation = p.activation ?? 'medium';
   // On a tapped-chip turn there is no real new user phrase (the "text" is a button
-  // label); keep the person's actual words from prev rather than overwriting them.
-  if (!input.intent && p.user_words_raw && p.user_words_raw.trim()) ev.user_words_raw = p.user_words_raw.trim();
+  // label), and an unsure turn ("not sure") is not the feeling's words either; keep
+  // the person's actual words from prev rather than overwriting them.
+  if (!input.intent && !uncertainTurn && p.user_words_raw && p.user_words_raw.trim()) ev.user_words_raw = p.user_words_raw.trim();
   const note = p.memory_note ?? ev.memory_note ?? null;
   ev.memory_note = note ? stripEmDashes(note) : null;
   ev.confidence_level = p.confidence ?? 'medium';
@@ -220,8 +226,9 @@ export async function openaiGenerateTurn(
   ev.shade_source = !ev.emotion_shade ? null : saidShade ? 'user_stated' : shadeOwned ? 'user_confirmed' : 'companion_hypothesis';
   ev.candidate_shade = ev.emotion_shade && ev.shade_source === 'companion_hypothesis' ? ev.emotion_shade : null;
   if (!input.intent) {
-    const ownPhrase = (ev.user_words_raw ?? '').trim() || (input.userText ?? '').trim();
-    ev.user_phrase = ownPhrase ? stripEmDashes(ownPhrase).slice(0, 240) : ev.user_phrase ?? null;
+    const ownPhrase = uncertainTurn ? '' : (ev.user_words_raw ?? '').trim() || (input.userText ?? '').trim();
+    if (ownPhrase) ev.user_phrase = stripEmDashes(ownPhrase).slice(0, 240);
+    // else keep the prior meaningful phrase (don't replace it with uncertainty/empty)
   }
 
   // Mixed-emotion engine (brief §9): strands may be proposed freely; the mixed
@@ -235,12 +242,12 @@ export async function openaiGenerateTurn(
   // Stage never goes backwards within a conversation.
   let stage: UnlockStage = stageRank(computed) >= stageRank(prevStage) ? computed : prevStage;
 
-  // No progression at safety-sensitive moments (brief §13.4) or on ANY tapped-chip
-  // turn: a gentle-safety-check resume, or a continuation tap ("Stay with it" /
-  // "Not quite" / "I'm done"), must never be THE unlock moment — a first shape
-  // should be earned from the person's own words, not a button. (This also keeps
-  // a "Stay with it" follow-up question from being stripped by the unlock-rest rule.)
-  const blockUnlock = !!input.safetyNote || !!input.intent;
+  // No progression at safety-sensitive moments (brief §13.4), on ANY tapped-chip turn
+  // ("Stay with it" / "Not quite" / "I'm done"), or on an UNCERTAIN turn ("not sure"):
+  // a first shape should be earned from the person's own emotional words, never from a
+  // button or an unsure beat. (This also keeps a "Stay with it" follow-up question from
+  // being stripped by the unlock-rest rule.)
+  const blockUnlock = !!input.safetyNote || !!input.intent || uncertainTurn;
   if (blockUnlock && stage === 'understood' && prevStage !== 'understood' && prevStage !== 'deepened') {
     stage = prevStage;
   }

@@ -6,6 +6,7 @@
  * which the model composes within. Heuristic v1: refine with eval rounds.
  */
 
+import { isUncertain } from '@/services/ai/stage';
 import type { EmotionEvent } from '@/types/models';
 
 export type ConversationMode =
@@ -116,7 +117,8 @@ export function routeMode(
   if (REPAIR.test(t)) return decide('repair');
   if (CLOSE.test(t)) return decide('close');
   if (MIXED.test(t)) return decide('hold_mixed');
-  if (DONT_KNOW.test(t) || (BODY_WORDS.test(t) && !EMOTION_WORD.test(t))) return decide('body_first');
+  // Uncertainty ("not sure", "i dont know") -> don't force a label; explore gently.
+  if (DONT_KNOW.test(t) || isUncertain(userText) || (BODY_WORDS.test(t) && !EMOTION_WORD.test(t))) return decide('body_first');
   if (GREETING.test(t)) return decide('soft_landing');
   // A heavy disclosure overrides a light entry chip — always witness it.
   if ((long && (EMOTION_WORD.test(t) || HEAVY_DISCLOSURE.test(t))) || HEAVY_DISCLOSURE.test(t)) return decide('witness');

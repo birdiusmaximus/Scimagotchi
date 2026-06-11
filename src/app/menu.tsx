@@ -2,6 +2,7 @@ import { Feather } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter, type Href } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
+import Animated from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { GradientBackground } from '@/components/GradientBackground';
@@ -10,6 +11,7 @@ import { IconButton } from '@/components/IconButton';
 import { PressableScale } from '@/components/PressableScale';
 import { Txt } from '@/components/Txt';
 import { useGoBack } from '@/hooks/useGoBack';
+import { enterItem } from '@/theme/motion';
 import { palette, radii, spacing } from '@/theme/tokens';
 import { tintPair } from '@/utils/color';
 
@@ -35,8 +37,9 @@ export default function MenuScreen() {
         </View>
 
         <View style={styles.list}>
-          {ITEMS.map((item) => (
-            <PressableScale key={item.label} onPress={() => router.push(item.route)} scaleTo={0.97}>
+          {ITEMS.map((item, i) => (
+            <Animated.View key={item.label} entering={enterItem(i)}>
+            <PressableScale onPress={() => router.push(item.route)} scaleTo={0.97}>
               <Glass radius={radii.lg} contentStyle={styles.row}>
                 <LinearGradient colors={tintPair(item.tint)} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.iconWrap}>
                   <Feather name={item.icon} size={19} color={palette.white} />
@@ -52,6 +55,7 @@ export default function MenuScreen() {
                 <Feather name="chevron-right" size={20} color={palette.inkSoft} />
               </Glass>
             </PressableScale>
+            </Animated.View>
           ))}
         </View>
       </SafeAreaView>

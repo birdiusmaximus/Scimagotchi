@@ -1,6 +1,7 @@
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import Animated from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { CalendarView } from '@/components/CalendarView';
@@ -10,6 +11,7 @@ import { Txt } from '@/components/Txt';
 import { useGoBack } from '@/hooks/useGoBack';
 import { EMOTION_MAPS, FAMILY_COLORS } from '@/data/emotionMaps';
 import { emotionEventsRepo } from '@/services/db/repos';
+import { enterItem, enterPanel } from '@/theme/motion';
 import { palette, radii, spacing } from '@/theme/tokens';
 import type { EmotionEvent } from '@/types/models';
 import { dayKey, prettyTime } from '@/utils/date';
@@ -65,16 +67,18 @@ export default function MemoryScreen() {
         </View>
 
         <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
-          <CalendarView
-            year={ym.year}
-            month={ym.month}
-            eventsByDay={byDay}
-            selected={selected}
-            today={todayKey}
-            onSelect={setSelected}
-            onPrev={prev}
-            onNext={next}
-          />
+          <Animated.View entering={enterPanel()}>
+            <CalendarView
+              year={ym.year}
+              month={ym.month}
+              eventsByDay={byDay}
+              selected={selected}
+              today={todayKey}
+              onSelect={setSelected}
+              onPrev={prev}
+              onNext={next}
+            />
+          </Animated.View>
 
           <View style={styles.entries}>
             {dayEntries.length === 0 ? (
@@ -84,11 +88,11 @@ export default function MemoryScreen() {
                   : 'Nothing recorded on this day.'}
               </Txt>
             ) : (
-              dayEntries.map((ev) => {
+              dayEntries.map((ev, idx) => {
                 const map = ev.emotion_family ? EMOTION_MAPS[ev.emotion_family] : null;
                 return (
+                  <Animated.View key={ev.id} entering={enterItem(idx, 45, 0)}>
                   <Pressable
-                    key={ev.id}
                     onPress={() => router.push({ pathname: '/entry', params: { id: ev.id } })}
                     style={({ pressed }) => ({ opacity: pressed ? 0.8 : 1, transform: [{ scale: pressed ? 0.99 : 1 }] })}
                   >
@@ -117,6 +121,7 @@ export default function MemoryScreen() {
                       </View>
                     </View>
                   </Pressable>
+                  </Animated.View>
                 );
               })
             )}

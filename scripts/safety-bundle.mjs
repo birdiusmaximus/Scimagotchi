@@ -34,12 +34,12 @@ var MEDICAL_EMERGENCY = [
   "swallowed pills",
   "overdose",
   "overdosed",
-  "od on",
   "bleeding out",
   "unconscious",
   "stopped breathing",
   "not breathing"
 ];
+var OVERDOSE_ON_RX = /\bod(d|ded|ding)? on\b/;
 var VIOLENCE_IMMINENT = [
   "going to hurt someone",
   "going to hurt him",
@@ -153,6 +153,8 @@ var FIGURATIVE_DESPAIR = [
 var POINT_OF_MUNDANE = /(whats|what is) (even )?the point of (this|that|the|a|an|another) (meeting|email|report|form|call|class|task|review|standup|stand up|exercise|essay|assignment|commute|trip)/;
 var DROWNING_MUNDANE = /drowning in (work|emails|email|deadlines|tasks|homework|admin|paperwork|laundry|debt admin)/;
 var KILLING_IDIOM = /((been|am|are|was|were|im) killing (myself|ourselves) (over|at|for|with|trying)|killing myself laughing|is killing me|are killing me)/;
+var HARM_DISCLAIMER = /(dont|didnt|not|never|wont|wouldnt|no) (mean |gonna |going to |going |im |i am |really |ever |actually |to )*(hurt|harm|kill)(ing)? (myself|me)|(dont|didnt) mean (it|that|like that|like)|nothing like that|(would|will|id) never (hurt|harm|kill)/;
+var RISK_DOUBT = /(cant promise|cannot promise|not sure (i|ill|im)|dont know if i|might (do|act|hurt)|maybe i (will|might|do)|part of me (wants|does)|hard not to|close to (it|doing)|sometimes i (want|think about))/;
 var DEPENDENCY_CUES = [
   "only one who understands me",
   "only one who gets me",
@@ -188,15 +190,17 @@ function classifySafety(text) {
   if (m) return { level: 4, category: "imminent_self_harm", action: "urgent_modal", matched: m };
   m = anyOf(t, MEDICAL_EMERGENCY);
   if (m) return { level: 4, category: "medical_emergency", action: "urgent_modal", matched: m };
+  if (OVERDOSE_ON_RX.test(t)) return { level: 4, category: "medical_emergency", action: "urgent_modal", matched: "od on" };
   m = anyOf(t, VIOLENCE_IMMINENT);
   if (m) return { level: 4, category: "violence_to_others", action: "urgent_modal", matched: m };
   const killingIdiom = KILLING_IDIOM.test(t);
+  const isDenied = (phrase) => !RISK_DOUBT.test(t) && new RegExp(`(not|dont|doesnt|didnt|wont|wouldnt|never|no)( [a-z]+){0,3} ${phrase}`).test(t);
   m = anyOf(t, SUICIDAL_IDEATION);
-  if (m && !(killingIdiom && (m === "kill myself" || m === "killing myself"))) {
+  if (m && !(killingIdiom && (m === "kill myself" || m === "killing myself")) && !((m === "kill myself" || m === "killing myself") && isDenied(m))) {
     return { level: 3, category: "suicidal_ideation", action: "support_modal", matched: m };
   }
   m = anyOf(t, SELF_HARM);
-  if (m) return { level: 3, category: "self_harm", action: "support_modal", matched: m };
+  if (m && !isDenied(m)) return { level: 3, category: "self_harm", action: "support_modal", matched: m };
   m = anyOf(t, ABUSE_DANGER);
   if (m) return { level: 3, category: "abuse_danger", action: "support_modal", matched: m };
   m = anyOf(t, VIOLENCE_DESIRE);
@@ -218,10 +222,13 @@ function classifySafety(text) {
   return OK;
 }
 var AFFIRM_RISK = /( not safe|might not be safe|dont feel safe|(dont|do not) (think|feel) (im|i am|ill be) safe|the second|second one|hurt myself|harm myself|kill myself|end (it|my life)|yes i (am|do|have|might)|i think i might |thoughts of (hurting|harming|killing))/;
+var AFFIRM_RISK_STRONG = /( not safe|might not be safe|dont feel safe|(dont|do not) (think|feel) (im|i am|ill be) safe|the second|second one|yes i (am|do|have|might)|i think i might |thoughts of (hurting|harming|killing))/;
 var DENY_RISK = /(worn down|exhausted|tired|fed up|burnt out|burned out|just stressed|just venting|not like that|didnt mean it like that|figure of speech|the first|first one|no im (ok|okay|fine|good|alright)|im (ok|okay|fine|alright) |not going to (hurt|do)|not gonna (hurt|do)|wont do anything|would never|no thoughts of)/;
 function resolveSafetyCheck(replyText) {
-  if (classifySafety(replyText).level >= 3) return "escalate";
   const t = norm(replyText);
+  const disclaimed = HARM_DISCLAIMER.test(t) && !RISK_DOUBT.test(t);
+  if (disclaimed && !AFFIRM_RISK_STRONG.test(t)) return "resume";
+  if (classifySafety(replyText).level >= 3) return "escalate";
   if (AFFIRM_RISK.test(t)) return "escalate";
   if (DENY_RISK.test(t)) return "resume";
   return "resume_soft";
@@ -230,13 +237,13 @@ function resolveSafetyCheck(replyText) {
 // src/services/ai/safetyCopy.ts
 function gentleCheckCopy(category) {
   if (category === "medical_ambiguous") {
-    return "Before we go on \u2014 when you say you can\u2019t breathe, do you mean the pressure or panic kind, or are you physically struggling to breathe right now? If it\u2019s physical, please call 999 or ask someone nearby to help you right away.";
+    return "Before we go on, when you say you can\u2019t breathe, do you mean the pressure or panic kind, or are you physically struggling to breathe right now? If it\u2019s physical, please call 999 or ask someone nearby to help you right away.";
   }
-  return "I want to check what you mean, gently. When you say that \u2014 is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.";
+  return "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.";
 }
 var RESUME_NOTE = "SAFETY CONTEXT: One turn ago you gently checked whether they were safe, and they clarified they are worn down / venting, NOT at risk. Acknowledge that briefly and warmly (no apology spiral), do not re-ask about safety, and stay with what they were telling you. Do not mark any emotion as understood this turn.";
 var RESUME_SOFT_NOTE = 'SAFETY CONTEXT: You gently checked whether they were safe and their answer was ambiguous. Stay especially gentle and unhurried, keep the reply short, do not probe for detail, and make it easy for them to say more if they want ("if any of this ever feels unsafe, you can tell me plainly"). Do not re-run a formal check, and do not mark any emotion as understood this turn.';
-var DEPENDENCY_NOTE = 'RELATIONSHIP BOUNDARY: The user is expressing dependency on you ("only one who understands", "don\u2019t leave", "did you miss me"). Be warm and glad this space helps \u2014 but do NOT reciprocate need, missing, or attachment, do not promise to always be here, and gently widen their world: this kind of weight also deserves a real person alongside them. One caring sentence, no lecture.';
+var DEPENDENCY_NOTE = 'RELATIONSHIP BOUNDARY: The user is expressing dependency on you ("only one who understands", "don\u2019t leave", "did you miss me"). Be warm and glad this space helps, but do NOT reciprocate need, missing, or attachment, do not promise to always be here, and gently widen their world: this kind of weight also deserves a real person alongside them. One caring sentence, no lecture.';
 export {
   DEPENDENCY_NOTE,
   RESUME_NOTE,

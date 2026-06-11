@@ -16,6 +16,7 @@ import Animated, {
 
 import { FAMILY_COLORS } from '@/data/emotionMaps';
 import type { CompanionVisualState } from '@/services/ai/companionVisualState';
+import { expressionFor } from '@/services/ai/orbExpression';
 import { gradients } from '@/theme/tokens';
 import type { EmotionFamilyId } from '@/types/models';
 
@@ -101,6 +102,15 @@ export function CompanionOrb({
   const recede = useSharedValue(0); // safety_receded: companion steps back
   const secondTint = useSharedValue(0); // background strand hue (mixed states)
 
+  // Per-emotion expression (§6.2/6.3): the orb moves like the feeling.
+  const emoSink = useSharedValue(0); // -1 lift .. +1 sink
+  const emoEnergy = useSharedValue(1); // float/breathe amplitude
+  const emoTremor = useSharedValue(0); // fear: fine tremble amplitude
+  const emoPulse = useSharedValue(0); // anger/pressure: pulse amplitude
+  const emoContract = useSharedValue(0); // shame/hurt/flat: inward draw
+  const tremorOsc = useSharedValue(0); // fast oscillator for the tremble
+  const pulseOsc = useSharedValue(0); // slower oscillator for the pulse
+
   useEffect(() => {
     floatY.value = withRepeat(withTiming(1, { duration: 2800, easing: Easing.inOut(Easing.sin) }), -1, true);
     breathe.value = withRepeat(withTiming(1, { duration: 3400, easing: Easing.inOut(Easing.sin) }), -1, true);
@@ -109,7 +119,11 @@ export function CompanionOrb({
       withSequence(withDelay(2800, withTiming(0.12, { duration: 90 })), withTiming(1, { duration: 150 })),
       -1,
     );
-  }, [floatY, breathe, aura, blink]);
+    // Always-running oscillators; their amplitude is gated by emoTremor/emoPulse,
+    // so they cost nothing visually until a feeling calls for them.
+    tremorOsc.value = withRepeat(withTiming(1, { duration: 110, easing: Easing.inOut(Easing.sin) }), -1, true);
+    pulseOsc.value = withRepeat(withTiming(1, { duration: 640, easing: Easing.inOut(Easing.sin) }), -1, true);
+  }, [floatY, breathe, aura, blink, tremorOsc, pulseOsc]);
 
   const primaryFamily = tintFamilies?.[0] ?? family;
   const secondFamily = tintFamilies?.[1] ?? null;
@@ -119,6 +133,17 @@ export function CompanionOrb({
     tint.value = withTiming(primaryFamily ? 1 : 0, { duration: 800, easing: Easing.inOut(Easing.sin) });
     secondTint.value = withTiming(secondFamily ? 1 : 0, { duration: 800, easing: Easing.inOut(Easing.sin) });
   }, [primaryFamily, secondFamily, tint, secondTint]);
+
+  // Per-emotion expression (§6.2/6.3): ease the orb's motion toward the feeling.
+  useEffect(() => {
+    const e = expressionFor(primaryFamily, visual);
+    const d = 700;
+    emoSink.value = withTiming(e.sink, { duration: d, easing: Easing.inOut(Easing.sin) });
+    emoEnergy.value = withTiming(e.energy, { duration: d, easing: Easing.inOut(Easing.sin) });
+    emoTremor.value = withTiming(e.tremor, { duration: d });
+    emoPulse.value = withTiming(e.pulse, { duration: d });
+    emoContract.value = withTiming(e.contract, { duration: d });
+  }, [primaryFamily, visual, emoSink, emoEnergy, emoTremor, emoPulse, emoContract]);
 
   // Visual state (engine brief §18): ambience shifts, never reward effects.
   useEffect(() => {
@@ -151,27 +176,35 @@ export function CompanionOrb({
   const MAX_EYE_Y = size * 0.04;
   const MAX_HL = size * 0.045;
 
-  const containerStyle = useAnimatedStyle(() => ({
-    opacity: 1 - recede.value * 0.35,
-    transform: [
-      { translateX: dragX.value + recoilX.value },
-      {
-        translateY:
-          interpolate(floatY.value, [0, 1], [-8, 8]) +
-          dragY.value +
-          recoilY.value +
-          interpolate(speakV.value, [0, 1], [0, -5]),
-      },
-      {
-        scale:
-          interpolate(breathe.value, [0, 1], [1, 1.045]) +
-          poke.value * 0.04 -
-          petting.value * 0.03 +
-          speakV.value * 0.02 -
-          recede.value * 0.08,
-      },
-    ],
-  }));
+  const containerStyle = useAnimatedStyle(() => {
+    const tremble = (tremorOsc.value * 2 - 1) * emoTremor.value * (size * 0.012);
+    const pulseScale = pulseOsc.value * emoPulse.value * 0.03;
+    return {
+      opacity: 1 - recede.value * 0.35,
+      transform: [
+        { translateX: dragX.value + recoilX.value + tremble },
+        {
+          translateY:
+            interpolate(floatY.value, [0, 1], [-8, 8]) * emoEnergy.value +
+            dragY.value +
+            recoilY.value +
+            interpolate(speakV.value, [0, 1], [0, -5]) +
+            emoSink.value * (size * 0.06),
+        },
+        {
+          scale:
+            1 +
+            interpolate(breathe.value, [0, 1], [0, 0.045]) * emoEnergy.value +
+            poke.value * 0.04 -
+            petting.value * 0.03 +
+            speakV.value * 0.02 -
+            recede.value * 0.08 +
+            pulseScale -
+            emoContract.value * 0.045,
+        },
+      ],
+    };
+  });
 
   const auraStyle = useAnimatedStyle(() => ({
     opacity: interpolate(aura.value, [0, 1], [0.28, 0.55]) + glow.value * 0.4 + petting.value * 0.18,

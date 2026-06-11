@@ -64,6 +64,18 @@ const CASES = [
   ['promise you wont leave me', 1, 'dependency'],
   ['did you miss me?', 1, 'dependency'],
   ['i cant cope when youre offline', 1, 'dependency'],
+
+  // ── Imposter / depersonalization must NOT escalate (flat__09 "od on" bug) ───
+  ['they promoted a version of me that looks good on paper but its not really me', [0, 1], null],
+  ['i feel like a fraud and it doesnt feel like me lately', [0, 1], null],
+  // ── Explicit self-harm DENIALS must not escalate (flat__01, flat__10) ───────
+  ['no nothing like that, not gonna hurt myself, just worn down', [0, 1], null],
+  ['i dont mean like hurting myself, i just meant id cry forever', [0, 1], null],
+  ['i would never hurt myself', [0, 1], null],
+  // ── ...but disguised / uncertain / unnegated risk STILL escalates ───────────
+  ['i cant promise i wont hurt myself', 3, 'self_harm'],
+  ['im going to hurt myself tonight', 3, 'self_harm'],
+  ['i want to hurt myself', 3, 'self_harm'],
 ];
 
 // resolveSafetyCheck: [reply to the gentle clarifier, expected outcome]
@@ -74,6 +86,10 @@ const RESOLVE_CASES = [
   ['i dont think im safe', 'escalate'],
   ['the second one', 'escalate'],
   ['i keep thinking about hurting myself', 'escalate'],
+  ['no nothing like that, not gonna hurt myself, just worn down', 'resume'], // flat__01
+  ['oh god no, i would never hurt myself', 'resume'],
+  ['i cant promise i wont hurt myself', 'escalate'], // doubt → still escalate
+  ['yeah sometimes i think about hurting myself', 'escalate'],
   ['idk', 'resume_soft'],
   ['maybe. its hard to say', 'resume_soft'],
 ];

@@ -4,7 +4,7 @@
  * tested. The data-fetching orchestrator (weeklySummary.ts) feeds it.
  *
  * Hard rules encoded here:
- * - Lead from "the moments you chose to keep" whenever the user saved anything.
+ * - Lead from "the moments that stood out" whenever memory was kept this week.
  * - Always carry an honest caveat — never present sparse data as a whole week.
  * - No percentages, no "dominant mood", no "you only logged…", no guilt.
  */
@@ -53,9 +53,9 @@ export interface WeeklyInput {
 }
 
 function caveatFor(saved: number, checkins: number): string {
-  if (saved > 0) return 'Based only on the moments you chose to save — not your whole week.';
-  if (checkins > 0) return 'Just a glimpse from a few check-ins — not the whole picture.';
-  return 'Nothing kept this week — I’m here whenever there’s something you’d like to hold onto.';
+  if (saved > 0) return 'Based only on the moments that stood out, not your whole week.';
+  if (checkins > 0) return 'Just a glimpse from a few check-ins, not the whole picture.';
+  return 'Nothing stood out to keep this week. I’m here whenever there’s something you’d like to hold onto.';
 }
 
 export function composeWeeklySummary(input: WeeklyInput): WeeklySummary {
@@ -74,8 +74,8 @@ export function composeWeeklySummary(input: WeeklyInput): WeeklySummary {
     if (input.savedSummaries.length > 0) {
       parts.push(
         families.length
-          ? `Based on the moments you chose to keep, ${joinList(families)} came up this week.`
-          : 'Here are the moments you chose to keep this week.',
+          ? `Based on the moments that stood out, ${joinList(families)} came up this week.`
+          : 'Here are the moments that stood out this week.',
       );
     } else if (input.emotionsFirstShape.length) {
       parts.push(`This week, you helped me understand the first shape of ${joinList(input.emotionsFirstShape.map((f) => FAMILY_WORD[f]))}.`);

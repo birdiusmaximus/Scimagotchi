@@ -10,6 +10,7 @@ export type CompanionVisualState =
   | 'idle_calm'
   | 'searching'
   | 'uncertain'
+  | 'stabilising'
   | 'first_shape'
   | 'mixed_strands'
   | 'returning_shape'
@@ -33,7 +34,13 @@ export function selectVisualState(s: VisualInputs): CompanionVisualState {
   if ((s.draftEvent?.strands?.length ?? 0) >= 2) return 'mixed_strands';
   if (s.progressStage === 'deepened') return 'deepened';
   if (s.progressStage === 'returning') return 'returning_shape';
-  if (s.draftEvent && !s.draftEvent.emotion_family) return 'uncertain';
+  // The feeling is taking a clear shape: a user-owned family + shade, settling
+  // toward (but not yet at) a first shape (§6.3 step 3).
+  const d = s.draftEvent;
+  if (d?.emotion_family && d?.emotion_shade && (d.label_source === 'user_stated' || d.label_source === 'user_confirmed')) {
+    return 'stabilising';
+  }
+  if (d && !d.emotion_family) return 'uncertain';
   return 'idle_calm';
 }
 

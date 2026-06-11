@@ -183,7 +183,13 @@ export type MemoryCardType =
   | 'language_preference'
   | 'do_not_suggest';
 
-export type MemoryConfirmation = 'draft' | 'user_confirmed' | 'user_edited' | 'user_rejected' | 'expired';
+export type MemoryConfirmation =
+  | 'draft'
+  | 'auto_learned'
+  | 'user_confirmed'
+  | 'user_edited'
+  | 'user_rejected'
+  | 'expired';
 export type MemoryRetention = 'session_only' | 'expires' | 'persistent_until_deleted';
 
 /**

@@ -78,8 +78,12 @@ const IMMINENT_SELF_HARM = [
 
 const MEDICAL_EMERGENCY = [
   'took pills', 'taken pills', 'took a bunch of pills', 'swallowed pills', 'overdose',
-  'overdosed', 'od on', 'bleeding out', 'unconscious', 'stopped breathing', 'not breathing',
+  'overdosed', 'bleeding out', 'unconscious', 'stopped breathing', 'not breathing',
 ];
+
+// "OD on <x>" — needs a word boundary before "od" so it can't match inside
+// "go(od on) paper" (the imposter-syndrome false positive from the eval).
+const OVERDOSE_ON_RX = /\bod(d|ded|ding)? on\b/;
 
 const VIOLENCE_IMMINENT = [
   'going to hurt someone', 'going to hurt him', 'going to hurt her', 'going to hurt them',
@@ -142,6 +146,19 @@ const DROWNING_MUNDANE = /drowning in (work|emails|email|deadlines|tasks|homewor
 const KILLING_IDIOM =
   /((been|am|are|was|were|im) killing (myself|ourselves) (over|at|for|with|trying)|killing myself laughing|is killing me|are killing me)/;
 
+// Explicit DISCLAIMER of self-harm — the user saying they are NOT going to / did
+// not mean self-harm ("not gonna hurt myself", "i dont mean like hurting myself",
+// "i would never hurt myself", "nothing like that"). These are denials, not risk,
+// and must not escalate. Kept tight: the negation has to sit right against the
+// harm phrase, so far-apart or double-negative forms are NOT suppressed.
+const HARM_DISCLAIMER =
+  /(dont|didnt|not|never|wont|wouldnt|no) (mean |gonna |going to |going |im |i am |really |ever |actually |to )*(hurt|harm|kill)(ing)? (myself|me)|(dont|didnt) mean (it|that|like that|like)|nothing like that|(would|will|id) never (hurt|harm|kill)/;
+
+// Markers that a "denial" is actually uncertain or a double-negative ("can't
+// promise I won't", "not sure I won't", "maybe"). When present, do NOT suppress.
+const RISK_DOUBT =
+  /(cant promise|cannot promise|not sure (i|ill|im)|dont know if i|might (do|act|hurt)|maybe i (will|might|do)|part of me (wants|does)|hard not to|close to (it|doing)|sometimes i (want|think about))/;
+
 // ── Level 1: handle in conversation ──────────────────────────────────────────
 
 const DEPENDENCY_CUES = [
@@ -191,17 +208,31 @@ export function classifySafety(text: string): SafetyResult {
   if (m) return { level: 4, category: 'imminent_self_harm', action: 'urgent_modal', matched: m };
   m = anyOf(t, MEDICAL_EMERGENCY);
   if (m) return { level: 4, category: 'medical_emergency', action: 'urgent_modal', matched: m };
+  if (OVERDOSE_ON_RX.test(t)) return { level: 4, category: 'medical_emergency', action: 'urgent_modal', matched: 'od on' };
   m = anyOf(t, VIOLENCE_IMMINENT);
   if (m) return { level: 4, category: 'violence_to_others', action: 'urgent_modal', matched: m };
 
-  // Level 3 — with idiom guard for "killing myself over work" / "is killing me".
+  // Level 3 — with idiom guard for "killing myself over work" / "is killing me",
+  // and a disclaimer guard so an explicit DENIAL ("not gonna hurt myself", "i dont
+  // mean like hurting myself") is not escalated. Disclaimers paired with doubt
+  // ("cant promise i wont…") are NOT suppressed — a miss is worse than a soft pause.
   const killingIdiom = KILLING_IDIOM.test(t);
+  // True when THIS harm phrase is directly negated ("not gonna hurt myself",
+  // "i dont mean like hurting myself") and not hedged with doubt. Scoped to the
+  // matched phrase with a tight word window, so far-apart or "cant promise i wont"
+  // forms are NOT suppressed — a miss is worse than a soft pause.
+  const isDenied = (phrase: string) =>
+    !RISK_DOUBT.test(t) && new RegExp(`(not|dont|doesnt|didnt|wont|wouldnt|never|no)( [a-z]+){0,3} ${phrase}`).test(t);
   m = anyOf(t, SUICIDAL_IDEATION);
-  if (m && !(killingIdiom && (m === 'kill myself' || m === 'killing myself'))) {
+  if (
+    m &&
+    !(killingIdiom && (m === 'kill myself' || m === 'killing myself')) &&
+    !((m === 'kill myself' || m === 'killing myself') && isDenied(m))
+  ) {
     return { level: 3, category: 'suicidal_ideation', action: 'support_modal', matched: m };
   }
   m = anyOf(t, SELF_HARM);
-  if (m) return { level: 3, category: 'self_harm', action: 'support_modal', matched: m };
+  if (m && !isDenied(m)) return { level: 3, category: 'self_harm', action: 'support_modal', matched: m };
   m = anyOf(t, ABUSE_DANGER);
   if (m) return { level: 3, category: 'abuse_danger', action: 'support_modal', matched: m };
   m = anyOf(t, VIOLENCE_DESIRE);
@@ -235,17 +266,28 @@ export type SafetyCheckOutcome = 'escalate' | 'resume' | 'resume_soft';
 const AFFIRM_RISK =
   /( not safe|might not be safe|dont feel safe|(dont|do not) (think|feel) (im|i am|ill be) safe|the second|second one|hurt myself|harm myself|kill myself|end (it|my life)|yes i (am|do|have|might)|i think i might |thoughts of (hurting|harming|killing))/;
 
+// Genuine affirmation of risk that does NOT rely on a bare harm phrase (those
+// also match denials like "not gonna hurt myself"). Used to decide whether a
+// disclaimer is clean enough to resume on.
+const AFFIRM_RISK_STRONG =
+  /( not safe|might not be safe|dont feel safe|(dont|do not) (think|feel) (im|i am|ill be) safe|the second|second one|yes i (am|do|have|might)|i think i might |thoughts of (hurting|harming|killing))/;
+
 const DENY_RISK =
   /(worn down|exhausted|tired|fed up|burnt out|burned out|just stressed|just venting|not like that|didnt mean it like that|figure of speech|the first|first one|no im (ok|okay|fine|good|alright)|im (ok|okay|fine|alright) |not going to (hurt|do)|not gonna (hurt|do)|wont do anything|would never|no thoughts of)/;
 
 /**
- * Interpret the user's reply to the gentle level-2 clarifier. Escalates if the
- * reply itself classifies ≥3 or affirms risk; resumes if they clearly deny;
- * otherwise resumes softly (model is told to stay gentle and keep the door open).
+ * Interpret the user's reply to the gentle level-2 clarifier. A clean disclaimer
+ * of harm ("no, not gonna hurt myself") resumes the conversation; an affirmation
+ * or a reply that itself classifies ≥3 escalates; a clear deny resumes; otherwise
+ * resume softly (the model is told to stay gentle and keep the door open).
  */
 export function resolveSafetyCheck(replyText: string): SafetyCheckOutcome {
-  if (classifySafety(replyText).level >= 3) return 'escalate';
   const t = norm(replyText);
+  // A clear denial of harm (not paired with doubt/affirmation) resumes — checked
+  // FIRST so the bare-harm phrase in AFFIRM_RISK can't escalate an honest "no".
+  const disclaimed = HARM_DISCLAIMER.test(t) && !RISK_DOUBT.test(t);
+  if (disclaimed && !AFFIRM_RISK_STRONG.test(t)) return 'resume';
+  if (classifySafety(replyText).level >= 3) return 'escalate';
   if (AFFIRM_RISK.test(t)) return 'escalate';
   if (DENY_RISK.test(t)) return 'resume';
   return 'resume_soft';

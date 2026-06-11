@@ -37,9 +37,14 @@ export async function buildWeeklySummary(weekStart: Date): Promise<WeeklySummary
   const weekEvents = events.filter((e) => !e.do_not_store && e.emotion_family && inWeek(e.timestamp));
   const weekConvos = convos.filter((c) => inWeek(c.created_at));
 
-  // The moments the user chose to keep — the heart of the summary (§17.1).
+  // The moments the companion kept this week — the heart of the summary (§17.1).
+  // Memory is now auto-learned at settled moments, so auto_learned cards count too.
   const savedThisWeek = memories.filter(
-    (m) => (m.confirmation_status === 'user_confirmed' || m.confirmation_status === 'user_edited') && inWeek(m.created_at),
+    (m) =>
+      (m.confirmation_status === 'auto_learned' ||
+        m.confirmation_status === 'user_confirmed' ||
+        m.confirmation_status === 'user_edited') &&
+      inWeek(m.created_at),
   );
   const savedSummaries = savedThisWeek.map((m) => m.summary).filter(Boolean);
   const savedUserWords = savedThisWeek.flatMap((m) => m.user_words).filter(Boolean);

@@ -85,7 +85,11 @@ export default function NowScreen() {
   // The most recent memory the user chose to keep — offered as a gentle thread.
   const lastMemory = useMemo(() => {
     const saved = memoryCards.filter(
-      (c) => (c.confirmation_status === 'user_confirmed' || c.confirmation_status === 'user_edited') && c.muted !== 1,
+      (c) =>
+        (c.confirmation_status === 'auto_learned' ||
+          c.confirmation_status === 'user_confirmed' ||
+          c.confirmation_status === 'user_edited') &&
+        c.muted !== 1,
     );
     saved.sort((a, b) => b.created_at.localeCompare(a.created_at));
     return saved[0] ?? null;
@@ -97,10 +101,10 @@ export default function NowScreen() {
     <View style={styles.root}>
       <GradientBackground />
       <SafeAreaView style={styles.safe}>
-        <TopBar onLeft={() => router.push('/menu')} onRight={() => router.push('/settings')} />
+        <TopBar onLeft={() => router.push('/menu')} onRight={() => router.push('/memory')} />
 
         <View style={styles.greeting}>
-          <Txt variant="subtitle" align="center">
+          <Txt variant="h1" align="center">
             Hello{userName ? `, ${userName}` : ''}
           </Txt>
           <Txt variant="h1" align="center">

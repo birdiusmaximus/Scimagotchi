@@ -36,8 +36,11 @@ export function Glass({
       style={[{ borderRadius: radius, borderWidth, borderColor: border, overflow: 'hidden' }, style]}
       {...rest}
     >
-      <BlurView intensity={intensity} tint={tint} style={StyleSheet.absoluteFill} />
-      <View style={[StyleSheet.absoluteFill, { backgroundColor: fill }]} />
+      {/* The blur and fill layers carry their own radius: on web a backdrop-filter
+          element is not clipped by an ancestor's border-radius, so without this the
+          frosted layer renders square and the corners look unrounded. */}
+      <BlurView intensity={intensity} tint={tint} style={[StyleSheet.absoluteFill, { borderRadius: radius }]} />
+      <View style={[StyleSheet.absoluteFill, { backgroundColor: fill, borderRadius: radius }]} />
       <View style={contentStyle}>{children}</View>
     </View>
   );

@@ -36,15 +36,17 @@ export function ReturningThread({
           </PressableScale>
         </View>
 
-        <Txt variant="body" color={palette.inkOnGlass} style={styles.summary}>
+        <Txt variant="body" color={palette.inkOnGlass} style={styles.summary} numberOfLines={2}>
           {summary}
         </Txt>
 
         <PressableScale onPress={onPickUp} style={styles.cta}>
-          <Txt variant="label" color={palette.accentDeep}>
-            Stay with this
-          </Txt>
-          <Feather name="arrow-right" size={15} color={palette.accentDeep} />
+          <View style={styles.ctaRow}>
+            <Txt variant="label" color={palette.accentDeep}>
+              Stay with this
+            </Txt>
+            <Feather name="arrow-right" size={15} color={palette.accentDeep} />
+          </View>
         </PressableScale>
       </Glass>
     </Animated.View>
@@ -52,10 +54,11 @@ export function ReturningThread({
 }
 
 const styles = StyleSheet.create({
-  content: { paddingVertical: 12, paddingHorizontal: spacing.md, gap: 6 },
+  content: { paddingVertical: 9, paddingHorizontal: spacing.md, gap: 3 },
   header: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   kickerRow: { flexDirection: 'row', alignItems: 'center', gap: 6 },
   kicker: { letterSpacing: 1.2 },
-  summary: { lineHeight: 21 },
-  cta: { flexDirection: 'row', alignItems: 'center', gap: 6, marginTop: 2 },
+  summary: { lineHeight: 20 },
+  cta: { alignSelf: 'flex-start', marginTop: 1 },
+  ctaRow: { flexDirection: 'row', alignItems: 'center', gap: 6 },
 });

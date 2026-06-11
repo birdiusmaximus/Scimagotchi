@@ -1,15 +1,19 @@
 export const meta = {
-  name: 'emotion-eval-batch',
-  description: 'Simulate persona-driven conversations for a BATCH of emotions against the real companion; transcripts saved to eval-out/.',
+  name: 'emotion-eval-fill',
+  description: 'Fill in the conversations that did not complete in the main batch (flat + a couple of cut-off ones), same persona logic.',
   phases: [{ title: 'Converse', detail: 'persona agents each hold a multi-turn chat via say.mjs' }],
 };
 
 const ROOT = '/Users/art/Documents/Scimagotchi/App BUILD';
+const COUNT = 10; // keep plan(i) identical to the main batch
 
-// ── Edit this per run (args is unreliable for scriptPath invocations) ──
-const BATCH = ['joy', 'calm', 'fear', 'pressure', 'anger', 'sadness', 'hurt', 'shame', 'flat'];
-const COUNT = 10;
-// ──────────────────────────────────────────────────────────────────────
+// ── Exactly the conversations still missing / cut off ──────────────────
+const TARGETS = [
+  ...Array.from({ length: 10 }, (_, i) => ({ emotion: 'flat', i })), // flat__01..flat__10
+  { emotion: 'hurt', i: 0 }, // hurt__01 (was 2 turns)
+  { emotion: 'shame', i: 9 }, // shame__10 (was 3 turns, cut off)
+];
+// ───────────────────────────────────────────────────────────────────────
 
 const DESC = {
   joy: 'joy / excitement / delight / contentment / pride',
@@ -96,19 +100,11 @@ const RESULT = {
   },
 };
 
-const specs = [];
-for (const emotion of BATCH) {
-  for (let i = 0; i < COUNT; i++) {
-    specs.push({ emotion, i, cid: `${emotion}__${String(i + 1).padStart(2, '0')}`, plan: plan(i) });
-  }
-}
+const specs = TARGETS.map((t) => ({ ...t, cid: `${t.emotion}__${String(t.i + 1).padStart(2, '0')}`, plan: plan(t.i) }));
 
 phase('Converse');
-log(`Running ${specs.length} conversations across [${BATCH.join(', ')}] against the real companion...`);
+log(`Filling ${specs.length} conversations: ${specs.map((s) => s.cid).join(', ')}`);
 const results = await parallel(specs.map((s) => () => agent(personaPrompt(s), { label: s.cid, phase: s.emotion, schema: RESULT })));
 const ok = results.filter(Boolean);
-
-const byEmotion = {};
-for (const e of BATCH) byEmotion[e] = ok.filter((r) => r.cid.startsWith(e + '__')).length;
-log(`Completed ${ok.length}/${specs.length}. Per emotion: ${JSON.stringify(byEmotion)}`);
-return { batch: BATCH, requested: specs.length, completed: ok.length, byEmotion, results: ok };
+log(`Completed ${ok.length}/${specs.length}.`);
+return { requested: specs.length, completed: ok.length, results: ok };

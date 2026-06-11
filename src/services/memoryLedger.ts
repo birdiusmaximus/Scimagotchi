@@ -1,13 +1,14 @@
 /**
- * Memory Ledger (engine brief §12) — user-owned emotional memory.
+ * Memory Ledger (engine brief §12) — the companion's emotional memory.
  *
- * The engine may DRAFT a card when something meaningful lands (a first shape,
- * a confirmed mixed structure, a correction worth not repeating, an explicit
- * "remember this"). A draft lives only in app state until the user chooses
- * Save / Edit / Not this — durable memory is NEVER written silently, and
- * sensitive content is never drafted at all. Retrieval feeds only confirmed,
- * un-muted, un-expired cards back into the prompt, phrased for tentative
- * callbacks ("last time you called this…"), never as facts about the person.
+ * The companion LEARNS automatically when something settled lands (a first
+ * shape, a confirmed mixed structure, a correction worth not repeating, an
+ * explicit "remember this"). These are saved on their own as `auto_learned`
+ * cards — no Save / Edit / Not this prompt, since being asked every time felt
+ * repetitive. Sensitive content is still never stored (memoryBlocked), and the
+ * user can delete any memory. Retrieval feeds only active (auto-learned or
+ * user-confirmed), un-muted, un-expired cards back into the prompt, phrased for
+ * tentative callbacks ("last time you called this…"), never as facts.
  *
  * Pure module (no React/RN imports) so the eval harness can bundle and test it.
  */
@@ -140,12 +141,14 @@ function tokens(s: string): Set<string> {
   );
 }
 
-/** Confirmed, un-muted, un-expired cards only — the only memory the companion may use. */
+/** Active (auto-learned or user-confirmed), un-muted, un-expired cards — the only memory the companion may use. */
 export function activeCards(all: MemoryCard[]): MemoryCard[] {
   const now = nowIso();
   return all.filter(
     (c) =>
-      (c.confirmation_status === 'user_confirmed' || c.confirmation_status === 'user_edited') &&
+      (c.confirmation_status === 'auto_learned' ||
+        c.confirmation_status === 'user_confirmed' ||
+        c.confirmation_status === 'user_edited') &&
       c.muted !== 1 &&
       (c.retention !== 'expires' || !c.expires_at || c.expires_at > now),
   );

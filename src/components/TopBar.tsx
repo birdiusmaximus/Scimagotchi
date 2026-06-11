@@ -7,12 +7,12 @@ type Props = {
   onRight?: () => void;
 };
 
-/** Home top bar: menu (left) and settings (right) as frosted circular buttons. */
+/** Home top bar: a frosted menu button (left) and a gradient memory shortcut (right). */
 export function TopBar({ onLeft, onRight }: Props) {
   return (
     <View style={styles.row}>
       <IconButton name="menu" onPress={onLeft} />
-      <IconButton name="settings" onPress={onRight} />
+      <IconButton name="calendar" variant="accent" onPress={onRight} />
     </View>
   );
 }

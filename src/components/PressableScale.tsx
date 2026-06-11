@@ -10,14 +10,17 @@ type Props = {
   scaleTo?: number;
   hitSlop?: number;
   disabled?: boolean;
+  /** Let the inner wrapper fill the touch target (so a flex:1 child stretches to it). */
+  fill?: boolean;
 };
 
 /**
  * A Pressable that springs its content down slightly on press — the small tactile
  * detail that makes taps feel premium. `style` lays out the touch target; the
- * inner content scales.
+ * inner content scales. Pass `fill` when the child should stretch to the target
+ * (e.g. equal-width/height buttons in a row).
  */
-export function PressableScale({ children, onPress, onLongPress, style, scaleTo = 0.92, hitSlop, disabled }: Props) {
+export function PressableScale({ children, onPress, onLongPress, style, scaleTo = 0.92, hitSlop, disabled, fill }: Props) {
   const s = useSharedValue(1);
   const animated = useAnimatedStyle(() => ({ transform: [{ scale: s.value }] }));
 
@@ -37,7 +40,7 @@ export function PressableScale({ children, onPress, onLongPress, style, scaleTo 
         s.value = withSpring(1, { damping: 9, stiffness: 380, mass: 0.6 });
       }}
     >
-      <Animated.View style={animated}>{children}</Animated.View>
+      <Animated.View style={fill ? [animated, { flex: 1 }] : animated}>{children}</Animated.View>
     </Pressable>
   );
 }

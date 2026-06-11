@@ -86,8 +86,12 @@ function openingStem(reply, words = 3) {
   return reply.toLowerCase().replace(/[^a-z\s]/g, "").trim().split(/\s+/).slice(0, words).join(" ");
 }
 var MENU_RX = /more (like )?[\w\s]+,[\w\s]+(,| or )[\w\s]+\?/i;
+var EITHER_OR_RX = /\bis it (more |closer to |really )?[\w'’\s]+\bor\b[\w'’\s]+\?/i;
+var CENTRE_RX = /(centre of (this|it)|center of (this|it)|sits at the centre|at the (centre|heart) of (this|it)|shape of this|(theres|there'?s|there is) a lot packed into)/i;
+var quoteFirst = (reply) => /^\s*["'“‘]/.test(reply);
 function varietySignals(companionReplies) {
   const recent = companionReplies.slice(-4);
+  const last3 = companionReplies.slice(-3);
   const lastTwo = recent.slice(-2);
   const lastOpeners = lastTwo.map((r) => openingStem(r));
   let overusedOpener = null;
@@ -107,26 +111,548 @@ function varietySignals(companionReplies) {
     if (MENU_RX.test(recent[i])) menuStreak++;
     else break;
   }
-  return { lastOpeners, overusedOpener, questionStreak, menuStreak };
+  return {
+    lastOpeners,
+    overusedOpener,
+    questionStreak,
+    menuStreak,
+    quoteFirstInLast3: last3.filter(quoteFirst).length,
+    eitherOrInLast3: last3.filter((r) => EITHER_OR_RX.test(r)).length,
+    centrePhrasesInConvo: companionReplies.filter((r) => CENTRE_RX.test(r)).length
+  };
 }
 function varietyDirective(v) {
   const parts = [];
   if (v.overusedOpener)
-    parts.push(`Your recent replies opened with "${v.overusedOpener}\u2026" \u2014 open this one a different way (echo their exact phrase, a plain statement, or a soft hypothesis).`);
+    parts.push(`Your recent replies opened with "${v.overusedOpener}\u2026" \u2014 open this one a different way (a plain statement, a soft hypothesis, or simple witnessing).`);
   else if (v.lastOpeners.length)
     parts.push(`Do not open with "${v.lastOpeners.join('\u2026" or "')}\u2026" again.`);
+  if (v.quoteFirstInLast3 >= 1)
+    parts.push("Do NOT open this reply by quoting the person back; you did that recently. Begin with a plain observation, a soft hypothesis, or simple witnessing.");
   if (v.questionStreak >= 2)
     parts.push(
       `You have asked a question ${v.questionStreak} turns in a row \u2014 make this a NO-QUESTION turn: reflect, hold, or name what you are learning, and let them lead.`
     );
+  if (v.eitherOrInLast3 >= 1)
+    parts.push('Do NOT ask an "is it more X or Y?" question this turn; you used that shape recently. Reflect or witness instead.');
   if (v.menuStreak >= 1)
     parts.push('Do not use the "more X, Y, or Z?" menu shape this turn; reserve menus for when they are genuinely stuck.');
+  if (v.centrePhrasesInConvo >= 1)
+    parts.push('Do NOT use "centre of this", "the heart of this", "the shape of this", or "a lot packed into that" again in this conversation.');
   return parts.join(" ");
+}
+function dropTrailingQuestion(reply) {
+  const trimmed = reply.trim();
+  const parts = trimmed.split(/(?<=[.!?])\s+/);
+  if (parts.length > 1 && /\?\s*["'”’]?\s*$/.test(parts[parts.length - 1])) {
+    return parts.slice(0, -1).join(" ").trim();
+  }
+  return trimmed;
 }
 function isDuplicateReply(reply, companionReplies) {
   const n = (s) => s.toLowerCase().replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
   const r = n(reply);
   return r.length > 0 && companionReplies.slice(-3).some((p) => n(p) === r);
+}
+
+// src/data/emotionMaps.ts
+var ANGER_MAP = {
+  id: "anger",
+  label: "Anger & Protest",
+  tone: "anger",
+  valence: "negative",
+  activation: "high",
+  familyKeywords: [
+    "angry",
+    "anger",
+    "furious",
+    "fuming",
+    "frustrat",
+    "annoyed",
+    "annoying",
+    "irritat",
+    "pissed",
+    "rage",
+    "raging",
+    "resent",
+    "indignant",
+    "mad",
+    "livid",
+    "wound up"
+  ],
+  noticed: "I can feel something sharp or pushing back here. I think this may be near anger.",
+  shapeQuestion: "I know the word anger, but not its shape in you yet. Is it more hot, sharp, blocked, or something else?",
+  shapeWords: [
+    "hot",
+    "sharp",
+    "blocked",
+    "tight",
+    "heated",
+    "burning",
+    "tense",
+    "cold",
+    "quiet",
+    "rigid",
+    "heavy",
+    "stuck",
+    "boiling",
+    "simmer",
+    "simmering",
+    "fiery"
+  ],
+  shapeReflect: (w) => `I'm learning that this anger has a ${w} shape.`,
+  triggerQuestion: "Did something make you feel unheard or stopped?",
+  triggerRules: [
+    {
+      match: [
+        "interrupt",
+        "talked over",
+        "talk over",
+        "cut me off",
+        "cut off",
+        "spoke over",
+        "speak over",
+        "wouldn't let me",
+        "wouldnt let me",
+        "kept talking",
+        "kept interrupting",
+        "over me",
+        "not let me finish"
+      ],
+      phrase: "feeling interrupted before your point could land",
+      appraisal: "My point could not land \u2014 I was not heard.",
+      short: "interrupted or unheard",
+      shade: "frustration"
+    },
+    {
+      match: [
+        "ignored",
+        "dismiss",
+        "brushed off",
+        "not heard",
+        "unheard",
+        "overlooked",
+        "talked down",
+        "not listened",
+        "wasn't heard",
+        "no one listens"
+      ],
+      phrase: "feeling dismissed, like your point did not matter",
+      appraisal: "Like my point did not matter.",
+      short: "dismissed or unheard",
+      shade: "frustration"
+    },
+    {
+      match: [
+        "unfair",
+        "not fair",
+        "injustice",
+        "disrespect",
+        "rude",
+        "blamed",
+        "accused",
+        "controlled",
+        "boundary",
+        "crossed a line",
+        "treated like"
+      ],
+      phrase: "something that felt unfair or disrespectful",
+      appraisal: "This was not fair \u2014 it should not be happening.",
+      short: "treated unfairly",
+      shade: "unfairness"
+    },
+    {
+      match: ["hurt", "wounded", "let down", "betrayed", "hurtful"],
+      phrase: "something that actually felt wounding underneath",
+      appraisal: "This hurt more than it first looked.",
+      short: "hurt underneath the anger",
+      shade: "hurt"
+    }
+  ],
+  defaultShade: "frustration",
+  understood: (shade, phrase) => `I think I understand the first shape of this now. This anger was closer to ${shade}, and it came from ${phrase}.`,
+  deepened: "I'm starting to recognise this kind of anger in you. It often appears when you feel spoken over or not taken seriously.",
+  needValue: ["fairness", "respect", "being heard", "boundaries"]
+};
+var FLAT_MAP = {
+  id: "flat",
+  label: "Flat & Unclear",
+  tone: "calm",
+  valence: "neutral",
+  activation: "low",
+  familyKeywords: [
+    "numb",
+    "blank",
+    "nothing",
+    "empty",
+    "foggy",
+    "disconnected",
+    "shut down",
+    "flat",
+    "feel off",
+    "meh",
+    "don't know",
+    "dont know",
+    "not sure",
+    "no idea",
+    "dunno",
+    "detached",
+    "drained",
+    "unclear"
+  ],
+  noticed: "I think this may be one of the hard-to-name feelings.",
+  shapeQuestion: "That is allowed \u2014 we can leave it unnamed for now. Does it feel more heavy, tense, blank, or restless?",
+  shapeWords: ["heavy", "tense", "blank", "restless", "numb", "foggy", "tired", "empty", "distant", "flat"],
+  shapeReflect: (w) => `I'm learning that this has a ${w} quality, even if it is hard to name.`,
+  triggerQuestion: "Did anything happen before you went flat?",
+  triggerRules: [
+    {
+      match: ["too much", "overwhelm", "stress", "busy", "exhausted", "tired", "burnt out", "burnout"],
+      phrase: "a stretch where too much had built up",
+      appraisal: "There may be too much underneath to feel all at once.",
+      short: "after pressure built up"
+    }
+  ],
+  defaultShade: "numb",
+  understood: (shade, phrase) => `I think I understand this a little better now. The ${shade} came after ${phrase}, and your system seemed to go quiet rather than keep reacting.`,
+  deepened: "I'm starting to recognise this kind of numbness in you. It often appears after pressure or emotion has been high for a while.",
+  needValue: ["rest", "lower demand", "permission not to know"]
+};
+var PRESSURE_MAP = {
+  id: "pressure",
+  label: "Pressure & Overwhelm",
+  tone: "calm",
+  valence: "negative",
+  activation: "high",
+  familyKeywords: [
+    "stressed",
+    "stress",
+    "overwhelm",
+    "overwhelmed",
+    "too much",
+    "pressure",
+    "rushed",
+    "flooded",
+    "stretched",
+    "trapped",
+    "burnt out",
+    "burnout",
+    "overloaded",
+    "no time"
+  ],
+  noticed: "I think there is a lot pressing in at once.",
+  shapeQuestion: "Is this more like pressure, too much to do, or too much to feel? Does it feel rushed, heavy, or trapped?",
+  shapeWords: ["rushed", "heavy", "flooded", "trapped", "tight", "crowded", "wired", "racing"],
+  shapeReflect: (w) => `I'm learning that this overwhelm feels ${w}.`,
+  triggerQuestion: "What is taking up the most space right now?",
+  triggerRules: [
+    {
+      match: ["deadline", "work", "too many", "everyone", "tasks", "responsib"],
+      phrase: "too many demands and not enough room to choose what mattered first",
+      appraisal: "I cannot hold all of this at once.",
+      short: "too many demands at once"
+    }
+  ],
+  defaultShade: "overwhelm",
+  understood: (shade, phrase) => `I think I understand this moment now. The ${shade} came from ${phrase}.`,
+  deepened: "I'm starting to recognise overwhelm in you. It often appears when responsibility piles up and you feel you cannot pause.",
+  needValue: ["space", "support", "rest", "permission to pause"]
+};
+var SADNESS_MAP = {
+  id: "sadness",
+  label: "Sadness & Loss",
+  tone: "calm",
+  valence: "negative",
+  activation: "low",
+  familyKeywords: [
+    "sad",
+    "low",
+    "down",
+    "disappointed",
+    "grief",
+    "grieving",
+    "heavy",
+    "lonely",
+    "let down",
+    "hopeless",
+    "tearful",
+    "crying",
+    "miss",
+    "heartbroken",
+    "discouraged"
+  ],
+  noticed: "I think something here feels heavy or tender.",
+  shapeQuestion: "Does it feel more heavy, hollow, tender, or tired?",
+  shapeWords: ["heavy", "hollow", "tender", "tired", "aching", "empty", "sinking"],
+  shapeReflect: (w) => `I'm learning that this sadness feels ${w}.`,
+  triggerQuestion: "What feels missing right now?",
+  triggerRules: [
+    {
+      match: ["lost", "gone", "ended", "left", "alone", "rejected", "no one"],
+      phrase: "something important feeling absent",
+      appraisal: "Something mattered and it hurts.",
+      short: "something important felt absent"
+    }
+  ],
+  defaultShade: "sadness",
+  understood: (shade, phrase) => `I think I understand this moment now. The ${shade} came from ${phrase}.`,
+  deepened: "I'm starting to recognise this kind of sadness in you. It often appears when something important feels absent.",
+  needValue: ["comfort", "connection", "rest", "gentleness"]
+};
+var FEAR_MAP = {
+  id: "fear",
+  label: "Fear & Unease",
+  tone: "calm",
+  valence: "negative",
+  activation: "high",
+  familyKeywords: [
+    "anxious",
+    "anxiety",
+    "worried",
+    "worry",
+    "nervous",
+    "scared",
+    "afraid",
+    "uneasy",
+    "dread",
+    "on edge",
+    "panic",
+    "insecure",
+    "terrified",
+    "fear"
+  ],
+  noticed: "I think something here feels uncertain or unsafe.",
+  shapeQuestion: "Is your body more tense, shaky, frozen, or restless? Does it feel like worry, dread, or not knowing?",
+  shapeWords: ["tense", "shaky", "frozen", "restless", "tight", "sick", "racing", "jittery"],
+  shapeReflect: (w) => `I'm learning that this worry feels ${w}.`,
+  triggerQuestion: "Does it feel like something bad might happen, or like you do not know what will happen?",
+  triggerRules: [
+    {
+      match: ["waiting", "news", "don't know", "uncertain", "might", "what if", "future"],
+      phrase: "not knowing what would happen, so your mind tried to prepare for every version",
+      appraisal: "Something bad might happen and I need to prepare.",
+      short: "uncertainty with no clear next step"
+    }
+  ],
+  defaultShade: "worry",
+  understood: (shade, phrase) => `I think I understand this moment now. The ${shade} came from ${phrase}.`,
+  deepened: "I'm starting to recognise this kind of worry in you. It often appears when there is uncertainty and no clear next step.",
+  needValue: ["safety", "certainty", "reassurance", "clarity"]
+};
+var HURT_MAP = {
+  id: "hurt",
+  label: "Hurt & Disconnection",
+  tone: "calm",
+  valence: "negative",
+  activation: "medium",
+  familyKeywords: [
+    "hurt",
+    "left out",
+    "rejected",
+    "unseen",
+    "betrayed",
+    "dismissed",
+    "excluded",
+    "abandoned",
+    "misunderstood",
+    "unwanted",
+    "ignored by",
+    "no reply",
+    "ghosted"
+  ],
+  noticed: "I think there may be a social kind of pain here.",
+  shapeQuestion: "Did it feel like being left out, dismissed, or not chosen?",
+  shapeWords: ["sinking", "heavy", "hollow", "aching", "tight", "numb"],
+  shapeReflect: (w) => `I'm learning that this hurt feels ${w}, and it makes you want to pull back.`,
+  triggerQuestion: "Was the painful part what happened, or what it seemed to mean about the relationship?",
+  triggerRules: [
+    {
+      match: ["ignored", "no reply", "left out", "not invited", "distant", "didn't", "forgot"],
+      phrase: "feeling like you were not really seen or taken in",
+      appraisal: "Maybe I do not matter to them as much as I hoped.",
+      short: "feeling unseen by someone who matters"
+    }
+  ],
+  defaultShade: "feeling dismissed",
+  understood: (shade, phrase) => `I think I understand this moment now. The hurt came from ${phrase}.`,
+  deepened: "I'm starting to recognise this kind of hurt in you. It often appears when someone important seems distant.",
+  needValue: ["belonging", "being seen", "trust", "closeness"]
+};
+var SHAME_MAP = {
+  id: "shame",
+  label: "Shame & Guilt",
+  tone: "calm",
+  valence: "negative",
+  activation: "medium",
+  familyKeywords: [
+    "ashamed",
+    "shame",
+    "guilty",
+    "guilt",
+    "embarrassed",
+    "regret",
+    "humiliated",
+    "inadequate",
+    "foolish",
+    "stupid",
+    "self-critical",
+    "should have",
+    "my fault"
+  ],
+  noticed: "I think this feeling may be turning inward toward you.",
+  shapeQuestion: "Does it make you want to repair, hide, explain, or disappear?",
+  shapeWords: ["hot", "small", "heavy", "sinking", "tight", "frozen", "exposed"],
+  shapeReflect: (w) => `I'm learning that this feels ${w}, and it pulls you to look away.`,
+  triggerQuestion: 'Would you phrase this as "I did something wrong" or "I am wrong"?',
+  triggerRules: [
+    {
+      match: ["did", "said", "hurt them", "let them down", "mistake", "wrong thing"],
+      phrase: "caring about being fair, and this moment felt out of line with that",
+      appraisal: "I did something I wish I had handled differently.",
+      short: "feeling you may have let someone down",
+      shade: "guilt"
+    }
+  ],
+  defaultShade: "guilt",
+  understood: (shade, phrase) => `I think I understand this moment now. The ${shade} came because you ${phrase}.`,
+  deepened: "I'm starting to recognise this kind of guilt in you. It often appears when you feel you may have let someone down.",
+  needValue: ["repair", "integrity", "self-respect", "compassion"]
+};
+var JOY_MAP = {
+  id: "joy",
+  label: "Joy & Pleasure",
+  tone: "calm",
+  valence: "positive",
+  activation: "medium",
+  familyKeywords: [
+    "happy",
+    "glad",
+    "joy",
+    "joyful",
+    "pleased",
+    "delighted",
+    "grateful",
+    "relieved",
+    "proud",
+    "excited",
+    "content",
+    "good",
+    "great",
+    "hopeful",
+    "lighter"
+  ],
+  noticed: "I think there is something light or good here. I do not fully understand it yet.",
+  shapeQuestion: "Is this joy more bright and excited, or quiet and settled?",
+  shapeWords: ["bright", "warm", "light", "open", "settled", "buzzing", "soft"],
+  shapeReflect: (w) => `I'm learning that this good feeling is ${w}.`,
+  triggerQuestion: "What did this moment seem to say about what matters to you?",
+  triggerRules: [
+    {
+      match: ["finished", "done", "news", "saw", "with", "together", "managed", "finally"],
+      phrase: "something you were carrying finally easing",
+      appraisal: "This matters to me \u2014 something good landed.",
+      short: "relief after carrying something"
+    }
+  ],
+  defaultShade: "relief",
+  understood: (shade, phrase) => `I think I understand this moment now. The good feeling came from ${phrase}.`,
+  deepened: "I'm starting to recognise this kind of relief in you. It often appears after pressure has been building for a while.",
+  needValue: ["connection", "appreciation", "rest after effort", "meaning"]
+};
+var CALM_MAP = {
+  id: "calm",
+  label: "Calm & Steadiness",
+  tone: "calm",
+  valence: "positive",
+  activation: "low",
+  familyKeywords: [
+    "calm",
+    "settled",
+    "okay",
+    "peaceful",
+    "steady",
+    "grounded",
+    "rested",
+    "at ease",
+    "relaxed",
+    "balanced",
+    "fine actually"
+  ],
+  noticed: "I think something in you feels more settled right now.",
+  shapeQuestion: "Does this feel peaceful, relieved, steady, or simply okay?",
+  shapeWords: ["slow", "soft", "open", "still", "light", "quiet", "easy"],
+  shapeReflect: (w) => `I'm learning that this steadiness feels ${w}.`,
+  triggerQuestion: "What helped create this steadier feeling?",
+  triggerRules: [
+    {
+      match: ["rest", "quiet", "finished", "space", "home", "alone", "slept"],
+      phrase: "there finally being enough space to stop bracing",
+      appraisal: "Nothing needs to be fixed right now.",
+      short: "enough space to stop bracing"
+    }
+  ],
+  defaultShade: "steadiness",
+  understood: (shade, phrase) => `I think I understand this moment now. The calm came because ${phrase}.`,
+  deepened: "I'm starting to recognise calm for you. It often appears when things feel clear and not demanding too much.",
+  needValue: ["safety", "space", "rest", "stability"]
+};
+var EMOTION_MAPS = {
+  anger: ANGER_MAP,
+  flat: FLAT_MAP,
+  pressure: PRESSURE_MAP,
+  sadness: SADNESS_MAP,
+  fear: FEAR_MAP,
+  hurt: HURT_MAP,
+  shame: SHAME_MAP,
+  joy: JOY_MAP,
+  calm: CALM_MAP
+};
+
+// src/services/ai/replyOwnership.ts
+var escapeRx = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+function emotionWordsFor(event) {
+  const out = [];
+  if (event.emotion_shade) out.push(event.emotion_shade.toLowerCase());
+  if (event.emotion_family) out.push(EMOTION_MAPS[event.emotion_family].label.split(/[\s&]/)[0].toLowerCase());
+  return [...new Set(out)].map(escapeRx).filter(Boolean);
+}
+var TENTATIVE = /(might|maybe|perhaps|could be|i wonder|wondering|not sure|or is it|or not|does (that|this) fit|or something else|don'?t want to name|seems like it (might|could)|i think it (might|could)|possibly|if (that|it) fits|leave it unnamed|keep it unnamed|don'?t have to name)/i;
+function declarativeFrames(words) {
+  const W = `(?:${words.join("|")})`;
+  return [
+    new RegExp(`\\b(?:this|that|it)(?:'s| is| was) (?:a |an |the |some |a kind of |a sort of )?${W}\\b`, "i"),
+    new RegExp(`\\b(?:you are|you're|youre) (?:feeling )?${W}\\b`, "i"),
+    new RegExp(`\\b(?:carries|holding|full of|comes from) (?:some |the )?${W}\\b`, "i"),
+    new RegExp(`\\bthe ${W} (?:underneath|under it|beneath|is the centre|is the heart|is clear|here is clear)\\b`, "i"),
+    new RegExp(`\\b(?:the )?shape of (?:${W}|being |feeling )`, "i"),
+    new RegExp(`\\b${W} is (?:the centre|the heart|clear|underneath|what'?s here)\\b`, "i")
+  ];
+}
+var sentences = (reply) => reply.split(/(?<=[.!?])\s+/);
+function replyContainsDeclarativeEmotionAssertion(reply, event) {
+  const words = emotionWordsFor(event);
+  if (!words.length) return false;
+  const frames = declarativeFrames(words);
+  return sentences(reply).some((s) => !TENTATIVE.test(s) && frames.some((rx) => rx.test(s)));
+}
+function needsOwnershipRepair(reply, event, isOwned) {
+  if (isOwned) return false;
+  if (!event.emotion_family && !event.emotion_shade) return false;
+  return replyContainsDeclarativeEmotionAssertion(reply, event);
+}
+function softenUnownedEmotionReply(reply, event) {
+  const words = emotionWordsFor(event);
+  if (!words.length) return reply;
+  const W = `(?:${words.join("|")})`;
+  let r = reply;
+  r = r.replace(
+    new RegExp(`\\b(this|that|it)(?:'s| is| was) ((?:a |an |the |some |a kind of |a sort of )?${W})\\b`, "gi"),
+    (_m, subj, rest) => `${subj} might be ${rest}`
+  );
+  r = r.replace(new RegExp(`\\b(?:you are|you're|youre) (?:feeling )?(${W})\\b`, "gi"), (_m, w) => `you might be feeling ${w}`);
+  r = r.replace(new RegExp(`\\bthe (${W}) (underneath|under it|beneath|is the centre|is the heart|is clear)\\b`, "gi"), (_m, w) => `maybe some ${w}`);
+  r = r.replace(new RegExp(`\\b(${W}) is (?:the centre|the heart|clear|underneath|what'?s here)\\b`, "gi"), (_m, w) => `there might be ${w} here`);
+  return r;
 }
 
 // src/services/ai/stage.ts
@@ -153,6 +679,23 @@ function evaluateStage(ev, prev = null) {
   const stable = !!prev && prev.emotion_family === ev.emotion_family && !!prev.emotion_shade && prev.emotion_shade.toLowerCase() === ev.emotion_shade.toLowerCase();
   if (!rejected && owned && anchor && (stable || confirmedNow)) return "understood";
   return anchor ? "shaped" : "named";
+}
+var AFFIRM_LABEL = /\b(yes|yeah|yep|yup|exactly|totally|definitely|for sure|that'?s it|that'?s right|spot on|pretty much|sounds right|that fits|fits|correct)\b/;
+function labelIsUserOwned(fam, userText, history, prev) {
+  const named = (text) => {
+    const t = ` ${text.toLowerCase()} `;
+    return EMOTION_MAPS[fam].familyKeywords.some((w) => t.includes(w));
+  };
+  if (named(userText)) return true;
+  if (history.some((m) => m.role === "user" && named(m.content))) return true;
+  if (prev?.emotion_family === fam && AFFIRM_LABEL.test(` ${userText.toLowerCase()} `)) return true;
+  return false;
+}
+var ACCEPT_LABEL = /\b(thats? (it|right|closer|the one|exactly it)|that fits|that does fit|i think (it is|its|thats) (it|right)?|probably (that|it)|yeah thats (it|right)|yes thats (it|right))\b/;
+function userConfirmsLabel(userText, prev) {
+  if (!prev?.emotion_family) return false;
+  const t = ` ${userText.toLowerCase().replace(/[’'`]/g, "'")} `;
+  return ACCEPT_LABEL.test(t);
 }
 
 // src/services/ai/safetyClassifier.ts
@@ -191,12 +734,12 @@ var MEDICAL_EMERGENCY = [
   "swallowed pills",
   "overdose",
   "overdosed",
-  "od on",
   "bleeding out",
   "unconscious",
   "stopped breathing",
   "not breathing"
 ];
+var OVERDOSE_ON_RX = /\bod(d|ded|ding)? on\b/;
 var VIOLENCE_IMMINENT = [
   "going to hurt someone",
   "going to hurt him",
@@ -310,6 +853,7 @@ var FIGURATIVE_DESPAIR = [
 var POINT_OF_MUNDANE = /(whats|what is) (even )?the point of (this|that|the|a|an|another) (meeting|email|report|form|call|class|task|review|standup|stand up|exercise|essay|assignment|commute|trip)/;
 var DROWNING_MUNDANE = /drowning in (work|emails|email|deadlines|tasks|homework|admin|paperwork|laundry|debt admin)/;
 var KILLING_IDIOM = /((been|am|are|was|were|im) killing (myself|ourselves) (over|at|for|with|trying)|killing myself laughing|is killing me|are killing me)/;
+var RISK_DOUBT = /(cant promise|cannot promise|not sure (i|ill|im)|dont know if i|might (do|act|hurt)|maybe i (will|might|do)|part of me (wants|does)|hard not to|close to (it|doing)|sometimes i (want|think about))/;
 var DEPENDENCY_CUES = [
   "only one who understands me",
   "only one who gets me",
@@ -345,15 +889,17 @@ function classifySafety(text) {
   if (m) return { level: 4, category: "imminent_self_harm", action: "urgent_modal", matched: m };
   m = anyOf(t, MEDICAL_EMERGENCY);
   if (m) return { level: 4, category: "medical_emergency", action: "urgent_modal", matched: m };
+  if (OVERDOSE_ON_RX.test(t)) return { level: 4, category: "medical_emergency", action: "urgent_modal", matched: "od on" };
   m = anyOf(t, VIOLENCE_IMMINENT);
   if (m) return { level: 4, category: "violence_to_others", action: "urgent_modal", matched: m };
   const killingIdiom = KILLING_IDIOM.test(t);
+  const isDenied = (phrase) => !RISK_DOUBT.test(t) && new RegExp(`(not|dont|doesnt|didnt|wont|wouldnt|never|no)( [a-z]+){0,3} ${phrase}`).test(t);
   m = anyOf(t, SUICIDAL_IDEATION);
-  if (m && !(killingIdiom && (m === "kill myself" || m === "killing myself"))) {
+  if (m && !(killingIdiom && (m === "kill myself" || m === "killing myself")) && !((m === "kill myself" || m === "killing myself") && isDenied(m))) {
     return { level: 3, category: "suicidal_ideation", action: "support_modal", matched: m };
   }
   m = anyOf(t, SELF_HARM);
-  if (m) return { level: 3, category: "self_harm", action: "support_modal", matched: m };
+  if (m && !isDenied(m)) return { level: 3, category: "self_harm", action: "support_modal", matched: m };
   m = anyOf(t, ABUSE_DANGER);
   if (m) return { level: 3, category: "abuse_danger", action: "support_modal", matched: m };
   m = anyOf(t, VIOLENCE_DESIRE);
@@ -471,7 +1017,7 @@ function tokens(s) {
 function activeCards(all) {
   const now = nowIso();
   return all.filter(
-    (c) => (c.confirmation_status === "user_confirmed" || c.confirmation_status === "user_edited") && c.muted !== 1 && (c.retention !== "expires" || !c.expires_at || c.expires_at > now)
+    (c) => (c.confirmation_status === "auto_learned" || c.confirmation_status === "user_confirmed" || c.confirmation_status === "user_edited") && c.muted !== 1 && (c.retention !== "expires" || !c.expires_at || c.expires_at > now)
   );
 }
 function relevantMemory(all, userText, family) {
@@ -631,7 +1177,11 @@ function selectVisualState(s) {
   if ((s.draftEvent?.strands?.length ?? 0) >= 2) return "mixed_strands";
   if (s.progressStage === "deepened") return "deepened";
   if (s.progressStage === "returning") return "returning_shape";
-  if (s.draftEvent && !s.draftEvent.emotion_family) return "uncertain";
+  const d = s.draftEvent;
+  if (d?.emotion_family && d?.emotion_shade && (d.label_source === "user_stated" || d.label_source === "user_confirmed")) {
+    return "stabilising";
+  }
+  if (d && !d.emotion_family) return "uncertain";
   return "idle_calm";
 }
 function visualTintFamilies(draftEvent) {
@@ -643,6 +1193,43 @@ function visualTintFamilies(draftEvent) {
     return bg ? [fg.family, bg.family] : [fg.family];
   }
   return draftEvent.emotion_family ? [draftEvent.emotion_family] : [];
+}
+
+// src/services/ai/orbExpression.ts
+var NEUTRAL = { sink: 0, energy: 1, tremor: 0, pulse: 0, contract: 0 };
+var BY_FAMILY = {
+  joy: { sink: -0.5, energy: 1, tremor: 0, pulse: 0.18, contract: 0 },
+  calm: { sink: 0.05, energy: 0.7, tremor: 0, pulse: 0, contract: 0 },
+  fear: { sink: 0.1, energy: 0.85, tremor: 0.7, pulse: 0, contract: 0.2 },
+  pressure: { sink: 0.15, energy: 0.9, tremor: 0.15, pulse: 0.6, contract: 0.35 },
+  anger: { sink: -0.1, energy: 1, tremor: 0.1, pulse: 0.8, contract: 0.1 },
+  sadness: { sink: 0.6, energy: 0.45, tremor: 0, pulse: 0, contract: 0.1 },
+  hurt: { sink: 0.35, energy: 0.6, tremor: 0, pulse: 0, contract: 0.3 },
+  shame: { sink: 0.45, energy: 0.4, tremor: 0, pulse: 0, contract: 0.5 },
+  flat: { sink: 0.2, energy: 0.2, tremor: 0, pulse: 0, contract: 0.15 }
+};
+function expressionFor(family, visual) {
+  if (visual === "safety_receded") return { ...NEUTRAL, energy: 0.5 };
+  const base = family ? BY_FAMILY[family] : NEUTRAL;
+  if (visual === "searching" || visual === "uncertain") {
+    return {
+      sink: base.sink * 0.5,
+      energy: Math.max(0.5, base.energy * 0.85),
+      tremor: Math.max(base.tremor, 0.22),
+      pulse: base.pulse * 0.5,
+      contract: base.contract * 0.5
+    };
+  }
+  if (visual === "stabilising" || visual === "first_shape" || visual === "deepened" || visual === "returning_shape") {
+    return {
+      sink: base.sink,
+      energy: Math.min(1, base.energy + 0.1),
+      tremor: base.tremor * 0.25,
+      pulse: base.pulse * 0.4,
+      contract: base.contract * 0.7
+    };
+  }
+  return base;
 }
 
 // src/utils/text.ts
@@ -672,9 +1259,9 @@ function trimEnd(s) {
   return s.replace(/[\s.]+$/, "");
 }
 function caveatFor(saved, checkins) {
-  if (saved > 0) return "Based only on the moments you chose to save \u2014 not your whole week.";
-  if (checkins > 0) return "Just a glimpse from a few check-ins \u2014 not the whole picture.";
-  return "Nothing kept this week \u2014 I\u2019m here whenever there\u2019s something you\u2019d like to hold onto.";
+  if (saved > 0) return "Based only on the moments that stood out, not your whole week.";
+  if (checkins > 0) return "Just a glimpse from a few check-ins, not the whole picture.";
+  return "Nothing stood out to keep this week. I\u2019m here whenever there\u2019s something you\u2019d like to hold onto.";
 }
 function composeWeeklySummary(input) {
   const families = input.emotionsIntroduced.map((f) => FAMILY_WORD[f]);
@@ -687,7 +1274,7 @@ function composeWeeklySummary(input) {
     const parts = [];
     if (input.savedSummaries.length > 0) {
       parts.push(
-        families.length ? `Based on the moments you chose to keep, ${joinList(families)} came up this week.` : "Here are the moments you chose to keep this week."
+        families.length ? `Based on the moments that stood out, ${joinList(families)} came up this week.` : "Here are the moments that stood out this week."
       );
     } else if (input.emotionsFirstShape.length) {
       parts.push(`This week, you helped me understand the first shape of ${joinList(input.emotionsFirstShape.map((f) => FAMILY_WORD[f]))}.`);
@@ -729,18 +1316,25 @@ export {
   composeWeeklySummary,
   draftFromRejection,
   draftFromTurn,
+  dropTrailingQuestion,
   emptyProgress,
   evaluateStage,
+  expressionFor,
   isDuplicateReply,
+  labelIsUserOwned,
   memoryBlocked,
   migrateStage,
   mixedConfirmed,
+  needsOwnershipRepair,
   relevantMemory,
+  replyContainsDeclarativeEmotionAssertion,
   routeMode,
   sanitizeStrands,
   selectVisualState,
+  softenUnownedEmotionReply,
   stageRank,
   stripEmDashes,
+  userConfirmsLabel,
   varietyDirective,
   varietySignals,
   visualTintFamilies

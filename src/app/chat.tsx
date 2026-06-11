@@ -11,7 +11,7 @@ import { EmotionUnlockCard } from '@/components/EmotionUnlockCard';
 import { Glass } from '@/components/Glass';
 import { GradientBackground } from '@/components/GradientBackground';
 import { IconButton } from '@/components/IconButton';
-import { MemoryDraftCard } from '@/components/MemoryDraftCard';
+import { LearningReviewCard } from '@/components/LearningReviewCard';
 import { MessageBubble } from '@/components/MessageBubble';
 import { TypingBubble } from '@/components/TypingBubble';
 import { Txt } from '@/components/Txt';
@@ -37,11 +37,23 @@ export default function ChatScreen() {
   const sending = useStore((s) => s.sending);
   const unlock = useStore((s) => s.unlock);
   const conversationId = useStore((s) => s.conversationId);
-  const memoryDraft = useStore((s) => s.memoryDraft);
   const draftEvent = useStore((s) => s.draftEvent);
   const safetyVisible = useStore((s) => s.safety.visible);
   const safetyCheck = useStore((s) => s.safetyCheck);
   const progress = useStore((s) => s.progress);
+  const memoryCards = useStore((s) => s.memoryCards);
+
+  // What the companion auto-learned in THIS conversation — shown as a gentle,
+  // transparent session-end review (brief §7.2), not a save gate.
+  const sessionLearned = memoryCards.filter(
+    (c) =>
+      c.source_conversation_id === conversationId &&
+      c.muted !== 1 &&
+      (c.confirmation_status === 'auto_learned' ||
+        c.confirmation_status === 'user_confirmed' ||
+        c.confirmation_status === 'user_edited'),
+  );
+  const [reviewing, setReviewing] = useState(false);
 
   // Companion visual state (engine brief §18) — derived, ambience only.
   const family = draftEvent?.emotion_family ?? null;
@@ -66,7 +78,6 @@ export default function ChatScreen() {
     messages.some((m) => m.role === 'user') && // only after a real exchange, not the bare opener
     !sending &&
     !unlock &&
-    !memoryDraft &&
     !safetyVisible &&
     !safetyCheck &&
     chipsDismissedFor !== last.id;
@@ -153,15 +164,6 @@ export default function ChatScreen() {
                 </ScrollView>
               )}
 
-              {memoryDraft && !unlock ? (
-                <MemoryDraftCard
-                  draft={memoryDraft}
-                  onSave={() => useStore.getState().confirmMemoryDraft()}
-                  onEdit={(t) => useStore.getState().editMemoryDraft(t)}
-                  onReject={() => useStore.getState().rejectMemoryDraft()}
-                />
-              ) : null}
-
               {showChips ? (
                 <ChatChips
                   onKeepGoing={() => last && setChipsDismissedFor(last.id)}
@@ -181,9 +183,24 @@ export default function ChatScreen() {
       {unlock ? (
         <EmotionUnlockCard
           event={unlock.event}
+          kind={unlock.kind}
           onKeepExploring={() => useStore.getState().dismissUnlock()}
           onDone={() => {
             useStore.getState().dismissUnlock();
+            // If the companion kept something this session, show it transparently
+            // before leaving (§7.2); otherwise just go home.
+            if (sessionLearned.length) setReviewing(true);
+            else router.replace('/');
+          }}
+        />
+      ) : null}
+
+      {reviewing && !unlock ? (
+        <LearningReviewCard
+          cards={sessionLearned}
+          onForget={(id) => useStore.getState().deleteMemoryCard(id)}
+          onDone={() => {
+            setReviewing(false);
             router.replace('/');
           }}
         />

@@ -34,7 +34,7 @@ import {
   settingsRepo,
 } from '@/services/db/repos';
 import type { ConversationMode } from '@/services/ai/modeRouter';
-import { advanceProgress, migrateStage } from '@/services/ai/progressionEngine';
+import { advanceProgress, migrateStage, PROGRESS_RANK, type AdvanceResult } from '@/services/ai/progressionEngine';
 import { draftFromRejection, draftFromTurn, relevantMemory } from '@/services/memoryLedger';
 import { buildWeeklySummary } from '@/services/weeklySummary';
 import { UK_SUPPORT_ROUTES } from '@/data/safetyResources';
@@ -68,6 +68,9 @@ interface PendingSafetyCheck {
   category: SafetyCategory;
 }
 
+/** Which ceremony the unlock card shows (brief §6.4–6.6). */
+export type UnlockKind = 'first_shape' | 'deepened' | 'mixed';
+
 interface AppState {
   ready: boolean;
   conversationId: string | null;
@@ -76,13 +79,11 @@ interface AppState {
   progress: Partial<Record<EmotionFamilyId, EmotionProgress>>;
   orbFamily: EmotionFamilyId | null;
   sending: boolean;
-  unlock: { event: EmotionEvent } | null;
+  unlock: { event: EmotionEvent; kind: UnlockKind } | null;
   safety: SafetyState;
   safetyCheck: PendingSafetyCheck | null;
-  /** All persisted memory cards (confirmed ones power retrieval; UI lists them). */
+  /** All persisted memory cards (active ones power retrieval; UI lists them). */
   memoryCards: MemoryCard[];
-  /** A drafted memory awaiting the user's Save / Edit / Not this. Never persisted as-is. */
-  memoryDraft: MemoryCard | null;
   /** Stance chosen at the door (home chip) — biases the first companion turn, then clears. */
   entryMode: ConversationMode | null;
   weekly: WeeklySummary | null;
@@ -100,16 +101,13 @@ interface AppState {
   dismissUnlock: () => void;
   dismissSafety: () => void;
   dismissWeekly: () => void;
-  confirmMemoryDraft: () => Promise<void>;
-  editMemoryDraft: (summary: string) => Promise<void>;
-  rejectMemoryDraft: () => void;
   deleteMemoryCard: (id: string) => Promise<void>;
   setUserName: (name: string) => Promise<void>;
   setReminders: (on: boolean) => Promise<void>;
   setApiKey: (key: string) => Promise<void>;
   setModel: (model: string) => Promise<void>;
   resetAllData: () => Promise<void>;
-  _updateProgress: (turn: CompanionTurn, conversationId: string, suppress: boolean) => Promise<void>;
+  _updateProgress: (turn: CompanionTurn, conversationId: string, suppress: boolean) => Promise<AdvanceResult | null>;
 }
 
 export const useStore = create<AppState>((set, get) => ({
@@ -124,7 +122,6 @@ export const useStore = create<AppState>((set, get) => ({
   safety: { visible: false, level: 0, category: 'none' },
   safetyCheck: null,
   memoryCards: [],
-  memoryDraft: null,
   entryMode: null,
   weekly: null,
   userName: '',
@@ -197,7 +194,7 @@ export const useStore = create<AppState>((set, get) => ({
       safety_level: 0,
     };
     // Set state synchronously first so callers can immediately greet/send into it.
-    set({ conversationId: id, messages: [], draftEvent: null, orbFamily: null, unlock: null, safetyCheck: null, memoryDraft: null, entryMode: null });
+    set({ conversationId: id, messages: [], draftEvent: null, orbFamily: null, unlock: null, safetyCheck: null, entryMode: null });
     conversationsRepo.save(conv).catch(() => {});
     return id;
   },
@@ -370,21 +367,35 @@ export const useStore = create<AppState>((set, get) => ({
       }));
       await messagesRepo.add(compMsg).catch(() => {});
       await emotionEventsRepo.upsert(turn.event).catch(() => {});
-      await get()._updateProgress(turn, convId, !!safetyNote);
+      const adv = await get()._updateProgress(turn, convId, !!safetyNote);
 
-      // ── Memory drafting (brief §12.3) — propose, never silently persist ────
-      if (!get().memoryDraft && !safetyNote) {
-        let draft = draftFromTurn(turn, clean, convId);
-        if (!draft) {
+      // ── Auto-learned memory (brief §12.3, simplified) ──────────────────────
+      // The companion remembers settled moments on its own — a first shape, a
+      // confirmed mixed structure, an explicit "remember this", or a correction
+      // it shouldn't repeat. No Save / Edit / Not this prompt (it felt
+      // repetitive); the user can delete any memory, and sensitive content is
+      // still never stored (handled inside the drafters via memoryBlocked).
+      if (!safetyNote) {
+        let learned = draftFromTurn(turn, clean, convId);
+        if (!learned) {
           const before = new Set(prevDraft?.user_rejected_shades ?? []);
           const newlyRejected = (turn.event.user_rejected_shades ?? []).filter((s) => !before.has(s));
-          if (newlyRejected.length) draft = draftFromRejection(newlyRejected, turn.event.emotion_family, convId);
+          if (newlyRejected.length) learned = draftFromRejection(newlyRejected, turn.event.emotion_family, convId);
         }
-        if (draft) set({ memoryDraft: draft });
+        if (learned) {
+          const key = learned.summary.trim().toLowerCase();
+          const dup = get().memoryCards.some((c) => c.summary.trim().toLowerCase() === key);
+          if (!dup) {
+            const card: MemoryCard = { ...learned, confirmation_status: 'auto_learned', updated_at: nowIso() };
+            set((s) => ({ memoryCards: [...s.memoryCards, card] }));
+            await memoryCardsRepo.save(card).catch(() => {});
+          }
+        }
       }
 
       if (turn.unlocked) {
-        set({ unlock: { event: turn.event } });
+        // First shape (brief §6.4) — or a confirmed mixed structure that lands one (§6.6).
+        set({ unlock: { event: turn.event, kind: turn.event.mixed_confirmed === 1 ? 'mixed' : 'first_shape' } });
         const conv = await conversationsRepo.get(convId);
         if (conv) {
           conv.primary_emotion_family = turn.event.emotion_family;
@@ -392,6 +403,15 @@ export const useStore = create<AppState>((set, get) => ({
           conv.updated_at = nowIso();
           await conversationsRepo.save(conv).catch(() => {});
         }
+      } else if (
+        !safetyNote &&
+        adv?.advanced &&
+        PROGRESS_RANK[adv.from] >= PROGRESS_RANK.first_shape &&
+        (adv.to === 'distinguished' || adv.to === 'deepened' || adv.to === 'returning')
+      ) {
+        // Deepening (brief §6.5): an already-understood feeling gained a new shade,
+        // distinction, mixed structure, or returned. A quieter, intimate ceremony.
+        set({ unlock: { event: turn.event, kind: turn.event.mixed_confirmed === 1 ? 'mixed' : 'deepened' } });
       }
     } finally {
       set({ sending: false });
@@ -423,30 +443,12 @@ export const useStore = create<AppState>((set, get) => ({
         // counters are best-effort
       }
     }
+    return fam ? result : null;
   },
 
   dismissUnlock: () => set({ unlock: null }),
   dismissSafety: () => set((s) => ({ safety: { ...s.safety, visible: false } })),
   dismissWeekly: () => set({ weekly: null }),
-
-  confirmMemoryDraft: async () => {
-    const draft = get().memoryDraft;
-    if (!draft) return;
-    const card: MemoryCard = { ...draft, confirmation_status: 'user_confirmed', updated_at: nowIso() };
-    set((s) => ({ memoryDraft: null, memoryCards: [...s.memoryCards, card] }));
-    await memoryCardsRepo.save(card).catch(() => {});
-  },
-
-  editMemoryDraft: async (summary) => {
-    const draft = get().memoryDraft;
-    const clean = summary.trim();
-    if (!draft || !clean) return;
-    const card: MemoryCard = { ...draft, summary: clean, confirmation_status: 'user_edited', updated_at: nowIso() };
-    set((s) => ({ memoryDraft: null, memoryCards: [...s.memoryCards, card] }));
-    await memoryCardsRepo.save(card).catch(() => {});
-  },
-
-  rejectMemoryDraft: () => set({ memoryDraft: null }),
 
   deleteMemoryCard: async (id) => {
     set((s) => ({ memoryCards: s.memoryCards.filter((c) => c.id !== id) }));
@@ -487,7 +489,6 @@ export const useStore = create<AppState>((set, get) => ({
       unlock: null,
       safetyCheck: null,
       memoryCards: [],
-      memoryDraft: null,
       entryMode: null,
       weekly: null,
       userName: '',

@@ -24,8 +24,8 @@ const base = {
 };
 const make = (over) => composeWeeklySummary({ ...base, ...over });
 
-// Banned dashboard / guilt language (§17.4) must never appear in ANY output.
-const BANNED = ['%', 'dominant', 'you failed', 'you only', 'negative', 'positive most', 'streak', 'missed a day'];
+// Banned dashboard / guilt language (§17.4) + em/en dashes (AI-style punctuation) must never appear in ANY output.
+const BANNED = ['%', 'dominant', 'you failed', 'you only', 'negative', 'positive most', 'streak', 'missed a day', '—', '–'];
 const clean = (s) => BANNED.every((b) => !s.toLowerCase().includes(b.toLowerCase()));
 
 // ── Saved memories lead the narrative (§17.1) ────────────────────────────────
@@ -35,11 +35,11 @@ const withSaved = make({
   savedSummaries: ['Pressure can feel like being divided into too many pieces.'],
   savedUserWords: ['not enough of me to go around'],
 });
-check('leads with "moments you chose to keep"', withSaved.companion_summary.startsWith('Based on the moments you chose to keep'));
+check('leads with "moments that stood out"', withSaved.companion_summary.startsWith('Based on the moments that stood out'));
 check('includes the learning statement verbatim', withSaved.companion_summary.includes('divided into too many pieces'));
 check('learning statement field set', withSaved.companion_learning_statement?.includes('divided into too many pieces') === true);
 check('saved_count reflects kept memories', withSaved.saved_count === 1);
-check('caveat present + scoped to saved', withSaved.caveat.includes('chose to save'));
+check('caveat present + scoped to what stood out', withSaved.caveat.includes('moments that stood out'));
 check('user words carried into phrases', withSaved.key_user_phrases.includes('not enough of me to go around'));
 check('no dashboard/guilt language (saved)', clean(withSaved.companion_summary) && clean(withSaved.caveat));
 
@@ -47,7 +47,7 @@ check('no dashboard/guilt language (saved)', clean(withSaved.companion_summary) 
 const firstShape = make({ checkinCount: 2, emotionsIntroduced: ['fear'], emotionsFirstShape: ['fear'] });
 check('first-shape framing when nothing saved', firstShape.companion_summary.includes('first shape of fear'));
 check('caveat is the glimpse note when only check-ins', firstShape.caveat.includes('glimpse'));
-check('no false "moments you chose to keep" without saves', !firstShape.companion_summary.includes('chose to keep'));
+check('no false saved-framing without saves', !firstShape.companion_summary.includes('stood out'));
 
 // ── Deepened pattern surfaced gently (§17.2) ────────────────────────────────
 const deepened = make({
@@ -61,7 +61,7 @@ check('deepened_patterns field carried', JSON.stringify(deepened.deepened_patter
 // ── Quiet week: kind, honest, never guilt (§17.4) ───────────────────────────
 const quiet = make({});
 check('quiet week stays kind', quiet.companion_summary.includes('here whenever'));
-check('quiet week caveat is honest, not guilt', quiet.caveat.includes('Nothing kept this week') && clean(quiet.caveat));
+check('quiet week caveat is honest, not guilt', quiet.caveat.includes('Nothing stood out to keep') && clean(quiet.caveat));
 check('quiet week sets no learning statement', quiet.companion_learning_statement === null);
 check('quiet week no dashboard language', clean(quiet.companion_summary));
 

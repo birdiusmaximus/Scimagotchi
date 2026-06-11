@@ -12,8 +12,9 @@ import { detectFamily, emptyEvent, type CompanionInput, type CompanionTurn } fro
 import { mixedConfirmed, sanitizeStrands } from '@/services/ai/mixedEmotion';
 import { routeMode } from '@/services/ai/modeRouter';
 import { buildSystemPrompt, COMPANION_OUTPUT_SCHEMA } from '@/services/ai/prompts';
-import { isDuplicateReply, varietyDirective, varietySignals, type ResponseShape } from '@/services/ai/responsePolicy';
-import { evaluateStage, stageRank } from '@/services/ai/stage';
+import { dropTrailingQuestion, isDuplicateReply, varietyDirective, varietySignals, type ResponseShape } from '@/services/ai/responsePolicy';
+import { needsOwnershipRepair, softenUnownedEmotionReply } from '@/services/ai/replyOwnership';
+import { evaluateStage, labelIsUserOwned, stageRank, userConfirmsLabel } from '@/services/ai/stage';
 import { EMOTION_MAPS } from '@/data/emotionMaps';
 import type { EmotionFamilyId, LabelSource, MixedRelation, UnlockStage } from '@/types/models';
 import { nowIso } from '@/utils/date';
@@ -119,9 +120,19 @@ export async function openaiGenerateTurn(
   const ev = prev ? { ...prev } : emptyEvent(input.conversationId);
   ev.timestamp = nowIso();
 
-  const fam = p.emotion_family;
-  ev.emotion_family = fam;
+  // Family is the model's read, but a CONSOLIDATED family must not silently drop
+  // on a later turn (capture fidelity §5.5); earlier stages may still go null.
+  let fam = p.emotion_family;
+  if (!fam && prev?.emotion_family && (prev.unlock_stage === 'understood' || prev.unlock_stage === 'deepened')) {
+    fam = prev.emotion_family;
+  }
   ev.emotion_shade = p.emotion_shade ?? ev.emotion_shade ?? null;
+  // A shade is meaningless without a family (§5.5 invariant): inherit prev, else drop it.
+  if (ev.emotion_shade && !fam) {
+    fam = prev?.emotion_family ?? null;
+    if (!fam) ev.emotion_shade = null;
+  }
+  ev.emotion_family = fam;
   ev.secondary_emotions = p.secondary_emotions ?? [];
   ev.body_cue = p.body_cue ?? [];
   ev.behaviour_action = p.behaviour_action ?? [];
@@ -142,6 +153,25 @@ export async function openaiGenerateTurn(
   const rejected = new Set([...(ev.user_rejected_shades ?? []), ...(p.rejected_shades ?? [])].map((s) => s.trim()).filter(Boolean));
   ev.user_rejected_shades = [...rejected];
   if (p.user_confirmed_label) ev.user_confirmation = 'yes';
+
+  // Ownership backstop: the user must name or accept the feeling before it can be
+  // theirs. If the model claims ownership but their words don't bear it out, keep
+  // it a hypothesis so the companion proposes-and-confirms instead of unlocking.
+  if (fam && (ev.label_source === 'user_stated' || ev.label_source === 'user_confirmed')) {
+    if (!labelIsUserOwned(fam, input.userText, input.history ?? [], prev ?? null)) {
+      ev.label_source = 'companion_hypothesis';
+      if (ev.user_confirmation === 'yes') ev.user_confirmation = 'partial';
+    }
+  }
+
+  // Confirmation upgrade (capture fidelity §5.5): if the user explicitly ACCEPTED
+  // the family already in play but the model under-reported provenance, mark it
+  // user_confirmed so an accepted label consolidates to "understood" rather than
+  // getting stuck at shaped. Gated to strong accept phrases + an in-play family.
+  if (fam && fam === prev?.emotion_family && ev.label_source !== 'user_stated' && userConfirmsLabel(input.userText, prev)) {
+    ev.label_source = 'user_confirmed';
+    ev.user_confirmation = 'yes';
+  }
 
   // Mixed-emotion engine (brief §9): strands may be proposed freely; the mixed
   // structure is CONFIRMED (savable) only per the §9.3 rules.
@@ -170,5 +200,29 @@ export async function openaiGenerateTurn(
 
   const tone = fam ? EMOTION_MAPS[fam].tone : 'calm';
 
-  return { reply: stripEmDashes(p.reply), event: ev, unlocked, tone, stage };
+  // ── Visible-reply ownership gate (§5.1) ────────────────────────────────────
+  // The unlock gate protects the record; this protects the spoken sentence. If
+  // the label isn't user-owned but the reply asserts the feeling as fact, repair
+  // it: one constrained re-call for natural tentative language, deterministic
+  // softening as a fallback.
+  let reply = p.reply;
+  const owned = ev.label_source === 'user_stated' || ev.label_source === 'user_confirmed';
+  if (needsOwnershipRepair(reply, ev, owned)) {
+    try {
+      const p2 = await callOnce(
+        'OWNERSHIP REPAIR: your draft stated a feeling as fact that this person has not named or accepted yet. ' +
+          'Rewrite ONLY the reply so the feeling is offered tentatively, or left unnamed, and stays theirs to confirm. ' +
+          'Do not write "this is X", "you are X", "the X underneath", or "the shape of X". Keep it to 1-2 short sentences, ' +
+          'at most one gentle question.',
+      );
+      reply = p2.reply && !needsOwnershipRepair(p2.reply, ev, owned) ? p2.reply : softenUnownedEmotionReply(reply, ev);
+    } catch {
+      reply = softenUnownedEmotionReply(reply, ev);
+    }
+  }
+
+  // Unlock-turn rest (§5.3): a first shape must land without a refining question.
+  if (unlocked) reply = dropTrailingQuestion(reply);
+
+  return { reply: stripEmDashes(reply), event: ev, unlocked, tone, stage };
 }

@@ -5,7 +5,22 @@
  *
  * Run: npm run test:engine   (rebundles, then executes). Exit 1 on failure.
  */
-import { evaluateStage, mixedConfirmed, routeMode, sanitizeStrands, stripEmDashes, varietySignals } from './engine-bundle.mjs';
+import {
+  dropTrailingQuestion,
+  evaluateStage,
+  expressionFor,
+  labelIsUserOwned,
+  mixedConfirmed,
+  needsOwnershipRepair,
+  replyContainsDeclarativeEmotionAssertion,
+  routeMode,
+  sanitizeStrands,
+  selectVisualState,
+  softenUnownedEmotionReply,
+  stripEmDashes,
+  userConfirmsLabel,
+  varietySignals,
+} from './engine-bundle.mjs';
 
 let pass = 0;
 let fail = 0;
@@ -56,6 +71,20 @@ check('stage: no shade -> shaped when anchored', evaluateStage(ev({ emotion_shad
 check('stage: no family -> noticed', evaluateStage(ev({ emotion_family: null }), null), 'noticed');
 check('stage: shade changed since prev (not stable, no confirm) -> shaped',
   evaluateStage(ev({ label_source: 'user_stated' }), ev({ emotion_shade: 'dread' })), 'shaped');
+
+// ── Ownership backstop: the user must name/confirm the feeling (stage.ts) ─────
+check('owned: described situation, never named the feeling -> not owned',
+  labelIsUserOwned('pressure', 'just feels like more work to do', [], null), false);
+check('owned: used a family word this turn -> owned',
+  labelIsUserOwned('pressure', 'I feel so overwhelmed', [], null), true);
+check('owned: named the family in an earlier user turn -> owned',
+  labelIsUserOwned('pressure', 'and it keeps going', [{ role: 'user', content: 'I am so stressed' }], null), true);
+check('owned: affirming a family already in play -> owned',
+  labelIsUserOwned('pressure', "yeah, that's it", [], { emotion_family: 'pressure' }), true);
+check('owned: bare affirmation with no family in play -> not owned',
+  labelIsUserOwned('pressure', 'yes exactly', [], null), false);
+check('owned: only the companion used the word -> not owned',
+  labelIsUserOwned('pressure', 'hmm, maybe', [{ role: 'companion', content: 'sounds like pressure' }], null), false);
 
 // ── Mixed-emotion §9.3 save rules ────────────────────────────────────────────
 const strand = (family, source, salience = 'equal') => ({ family, shade: null, salience, source });
@@ -132,6 +161,67 @@ const v = varietySignals([
 ]);
 check('variety: repeated "that sounds" opener flagged', v.overusedOpener, 'that sounds');
 check('variety: question streak counted', v.questionStreak, 2);
+
+// ── Visible-reply ownership gate (§5.1) ──────────────────────────────────────
+check('ownership: declarative "this is X" is an assertion',
+  replyContainsDeclarativeEmotionAssertion('This is fear, plainly.', ev()), true);
+check('ownership: tentative "could this be X" is NOT an assertion',
+  replyContainsDeclarativeEmotionAssertion('Could this be fear, or not quite?', ev()), false);
+check('ownership: "the X underneath" is an assertion',
+  replyContainsDeclarativeEmotionAssertion('The anxious underneath is clear here.', ev()), true);
+check('ownership: plain witness is not an assertion',
+  replyContainsDeclarativeEmotionAssertion('That sounds like a lot to carry.', ev()), false);
+check('ownership: needs repair when unowned + asserted', needsOwnershipRepair('This is fear.', ev(), false), true);
+check('ownership: no repair when the user owns the label', needsOwnershipRepair('This is fear.', ev(), true), false);
+check('ownership: no repair when nothing is asserted', needsOwnershipRepair('We can stay with it a moment.', ev(), false), false);
+check('ownership: softener makes "this is X" tentative', /might be (a )?fear/i.test(softenUnownedEmotionReply('This is fear.', ev())), true);
+
+// ── Capture confirmation consolidation (§5.5) ────────────────────────────────
+check('confirm: strong accept of an in-play family', userConfirmsLabel('yeah thats it', ev()), true);
+check('confirm: "thats it" consolidates', userConfirmsLabel('thats it', ev()), true);
+check('confirm: bare "yeah ok" does NOT consolidate (no premature unlock)', userConfirmsLabel('yeah ok', ev()), false);
+check('confirm: no family in play -> not a confirmation', userConfirmsLabel('thats it', { emotion_family: null }), false);
+
+// ── Unlock-turn rest (§5.3) ──────────────────────────────────────────────────
+check('rest: drops a trailing question after a statement',
+  dropTrailingQuestion('That has a clearer shape now. Does that fit?'), 'That has a clearer shape now.');
+check('rest: leaves a question-free reply alone',
+  dropTrailingQuestion('That has a clearer shape now.'), 'That has a clearer shape now.');
+check('rest: will not empty a single-question reply', dropTrailingQuestion('Does that fit?'), 'Does that fit?');
+
+// ── Scaffold detection (§5.2) ────────────────────────────────────────────────
+check('scaffold: "centre of this" counted',
+  varietySignals(['"caring" feels like the centre of this. is it more X or Y?']).centrePhrasesInConvo, 1);
+check('scaffold: quote-first opening counted', varietySignals(['"i feel weird" you said, and it lingers.']).quoteFirstInLast3, 1);
+check('scaffold: either-or question counted', varietySignals(['is it more hurt or shame?']).eitherOrInLast3, 1);
+check('scaffold: plain reflection has no scaffold flags',
+  (() => { const s = varietySignals(['That sounds heavy today.']); return s.centrePhrasesInConvo + s.quoteFirstInLast3 + s.eitherOrInLast3; })(), 0);
+
+// ── Companion aliveness: visual state + per-emotion expression (§6) ──────────
+const vis = (over = {}) => selectVisualState({
+  safetyVisible: false, safetyCheckPending: false, sending: false, unlockShowing: false,
+  draftEvent: null, progressStage: null, ...over,
+});
+check('visual: safety always wins', vis({ safetyVisible: true, unlockShowing: true }), 'safety_receded');
+check('visual: unlock -> first_shape', vis({ unlockShowing: true }), 'first_shape');
+check('visual: sending -> searching', vis({ sending: true }), 'searching');
+check('visual: owned family + shade -> stabilising',
+  vis({ draftEvent: { emotion_family: 'sadness', emotion_shade: 'heavy', label_source: 'user_confirmed', strands: [] } }), 'stabilising');
+check('visual: family-less draft -> uncertain',
+  vis({ draftEvent: { emotion_family: null, emotion_shade: null, label_source: 'companion_hypothesis', strands: [] } }), 'uncertain');
+check('visual: nothing -> idle_calm', vis(), 'idle_calm');
+
+check('expr: sadness sinks', expressionFor('sadness', 'idle_calm').sink > 0, true);
+check('expr: joy lifts', expressionFor('joy', 'idle_calm').sink < 0, true);
+check('expr: flat is low-energy', expressionFor('flat', 'idle_calm').energy < 0.5, true);
+check('expr: fear trembles', expressionFor('fear', 'idle_calm').tremor > 0, true);
+check('expr: shame draws inward', expressionFor('shame', 'idle_calm').contract > 0, true);
+check('expr: safety drops theatrics (no tremor/pulse)',
+  (() => { const e = expressionFor('fear', 'safety_receded'); return e.tremor === 0 && e.pulse === 0; })(), true);
+check('expr: clarity settles anger (less pulse than exploring)',
+  expressionFor('anger', 'first_shape').pulse < expressionFor('anger', 'idle_calm').pulse, true);
+check('expr: a sad first shape stays low, not happy',
+  expressionFor('sadness', 'first_shape').sink > 0.3, true);
 
 console.log(`\nengine regression: ${pass} passed, ${fail} failed (${pass + fail} cases)`);
 process.exit(fail ? 1 : 0);

@@ -7,9 +7,21 @@ import { Txt } from '@/components/Txt';
 import { FAMILY_COLORS } from '@/data/emotionMaps';
 import { gradients, palette, radii, spacing } from '@/theme/tokens';
 import type { EmotionEvent } from '@/types/models';
+import { withAlpha } from '@/utils/color';
 import { monthLabel } from '@/utils/date';
 
 const WEEKDAYS = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
+
+/**
+ * A day's fill is built from the feelings it actually held: one colour becomes a
+ * two-stop tint of itself, several become a blend across them. `alpha` sets the
+ * strength (vivid for the selected day, soft for other days with records).
+ */
+function dayGradient(colors: string[], alpha: number): readonly [string, string, ...string[]] {
+  if (colors.length === 1) return [withAlpha(colors[0], alpha), withAlpha(colors[0], alpha * 0.62)];
+  const stops = colors.map((c) => withAlpha(c, alpha));
+  return [stops[0], stops[1], ...stops.slice(2)] as [string, string, ...string[]];
+}
 
 type Props = {
   year: number;
@@ -69,26 +81,41 @@ export function CalendarView({ year, month, eventsByDay, selected, today, onSele
             .slice(0, 3)
             .map((f) => FAMILY_COLORS[f as keyof typeof FAMILY_COLORS]);
 
+          const hasEvents = colors.length > 0;
+
           return (
             <Pressable key={i} style={styles.cell} onPress={() => onSelect(key)}>
               {isSel ? (
-                <LinearGradient colors={gradients.brand} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.dayWrap}>
+                // Selected: a vivid blend of the day's feelings (brand as fallback when empty).
+                <LinearGradient
+                  colors={hasEvents ? dayGradient(colors, 0.95) : gradients.brand}
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 1 }}
+                  style={styles.dayWrap}
+                >
                   <Txt variant="label" color={palette.white}>
                     {d}
                   </Txt>
                 </LinearGradient>
+              ) : hasEvents ? (
+                // Other days with records: a soft tint of that day's colours.
+                <LinearGradient
+                  colors={dayGradient(colors, 0.34)}
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 1 }}
+                  style={[styles.dayWrap, isToday && styles.todayRing]}
+                >
+                  <Txt variant="label" color={isToday ? palette.accentDeep : palette.inkOnGlass}>
+                    {d}
+                  </Txt>
+                </LinearGradient>
               ) : (
-                <View style={styles.dayWrap}>
+                <View style={[styles.dayWrap, isToday && styles.todayRing]}>
                   <Txt variant="label" color={isToday ? palette.accentDeep : palette.inkOnGlass}>
                     {d}
                   </Txt>
                 </View>
               )}
-              <View style={styles.dots}>
-                {colors.map((c, ci) => (
-                  <View key={ci} style={[styles.dot, { backgroundColor: c }]} />
-                ))}
-              </View>
             </Pressable>
           );
         })}
@@ -109,8 +136,7 @@ const styles = StyleSheet.create({
   weekRow: { flexDirection: 'row', marginBottom: 4 },
   weekCell: { width: '14.28%' },
   grid: { flexDirection: 'row', flexWrap: 'wrap' },
-  cell: { width: '14.28%', alignItems: 'center', paddingVertical: 4, minHeight: 44 },
-  dayWrap: { width: 32, height: 32, borderRadius: 16, alignItems: 'center', justifyContent: 'center', overflow: 'hidden' },
-  dots: { flexDirection: 'row', gap: 3, height: 7, marginTop: 2, alignItems: 'center' },
-  dot: { width: 5, height: 5, borderRadius: 3 },
+  cell: { width: '14.28%', alignItems: 'center', justifyContent: 'center', paddingVertical: 5, minHeight: 42 },
+  dayWrap: { width: 34, height: 34, borderRadius: 17, alignItems: 'center', justifyContent: 'center', overflow: 'hidden' },
+  todayRing: { borderWidth: 1.5, borderColor: palette.accentDeep },
 });

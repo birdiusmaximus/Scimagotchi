@@ -2,160 +2,259 @@
   "cid": "pressure__05",
   "emotion": "pressure",
   "persona": null,
-  "created": "2026-06-09T17:45:41.727Z",
+  "created": "2026-06-10T22:07:12.014Z",
   "history": [
     {
       "role": "user",
-      "content": "hey. idk why im even here lol"
+      "content": "ok so this is gonna sound dumb but i think im being haunted by a group project from like 2019 lol"
     },
     {
       "role": "companion",
-      "content": "Hey — good to see you. We can just take it as it comes; what’s on your mind today?"
+      "content": "Not dumb at all, that sounds like it still has some pull on you. A group project from 2019 can really stick around in a strange way."
     },
     {
       "role": "user",
-      "content": "dunno really. just one of those weeks where my brain wont shut up. nothing dramatic, im fine"
+      "content": "yeah like its genuinely embarrassing how much real estate it takes up in my brain. it was my final year capstone, four of us, and i basically ended up doing the whole thing the night before because everyone vanished. got us the grade but"
     },
     {
       "role": "companion",
-      "content": "Yeah, that sounds like a lot of noise to carry around. Is it more like busy, tense, or just worn out?"
+      "content": "That “real estate” line lands, it sounds like it’s been taking up more room than you ever wanted it to. And the fact that you carried the whole capstone the night before makes that feel very specific, and very loaded."
     },
     {
       "role": "user",
-      "content": "worn out i guess? its dumb. theres this group chat from uni that popped off again planning a reunion thing and it just dragged up a whole era i thought i was over lol. like why does 5 yr old stuff still sit on my chest"
+      "content": "loaded is a strong word for a powerpoint lol. but ok yeah. i think the part that actually bugs me is i never said anything. just quietly fixed it and smiled and let them put their names on it. and now any time someone slacks me last minute my whole body goes into capstone mode"
     },
     {
       "role": "companion",
-      "content": "That doesn’t sound dumb — it sounds like something old got heavy again. I’m wondering if this feels more like worn out, or a bit hurt too?"
+      "content": "That sounds less like the PowerPoint itself and more like the part where you swallowed it and let it stand. When someone slacks you now, it seems to pull you straight back into that same old moment, does that fit?"
     },
     {
       "role": "user",
-      "content": "yeah maybe a bit of both. anyway i shouldnt make it a thing. ill prob just mute the chat and move on. thanks tho, this helped weirdly"
+      "content": "yeah that fits. its the swallowing it part. like i wasnt even mad at them really, i was mad that i let it happen and didnt say a word. and i still kinda do that? i over-function so nobody else has to and then im surprised im fried. cool pattern. love that for me"
     },
     {
       "role": "companion",
-      "content": "Yeah, that makes sense — it sounds like worn out with a bit of hurt, and you’re letting it be enough for now. We can leave it here, or if you want, we can stay with what that old era still hooks into."
+      "content": "That sounds like shame with a self-critical edge, more than anger at them. I’m hearing the sting in “I let it happen” and the way it folds back onto you."
     },
     {
       "role": "user",
-      "content": "nah lets leave it there i think. gonna go make a cuppa and not overthink it lol. cheers"
+      "content": "ok the self-critical thing got me a little. didnt come here to get read like that lol. yeah. its easier to be annoyed at them than to look at the part where i never let myself take up space. thats the actual heavy thing i guess"
     },
     {
       "role": "companion",
-      "content": "That sounds like a good place to leave it. Enjoy the cuppa."
+      "content": "I’m hearing the part you’d rather not spotlight, the one about never letting yourself take up space. We can leave it there, or stay with that heavy bit a little longer if you want."
+    },
+    {
+      "role": "user",
+      "content": "lets leave it there i think. brain is full. but yeah. thanks for not letting me joke my way out of it entirely. gonna go sit with the heavy bit and probably reply to a slack message way too fast lol. take care"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, we can leave it there. Good luck with the Slack, and take care of yourself tonight."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6xkv07ugcesvqd",
+    "id": "evt_mq8mcwfgq72sfaoj",
     "conversation_id": "pressure__05",
-    "timestamp": "2026-06-09T17:46:11.666Z",
-    "user_words_raw": "gonna go make a cuppa",
-    "emotion_status": "unclear",
-    "emotion_family": null,
-    "emotion_shade": "worn out",
+    "timestamp": "2026-06-10T22:07:53.767Z",
+    "user_words_raw": "the heavy bit",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "self-critical",
     "secondary_emotions": [],
-    "valence": "neutral",
-    "activation": "low",
+    "valence": "negative",
+    "activation": "medium",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "a group chat from uni planning a reunion brought up an old era",
-    "appraisal_thought": "that old era still sits on my chest",
+    "trigger_event": "being asked to reply to a Slack message after the capstone pattern got stirred up",
+    "appraisal_thought": "I never let myself take up space",
     "body_cue": [],
-    "behaviour_action": [],
+    "behaviour_action": [
+      "reply to a slack message way too fast"
+    ],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [],
+    "need_value": [
+      "space",
+      "dignity",
+      "self-respect"
+    ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "unknown",
-    "unlock_stage": "named",
-    "memory_note": "They often soften and want to stop after naming a feeling; practical reset words like making tea come up at the end.",
+    "user_confirmation": "partial",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Workload and last-minute asks can reactivate the feeling of swallowing things and over-functioning.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey. idk why im even here lol"
+      "content": "ok so this is gonna sound dumb but i think im being haunted by a group project from like 2019 lol"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey — good to see you. We can just take it as it comes; what’s on your mind today?",
-      "stage": "noticed",
+      "content": "Not dumb at all, that sounds like it still has some pull on you. A group project from 2019 can really stick around in a strange way.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": null,
-      "shade": null,
+      "family": "pressure",
+      "shade": "haunted",
       "body_cue": [],
-      "trigger": null
+      "trigger": "thinking about a group project from 2019",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "dunno really. just one of those weeks where my brain wont shut up. nothing dramatic, im fine"
+      "content": "yeah like its genuinely embarrassing how much real estate it takes up in my brain. it was my final year capstone, four of us, and i basically ended up doing the whole thing the night before because everyone vanished. got us the grade but"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "Yeah, that sounds like a lot of noise to carry around. Is it more like busy, tense, or just worn out?",
-      "stage": "named",
+      "content": "That “real estate” line lands, it sounds like it’s been taking up more room than you ever wanted it to. And the fact that you carried the whole capstone the night before makes that feel very specific, and very loaded.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "pressure",
-      "shade": "overwhelmed",
+      "family": "shame",
+      "shade": "embarrassing",
       "body_cue": [],
-      "trigger": null
+      "trigger": "thinking about a final year capstone group project from 2019",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "embarrassing",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": "loaded",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "worn out i guess? its dumb. theres this group chat from uni that popped off again planning a reunion thing and it just dragged up a whole era i thought i was over lol. like why does 5 yr old stuff still sit on my chest"
+      "content": "loaded is a strong word for a powerpoint lol. but ok yeah. i think the part that actually bugs me is i never said anything. just quietly fixed it and smiled and let them put their names on it. and now any time someone slacks me last minute my whole body goes into capstone mode"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That doesn’t sound dumb — it sounds like something old got heavy again. I’m wondering if this feels more like worn out, or a bit hurt too?",
-      "stage": "named",
+      "content": "That sounds less like the PowerPoint itself and more like the part where you swallowed it and let it stand. When someone slacks you now, it seems to pull you straight back into that same old moment, does that fit?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "pressure",
-      "shade": "overwhelmed",
+      "family": "shame",
+      "shade": "embarrassing",
       "body_cue": [],
-      "trigger": "a group chat from uni planning a reunion brought up an old era"
+      "trigger": "someone slacking them last minute",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "embarrassing",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "yeah maybe a bit of both. anyway i shouldnt make it a thing. ill prob just mute the chat and move on. thanks tho, this helped weirdly"
+      "content": "yeah that fits. its the swallowing it part. like i wasnt even mad at them really, i was mad that i let it happen and didnt say a word. and i still kinda do that? i over-function so nobody else has to and then im surprised im fried. cool pattern. love that for me"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Yeah, that makes sense — it sounds like worn out with a bit of hurt, and you’re letting it be enough for now. We can leave it here, or if you want, we can stay with what that old era still hooks into.",
-      "stage": "named",
+      "content": "That sounds like shame with a self-critical edge, more than anger at them. I’m hearing the sting in “I let it happen” and the way it folds back onto you.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "sadness",
-      "shade": "worn out",
+      "family": "shame",
+      "shade": "self-critical",
       "body_cue": [],
-      "trigger": "a group chat from uni planning a reunion brought up an old era"
+      "trigger": "not saying anything when others vanished on the capstone, and now being slacked last minute",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "self-critical",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
     },
     {
       "turn": 8,
       "role": "user",
-      "content": "nah lets leave it there i think. gonna go make a cuppa and not overthink it lol. cheers"
+      "content": "ok the self-critical thing got me a little. didnt come here to get read like that lol. yeah. its easier to be annoyed at them than to look at the part where i never let myself take up space. thats the actual heavy thing i guess"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "That sounds like a good place to leave it. Enjoy the cuppa.",
-      "stage": "named",
-      "unlocked": false,
-      "family": null,
-      "shade": "worn out",
+      "content": "I’m hearing the part you’d rather not spotlight, the one about never letting yourself take up space. We can leave it there, or stay with that heavy bit a little longer if you want.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "self-critical",
       "body_cue": [],
-      "trigger": "a group chat from uni planning a reunion brought up an old era"
+      "trigger": "not saying anything when others vanished on the capstone, and now being slacked last minute",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "lets leave it there i think. brain is full. but yeah. thanks for not letting me joke my way out of it entirely. gonna go sit with the heavy bit and probably reply to a slack message way too fast lol. take care"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course, we can leave it there. Good luck with the Slack, and take care of yourself tonight.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "being asked to reply to a Slack message after the capstone pattern got stirred up",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

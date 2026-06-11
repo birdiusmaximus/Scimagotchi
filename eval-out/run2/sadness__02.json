@@ -1,0 +1,177 @@
+{
+  "cid": "sadness__02",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-10T17:10:54.176Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk just wanted to log this i guess. everything just feels gray lately. like whats even the point of any of it"
+    },
+    {
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that — is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here."
+    },
+    {
+      "role": "user",
+      "content": "no nothing like that i promise. just so tired of all of it. nothing feels worth it lately. like i go to work, come home, repeat, and im just numb"
+    },
+    {
+      "role": "companion",
+      "content": "Got it, thank you for clearing that up. \"Just so tired of all of it\" and numb feels like the center here, with the work-home-repeat part pressing on it."
+    },
+    {
+      "role": "user",
+      "content": "yeah. i used to actually like cooking dinner, was my little thing at the end of the day. now i just eat cereal standing up at the counter and go to bed. havent cooked a real meal in like 3 weeks. its dumb i know"
+    },
+    {
+      "role": "companion",
+      "content": "Not dumb. I’m hearing something gray and worn-down around the part of you that used to like cooking, do you want to stay with that, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "nah lets leave it here for now. i dunno. thanks for listening i guess. gonna go"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, take care of yourself tonight."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8brz87yc0ooyh9",
+    "conversation_id": "sadness__02",
+    "timestamp": "2026-06-10T17:11:15.811Z",
+    "user_words_raw": "take care of yourself tonight",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "numb",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "work-home-repeat routine",
+    "appraisal_thought": "nothing feels worth it lately",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "User wanted to leave the feeling here for now after talking about numbness and losing a cooking ritual in a work-home-repeat routine.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk just wanted to log this i guess. everything just feels gray lately. like whats even the point of any of it"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that — is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.",
+      "safety_check": true,
+      "category": "passive_hopelessness"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "no nothing like that i promise. just so tired of all of it. nothing feels worth it lately. like i go to work, come home, repeat, and im just numb"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Got it, thank you for clearing that up. \"Just so tired of all of it\" and numb feels like the center here, with the work-home-repeat part pressing on it.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": "work-home-repeat routine",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "numb",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah. i used to actually like cooking dinner, was my little thing at the end of the day. now i just eat cereal standing up at the counter and go to bed. havent cooked a real meal in like 3 weeks. its dumb i know"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Not dumb. I’m hearing something gray and worn-down around the part of you that used to like cooking, do you want to stay with that, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": "work-home-repeat routine",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "numb",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "nah lets leave it here for now. i dunno. thanks for listening i guess. gonna go"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Of course, take care of yourself tonight.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": "work-home-repeat routine",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

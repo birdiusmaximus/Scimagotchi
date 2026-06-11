@@ -1,0 +1,206 @@
+{
+  "cid": "hurt__03",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-10T17:11:47.048Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. didnt really know if these things actually talk back lol"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, I do talk back. What’s on your mind today?"
+    },
+    {
+      "role": "user",
+      "content": "i dunno. been a weird few days. money stuff mostly. dont really wanna get into it"
+    },
+    {
+      "role": "companion",
+      "content": "A weird few days, with money stuff sitting in the middle of it. We can leave it there for now."
+    },
+    {
+      "role": "user",
+      "content": "its not really pressure tho. my brother. i lent him 2 grand for his car months ago and now he wont even text me back. acts like it never happened"
+    },
+    {
+      "role": "companion",
+      "content": "I had that wrong, let me step back. Is it closer to hurt, anger, or something more blank?"
+    },
+    {
+      "role": "user",
+      "content": "hurt i guess. its my own brother. thought we were closer than that. anyway. thanks for listening, gonna head off"
+    },
+    {
+      "role": "companion",
+      "content": "Hurt makes sense here, especially with it being your own brother. I’ll leave it there unless you want to say more."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bszexbuymtw8x",
+    "conversation_id": "hurt__03",
+    "timestamp": "2026-06-10T17:12:05.852Z",
+    "user_words_raw": "its my own brother",
+    "emotion_status": "candidate",
+    "emotion_family": "hurt",
+    "emotion_shade": "hurt",
+    "secondary_emotions": [
+      "anger"
+    ],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "brother not texting back after borrowing money for his car",
+    "appraisal_thought": "thought we were closer than that",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "closeness",
+      "respect",
+      "being heard"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "label_source": "user_stated",
+    "user_rejected_shades": [
+      "pressure"
+    ],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "hurt",
+        "shade": "hurt",
+        "salience": "foreground",
+        "source": "user_stated"
+      },
+      {
+        "family": "anger",
+        "shade": "protest",
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "shaped",
+    "memory_note": "Money borrowed by someone close, followed by no reply and a sense of closeness being broken.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. didnt really know if these things actually talk back lol"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, I do talk back. What’s on your mind today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i dunno. been a weird few days. money stuff mostly. dont really wanna get into it"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "A weird few days, with money stuff sitting in the middle of it. We can leave it there for now.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "money stuff over a few days",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "its not really pressure tho. my brother. i lent him 2 grand for his car months ago and now he wont even text me back. acts like it never happened"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "I had that wrong, let me step back. Is it closer to hurt, anger, or something more blank?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "protest",
+      "body_cue": [],
+      "trigger": "brother not texting back after borrowing money for his car",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "protest",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "hurt i guess. its my own brother. thought we were closer than that. anyway. thanks for listening, gonna head off"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Hurt makes sense here, especially with it being your own brother. I’ll leave it there unless you want to say more.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "brother not texting back after borrowing money for his car",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "anger",
+          "shade": "protest",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    }
+  ]
+}

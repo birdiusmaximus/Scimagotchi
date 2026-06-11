@@ -2,136 +2,270 @@
   "cid": "calm__07",
   "emotion": "calm",
   "persona": null,
-  "created": "2026-06-09T17:43:47.096Z",
+  "created": "2026-06-10T22:05:38.731Z",
   "history": [
     {
       "role": "user",
-      "content": "hey. been kind of restless lately so figured id try this"
+      "content": "not totally sure what this app does but ok. things are fine i guess. me and my partner had a good weekend, no drama for once"
     },
     {
       "role": "companion",
-      "content": "Hey, I’m glad you tried it. Restless sounds like a real kind of energy to sit with — what’s it been like for you lately?"
+      "content": "That sounds like a good, low-drama weekend with your partner, and maybe a little relieved too. If you want, we can just leave it at that."
     },
     {
       "role": "user",
-      "content": "no actually restless isnt the right word. its more like. me and my girlfriend had this big talk last night about where things are going and i kept bracing for it to go bad but it didnt"
+      "content": "relieved is kind of the word yeah. we used to fight a lot about stupid stuff, money mostly. this weekend we just didnt. felt weird honestly"
     },
     {
       "role": "companion",
-      "content": "That sounds like a lot of bracing, and then a strange kind of relief when it stayed okay. Was it more the waiting for it to go bad, or the talk itself that kept you on edge?"
+      "content": "Relieved fits, and the “weird” part makes sense too, like your system is noticing the missing fighting as much as the peace."
     },
     {
       "role": "user",
-      "content": "yeah relief is closer. the waiting mostly. weve been together two years and i thought she wanted out. turns out she just wanted to talk about moving in together. feel kind of settled now honestly"
+      "content": "ya thats it exactly. like im waiting for the other shoe to drop. we set up a shared budget thing finally and it just took the whole argument away. didnt expect that to be the fix"
     },
     {
       "role": "companion",
-      "content": "That makes sense — the waiting was carrying the weight, and now it’s settled. We can leave it there, or if you want, I can stay with that relief a little longer."
+      "content": "That sounds like relief with a little wary waiting underneath it. I’m wondering if it feels more like calm, or more like bracing for trouble?"
     },
     {
       "role": "user",
-      "content": "nah were good. just needed to say it out loud i think. thanks"
+      "content": "more calm i think. the bracing is there but its getting quieter. honestly it just feels good to be on the same side for once instead of across from each other"
     },
     {
       "role": "companion",
-      "content": "That makes sense — sometimes saying it out loud is the whole point. I’m glad you came by."
+      "content": "That feels like steadier calm, with the old bracing fading into the background. Being “on the same side” sounds like a real shift in how the two of you meet each other."
+    },
+    {
+      "role": "user",
+      "content": "yeah. a shift is a good way to put it. ok this was less cheesy than i thought it would be. ill take the calm while its here"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it landed more plainly than you expected, and I’ll leave the calm sitting there with you. If you want, we can keep it here or look at what made that shift possible."
+    },
+    {
+      "role": "user",
+      "content": "nah lets leave it here. thanks though. this was alright"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, I’ll leave it there. Take care."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6xiau6gilu8p6q",
+    "id": "evt_mq8mawmua88rmnlm",
     "conversation_id": "calm__07",
-    "timestamp": "2026-06-09T17:44:05.828Z",
-    "user_words_raw": "needed to say it out loud",
-    "emotion_status": "unclear",
-    "emotion_family": null,
-    "emotion_shade": "settled",
+    "timestamp": "2026-06-10T22:06:13.751Z",
+    "user_words_raw": "this was alright",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "steady",
     "secondary_emotions": [],
-    "valence": "neutral",
+    "valence": "positive",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "A big talk with their girlfriend about where things are going, which turned out to be about moving in together",
-    "appraisal_thought": "I thought she wanted out, but she didn’t",
+    "trigger_event": "setting up a shared budget and not fighting about money",
+    "appraisal_thought": "it feels good to be on the same side instead of across from each other",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [],
-    "confidence_level": "high",
+    "need_value": [
+      "clarity",
+      "space",
+      "connection"
+    ],
+    "confidence_level": "medium",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "unknown",
-    "unlock_stage": "named",
-    "memory_note": "User sometimes wants to just say a feeling out loud and leave it there.",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Shared budgeting reduced recurring money fights and brought a steadier, calmer feeling.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey. been kind of restless lately so figured id try this"
+      "content": "not totally sure what this app does but ok. things are fine i guess. me and my partner had a good weekend, no drama for once"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey, I’m glad you tried it. Restless sounds like a real kind of energy to sit with — what’s it been like for you lately?",
-      "stage": "named",
+      "content": "That sounds like a good, low-drama weekend with your partner, and maybe a little relieved too. If you want, we can just leave it at that.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "pressure",
-      "shade": "restless",
+      "family": "calm",
+      "shade": "relieved",
       "body_cue": [],
-      "trigger": null
+      "trigger": "a good weekend with partner, no drama",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "relieved",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "joy",
+          "shade": "content",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "no actually restless isnt the right word. its more like. me and my girlfriend had this big talk last night about where things are going and i kept bracing for it to go bad but it didnt"
+      "content": "relieved is kind of the word yeah. we used to fight a lot about stupid stuff, money mostly. this weekend we just didnt. felt weird honestly"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds like a lot of bracing, and then a strange kind of relief when it stayed okay. Was it more the waiting for it to go bad, or the talk itself that kept you on edge?",
-      "stage": "named",
-      "unlocked": false,
-      "family": "pressure",
-      "shade": "bracing",
+      "content": "Relieved fits, and the “weird” part makes sense too, like your system is noticing the missing fighting as much as the peace.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "relieved",
       "body_cue": [],
-      "trigger": "a big talk with their girlfriend about where things are going"
+      "trigger": "a good weekend with partner, no fighting about money",
+      "label_source": "user_confirmed",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "relieved",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "yeah relief is closer. the waiting mostly. weve been together two years and i thought she wanted out. turns out she just wanted to talk about moving in together. feel kind of settled now honestly"
+      "content": "ya thats it exactly. like im waiting for the other shoe to drop. we set up a shared budget thing finally and it just took the whole argument away. didnt expect that to be the fix"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That makes sense — the waiting was carrying the weight, and now it’s settled. We can leave it there, or if you want, I can stay with that relief a little longer.",
-      "stage": "named",
+      "content": "That sounds like relief with a little wary waiting underneath it. I’m wondering if it feels more like calm, or more like bracing for trouble?",
+      "stage": "understood",
       "unlocked": false,
       "family": "calm",
-      "shade": "settled",
+      "shade": "relief",
       "body_cue": [],
-      "trigger": "A big talk with their girlfriend about where things are going, which turned out to be about moving in together"
+      "trigger": "setting up a shared budget and no longer fighting about money",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "relief",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "fear",
+          "shade": "wary",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "nah were good. just needed to say it out loud i think. thanks"
+      "content": "more calm i think. the bracing is there but its getting quieter. honestly it just feels good to be on the same side for once instead of across from each other"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense — sometimes saying it out loud is the whole point. I’m glad you came by.",
-      "stage": "named",
+      "content": "That feels like steadier calm, with the old bracing fading into the background. Being “on the same side” sounds like a real shift in how the two of you meet each other.",
+      "stage": "understood",
       "unlocked": false,
-      "family": null,
-      "shade": "settled",
+      "family": "calm",
+      "shade": "steady",
       "body_cue": [],
-      "trigger": "A big talk with their girlfriend about where things are going, which turned out to be about moving in together"
+      "trigger": "setting up a shared budget and no longer arguing about money",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "steady",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. a shift is a good way to put it. ok this was less cheesy than i thought it would be. ill take the calm while its here"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "I’m glad it landed more plainly than you expected, and I’ll leave the calm sitting there with you. If you want, we can keep it here or look at what made that shift possible.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "steady",
+      "body_cue": [],
+      "trigger": "setting up a shared budget and no longer arguing about money",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "nah lets leave it here. thanks though. this was alright"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course, I’ll leave it there. Take care.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "steady",
+      "body_cue": [],
+      "trigger": "setting up a shared budget and not fighting about money",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

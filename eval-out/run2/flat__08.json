@@ -1,0 +1,220 @@
+{
+  "cid": "flat__08",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-10T19:23:04.714Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont really know why im here. nothing feels wrong exactly. just kind of flat lately"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds more like flatness than something sharply wrong. Does it feel more numb, blank, or just hard to name?"
+    },
+    {
+      "role": "user",
+      "content": "blank i guess. like im just going thru the motions. wake up work eat sleep. none of it lands"
+    },
+    {
+      "role": "companion",
+      "content": "\"Going through the motions\" and \"none of it lands\" feels like the centre of this. Is it more like blank on the inside, or more like detached from it all?"
+    },
+    {
+      "role": "user",
+      "content": "detached maybe. idk. my contract ends in august and i havent done anything about it. should be freaking out probably but i just. dont feel anything about it"
+    },
+    {
+      "role": "companion",
+      "content": "The contract ending in August is there, but it doesn't seem to be reaching you yet. I'm wondering if this is more detached, or maybe a kind of blank that stays in place when something is looming?"
+    },
+    {
+      "role": "user",
+      "content": "yeah blank that stays. everyones asking whats next for you and i just shrug. i used to have like plans and now its just static. cant picture anything past august honestly"
+    },
+    {
+      "role": "companion",
+      "content": "“Static” and not being able to picture past August feel like the shape of this. I can leave it there, or stay with what that blank is doing to the idea of what comes next."
+    },
+    {
+      "role": "user",
+      "content": "i think the static is easier than actually looking at it. if i dont picture anything then i cant be disappointed i guess. dunno. thats kind of all i got tonight"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the blank is doing a job for you, keeping disappointment out of reach. We can leave it there for tonight."
+    },
+    {
+      "role": "user",
+      "content": "yeah. lets leave it there. thanks for not pushing. night"
+    },
+    {
+      "role": "companion",
+      "content": "Goodnight. I’ll leave it right there with you."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8ghuupv6jhp5av",
+    "conversation_id": "flat__08",
+    "timestamp": "2026-06-10T19:23:37.097Z",
+    "user_words_raw": "lets leave it there",
+    "emotion_status": "confirmed",
+    "emotion_family": "flat",
+    "emotion_shade": "blank",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "contract ends in August",
+    "appraisal_thought": "If I don't picture anything, I can't be disappointed.",
+    "body_cue": [],
+    "behaviour_action": [
+      "leave it there"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "permission not to know",
+      "reduced pressure"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "User tends to go blank around uncertainty about what comes next, especially with the contract ending in August.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont really know why im here. nothing feels wrong exactly. just kind of flat lately"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds more like flatness than something sharply wrong. Does it feel more numb, blank, or just hard to name?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "blank i guess. like im just going thru the motions. wake up work eat sleep. none of it lands"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "\"Going through the motions\" and \"none of it lands\" feels like the centre of this. Is it more like blank on the inside, or more like detached from it all?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "detached maybe. idk. my contract ends in august and i havent done anything about it. should be freaking out probably but i just. dont feel anything about it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "The contract ending in August is there, but it doesn't seem to be reaching you yet. I'm wondering if this is more detached, or maybe a kind of blank that stays in place when something is looming?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "detached",
+      "body_cue": [],
+      "trigger": "contract ends in August",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah blank that stays. everyones asking whats next for you and i just shrug. i used to have like plans and now its just static. cant picture anything past august honestly"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "“Static” and not being able to picture past August feel like the shape of this. I can leave it there, or stay with what that blank is doing to the idea of what comes next.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "contract ends in August",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i think the static is easier than actually looking at it. if i dont picture anything then i cant be disappointed i guess. dunno. thats kind of all i got tonight"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like the blank is doing a job for you, keeping disappointment out of reach. We can leave it there for tonight.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "contract ends in August",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. lets leave it there. thanks for not pushing. night"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Goodnight. I’ll leave it right there with you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "contract ends in August",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

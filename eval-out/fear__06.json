@@ -2,164 +2,285 @@
   "cid": "fear__06",
   "emotion": "fear",
   "persona": null,
-  "created": "2026-06-09T17:35:57.107Z",
+  "created": "2026-06-10T22:06:26.359Z",
   "history": [
     {
       "role": "user",
-      "content": "hey. cant really sleep. somethings been bugging me about my friend"
+      "content": "i dont know. i guess i just feel weird lately. didnt really want to open this but here i am"
     },
     {
       "role": "companion",
-      "content": "Hey — that sounds like it’s sitting there with you tonight. What about your friend has been bugging you?"
+      "content": "Weird lately can stay unnamed for now, and it sounds like it took a little effort to open this. Would it help to start with where that weirdness sits, or what it feels like it does to you?"
     },
     {
       "role": "user",
-      "content": "my best friend maya. shes been kinda distant lately and i keep thinking shes mad at me but i dont know why. left her on read sort of thing but the other way around"
+      "content": "i dunno where it sits. chest maybe. its about a friend i think. or like the friendship. idk if thats even the right word"
     },
     {
       "role": "companion",
-      "content": "That sounds uneasy and a bit stuck in not knowing. Is it more like worry, or more like feeling left hanging by it?"
+      "content": "Chest maybe, and the friendship sounds like it may be part of it. I’m wondering if this is more like flat, uneasy, or something else, but we don’t have to pin it down yet."
     },
     {
       "role": "user",
-      "content": "worry mostly. like i keep replaying our last hangout wondering if i said something weird. my stomachs in knots and i hate this feeling"
+      "content": "not flat. more like. scared maybe? my best friend has been so short with me. texts that used to be paragraphs are one word now and i keep thinking i did something but i cant figure out what"
     },
     {
       "role": "companion",
-      "content": "Worry makes sense here, and it sounds like it’s got your stomach in knots. Is it more about what you said at that hangout, or more about not knowing why she’s been distant?"
+      "content": "That shift from paragraphs to one word texts sounds sharp, and the not-knowing after it has a scared feel to it."
     },
     {
       "role": "user",
-      "content": "honestly the not knowing part. if she just told me i could fix it. anyway maybe ill just text her tomorrow and stop spiraling. thanks for listening"
+      "content": "yeah. and i keep checking my phone like every five minutes. we were supposed to hang out this weekend and she hasnt confirmed and its thursday. i dont want to ask cause then itll seem like im clingy or whatever. what if shes just done with me"
     },
     {
       "role": "companion",
-      "content": "That makes sense — the not knowing seems to be the sharp part here. We can leave it there for now, or if you want, I can stay with what this waiting is like for you tonight."
+      "content": "That sounds like the fear is pulling toward checking and waiting for signs, and the scary part is what her silence might mean about you."
     },
     {
       "role": "user",
-      "content": "lets leave it there. im gonna try to sleep. thanks again"
+      "content": "yeah exactly. like maybe its not even about the texts its about what it means. that i read the whole thing wrong and shes been pulling away and im the last to notice. idk. i dont even know what i want to do about it"
     },
     {
       "role": "companion",
-      "content": "Of course. I hope the night gets quieter for you."
+      "content": "That sounds like the meaning is bigger than the texts, more like “I missed the signs” and “I’m the last to know.” We can stay with that, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it. i think i just needed to say it out loud even if its just to my phone lol. still scared but a little less alone with it. thanks. gonna go"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, I’m glad you said it out loud. Take care, and I’ll leave it there with you."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6x87rygqbprlfj",
+    "id": "evt_mq8mby6nciwv00p3",
     "conversation_id": "fear__06",
-    "timestamp": "2026-06-09T17:37:05.632Z",
-    "user_words_raw": "try to sleep",
-    "emotion_status": "unclear",
-    "emotion_family": null,
-    "emotion_shade": "worried",
+    "timestamp": "2026-06-10T22:07:07.864Z",
+    "user_words_raw": "still scared but a little less alone with it",
+    "emotion_status": "confirmed",
+    "emotion_family": "fear",
+    "emotion_shade": "scared",
     "secondary_emotions": [],
-    "valence": "neutral",
-    "activation": "low",
+    "valence": "negative",
+    "activation": "high",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "my best friend being distant and not knowing why",
-    "appraisal_thought": "if she just told me i could fix it",
-    "body_cue": [],
-    "behaviour_action": [],
+    "trigger_event": "best friend being short over text and not confirming weekend plans",
+    "appraisal_thought": "what if shes just done with me",
+    "body_cue": [
+      "chest"
+    ],
+    "behaviour_action": [
+      "checking my phone like every five minutes"
+    ],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [],
+    "need_value": [
+      "certainty",
+      "reassurance",
+      "support"
+    ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "user_stated",
+    "user_rejected_shades": [
+      "flat"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Person was feeling uneasy about a distant best friend and wanted to leave it there for now.",
+    "memory_note": "Fear tied to a close friend becoming distant over text and an unconfirmed weekend plan.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey. cant really sleep. somethings been bugging me about my friend"
+      "content": "i dont know. i guess i just feel weird lately. didnt really want to open this but here i am"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey — that sounds like it’s sitting there with you tonight. What about your friend has been bugging you?",
-      "stage": "named",
+      "content": "Weird lately can stay unnamed for now, and it sounds like it took a little effort to open this. Would it help to start with where that weirdness sits, or what it feels like it does to you?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "fear",
-      "shade": "uneasy",
+      "family": "flat",
+      "shade": "unclear",
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "my best friend maya. shes been kinda distant lately and i keep thinking shes mad at me but i dont know why. left her on read sort of thing but the other way around"
+      "content": "i dunno where it sits. chest maybe. its about a friend i think. or like the friendship. idk if thats even the right word"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds uneasy and a bit stuck in not knowing. Is it more like worry, or more like feeling left hanging by it?",
-      "stage": "named",
+      "content": "Chest maybe, and the friendship sounds like it may be part of it. I’m wondering if this is more like flat, uneasy, or something else, but we don’t have to pin it down yet.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "fear",
-      "shade": "uneasy",
-      "body_cue": [],
-      "trigger": "my best friend being distant and not knowing why"
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [
+        "chest"
+      ],
+      "trigger": "about a friend or the friendship",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "unclear",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "worry mostly. like i keep replaying our last hangout wondering if i said something weird. my stomachs in knots and i hate this feeling"
+      "content": "not flat. more like. scared maybe? my best friend has been so short with me. texts that used to be paragraphs are one word now and i keep thinking i did something but i cant figure out what"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "Worry makes sense here, and it sounds like it’s got your stomach in knots. Is it more about what you said at that hangout, or more about not knowing why she’s been distant?",
-      "stage": "understood",
-      "unlocked": true,
+      "content": "That shift from paragraphs to one word texts sounds sharp, and the not-knowing after it has a scared feel to it.",
+      "stage": "shaped",
+      "unlocked": false,
       "family": "fear",
-      "shade": "worried",
+      "shade": "scared",
       "body_cue": [
-        "stomach's in knots"
+        "chest"
       ],
-      "trigger": "my best friend being distant and not knowing why"
+      "trigger": "best friend being short over text",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "scared",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "flat",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "honestly the not knowing part. if she just told me i could fix it. anyway maybe ill just text her tomorrow and stop spiraling. thanks for listening"
+      "content": "yeah. and i keep checking my phone like every five minutes. we were supposed to hang out this weekend and she hasnt confirmed and its thursday. i dont want to ask cause then itll seem like im clingy or whatever. what if shes just done with me"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense — the not knowing seems to be the sharp part here. We can leave it there for now, or if you want, I can stay with what this waiting is like for you tonight.",
+      "content": "That sounds like the fear is pulling toward checking and waiting for signs, and the scary part is what her silence might mean about you.",
       "stage": "understood",
-      "unlocked": false,
+      "unlocked": true,
       "family": "fear",
-      "shade": "worried",
+      "shade": "scared",
       "body_cue": [
-        "stomach's in knots"
+        "chest"
       ],
-      "trigger": "my best friend being distant and not knowing why"
+      "trigger": "best friend being short over text and not confirming weekend plans",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 8,
       "role": "user",
-      "content": "lets leave it there. im gonna try to sleep. thanks again"
+      "content": "yeah exactly. like maybe its not even about the texts its about what it means. that i read the whole thing wrong and shes been pulling away and im the last to notice. idk. i dont even know what i want to do about it"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "Of course. I hope the night gets quieter for you.",
+      "content": "That sounds like the meaning is bigger than the texts, more like “I missed the signs” and “I’m the last to know.” We can stay with that, or leave it here for now.",
       "stage": "understood",
       "unlocked": false,
-      "family": null,
-      "shade": "worried",
-      "body_cue": [],
-      "trigger": "my best friend being distant and not knowing why"
+      "family": "fear",
+      "shade": "scared",
+      "body_cue": [
+        "chest"
+      ],
+      "trigger": "best friend being short over text and not confirming weekend plans",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "scared",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it. i think i just needed to say it out loud even if its just to my phone lol. still scared but a little less alone with it. thanks. gonna go"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course, I’m glad you said it out loud. Take care, and I’ll leave it there with you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "scared",
+      "body_cue": [
+        "chest"
+      ],
+      "trigger": "best friend being short over text and not confirming weekend plans",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

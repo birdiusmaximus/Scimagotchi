@@ -2,146 +2,341 @@
   "cid": "hurt__08",
   "emotion": "hurt",
   "persona": null,
-  "created": "2026-06-09T18:21:18.966Z",
+  "created": "2026-06-10T22:10:04.412Z",
   "history": [
     {
       "role": "user",
-      "content": "idk if this app actually does anything but ok. my mentor kind of bailed on me"
+      "content": "hi. i dunno. just kind of a weird day i guess"
     },
     {
       "role": "companion",
-      "content": "That sounds like a rough kind of letdown — maybe hurt, maybe annoyed. What did \"bailed on me\" look like here?"
+      "content": "Hey, good to see you. A weird day can be its own whole thing."
     },
     {
       "role": "user",
-      "content": "he was supposed to help me figure out the phd applications. like he said he'd write the rec letter and meet to plan it out. then he just. stopped answering. its been like 3 weeks"
+      "content": "yeah. i think im just tired of not knowing whats gonna happen. like everything feels up in the air rn"
     },
     {
       "role": "companion",
-      "content": "That sounds like being left hanging after he said he'd show up. Did it land more as hurt, or more as feeling dismissed?"
+      "content": "That sounds like being kept in the air, with nothing settling yet. We can just stay with that if you want."
     },
     {
       "role": "user",
-      "content": "dismissed i guess. like i thought he believed in me and now im not sure i even have a shot if my own advisor cant be bothered. deadlines are in like 2 months and i dont know whats happening with any of it"
+      "content": "its not really the not knowing tho. or it is but. ugh. my sister told me shed cosign the lease so i could move and start the new job and then last night she just. backed out. no real reason"
     },
     {
       "role": "companion",
-      "content": "That feels dismissed, and also like the ground of the whole thing got shaky when the deadlines are so close. Does it feel more like a tight, urgent kind of hurt, or more like wanting to pull back and not rely on him anymore?"
+      "content": "I had that wrong, let me step back. That sounds like more than uncertainty, maybe something closer to being let down or blocked, but I don't want to pin it down for you. What word would be closer?"
     },
     {
       "role": "user",
-      "content": "yeah more like pulling back. dont really wanna count on him again. anyway thats more than i expected to say to an app lol. gonna go"
+      "content": "let down yeah. like i dont even know whats gonna happen with the job now and the apartment is probably gone but mostly its that she just. didnt. she promised. i was counting on her"
     },
     {
       "role": "companion",
-      "content": "Fair enough — we can leave it there. Thanks for saying it so plainly, and I hope the rest of your day is gentler."
+      "content": "That “she promised” lands hard, especially after you were counting on her. I’m here with that let down, and we can stay with it or leave it here if you want."
+    },
+    {
+      "role": "user",
+      "content": "i think whats getting me is i wouldve never asked if she hadnt offered. she offered. and now i feel stupid for letting myself plan around it. like i shouldve known better than to count on anyone"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds painfully mixed, let down and embarrassed, maybe even a bit of self-blame on top. I’m wondering if the sharpest part is the feeling of having trusted the offer, or the sting of feeling foolish for it?"
+    },
+    {
+      "role": "user",
+      "content": "the foolish part probably. i can handle the apartment stuff. its more that i let her matter that much. anyway. i should go. didnt mean to dump all that"
+    },
+    {
+      "role": "companion",
+      "content": "That foolish part feels like the sharper one, and it makes sense that the apartment itself is not the main wound. You did not dump anything here, and we can leave it there if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah. lets leave it there. thanks for listening. means something"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, and I'm glad this space could hold it for a moment. Take care of yourself tonight."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yuk30a5wdaknx",
+    "id": "evt_mq8mglbj1vsqbthz",
     "conversation_id": "hurt__08",
-    "timestamp": "2026-06-09T18:21:38.639Z",
-    "user_words_raw": "dont really wanna count on him again",
+    "timestamp": "2026-06-10T22:10:48.997Z",
+    "user_words_raw": "foolish part",
     "emotion_status": "confirmed",
-    "emotion_family": "hurt",
-    "emotion_shade": "dismissed",
+    "emotion_family": "shame",
+    "emotion_shade": "foolish",
     "secondary_emotions": [
-      "pressure"
+      "hurt"
     ],
     "valence": "negative",
-    "activation": "medium",
+    "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "mentor stopped answering about PhD applications and a recommendation letter for 3 weeks",
-    "appraisal_thought": "I thought he believed in me, and now I'm not sure I even have a shot.",
+    "trigger_event": "sister backed out after offering to cosign the lease",
+    "appraisal_thought": "I let her matter that much",
     "body_cue": [],
-    "behaviour_action": [
-      "pulling back",
-      "not wanting to count on him again"
-    ],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "being seen",
+      "dignity",
       "trust",
-      "support",
-      "reassurance"
+      "being understood"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
     "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "user_rejected_shades": [
+      "pressure"
+    ],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "shame",
+        "shade": "foolish",
+        "salience": "foreground",
+        "source": "user_stated"
+      },
+      {
+        "family": "hurt",
+        "shade": "let down",
+        "salience": "background",
+        "source": "user_stated"
+      }
+    ],
+    "mixed_confirmed": 1,
     "unlock_stage": "understood",
-    "memory_note": "User felt dismissed when someone important stopped responding about graduate school plans.",
+    "memory_note": "Someone close backed out after offering help, which brought up feeling foolish for trusting the offer.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "idk if this app actually does anything but ok. my mentor kind of bailed on me"
+      "content": "hi. i dunno. just kind of a weird day i guess"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds like a rough kind of letdown — maybe hurt, maybe annoyed. What did \"bailed on me\" look like here?",
-      "stage": "named",
+      "content": "Hey, good to see you. A weird day can be its own whole thing.",
+      "stage": "noticed",
       "unlocked": false,
-      "family": "hurt",
-      "shade": "letdown",
+      "family": null,
+      "shade": null,
       "body_cue": [],
-      "trigger": "mentor didn't show up or follow through"
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "he was supposed to help me figure out the phd applications. like he said he'd write the rec letter and meet to plan it out. then he just. stopped answering. its been like 3 weeks"
+      "content": "yeah. i think im just tired of not knowing whats gonna happen. like everything feels up in the air rn"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds like being left hanging after he said he'd show up. Did it land more as hurt, or more as feeling dismissed?",
-      "stage": "named",
+      "content": "That sounds like being kept in the air, with nothing settling yet. We can just stay with that if you want.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "hurt",
-      "shade": "let down",
+      "family": "pressure",
+      "shade": "overwhelmed",
       "body_cue": [],
-      "trigger": "mentor stopped answering about PhD applications and recommendation letter for 3 weeks"
+      "trigger": "not knowing what's gonna happen",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "dismissed i guess. like i thought he believed in me and now im not sure i even have a shot if my own advisor cant be bothered. deadlines are in like 2 months and i dont know whats happening with any of it"
+      "content": "its not really the not knowing tho. or it is but. ugh. my sister told me shed cosign the lease so i could move and start the new job and then last night she just. backed out. no real reason"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That feels dismissed, and also like the ground of the whole thing got shaky when the deadlines are so close. Does it feel more like a tight, urgent kind of hurt, or more like wanting to pull back and not rely on him anymore?",
-      "stage": "understood",
-      "unlocked": true,
+      "content": "I had that wrong, let me step back. That sounds like more than uncertainty, maybe something closer to being let down or blocked, but I don't want to pin it down for you. What word would be closer?",
+      "stage": "shaped",
+      "unlocked": false,
       "family": "hurt",
-      "shade": "dismissed",
+      "shade": "overwhelmed",
       "body_cue": [],
-      "trigger": "mentor stopped answering about PhD applications and recommendation letter for 3 weeks"
+      "trigger": "sister backed out of cosigning the lease",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "yeah more like pulling back. dont really wanna count on him again. anyway thats more than i expected to say to an app lol. gonna go"
+      "content": "let down yeah. like i dont even know whats gonna happen with the job now and the apartment is probably gone but mostly its that she just. didnt. she promised. i was counting on her"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Fair enough — we can leave it there. Thanks for saying it so plainly, and I hope the rest of your day is gentler.",
+      "content": "That “she promised” lands hard, especially after you were counting on her. I’m here with that let down, and we can stay with it or leave it here if you want.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "let down",
+      "body_cue": [],
+      "trigger": "sister backed out of cosigning the lease after promising to do it",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "let down",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i think whats getting me is i wouldve never asked if she hadnt offered. she offered. and now i feel stupid for letting myself plan around it. like i shouldve known better than to count on anyone"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds painfully mixed, let down and embarrassed, maybe even a bit of self-blame on top. I’m wondering if the sharpest part is the feeling of having trusted the offer, or the sting of feeling foolish for it?",
       "stage": "understood",
       "unlocked": false,
       "family": "hurt",
-      "shade": "dismissed",
+      "shade": "let down",
       "body_cue": [],
-      "trigger": "mentor stopped answering about PhD applications and a recommendation letter for 3 weeks"
+      "trigger": "sister offered to cosign the lease and then backed out",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "let down",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": "embarrassed",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "the foolish part probably. i can handle the apartment stuff. its more that i let her matter that much. anyway. i should go. didnt mean to dump all that"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That foolish part feels like the sharper one, and it makes sense that the apartment itself is not the main wound. You did not dump anything here, and we can leave it there if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "foolish",
+      "body_cue": [],
+      "trigger": "sister backed out after offering to cosign the lease",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "foolish",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": "let down",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "yeah. lets leave it there. thanks for listening. means something"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "Of course, and I'm glad this space could hold it for a moment. Take care of yourself tonight.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "foolish",
+      "body_cue": [],
+      "trigger": "sister backed out after offering to cosign the lease",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "foolish",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": "let down",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
     }
   ]
 }

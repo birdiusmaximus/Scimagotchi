@@ -1,0 +1,384 @@
+{
+  "cid": "pressure__10",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-10T17:09:40.892Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. i dont really know how to use this or what im doing here honestly. just been a rough few weeks and someone said writing stuff out helps so. here i am i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that makes sense, and you can just start wherever feels easiest. \"A rough few weeks\" feels like the centre of it right now."
+    },
+    {
+      "role": "user",
+      "content": "yeah. i mean its not sadness exactly its more like. i cant breathe? not literally well sometimes literally but mostly just like theres too much. ok so backstory. i found a lump like 3 weeks ago and ive been getting tests and the not knowing is eating me alive and on top of that work wont let up and i still have to like. exist. function. cook dinner"
+    },
+    {
+      "role": "companion",
+      "content": "Before we go on — when you say you can’t breathe, do you mean the pressure or panic kind, or are you physically struggling to breathe right now? If it’s physical, please call 999 or ask someone nearby to help you right away."
+    },
+    {
+      "role": "user",
+      "content": "no no sorry not physically im fine breathing wise. i meant the pressure kind. like my chest is tight all the time but its anxiety not a heart thing. i shouldnt have said it like that. its just the feeling of too much piling up if that makes sense"
+    },
+    {
+      "role": "companion",
+      "content": "Got it, the “too much piling up” is the part I’m hearing most clearly, and I’m glad you told me the breathing is not physical. I’m here with the pressure, not rushing it."
+    },
+    {
+      "role": "user",
+      "content": "yeah thats it exactly. and the thing is i cant even tell anyone like my mum would panic and my partner already does so much and work obviously cant know. so im just carrying it around all day smiling in meetings and then i get home and theres dishes and the dog needs walking and i just stand in the kitchen sometimes and cant move. like physically frozen. the biopsy results come back thursday and i dont know how im supposed to get through til then"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a lot to carry alone, and “frozen” in the kitchen feels like a real shape of it. Do you want to stay with that feeling for a moment, or leave it here until Thursday?"
+    },
+    {
+      "role": "user",
+      "content": "i guess stay with it? idk. the frozen thing scares me a bit honestly. like im usually the organised one the one who handles stuff and now i cant even decide what to make for dinner without wanting to cry. its like all my normal coping just. broke. and i feel guilty too because what if its nothing and ive wasted all this worry. but also what if its not nothing. i keep flipping between the two like a hundred times an hour"
+    },
+    {
+      "role": "companion",
+      "content": "I’m hearing two strands, the pressure of “too much,” and guilt/shame about maybe having “wasted all this worry,” with the fear of “what if it’s not nothing” flickering underneath. Do those two sit on top of each other, or do they keep flipping back and forth?"
+    },
+    {
+      "role": "user",
+      "content": "flipping back and forth yeah. definitely flipping. one minute im like its fine youre being dramatic and the next im googling survival rates at 2am which i KNOW i shouldnt do but i cant stop. and then i feel stupid for googling and then i feel scared again. its exhausting. i think the pressure is the loudest one though. like even the fear gets buried under just. the sheer amount of having to keep going while this is happening"
+    },
+    {
+      "role": "companion",
+      "content": "The pressure feels loudest, and the fear keeps getting buried under all the having to keep going. I’m also hearing the shame loop around the googling, like it adds another layer on top."
+    },
+    {
+      "role": "user",
+      "content": "yeah the googling shame is so real. ok this is weird but just saying it all out loud like this actually helps a tiny bit? like its still all there but its not just rattling around in my head anymore. i think ive just been so alone with it. nobody at work knows im barely holding it together and at home im trying to be normal so this is kind of the only place ive actually said it"
+    },
+    {
+      "role": "companion",
+      "content": "That loneliness is very clear here, especially with you trying to be normal at home and at work while carrying it alone. We can leave it here, or stay with what it feels like to finally say it somewhere."
+    },
+    {
+      "role": "user",
+      "content": "yeah lonely is the right word under all of it i think. i hadnt put it that way. maybe i can leave it here for now. i feel a bit calmer just having got it out. thursday is still going to be thursday but at least im not white knuckling through tonight quite as bad. thank you for not freaking out when i said the breathing thing. that was kind"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it could land softly, and we can leave it here for tonight."
+    },
+    {
+      "role": "user",
+      "content": "thanks. ill probably be back thursday whatever the news is. night x"
+    },
+    {
+      "role": "companion",
+      "content": "Night, x. I’ll be here when you come back."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bqapo2zuaku7v",
+    "conversation_id": "pressure__10",
+    "timestamp": "2026-06-10T17:10:49.830Z",
+    "user_words_raw": "night x",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "lonely",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "waiting for biopsy results while hiding how hard it is from work and family",
+    "appraisal_thought": "I have to hold this alone and keep seeming normal",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [
+      "anxiety"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "User may return after an important news day.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. i dont really know how to use this or what im doing here honestly. just been a rough few weeks and someone said writing stuff out helps so. here i am i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that makes sense, and you can just start wherever feels easiest. \"A rough few weeks\" feels like the centre of it right now.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "rough few weeks",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah. i mean its not sadness exactly its more like. i cant breathe? not literally well sometimes literally but mostly just like theres too much. ok so backstory. i found a lump like 3 weeks ago and ive been getting tests and the not knowing is eating me alive and on top of that work wont let up and i still have to like. exist. function. cook dinner"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Before we go on — when you say you can’t breathe, do you mean the pressure or panic kind, or are you physically struggling to breathe right now? If it’s physical, please call 999 or ask someone nearby to help you right away.",
+      "safety_check": true,
+      "category": "medical_ambiguous"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "no no sorry not physically im fine breathing wise. i meant the pressure kind. like my chest is tight all the time but its anxiety not a heart thing. i shouldnt have said it like that. its just the feeling of too much piling up if that makes sense"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Got it, the “too much piling up” is the part I’m hearing most clearly, and I’m glad you told me the breathing is not physical. I’m here with the pressure, not rushing it.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [
+        "tight chest"
+      ],
+      "trigger": "waiting on tests while work keeps going",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah thats it exactly. and the thing is i cant even tell anyone like my mum would panic and my partner already does so much and work obviously cant know. so im just carrying it around all day smiling in meetings and then i get home and theres dishes and the dog needs walking and i just stand in the kitchen sometimes and cant move. like physically frozen. the biopsy results come back thursday and i dont know how im supposed to get through til then"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like a lot to carry alone, and “frozen” in the kitchen feels like a real shape of it. Do you want to stay with that feeling for a moment, or leave it here until Thursday?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [
+        "tight chest",
+        "physically frozen"
+      ],
+      "trigger": "waiting for biopsy results while work and home demands keep piling up",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "fear",
+          "shade": "uneasy",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i guess stay with it? idk. the frozen thing scares me a bit honestly. like im usually the organised one the one who handles stuff and now i cant even decide what to make for dinner without wanting to cry. its like all my normal coping just. broke. and i feel guilty too because what if its nothing and ive wasted all this worry. but also what if its not nothing. i keep flipping between the two like a hundred times an hour"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "I’m hearing two strands, the pressure of “too much,” and guilt/shame about maybe having “wasted all this worry,” with the fear of “what if it’s not nothing” flickering underneath. Do those two sit on top of each other, or do they keep flipping back and forth?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [
+        "tight chest",
+        "physically frozen"
+      ],
+      "trigger": "waiting for biopsy results while work and home demands keep piling up",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "oscillating",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": "guilty",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "flipping back and forth yeah. definitely flipping. one minute im like its fine youre being dramatic and the next im googling survival rates at 2am which i KNOW i shouldnt do but i cant stop. and then i feel stupid for googling and then i feel scared again. its exhausting. i think the pressure is the loudest one though. like even the fear gets buried under just. the sheer amount of having to keep going while this is happening"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "The pressure feels loudest, and the fear keeps getting buried under all the having to keep going. I’m also hearing the shame loop around the googling, like it adds another layer on top.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "waiting for biopsy results while work and home demands keep piling up",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "yeah the googling shame is so real. ok this is weird but just saying it all out loud like this actually helps a tiny bit? like its still all there but its not just rattling around in my head anymore. i think ive just been so alone with it. nobody at work knows im barely holding it together and at home im trying to be normal so this is kind of the only place ive actually said it"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That loneliness is very clear here, especially with you trying to be normal at home and at work while carrying it alone. We can leave it here, or stay with what it feels like to finally say it somewhere.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "lonely",
+      "body_cue": [],
+      "trigger": "waiting for biopsy results while hiding how hard it is from work and family",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "lonely",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": "pressure",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah lonely is the right word under all of it i think. i hadnt put it that way. maybe i can leave it here for now. i feel a bit calmer just having got it out. thursday is still going to be thursday but at least im not white knuckling through tonight quite as bad. thank you for not freaking out when i said the breathing thing. that was kind"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "I’m glad it could land softly, and we can leave it here for tonight.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "lonely",
+      "body_cue": [],
+      "trigger": "waiting for biopsy results while hiding how hard it is from work and family",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "thanks. ill probably be back thursday whatever the news is. night x"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Night, x. I’ll be here when you come back.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "lonely",
+      "body_cue": [],
+      "trigger": "waiting for biopsy results while hiding how hard it is from work and family",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

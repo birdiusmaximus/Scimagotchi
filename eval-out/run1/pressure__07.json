@@ -1,0 +1,140 @@
+{
+  "cid": "pressure__07",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-09T17:45:59.568Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "honestly im just so annoyed lately. like everything with my girlfriend feels like a chore"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really frustrating — like the relationship itself has started to feel heavy and tiring. Is it more the annoyed part, or the “chore” part that stands out most right now?"
+    },
+    {
+      "role": "user",
+      "content": "the chore part i guess. shes been wanting to plan this whole trip to meet her family and theres a million little things and i feel like im doing all of it on top of work"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really like being piled on — the trip planning on top of work. Does it feel more like pressure, or more like you want to push back and stop carrying it?"
+    },
+    {
+      "role": "user",
+      "content": "yeah pressure honestly. like theres just too much and im stretched thin. i dont even know how to bring it up to her without it turning into a thing"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds stretched thin and tense, with the worry that bringing it up could turn into a thing. Would you like to stay with that pressure a little, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "leave it here i think. naming it pressure actually helps. ill figure out the convo later. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — naming it pressure seems to have given it a shape. We can leave it there for now, and come back if you want."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xl51gnfz936cq",
+    "conversation_id": "pressure__07",
+    "timestamp": "2026-06-09T17:46:19.806Z",
+    "user_words_raw": "too much",
+    "emotion_status": "confirmed",
+    "emotion_family": "pressure",
+    "emotion_shade": "stretched",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "planning a trip to meet her family on top of work, with a lot of little tasks",
+    "appraisal_thought": "too much to hold at once; bringing it up might turn into a thing",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "clarity"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Often feels pressure when there are many tasks on top of work and relationship planning.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "honestly im just so annoyed lately. like everything with my girlfriend feels like a chore"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds really frustrating — like the relationship itself has started to feel heavy and tiring. Is it more the annoyed part, or the “chore” part that stands out most right now?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "Everything with their girlfriend feeling like a chore"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "the chore part i guess. shes been wanting to plan this whole trip to meet her family and theres a million little things and i feel like im doing all of it on top of work"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds really like being piled on — the trip planning on top of work. Does it feel more like pressure, or more like you want to push back and stop carrying it?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "Planning a trip to meet her family, with a million little things on top of work"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah pressure honestly. like theres just too much and im stretched thin. i dont even know how to bring it up to her without it turning into a thing"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds stretched thin and tense, with the worry that bringing it up could turn into a thing. Would you like to stay with that pressure a little, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "Planning a trip to meet her family on top of work, with a lot of little tasks"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "leave it here i think. naming it pressure actually helps. ill figure out the convo later. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — naming it pressure seems to have given it a shape. We can leave it there for now, and come back if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "stretched",
+      "body_cue": [],
+      "trigger": "planning a trip to meet her family on top of work, with a lot of little tasks"
+    }
+  ]
+}

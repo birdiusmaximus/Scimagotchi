@@ -2,140 +2,399 @@
   "cid": "joy__09",
   "emotion": "joy",
   "persona": null,
-  "created": "2026-06-09T17:41:50.907Z",
+  "created": "2026-06-10T22:04:33.435Z",
   "history": [
     {
       "role": "user",
-      "content": "passed my board exam. for real this time"
+      "content": "ok so something happened today and i cant tell if im allowed to feel good about it. my old supervisor emailed out of nowhere"
     },
     {
       "role": "companion",
-      "content": "That sounds real now — passed, for real this time. I’m curious what it feels like to say that and have it land as true."
+      "content": "That sounds like it might have stirred both relief and a bit of unease, maybe even some self-doubt about whether you get to enjoy it. Was the feeling more one after the other, or both at once?"
     },
     {
       "role": "user",
-      "content": "kinda unreal honestly. failed it twice. started thinking maybe im just not smart enough for this"
+      "content": "kind of both. she said she still thinks about the thing i built before i left. that it shipped and people use it. i didnt think anyone remembered"
     },
     {
       "role": "companion",
-      "content": "That sounds like a very unreal kind of relief, with some doubt still hanging around. Is it more relief, or more disbelief?"
+      "content": "Kind of both makes sense. I'm hearing relief or pride alongside a softer hurt or surprise, especially in “i didnt think anyone remembered.”"
     },
     {
       "role": "user",
-      "content": "proud i think. like i actually earned this one. im allowed to call myself it now"
+      "content": "the thing is i left that place feeling like a fraud. like i got lucky once and everyone could tell i didnt belong. so hearing it actually mattered messes with the story ive been telling myself"
     },
     {
       "role": "companion",
-      "content": "Proud fits here, and there’s a strong earned-it feeling in that. Does it feel more steady and settled, or more bright and energized?"
+      "content": "That sounds like pride meeting a very old, sharp doubt about belonging."
     },
     {
       "role": "user",
-      "content": "steady. ok thats enough for now, thanks"
+      "content": "yeah. and i hate that i cant just let it be a good thing. someone said nice work and my brain immediately went well she was probably just being polite"
     },
     {
       "role": "companion",
-      "content": "Steady makes sense, and we can leave it here. Well done, and thanks for telling me about it."
+      "content": "That feels like the good thing gets touched by doubt almost at once, and the doubt tries to take the praise back. We can leave it there, or stay with what that “probably just being polite” protects you from."
+    },
+    {
+      "role": "user",
+      "content": "if i believe her then i have to admit i was good at it. and then leaving looks like i ran from something instead of it pushing me out. easier to think i never belonged than to think i quit something i was actually good at"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a hard knot between pride and shame, with shame protecting you from a sharper story about leaving. I think I’m learning that the praise doesn’t just feel good, it also asks for a different version of what happened."
+    },
+    {
+      "role": "user",
+      "content": "oof yeah. that lands. i think ive been protecting myself from feeling like i gave up on something. calling it not belonging hurt less than calling it quitting"
+    },
+    {
+      "role": "companion",
+      "content": "That lands as a kind of self-protection, where “not belonging” hurt less than “quitting.” We can stay with that, or look at what it says you were trying to guard."
+    },
+    {
+      "role": "user",
+      "content": "i dont totally know yet. but weirdly underneath all of it im kind of glad she emailed. like even with all this tangled up its nice to know the thing i made is still out there doing something"
+    },
+    {
+      "role": "companion",
+      "content": "There’s a relief in that, and maybe a bit of being seen through the tangle too. I’m wondering if the email makes the work feel more alive than the story you had about leaving."
+    },
+    {
+      "role": "user",
+      "content": "yeah it does. more alive than the story. i might actually email her back. havent decided. but this helped untangle it a bit, thank you"
+    },
+    {
+      "role": "companion",
+      "content": "That feels more settled now, and you don’t have to decide the email here. I’m glad the knot loosened a little."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6xfspimae2j1w7",
+    "id": "evt_mq8m9iszr21ar7mt",
     "conversation_id": "joy__09",
-    "timestamp": "2026-06-09T17:42:06.291Z",
-    "user_words_raw": "steady",
-    "emotion_status": "candidate",
-    "emotion_family": "joy",
-    "emotion_shade": "proud",
-    "secondary_emotions": [],
-    "valence": "positive",
+    "timestamp": "2026-06-10T22:05:24.364Z",
+    "user_words_raw": "more alive than the story",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [
+      "joy"
+    ],
+    "valence": "mixed",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "passing the board exam after failing it twice",
-    "appraisal_thought": "I actually earned this one; I’m allowed to call myself it now",
+    "trigger_event": "Receiving an email saying the work mattered after leaving the place",
+    "appraisal_thought": "The work is still alive, and the story about leaving is less fixed now.",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
+      "clarity",
       "recognition",
-      "achievement",
-      "self-trust"
+      "meaning"
     ],
-    "confidence_level": "high",
+    "confidence_level": "medium",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "unknown",
-    "unlock_stage": "named",
-    "memory_note": "Passed a major exam after two previous failures; felt proud and steady about it",
+    "user_confirmation": "yes",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "calm",
+        "shade": "settled",
+        "salience": "foreground",
+        "source": "companion_hypothesis"
+      },
+      {
+        "family": "joy",
+        "shade": "relieved",
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "They can feel relieved when their work is recognised after leaving something, and that can loosen a story about quitting or not belonging.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "passed my board exam. for real this time"
+      "content": "ok so something happened today and i cant tell if im allowed to feel good about it. my old supervisor emailed out of nowhere"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds real now — passed, for real this time. I’m curious what it feels like to say that and have it land as true.",
-      "stage": "named",
+      "content": "That sounds like it might have stirred both relief and a bit of unease, maybe even some self-doubt about whether you get to enjoy it. Was the feeling more one after the other, or both at once?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "joy",
-      "shade": "relief",
+      "family": "fear",
+      "shade": "unease",
       "body_cue": [],
-      "trigger": "passing the board exam"
+      "trigger": "old supervisor emailed out of nowhere",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "glad",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": "unease",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "kinda unreal honestly. failed it twice. started thinking maybe im just not smart enough for this"
+      "content": "kind of both. she said she still thinks about the thing i built before i left. that it shipped and people use it. i didnt think anyone remembered"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds like a very unreal kind of relief, with some doubt still hanging around. Is it more relief, or more disbelief?",
-      "stage": "named",
+      "content": "Kind of both makes sense. I'm hearing relief or pride alongside a softer hurt or surprise, especially in “i didnt think anyone remembered.”",
+      "stage": "shaped",
       "unlocked": false,
       "family": "joy",
-      "shade": "relief",
+      "shade": "pride",
       "body_cue": [],
-      "trigger": "passing the board exam after failing it twice"
+      "trigger": "old supervisor emailed out of nowhere and said the thing they built shipped and people use it",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "pride",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "proud i think. like i actually earned this one. im allowed to call myself it now"
+      "content": "the thing is i left that place feeling like a fraud. like i got lucky once and everyone could tell i didnt belong. so hearing it actually mattered messes with the story ive been telling myself"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "Proud fits here, and there’s a strong earned-it feeling in that. Does it feel more steady and settled, or more bright and energized?",
-      "stage": "named",
-      "unlocked": false,
+      "content": "That sounds like pride meeting a very old, sharp doubt about belonging.",
+      "stage": "understood",
+      "unlocked": true,
       "family": "joy",
-      "shade": "proud",
+      "shade": "pride",
       "body_cue": [],
-      "trigger": "passing the board exam after failing it twice"
+      "trigger": "old supervisor said the thing they built shipped and people use it",
+      "label_source": "user_confirmed",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "pride",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "steady. ok thats enough for now, thanks"
+      "content": "yeah. and i hate that i cant just let it be a good thing. someone said nice work and my brain immediately went well she was probably just being polite"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Steady makes sense, and we can leave it here. Well done, and thanks for telling me about it.",
-      "stage": "named",
+      "content": "That feels like the good thing gets touched by doubt almost at once, and the doubt tries to take the praise back. We can leave it there, or stay with what that “probably just being polite” protects you from.",
+      "stage": "understood",
       "unlocked": false,
       "family": "joy",
-      "shade": "proud",
+      "shade": "pride",
       "body_cue": [],
-      "trigger": "passing the board exam after failing it twice"
+      "trigger": "someone said nice work and an old supervisor said the thing they built shipped and people use it",
+      "label_source": "user_confirmed",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "pride",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "hurt",
+          "shade": "left out",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "if i believe her then i have to admit i was good at it. and then leaving looks like i ran from something instead of it pushing me out. easier to think i never belonged than to think i quit something i was actually good at"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like a hard knot between pride and shame, with shame protecting you from a sharper story about leaving. I think I’m learning that the praise doesn’t just feel good, it also asks for a different version of what happened.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "old supervisor said the work shipped and people use it, and someone said nice work",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "joy",
+          "shade": "pride",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "oof yeah. that lands. i think ive been protecting myself from feeling like i gave up on something. calling it not belonging hurt less than calling it quitting"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That lands as a kind of self-protection, where “not belonging” hurt less than “quitting.” We can stay with that, or look at what it says you were trying to guard.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "being praised for work after leaving a place",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "self-critical",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "i dont totally know yet. but weirdly underneath all of it im kind of glad she emailed. like even with all this tangled up its nice to know the thing i made is still out there doing something"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "There’s a relief in that, and maybe a bit of being seen through the tangle too. I’m wondering if the email makes the work feel more alive than the story you had about leaving.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relieved",
+      "body_cue": [],
+      "trigger": "Receiving an email saying the work mattered after leaving the place",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "relieved",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": "self-critical",
+          "salience": "background",
+          "source": "user_confirmed"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah it does. more alive than the story. i might actually email her back. havent decided. but this helped untangle it a bit, thank you"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That feels more settled now, and you don’t have to decide the email here. I’m glad the knot loosened a little.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "Receiving an email saying the work mattered after leaving the place",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "settled",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "joy",
+          "shade": "relieved",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     }
   ]
 }

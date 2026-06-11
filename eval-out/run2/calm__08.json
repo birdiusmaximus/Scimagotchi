@@ -1,0 +1,243 @@
+{
+  "cid": "calm__08",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-10T17:07:46.526Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. um. i dont really know how to use this"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that’s completely okay. We can just take it one step at a time, and you can use it however feels easiest."
+    },
+    {
+      "role": "user",
+      "content": "yeah ok. i guess im just sitting here and its weirdly quiet. like in a good way? idk. been a long time since it felt like that"
+    },
+    {
+      "role": "companion",
+      "content": "“Weirdly quiet” in a good way sounds like a small, real shift. I’m curious what made the quiet feel noticeable after so long?"
+    },
+    {
+      "role": "user",
+      "content": "i think bc i finally stopped trying to have it all figured out. like the job thing ended in march and i kept thinking id panic but. i dont have a plan and somehow thats. fine?? for now anyway"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the quiet might be coming from letting go of having to pin everything down. Is it mostly relief, or more a kind of settled “for now” feeling?"
+    },
+    {
+      "role": "user",
+      "content": "settled i think. relief feels too big lol. its more like. my shoulders came down a bit. i made tea and didnt check my email for once. the not knowing is still there it just isnt loud rn"
+    },
+    {
+      "role": "companion",
+      "content": "“My shoulders came down a bit” and “the not knowing is still there” feels like the shape of this. I’m here if you want to leave it there, or stay with what makes it quiet enough to not be loud right now."
+    },
+    {
+      "role": "user",
+      "content": "maybe just. the apartment being still. nobody needing anything from me for an hour. i dont have to know whats next today i just have to be here w the tea. thats kind of all i wanted to say i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a small pocket of stillness, and the meaning of it is pretty clear, you get to be here with the tea and not answer to anything for a while. I can leave it there, or we can stay with what it feels like to have “nobody needing anything” for an hour?"
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. i think i just needed to say it out loud somewhere. ill go finish my tea. thanks for this"
+    },
+    {
+      "role": "companion",
+      "content": "Glad you said it here, and enjoy the rest of your tea."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bnu05r5ahhc7m",
+    "conversation_id": "calm__08",
+    "timestamp": "2026-06-10T17:08:21.685Z",
+    "user_words_raw": "the apartment being still",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "the apartment being still and nobody needing anything from me for an hour",
+    "appraisal_thought": "I dont have to know whats next today",
+    "body_cue": [
+      "shoulders came down a bit"
+    ],
+    "behaviour_action": [
+      "made tea",
+      "didnt check my email"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "rest",
+      "simplicity"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Calm can come when there is enough space and nobody needs anything for a while.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. um. i dont really know how to use this"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that’s completely okay. We can just take it one step at a time, and you can use it however feels easiest.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah ok. i guess im just sitting here and its weirdly quiet. like in a good way? idk. been a long time since it felt like that"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "“Weirdly quiet” in a good way sounds like a small, real shift. I’m curious what made the quiet feel noticeable after so long?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "a quiet moment after a long time without that feeling",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "settled",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "joy",
+          "shade": "relieved",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "i think bc i finally stopped trying to have it all figured out. like the job thing ended in march and i kept thinking id panic but. i dont have a plan and somehow thats. fine?? for now anyway"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like the quiet might be coming from letting go of having to pin everything down. Is it mostly relief, or more a kind of settled “for now” feeling?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "stopping trying to have everything figured out after the job thing ended in march",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "settled i think. relief feels too big lol. its more like. my shoulders came down a bit. i made tea and didnt check my email for once. the not knowing is still there it just isnt loud rn"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "“My shoulders came down a bit” and “the not knowing is still there” feels like the shape of this. I’m here if you want to leave it there, or stay with what makes it quiet enough to not be loud right now.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [
+        "my shoulders came down a bit"
+      ],
+      "trigger": "stopped trying to have everything figured out after the job thing ended in march",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "maybe just. the apartment being still. nobody needing anything from me for an hour. i dont have to know whats next today i just have to be here w the tea. thats kind of all i wanted to say i guess"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like a small pocket of stillness, and the meaning of it is pretty clear, you get to be here with the tea and not answer to anything for a while. I can leave it there, or we can stay with what it feels like to have “nobody needing anything” for an hour?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [
+        "shoulders came down a bit"
+      ],
+      "trigger": "the apartment being still and nobody needing anything from me for an hour",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it there. i think i just needed to say it out loud somewhere. ill go finish my tea. thanks for this"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Glad you said it here, and enjoy the rest of your tea.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [
+        "shoulders came down a bit"
+      ],
+      "trigger": "the apartment being still and nobody needing anything from me for an hour",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

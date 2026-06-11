@@ -2,164 +2,227 @@
   "cid": "sadness__04",
   "emotion": "sadness",
   "persona": null,
-  "created": "2026-06-09T18:18:45.088Z",
+  "created": "2026-06-10T22:08:55.424Z",
   "history": [
     {
       "role": "user",
-      "content": "hey there. how are you today?"
+      "content": "i dunno why im even opening this. been kind of annoyed all day i guess"
     },
     {
       "role": "companion",
-      "content": "Hey there — I’m here and glad to see you. How’s your day feeling so far?"
+      "content": "That sounds like a pretty live irritation, maybe with some weariness under it. If you want, we can stay with it here, or just leave it as a name for now."
     },
     {
       "role": "user",
-      "content": "honestly its been a quiet one. kind of a weird week i guess. been thinking a lot about my dad"
+      "content": "yeah maybe not annoyed actually. my mom called and i let it go to voicemail again. third time this week. i keep doing that and then i feel weird about it"
     },
     {
       "role": "companion",
-      "content": "A quiet week with your dad on your mind sounds like it’s carrying something underneath it. What’s the feeling around him like, if you had to narrow it a little?"
+      "content": "I’m wondering if the odd part is less the call itself and more what it means to keep letting it go to voicemail. Is it closer to guilt, avoidance, or something harder to name?"
     },
     {
       "role": "user",
-      "content": "we havent spoken in almost a year. he forgot my birthday last month and i dont even know why it still gets to me. just sad i think"
+      "content": "harder to name i think. its not really guilt. we used to talk every day and now i just dont know what to say to her since dad died. it feels sad more than anything. like i lost both of them kind of"
     },
     {
       "role": "companion",
-      "content": "That sounds sad, and also like it still lands because it was your birthday and he didn’t remember. Does it feel more like hurt, disappointment, or something else?"
+      "content": "I had that wrong, let me step back. This sounds more like sadness and a kind of disconnection than guilt."
     },
     {
       "role": "user",
-      "content": "disappointment mostly. like i keep hoping hell be different and he just isnt. anyway. thanks for listening, i should head off"
+      "content": "yeah. that's it. thanks for saying that back. i think i just needed to put it somewhere. gonna call her tomorrow maybe"
     },
     {
       "role": "companion",
-      "content": "That sounds like disappointment, and the hope keeps meeting the same person. We can leave it here for now, or if you want, we could stay a little longer with what it’s been like to keep hoping."
-    },
-    {
-      "role": "user",
-      "content": "lets leave it here for now. i think i just needed to say it out loud. thank you"
-    },
-    {
-      "role": "companion",
-      "content": "Of course — I’m glad you said it out loud. Take care for now."
+      "content": "That makes sense, and it sounds like it needed a place to land. We can leave it there, or stay with what tomorrow is bringing if you want."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yr9c34ysdnmhw",
+    "id": "evt_mq8mf4huhrkiwt30",
     "conversation_id": "sadness__04",
-    "timestamp": "2026-06-09T18:19:10.074Z",
-    "user_words_raw": "i just needed to say it out loud",
-    "emotion_status": "candidate",
+    "timestamp": "2026-06-10T22:09:21.431Z",
+    "user_words_raw": "i lost both of them kind of",
+    "emotion_status": "confirmed",
     "emotion_family": "sadness",
-    "emotion_shade": "disappointment",
-    "secondary_emotions": [],
+    "emotion_shade": "sad",
+    "secondary_emotions": [
+      "hurt"
+    ],
     "valence": "negative",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "he forgot my birthday last month",
-    "appraisal_thought": "i keep hoping hell be different and he just isnt",
+    "trigger_event": "mother calling after a shift from daily contact since father died",
+    "appraisal_thought": "we used to talk every day and now i just dont know what to say to her since dad died",
     "body_cue": [],
-    "behaviour_action": [],
+    "behaviour_action": [
+      "letting it go to voicemail"
+    ],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
       "recognition",
-      "connection",
-      "acceptance"
+      "space",
+      "connection"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "unknown",
-    "unlock_stage": "named",
-    "memory_note": "Has sadness tied to disappointment with father and a pattern of hoping he will be different.",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [
+      "annoyed",
+      "guilt"
+    ],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "sadness",
+        "shade": "sad",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      },
+      {
+        "family": "hurt",
+        "shade": "disconnection",
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 1,
+    "unlock_stage": "understood",
+    "memory_note": "Mom contact changed after dad died, and avoiding calls can carry sadness and disconnection.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey there. how are you today?"
+      "content": "i dunno why im even opening this. been kind of annoyed all day i guess"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey there — I’m here and glad to see you. How’s your day feeling so far?",
-      "stage": "noticed",
+      "content": "That sounds like a pretty live irritation, maybe with some weariness under it. If you want, we can stay with it here, or just leave it as a name for now.",
+      "stage": "named",
       "unlocked": false,
-      "family": null,
-      "shade": null,
+      "family": "anger",
+      "shade": "irritated",
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "user_stated",
+      "mixed_relation": "unclear",
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "honestly its been a quiet one. kind of a weird week i guess. been thinking a lot about my dad"
+      "content": "yeah maybe not annoyed actually. my mom called and i let it go to voicemail again. third time this week. i keep doing that and then i feel weird about it"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "A quiet week with your dad on your mind sounds like it’s carrying something underneath it. What’s the feeling around him like, if you had to narrow it a little?",
-      "stage": "named",
+      "content": "I’m wondering if the odd part is less the call itself and more what it means to keep letting it go to voicemail. Is it closer to guilt, avoidance, or something harder to name?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "flat",
-      "shade": "weird",
+      "family": "shame",
+      "shade": "guilt",
       "body_cue": [],
-      "trigger": null
+      "trigger": "mother called repeatedly this week",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "guilt",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "we havent spoken in almost a year. he forgot my birthday last month and i dont even know why it still gets to me. just sad i think"
+      "content": "harder to name i think. its not really guilt. we used to talk every day and now i just dont know what to say to her since dad died. it feels sad more than anything. like i lost both of them kind of"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds sad, and also like it still lands because it was your birthday and he didn’t remember. Does it feel more like hurt, disappointment, or something else?",
-      "stage": "named",
+      "content": "I had that wrong, let me step back. This sounds more like sadness and a kind of disconnection than guilt.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "sadness",
       "shade": "sad",
       "body_cue": [],
-      "trigger": "he forgot my birthday last month"
+      "trigger": "mother calling after a shift from daily contact since father died",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "sad",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": "disconnected",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "disappointment mostly. like i keep hoping hell be different and he just isnt. anyway. thanks for listening, i should head off"
+      "content": "yeah. that's it. thanks for saying that back. i think i just needed to put it somewhere. gonna call her tomorrow maybe"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That sounds like disappointment, and the hope keeps meeting the same person. We can leave it here for now, or if you want, we could stay a little longer with what it’s been like to keep hoping.",
-      "stage": "named",
-      "unlocked": false,
+      "content": "That makes sense, and it sounds like it needed a place to land. We can leave it there, or stay with what tomorrow is bringing if you want.",
+      "stage": "understood",
+      "unlocked": true,
       "family": "sadness",
-      "shade": "disappointment",
+      "shade": "sad",
       "body_cue": [],
-      "trigger": "he forgot my birthday last month"
-    },
-    {
-      "turn": 8,
-      "role": "user",
-      "content": "lets leave it here for now. i think i just needed to say it out loud. thank you"
-    },
-    {
-      "turn": 9,
-      "role": "companion",
-      "content": "Of course — I’m glad you said it out loud. Take care for now.",
-      "stage": "named",
-      "unlocked": false,
-      "family": "sadness",
-      "shade": "disappointment",
-      "body_cue": [],
-      "trigger": "he forgot my birthday last month"
+      "trigger": "mother calling after a shift from daily contact since father died",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "sad",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "hurt",
+          "shade": "disconnection",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
     }
   ]
 }

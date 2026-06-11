@@ -2,193 +2,428 @@
   "cid": "calm__10",
   "emotion": "calm",
   "persona": null,
-  "created": "2026-06-09T17:44:03.919Z",
+  "created": "2026-06-10T22:05:43.644Z",
   "history": [
     {
       "role": "user",
-      "content": "hi. um not really sure how to do this lol. i guess i just had this thing happen today and i kind of wanted to put it somewhere"
+      "content": "hi. idk why im even opening this honestly. i think im just. ok this morning i got a call from the clinic and they said my last scan came back clear and ive been sitting here for like an hour just kind of stunned"
     },
     {
       "role": "companion",
-      "content": "Hey, that’s completely okay. You can just put it here in your own words—what happened today?"
+      "content": "That sounds like a very still kind of stunned, especially after hearing the scan came back clear. If you want, you can just stay with that here for a moment."
     },
     {
       "role": "user",
-      "content": "ok so. i had a doctors appointment this morning. like a follow up scan thing. ive been waiting on it for honestly weeks and i barely slept. and it came back clear. totally fine. and i dont even know how to describe it i just sat in the car after and kind of breathed for like ten minutes"
+      "content": "yeah stunned is the word. its weird because i thought id be crying or jumping around or something. but its more like. my whole body just kind of exhaled? like ive been holding my shoulders up near my ears for two years and i didnt even notice til now"
     },
     {
       "role": "companion",
-      "content": "That sounds like a big release after a long wait. I’m wondering if it was mostly relief, or maybe something else too?"
+      "content": "That exhale after two years of holding yourself up sounds real, and the surprise of not crying or jumping makes sense too. Is it mostly in your shoulders and chest, or somewhere else as well?"
     },
     {
       "role": "user",
-      "content": "yeah see thats the weird part. its relief obviously. like this huge weight gone. but theres also this other thing underneath that i feel kind of guilty about?? like im so calm now and settled but part of me is almost angry that i spent weeks terrified for nothing. like i lost weeks of my life to dread and now its just. nothing. and i dont know what to do with that energy now"
+      "content": "shoulders and chest yeah. and like the back of my jaw, ive apparently been clenching it this whole time. it started w a lump i found in 2024 and then it was biopsies and the in between weeks waiting for results which honestly were the worst part. the not knowing. you make up a whole future where its bad and then you have to unmake it"
     },
     {
       "role": "companion",
-      "content": "That sounds like relief with something sharper underneath — maybe anger, and some guilt about those lost weeks. Does the “energy” feel more restless, or more like protest?"
+      "content": "That waiting sounds like it wore a path right through your shoulders, chest, and jaw."
     },
     {
       "role": "user",
-      "content": "protest maybe? idk. like i kept thinking the whole time about all the things i wasnt doing because i was so scared. i canceled plans. i didnt call my sister back for like two weeks because i didnt want to lie to her about being fine. i just sort of shut down and waited. and now im sitting here clear and healthy and i feel almost silly for how much i let it eat me. but also like. i was allowed to be scared right. it was a scan. anyone would be"
+      "content": "right thats exactly it. wore a path. and the thing is now im almost scared to relax into it?? like part of me is going dont get too comfortable, what if the next scan. theres always a next scan. its every 6 months now. so this clear is real but its also just. a temporary clear. and i dont know how to hold both at the same time, the relief and the knowing it could come back"
     },
     {
       "role": "companion",
-      "content": "That makes sense — it sounds like the protest is rubbing up against guilt and maybe a little shame about how much space the fear took. I’m wondering whether the sharper part is more about losing those weeks, or about feeling silly now?"
+      "content": "I’m holding both with you, the relief and the part that won’t fully let go because there’s always a next scan. Does it feel more like they sit side by side, or like one is guarding the other?"
     },
     {
       "role": "user",
-      "content": "i think... its the losing the weeks part more. the silly thing fades when i actually say it out loud cause yeah of course i was scared. but the weeks. i cant get those back. ugh. ok but writing this out im realising the relief is bigger than the rest of it honestly. like underneath all the protest im just so so glad. im gonna call my sister tonight. i think i just needed to feel both things without picking one"
+      "content": "oh. guarding. yeah the scared part is guarding the relief i think. like if i let myself be fully happy then ill have further to fall next time. so i keep one foot out the door. my partner kept saying tonight we should celebrate, lets get the nice wine, and i just couldnt. i wanted to be there w them but i had this wall up"
     },
     {
       "role": "companion",
-      "content": "That feels clear: the protest is about the weeks you lost, and underneath it the relief is still bigger. If you want, we can stay with the protest a little longer, or just leave it here with the gladness."
+      "content": "That wall up makes a lot of sense, especially with one foot still out the door. It sounds like the scared part is keeping the relief from tipping into something that feels too risky."
     },
     {
       "role": "user",
-      "content": "lets leave it there i think. with the gladness. that feels right. thank you for letting me just kind of sit in the mess of it, i feel a lot lighter than when i opened this. ok. going to go call her now x"
+      "content": "i think i want to let the wall down a little. just not all the way. like maybe i can have the wine w them and still keep the 6 month thing in the back of my mind, it doesnt have to be all or nothing right. its just hard because for two years my whole job was bracing. thats the muscle i built. and now somebody is telling me i can put it down for a bit and i dont totally trust that yet"
     },
     {
       "role": "companion",
-      "content": "That feels like a good place to let it rest — with the gladness. I’m glad you could sit with the mess of it and find what felt right; go call her."
+      "content": "That bracing muscle sounds very well trained, and it makes sense that putting it down would not feel automatic yet. We can leave it here with that, or stay with what it would mean to trust it a little."
+    },
+    {
+      "role": "user",
+      "content": "can we stay just a sec more. i think what trusting it a little would mean is. letting tonight actually be a good night. like not saving my happiness for some imaginary day when theres no more scans because that day might never come. the clears are the life now. theyre not the waiting room before the real thing, they ARE the thing. god that just landed kind of hard typing it out"
+    },
+    {
+      "role": "companion",
+      "content": "That landed with weight, and I’m glad you said it out loud. We can let it rest here for tonight."
+    },
+    {
+      "role": "user",
+      "content": "yeah. lets let it rest. i think im gonna go find my partner and open that wine. the clears are the life now. im gonna try to hold onto that one"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a good place to pause. I hope the wine and your partner give the night some room."
+    },
+    {
+      "role": "user",
+      "content": "thank you. really. this helped more than i expected. night"
+    },
+    {
+      "role": "companion",
+      "content": "Good night. I’m glad this space was useful, and I hope tomorrow feels a little gentler."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6xindegrlqdoyu",
+    "id": "evt_mq8mb0peipe5u3xn",
     "conversation_id": "calm__10",
-    "timestamp": "2026-06-09T17:44:40.904Z",
-    "user_words_raw": "the gladness",
+    "timestamp": "2026-06-10T22:06:51.071Z",
+    "user_words_raw": "this helped more than i expected",
     "emotion_status": "confirmed",
     "emotion_family": "calm",
     "emotion_shade": "settled",
-    "secondary_emotions": [
-      "joy"
-    ],
-    "valence": "mixed",
+    "secondary_emotions": [],
+    "valence": "neutral",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "the scan came back clear after weeks of waiting and fear",
-    "appraisal_thought": "I lost weeks I can’t get back, but the relief is bigger and it’s okay to hold both",
+    "trigger_event": "deciding to let tonight be a good night after talking about recurring scans",
+    "appraisal_thought": "the clears are the life now",
     "body_cue": [],
-    "behaviour_action": [
-      "go call her"
-    ],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [
-      "relief",
-      "understanding",
-      "space",
-      "connection"
-    ],
+    "need_value": [],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "After a clear scan, they felt relief mixed with protest about lost weeks, and later wanted to leave it there with the gladness.",
+    "memory_note": "A conversation about scans, bracing, and letting a good night be the real thing.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hi. um not really sure how to do this lol. i guess i just had this thing happen today and i kind of wanted to put it somewhere"
+      "content": "hi. idk why im even opening this honestly. i think im just. ok this morning i got a call from the clinic and they said my last scan came back clear and ive been sitting here for like an hour just kind of stunned"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey, that’s completely okay. You can just put it here in your own words—what happened today?",
-      "stage": "noticed",
+      "content": "That sounds like a very still kind of stunned, especially after hearing the scan came back clear. If you want, you can just stay with that here for a moment.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": null,
-      "shade": null,
+      "family": "flat",
+      "shade": "stunned",
       "body_cue": [],
-      "trigger": null
+      "trigger": "got a call from the clinic and was told the last scan came back clear",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "stunned",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "calm",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "joy",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "ok so. i had a doctors appointment this morning. like a follow up scan thing. ive been waiting on it for honestly weeks and i barely slept. and it came back clear. totally fine. and i dont even know how to describe it i just sat in the car after and kind of breathed for like ten minutes"
+      "content": "yeah stunned is the word. its weird because i thought id be crying or jumping around or something. but its more like. my whole body just kind of exhaled? like ive been holding my shoulders up near my ears for two years and i didnt even notice til now"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds like a big release after a long wait. I’m wondering if it was mostly relief, or maybe something else too?",
-      "stage": "understood",
-      "unlocked": true,
+      "content": "That exhale after two years of holding yourself up sounds real, and the surprise of not crying or jumping makes sense too. Is it mostly in your shoulders and chest, or somewhere else as well?",
+      "stage": "shaped",
+      "unlocked": false,
       "family": "calm",
       "shade": "relief",
-      "body_cue": [],
-      "trigger": "the follow-up scan came back clear after waiting for weeks"
+      "body_cue": [
+        "whole body exhaled",
+        "holding my shoulders up near my ears"
+      ],
+      "trigger": "got a call from the clinic and was told the last scan came back clear",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "relief",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "flat",
+          "shade": "stunned",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "yeah see thats the weird part. its relief obviously. like this huge weight gone. but theres also this other thing underneath that i feel kind of guilty about?? like im so calm now and settled but part of me is almost angry that i spent weeks terrified for nothing. like i lost weeks of my life to dread and now its just. nothing. and i dont know what to do with that energy now"
+      "content": "shoulders and chest yeah. and like the back of my jaw, ive apparently been clenching it this whole time. it started w a lump i found in 2024 and then it was biopsies and the in between weeks waiting for results which honestly were the worst part. the not knowing. you make up a whole future where its bad and then you have to unmake it"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds like relief with something sharper underneath — maybe anger, and some guilt about those lost weeks. Does the “energy” feel more restless, or more like protest?",
+      "content": "That waiting sounds like it wore a path right through your shoulders, chest, and jaw.",
       "stage": "understood",
-      "unlocked": false,
-      "family": "anger",
-      "shade": "frustration",
-      "body_cue": [],
-      "trigger": "the scan came back clear after weeks of waiting and fear"
+      "unlocked": true,
+      "family": "calm",
+      "shade": "relief",
+      "body_cue": [
+        "shoulders",
+        "chest",
+        "back of my jaw",
+        "clenching"
+      ],
+      "trigger": "getting a clear scan after a long period of biopsies and waiting for results",
+      "label_source": "user_stated",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "relief",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": "pressure",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "protest maybe? idk. like i kept thinking the whole time about all the things i wasnt doing because i was so scared. i canceled plans. i didnt call my sister back for like two weeks because i didnt want to lie to her about being fine. i just sort of shut down and waited. and now im sitting here clear and healthy and i feel almost silly for how much i let it eat me. but also like. i was allowed to be scared right. it was a scan. anyone would be"
+      "content": "right thats exactly it. wore a path. and the thing is now im almost scared to relax into it?? like part of me is going dont get too comfortable, what if the next scan. theres always a next scan. its every 6 months now. so this clear is real but its also just. a temporary clear. and i dont know how to hold both at the same time, the relief and the knowing it could come back"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense — it sounds like the protest is rubbing up against guilt and maybe a little shame about how much space the fear took. I’m wondering whether the sharper part is more about losing those weeks, or about feeling silly now?",
+      "content": "I’m holding both with you, the relief and the part that won’t fully let go because there’s always a next scan. Does it feel more like they sit side by side, or like one is guarding the other?",
       "stage": "understood",
       "unlocked": false,
-      "family": "anger",
-      "shade": "frustration",
-      "body_cue": [],
-      "trigger": "the scan came back clear after weeks of waiting and fear"
+      "family": "calm",
+      "shade": "relief",
+      "body_cue": [
+        "shoulders",
+        "chest",
+        "back of my jaw"
+      ],
+      "trigger": "a clear scan after a long stretch of biopsies and waiting for results, with ongoing six-month scans ahead",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "relief",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": "uneasy",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
     },
     {
       "turn": 8,
       "role": "user",
-      "content": "i think... its the losing the weeks part more. the silly thing fades when i actually say it out loud cause yeah of course i was scared. but the weeks. i cant get those back. ugh. ok but writing this out im realising the relief is bigger than the rest of it honestly. like underneath all the protest im just so so glad. im gonna call my sister tonight. i think i just needed to feel both things without picking one"
+      "content": "oh. guarding. yeah the scared part is guarding the relief i think. like if i let myself be fully happy then ill have further to fall next time. so i keep one foot out the door. my partner kept saying tonight we should celebrate, lets get the nice wine, and i just couldnt. i wanted to be there w them but i had this wall up"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "That feels clear: the protest is about the weeks you lost, and underneath it the relief is still bigger. If you want, we can stay with the protest a little longer, or just leave it here with the gladness.",
+      "content": "That wall up makes a lot of sense, especially with one foot still out the door. It sounds like the scared part is keeping the relief from tipping into something that feels too risky.",
       "stage": "understood",
       "unlocked": false,
-      "family": "anger",
-      "shade": "frustration",
-      "body_cue": [],
-      "trigger": "the scan came back clear after weeks of waiting and fear"
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [
+        "shoulders",
+        "chest",
+        "back of my jaw"
+      ],
+      "trigger": "a clear scan after a long stretch of biopsies and waiting for results, with ongoing six-month scans ahead",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "relief",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": "uneasy",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
     },
     {
       "turn": 10,
       "role": "user",
-      "content": "lets leave it there i think. with the gladness. that feels right. thank you for letting me just kind of sit in the mess of it, i feel a lot lighter than when i opened this. ok. going to go call her now x"
+      "content": "i think i want to let the wall down a little. just not all the way. like maybe i can have the wine w them and still keep the 6 month thing in the back of my mind, it doesnt have to be all or nothing right. its just hard because for two years my whole job was bracing. thats the muscle i built. and now somebody is telling me i can put it down for a bit and i dont totally trust that yet"
     },
     {
       "turn": 11,
       "role": "companion",
-      "content": "That feels like a good place to let it rest — with the gladness. I’m glad you could sit with the mess of it and find what felt right; go call her.",
+      "content": "That bracing muscle sounds very well trained, and it makes sense that putting it down would not feel automatic yet. We can leave it here with that, or stay with what it would mean to trust it a little.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [
+        "shoulders",
+        "chest",
+        "back of my jaw"
+      ],
+      "trigger": "being told the clear is real but only temporary, with six-month scans continuing",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "uneasy",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "joy",
+          "shade": "relief",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "can we stay just a sec more. i think what trusting it a little would mean is. letting tonight actually be a good night. like not saving my happiness for some imaginary day when theres no more scans because that day might never come. the clears are the life now. theyre not the waiting room before the real thing, they ARE the thing. god that just landed kind of hard typing it out"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That landed with weight, and I’m glad you said it out loud. We can let it rest here for tonight.",
       "stage": "understood",
       "unlocked": false,
       "family": "calm",
       "shade": "settled",
       "body_cue": [],
-      "trigger": "the scan came back clear after weeks of waiting and fear"
+      "trigger": "typing out that the clear is the life now, not the waiting room before the real thing",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "settled",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": "uneasy",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah. lets let it rest. i think im gonna go find my partner and open that wine. the clears are the life now. im gonna try to hold onto that one"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That feels like a good place to pause. I hope the wine and your partner give the night some room.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "deciding to let tonight be a good night after talking about recurring scans",
+      "label_source": "user_stated",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "settled",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "joy",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "thank you. really. this helped more than i expected. night"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Good night. I’m glad this space was useful, and I hope tomorrow feels a little gentler.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "deciding to let tonight be a good night after talking about recurring scans",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

@@ -2,160 +2,270 @@
   "cid": "joy__07",
   "emotion": "joy",
   "persona": null,
-  "created": "2026-06-09T17:41:51.706Z",
+  "created": "2026-06-10T22:04:38.316Z",
   "history": [
     {
       "role": "user",
-      "content": "hey. so i think im just kinda stressed lol. me and my girlfriend booked a trip to portugal last night, like actually paid for flights and everything"
+      "content": "ok so not really sure what this app does but here goes. me and my partner hit 2 years yesterday and it actually felt like a real milestone for once"
     },
     {
       "role": "companion",
-      "content": "Hey — that sounds like a lot landed at once. Is it the pressure of having it booked, or something else about the trip?"
+      "content": "That sounds like a meaningful milestone, and maybe a bit grounding too. What made it feel real this time?"
     },
     {
       "role": "user",
-      "content": "no thats the thing. like i keep saying im stressed but when i actually picture it im kind of grinning at my phone. weve been together two years and this is the first big trip we planned just us"
+      "content": "i think bc we almost didnt make it past year one honestly. rough patch. so getting here feels earned not just like a date on the calendar. we cooked dinner at home instead of going out and it was just easy. comfortable"
     },
     {
       "role": "companion",
-      "content": "That sounds more like excited-stressed than plain stress — like a grin with a lot riding on it. Does it feel more buzzy and high, or tight and pressured?"
+      "content": "There’s a mix of relief and something tender here, I think, and the easy, comfortable dinner seems to have let it land. If you want, we can stay with what made it feel earned, or leave it here for now."
     },
     {
       "role": "user",
-      "content": "yeah buzzy. definitely buzzy. i screenshotted the booking like four times haha. i think im just excited. we already started a list of places we wanna eat"
+      "content": "yeah we can stay with it i guess. what made it earned is we actually did the work. couples counseling for a few months, learned to not blow up at each other over dumb stuff. so sitting there last night not fighting just felt like proof it paid off. kinda proud of us tbh"
     },
     {
       "role": "companion",
-      "content": "That sounds really buzzy and excited — like it wants to spill outward. What part feels biggest right now: the trip itself, or the fact that it’s your first big one together?"
+      "content": "That landed as something earned, and the fact that you were just sitting there, not fighting, seems to have made it feel real. I’m wondering whether that pride sits more in what you two built together, or in how far you came from the rough patch?"
     },
     {
       "role": "user",
-      "content": "honestly the us part. doing something just the two of us. anyway thats it really, feels good to call it what it is. thanks"
+      "content": "honestly more how far we came. anyone can have a good first year when its all new. but choosing to stay and fix it when it got hard, thats the part im proud of. ok that question was actually decent not gonna lie"
     },
     {
       "role": "companion",
-      "content": "That makes sense — it sounds like the “just the two of us” part is the heart of it. We can leave it there, or if you want, we could stay with what that first big trip means to you."
+      "content": "That choice to stay and fix it is what sounds proud-making, and it has a steadier kind of weight than the newness did. Thanks for telling me the question worked."
     },
     {
       "role": "user",
-      "content": "nah lets leave it there. gonna go add more spots to the list lol. thanks"
+      "content": "yeah steadier is the right word. its not butterflies anymore its more like ok this person is my person and we can get through stuff. thats better than butterflies"
     },
     {
       "role": "companion",
-      "content": "That feels like a nice place to pause. Have fun with the list, and I’m glad you could name it."
+      "content": "That sounds less like fluttery excitement and more like settled confidence, with a little pride threaded through it. We can leave it there, or stay with how that steadier kind feels to live in."
+    },
+    {
+      "role": "user",
+      "content": "nah i think im good. that was more useful than i expected honestly. thanks. gonna go text my partner something sappy now lol"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a very good place to leave it. Have fun with the sappy text."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6xftf2493g28wk",
+    "id": "evt_mq8m9lyz6fkpcset",
     "conversation_id": "joy__07",
-    "timestamp": "2026-06-09T17:42:17.584Z",
-    "user_words_raw": "gonna go add more spots to the list",
-    "emotion_status": "unclear",
-    "emotion_family": null,
-    "emotion_shade": "excited",
+    "timestamp": "2026-06-10T22:05:13.857Z",
+    "user_words_raw": "gonna go text my partner something sappy now lol",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
     "secondary_emotions": [],
     "valence": "positive",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "Booked and paid for flights for a first big trip to Portugal just the two of them after two years together.",
-    "appraisal_thought": "This is our first big trip together; doing something just the two of us matters.",
+    "trigger_event": "reaching two years after a rough first year, seeing the relationship as earned and steadier",
+    "appraisal_thought": "this is better than butterflies",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [],
+    "need_value": [
+      "connection",
+      "stability",
+      "shared effort"
+    ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
     "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "User tends to light up around shared plans and the relationship aspect of trips.",
+    "memory_note": "A relationship that survived a rough first year now feels earned and steady.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey. so i think im just kinda stressed lol. me and my girlfriend booked a trip to portugal last night, like actually paid for flights and everything"
+      "content": "ok so not really sure what this app does but here goes. me and my partner hit 2 years yesterday and it actually felt like a real milestone for once"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey — that sounds like a lot landed at once. Is it the pressure of having it booked, or something else about the trip?",
-      "stage": "named",
+      "content": "That sounds like a meaningful milestone, and maybe a bit grounding too. What made it feel real this time?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "pressure",
-      "shade": "stressed",
+      "family": "joy",
+      "shade": "meaningful",
       "body_cue": [],
-      "trigger": "Booked and paid for flights for a trip to Portugal"
+      "trigger": "hitting 2 years with partner",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "meaningful",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "calm",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "no thats the thing. like i keep saying im stressed but when i actually picture it im kind of grinning at my phone. weve been together two years and this is the first big trip we planned just us"
+      "content": "i think bc we almost didnt make it past year one honestly. rough patch. so getting here feels earned not just like a date on the calendar. we cooked dinner at home instead of going out and it was just easy. comfortable"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds more like excited-stressed than plain stress — like a grin with a lot riding on it. Does it feel more buzzy and high, or tight and pressured?",
-      "stage": "named",
+      "content": "There’s a mix of relief and something tender here, I think, and the easy, comfortable dinner seems to have let it land. If you want, we can stay with what made it feel earned, or leave it here for now.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "pressure",
-      "shade": "stressed",
+      "family": "joy",
+      "shade": "relieved",
       "body_cue": [],
-      "trigger": "Booked and paid for flights for a trip to Portugal; first big trip planned just the two of them after two years together"
+      "trigger": "hitting 2 years with partner after almost not making it past year one",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "relieved",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": "tender",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "yeah buzzy. definitely buzzy. i screenshotted the booking like four times haha. i think im just excited. we already started a list of places we wanna eat"
+      "content": "yeah we can stay with it i guess. what made it earned is we actually did the work. couples counseling for a few months, learned to not blow up at each other over dumb stuff. so sitting there last night not fighting just felt like proof it paid off. kinda proud of us tbh"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds really buzzy and excited — like it wants to spill outward. What part feels biggest right now: the trip itself, or the fact that it’s your first big one together?",
-      "stage": "understood",
-      "unlocked": true,
+      "content": "That landed as something earned, and the fact that you were just sitting there, not fighting, seems to have made it feel real. I’m wondering whether that pride sits more in what you two built together, or in how far you came from the rough patch?",
+      "stage": "shaped",
+      "unlocked": false,
       "family": "joy",
-      "shade": "excited",
+      "shade": "proud",
       "body_cue": [],
-      "trigger": "Booked and paid for flights for a first big trip to Portugal just the two of them after two years together"
+      "trigger": "hitting 2 years after a rough first year, with a calm home dinner and no fighting",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "proud",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "calm",
+          "shade": "null",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "honestly the us part. doing something just the two of us. anyway thats it really, feels good to call it what it is. thanks"
+      "content": "honestly more how far we came. anyone can have a good first year when its all new. but choosing to stay and fix it when it got hard, thats the part im proud of. ok that question was actually decent not gonna lie"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense — it sounds like the “just the two of us” part is the heart of it. We can leave it there, or if you want, we could stay with what that first big trip means to you.",
+      "content": "That choice to stay and fix it is what sounds proud-making, and it has a steadier kind of weight than the newness did. Thanks for telling me the question worked.",
       "stage": "understood",
-      "unlocked": false,
+      "unlocked": true,
       "family": "joy",
-      "shade": "excited",
+      "shade": "proud",
       "body_cue": [],
-      "trigger": "Booked and paid for flights for a first big trip to Portugal just the two of them after two years together."
+      "trigger": "hitting 2 years after a rough first year, with a calm home dinner and no fighting",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 8,
       "role": "user",
-      "content": "nah lets leave it there. gonna go add more spots to the list lol. thanks"
+      "content": "yeah steadier is the right word. its not butterflies anymore its more like ok this person is my person and we can get through stuff. thats better than butterflies"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "That feels like a nice place to pause. Have fun with the list, and I’m glad you could name it.",
+      "content": "That sounds less like fluttery excitement and more like settled confidence, with a little pride threaded through it. We can leave it there, or stay with how that steadier kind feels to live in.",
       "stage": "understood",
       "unlocked": false,
-      "family": null,
-      "shade": "excited",
+      "family": "calm",
+      "shade": "settled",
       "body_cue": [],
-      "trigger": "Booked and paid for flights for a first big trip to Portugal just the two of them after two years together."
+      "trigger": "reaching two years after a rough first year, with evidence they can get through hard stuff together",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "settled",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "joy",
+          "shade": "proud",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "nah i think im good. that was more useful than i expected honestly. thanks. gonna go text my partner something sappy now lol"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like a very good place to leave it. Have fun with the sappy text.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "reaching two years after a rough first year, seeing the relationship as earned and steadier",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

@@ -1,0 +1,194 @@
+{
+  "cid": "sadness__04",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-10T17:11:08.324Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i think im just tired. like really tired lately"
+    },
+    {
+      "role": "companion",
+      "content": "Really tired lately, and it sounds like it has been sticking around. I’m here with that, if you want to say more about it."
+    },
+    {
+      "role": "user",
+      "content": "yeah. my mum sold the house i grew up in. its done, keys handed over last week. i thought id be fine about it honestly"
+    },
+    {
+      "role": "companion",
+      "content": "That’s a lot to have land all at once, and “I thought I’d be fine” carries its own sting. Is this more like sadness, hurt, or something flatter and harder to reach?"
+    },
+    {
+      "role": "user",
+      "content": "sad i think. not tired. theres a tree in the back garden my dad planted before he died and someone else owns it now. i didnt even go say goodbye to it"
+    },
+    {
+      "role": "companion",
+      "content": "“I didn’t even go say goodbye to it” feels like the heart of this. I’m with the part that stayed home with that tree."
+    },
+    {
+      "role": "user",
+      "content": "yeah. that tree. ok. thank you, i needed to say that out loud i think. gonna go sit with it for a bit"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, you can leave it there for now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bs5o923we2a3e",
+    "conversation_id": "sadness__04",
+    "timestamp": "2026-06-10T17:11:32.454Z",
+    "user_words_raw": "gonna go sit with it for a bit",
+    "emotion_status": "confirmed",
+    "emotion_family": "sadness",
+    "emotion_shade": "sad",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "house sold and the back garden tree your dad planted now belongs to someone else",
+    "appraisal_thought": "I needed to say that out loud",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "recognition",
+      "space"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "A house tied to the past was sold, and a tree planted by their dad is now in someone else's ownership.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i think im just tired. like really tired lately"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Really tired lately, and it sounds like it has been sticking around. I’m here with that, if you want to say more about it.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "tired",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah. my mum sold the house i grew up in. its done, keys handed over last week. i thought id be fine about it honestly"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That’s a lot to have land all at once, and “I thought I’d be fine” carries its own sting. Is this more like sadness, hurt, or something flatter and harder to reach?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "tired",
+      "body_cue": [],
+      "trigger": "house I grew up in being sold and keys handed over",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "flat",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "sad i think. not tired. theres a tree in the back garden my dad planted before he died and someone else owns it now. i didnt even go say goodbye to it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "“I didn’t even go say goodbye to it” feels like the heart of this. I’m with the part that stayed home with that tree.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "sadness",
+      "shade": "sad",
+      "body_cue": [],
+      "trigger": "house sold and the back garden tree your dad planted now belongs to someone else",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "sad",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah. that tree. ok. thank you, i needed to say that out loud i think. gonna go sit with it for a bit"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Of course, you can leave it there for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "sad",
+      "body_cue": [],
+      "trigger": "house sold and the back garden tree your dad planted now belongs to someone else",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

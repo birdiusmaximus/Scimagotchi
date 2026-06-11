@@ -1,0 +1,161 @@
+{
+  "cid": "anger__04",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-09T18:17:03.741Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey there"
+    },
+    {
+      "role": "companion",
+      "content": "Hey there — good to see you. What’s been going on today?"
+    },
+    {
+      "role": "user",
+      "content": "not much. long day. work was fine i guess. mostly just thinking about my sister honestly"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a long, quiet kind of day, with your sister staying in the background of it. What’s coming up when you think about her?"
+    },
+    {
+      "role": "user",
+      "content": "she borrowed money again. like the third time. and she didnt even ask this time she just assumed id cover the rent thing. and im the one who looks like the bad guy if i say no. it makes me so mad"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really maddening — like you’re being put in the bad-guy spot for not agreeing. Is it more anger, or anger mixed with hurt?"
+    },
+    {
+      "role": "user",
+      "content": "both i think. mostly anger though. she just expects it cause im the older one. anyway. just needed to say it out loud. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — mostly anger, with some hurt underneath it, and the “older one” expectation sounds like part of what’s stinging. We can leave it here, or if you want, I can stay with the feeling a little longer."
+    },
+    {
+      "role": "user",
+      "content": "lets leave it there. feels a bit better just saying it. night"
+    },
+    {
+      "role": "companion",
+      "content": "Night — I’m glad you said it out loud. It can rest here for now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yp3988p5wwmkz",
+    "conversation_id": "anger__04",
+    "timestamp": "2026-06-09T18:17:31.603Z",
+    "user_words_raw": "feels a bit better just saying it",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "frustrated",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "she borrowed money again and assumed I'd cover the rent thing",
+    "appraisal_thought": "it makes me look like the bad guy if I say no",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "User may want to pause after naming a family-related resentment and hurt.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey there"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey there — good to see you. What’s been going on today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "not much. long day. work was fine i guess. mostly just thinking about my sister honestly"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a long, quiet kind of day, with your sister staying in the background of it. What’s coming up when you think about her?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "quiet preoccupation",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "she borrowed money again. like the third time. and she didnt even ask this time she just assumed id cover the rent thing. and im the one who looks like the bad guy if i say no. it makes me so mad"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds really maddening — like you’re being put in the bad-guy spot for not agreeing. Is it more anger, or anger mixed with hurt?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "maddening",
+      "body_cue": [],
+      "trigger": "she borrowed money again and assumed I'd cover the rent thing"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "both i think. mostly anger though. she just expects it cause im the older one. anyway. just needed to say it out loud. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — mostly anger, with some hurt underneath it, and the “older one” expectation sounds like part of what’s stinging. We can leave it here, or if you want, I can stay with the feeling a little longer.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "she borrowed money again and assumed I'd cover the rent thing"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "lets leave it there. feels a bit better just saying it. night"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Night — I’m glad you said it out loud. It can rest here for now.",
+      "stage": "named",
+      "unlocked": false,
+      "family": null,
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "she borrowed money again and assumed I'd cover the rent thing"
+    }
+  ]
+}

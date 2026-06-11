@@ -2,59 +2,78 @@
   "cid": "pressure__08",
   "emotion": "pressure",
   "persona": null,
-  "created": "2026-06-09T17:46:02.339Z",
+  "created": "2026-06-10T22:07:24.594Z",
   "history": [
     {
       "role": "user",
-      "content": "idk if these things even work but ok. i just feel like theres too much going on rn"
+      "content": "hi. i dont really know why im here honestly. just kind of a weird night"
     },
     {
       "role": "companion",
-      "content": "That sounds like pressure, maybe a bit flooded. Is it more like too much to do, too much happening, or both?"
+      "content": "Hey. A “weird night” is enough to start with, no need to explain it all at once."
     },
     {
       "role": "user",
-      "content": "both i guess. my contract ends in like 8 weeks and i have no idea whats next. cant really plan anything"
+      "content": "yeah. idk its just been a lot lately. my brain wont turn off. theres this thing with work, like my contract ends in august and nobody will tell me if theyre keeping me on"
     },
     {
       "role": "companion",
-      "content": "That sounds really flooded — the ending and the not-knowing are both taking up space. Does it feel more like rushed, trapped, or just stretched thin?"
+      "content": "That sounds like a lot to be carrying, especially with nobody telling you whether you’re being kept on. I’m wondering if the strongest part is the not knowing, or the work itself?"
     },
     {
       "role": "user",
-      "content": "stretched thin yeah. like im job hunting and still doing the actual job and everyone keeps asking what my plans are and i dont have an answer"
+      "content": "the not knowing for sure. like i cant plan anything. cant look for a flat, cant say yes to stuff in september, my sister keeps asking if ill come to her thing and i just. i dont know where ill even be. its like my whole life is on pause waiting for someone to send one email"
     },
     {
       "role": "companion",
-      "content": "That does sound stretched thin — job hunting, doing the job, and having to answer before you have one. Does it make you want to speed up, shut down, or just escape the questions?"
+      "content": "That has a paused, held-in-place feeling to it, especially when even simple plans get stuck behind one email. Where does it seem to sit for you, or what does it make you want to do?"
     },
     {
       "role": "user",
-      "content": "escape the questions probably lol. anyway this helped a little more than i thought. gonna get back to it. thanks"
+      "content": "honestly it makes me want to just disappear for a bit lol. not in a bad way just like. go off grid. but i cant because i need to be reachable for the email lol so even that. anyway idk. it just sits in my chest mostly. tight"
     },
     {
       "role": "companion",
-      "content": "That makes sense — the questions sound like the part you want to get away from. We can leave it here for now, and if you want, you can come back to it another time."
+      "content": "Tight in your chest fits with how boxed in this feels, like even “go off grid” gets blocked by having to stay reachable. We can leave it there for now if you want, or stay with that tightness a little longer."
+    },
+    {
+      "role": "user",
+      "content": "maybe a little longer. its weird saying it out loud even to a screen. i think the worst part is i feel stupid for being this stressed about a maybe. like nothing bad has even happened yet. its just the waiting and my head fills in all the worst versions"
+    },
+    {
+      "role": "companion",
+      "content": "That \"waiting\" sounds like it keeps feeding the worst versions, and then you end up carrying the stress of something that has not even happened yet. I can stay with that if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah. that. you kind of nailed it actually. i dont know it helps a tiny bit to just say the shape of it. i should try to sleep. thanks for this, weirdly. night"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it helped a little to name it, even if it still feels weird. Sleep sounds like a good place to let this rest for now, night."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6xl6syk8m17zj6",
+    "id": "evt_mq8md5yc3infliew",
     "conversation_id": "pressure__08",
-    "timestamp": "2026-06-09T17:46:23.837Z",
-    "user_words_raw": "escape the questions",
+    "timestamp": "2026-06-10T22:08:04.673Z",
+    "user_words_raw": "the waiting and my head fills in all the worst versions",
     "emotion_status": "confirmed",
     "emotion_family": "pressure",
-    "emotion_shade": "stretched thin",
+    "emotion_shade": "trapped",
     "secondary_emotions": [],
     "valence": "negative",
     "activation": "high",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "job hunting while still doing the actual job, with people asking about plans before there's an answer",
-    "appraisal_thought": "I don't have an answer yet",
-    "body_cue": [],
+    "trigger_event": "waiting for a work email about whether a contract will be renewed",
+    "appraisal_thought": "my whole life is on pause waiting for someone to send one email",
+    "body_cue": [
+      "tight in my chest"
+    ],
     "behaviour_action": [
-      "escape the questions"
+      "want to disappear for a bit",
+      "stay reachable"
     ],
     "coping_response": [],
     "outcome": null,
@@ -68,76 +87,176 @@
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Work transition feels stretched thin, especially around having to answer questions before there is a plan.",
+    "memory_note": "Waiting for a work decision has been making it hard to plan ahead and sleep.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "idk if these things even work but ok. i just feel like theres too much going on rn"
+      "content": "hi. i dont really know why im here honestly. just kind of a weird night"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds like pressure, maybe a bit flooded. Is it more like too much to do, too much happening, or both?",
-      "stage": "named",
+      "content": "Hey. A “weird night” is enough to start with, no need to explain it all at once.",
+      "stage": "noticed",
       "unlocked": false,
-      "family": "pressure",
-      "shade": "flooded",
+      "family": null,
+      "shade": null,
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "both i guess. my contract ends in like 8 weeks and i have no idea whats next. cant really plan anything"
+      "content": "yeah. idk its just been a lot lately. my brain wont turn off. theres this thing with work, like my contract ends in august and nobody will tell me if theyre keeping me on"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds really flooded — the ending and the not-knowing are both taking up space. Does it feel more like rushed, trapped, or just stretched thin?",
-      "stage": "named",
+      "content": "That sounds like a lot to be carrying, especially with nobody telling you whether you’re being kept on. I’m wondering if the strongest part is the not knowing, or the work itself?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "pressure",
-      "shade": "flooded",
+      "shade": "unclear",
       "body_cue": [],
-      "trigger": "contract ending in about 8 weeks; uncertainty about what comes next and not being able to plan"
+      "trigger": "contract ending in august and no one saying whether they’ll be kept on",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "stretched thin yeah. like im job hunting and still doing the actual job and everyone keeps asking what my plans are and i dont have an answer"
+      "content": "the not knowing for sure. like i cant plan anything. cant look for a flat, cant say yes to stuff in september, my sister keeps asking if ill come to her thing and i just. i dont know where ill even be. its like my whole life is on pause waiting for someone to send one email"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That does sound stretched thin — job hunting, doing the job, and having to answer before you have one. Does it make you want to speed up, shut down, or just escape the questions?",
-      "stage": "named",
+      "content": "That has a paused, held-in-place feeling to it, especially when even simple plans get stuck behind one email. Where does it seem to sit for you, or what does it make you want to do?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "pressure",
-      "shade": "stretched thin",
+      "shade": "trapped",
       "body_cue": [],
-      "trigger": "contract ending in about 8 weeks, job hunting, still doing the actual job, people asking what the plans are"
+      "trigger": "not knowing whether the contract will be renewed and waiting for one email",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "escape the questions probably lol. anyway this helped a little more than i thought. gonna get back to it. thanks"
+      "content": "honestly it makes me want to just disappear for a bit lol. not in a bad way just like. go off grid. but i cant because i need to be reachable for the email lol so even that. anyway idk. it just sits in my chest mostly. tight"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense — the questions sound like the part you want to get away from. We can leave it here for now, and if you want, you can come back to it another time.",
+      "content": "Tight in your chest fits with how boxed in this feels, like even “go off grid” gets blocked by having to stay reachable. We can leave it there for now if you want, or stay with that tightness a little longer.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "trapped",
+      "body_cue": [
+        "tight in my chest"
+      ],
+      "trigger": "waiting for a work email about whether a contract will be renewed, while needing to stay reachable",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "maybe a little longer. its weird saying it out loud even to a screen. i think the worst part is i feel stupid for being this stressed about a maybe. like nothing bad has even happened yet. its just the waiting and my head fills in all the worst versions"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That \"waiting\" sounds like it keeps feeding the worst versions, and then you end up carrying the stress of something that has not even happened yet. I can stay with that if you want.",
       "stage": "understood",
       "unlocked": true,
       "family": "pressure",
-      "shade": "stretched thin",
-      "body_cue": [],
-      "trigger": "job hunting while still doing the actual job, with people asking about plans before there's an answer"
+      "shade": "trapped",
+      "body_cue": [
+        "tight in my chest"
+      ],
+      "trigger": "waiting for a work email about whether a contract will be renewed",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "trapped",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. that. you kind of nailed it actually. i dont know it helps a tiny bit to just say the shape of it. i should try to sleep. thanks for this, weirdly. night"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad it helped a little to name it, even if it still feels weird. Sleep sounds like a good place to let this rest for now, night.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "trapped",
+      "body_cue": [
+        "tight in my chest"
+      ],
+      "trigger": "waiting for a work email about whether a contract will be renewed",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

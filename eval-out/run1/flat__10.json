@@ -1,0 +1,203 @@
+{
+  "cid": "flat__10",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-09T18:26:39.831Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. i dont really know why im here honestly. i guess i just feel kind of nothing lately and its weird"
+    },
+    {
+      "role": "companion",
+      "content": "Hey. That sounds like a weird kind of nothing — maybe blank, numb, or just hard to pin down. Does it feel more like nothing is there, or like it’s out of reach?"
+    },
+    {
+      "role": "user",
+      "content": "i think out of reach? like its there somewhere but i cant get to it. ok so theres this thing. i got some bloodwork back a few weeks ago and theres stuff thats not normal and i have to do more tests and the doctor was kind of vague and i should be scared right, like a normal person would be freaking out, but i just... am not. i feel completely flat about it. and then theres this other part of me thats like weirdly annoyed at myself for not caring more. so both at once i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like flatness with a layer of annoyance at yourself — like the feeling is there, but distant. Does it feel more blank and detached, or more like you’re holding back a reaction?"
+    },
+    {
+      "role": "user",
+      "content": "blank and detached i think. like im reading about someone elses test results. i told my sister on the phone and she got all teary and i was just sitting there like oh. nothing. and i kept waiting for it to hit me later, like in the shower or at 2am or whatever, and it just doesnt. its been almost three weeks. i go through the day fine, i eat, i work, i laugh at stuff, but underneath its just this gray nothing about the actual scary part. and the annoyed part is louder than the scared part which is so backwards"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really detached and gray, with the annoyed part standing nearer than the scared part. Is there anything in your body that goes with it at all, even faintly?"
+    },
+    {
+      "role": "user",
+      "content": "huh. my body. i dunno. now that you say it theres maybe this kind of heavy thing in my chest, not like pain just... weight? like a flat stone sitting there. and my shoulders are always up by my ears lately but i dont feel anxious if that makes sense. its like my body got the memo that somethings wrong even tho my head refuses to. i havent really stopped to notice any of that til now. i kind of just keep moving so i dont have to sit in it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a heavy, flat stone in your chest, with your body staying alert while your head stays far away from it. Did anything seem to set this off before the grayness started, or did it just arrive with the bloodwork?"
+    },
+    {
+      "role": "user",
+      "content": "i think it just arrived with the bloodwork. tho honestly maybe its not the first time. my mom was sick for a long time when i was a teenager and i remember being weirdly calm and useful the whole time while everyone fell apart, and people kept saying how strong i was. maybe i just learned to go flat when health stuff gets scary. like its a switch that flips. its kind of clicking for me a little, saying it out loud. the going numb isnt random, its like the oldest trick i have"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it sounds like this flatness may be a very familiar switch for health fear, not something random. If you want, we can stay with that old trick a little longer, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "yeah i think id like to leave it here for now. thats kind of a lot already. but the switch thing, im gonna sit with that. thank you. i didnt expect to actually figure something out. ok. gonna go before it gets too real lol. thanks again"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like enough for now, and it makes sense to let it rest there. I’m glad the switch got a little clearer; come back anytime if you want to look at it again."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z1fkign3y7q84",
+    "conversation_id": "flat__10",
+    "timestamp": "2026-06-09T18:27:19.803Z",
+    "user_words_raw": "the oldest trick i have",
+    "emotion_status": "confirmed",
+    "emotion_family": "flat",
+    "emotion_shade": "detached",
+    "secondary_emotions": [
+      "pressure"
+    ],
+    "valence": "mixed",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "bloodwork came back not normal and more tests are needed",
+    "appraisal_thought": "this is the oldest trick i have",
+    "body_cue": [
+      "heavy thing in my chest",
+      "shoulders are always up by my ears"
+    ],
+    "behaviour_action": [
+      "keep moving so i dont have to sit in it"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "clarity",
+      "space",
+      "permission not to know"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Health scares seem to bring on a familiar flat switch; body stays tense while mind goes distant.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. i dont really know why im here honestly. i guess i just feel kind of nothing lately and its weird"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey. That sounds like a weird kind of nothing — maybe blank, numb, or just hard to pin down. Does it feel more like nothing is there, or like it’s out of reach?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i think out of reach? like its there somewhere but i cant get to it. ok so theres this thing. i got some bloodwork back a few weeks ago and theres stuff thats not normal and i have to do more tests and the doctor was kind of vague and i should be scared right, like a normal person would be freaking out, but i just... am not. i feel completely flat about it. and then theres this other part of me thats like weirdly annoyed at myself for not caring more. so both at once i guess"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like flatness with a layer of annoyance at yourself — like the feeling is there, but distant. Does it feel more blank and detached, or more like you’re holding back a reaction?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": "bloodwork came back not normal and the doctor was vague about more tests"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "blank and detached i think. like im reading about someone elses test results. i told my sister on the phone and she got all teary and i was just sitting there like oh. nothing. and i kept waiting for it to hit me later, like in the shower or at 2am or whatever, and it just doesnt. its been almost three weeks. i go through the day fine, i eat, i work, i laugh at stuff, but underneath its just this gray nothing about the actual scary part. and the annoyed part is louder than the scared part which is so backwards"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds really detached and gray, with the annoyed part standing nearer than the scared part. Is there anything in your body that goes with it at all, even faintly?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "detached",
+      "body_cue": [],
+      "trigger": "bloodwork came back not normal and more tests are needed"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "huh. my body. i dunno. now that you say it theres maybe this kind of heavy thing in my chest, not like pain just... weight? like a flat stone sitting there. and my shoulders are always up by my ears lately but i dont feel anxious if that makes sense. its like my body got the memo that somethings wrong even tho my head refuses to. i havent really stopped to notice any of that til now. i kind of just keep moving so i dont have to sit in it"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like a heavy, flat stone in your chest, with your body staying alert while your head stays far away from it. Did anything seem to set this off before the grayness started, or did it just arrive with the bloodwork?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "detached",
+      "body_cue": [
+        "heavy thing in my chest",
+        "flat stone sitting there",
+        "shoulders are always up by my ears"
+      ],
+      "trigger": "bloodwork came back not normal and more tests are needed"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i think it just arrived with the bloodwork. tho honestly maybe its not the first time. my mom was sick for a long time when i was a teenager and i remember being weirdly calm and useful the whole time while everyone fell apart, and people kept saying how strong i was. maybe i just learned to go flat when health stuff gets scary. like its a switch that flips. its kind of clicking for me a little, saying it out loud. the going numb isnt random, its like the oldest trick i have"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That makes sense — it sounds like this flatness may be a very familiar switch for health fear, not something random. If you want, we can stay with that old trick a little longer, or leave it here for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "detached",
+      "body_cue": [],
+      "trigger": "bloodwork came back not normal and more tests are needed; health scare seems to bring on the same flatness"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah i think id like to leave it here for now. thats kind of a lot already. but the switch thing, im gonna sit with that. thank you. i didnt expect to actually figure something out. ok. gonna go before it gets too real lol. thanks again"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels like enough for now, and it makes sense to let it rest there. I’m glad the switch got a little clearer; come back anytime if you want to look at it again.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "detached",
+      "body_cue": [
+        "heavy thing in my chest",
+        "shoulders are always up by my ears"
+      ],
+      "trigger": "bloodwork came back not normal and more tests are needed"
+    }
+  ]
+}

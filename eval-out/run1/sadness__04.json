@@ -1,0 +1,165 @@
+{
+  "cid": "sadness__04",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-09T18:18:45.088Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey there. how are you today?"
+    },
+    {
+      "role": "companion",
+      "content": "Hey there — I’m here and glad to see you. How’s your day feeling so far?"
+    },
+    {
+      "role": "user",
+      "content": "honestly its been a quiet one. kind of a weird week i guess. been thinking a lot about my dad"
+    },
+    {
+      "role": "companion",
+      "content": "A quiet week with your dad on your mind sounds like it’s carrying something underneath it. What’s the feeling around him like, if you had to narrow it a little?"
+    },
+    {
+      "role": "user",
+      "content": "we havent spoken in almost a year. he forgot my birthday last month and i dont even know why it still gets to me. just sad i think"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds sad, and also like it still lands because it was your birthday and he didn’t remember. Does it feel more like hurt, disappointment, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "disappointment mostly. like i keep hoping hell be different and he just isnt. anyway. thanks for listening, i should head off"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like disappointment, and the hope keeps meeting the same person. We can leave it here for now, or if you want, we could stay a little longer with what it’s been like to keep hoping."
+    },
+    {
+      "role": "user",
+      "content": "lets leave it here for now. i think i just needed to say it out loud. thank you"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — I’m glad you said it out loud. Take care for now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yr9c34ysdnmhw",
+    "conversation_id": "sadness__04",
+    "timestamp": "2026-06-09T18:19:10.074Z",
+    "user_words_raw": "i just needed to say it out loud",
+    "emotion_status": "candidate",
+    "emotion_family": "sadness",
+    "emotion_shade": "disappointment",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "he forgot my birthday last month",
+    "appraisal_thought": "i keep hoping hell be different and he just isnt",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "recognition",
+      "connection",
+      "acceptance"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "Has sadness tied to disappointment with father and a pattern of hoping he will be different.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey there. how are you today?"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey there — I’m here and glad to see you. How’s your day feeling so far?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "honestly its been a quiet one. kind of a weird week i guess. been thinking a lot about my dad"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "A quiet week with your dad on your mind sounds like it’s carrying something underneath it. What’s the feeling around him like, if you had to narrow it a little?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "weird",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "we havent spoken in almost a year. he forgot my birthday last month and i dont even know why it still gets to me. just sad i think"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds sad, and also like it still lands because it was your birthday and he didn’t remember. Does it feel more like hurt, disappointment, or something else?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "sad",
+      "body_cue": [],
+      "trigger": "he forgot my birthday last month"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "disappointment mostly. like i keep hoping hell be different and he just isnt. anyway. thanks for listening, i should head off"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like disappointment, and the hope keeps meeting the same person. We can leave it here for now, or if you want, we could stay a little longer with what it’s been like to keep hoping.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "disappointment",
+      "body_cue": [],
+      "trigger": "he forgot my birthday last month"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "lets leave it here for now. i think i just needed to say it out loud. thank you"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Of course — I’m glad you said it out loud. Take care for now.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "disappointment",
+      "body_cue": [],
+      "trigger": "he forgot my birthday last month"
+    }
+  ]
+}

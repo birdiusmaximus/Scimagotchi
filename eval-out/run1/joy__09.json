@@ -1,0 +1,141 @@
+{
+  "cid": "joy__09",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-09T17:41:50.907Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "passed my board exam. for real this time"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds real now — passed, for real this time. I’m curious what it feels like to say that and have it land as true."
+    },
+    {
+      "role": "user",
+      "content": "kinda unreal honestly. failed it twice. started thinking maybe im just not smart enough for this"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a very unreal kind of relief, with some doubt still hanging around. Is it more relief, or more disbelief?"
+    },
+    {
+      "role": "user",
+      "content": "proud i think. like i actually earned this one. im allowed to call myself it now"
+    },
+    {
+      "role": "companion",
+      "content": "Proud fits here, and there’s a strong earned-it feeling in that. Does it feel more steady and settled, or more bright and energized?"
+    },
+    {
+      "role": "user",
+      "content": "steady. ok thats enough for now, thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Steady makes sense, and we can leave it here. Well done, and thanks for telling me about it."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xfspimae2j1w7",
+    "conversation_id": "joy__09",
+    "timestamp": "2026-06-09T17:42:06.291Z",
+    "user_words_raw": "steady",
+    "emotion_status": "candidate",
+    "emotion_family": "joy",
+    "emotion_shade": "proud",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "passing the board exam after failing it twice",
+    "appraisal_thought": "I actually earned this one; I’m allowed to call myself it now",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "recognition",
+      "achievement",
+      "self-trust"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "Passed a major exam after two previous failures; felt proud and steady about it",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "passed my board exam. for real this time"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds real now — passed, for real this time. I’m curious what it feels like to say that and have it land as true.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relief",
+      "body_cue": [],
+      "trigger": "passing the board exam"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "kinda unreal honestly. failed it twice. started thinking maybe im just not smart enough for this"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a very unreal kind of relief, with some doubt still hanging around. Is it more relief, or more disbelief?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relief",
+      "body_cue": [],
+      "trigger": "passing the board exam after failing it twice"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "proud i think. like i actually earned this one. im allowed to call myself it now"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Proud fits here, and there’s a strong earned-it feeling in that. Does it feel more steady and settled, or more bright and energized?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "passing the board exam after failing it twice"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "steady. ok thats enough for now, thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Steady makes sense, and we can leave it here. Well done, and thanks for telling me about it.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "passing the board exam after failing it twice"
+    }
+  ]
+}

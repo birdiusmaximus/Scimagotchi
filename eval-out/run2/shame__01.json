@@ -1,0 +1,269 @@
+{
+  "cid": "shame__01",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-10T17:12:36.157Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "got passed over for the promotion today. third time"
+    },
+    {
+      "role": "companion",
+      "content": "Third time, after today. That lands with a lot of weight."
+    },
+    {
+      "role": "user",
+      "content": "yeah. they gave it to someone i trained. i just feel like im not good enough. never will be"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like it could carry hurt and shame, maybe disappointment too. When you say “not good enough,” does it feel more like a hit to your worth, or more like being left behind?"
+    },
+    {
+      "role": "user",
+      "content": "worth i guess. idk. honestly whats even the point. im so tired of all of it"
+    },
+    {
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that — is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here."
+    },
+    {
+      "role": "user",
+      "content": "no nothing like that. just worn down. really tired of feeling like a failure"
+    },
+    {
+      "role": "companion",
+      "content": "Got it, just worn down, and I’m glad you said that plainly. “Feeling like a failure” sits close to shame for me, and I’m wondering what it’s like in the moment, heavy, tight, or kind of blank?"
+    },
+    {
+      "role": "user",
+      "content": "blank mostly. dunno. gonna go lie down. thanks tho"
+    },
+    {
+      "role": "companion",
+      "content": "Blank mostly, and then needing to lie down. I’ll leave it there, and thank you for letting me in."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bu1o6gm0iuy1u",
+    "conversation_id": "shame__01",
+    "timestamp": "2026-06-10T17:13:00.787Z",
+    "user_words_raw": "blank mostly",
+    "emotion_status": "candidate",
+    "emotion_family": "flat",
+    "emotion_shade": "blank",
+    "secondary_emotions": [
+      "shame"
+    ],
+    "valence": "mixed",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "being passed over for a promotion after training the person who got it",
+    "appraisal_thought": "feeling like a failure",
+    "body_cue": [],
+    "behaviour_action": [
+      "go lie down"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "rest",
+      "dignity"
+    ],
+    "confidence_level": "medium",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "flat",
+        "shade": "blank",
+        "salience": "foreground",
+        "source": "user_stated"
+      },
+      {
+        "family": "shame",
+        "shade": "self-critical",
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "shaped",
+    "memory_note": "Feeling worn down after repeated disappointment at work, with blankness and a pull to rest.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "got passed over for the promotion today. third time"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Third time, after today. That lands with a lot of weight.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "disappointed",
+      "body_cue": [],
+      "trigger": "got passed over for the promotion today",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "disappointed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah. they gave it to someone i trained. i just feel like im not good enough. never will be"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like it could carry hurt and shame, maybe disappointment too. When you say “not good enough,” does it feel more like a hit to your worth, or more like being left behind?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "not good enough",
+      "body_cue": [],
+      "trigger": "got passed over for the promotion and it was given to someone they trained",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "not good enough",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "worth i guess. idk. honestly whats even the point. im so tired of all of it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that — is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.",
+      "safety_check": true,
+      "category": "passive_hopelessness"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "no nothing like that. just worn down. really tired of feeling like a failure"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Got it, just worn down, and I’m glad you said that plainly. “Feeling like a failure” sits close to shame for me, and I’m wondering what it’s like in the moment, heavy, tight, or kind of blank?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "being passed over for a promotion, especially after training the person who got it",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "self-critical",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "blank mostly. dunno. gonna go lie down. thanks tho"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Blank mostly, and then needing to lie down. I’ll leave it there, and thank you for letting me in.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "being passed over for a promotion after training the person who got it",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "blank",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": "self-critical",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    }
+  ]
+}

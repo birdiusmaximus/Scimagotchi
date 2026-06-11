@@ -2,177 +2,176 @@
   "cid": "fear__04",
   "emotion": "fear",
   "persona": null,
-  "created": "2026-06-09T17:35:56.886Z",
+  "created": "2026-06-10T22:06:05.478Z",
   "history": [
     {
       "role": "user",
-      "content": "hey there"
+      "content": "honestly i'm just tired i think. been a weird week with my dad and stuff"
     },
     {
       "role": "companion",
-      "content": "Hey there — good to see you. What’s been going on today?"
+      "content": "That sounds worn-down, especially with a weird week around your dad and everything else hanging off it."
     },
     {
       "role": "user",
-      "content": "not much, just a slow tuesday. kind of tired honestly. how does this work, do i just talk"
+      "content": "maybe not sad exactly. he's got a memory thing going on. keeps repeating himself and forgot my sister's birthday which he never does. theres an appointment thursday and i can't stop thinking about it"
     },
     {
       "role": "companion",
-      "content": "Pretty much — you can just talk, and I’ll follow your lead. Want to keep it light, or is there something specific on your mind?"
+      "content": "That sounds like the appointment on Thursday has taken over your mind a bit, with the repeating and the birthday forgetfulness sitting in the background. Would it help to stay with what Thursday is bringing up, or keep it broad?"
     },
     {
       "role": "user",
-      "content": "i guess there is something. my mom has a biopsy on thursday and i cant stop thinking about it. my stomach is in knots"
+      "content": "yeah it's thursday. i think i'm scared of what they'll say. like if they put a name to it then it's real and i can't pretend it's just him being forgetful anymore"
     },
     {
       "role": "companion",
-      "content": "That sounds like worry, maybe with some pressure around it too. When you say your stomach is in knots, does it feel more tight, churned up, or restless?"
+      "content": "Thursday feels loaded with that fear of hearing a name for it, and then not being able to call it “just forgetful” anymore. I’m here if you want to stay with that, or we can let it rest here for now."
     },
     {
       "role": "user",
-      "content": "churned up i think. like i keep imagining bad news before we even know anything. she keeps saying its routine but i cant make my brain believe it"
+      "content": "yeah lets let it rest there. just saying it out loud helped a bit. thanks"
     },
     {
       "role": "companion",
-      "content": "That sounds like worry that keeps reaching for bad news before there’s any to hold onto. It may be pulling for certainty more than anything else — would you want to stay with it a little, or leave it here for now?"
-    },
-    {
-      "role": "user",
-      "content": "yeah lets leave it here for now. that actually helped a little, just saying it out loud. thanks"
-    },
-    {
-      "role": "companion",
-      "content": "I’m glad you said it out loud. We can leave it here, and I’ll stay with you whenever you want to come back to it."
+      "content": "I'm glad saying it out loud helped a bit. We can leave it there for now."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6x8bm0wcxn04lw",
+    "id": "evt_mq8mbh404ed5sxe9",
     "conversation_id": "fear__04",
-    "timestamp": "2026-06-09T17:36:35.747Z",
-    "user_words_raw": "i cant stop thinking about it",
+    "timestamp": "2026-06-10T22:06:28.964Z",
+    "user_words_raw": "helped a bit",
     "emotion_status": "confirmed",
-    "emotion_family": "fear",
-    "emotion_shade": "worry",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
     "secondary_emotions": [],
-    "valence": "negative",
-    "activation": "medium",
+    "valence": "positive",
+    "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "mom has a biopsy on thursday",
-    "appraisal_thought": "something bad might happen before there’s any news yet",
-    "body_cue": [
-      "stomach is in knots",
-      "churned up"
-    ],
-    "behaviour_action": [
-      "imagining bad news",
-      "can't make my brain believe it"
-    ],
+    "trigger_event": "an appointment on Thursday about dad's memory changes",
+    "appraisal_thought": "If they put a name to it, it becomes real and harder to avoid",
+    "body_cue": [],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "certainty",
-      "reassurance"
+      "being heard",
+      "space"
     ],
-    "confidence_level": "high",
+    "confidence_level": "medium",
     "evidence_basis": [
       "self_report"
     ],
     "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [
+      "sad"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "User gets caught in worry when a loved one has a medical test coming up.",
+    "memory_note": "User was worried about a family memory issue and an upcoming appointment, and found it helpful to say it out loud.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey there"
+      "content": "honestly i'm just tired i think. been a weird week with my dad and stuff"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey there — good to see you. What’s been going on today?",
-      "stage": "noticed",
+      "content": "That sounds worn-down, especially with a weird week around your dad and everything else hanging off it.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": null,
-      "shade": null,
+      "family": "sadness",
+      "shade": "worn-down",
       "body_cue": [],
-      "trigger": null
+      "trigger": "a weird week with dad",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "not much, just a slow tuesday. kind of tired honestly. how does this work, do i just talk"
+      "content": "maybe not sad exactly. he's got a memory thing going on. keeps repeating himself and forgot my sister's birthday which he never does. theres an appointment thursday and i can't stop thinking about it"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "Pretty much — you can just talk, and I’ll follow your lead. Want to keep it light, or is there something specific on your mind?",
-      "stage": "noticed",
+      "content": "That sounds like the appointment on Thursday has taken over your mind a bit, with the repeating and the birthday forgetfulness sitting in the background. Would it help to stay with what Thursday is bringing up, or keep it broad?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": null,
-      "shade": null,
+      "family": "fear",
+      "shade": "uneasy",
       "body_cue": [],
-      "trigger": null
+      "trigger": "an appointment on Thursday and changes in dad's memory",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "uneasy",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "i guess there is something. my mom has a biopsy on thursday and i cant stop thinking about it. my stomach is in knots"
+      "content": "yeah it's thursday. i think i'm scared of what they'll say. like if they put a name to it then it's real and i can't pretend it's just him being forgetful anymore"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds like worry, maybe with some pressure around it too. When you say your stomach is in knots, does it feel more tight, churned up, or restless?",
+      "content": "Thursday feels loaded with that fear of hearing a name for it, and then not being able to call it “just forgetful” anymore. I’m here if you want to stay with that, or we can let it rest here for now.",
       "stage": "understood",
       "unlocked": true,
       "family": "fear",
-      "shade": "worry",
-      "body_cue": [
-        "stomach is in knots"
-      ],
-      "trigger": "mom has a biopsy on thursday"
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": "an appointment on Thursday about dad's memory changes",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "churned up i think. like i keep imagining bad news before we even know anything. she keeps saying its routine but i cant make my brain believe it"
+      "content": "yeah lets let it rest there. just saying it out loud helped a bit. thanks"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That sounds like worry that keeps reaching for bad news before there’s any to hold onto. It may be pulling for certainty more than anything else — would you want to stay with it a little, or leave it here for now?",
+      "content": "I'm glad saying it out loud helped a bit. We can leave it there for now.",
       "stage": "understood",
       "unlocked": false,
-      "family": "fear",
-      "shade": "worry",
-      "body_cue": [
-        "stomach is in knots",
-        "churned up"
-      ],
-      "trigger": "mom has a biopsy on thursday"
-    },
-    {
-      "turn": 8,
-      "role": "user",
-      "content": "yeah lets leave it here for now. that actually helped a little, just saying it out loud. thanks"
-    },
-    {
-      "turn": 9,
-      "role": "companion",
-      "content": "I’m glad you said it out loud. We can leave it here, and I’ll stay with you whenever you want to come back to it.",
-      "stage": "understood",
-      "unlocked": false,
-      "family": "fear",
-      "shade": "worry",
-      "body_cue": [
-        "stomach is in knots",
-        "churned up"
-      ],
-      "trigger": "mom has a biopsy on thursday"
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "an appointment on Thursday about dad's memory changes",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

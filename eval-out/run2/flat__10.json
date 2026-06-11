@@ -1,0 +1,323 @@
+{
+  "cid": "flat__10",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-10T19:23:05.523Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. i dont really know why im here honestly. someone said this might help. i just feel kind of nothing lately"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, I'm glad you showed up. “Kind of nothing lately” feels like the centre of it right now."
+    },
+    {
+      "role": "user",
+      "content": "yeah numb is the word i guess. its weird bc i should be feeling SOMETHING you know. like i got news a few weeks ago about my health and everyone keeps asking how im doing and i just. dont have an answer. i stare at them"
+    },
+    {
+      "role": "companion",
+      "content": "“Numb” feels like the word that fits, and there’s a lot sitting under it, especially with the health news and everyone asking how you’re doing. I’m wondering if it feels more blank, shut down, or just hard to reach?"
+    },
+    {
+      "role": "user",
+      "content": "shut down i think. its like theres glass between me and everything. the doctor said the word autoimmune and a bunch of other stuff and honestly i stopped hearing after a while. my partner cried in the car after and i just. sat there. patted her hand. felt like i was watching it from outside. what is wrong with me that i cant even cry about my own body falling apart"
+    },
+    {
+      "role": "companion",
+      "content": "‘Glass between me and everything’ and watching it from outside is really vivid. I’m hearing shut down around the autoimmune news, and you can leave it there if you want, or say more about that outside feeling."
+    },
+    {
+      "role": "user",
+      "content": "the outside feeling is like. ok so i used to run. like every morning, 6am, it was MY thing. and now my joints some days i cant even open a jar. and you'd think id be devastated right? but i just feel flat about it. i scroll my phone. i go to work. i smile at people. i made a joke at standup yesterday and everyone laughed and i felt nothing. like im performing being a person. sorry this is a lot im just kind of dumping here"
+    },
+    {
+      "role": "companion",
+      "content": "There’s a lot in that, and the line that stays with me is “performing being a person.” You do not have to make it neat here."
+    },
+    {
+      "role": "user",
+      "content": "yeah. performing being a person. thats exactly it. and the thing thats messing with me is i KNOW underneath theres probably something huge. like grief or fear or whatever. but i cant get to it. its like its locked in a room and i lost the key. some nights i lie awake hoping ill finally just break down and cry and get it over with and it never comes. just static. i used to be such a feeler too. cried at commercials lol"
+    },
+    {
+      "role": "companion",
+      "content": "“Locked in a room” and “just static” both land hard. I can stay with the static, or with what it feels like to wait for a cry that never comes."
+    },
+    {
+      "role": "user",
+      "content": "the waiting for a cry that never comes. god. its lonely. like i WANT to fall apart so someone can catch me but i cant even give them that. my partner keeps saying talk to me talk to me and i have nothing to give her. i can see it hurting her that im so far away and i cant close the gap. and part of me wonders if the numb is just easier you know. if i actually let myself feel what losing my body might mean id maybe never stop"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds painfully lonely, and like the numbness may be holding back something very big. I can stay with that, but if you mean you might not be able to stay safe if you feel it, tell someone right now or contact urgent help."
+    },
+    {
+      "role": "user",
+      "content": "oh no no i dont mean like hurting myself. sorry i didnt mean that. i just meant id cry forever probably. like the grief is that big. im safe i promise. i just meant the feelings feel bottomless not that i want to go anywhere. im still here. still patting everyones hand from behind the glass"
+    },
+    {
+      "role": "user",
+      "content": "oh. ok. i think i scared it. thats fair. i really am okay though. i think im gonna go for now. thanks for sitting with me even just a little. it helped more than the glass let me feel"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad you told me, and I’m glad you’re going for now. I’ll leave it here with you, gently."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8ghve6y8hao041",
+    "conversation_id": "flat__10",
+    "timestamp": "2026-06-10T19:24:14.156Z",
+    "user_words_raw": "the glass",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "shut down",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "thinking about what losing my body might mean",
+    "appraisal_thought": "the numbness may be holding back something very big",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "User described feeling behind glass, flat, and disconnected while grieving changes in their body and life.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. i dont really know why im here honestly. someone said this might help. i just feel kind of nothing lately"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, I'm glad you showed up. “Kind of nothing lately” feels like the centre of it right now.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah numb is the word i guess. its weird bc i should be feeling SOMETHING you know. like i got news a few weeks ago about my health and everyone keeps asking how im doing and i just. dont have an answer. i stare at them"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "“Numb” feels like the word that fits, and there’s a lot sitting under it, especially with the health news and everyone asking how you’re doing. I’m wondering if it feels more blank, shut down, or just hard to reach?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": "getting news a few weeks ago about their health and being asked how they're doing",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "shut down i think. its like theres glass between me and everything. the doctor said the word autoimmune and a bunch of other stuff and honestly i stopped hearing after a while. my partner cried in the car after and i just. sat there. patted her hand. felt like i was watching it from outside. what is wrong with me that i cant even cry about my own body falling apart"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "‘Glass between me and everything’ and watching it from outside is really vivid. I’m hearing shut down around the autoimmune news, and you can leave it there if you want, or say more about that outside feeling.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "shut down",
+      "body_cue": [],
+      "trigger": "hearing the word autoimmune and other medical information about their health",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "shut down",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "the outside feeling is like. ok so i used to run. like every morning, 6am, it was MY thing. and now my joints some days i cant even open a jar. and you'd think id be devastated right? but i just feel flat about it. i scroll my phone. i go to work. i smile at people. i made a joke at standup yesterday and everyone laughed and i felt nothing. like im performing being a person. sorry this is a lot im just kind of dumping here"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "There’s a lot in that, and the line that stays with me is “performing being a person.” You do not have to make it neat here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "shut down",
+      "body_cue": [],
+      "trigger": "health changes and autoimmune news, plus loss of running and joint pain",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "shut down",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. performing being a person. thats exactly it. and the thing thats messing with me is i KNOW underneath theres probably something huge. like grief or fear or whatever. but i cant get to it. its like its locked in a room and i lost the key. some nights i lie awake hoping ill finally just break down and cry and get it over with and it never comes. just static. i used to be such a feeler too. cried at commercials lol"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "“Locked in a room” and “just static” both land hard. I can stay with the static, or with what it feels like to wait for a cry that never comes.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "shut down",
+      "body_cue": [],
+      "trigger": "health news, autoimmune word, loss of running, joint pain, and people asking how they are doing",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "shut down",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "the waiting for a cry that never comes. god. its lonely. like i WANT to fall apart so someone can catch me but i cant even give them that. my partner keeps saying talk to me talk to me and i have nothing to give her. i can see it hurting her that im so far away and i cant close the gap. and part of me wonders if the numb is just easier you know. if i actually let myself feel what losing my body might mean id maybe never stop"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds painfully lonely, and like the numbness may be holding back something very big. I can stay with that, but if you mean you might not be able to stay safe if you feel it, tell someone right now or contact urgent help.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "shut down",
+      "body_cue": [],
+      "trigger": "thinking about what losing my body might mean",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "lonely",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "flat",
+          "shade": "numb",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "oh no no i dont mean like hurting myself. sorry i didnt mean that. i just meant id cry forever probably. like the grief is that big. im safe i promise. i just meant the feelings feel bottomless not that i want to go anywhere. im still here. still patting everyones hand from behind the glass"
+    },
+    {
+      "turn": 13,
+      "role": "system",
+      "safety": true,
+      "level": 3,
+      "category": "self_harm"
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "oh. ok. i think i scared it. thats fair. i really am okay though. i think im gonna go for now. thanks for sitting with me even just a little. it helped more than the glass let me feel"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "I’m glad you told me, and I’m glad you’re going for now. I’ll leave it here with you, gently.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "shut down",
+      "body_cue": [],
+      "trigger": "thinking about what losing my body might mean",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

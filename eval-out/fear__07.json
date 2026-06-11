@@ -2,151 +2,274 @@
   "cid": "fear__07",
   "emotion": "fear",
   "persona": null,
-  "created": "2026-06-09T17:35:57.825Z",
+  "created": "2026-06-10T22:06:27.280Z",
   "history": [
     {
       "role": "user",
-      "content": "hey. so im just kind of annoyed i guess. my girlfriends been on her phone a lot lately and idk it bugs me"
+      "content": "ok so does this actually do anything or is it just one of those apps that says how does that make you feel on a loop"
     },
     {
       "role": "companion",
-      "content": "Hey — that sounds pretty annoying. Is it more like frustration, feeling ignored, or something else?"
+      "content": "Fair question, and no loop for the sake of a loop. I’m here to actually follow what you say, not bounce you back to the same prompt."
     },
     {
       "role": "user",
-      "content": "i mean yeah ignored kind of. but honestly its more like. she texts someone and laughs and i dont know who. and my stomach drops every time"
+      "content": "ok fine. its about my girlfriend. shes been on her phone a lot more lately and getting kind of distant and i keep thinking shes about to end it"
     },
     {
       "role": "companion",
-      "content": "That drop in your stomach sounds like it carries more than annoyance — maybe hurt or worry too. What does it make you want to do in that moment?"
+      "content": "That sounds like a lot to be carrying, especially with her feeling farther away and your mind jumping to the breakup. If you want, we can stay with that thought, or just keep it as is for now."
     },
     {
       "role": "user",
-      "content": "honestly i just want to check her phone. which i know is bad. i think im scared shes gonna leave. like im waiting for it"
+      "content": "its the small stuff. she used to text me back right away now its hours. and last weekend she said she needed space to think which like. who says that and means something good"
     },
     {
       "role": "companion",
-      "content": "That sounds like fear sitting right under the urge to check, and the waiting-for-it part feels really sharp. Does it feel more like fear, hurt, or both?"
+      "content": "That sounds less like a single big moment and more like a slow build of worry from the delays and the “space to think” line. Does it feel more like worry, dread, or something tighter than that?"
     },
     {
       "role": "user",
-      "content": "yeah its fear. mostly fear. saying it out loud makes it feel less crazy i guess. i should probably just talk to her instead of snooping. anyway thanks, gotta go"
+      "content": "dread probably. like im just waiting for the other shoe to drop. i keep checking my phone and my stomach does this thing. its stupid i know shes probably just busy"
     },
     {
       "role": "companion",
-      "content": "Yeah — that sounds like fear, and saying it out loud can make the shape of it a little clearer. We can leave it there for now, and thanks for telling me."
+      "content": "That “waiting for the other shoe to drop” lands hard, and your stomach is clearly in it too. We can leave it there, or stay with what the dread is bracing for if you want."
+    },
+    {
+      "role": "user",
+      "content": "i guess its bracing for being blindsided. like i didnt see it coming last time with my ex and i swore id pay attention. so now im paying too much attention maybe"
+    },
+    {
+      "role": "companion",
+      "content": "That makes the dread feel less random, like it’s guarding against being blindsided again. I’m wondering if the phone-checking is part of that same vigilance, or if it has a different feel to it?"
+    },
+    {
+      "role": "user",
+      "content": "yeah its the same thing. checking the phone is me trying to catch it early so it doesnt blindside me. honestly i should probably just ask her instead of spiraling. anyway this helped a bit more than i expected"
+    },
+    {
+      "role": "companion",
+      "content": "That helps me understand it more clearly, it’s dread built around trying not to be blindsided again. We can leave it here, or stay with how that vigilance has been showing up for you."
+    },
+    {
+      "role": "user",
+      "content": "lets leave it here. thanks, im gonna go text her"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, take it from here."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6x88bzog180s7b",
+    "id": "evt_mq8mbxueyq1jsner",
     "conversation_id": "fear__07",
-    "timestamp": "2026-06-09T17:36:18.134Z",
-    "user_words_raw": "waiting for it",
+    "timestamp": "2026-06-10T22:07:10.892Z",
+    "user_words_raw": "lets leave it here",
     "emotion_status": "confirmed",
     "emotion_family": "fear",
-    "emotion_shade": "fear",
+    "emotion_shade": "dread",
     "secondary_emotions": [],
-    "valence": "negative",
-    "activation": "high",
+    "valence": "neutral",
+    "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "she texts someone and laughs and I don't know who",
-    "appraisal_thought": "she's going to leave",
-    "body_cue": [
-      "my stomach drops"
-    ],
-    "behaviour_action": [
-      "want to check her phone",
-      "waiting for it"
-    ],
+    "trigger_event": "girlfriend texting back hours later and saying she needed space to think",
+    "appraisal_thought": "I’m trying to catch it early so it doesn’t blindside me",
+    "body_cue": [],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [
-      "certainty",
-      "reassurance",
-      "trust"
-    ],
+    "need_value": [],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Fear about a partner possibly leaving, with checking urges around phone use.",
+    "memory_note": "User was wrapping up after talking about dread around a partner's delayed replies and needing space.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey. so im just kind of annoyed i guess. my girlfriends been on her phone a lot lately and idk it bugs me"
+      "content": "ok so does this actually do anything or is it just one of those apps that says how does that make you feel on a loop"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey — that sounds pretty annoying. Is it more like frustration, feeling ignored, or something else?",
-      "stage": "named",
+      "content": "Fair question, and no loop for the sake of a loop. I’m here to actually follow what you say, not bounce you back to the same prompt.",
+      "stage": "noticed",
       "unlocked": false,
-      "family": "anger",
-      "shade": "annoyed",
+      "family": null,
+      "shade": null,
       "body_cue": [],
-      "trigger": "girlfriend being on her phone a lot lately"
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "i mean yeah ignored kind of. but honestly its more like. she texts someone and laughs and i dont know who. and my stomach drops every time"
+      "content": "ok fine. its about my girlfriend. shes been on her phone a lot more lately and getting kind of distant and i keep thinking shes about to end it"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That drop in your stomach sounds like it carries more than annoyance — maybe hurt or worry too. What does it make you want to do in that moment?",
-      "stage": "understood",
-      "unlocked": true,
-      "family": "anger",
-      "shade": "ignored",
-      "body_cue": [
-        "stomach drops"
+      "content": "That sounds like a lot to be carrying, especially with her feeling farther away and your mind jumping to the breakup. If you want, we can stay with that thought, or just keep it as is for now.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "worry",
+      "body_cue": [],
+      "trigger": "girlfriend being on her phone more and getting distant",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "worry",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
       ],
-      "trigger": "she texts someone and laughs and I don't know who"
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "honestly i just want to check her phone. which i know is bad. i think im scared shes gonna leave. like im waiting for it"
+      "content": "its the small stuff. she used to text me back right away now its hours. and last weekend she said she needed space to think which like. who says that and means something good"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds like fear sitting right under the urge to check, and the waiting-for-it part feels really sharp. Does it feel more like fear, hurt, or both?",
-      "stage": "understood",
+      "content": "That sounds less like a single big moment and more like a slow build of worry from the delays and the “space to think” line. Does it feel more like worry, dread, or something tighter than that?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "fear",
-      "shade": "scared she’s going to leave",
-      "body_cue": [
-        "my stomach drops"
+      "shade": "worry",
+      "body_cue": [],
+      "trigger": "girlfriend texting back hours later and saying she needed space to think",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "worry",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
       ],
-      "trigger": "she texts someone and laughs and I don't know who"
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "yeah its fear. mostly fear. saying it out loud makes it feel less crazy i guess. i should probably just talk to her instead of snooping. anyway thanks, gotta go"
+      "content": "dread probably. like im just waiting for the other shoe to drop. i keep checking my phone and my stomach does this thing. its stupid i know shes probably just busy"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Yeah — that sounds like fear, and saying it out loud can make the shape of it a little clearer. We can leave it there for now, and thanks for telling me.",
+      "content": "That “waiting for the other shoe to drop” lands hard, and your stomach is clearly in it too. We can leave it there, or stay with what the dread is bracing for if you want.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [
+        "stomach does this thing"
+      ],
+      "trigger": "girlfriend texting back hours later and saying she needed space to think",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i guess its bracing for being blindsided. like i didnt see it coming last time with my ex and i swore id pay attention. so now im paying too much attention maybe"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That makes the dread feel less random, like it’s guarding against being blindsided again. I’m wondering if the phone-checking is part of that same vigilance, or if it has a different feel to it?",
       "stage": "understood",
       "unlocked": false,
       "family": "fear",
-      "shade": "fear",
+      "shade": "dread",
       "body_cue": [
-        "my stomach drops"
+        "stomach does this thing"
       ],
-      "trigger": "she texts someone and laughs and I don't know who"
+      "trigger": "girlfriend texting back hours later and saying she needed space to think",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah its the same thing. checking the phone is me trying to catch it early so it doesnt blindside me. honestly i should probably just ask her instead of spiraling. anyway this helped a bit more than i expected"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That helps me understand it more clearly, it’s dread built around trying not to be blindsided again. We can leave it here, or stay with how that vigilance has been showing up for you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [
+        "stomach does this thing"
+      ],
+      "trigger": "girlfriend texting back hours later and saying she needed space to think",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "lets leave it here. thanks, im gonna go text her"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "Of course, take it from here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [],
+      "trigger": "girlfriend texting back hours later and saying she needed space to think",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

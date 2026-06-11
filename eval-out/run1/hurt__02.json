@@ -1,0 +1,145 @@
+{
+  "cid": "hurt__02",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-09T18:20:37.921Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. i dunno why im even typing this. just kind of a rough night i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — yeah, a rough night can make even typing feel strange. What’s the roughness like tonight, if you want to stay with it a moment?"
+    },
+    {
+      "role": "user",
+      "content": "my best friend ditched me again. we had plans for ages and she just texted an hour before saying somethin came up. and the thing is i KNOW it was a lie cos she posted herself out with her other friends like 20 min later. and im like angry but also just. small? like why am i never the person someone actually picks"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like anger with something smaller and hurt underneath — like being not picked. Does it feel more like anger, hurt, or both?"
+    },
+    {
+      "role": "user",
+      "content": "both i guess but honestly tonight its just. im so tired of all of it. like whats even the point of trying with people when this keeps happening. i put in all this effort and nobody does it back. i just feel like nothing really matters anymore"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds worn down and really hurt, like the effort itself has started to feel pointless. Does it feel more empty and flat, or more like you want to pull away from people?"
+    },
+    {
+      "role": "user",
+      "content": "more empty i think. just flat. idk i dont really wanna get into it more tonight, im just gonna go lie down. thanks for listening i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, we can leave it there for tonight. I’m glad you said it out loud, and I’ll stay with the flatness if you come back to it later."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ytomhcuj43y9q",
+    "conversation_id": "hurt__02",
+    "timestamp": "2026-06-09T18:21:01.619Z",
+    "user_words_raw": "just flat",
+    "emotion_status": "confirmed",
+    "emotion_family": "flat",
+    "emotion_shade": "flat",
+    "secondary_emotions": [
+      "hurt"
+    ],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "best friend canceled plans and was seen out with other friends",
+    "appraisal_thought": "why am i never the person someone actually picks",
+    "body_cue": [],
+    "behaviour_action": [
+      "go lie down"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "being chosen",
+      "being seen",
+      "belonging"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feeling flat and worn down after a friend canceled plans and seemed dishonest.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. i dunno why im even typing this. just kind of a rough night i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — yeah, a rough night can make even typing feel strange. What’s the roughness like tonight, if you want to stay with it a moment?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "my best friend ditched me again. we had plans for ages and she just texted an hour before saying somethin came up. and the thing is i KNOW it was a lie cos she posted herself out with her other friends like 20 min later. and im like angry but also just. small? like why am i never the person someone actually picks"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like anger with something smaller and hurt underneath — like being not picked. Does it feel more like anger, hurt, or both?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "best friend canceled plans and was seen out with other friends"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "both i guess but honestly tonight its just. im so tired of all of it. like whats even the point of trying with people when this keeps happening. i put in all this effort and nobody does it back. i just feel like nothing really matters anymore"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds worn down and really hurt, like the effort itself has started to feel pointless. Does it feel more empty and flat, or more like you want to pull away from people?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "best friend canceled plans, then was seen out with other friends"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "more empty i think. just flat. idk i dont really wanna get into it more tonight, im just gonna go lie down. thanks for listening i guess"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Yeah, we can leave it there for tonight. I’m glad you said it out loud, and I’ll stay with the flatness if you come back to it later.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": "best friend canceled plans and was seen out with other friends"
+    }
+  ]
+}

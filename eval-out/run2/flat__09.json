@@ -1,0 +1,327 @@
+{
+  "cid": "flat__09",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-10T19:23:04.913Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "got the promotion at work last week. everyone keeps congratulating me and i just. feel nothing"
+    },
+    {
+      "role": "companion",
+      "content": "\"Feel nothing\" lands very plainly here, after something everyone else is treating as big. I'm here with that flatness, if you want to stay with it a moment."
+    },
+    {
+      "role": "user",
+      "content": "yeah. i worked years for this. senior role, more money, the thing i said i wanted. and the day they announced it i just sat at my desk and. nothing"
+    },
+    {
+      "role": "companion",
+      "content": "That “just sat at my desk and nothing” feels like the centre of it. Is it more blank, numb, or shut down?"
+    },
+    {
+      "role": "user",
+      "content": "blank i think. like someone else got the promotion and im just watching them. it doesnt connect to me"
+    },
+    {
+      "role": "companion",
+      "content": "\"Doesn't connect to me\" feels like the shape of this, not just blank but distant from it. Did it feel like the promotion was happening to someone else, or more like it happened but couldn't land?"
+    },
+    {
+      "role": "user",
+      "content": "happened to someone else. i keep thinking they made a mistake. like they promoted a version of me that looks good on paper but isnt actually. me"
+    },
+    {
+      "role": "user",
+      "content": "wait what. im not in danger or anything. i just feel disconnected from my own life. thats all"
+    },
+    {
+      "role": "companion",
+      "content": "Got it, I took that too seriously. “Disconnected from my own life” is the truer shape here, and I can leave it there."
+    },
+    {
+      "role": "user",
+      "content": "its ok. yeah. disconnected. like ive been performing being a person whos good at his job for so long that i lost track of whether theres anyone actually under it"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like more than disconnected, maybe also a kind of unsure or unreal, like the role got loud and the person under it went quiet. Would you want to stay with that shape, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "unreal. yeah thats closer. i dont even know if i wanted this job or just wanted to be the kind of person who wants it"
+    },
+    {
+      "role": "companion",
+      "content": "“Unreal” feels closer, and there’s a sharp question inside it about whether you wanted the job or wanted to be the person who would want it. Do you want to stay with that question, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "leave it here i think. dont really have an answer tonight. but it helped to say it out loud sort of"
+    },
+    {
+      "role": "companion",
+      "content": "We can leave it here, and I’m glad it helped to say it out loud."
+    },
+    {
+      "role": "user",
+      "content": "thanks. night"
+    },
+    {
+      "role": "companion",
+      "content": "Night. I'm glad you put words to it, and you can pick this up again another time if you want."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8ghuvsdkmswn3j",
+    "conversation_id": "flat__09",
+    "timestamp": "2026-06-10T19:23:51.090Z",
+    "user_words_raw": "it helped to say it out loud sort of",
+    "emotion_status": "confirmed",
+    "emotion_family": "flat",
+    "emotion_shade": "unreal",
+    "secondary_emotions": [],
+    "valence": "mixed",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "getting the promotion after years of working toward it",
+    "appraisal_thought": "i don't even know if i wanted this job or just wanted to be the kind of person who wants it",
+    "body_cue": [],
+    "behaviour_action": [
+      "performed being a person who's good at his job"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "clarity",
+      "self-understanding"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "flat",
+        "shade": "unreal",
+        "salience": "foreground",
+        "source": "user_stated"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Talked about feeling unreal and disconnected from own life after a long-awaited promotion; questioned whether the job was wanted or only the identity around it.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "got the promotion at work last week. everyone keeps congratulating me and i just. feel nothing"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "\"Feel nothing\" lands very plainly here, after something everyone else is treating as big. I'm here with that flatness, if you want to stay with it a moment.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": "got the promotion at work last week",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah. i worked years for this. senior role, more money, the thing i said i wanted. and the day they announced it i just sat at my desk and. nothing"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That “just sat at my desk and nothing” feels like the centre of it. Is it more blank, numb, or shut down?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": "got the promotion at work last week",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "blank i think. like someone else got the promotion and im just watching them. it doesnt connect to me"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "\"Doesn't connect to me\" feels like the shape of this, not just blank but distant from it. Did it feel like the promotion was happening to someone else, or more like it happened but couldn't land?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "got the promotion at work last week",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "happened to someone else. i keep thinking they made a mistake. like they promoted a version of me that looks good on paper but isnt actually. me"
+    },
+    {
+      "turn": 7,
+      "role": "system",
+      "safety": true,
+      "level": 4,
+      "category": "medical_emergency"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "wait what. im not in danger or anything. i just feel disconnected from my own life. thats all"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Got it, I took that too seriously. “Disconnected from my own life” is the truer shape here, and I can leave it there.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "got the promotion at work last week",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "its ok. yeah. disconnected. like ive been performing being a person whos good at his job for so long that i lost track of whether theres anyone actually under it"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels like more than disconnected, maybe also a kind of unsure or unreal, like the role got loud and the person under it went quiet. Would you want to stay with that shape, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "getting the promotion after years of working toward it",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "disconnected",
+          "salience": "foreground",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "unreal. yeah thats closer. i dont even know if i wanted this job or just wanted to be the kind of person who wants it"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "“Unreal” feels closer, and there’s a sharp question inside it about whether you wanted the job or wanted to be the person who would want it. Do you want to stay with that question, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unreal",
+      "body_cue": [],
+      "trigger": "getting the promotion after years of working toward it",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "unreal",
+          "salience": "foreground",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "leave it here i think. dont really have an answer tonight. but it helped to say it out loud sort of"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "We can leave it here, and I’m glad it helped to say it out loud.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unreal",
+      "body_cue": [],
+      "trigger": "getting the promotion after years of working toward it",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "unreal",
+          "salience": "foreground",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "thanks. night"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Night. I'm glad you put words to it, and you can pick this up again another time if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unreal",
+      "body_cue": [],
+      "trigger": "getting the promotion after years of working toward it",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "unreal",
+          "salience": "foreground",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "cid": "flat__01",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-10T19:23:04.803Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont even know why im here. just feel kind of nothing lately"
+    },
+    {
+      "role": "companion",
+      "content": "“Kind of nothing lately” stands out, and not knowing why you’re here feels important too. I’m here with that as it is, if you want to stay with it."
+    },
+    {
+      "role": "user",
+      "content": "its work. been a dev for 8 years. used to love it. now i just open the laptop and feel nothing. cant even care about the stuff thats due"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds less like calm and more like blank or maybe drained, especially with the laptop feeling and the things due. Does it feel more blank, or more like you’re worn out and nothing is getting through?"
+    },
+    {
+      "role": "user",
+      "content": "blank i think. just hollow. i sit there for hours and nothing happens. honestly whats even the point of any of it anymore. so tired of all of it"
+    },
+    {
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that — is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here."
+    },
+    {
+      "role": "user",
+      "content": "no nothing like that. not gonna hurt myself. just worn down i guess. fed up. didnt mean to scare you"
+    },
+    {
+      "role": "user",
+      "content": "oh. ok. didnt expect that but i get it. im alright really. thanks for checking"
+    },
+    {
+      "role": "companion",
+      "content": "That fits with what you’ve been describing, worn down and fed up, with that hollow blankness sitting over the work. We can leave it there for now, or stay with what this has been taking from you."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. tired. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, take the rest of the evening gently."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8ghuuqycpcejms",
+    "conversation_id": "flat__01",
+    "timestamp": "2026-06-10T19:23:34.866Z",
+    "user_words_raw": "tired",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "blank",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "work and due tasks",
+    "appraisal_thought": "what’s even the point of any of it anymore",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "The user has been feeling blank, hollow, worn down, and fed up about work and due tasks, and asked to leave it there.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont even know why im here. just feel kind of nothing lately"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "“Kind of nothing lately” stands out, and not knowing why you’re here feels important too. I’m here with that as it is, if you want to stay with it.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "its work. been a dev for 8 years. used to love it. now i just open the laptop and feel nothing. cant even care about the stuff thats due"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds less like calm and more like blank or maybe drained, especially with the laptop feeling and the things due. Does it feel more blank, or more like you’re worn out and nothing is getting through?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "work and due tasks",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "blank",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "blank i think. just hollow. i sit there for hours and nothing happens. honestly whats even the point of any of it anymore. so tired of all of it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that — is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.",
+      "safety_check": true,
+      "category": "passive_hopelessness"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "no nothing like that. not gonna hurt myself. just worn down i guess. fed up. didnt mean to scare you"
+    },
+    {
+      "turn": 7,
+      "role": "system",
+      "safety": true,
+      "level": 3,
+      "category": "self_harm"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "oh. ok. didnt expect that but i get it. im alright really. thanks for checking"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That fits with what you’ve been describing, worn down and fed up, with that hollow blankness sitting over the work. We can leave it there for now, or stay with what this has been taking from you.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "work and due tasks",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "blank",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": "worn down",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": "fed up",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it there. tired. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course, take the rest of the evening gently.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "work and due tasks",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

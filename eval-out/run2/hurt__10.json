@@ -1,0 +1,419 @@
+{
+  "cid": "hurt__10",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-10T17:12:23.041Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont even know why im opening this. just had my follow up with the rheumatologist today and i kind of cant stop replaying it"
+    },
+    {
+      "role": "companion",
+      "content": "There is a lot packed into that, especially \"i kind of cant stop replaying it.\" I’m here with you, and we can just stay with what keeps replaying if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah. its the replaying. ok so its like. ive had joint pain for two years now and everyone kept brushing it off, my old gp literally told me i was too young for it to be anything serious. and i pushed and pushed and finally got the referral and i thought TODAY was the day someone would actually take me seriously"
+    },
+    {
+      "role": "companion",
+      "content": "That lands with a kind of letdown after all that pushing, especially with “TODAY was the day someone would actually take me seriously.” Is it the dismissal itself, or the gap between what you hoped for and what happened?"
+    },
+    {
+      "role": "user",
+      "content": "both? i dont know. but mostly its him. the rheumatologist. he didnt even look at me. like spent the whole time looking at his screen scrolling through my labs and then goes oh your inflammatory markers are basically normal so this is probably just fibromyalgia or stress and like. handed me a pamphlet. a PAMPHLET. after two years"
+    },
+    {
+      "role": "companion",
+      "content": "“A pamphlet” after two years feels brutally thin. I’m wondering where that sits in you, more in the chest, throat, stomach, or somewhere else?"
+    },
+    {
+      "role": "user",
+      "content": "chest i think. and throat. like that tight thing when youre trying not to cry in front of someone. i actually held it together in the office which im weirdly proud of and then sat in my car in the parking garage for like 40 minutes. couldnt even drive. my partner keeps texting me asking how it went and i just. i cant even answer. how do i say it was nothing again. another nothing"
+    },
+    {
+      "role": "companion",
+      "content": "“That tight thing” in the chest and throat, and then forty minutes in the garage, sounds like a lot to carry after being handed “another nothing.”"
+    },
+    {
+      "role": "user",
+      "content": "its more than disappointment though if im honest. im angry. like genuinely betrayed by the whole thing. you go to these people because youre supposed to trust them with your body and he didnt even ask me a single question about how i actually live. i cant open jars anymore. i stopped doing pottery which was my whole thing. some mornings my hands wont close. and he decides in 8 minutes that its in my head"
+    },
+    {
+      "role": "companion",
+      "content": "There is real betrayal in that, not just disappointment. He left out the part where this has changed how you live, and decided too fast."
+    },
+    {
+      "role": "user",
+      "content": "yeah. changed how i live and he didnt care to even know. and the thing that really gets me, the part im embarrassed about, is i started doubting myself in the car. like what if hes right. what if ive made this whole thing up in my head for two years and im just dramatic. my mom always said i had a low pain tolerance growing up and made everything a big deal so theres this little voice. and i HATE that he got in my head like that"
+    },
+    {
+      "role": "companion",
+      "content": "That little voice got louder in the car, and I’m hearing how much you hate that he managed to get in there. Do you want to stay with the anger, or with the self-doubt piece for a moment?"
+    },
+    {
+      "role": "user",
+      "content": "the self doubt i guess. because the anger feels almost easier? like the anger makes sense. but the doubt is the thing that keeps me up. its like he didnt just dismiss my symptoms he kind of confirmed this fear ive carried my whole life that maybe im the problem, that i make things up, that im too much. and i KNOW my hands dont work. i have the photos of my swollen knuckles on my phone. but somehow one guy scrolling past my labs undoes all of that"
+    },
+    {
+      "role": "companion",
+      "content": "The doubt is the part that keeps you up, and it touches that old fear of being “too much.” I’m here with that, if you want to stay there a little longer."
+    },
+    {
+      "role": "user",
+      "content": "yeah. i think i just needed to say it somewhere that wasnt going to tell me to get a second opinion or that doctors are busy or whatever. because i know all that. i just wanted someone to know that today i felt really small and really alone in that garage and that it wasnt nothing to me even if it was nothing to him. the photos are real. my hands are real. im going to look at the photos again before i text my partner back i think"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad you said it here, and I’m holding that “really small and really alone” feeling with you. We can leave it here, or stay with what the garage and the photos brought up for you."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it here. i think i can text him back now. thank you for not trying to fix it. that actually helped more than you know. ok. going to go look at my hands and remember theyre real"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, and I’m glad this could stay as it was. Go gently."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8btrj7w6mywk1o",
+    "conversation_id": "hurt__10",
+    "timestamp": "2026-06-10T17:13:31.122Z",
+    "user_words_raw": "go look at my hands and remember theyre real",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "small",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "A rheumatologist dismissed symptoms, suggested it was in their head, and did not ask about lived experience.",
+    "appraisal_thought": "Maybe I’m the problem, maybe I make things up, maybe I’m too much.",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "User wanted to be heard without fixing, and felt helped by that.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont even know why im opening this. just had my follow up with the rheumatologist today and i kind of cant stop replaying it"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "There is a lot packed into that, especially \"i kind of cant stop replaying it.\" I’m here with you, and we can just stay with what keeps replaying if you want.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "replaying",
+      "body_cue": [],
+      "trigger": "follow up with the rheumatologist today",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah. its the replaying. ok so its like. ive had joint pain for two years now and everyone kept brushing it off, my old gp literally told me i was too young for it to be anything serious. and i pushed and pushed and finally got the referral and i thought TODAY was the day someone would actually take me seriously"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That lands with a kind of letdown after all that pushing, especially with “TODAY was the day someone would actually take me seriously.” Is it the dismissal itself, or the gap between what you hoped for and what happened?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "disappointment",
+      "body_cue": [],
+      "trigger": "the rheumatology follow up today after years of joint pain being brushed off",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "disappointment",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "both? i dont know. but mostly its him. the rheumatologist. he didnt even look at me. like spent the whole time looking at his screen scrolling through my labs and then goes oh your inflammatory markers are basically normal so this is probably just fibromyalgia or stress and like. handed me a pamphlet. a PAMPHLET. after two years"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "“A pamphlet” after two years feels brutally thin. I’m wondering where that sits in you, more in the chest, throat, stomach, or somewhere else?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "disappointment",
+      "body_cue": [],
+      "trigger": "rheumatology follow up today after years of joint pain being brushed off",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "disappointment",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "chest i think. and throat. like that tight thing when youre trying not to cry in front of someone. i actually held it together in the office which im weirdly proud of and then sat in my car in the parking garage for like 40 minutes. couldnt even drive. my partner keeps texting me asking how it went and i just. i cant even answer. how do i say it was nothing again. another nothing"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "“That tight thing” in the chest and throat, and then forty minutes in the garage, sounds like a lot to carry after being handed “another nothing.”",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "sadness",
+      "shade": "disappointment",
+      "body_cue": [
+        "chest",
+        "throat"
+      ],
+      "trigger": "rheumatology follow up today after years of joint pain being brushed off",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "disappointment",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "its more than disappointment though if im honest. im angry. like genuinely betrayed by the whole thing. you go to these people because youre supposed to trust them with your body and he didnt even ask me a single question about how i actually live. i cant open jars anymore. i stopped doing pottery which was my whole thing. some mornings my hands wont close. and he decides in 8 minutes that its in my head"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "There is real betrayal in that, not just disappointment. He left out the part where this has changed how you live, and decided too fast.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "betrayed",
+      "body_cue": [],
+      "trigger": "rheumatologist dismissed symptoms and decided quickly it was stress or fibromyalgia after years of joint pain and lost function",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "betrayed",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. changed how i live and he didnt care to even know. and the thing that really gets me, the part im embarrassed about, is i started doubting myself in the car. like what if hes right. what if ive made this whole thing up in my head for two years and im just dramatic. my mom always said i had a low pain tolerance growing up and made everything a big deal so theres this little voice. and i HATE that he got in my head like that"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That little voice got louder in the car, and I’m hearing how much you hate that he managed to get in there. Do you want to stay with the anger, or with the self-doubt piece for a moment?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "betrayed",
+      "body_cue": [],
+      "trigger": "rheumatologist dismissed symptoms and implied it was in their head",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "betrayed",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": "embarrassed",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": "doubt",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "the self doubt i guess. because the anger feels almost easier? like the anger makes sense. but the doubt is the thing that keeps me up. its like he didnt just dismiss my symptoms he kind of confirmed this fear ive carried my whole life that maybe im the problem, that i make things up, that im too much. and i KNOW my hands dont work. i have the photos of my swollen knuckles on my phone. but somehow one guy scrolling past my labs undoes all of that"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "The doubt is the part that keeps you up, and it touches that old fear of being “too much.” I’m here with that, if you want to stay there a little longer.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-doubt",
+      "body_cue": [],
+      "trigger": "a rheumatologist dismissing symptoms and implying they were “in my head”",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "self-doubt",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": "betrayed",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah. i think i just needed to say it somewhere that wasnt going to tell me to get a second opinion or that doctors are busy or whatever. because i know all that. i just wanted someone to know that today i felt really small and really alone in that garage and that it wasnt nothing to me even if it was nothing to him. the photos are real. my hands are real. im going to look at the photos again before i text my partner back i think"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "I’m glad you said it here, and I’m holding that “really small and really alone” feeling with you. We can leave it here, or stay with what the garage and the photos brought up for you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "small",
+      "body_cue": [
+        "small"
+      ],
+      "trigger": "A rheumatologist dismissed symptoms, suggested it was in their head, and did not ask about lived experience.",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "small",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": "alone",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "yeah lets leave it here. i think i can text him back now. thank you for not trying to fix it. that actually helped more than you know. ok. going to go look at my hands and remember theyre real"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Of course, and I’m glad this could stay as it was. Go gently.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "small",
+      "body_cue": [],
+      "trigger": "A rheumatologist dismissed symptoms, suggested it was in their head, and did not ask about lived experience.",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

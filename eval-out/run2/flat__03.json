@@ -1,0 +1,202 @@
+{
+  "cid": "flat__03",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-10T19:23:04.371Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. not really sure how this works tbh"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that’s completely fine. We can just talk normally, and you can steer it however you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah idk. been a weird week. money stuff mostly. just feel kind of off"
+    },
+    {
+      "role": "companion",
+      "content": "A weird week, with money stuff in the middle of it, can leave everything feeling a bit off. We can stay with just that if you want."
+    },
+    {
+      "role": "user",
+      "content": "not stressed really. more like nothing. got my bonus cut at work and i just stared at the email. didnt feel anything. kinda empty"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds less like stress and more like a kind of empty, shut-off place after the email. Did it feel blank, numb, or just far away?"
+    },
+    {
+      "role": "user",
+      "content": "numb i guess. like i should care about the money but i just dont. anyway. thanks for listening"
+    },
+    {
+      "role": "companion",
+      "content": "Numb fits, and the money part seems to have landed almost like a dead space rather than a feeling. We can leave it here, or stay with what “should care” is doing in that moment if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. appreciate it"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, I’ll leave it there with you. Take care."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8ghuumavlt4qjk",
+    "conversation_id": "flat__03",
+    "timestamp": "2026-06-10T19:23:30.384Z",
+    "user_words_raw": "appreciate it",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "numb",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "got my bonus cut at work",
+    "appraisal_thought": "i should care about the money but i just dont",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [
+      "stressed"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "User can pause and close things once they feel understood.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. not really sure how this works tbh"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that’s completely fine. We can just talk normally, and you can steer it however you want.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah idk. been a weird week. money stuff mostly. just feel kind of off"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "A weird week, with money stuff in the middle of it, can leave everything feeling a bit off. We can stay with just that if you want.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "off",
+      "body_cue": [],
+      "trigger": "money stuff",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "not stressed really. more like nothing. got my bonus cut at work and i just stared at the email. didnt feel anything. kinda empty"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds less like stress and more like a kind of empty, shut-off place after the email. Did it feel blank, numb, or just far away?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "got my bonus cut at work",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "blank",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "numb i guess. like i should care about the money but i just dont. anyway. thanks for listening"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Numb fits, and the money part seems to have landed almost like a dead space rather than a feeling. We can leave it here, or stay with what “should care” is doing in that moment if you want.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": "got my bonus cut at work",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah lets leave it there. appreciate it"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Of course, I’ll leave it there with you. Take care.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": "got my bonus cut at work",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

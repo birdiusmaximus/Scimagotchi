@@ -1,0 +1,317 @@
+{
+  "cid": "sadness__05",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-10T17:11:12.483Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so i found my old college radio show recordings in a drawer today. wild that i used to think id be doing that forever lol"
+    },
+    {
+      "role": "companion",
+      "content": "\"Used to think I'd be doing that forever\" carries a lot of old life in it. There’s a little wildness and maybe a quiet sense of looking back here."
+    },
+    {
+      "role": "user",
+      "content": "i mean its funny but also kind of a gut punch ngl. like there was this version of me at 20 who was SO sure. and that guy would be pretty unimpressed with where i landed"
+    },
+    {
+      "role": "companion",
+      "content": "There’s a punchy mix here, a bit amused and a bit stung. Is the sharper edge more like disappointment, embarrassment, or grief for that 20-year-old certainty?"
+    },
+    {
+      "role": "user",
+      "content": "grief i think? not for a person, just for the plan. i had this whole thing mapped out, music journalism, the whole bit. and i just... didnt. took the safe job. its fine. its fine its fine"
+    },
+    {
+      "role": "companion",
+      "content": "That old map mattered, and the “didn’t” carries some grief and a bit of deflation. I’m hearing the safe job sitting right next to the plan that didn’t happen."
+    },
+    {
+      "role": "user",
+      "content": "yeah. and the dumb part is theres a bit of me thats kind of relieved i didnt chase it? like that life looked exhausting and broke. so im sad AND glad and that combo makes me feel like a fraud somehow"
+    },
+    {
+      "role": "companion",
+      "content": "Sad and glad can sit together, and “fraud” feels like the sharpest word in the room. I’m wondering if the uneasy part is less about the choice itself and more about having both reactions at once?"
+    },
+    {
+      "role": "user",
+      "content": "yeah thats it exactly. the having both at once feels like im not allowed. like pick a lane lol. but i guess theyre both just true"
+    },
+    {
+      "role": "companion",
+      "content": "Both being true at once sounds like the whole knot here. Does it feel more like a split inside you, or like the two reactions are just sitting next to each other?"
+    },
+    {
+      "role": "user",
+      "content": "next to each other i think. anyway didnt mean to get all deep over a box of cringe radio tapes haha. this helped tho weirdly. ok im gonna go put the tapes back. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Ha, fair, and I’m glad it helped in its own odd little way. Put the tapes back gently."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bs98elpat3sz9",
+    "conversation_id": "sadness__05",
+    "timestamp": "2026-06-10T17:11:52.232Z",
+    "user_words_raw": "box of cringe radio tapes",
+    "emotion_status": "confirmed",
+    "emotion_family": "sadness",
+    "emotion_shade": "grieving",
+    "secondary_emotions": [
+      "joy"
+    ],
+    "valence": "mixed",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "looking back at the old plan versus the life they landed in",
+    "appraisal_thought": "the plan mattered, and not following it still carries grief, alongside some relief",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "meaning",
+      "permission to hold mixed feelings"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": "simultaneous",
+    "strands": [
+      {
+        "family": "sadness",
+        "shade": "grieving",
+        "salience": "foreground",
+        "source": "user_stated"
+      },
+      {
+        "family": "joy",
+        "shade": "null",
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 1,
+    "unlock_stage": "understood",
+    "memory_note": "They can feel grief about an old life plan, alongside relief about not pursuing it.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so i found my old college radio show recordings in a drawer today. wild that i used to think id be doing that forever lol"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "\"Used to think I'd be doing that forever\" carries a lot of old life in it. There’s a little wildness and maybe a quiet sense of looking back here.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "reflective",
+      "body_cue": [],
+      "trigger": "found old college radio show recordings in a drawer",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "reflective",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "joy",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i mean its funny but also kind of a gut punch ngl. like there was this version of me at 20 who was SO sure. and that guy would be pretty unimpressed with where i landed"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "There’s a punchy mix here, a bit amused and a bit stung. Is the sharper edge more like disappointment, embarrassment, or grief for that 20-year-old certainty?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "reflective",
+      "body_cue": [],
+      "trigger": "found old college radio show recordings in a drawer",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "amused",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "grief i think? not for a person, just for the plan. i had this whole thing mapped out, music journalism, the whole bit. and i just... didnt. took the safe job. its fine. its fine its fine"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That old map mattered, and the “didn’t” carries some grief and a bit of deflation. I’m hearing the safe job sitting right next to the plan that didn’t happen.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "sadness",
+      "shade": "grieving",
+      "body_cue": [],
+      "trigger": "finding old college radio show recordings and comparing an old plan with where life landed",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "grieving",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah. and the dumb part is theres a bit of me thats kind of relieved i didnt chase it? like that life looked exhausting and broke. so im sad AND glad and that combo makes me feel like a fraud somehow"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Sad and glad can sit together, and “fraud” feels like the sharpest word in the room. I’m wondering if the uneasy part is less about the choice itself and more about having both reactions at once?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grieving",
+      "body_cue": [],
+      "trigger": "looking back at the old plan versus the life they landed in",
+      "label_source": "user_stated",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "grieving",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "calm",
+          "shade": "relieved",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah thats it exactly. the having both at once feels like im not allowed. like pick a lane lol. but i guess theyre both just true"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Both being true at once sounds like the whole knot here. Does it feel more like a split inside you, or like the two reactions are just sitting next to each other?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grieving",
+      "body_cue": [],
+      "trigger": "looking back at the old plan versus the life they landed in",
+      "label_source": "user_confirmed",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "grieving",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "joy",
+          "shade": "relieved",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "next to each other i think. anyway didnt mean to get all deep over a box of cringe radio tapes haha. this helped tho weirdly. ok im gonna go put the tapes back. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Ha, fair, and I’m glad it helped in its own odd little way. Put the tapes back gently.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grieving",
+      "body_cue": [],
+      "trigger": "looking back at the old plan versus the life they landed in",
+      "label_source": "user_stated",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "grieving",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "joy",
+          "shade": "null",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "cid": "shame__04",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-10T17:13:05.752Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i think im just annoyed today. had dinner at my parents and it left me kind of off"
+    },
+    {
+      "role": "companion",
+      "content": "“Annoyed” feels like the clearest word here, and “kind of off” suggests it lingered after dinner. Was it more that something at the table rubbed you the wrong way, or that the whole visit left you unsettled?"
+    },
+    {
+      "role": "user",
+      "content": "yeah maybe annoyed isnt right. my younger sister just got a promotion and my mom kept going on about it and i just sat there. im 34 and still kind of figuring things out"
+    },
+    {
+      "role": "companion",
+      "content": "There’s a sting in “I just sat there,” and the part about being 34 and still figuring things out lands with it. I’m wondering if this feels more blocked, overlooked, or a little embarrassed, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "embarrassed yeah. like i didnt want to be the one without news again. my mom didnt even mean anything by it but i felt small. like im the kid who didnt turn out the way they hoped"
+    },
+    {
+      "role": "companion",
+      "content": "“I felt small” and “the kid who didn’t turn out the way they hoped” is the centre of this. I’m here if you want to stay with it, or we can leave it right there."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. just needed to say it out loud i think. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, and I’m glad you said it out loud. I’ll leave it there with you."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8buou5hac9610u",
+    "conversation_id": "shame__04",
+    "timestamp": "2026-06-10T17:13:27.970Z",
+    "user_words_raw": "say it out loud",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "embarrassed",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "my mom kept going on about it",
+    "appraisal_thought": "I didnt want to be the one without news again",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "being heard"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [
+      "annoyed"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "They sometimes just need to say something out loud and then stop.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i think im just annoyed today. had dinner at my parents and it left me kind of off"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "“Annoyed” feels like the clearest word here, and “kind of off” suggests it lingered after dinner. Was it more that something at the table rubbed you the wrong way, or that the whole visit left you unsettled?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "annoyed",
+      "body_cue": [],
+      "trigger": "dinner at parents' house",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "annoyed",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah maybe annoyed isnt right. my younger sister just got a promotion and my mom kept going on about it and i just sat there. im 34 and still kind of figuring things out"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "There’s a sting in “I just sat there,” and the part about being 34 and still figuring things out lands with it. I’m wondering if this feels more blocked, overlooked, or a little embarrassed, or something else?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "my mom kept going on about it",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "embarrassed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": "blocked",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "embarrassed yeah. like i didnt want to be the one without news again. my mom didnt even mean anything by it but i felt small. like im the kid who didnt turn out the way they hoped"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "“I felt small” and “the kid who didn’t turn out the way they hoped” is the centre of this. I’m here if you want to stay with it, or we can leave it right there.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "my mom kept going on about it",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "embarrassed",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah lets leave it there. just needed to say it out loud i think. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Of course, and I’m glad you said it out loud. I’ll leave it there with you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "my mom kept going on about it",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

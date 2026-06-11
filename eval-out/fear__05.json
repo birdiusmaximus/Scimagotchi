@@ -2,171 +2,305 @@
   "cid": "fear__05",
   "emotion": "fear",
   "persona": null,
-  "created": "2026-06-09T17:35:57.529Z",
+  "created": "2026-06-10T22:06:23.544Z",
   "history": [
     {
       "role": "user",
-      "content": "idk why im even here lol. nothing important. just been weird lately"
+      "content": "ok so this is gonna sound stupid but i cant stop thinking about something from like years ago lol"
     },
     {
       "role": "companion",
-      "content": "That sounds a bit blurry and hard to pin down. Is it more like “weird” in a blank, off, or disconnected way?"
+      "content": "Not stupid at all. Something from years ago is still asking for your attention, I’m here."
     },
     {
       "role": "user",
-      "content": "no not blank. more like my stomach drops randomly. like waiting for a shoe to drop or whatever. anyway its probably nothing"
+      "content": "its dumb. theres this email i never sent back in uni. or like, i did send it and i think i totally tanked a friendship. and now my brain decided 2am was the perfect time to replay it on loop. cool cool cool"
     },
     {
       "role": "companion",
-      "content": "That sounds more like a sudden drop or bracing, not blank. Is there anything that seems to set it off, even a little?"
+      "content": "That sounds more like looping regret or embarrassment than something dumb. Did the email feel more like a misstep, or more like a friendship you lost hold of?"
     },
     {
       "role": "user",
-      "content": "ok dont laugh but i ran into an old coworker last week and it just. dredged stuff up. there was this whole thing at my old job that i kinda blew up and left. thought id buried it lol guess not"
+      "content": "honestly both? like part of me cringes thinking abt it but the bigger thing is im kinda scared. shes still around, mutual friends n stuff, and i keep dreading running into her. like what if she still thinks im that person"
     },
     {
       "role": "companion",
-      "content": "Not laughing — that sounds like it got pulled back up fast. I’m wondering if the drop is tied to that old job thing or to seeing the coworker again?"
+      "content": "I’m holding both, then, the cringing part and the scared part. It sounds like the fear is about being seen as “that person,” and the shame is keeping the old scene alive."
     },
     {
       "role": "user",
-      "content": "both i guess. like what if she told everyone she saw me, what if it all comes back up. ugh idk. its dumb i shouldnt still care. anyway i gotta go but this kinda helped weirdly. thanks"
+      "content": "yeah. the email was me being weirdly cold when she needed me and i never owned it. its been like 6 yrs which is genuinely embarrassing to admit i still care lol. but theres this wedding coming up where shell def be and my stomach drops every time i think abt it"
     },
     {
       "role": "companion",
-      "content": "That doesn’t sound dumb — it sounds like there’s worry about it coming back around, and maybe being seen again in the middle of that old mess. We can leave it here for now if you want, and that’s completely okay."
+      "content": "That wedding is making your stomach drop, and the old email is still very live for you. I’m here if you want to stay with that feeling, or we can leave it here for now."
     },
     {
       "role": "user",
-      "content": "yeah lets leave it. ty for not making it weird. later"
+      "content": "can we stay for a sec. i think the scary part is i never got to just say sorry. and the wedding feels like the universe going haha here u go. maybe i could actually like... message her before then so im not just bracing for impact"
     },
     {
       "role": "companion",
-      "content": "Yeah, we can leave it there. Take care, and come back any time."
+      "content": "That feels like unfinished apology, and the wedding is turning it into a forced encounter. It sounds less like the moment itself and more like not having had your chance to say it properly."
+    },
+    {
+      "role": "user",
+      "content": "yeah thats it exactly. ok im gonna draft something to her before i lose my nerve. thanks for not letting me spiral over a 6 yr old email at 2am lol. genuinely helped"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it helped, and that sounds like a good place to pause. Drafting it before the wedding makes sense."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6x885if9khrr4j",
+    "id": "evt_mq8mbvbhz4x3jw30",
     "conversation_id": "fear__05",
-    "timestamp": "2026-06-09T17:37:07.888Z",
-    "user_words_raw": "stomach drops randomly",
+    "timestamp": "2026-06-10T22:07:04.100Z",
+    "user_words_raw": "never got to just say sorry",
     "emotion_status": "confirmed",
-    "emotion_family": "fear",
-    "emotion_shade": "worried",
-    "secondary_emotions": [],
-    "valence": "negative",
-    "activation": "high",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [
+      "fear",
+      "shame"
+    ],
+    "valence": "mixed",
+    "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "ran into an old coworker after leaving an old job after things “blew up”",
-    "appraisal_thought": "what if she told everyone she saw me, what if it all comes back up",
-    "body_cue": [
-      "stomach drops"
+    "trigger_event": "Thinking about the wedding and an unfinished apology to a former friend",
+    "appraisal_thought": "I never got to say sorry, and now I might have to face her without that.",
+    "body_cue": [],
+    "behaviour_action": [
+      "drafting a message"
     ],
-    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "certainty",
-      "protection"
+      "closure",
+      "repair",
+      "relief"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
     "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "fear",
+        "shade": "scared",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      },
+      {
+        "family": "shame",
+        "shade": "embarrassing",
+        "salience": "background",
+        "source": "user_stated"
+      }
+    ],
+    "mixed_confirmed": 1,
     "unlock_stage": "understood",
-    "memory_note": "Old job stuff got stirred up after seeing a former coworker; they wanted to leave it there.",
+    "memory_note": "Old friendship regret resurfaced around a future event with a mutual friend present.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "idk why im even here lol. nothing important. just been weird lately"
+      "content": "ok so this is gonna sound stupid but i cant stop thinking about something from like years ago lol"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds a bit blurry and hard to pin down. Is it more like “weird” in a blank, off, or disconnected way?",
-      "stage": "named",
+      "content": "Not stupid at all. Something from years ago is still asking for your attention, I’m here.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "flat",
-      "shade": "unclear",
+      "shade": null,
       "body_cue": [],
-      "trigger": null
+      "trigger": "Something from years ago came back into mind.",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "no not blank. more like my stomach drops randomly. like waiting for a shoe to drop or whatever. anyway its probably nothing"
+      "content": "its dumb. theres this email i never sent back in uni. or like, i did send it and i think i totally tanked a friendship. and now my brain decided 2am was the perfect time to replay it on loop. cool cool cool"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds more like a sudden drop or bracing, not blank. Is there anything that seems to set it off, even a little?",
+      "content": "That sounds more like looping regret or embarrassment than something dumb. Did the email feel more like a misstep, or more like a friendship you lost hold of?",
       "stage": "shaped",
       "unlocked": false,
-      "family": "fear",
-      "shade": "uneasy",
-      "body_cue": [
-        "stomach drops randomly"
+      "family": "shame",
+      "shade": "embarrassment",
+      "body_cue": [],
+      "trigger": "Thinking about an email from university and a friendship it may have affected.",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "embarrassment",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
       ],
-      "trigger": null
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "ok dont laugh but i ran into an old coworker last week and it just. dredged stuff up. there was this whole thing at my old job that i kinda blew up and left. thought id buried it lol guess not"
+      "content": "honestly both? like part of me cringes thinking abt it but the bigger thing is im kinda scared. shes still around, mutual friends n stuff, and i keep dreading running into her. like what if she still thinks im that person"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "Not laughing — that sounds like it got pulled back up fast. I’m wondering if the drop is tied to that old job thing or to seeing the coworker again?",
-      "stage": "understood",
-      "unlocked": true,
+      "content": "I’m holding both, then, the cringing part and the scared part. It sounds like the fear is about being seen as “that person,” and the shame is keeping the old scene alive.",
+      "stage": "shaped",
+      "unlocked": false,
       "family": "fear",
-      "shade": "uneasy",
-      "body_cue": [
-        "stomach drops randomly"
+      "shade": "scared",
+      "body_cue": [],
+      "trigger": "Thinking about an old email and the possibility of running into a former friend through mutual friends",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "embarrassment",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": "scared",
+          "salience": "foreground",
+          "source": "user_stated"
+        }
       ],
-      "trigger": "ran into an old coworker after leaving an old job after things “blew up”"
+      "mixed_confirmed": 1
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "both i guess. like what if she told everyone she saw me, what if it all comes back up. ugh idk. its dumb i shouldnt still care. anyway i gotta go but this kinda helped weirdly. thanks"
+      "content": "yeah. the email was me being weirdly cold when she needed me and i never owned it. its been like 6 yrs which is genuinely embarrassing to admit i still care lol. but theres this wedding coming up where shell def be and my stomach drops every time i think abt it"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That doesn’t sound dumb — it sounds like there’s worry about it coming back around, and maybe being seen again in the middle of that old mess. We can leave it here for now if you want, and that’s completely okay.",
+      "content": "That wedding is making your stomach drop, and the old email is still very live for you. I’m here if you want to stay with that feeling, or we can leave it here for now.",
       "stage": "understood",
-      "unlocked": false,
+      "unlocked": true,
       "family": "fear",
-      "shade": "worried",
-      "body_cue": [],
-      "trigger": "ran into an old coworker after leaving an old job after things “blew up”"
+      "shade": "scared",
+      "body_cue": [
+        "stomach drops"
+      ],
+      "trigger": "Thinking about a wedding where a former friend will definitely be present",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "scared",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": "embarrassing",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
     },
     {
       "turn": 8,
       "role": "user",
-      "content": "yeah lets leave it. ty for not making it weird. later"
+      "content": "can we stay for a sec. i think the scary part is i never got to just say sorry. and the wedding feels like the universe going haha here u go. maybe i could actually like... message her before then so im not just bracing for impact"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "Yeah, we can leave it there. Take care, and come back any time.",
+      "content": "That feels like unfinished apology, and the wedding is turning it into a forced encounter. It sounds less like the moment itself and more like not having had your chance to say it properly.",
       "stage": "understood",
       "unlocked": false,
       "family": "fear",
-      "shade": "worried",
+      "shade": "scared",
       "body_cue": [
         "stomach drops"
       ],
-      "trigger": "ran into an old coworker after leaving an old job after things “blew up”"
+      "trigger": "Thinking about a wedding where a former friend will definitely be present",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "scared",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah thats it exactly. ok im gonna draft something to her before i lose my nerve. thanks for not letting me spiral over a 6 yr old email at 2am lol. genuinely helped"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad it helped, and that sounds like a good place to pause. Drafting it before the wedding makes sense.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "Thinking about the wedding and an unfinished apology to a former friend",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "scared",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "shame",
+          "shade": "embarrassing",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
     }
   ]
 }

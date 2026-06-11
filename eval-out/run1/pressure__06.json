@@ -1,0 +1,142 @@
+{
+  "cid": "pressure__06",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-09T17:45:44.855Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont even know why im opening this. just feel so worn down lately"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really worn down, even if the why isn’t clear yet. Does it feel more like heavy, tired, or just drained?"
+    },
+    {
+      "role": "user",
+      "content": "not really tired. more like theres this weight on me. my best friend keeps leaning on me for everything rn and i cant keep up"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds heavy, and maybe a bit pressured too, with your friend leaning on you so much. Does it feel like you want to pull back, or more like you’re carrying too much?"
+    },
+    {
+      "role": "user",
+      "content": "carrying too much i think. shes going thru a breakup and texts me all day every day and i feel awful but i just have nothing left to give"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like carrying too much, with a lot being pulled from you all day. You could leave it here if you want, or we can stay with what it feels like to have nothing left to give."
+    },
+    {
+      "role": "user",
+      "content": "yeah i think ill leave it here. just needed to say it out loud i guess. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense. I’m glad you said it out loud, and we can leave it here."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xktncejgfdrgm",
+    "conversation_id": "pressure__06",
+    "timestamp": "2026-06-09T17:46:03.240Z",
+    "user_words_raw": "nothing left to give",
+    "emotion_status": "confirmed",
+    "emotion_family": "pressure",
+    "emotion_shade": "overloaded",
+    "secondary_emotions": [
+      "guilt"
+    ],
+    "valence": "mixed",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "best friend texting all day every day during a breakup",
+    "appraisal_thought": "nothing left to give",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "permission to rest"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feels pulled on by a close friend’s constant need during a breakup.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont even know why im opening this. just feel so worn down lately"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds really worn down, even if the why isn’t clear yet. Does it feel more like heavy, tired, or just drained?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "worn down",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "not really tired. more like theres this weight on me. my best friend keeps leaning on me for everything rn and i cant keep up"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds heavy, and maybe a bit pressured too, with your friend leaning on you so much. Does it feel like you want to pull back, or more like you’re carrying too much?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "heavy",
+      "body_cue": [],
+      "trigger": "best friend leaning on them for everything"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "carrying too much i think. shes going thru a breakup and texts me all day every day and i feel awful but i just have nothing left to give"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like carrying too much, with a lot being pulled from you all day. You could leave it here if you want, or we can stay with what it feels like to have nothing left to give.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overloaded",
+      "body_cue": [],
+      "trigger": "best friend texting all day every day during her breakup"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah i think ill leave it here. just needed to say it out loud i guess. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense. I’m glad you said it out loud, and we can leave it here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overloaded",
+      "body_cue": [],
+      "trigger": "best friend texting all day every day during a breakup"
+    }
+  ]
+}

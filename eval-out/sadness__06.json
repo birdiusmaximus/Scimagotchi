@@ -2,165 +2,307 @@
   "cid": "sadness__06",
   "emotion": "sadness",
   "persona": null,
-  "created": "2026-06-09T18:19:14.505Z",
+  "created": "2026-06-10T22:09:06.241Z",
   "history": [
     {
       "role": "user",
-      "content": "hey. i dont really know how to start this"
+      "content": "i dont really know why im here. just feeling kind of off today i guess"
     },
     {
       "role": "companion",
-      "content": "Hey — that’s completely fine. We can start wherever feels easiest; what’s been going on?"
+      "content": "That “kind of off” feels like the main thing right now, even if the reason is still blurry. We can leave it there for now, or stay with it a little longer if you want."
     },
     {
       "role": "user",
-      "content": "my best friend hasnt talked to me in like three weeks. we used to text every day"
+      "content": "i dunno. its stupid really. its just a friend thing. probably nothing"
     },
     {
       "role": "companion",
-      "content": "That sounds like a kind of silence that can really land. I’m wondering if it feels more like hurt, worry, or just a strange empty gap?"
+      "content": "Not stupid at all. “Just a friend thing” can still leave you feeling off, even if part of you wants to call it nothing."
     },
     {
       "role": "user",
-      "content": "honestly just empty. like theres this hole where she used to be. i dont even know what i did wrong"
+      "content": "theres this friend. we used to talk every day basically. and lately she just. doesnt. i sent her something last week and nothing. i can see shes been online"
     },
     {
       "role": "companion",
-      "content": "That sounds hollow, like a hole where her presence used to be, and the “what did I do wrong” is sitting right next to it. Does it make you want to pull back, reach out, or just go quiet?"
+      "content": "That sounds like it might land as being left hanging, maybe a bit hurt or brushed off, and the “online” part makes it harder to ignore. Does it feel more like hurt, annoyance, or something else?"
     },
     {
       "role": "user",
-      "content": "go quiet i guess. i dont wanna seem desperate. thanks for listening. i think im gonna go"
+      "content": "more sad i think. like not even angry really. just. did i do something? we were so close and now its like i dont exist. i keep rereading the messages trying to figure out what changed"
     },
     {
       "role": "companion",
-      "content": "That makes sense — it sounds like you want to protect yourself a bit. We can leave it here for now, if you want."
+      "content": "That “we were so close and now it’s like I don’t exist” carries a heavy kind of sadness, and the rereading sounds like you’re trying to find the moment it changed."
     },
     {
       "role": "user",
-      "content": "yeah. lets leave it. thanks"
+      "content": "yeah. i guess i miss her. and i feel kind of pathetic for caring this much when she clearly doesnt. like maybe im the only one who thought we were that close"
     },
     {
       "role": "companion",
-      "content": "Of course. I’ll leave it right there with you."
+      "content": "I’m hearing sadness mixed with a sharp little sting of shame, especially around caring “this much.” It also sounds like her silence has started to mean you may have been more invested than she was."
+    },
+    {
+      "role": "user",
+      "content": "yeah. thats it exactly. i didnt think id say that out loud. i dont really know what to do with it but. it helps to just. say it i guess. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That landing feels important, and we can leave it here if you want. If you stay with it, we could look at what this silence is bringing up for you, but we don't have to."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there for today. im kind of tired. but thank you. really"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, rest easy for today."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yrvt1qfyfla6i",
+    "id": "evt_mq8mfcl5hsuydlb2",
     "conversation_id": "sadness__06",
-    "timestamp": "2026-06-09T18:19:38.361Z",
-    "user_words_raw": "there's this hole where she used to be",
+    "timestamp": "2026-06-10T22:09:47.339Z",
+    "user_words_raw": "kind of tired",
     "emotion_status": "confirmed",
-    "emotion_family": "hurt",
-    "emotion_shade": "empty",
+    "emotion_family": "sadness",
+    "emotion_shade": "sad",
     "secondary_emotions": [],
-    "valence": "negative",
+    "valence": "neutral",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "best friend hasn’t talked in three weeks after texting every day",
-    "appraisal_thought": "I don’t know what I did wrong",
+    "trigger_event": "friend stopped replying after they used to talk every day, while being online",
+    "appraisal_thought": "Maybe I mattered less to her than I thought",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [
-      "belonging",
-      "being seen",
-      "closeness",
-      "repair"
-    ],
+    "need_value": [],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "A close friendship went suddenly quiet after frequent daily contact.",
+    "memory_note": "They may want to end gently when tired after talking about a close friend's silence.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey. i dont really know how to start this"
+      "content": "i dont really know why im here. just feeling kind of off today i guess"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey — that’s completely fine. We can start wherever feels easiest; what’s been going on?",
-      "stage": "noticed",
+      "content": "That “kind of off” feels like the main thing right now, even if the reason is still blurry. We can leave it there for now, or stay with it a little longer if you want.",
+      "stage": "named",
       "unlocked": false,
-      "family": null,
-      "shade": null,
+      "family": "flat",
+      "shade": "unclear",
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "my best friend hasnt talked to me in like three weeks. we used to text every day"
+      "content": "i dunno. its stupid really. its just a friend thing. probably nothing"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds like a kind of silence that can really land. I’m wondering if it feels more like hurt, worry, or just a strange empty gap?",
-      "stage": "named",
+      "content": "Not stupid at all. “Just a friend thing” can still leave you feeling off, even if part of you wants to call it nothing.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "hurt",
-      "shade": "hurt",
+      "family": "flat",
+      "shade": "unclear",
       "body_cue": [],
-      "trigger": "best friend hasn’t talked for three weeks after texting every day"
+      "trigger": "a friend thing",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "unclear",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "honestly just empty. like theres this hole where she used to be. i dont even know what i did wrong"
+      "content": "theres this friend. we used to talk every day basically. and lately she just. doesnt. i sent her something last week and nothing. i can see shes been online"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds hollow, like a hole where her presence used to be, and the “what did I do wrong” is sitting right next to it. Does it make you want to pull back, reach out, or just go quiet?",
-      "stage": "understood",
-      "unlocked": true,
+      "content": "That sounds like it might land as being left hanging, maybe a bit hurt or brushed off, and the “online” part makes it harder to ignore. Does it feel more like hurt, annoyance, or something else?",
+      "stage": "shaped",
+      "unlocked": false,
       "family": "hurt",
-      "shade": "empty",
+      "shade": "left out",
       "body_cue": [],
-      "trigger": "best friend hasn’t talked in three weeks after texting every day"
+      "trigger": "a friend not replying after they used to talk every day, while the user can see she has been online",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "left out",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": "annoyance",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "go quiet i guess. i dont wanna seem desperate. thanks for listening. i think im gonna go"
+      "content": "more sad i think. like not even angry really. just. did i do something? we were so close and now its like i dont exist. i keep rereading the messages trying to figure out what changed"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense — it sounds like you want to protect yourself a bit. We can leave it here for now, if you want.",
-      "stage": "understood",
+      "content": "That “we were so close and now it’s like I don’t exist” carries a heavy kind of sadness, and the rereading sounds like you’re trying to find the moment it changed.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "hurt",
-      "shade": "empty",
+      "family": "sadness",
+      "shade": "sad",
       "body_cue": [],
-      "trigger": "best friend hasn’t talked in three weeks after texting every day"
+      "trigger": "friend not replying after they used to talk every day, while the user can see she has been online",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "sad",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": "left out",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 8,
       "role": "user",
-      "content": "yeah. lets leave it. thanks"
+      "content": "yeah. i guess i miss her. and i feel kind of pathetic for caring this much when she clearly doesnt. like maybe im the only one who thought we were that close"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "Of course. I’ll leave it right there with you.",
+      "content": "I’m hearing sadness mixed with a sharp little sting of shame, especially around caring “this much.” It also sounds like her silence has started to mean you may have been more invested than she was.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "sadness",
+      "shade": "sad",
+      "body_cue": [],
+      "trigger": "friend stopped replying after they used to talk every day, while being online",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "sad",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": "pathetic",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. thats it exactly. i didnt think id say that out loud. i dont really know what to do with it but. it helps to just. say it i guess. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That landing feels important, and we can leave it here if you want. If you stay with it, we could look at what this silence is bringing up for you, but we don't have to.",
       "stage": "understood",
       "unlocked": false,
-      "family": "hurt",
-      "shade": "empty",
+      "family": "sadness",
+      "shade": "sad",
       "body_cue": [],
-      "trigger": "best friend hasn’t talked in three weeks after texting every day"
+      "trigger": "friend stopped replying after they used to talk every day, while being online",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "sad",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "background",
+          "source": "user_confirmed"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "yeah lets leave it there for today. im kind of tired. but thank you. really"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "Of course, rest easy for today.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "sad",
+      "body_cue": [],
+      "trigger": "friend stopped replying after they used to talk every day, while being online",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

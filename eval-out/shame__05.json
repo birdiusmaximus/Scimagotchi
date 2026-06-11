@@ -2,143 +2,242 @@
   "cid": "shame__05",
   "emotion": "shame",
   "persona": null,
-  "created": "2026-06-09T18:24:15.479Z",
+  "created": "2026-06-10T22:10:56.638Z",
   "history": [
     {
       "role": "user",
-      "content": "idk why im even here lol. nothing major"
+      "content": "ok so this app is supposed to help me 'process my feelings' lol. cool. anyway. how does this work"
     },
     {
       "role": "companion",
-      "content": "Sounds like you’re here, but it feels a bit hard to pin down why. Is it more like blank, off, or just not much going on?"
+      "content": "It’s basically a place to put words to whatever’s here, one piece at a time. If you want, you can start with what’s been going on lately, or just test it out a bit."
     },
     {
       "role": "user",
-      "content": "nah not blank. more like cringe. theres this thing from years ago that pops in my head and i wanna die a lil. dumb i know"
+      "content": "lately is fine. lately is great actually. its old stuff. like from years ago that for some reason still lives rent free in my brain at 1am. you'd think i'd have evicted it by now"
     },
     {
       "role": "companion",
-      "content": "That sounds more like shame or embarrassment than blank — a cringey old memory that still stings. What’s the part that flashes up first?"
+      "content": "Yeah, that old stuff still showing up at 1am, like it never got the memo to leave. What kind of feeling does it bring up when it shows up like that?"
     },
     {
       "role": "user",
-      "content": "ok dont laugh. gave this big speech at my mates wedding like 4 yrs ago and totally bombed. mixed up the brides name. THE BRIDE. everyone just kinda stared lol"
+      "content": "honestly? cringe. like full body cringe. its this thing from uni, a presentation i completely bombed. i mean froze, went red, forgot my own slides, the whole disaster reel. and a guy in the front row laughed. and i just. yeah. i think about it more than i think about anything good i ever did which is objectively insane"
     },
     {
       "role": "companion",
-      "content": "Oof — that sounds painfully exposed, like one of those moments that keeps its grip because it was so public. Does it feel more like embarrassment, guilt, or just wanting to hide when it comes back?"
+      "content": "That sounds like it carries a sharp, lingering cringe, and probably some embarrassment too. What part hits hardest when it comes back, the freezing, going red, or that laugh?"
     },
     {
       "role": "user",
-      "content": "wanting to hide mostly. like why do i still care lol its done. anyway thats enough digging for one day i think. ta"
+      "content": "the laugh, easy. but its weird bc its not even really about him? like if im honest theres two things going on. theres the embarrassment which whatever, everyone bombs a presentation. but underneath it theres this other thing thats more like... i proved something. like that was the moment i found out im not actually as smart or capable as i pretended and everyone saw it. thats the part that wont leave"
     },
     {
       "role": "companion",
-      "content": "Yeah, that makes sense — wanting to hide after a moment like that can linger a long time. We can leave it here for today, and if you ever want, we can come back to what it still hooks into."
+      "content": "That “everyone saw it” part sounds much harsher than embarrassment, and very exposed."
+    },
+    {
+      "role": "user",
+      "content": "yeah. exposed is exactly it. like a fraud who got caught. and the dumb thing is i KNOW one bad presentation at 20 doesnt actually mean that. ive done fine since. but the feeling doesnt care about the evidence. it just goes 'they all know what you really are' on loop. god this is bleak for a tuesday lol"
+    },
+    {
+      "role": "companion",
+      "content": "That really does sound like shame, with an exposed, “got caught” feeling to it. I’m learning this one loops on what it says about you, not on the evidence, and that can be a very sticky kind of bleak."
+    },
+    {
+      "role": "user",
+      "content": "sticky bleak. im stealing that. ok thats. weirdly more than i meant to say to an app at lunch. but yeah it helped to actually name the thing instead of just letting it haunt me in the dark. anyway gonna go pretend im a functional adult again. thanks for this"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it got a name, and you can let it sit there now. Go be your functional adult self."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yych2bl1i5x42",
+    "id": "evt_mq8mhpoenjdwx27g",
     "conversation_id": "shame__05",
-    "timestamp": "2026-06-09T18:24:36.109Z",
-    "user_words_raw": "wanting to hide",
+    "timestamp": "2026-06-10T22:11:37.246Z",
+    "user_words_raw": "sticky bleak",
     "emotion_status": "confirmed",
     "emotion_family": "shame",
     "emotion_shade": "exposed",
-    "secondary_emotions": [
-      "embarrassment"
-    ],
+    "secondary_emotions": [],
     "valence": "negative",
     "activation": "medium",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "gave a speech at a mate’s wedding and mixed up the bride’s name",
-    "appraisal_thought": "why do i still care lol its done",
+    "trigger_event": "A university presentation where they froze, forgot slides, and someone laughed.",
+    "appraisal_thought": "They saw what I really am.",
     "body_cue": [],
-    "behaviour_action": [
-      "wanting to hide"
-    ],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
       "dignity",
-      "acceptance"
+      "belonging",
+      "self-respect"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Public mistake at a wedding still lingers years later.",
+    "memory_note": "Old university presentation memory still returns at night and carries a strong exposed, fraud-like shame.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "idk why im even here lol. nothing major"
+      "content": "ok so this app is supposed to help me 'process my feelings' lol. cool. anyway. how does this work"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Sounds like you’re here, but it feels a bit hard to pin down why. Is it more like blank, off, or just not much going on?",
-      "stage": "named",
+      "content": "It’s basically a place to put words to whatever’s here, one piece at a time. If you want, you can start with what’s been going on lately, or just test it out a bit.",
+      "stage": "noticed",
       "unlocked": false,
-      "family": "flat",
-      "shade": "unclear",
+      "family": null,
+      "shade": null,
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "nah not blank. more like cringe. theres this thing from years ago that pops in my head and i wanna die a lil. dumb i know"
+      "content": "lately is fine. lately is great actually. its old stuff. like from years ago that for some reason still lives rent free in my brain at 1am. you'd think i'd have evicted it by now"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds more like shame or embarrassment than blank — a cringey old memory that still stings. What’s the part that flashes up first?",
-      "stage": "understood",
-      "unlocked": true,
-      "family": "shame",
-      "shade": "cringe",
+      "content": "Yeah, that old stuff still showing up at 1am, like it never got the memo to leave. What kind of feeling does it bring up when it shows up like that?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": null,
       "body_cue": [],
-      "trigger": "a thing from years ago that pops into their head"
+      "trigger": "old memories from years ago coming up at 1am",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "ok dont laugh. gave this big speech at my mates wedding like 4 yrs ago and totally bombed. mixed up the brides name. THE BRIDE. everyone just kinda stared lol"
+      "content": "honestly? cringe. like full body cringe. its this thing from uni, a presentation i completely bombed. i mean froze, went red, forgot my own slides, the whole disaster reel. and a guy in the front row laughed. and i just. yeah. i think about it more than i think about anything good i ever did which is objectively insane"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "Oof — that sounds painfully exposed, like one of those moments that keeps its grip because it was so public. Does it feel more like embarrassment, guilt, or just wanting to hide when it comes back?",
-      "stage": "understood",
+      "content": "That sounds like it carries a sharp, lingering cringe, and probably some embarrassment too. What part hits hardest when it comes back, the freezing, going red, or that laugh?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "shame",
-      "shade": "exposed",
-      "body_cue": [],
-      "trigger": "gave a speech at a mate's wedding and mixed up the bride's name"
+      "shade": "cringe",
+      "body_cue": [
+        "full body cringe",
+        "went red"
+      ],
+      "trigger": "a university presentation where they froze, went red, forgot slides, and someone laughed",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "cringe",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "wanting to hide mostly. like why do i still care lol its done. anyway thats enough digging for one day i think. ta"
+      "content": "the laugh, easy. but its weird bc its not even really about him? like if im honest theres two things going on. theres the embarrassment which whatever, everyone bombs a presentation. but underneath it theres this other thing thats more like... i proved something. like that was the moment i found out im not actually as smart or capable as i pretended and everyone saw it. thats the part that wont leave"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Yeah, that makes sense — wanting to hide after a moment like that can linger a long time. We can leave it here for today, and if you ever want, we can come back to what it still hooks into.",
+      "content": "That “everyone saw it” part sounds much harsher than embarrassment, and very exposed.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "exposed",
+      "body_cue": [],
+      "trigger": "A university presentation where they froze, forgot slides, and someone laughed",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "exposed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. exposed is exactly it. like a fraud who got caught. and the dumb thing is i KNOW one bad presentation at 20 doesnt actually mean that. ive done fine since. but the feeling doesnt care about the evidence. it just goes 'they all know what you really are' on loop. god this is bleak for a tuesday lol"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That really does sound like shame, with an exposed, “got caught” feeling to it. I’m learning this one loops on what it says about you, not on the evidence, and that can be a very sticky kind of bleak.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "exposed",
+      "body_cue": [],
+      "trigger": "A university presentation where they froze, forgot slides, and someone laughed.",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "exposed",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "sticky bleak. im stealing that. ok thats. weirdly more than i meant to say to an app at lunch. but yeah it helped to actually name the thing instead of just letting it haunt me in the dark. anyway gonna go pretend im a functional adult again. thanks for this"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad it got a name, and you can let it sit there now. Go be your functional adult self.",
       "stage": "understood",
       "unlocked": false,
       "family": "shame",
       "shade": "exposed",
       "body_cue": [],
-      "trigger": "gave a speech at a mate’s wedding and mixed up the bride’s name"
+      "trigger": "A university presentation where they froze, forgot slides, and someone laughed.",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

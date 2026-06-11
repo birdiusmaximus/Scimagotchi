@@ -1,0 +1,146 @@
+{
+  "cid": "pressure__09",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-09T17:46:03.619Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "feel like im never gonna be good enough no matter what i do"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds painfully heavy and discouraging. Is it more like shame, sadness, or pressure right now?"
+    },
+    {
+      "role": "user",
+      "content": "pressure i think but its about me. like i should be way further along by now and im just not"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like pressure turned inward, with a sharp sense of being behind. Does it feel more rushed, heavy, or trapped?"
+    },
+    {
+      "role": "user",
+      "content": "heavy. everyone my age has it figured out and im still nowhere. turning 30 soon and i got nothing to show"
+    },
+    {
+      "role": "companion",
+      "content": "That heavy comparison sounds like a lot to carry, especially with turning 30 coming up. Is it more of a sinking weight, or does it make you want to push harder?"
+    },
+    {
+      "role": "user",
+      "content": "sinking. anyway just needed to get it out. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That sinking feeling makes sense, and we can leave it here for now if you want."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xl7t2rkfe8tn8",
+    "conversation_id": "pressure__09",
+    "timestamp": "2026-06-09T17:46:20.359Z",
+    "user_words_raw": "got nothing to show",
+    "emotion_status": "confirmed",
+    "emotion_family": "pressure",
+    "emotion_shade": "heavy",
+    "secondary_emotions": [
+      "sadness"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "turning 30 and feeling behind compared with others",
+    "appraisal_thought": "I should be further along by now and I have nothing to show",
+    "body_cue": [
+      "sinking"
+    ],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "permission to pause"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feeling behind in life milestones around age 30",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "feel like im never gonna be good enough no matter what i do"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds painfully heavy and discouraging. Is it more like shame, sadness, or pressure right now?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "never gonna be good enough",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "pressure i think but its about me. like i should be way further along by now and im just not"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like pressure turned inward, with a sharp sense of being behind. Does it feel more rushed, heavy, or trapped?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "behind / not far enough along",
+      "body_cue": [],
+      "trigger": "being where they are now compared with where they think they should be"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "heavy. everyone my age has it figured out and im still nowhere. turning 30 soon and i got nothing to show"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That heavy comparison sounds like a lot to carry, especially with turning 30 coming up. Is it more of a sinking weight, or does it make you want to push harder?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "heavy",
+      "body_cue": [],
+      "trigger": "being where they are now compared with where they think they should be"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "sinking. anyway just needed to get it out. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sinking feeling makes sense, and we can leave it here for now if you want.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "heavy",
+      "body_cue": [
+        "sinking"
+      ],
+      "trigger": "turning 30 and feeling behind compared with others"
+    }
+  ]
+}

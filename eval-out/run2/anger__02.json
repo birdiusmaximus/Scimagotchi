@@ -1,0 +1,217 @@
+{
+  "cid": "anger__02",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-10T17:09:49.461Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ugh i just need to vent for a sec. my downstairs neighbor again"
+    },
+    {
+      "role": "companion",
+      "content": "Go ahead, I’m here. That \"again\" already carries a lot, what happened this time?"
+    },
+    {
+      "role": "user",
+      "content": "the music. its like 1am and the bass is coming thru my floor again. i have work at 7. i knocked on their door twice this week and they just turn it down for like ten mins then its back. im so done"
+    },
+    {
+      "role": "companion",
+      "content": "That bass through the floor at 1am sounds exhausting, especially after you already knocked twice this week and it keeps coming back."
+    },
+    {
+      "role": "user",
+      "content": "yeah and the worst part is i feel like such a jerk for being annoyed but also like why am i the one losing sleep over their party. anyway. just needed to get that out"
+    },
+    {
+      "role": "companion",
+      "content": "I’m holding both, then, the annoyance and the guilt can sit together. You can leave it there for now, or if you want, we can stay with which one feels louder."
+    },
+    {
+      "role": "user",
+      "content": "nah ill leave it there. thanks for listening. gonna try to sleep"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, rest easy if you can."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bqh4wcmky21np",
+    "conversation_id": "anger__02",
+    "timestamp": "2026-06-10T17:10:10.786Z",
+    "user_words_raw": "feel like such a jerk",
+    "emotion_status": "confirmed",
+    "emotion_family": "anger",
+    "emotion_shade": "frustrated",
+    "secondary_emotions": [
+      "shame"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "downstairs neighbor's music and bass at 1am before work at 7, after repeated temporary fixes",
+    "appraisal_thought": "why am i the one losing sleep over their party",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "rest",
+      "respect",
+      "fairness"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "anger",
+        "shade": "frustrated",
+        "salience": "foreground",
+        "source": "user_stated"
+      },
+      {
+        "family": "shame",
+        "shade": null,
+        "salience": "background",
+        "source": "user_stated"
+      }
+    ],
+    "mixed_confirmed": 1,
+    "unlock_stage": "understood",
+    "memory_note": "Ongoing annoyance about a neighbor's noise at night, with guilt about feeling irritated.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ugh i just need to vent for a sec. my downstairs neighbor again"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Go ahead, I’m here. That \"again\" already carries a lot, what happened this time?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "irritation",
+      "body_cue": [],
+      "trigger": "downstairs neighbor again",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "the music. its like 1am and the bass is coming thru my floor again. i have work at 7. i knocked on their door twice this week and they just turn it down for like ten mins then its back. im so done"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That bass through the floor at 1am sounds exhausting, especially after you already knocked twice this week and it keeps coming back.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "downstairs neighbor's music at 1am before work at 7, after repeated temporary fixes",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "frustrated",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah and the worst part is i feel like such a jerk for being annoyed but also like why am i the one losing sleep over their party. anyway. just needed to get that out"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "I’m holding both, then, the annoyance and the guilt can sit together. You can leave it there for now, or if you want, we can stay with which one feels louder.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "downstairs neighbor's music at 1am before work at 7, after repeated temporary fixes",
+      "label_source": "user_stated",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "frustrated",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": "guilt",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "nah ill leave it there. thanks for listening. gonna try to sleep"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Of course, rest easy if you can.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "downstairs neighbor's music and bass at 1am before work at 7, after repeated temporary fixes",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "frustrated",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    }
+  ]
+}

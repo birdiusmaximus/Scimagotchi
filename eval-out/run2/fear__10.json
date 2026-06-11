@@ -1,0 +1,400 @@
+{
+  "cid": "fear__10",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-10T17:08:38.819Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. um i dont really know how to use this or what im doing here honestly. i just needed to put this somewhere i think. there's this thing with my health thats been eating at me for like two weeks and i cant stop thinking about it"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, you do not have to know how to use this. \"Eating at me for like two weeks\" feels like the centre of it, and I'm here with that."
+    },
+    {
+      "role": "user",
+      "content": "i mean its not really pressure? its more like. scared. like proper scared. ok so i found a lump. on the side of my neck like just under my jaw. and at first i thought it was just a swollen gland from being run down but its been there two weeks now and it hasnt gone and i keep touching it to check and i think its actually gotten a bit bigger maybe? or im imagining it idk"
+    },
+    {
+      "role": "companion",
+      "content": "I had that wrong, let me step back. This sounds more like fear than pressure, and I can stay with that if you want, or just sit quietly with it."
+    },
+    {
+      "role": "user",
+      "content": "yeah. fear. thats the word. and the thing is i KNOW i should just go to the doctor right. everyone says that. just get it checked. but i havent. i keep picking up my phone to ring the surgery and then i put it back down because if i dont know then it cant be the bad thing yet you know? like as long as nobodys said the word out loud its still maybe nothing. which is so stupid i know its stupid"
+    },
+    {
+      "role": "companion",
+      "content": "That is not stupid, it sounds like the word itself is carrying a lot of weight. Is the fear more about hearing a name for it, or about what it might mean if someone says it out loud?"
+    },
+    {
+      "role": "user",
+      "content": "god. um. its the what it would mean i think. because. ok this is the bit i havent said to anyone. my mum had lymphoma. she found a lump in her neck too. same place basically. and she was 41 and im 38 now and i just keep doing the maths in my head over and over. she was fine in the end like she's still here thank god but the year of treatment was. it was a lot. and i was 12 and i remember all of it. and i have two kids now who are 9 and 6 and i just cant stop picturing them going through what i went through"
+    },
+    {
+      "role": "companion",
+      "content": "That is carrying more than the lump, it’s carrying the whole memory of what that meant before. I’m wondering if the fear is pulling in both the present and that old year of treatment, or does one sit more in front?"
+    },
+    {
+      "role": "user",
+      "content": "the fear is definitely in front. like its loud. its the thing thats keeping me up at 3am googling things i shouldnt google. but yeah theres the other thing too underneath. like a grief thats not even allowed to be grief yet because nothing has even happened. im grieving a thing that might not happen which is insane. and im so tired. ive been so tired and i dont even know if thats the lump or just the not sleeping or the worrying or all of it feeding into itself"
+    },
+    {
+      "role": "companion",
+      "content": "“The fear is definitely in front” lands very clearly, and underneath it there’s that grief for something that might not even happen yet. I’m holding the 3am Googling, too, and the tiredness that’s feeding into all of it."
+    },
+    {
+      "role": "user",
+      "content": "i havent told my husband. thats the other thing. he knows ive been off but i told him its just a stressful patch at work. and i dont know why im hiding it from him. maybe because saying it to him makes it real. or maybe because he'll just go right we're booking the appointment now and then it'll be happening and i wont be able to stop it. and part of me knows thats exactly what needs to happen. i need someone to just take the phone out of my hand and book it. but the other part is so so scared of the waiting room and the referral and the scan and the sitting there waiting for results"
+    },
+    {
+      "role": "companion",
+      "content": "I’m holding both, then, the part that wants someone else to book it and the part that’s scared of the waiting room, the referral, and the results. Does it feel more like two sides pulling at once, or like the scared part is covering the other one up?"
+    },
+    {
+      "role": "user",
+      "content": "two sides pulling. definitely. like one half of me is already in problem solving mode going right youre being ridiculous the odds are itll be a cyst or a gland and the doctor will laugh and youll feel daft. and the other half is just. frozen. just totally frozen and small and 12 again sat outside the consultants office swinging my legs because they didnt reach the floor. and i cant get the two halves to talk to each other. the sensible one cant reach the scared one at all"
+    },
+    {
+      "role": "companion",
+      "content": "“Totally frozen and small and 12 again” is so vivid, and it sounds like the two halves are speaking different languages. I can stay with that, or we can sit with the frozen one a little longer if you want."
+    },
+    {
+      "role": "user",
+      "content": "the frozen one. yeah. i think the frozen one just needed someone to notice it was there honestly. like i havent let myself feel scared properly ive just been managing managing managing. saying it here. the whole thing. the lump and mum and the kids and hiding it from him. it feels a tiny bit less like its going to swallow me. doesnt make it not real but. i think i can tell him tonight. i think if i can say it once out loud i said it here so maybe i can say it to him. and then he can take the phone out of my hand"
+    },
+    {
+      "role": "companion",
+      "content": "That frozen part really did need to be noticed, and saying it here seems to have made a little room around all of it. I can leave it there with you, or stay with you in the moment before you tell him tonight."
+    },
+    {
+      "role": "user",
+      "content": "yeah. leave it there i think. thats enough for now. i feel a bit wrung out but in a good way maybe. thank you for not telling me to just go to the doctor like everyone else does. you just let me be scared for a minute. that helped more than youd think. ok. im gonna go find him. thank you x"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad I could stay with it, and I hope the conversation with him goes gently."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8boyxjik0wb73z",
+    "conversation_id": "fear__10",
+    "timestamp": "2026-06-10T17:09:57.755Z",
+    "user_words_raw": "let me be scared for a minute",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "frozen",
+    "secondary_emotions": [],
+    "valence": "mixed",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "thinking about telling her husband and the lump, with the waiting room, referral, scan, and results ahead",
+    "appraisal_thought": "saying it out loud makes it real",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "understanding",
+      "room_to_feel"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [
+      "worry"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "User may be carrying a health worry and prefers being met without being pushed into action.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. um i dont really know how to use this or what im doing here honestly. i just needed to put this somewhere i think. there's this thing with my health thats been eating at me for like two weeks and i cant stop thinking about it"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, you do not have to know how to use this. \"Eating at me for like two weeks\" feels like the centre of it, and I'm here with that.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "worry",
+      "body_cue": [],
+      "trigger": "something with their health over the past two weeks",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "worry",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i mean its not really pressure? its more like. scared. like proper scared. ok so i found a lump. on the side of my neck like just under my jaw. and at first i thought it was just a swollen gland from being run down but its been there two weeks now and it hasnt gone and i keep touching it to check and i think its actually gotten a bit bigger maybe? or im imagining it idk"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "I had that wrong, let me step back. This sounds more like fear than pressure, and I can stay with that if you want, or just sit quietly with it.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "scared",
+      "body_cue": [],
+      "trigger": "finding a lump on the side of the neck that has stayed for two weeks",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah. fear. thats the word. and the thing is i KNOW i should just go to the doctor right. everyone says that. just get it checked. but i havent. i keep picking up my phone to ring the surgery and then i put it back down because if i dont know then it cant be the bad thing yet you know? like as long as nobodys said the word out loud its still maybe nothing. which is so stupid i know its stupid"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That is not stupid, it sounds like the word itself is carrying a lot of weight. Is the fear more about hearing a name for it, or about what it might mean if someone says it out loud?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "scared",
+      "body_cue": [],
+      "trigger": "finding a lump on the side of the neck under the jaw that has stayed for two weeks",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "god. um. its the what it would mean i think. because. ok this is the bit i havent said to anyone. my mum had lymphoma. she found a lump in her neck too. same place basically. and she was 41 and im 38 now and i just keep doing the maths in my head over and over. she was fine in the end like she's still here thank god but the year of treatment was. it was a lot. and i was 12 and i remember all of it. and i have two kids now who are 9 and 6 and i just cant stop picturing them going through what i went through"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That is carrying more than the lump, it’s carrying the whole memory of what that meant before. I’m wondering if the fear is pulling in both the present and that old year of treatment, or does one sit more in front?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "scared",
+      "body_cue": [],
+      "trigger": "finding a lump on the side of the neck under the jaw that has stayed for two weeks",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "scared",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "the fear is definitely in front. like its loud. its the thing thats keeping me up at 3am googling things i shouldnt google. but yeah theres the other thing too underneath. like a grief thats not even allowed to be grief yet because nothing has even happened. im grieving a thing that might not happen which is insane. and im so tired. ive been so tired and i dont even know if thats the lump or just the not sleeping or the worrying or all of it feeding into itself"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "“The fear is definitely in front” lands very clearly, and underneath it there’s that grief for something that might not even happen yet. I’m holding the 3am Googling, too, and the tiredness that’s feeding into all of it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "scared",
+      "body_cue": [],
+      "trigger": "finding a lump on the side of the neck under the jaw that has stayed for two weeks, with a family memory of lymphoma",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "scared",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "i havent told my husband. thats the other thing. he knows ive been off but i told him its just a stressful patch at work. and i dont know why im hiding it from him. maybe because saying it to him makes it real. or maybe because he'll just go right we're booking the appointment now and then it'll be happening and i wont be able to stop it. and part of me knows thats exactly what needs to happen. i need someone to just take the phone out of my hand and book it. but the other part is so so scared of the waiting room and the referral and the scan and the sitting there waiting for results"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m holding both, then, the part that wants someone else to book it and the part that’s scared of the waiting room, the referral, and the results. Does it feel more like two sides pulling at once, or like the scared part is covering the other one up?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "scared",
+      "body_cue": [],
+      "trigger": "thinking about telling husband and having the lump checked, with waiting room, referral, scan, and results ahead",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "scared",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "two sides pulling. definitely. like one half of me is already in problem solving mode going right youre being ridiculous the odds are itll be a cyst or a gland and the doctor will laugh and youll feel daft. and the other half is just. frozen. just totally frozen and small and 12 again sat outside the consultants office swinging my legs because they didnt reach the floor. and i cant get the two halves to talk to each other. the sensible one cant reach the scared one at all"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "“Totally frozen and small and 12 again” is so vivid, and it sounds like the two halves are speaking different languages. I can stay with that, or we can sit with the frozen one a little longer if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "frozen",
+      "body_cue": [],
+      "trigger": "thinking about telling husband and getting the lump checked, with the waiting room, referral, scan, and results ahead",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "frozen",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "the frozen one. yeah. i think the frozen one just needed someone to notice it was there honestly. like i havent let myself feel scared properly ive just been managing managing managing. saying it here. the whole thing. the lump and mum and the kids and hiding it from him. it feels a tiny bit less like its going to swallow me. doesnt make it not real but. i think i can tell him tonight. i think if i can say it once out loud i said it here so maybe i can say it to him. and then he can take the phone out of my hand"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That frozen part really did need to be noticed, and saying it here seems to have made a little room around all of it. I can leave it there with you, or stay with you in the moment before you tell him tonight.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "frozen",
+      "body_cue": [],
+      "trigger": "thinking about telling her husband and the lump, with the waiting room, referral, scan, and results ahead",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "frozen",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "yeah. leave it there i think. thats enough for now. i feel a bit wrung out but in a good way maybe. thank you for not telling me to just go to the doctor like everyone else does. you just let me be scared for a minute. that helped more than youd think. ok. im gonna go find him. thank you x"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "I’m glad I could stay with it, and I hope the conversation with him goes gently.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "frozen",
+      "body_cue": [],
+      "trigger": "thinking about telling her husband and the lump, with the waiting room, referral, scan, and results ahead",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

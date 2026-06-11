@@ -1,0 +1,266 @@
+{
+  "cid": "shame__08",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-10T17:13:15.898Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. i dont really know why im here. just kind of a weird day i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that does sound like one of those off, hard-to-pin-down days. We can just sit with the weirdness for a bit if you want."
+    },
+    {
+      "role": "user",
+      "content": "my brother just got into med school and everyone keeps congratulating the family. and im just here. 27 and still doing the same admin job i took out of uni that was supposed to be temporary"
+    },
+    {
+      "role": "companion",
+      "content": "That lands with a sharp kind of comparison, especially with everyone else celebrating around you. It sounds like being 27 in the same admin job is sitting right in the middle of it."
+    },
+    {
+      "role": "user",
+      "content": "yeah. like i dont even know what i want to do thats the worst part. people ask whats next for you and i just sort of laugh it off. my mum doesnt say anything but i can tell. she had this thing at christmas where she was like youll figure it out and somehow that was worse"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like embarrassment with a sting of being seen and measured, and maybe a little shame in the mix. Is the sharper part more the laugh it off moment, or your mum’s “you’ll figure it out” feeling worse?"
+    },
+    {
+      "role": "user",
+      "content": "the mum one i think. cause she means it kindly but its like she's already decided i wont. or thats what my brain does with it idk. sorry im not making much sense. its just everyone has this path and i'm 27 with nothing and the longer it goes the more stuck it feels"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like it turns kind words into a verdict, and the stuck feeling gets heavier from there. If you want, we can stay with what her words seemed to say about you, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "i think what it says is that i'm the one they dont have to worry about because nothings happening anyway. like theres nothing to root for. god that sounds dramatic written out. maybe its more that i havent given them anything to be proud of and thats on me not them"
+    },
+    {
+      "role": "companion",
+      "content": "“Nothing to root for” feels like the centre of this, and then it folds into “I haven’t given them anything to be proud of.”"
+    },
+    {
+      "role": "user",
+      "content": "yeah. that's the one i think. i dont really know what to do with that but its something to see it sat there i guess. anyway. i should probably go. thanks for letting me ramble at you"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it could sit out in the open for a moment. We can leave it there now, and if you come back to it later I’ll meet you there."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8buwdrx8s792hh",
+    "conversation_id": "shame__08",
+    "timestamp": "2026-06-10T17:13:54.486Z",
+    "user_words_raw": "I haven’t given them anything to be proud of",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "self-critical",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "feeling compared to others' paths and hearing a kindly word from mum as a verdict",
+    "appraisal_thought": "I haven’t given them anything to be proud of",
+    "body_cue": [],
+    "behaviour_action": [
+      "laugh it off"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "belonging",
+      "dignity",
+      "acceptance"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Comparison with a sibling's path and feeling measured against family expectations",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. i dont really know why im here. just kind of a weird day i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that does sound like one of those off, hard-to-pin-down days. We can just sit with the weirdness for a bit if you want.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "my brother just got into med school and everyone keeps congratulating the family. and im just here. 27 and still doing the same admin job i took out of uni that was supposed to be temporary"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That lands with a sharp kind of comparison, especially with everyone else celebrating around you. It sounds like being 27 in the same admin job is sitting right in the middle of it.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "brother getting into med school and family being congratulated",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "embarrassed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah. like i dont even know what i want to do thats the worst part. people ask whats next for you and i just sort of laugh it off. my mum doesnt say anything but i can tell. she had this thing at christmas where she was like youll figure it out and somehow that was worse"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like embarrassment with a sting of being seen and measured, and maybe a little shame in the mix. Is the sharper part more the laugh it off moment, or your mum’s “you’ll figure it out” feeling worse?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "being compared to brother's med school place and being asked what's next",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "embarrassed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "the mum one i think. cause she means it kindly but its like she's already decided i wont. or thats what my brain does with it idk. sorry im not making much sense. its just everyone has this path and i'm 27 with nothing and the longer it goes the more stuck it feels"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like it turns kind words into a verdict, and the stuck feeling gets heavier from there. If you want, we can stay with what her words seemed to say about you, or leave it here for now.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "mother saying \"youll figure it out\" and feeling compared to others' paths",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "self-critical",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": "unclear",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i think what it says is that i'm the one they dont have to worry about because nothings happening anyway. like theres nothing to root for. god that sounds dramatic written out. maybe its more that i havent given them anything to be proud of and thats on me not them"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "“Nothing to root for” feels like the centre of this, and then it folds into “I haven’t given them anything to be proud of.”",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "mother saying \"youll figure it out\" and feeling compared to others' paths",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. that's the one i think. i dont really know what to do with that but its something to see it sat there i guess. anyway. i should probably go. thanks for letting me ramble at you"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad it could sit out in the open for a moment. We can leave it there now, and if you come back to it later I’ll meet you there.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "feeling compared to others' paths and hearing a kindly word from mum as a verdict",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

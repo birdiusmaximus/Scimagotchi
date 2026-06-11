@@ -1,0 +1,254 @@
+{
+  "cid": "flat__05",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-10T19:23:06.548Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so this is gonna sound dumb but i found a box of old photos cleaning out the closet and i feel... nothing? like genuinely nothing lol. shouldnt that do something"
+    },
+    {
+      "role": "companion",
+      "content": "A box of old photos and then just... nothing, that stands out. Not dumb at all, and I’m here with the blank part if you want to stay with it."
+    },
+    {
+      "role": "user",
+      "content": "the blank part yeah. i mean theres pics of me and my dad in there from when i was like 8, fishing trips, the whole bit. people would cry at this stuff right? i just sorted them into a pile like it was junk mail"
+    },
+    {
+      "role": "companion",
+      "content": "The “sorted them into a pile like it was junk mail” part feels very blank, maybe even shut down. Does it feel more like nothing is getting through, or like something is there but far away?"
+    },
+    {
+      "role": "user",
+      "content": "honestly? probably the far away one. like i KNOW i should feel sad, my dad and i havent really talked in like 6 years, but instead its just this flat hum. and the dumb part is theres also this little bit of me thats kinda relieved i dont feel anything, which is a great look im sure"
+    },
+    {
+      "role": "companion",
+      "content": "That flat hum, with a little relief sitting alongside it, feels like a lot of distance in one small moment. We can stay with just that, if you want."
+    },
+    {
+      "role": "user",
+      "content": "relief is a strong word for it lol. more like... if i dont feel anything then i dont have to decide whether to call him or whatever. the numbness is kind of doing me a favor you know? saves me a phone call"
+    },
+    {
+      "role": "companion",
+      "content": "The numbness doing you a favor, by sparing you a phone call, feels very practical. I’m hearing that this isn’t just blank, it’s doing work for you."
+    },
+    {
+      "role": "user",
+      "content": "huh. yeah maybe. its easier to file it under junk mail than to actually sit with the fact that i miss him and i'm still mad at him at the same time. anyway. that got heavier than i meant it to lol"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like two things sitting together, missing him and being mad at him, with the “junk mail” part helping you not have to face both at once. We can leave it there, or stay with how those two sit together, if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there i think. but thats... actually kind of it isnt it. missing him and mad at him and the numbness just my brain not wanting to pick. thanks for not making it weird. gonna go put the box away"
+    },
+    {
+      "role": "companion",
+      "content": "That feels settled enough for now, and I’m glad it could stay plain. Take care of the box."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8ghvu00dptmzdp",
+    "conversation_id": "flat__05",
+    "timestamp": "2026-06-10T19:23:46.949Z",
+    "user_words_raw": "put the box away",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "missing",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "finding old photos of them and their dad while cleaning out the closet",
+    "appraisal_thought": "if I feel this, I may have to decide whether to call him",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Person sometimes uses numbness to avoid choosing between missing someone and being mad at them after finding old photos.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so this is gonna sound dumb but i found a box of old photos cleaning out the closet and i feel... nothing? like genuinely nothing lol. shouldnt that do something"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "A box of old photos and then just... nothing, that stands out. Not dumb at all, and I’m here with the blank part if you want to stay with it.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "found a box of old photos while cleaning out the closet",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "the blank part yeah. i mean theres pics of me and my dad in there from when i was like 8, fishing trips, the whole bit. people would cry at this stuff right? i just sorted them into a pile like it was junk mail"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "The “sorted them into a pile like it was junk mail” part feels very blank, maybe even shut down. Does it feel more like nothing is getting through, or like something is there but far away?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "found old photos while cleaning out the closet",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "honestly? probably the far away one. like i KNOW i should feel sad, my dad and i havent really talked in like 6 years, but instead its just this flat hum. and the dumb part is theres also this little bit of me thats kinda relieved i dont feel anything, which is a great look im sure"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That flat hum, with a little relief sitting alongside it, feels like a lot of distance in one small moment. We can stay with just that, if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": "finding old photos of themselves and their dad while cleaning out the closet",
+      "label_source": "user_stated",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "flat",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "joy",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "relief is a strong word for it lol. more like... if i dont feel anything then i dont have to decide whether to call him or whatever. the numbness is kind of doing me a favor you know? saves me a phone call"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "The numbness doing you a favor, by sparing you a phone call, feels very practical. I’m hearing that this isn’t just blank, it’s doing work for you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": "finding old photos of themselves and their dad while cleaning out the closet",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "flat",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "huh. yeah maybe. its easier to file it under junk mail than to actually sit with the fact that i miss him and i'm still mad at him at the same time. anyway. that got heavier than i meant it to lol"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like two things sitting together, missing him and being mad at him, with the “junk mail” part helping you not have to face both at once. We can leave it there, or stay with how those two sit together, if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "missing",
+      "body_cue": [],
+      "trigger": "finding old photos of them and their dad while cleaning out the closet",
+      "label_source": "user_stated",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "missing",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "anger",
+          "shade": "mad",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it there i think. but thats... actually kind of it isnt it. missing him and mad at him and the numbness just my brain not wanting to pick. thanks for not making it weird. gonna go put the box away"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels settled enough for now, and I’m glad it could stay plain. Take care of the box.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "missing",
+      "body_cue": [],
+      "trigger": "finding old photos of them and their dad while cleaning out the closet",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

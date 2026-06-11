@@ -2,143 +2,424 @@
   "cid": "anger__09",
   "emotion": "anger",
   "persona": null,
-  "created": "2026-06-09T18:17:04.110Z",
+  "created": "2026-06-10T22:08:21.045Z",
   "history": [
     {
       "role": "user",
-      "content": "got passed over for the lead role again. third time"
+      "content": "got passed over for the lead role again. third time. didnt even tell me to my face"
     },
     {
       "role": "companion",
-      "content": "That sounds really disappointing — maybe even like a mix of hurt and frustration. Does it feel more like one of those for you, or something else?"
+      "content": "That sounds like a sharp kind of being passed over, and the part about not being told to your face makes it feel even colder."
     },
     {
       "role": "user",
-      "content": "not sad. im angry. they keep telling me im 'not ready' like im nobody"
+      "content": "its not really hurt. more like. i dont know. they keep acting like im not lead material and its bs"
     },
     {
       "role": "companion",
-      "content": "That sounds angry and pretty cutting — especially with “not ready” landing like “I’m nobody.” What does the anger make you want to do?"
+      "content": "I had that wrong. It sounds closer to anger, maybe frustration, with a sting of being dismissed, and I won't call it hurt unless that fits for you."
     },
     {
       "role": "user",
-      "content": "idk. quit probably. ive earned it more than the guy they picked"
+      "content": "frustration yeah. ive been there 6 yrs. trained half the people who keep getting picked over me. they brought in some guy from outside for it"
     },
     {
       "role": "companion",
-      "content": "That sounds like frustrated, fed-up protest — wanting to quit and feeling passed over for someone you see as less earned. Is it more like wanting to walk away, or wanting to push back?"
+      "content": "Yeah, that kind of frustration makes sense here, especially with six years in and having trained people who keep getting chosen instead. It sounds like the part that gets hit is being overlooked or not treated as the obvious fit."
     },
     {
       "role": "user",
-      "content": "push back maybe. dunno. needed to get it out. thanks"
+      "content": "the worst part is i started wondering if theyre right. like maybe theres something about me that screams not good enough. and then im furious i even think that"
     },
     {
       "role": "companion",
-      "content": "That makes sense — I can leave it here for now, or stay with the push-back if you want to see what it’s asking for."
+      "content": "That’s a nasty loop, the doubt turns inward and then the fury comes up at even having the doubt. I’m wondering if the anger is doing some defending there, or if it feels more like self-directed shame too?"
+    },
+    {
+      "role": "user",
+      "content": "ya i guess the anger is easier. if im angry at them then its their fault not mine. but theres this quiet voice that says maybe youre just not it"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense, the anger is easier to hold than that quieter doubt. I’m learning this has a protective edge, with the harsher voice sitting underneath it."
+    },
+    {
+      "role": "user",
+      "content": "the guy they hired is younger than me. and i sat in the meeting and smiled and said congrats. felt like i was choking on it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a hard swallow, smiling while something in you was tightening up. Was it more resentment, humiliation, or just that choking, held-in feeling?"
+    },
+    {
+      "role": "user",
+      "content": "all of it. mostly i keep replaying every time ive been overlooked and stacking it up. like proof. like see, this is who you are to them"
+    },
+    {
+      "role": "companion",
+      "content": "That lands as more than the meeting, it’s all those past overlooks turning into “proof.” I’m wondering if the moment meant, to you, that they see you as less than you are?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. that they see me as less. i think i wanted someone to just say it wasnt fair without telling me to network more or whatever"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, wanting someone to just say it wasn’t fair makes a lot of sense. I can leave it here, or stay with that part if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah leave it here. that actually helped a bit. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, I’m glad it helped a little. Take care of yourself tonight."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yp4i7r57jf2q4",
+    "id": "evt_mq8medxjgxokrx83",
     "conversation_id": "anger__09",
-    "timestamp": "2026-06-09T18:17:30.339Z",
-    "user_words_raw": "push back",
+    "timestamp": "2026-06-10T22:09:19.897Z",
+    "user_words_raw": "helped a bit",
     "emotion_status": "confirmed",
     "emotion_family": "anger",
-    "emotion_shade": "frustrated",
+    "emotion_shade": "resentful",
     "secondary_emotions": [],
-    "valence": "negative",
-    "activation": "medium",
+    "valence": "neutral",
+    "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "being passed over for the lead role again and told “not ready”",
-    "appraisal_thought": "they keep telling me im 'not ready' like im nobody",
+    "trigger_event": "they hired someone younger from outside for the lead role",
+    "appraisal_thought": "they see me as less",
     "body_cue": [],
-    "behaviour_action": [
-      "push back"
-    ],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [
-      "respect",
-      "fairness",
-      "recognition",
-      "autonomy"
-    ],
+    "need_value": [],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [
+      "hurt"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "feeling passed over at work and wanting to push back",
+    "memory_note": "User wanted simple validation about unfairness and preferred not to be told to network more.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "got passed over for the lead role again. third time"
+      "content": "got passed over for the lead role again. third time. didnt even tell me to my face"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds really disappointing — maybe even like a mix of hurt and frustration. Does it feel more like one of those for you, or something else?",
-      "stage": "named",
+      "content": "That sounds like a sharp kind of being passed over, and the part about not being told to your face makes it feel even colder.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "sadness",
-      "shade": "disappointed",
+      "family": "hurt",
+      "shade": "hurt",
       "body_cue": [],
-      "trigger": "being passed over for the lead role again for the third time"
+      "trigger": "being passed over for the lead role again, and not being told directly",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": "anger",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "not sad. im angry. they keep telling me im 'not ready' like im nobody"
+      "content": "its not really hurt. more like. i dont know. they keep acting like im not lead material and its bs"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds angry and pretty cutting — especially with “not ready” landing like “I’m nobody.” What does the anger make you want to do?",
-      "stage": "named",
+      "content": "I had that wrong. It sounds closer to anger, maybe frustration, with a sting of being dismissed, and I won't call it hurt unless that fits for you.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "anger",
-      "shade": "frustrated",
+      "shade": "frustration",
       "body_cue": [],
-      "trigger": "being passed over for the lead role again and being told “not ready”"
+      "trigger": "being passed over for the lead role again and not being told directly",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "frustration",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "idk. quit probably. ive earned it more than the guy they picked"
+      "content": "frustration yeah. ive been there 6 yrs. trained half the people who keep getting picked over me. they brought in some guy from outside for it"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds like frustrated, fed-up protest — wanting to quit and feeling passed over for someone you see as less earned. Is it more like wanting to walk away, or wanting to push back?",
+      "content": "Yeah, that kind of frustration makes sense here, especially with six years in and having trained people who keep getting chosen instead. It sounds like the part that gets hit is being overlooked or not treated as the obvious fit.",
       "stage": "understood",
       "unlocked": true,
       "family": "anger",
-      "shade": "frustrated",
+      "shade": "frustration",
       "body_cue": [],
-      "trigger": "being passed over for the lead role again and told “not ready”"
+      "trigger": "being passed over for the lead role again, while someone from outside was brought in",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "frustration",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "push back maybe. dunno. needed to get it out. thanks"
+      "content": "the worst part is i started wondering if theyre right. like maybe theres something about me that screams not good enough. and then im furious i even think that"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense — I can leave it here for now, or stay with the push-back if you want to see what it’s asking for.",
+      "content": "That’s a nasty loop, the doubt turns inward and then the fury comes up at even having the doubt. I’m wondering if the anger is doing some defending there, or if it feels more like self-directed shame too?",
       "stage": "understood",
       "unlocked": false,
       "family": "anger",
-      "shade": "frustrated",
+      "shade": "furious",
       "body_cue": [],
-      "trigger": "being passed over for the lead role again and told “not ready”"
+      "trigger": "being passed over again and starting to question their own worth",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": "furious",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "ya i guess the anger is easier. if im angry at them then its their fault not mine. but theres this quiet voice that says maybe youre just not it"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That makes sense, the anger is easier to hold than that quieter doubt. I’m learning this has a protective edge, with the harsher voice sitting underneath it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "protective",
+      "body_cue": [],
+      "trigger": "being passed over for the lead role and then wondering if they are not good enough",
+      "label_source": "user_confirmed",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "protective",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "the guy they hired is younger than me. and i sat in the meeting and smiled and said congrats. felt like i was choking on it"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like a hard swallow, smiling while something in you was tightening up. Was it more resentment, humiliation, or just that choking, held-in feeling?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "protective",
+      "body_cue": [
+        "felt like i was choking on it"
+      ],
+      "trigger": "they hired someone younger for the lead role and he was brought in from outside",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "protective",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "all of it. mostly i keep replaying every time ive been overlooked and stacking it up. like proof. like see, this is who you are to them"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That lands as more than the meeting, it’s all those past overlooks turning into “proof.” I’m wondering if the moment meant, to you, that they see you as less than you are?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [],
+      "trigger": "they hired someone younger from outside for the lead role",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "resentful",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah. that they see me as less. i think i wanted someone to just say it wasnt fair without telling me to network more or whatever"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "Yeah, wanting someone to just say it wasn’t fair makes a lot of sense. I can leave it here, or stay with that part if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [],
+      "trigger": "they hired someone younger from outside for the lead role",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "resentful",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "yeah leave it here. that actually helped a bit. thanks"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Of course, I’m glad it helped a little. Take care of yourself tonight.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [],
+      "trigger": "they hired someone younger from outside for the lead role",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

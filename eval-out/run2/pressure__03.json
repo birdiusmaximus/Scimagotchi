@@ -1,0 +1,182 @@
+{
+  "cid": "pressure__03",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-10T17:09:03.862Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. how's it going"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, it’s good to see you. I’m here and ready to listen, what’s been on your mind lately?"
+    },
+    {
+      "role": "user",
+      "content": "idk. just one of those weeks i guess. been a lot"
+    },
+    {
+      "role": "companion",
+      "content": "“Been a lot” lands as a heavy stretch of time. I’m here with that, if you want to say more."
+    },
+    {
+      "role": "user",
+      "content": "rent went up again. like 200 more a month. and i already do the math every paycheck and its tight. dont really know how im gonna stretch it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a lot of pressure, with no extra room to absorb it. Is it sitting more in your chest, your stomach, or as that tight, running-ahead feeling?"
+    },
+    {
+      "role": "user",
+      "content": "stomach mostly. that running ahead thing yeah. anyway. dunno why i typed all that. gotta go but thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Take care, and thanks for trusting me with it."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bphsom97fvd1s",
+    "conversation_id": "pressure__03",
+    "timestamp": "2026-06-10T17:09:22.886Z",
+    "user_words_raw": "running ahead",
+    "emotion_status": "confirmed",
+    "emotion_family": "pressure",
+    "emotion_shade": "pressured",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "rent went up again and their paycheck is already tight",
+    "appraisal_thought": "not enough room to absorb it",
+    "body_cue": [
+      "stomach",
+      "running ahead"
+    ],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "control",
+      "support"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Pressure around money and rising rent at paycheck time.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. how's it going"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, it’s good to see you. I’m here and ready to listen, what’s been on your mind lately?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "idk. just one of those weeks i guess. been a lot"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "“Been a lot” lands as a heavy stretch of time. I’m here with that, if you want to say more.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "rent went up again. like 200 more a month. and i already do the math every paycheck and its tight. dont really know how im gonna stretch it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like a lot of pressure, with no extra room to absorb it. Is it sitting more in your chest, your stomach, or as that tight, running-ahead feeling?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressured",
+      "body_cue": [],
+      "trigger": "rent went up again and their paycheck is already tight",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "pressured",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "stomach mostly. that running ahead thing yeah. anyway. dunno why i typed all that. gotta go but thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Take care, and thanks for trusting me with it.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "pressured",
+      "body_cue": [
+        "stomach",
+        "running ahead"
+      ],
+      "trigger": "rent went up again and their paycheck is already tight",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

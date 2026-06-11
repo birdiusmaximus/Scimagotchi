@@ -2,138 +2,264 @@
   "cid": "flat__07",
   "emotion": "flat",
   "persona": null,
-  "created": "2026-06-09T18:26:25.660Z",
+  "created": "2026-06-10T22:12:00.750Z",
   "history": [
     {
       "role": "user",
-      "content": "i think im just tired or burnt out or something. with my girlfriend lately i dont really feel much"
+      "content": "not even sure why im typing this. been with my partner 4 years and lately i just feel nothing. not sad not happy. just flat"
     },
     {
       "role": "companion",
-      "content": "That sounds a bit flat and worn down, especially with your girlfriend. Does it feel more tired, burned out, or kind of numb?"
+      "content": "That sounds very flat and maybe a bit disconnected, and you don't have to pin it down yet. Has it been more like numb, blank, or just quietly empty?"
     },
     {
       "role": "user",
-      "content": "burnt out i guess. like we used to argue at least. now she talks and i just sit there. nod. dont feel anything either way"
+      "content": "blank i guess. like im just going through the motions. we still do dinner, still say goodnight. but its like im watching it happen to someone else"
     },
     {
       "role": "companion",
-      "content": "Burnt out fits, and it sounds like you’ve gone quiet inside with her — sitting there, nodding, not feeling much either way. Does it feel more like blankness, or like you’re too worn out to react?"
+      "content": "That's really clear, and I can leave it there with you if you want."
     },
     {
       "role": "user",
-      "content": "blankness yeah. thats closer. shes right next to me and its like theres nothing there. cant remember the last time i actually felt close to her"
+      "content": "leave it there? thats it? i kind of expected more than that honestly"
     },
     {
       "role": "companion",
-      "content": "That sounds really blank and distant, with her right next to you but not feeling close. Does it feel like nothing is there, or more like the closeness is out of reach?"
+      "content": "I missed the tone of what you wanted there. We can stay with it a little longer, or I can keep it simple if that is what you want."
     },
     {
       "role": "user",
-      "content": "nothing there i think. out of reach would mean i want it back. not sure i even feel that. anyway. thanks. i should go"
+      "content": "stay with it i guess. the thing is i dont even know if somethings wrong. we dont fight. she didnt do anything. i just stopped feeling like im in it"
     },
     {
       "role": "companion",
-      "content": "That makes sense — it sounds like “nothing there” is the closest fit right now. We can leave it here, and that’s completely okay."
+      "content": "That sounds less like a fight and more like a quiet slipping-out, and maybe the oddness is that nothing obvious happened. Did it start around anything, or did it just arrive?"
+    },
+    {
+      "role": "user",
+      "content": "honestly it just arrived. maybe after we moved in together last year. everything got logistical. rent, chores, schedules. somewhere in there i stopped looking at her like a person and more like a roommate"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the relationship got folded into logistics, and the part that feels gone is the sense of her as more than a roommate. I’m wondering if that shift feels more like distance, or like something went quiet in you."
+    },
+    {
+      "role": "user",
+      "content": "something went quiet in me i think. yeah. didnt expect to land on that. ok i need to sit with that one. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a real landing. We can leave it here, and let that quiet sit on its own for a bit."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6z14osvc1trifs",
+    "id": "evt_mq8mj3lypquuacuw",
     "conversation_id": "flat__07",
-    "timestamp": "2026-06-09T18:26:46.639Z",
-    "user_words_raw": "nothing there",
+    "timestamp": "2026-06-10T22:12:35.517Z",
+    "user_words_raw": "something went quiet in me",
     "emotion_status": "confirmed",
-    "emotion_family": "flat",
-    "emotion_shade": "blank",
-    "secondary_emotions": [
-      "disconnected"
-    ],
-    "valence": "neutral",
+    "emotion_family": "hurt",
+    "emotion_shade": "disconnected",
+    "secondary_emotions": [],
+    "valence": "negative",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "with girlfriend lately",
-    "appraisal_thought": "nothing there",
+    "trigger_event": "moving in together and everything becoming logistical",
+    "appraisal_thought": "something went quiet in me",
     "body_cue": [],
-    "behaviour_action": [],
+    "behaviour_action": [
+      "going through the motions"
+    ],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [],
-    "confidence_level": "high",
+    "need_value": [
+      "closeness",
+      "being seen"
+    ],
+    "confidence_level": "medium",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Feeling blank and distant with girlfriend; closeness feels absent.",
+    "memory_note": "Feeling changed after moving in together and the relationship became logistical.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "i think im just tired or burnt out or something. with my girlfriend lately i dont really feel much"
+      "content": "not even sure why im typing this. been with my partner 4 years and lately i just feel nothing. not sad not happy. just flat"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds a bit flat and worn down, especially with your girlfriend. Does it feel more tired, burned out, or kind of numb?",
-      "stage": "named",
+      "content": "That sounds very flat and maybe a bit disconnected, and you don't have to pin it down yet. Has it been more like numb, blank, or just quietly empty?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "flat",
-      "shade": "flat",
+      "shade": "blank",
       "body_cue": [],
-      "trigger": "lately with my girlfriend"
+      "trigger": "lately with partner over four years",
+      "label_source": "user_stated",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "blank",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "burnt out i guess. like we used to argue at least. now she talks and i just sit there. nod. dont feel anything either way"
+      "content": "blank i guess. like im just going through the motions. we still do dinner, still say goodnight. but its like im watching it happen to someone else"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "Burnt out fits, and it sounds like you’ve gone quiet inside with her — sitting there, nodding, not feeling much either way. Does it feel more like blankness, or like you’re too worn out to react?",
+      "content": "That's really clear, and I can leave it there with you if you want.",
       "stage": "understood",
       "unlocked": true,
       "family": "flat",
-      "shade": "burnt out",
+      "shade": "blank",
       "body_cue": [],
-      "trigger": "with my girlfriend lately"
+      "trigger": "lately with partner over four years",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "blankness yeah. thats closer. shes right next to me and its like theres nothing there. cant remember the last time i actually felt close to her"
+      "content": "leave it there? thats it? i kind of expected more than that honestly"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds really blank and distant, with her right next to you but not feeling close. Does it feel like nothing is there, or more like the closeness is out of reach?",
+      "content": "I missed the tone of what you wanted there. We can stay with it a little longer, or I can keep it simple if that is what you want.",
       "stage": "understood",
       "unlocked": false,
       "family": "flat",
       "shade": "blank",
       "body_cue": [],
-      "trigger": "with girlfriend lately"
+      "trigger": "lately with partner over four years",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "nothing there i think. out of reach would mean i want it back. not sure i even feel that. anyway. thanks. i should go"
+      "content": "stay with it i guess. the thing is i dont even know if somethings wrong. we dont fight. she didnt do anything. i just stopped feeling like im in it"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense — it sounds like “nothing there” is the closest fit right now. We can leave it here, and that’s completely okay.",
+      "content": "That sounds less like a fight and more like a quiet slipping-out, and maybe the oddness is that nothing obvious happened. Did it start around anything, or did it just arrive?",
       "stage": "understood",
       "unlocked": false,
       "family": "flat",
-      "shade": "blank",
+      "shade": "disconnected",
       "body_cue": [],
-      "trigger": "with girlfriend lately"
+      "trigger": "lately with partner over four years",
+      "label_source": "user_stated",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "disconnected",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "honestly it just arrived. maybe after we moved in together last year. everything got logistical. rent, chores, schedules. somewhere in there i stopped looking at her like a person and more like a roommate"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like the relationship got folded into logistics, and the part that feels gone is the sense of her as more than a roommate. I’m wondering if that shift feels more like distance, or like something went quiet in you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "moving in together and everything becoming logistical",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "disconnected",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "something went quiet in me i think. yeah. didnt expect to land on that. ok i need to sit with that one. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels like a real landing. We can leave it here, and let that quiet sit on its own for a bit.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "moving in together and everything becoming logistical",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

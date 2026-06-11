@@ -1,0 +1,197 @@
+{
+  "cid": "fear__10",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-09T17:35:57.924Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. um i dont really know how to start this. i guess ive just been kind of on edge the last few days and i cant shake it"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that sounds really unsettled and hard to shake. Does it feel more like worry, unease, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "worry yeah. or like dread maybe. its both honestly. i had bloodwork done last week for this thing my doctor noticed and i get the results back monday and i just. ive been googling things i shouldnt be googling lol. and i feel kind of stupid because its probably nothing but my body wont let it go, like my chest is tight all the time now"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like worry and dread, especially with Monday coming up. And your chest being tight all the time makes it feel really kept in your body; is it making you want to check or keep googling?"
+    },
+    {
+      "role": "user",
+      "content": "yeah i keep checking. like i pressed on the spot again this morning to see if it felt different and then i hated myself for doing it. and theres this other thing underneath, im kind of angry too? like at myself for not going in sooner, i had a feeling something was off for months and i just ignored it because i didnt want to deal. so now its like im scared AND im mad at past me for putting us here. does that even make sense"
+    },
+    {
+      "role": "companion",
+      "content": "Yes, that makes sense — it sounds like worry and dread, with anger turned back on yourself too. And I’m hearing the chest tightness and the checking; is the anger more at past you, or more at the situation now?"
+    },
+    {
+      "role": "user",
+      "content": "more at past me i think. the situation is just the situation, i cant be mad at a blood test. but past me had so many chances. my mom had the same kind of scare and you'd think that would make me MORE careful not less but somehow it made me not want to look at all. avoidance i guess. and now im sitting here at midnight again not sleeping just waiting for a monday that might be totally fine or might not be"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like dread that keeps circling back at midnight, with past-you carrying a lot of blame. We can stay with it here, or let it rest for now if you want."
+    },
+    {
+      "role": "user",
+      "content": "i think i can let it rest a little. honestly just saying it out loud helped, even the part about being mad at myself, i hadnt admitted that to anyone. it doesnt fix monday but my chest feels a tiny bit less tight right now which is something. i was sort of expecting to feel judged for the avoidance and i didnt so. thank you"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad you could say it here, and I’m glad it felt less judged. We can leave it there for now, or if you want later we can stay with the part that was afraid of being judged."
+    },
+    {
+      "role": "user",
+      "content": "lets leave it there for tonight. i should actually try to sleep. ill find out monday either way and at least im not carrying the mad-at-myself part alone in my head anymore. thanks for sitting with me. goodnight"
+    },
+    {
+      "role": "companion",
+      "content": "Goodnight — I’m glad you could set it down for tonight, and that the mad-at-myself part doesn’t have to sit alone in your head right now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6x88a3gjbdw2it",
+    "conversation_id": "fear__10",
+    "timestamp": "2026-06-09T17:36:55.280Z",
+    "user_words_raw": "mad-at-myself part",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [
+      "relief"
+    ],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "waiting for Monday bloodwork results after something the doctor noticed",
+    "appraisal_thought": "at least im not carrying the mad-at-myself part alone in my head anymore",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "acceptance",
+      "space",
+      "rest"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Waiting for medical test results brought worry, dread, self-directed anger, and some relief from saying it out loud.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. um i dont really know how to start this. i guess ive just been kind of on edge the last few days and i cant shake it"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that sounds really unsettled and hard to shake. Does it feel more like worry, unease, or something else?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "on edge",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "worry yeah. or like dread maybe. its both honestly. i had bloodwork done last week for this thing my doctor noticed and i get the results back monday and i just. ive been googling things i shouldnt be googling lol. and i feel kind of stupid because its probably nothing but my body wont let it go, like my chest is tight all the time now"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like worry and dread, especially with Monday coming up. And your chest being tight all the time makes it feel really kept in your body; is it making you want to check or keep googling?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "worry",
+      "body_cue": [
+        "tight chest"
+      ],
+      "trigger": "waiting for bloodwork results after something the doctor noticed"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah i keep checking. like i pressed on the spot again this morning to see if it felt different and then i hated myself for doing it. and theres this other thing underneath, im kind of angry too? like at myself for not going in sooner, i had a feeling something was off for months and i just ignored it because i didnt want to deal. so now its like im scared AND im mad at past me for putting us here. does that even make sense"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Yes, that makes sense — it sounds like worry and dread, with anger turned back on yourself too. And I’m hearing the chest tightness and the checking; is the anger more at past you, or more at the situation now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [
+        "tight chest"
+      ],
+      "trigger": "waiting for bloodwork results after something the doctor noticed"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "more at past me i think. the situation is just the situation, i cant be mad at a blood test. but past me had so many chances. my mom had the same kind of scare and you'd think that would make me MORE careful not less but somehow it made me not want to look at all. avoidance i guess. and now im sitting here at midnight again not sleeping just waiting for a monday that might be totally fine or might not be"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like dread that keeps circling back at midnight, with past-you carrying a lot of blame. We can stay with it here, or let it rest for now if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [
+        "tight chest"
+      ],
+      "trigger": "waiting for Monday bloodwork results after something the doctor noticed"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i think i can let it rest a little. honestly just saying it out loud helped, even the part about being mad at myself, i hadnt admitted that to anyone. it doesnt fix monday but my chest feels a tiny bit less tight right now which is something. i was sort of expecting to feel judged for the avoidance and i didnt so. thank you"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "I’m glad you could say it here, and I’m glad it felt less judged. We can leave it there for now, or if you want later we can stay with the part that was afraid of being judged.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "waiting for Monday bloodwork results after something the doctor noticed"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "lets leave it there for tonight. i should actually try to sleep. ill find out monday either way and at least im not carrying the mad-at-myself part alone in my head anymore. thanks for sitting with me. goodnight"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Goodnight — I’m glad you could set it down for tonight, and that the mad-at-myself part doesn’t have to sit alone in your head right now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "waiting for Monday bloodwork results after something the doctor noticed"
+    }
+  ]
+}

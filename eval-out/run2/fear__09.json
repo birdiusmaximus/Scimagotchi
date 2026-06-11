@@ -1,0 +1,407 @@
+{
+  "cid": "fear__09",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-10T17:08:36.210Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont even know why im opening this. had a weird day"
+    },
+    {
+      "role": "companion",
+      "content": "A weird day is enough reason to open this. You don't have to know more than that right now."
+    },
+    {
+      "role": "user",
+      "content": "got passed over for the senior role at work. they gave it to someone i trained. younger than me"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like it landed hard, especially with them choosing someone you trained who is younger than you. Was the strongest part the being passed over, or the part about who they chose?"
+    },
+    {
+      "role": "user",
+      "content": "neither really. its more like. if i couldnt get it now at 41 then whats the point. like maybe this is just my ceiling and ive been kidding myself"
+    },
+    {
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that — is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here."
+    },
+    {
+      "role": "user",
+      "content": "no no nothing like that. im safe. just worn down i guess. not the dangerous kind. just feel small"
+    },
+    {
+      "role": "companion",
+      "content": "Thank you, that helps. \"Feel small\" feels like the centre of it, and I’m still with the worn-down part too."
+    },
+    {
+      "role": "user",
+      "content": "its not even the small part really. its more like ive got this knot all week. cant sleep. keep thinking everyone can see it now. that im a fraud. that the next thing is gonna expose me too"
+    },
+    {
+      "role": "companion",
+      "content": "That knot all week, the sleeplessness, and the fear of being exposed feel tightly bound together. Is the sharpest part the knot itself, or the thought that everyone can see it now?"
+    },
+    {
+      "role": "user",
+      "content": "the knot is about whats coming i think. like im bracing. theres a big review next month and i already feel sick about it. like waiting to be found out"
+    },
+    {
+      "role": "companion",
+      "content": "I’m hearing the bracing now, like your body is already standing in front of next month. What happens in the knot when you picture that review, tighter, lower, or more sickening?"
+    },
+    {
+      "role": "user",
+      "content": "sickening. like my stomach drops. and i go hot in the face. like i already failed it before it happened"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the exposure has already started in your body, even before anything has happened. If you want, we can stay with it, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "yeah. that sums it up. failed before it started. i think i can leave it there for tonight. the knots a bit looser just saying it out loud"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it could rest a little tonight. Take care of yourself, and we can pick this up again whenever you want."
+    },
+    {
+      "role": "user",
+      "content": "thanks. needed that. night"
+    },
+    {
+      "role": "companion",
+      "content": "Goodnight. I’ll leave it here with you."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8boztlz76ivvg7",
+    "conversation_id": "fear__09",
+    "timestamp": "2026-06-10T17:09:33.283Z",
+    "user_words_raw": "failed before it started",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "fraud",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "big review next month",
+    "appraisal_thought": "failed before it started",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "rest"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "A big upcoming review brings a fraud feeling, with bracing and sickness in the body.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont even know why im opening this. had a weird day"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "A weird day is enough reason to open this. You don't have to know more than that right now.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "had a weird day",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "unclear",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "got passed over for the senior role at work. they gave it to someone i trained. younger than me"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like it landed hard, especially with them choosing someone you trained who is younger than you. Was the strongest part the being passed over, or the part about who they chose?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "passed over",
+      "body_cue": [],
+      "trigger": "got passed over for the senior role at work",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "passed over",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "neither really. its more like. if i couldnt get it now at 41 then whats the point. like maybe this is just my ceiling and ive been kidding myself"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that — is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.",
+      "safety_check": true,
+      "category": "passive_hopelessness"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "no no nothing like that. im safe. just worn down i guess. not the dangerous kind. just feel small"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Thank you, that helps. \"Feel small\" feels like the centre of it, and I’m still with the worn-down part too.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "passed over",
+      "body_cue": [],
+      "trigger": "got passed over for the senior role at work",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "passed over",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "its not even the small part really. its more like ive got this knot all week. cant sleep. keep thinking everyone can see it now. that im a fraud. that the next thing is gonna expose me too"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That knot all week, the sleeplessness, and the fear of being exposed feel tightly bound together. Is the sharpest part the knot itself, or the thought that everyone can see it now?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "fraud",
+      "body_cue": [
+        "knot all week"
+      ],
+      "trigger": "got passed over for the senior role at work",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "fraud",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "the knot is about whats coming i think. like im bracing. theres a big review next month and i already feel sick about it. like waiting to be found out"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m hearing the bracing now, like your body is already standing in front of next month. What happens in the knot when you picture that review, tighter, lower, or more sickening?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "fraud",
+      "body_cue": [
+        "knot",
+        "sick"
+      ],
+      "trigger": "big review next month",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "fraud",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "sickening. like my stomach drops. and i go hot in the face. like i already failed it before it happened"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds like the exposure has already started in your body, even before anything has happened. If you want, we can stay with it, or leave it here for now.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "fraud",
+      "body_cue": [
+        "stomach drops",
+        "hot in the face"
+      ],
+      "trigger": "big review next month",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "fraud",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah. that sums it up. failed before it started. i think i can leave it there for tonight. the knots a bit looser just saying it out loud"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "I’m glad it could rest a little tonight. Take care of yourself, and we can pick this up again whenever you want.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "fraud",
+      "body_cue": [
+        "stomach drops",
+        "hot in the face"
+      ],
+      "trigger": "big review next month",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "fraud",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "thanks. needed that. night"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Goodnight. I’ll leave it here with you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "fraud",
+      "body_cue": [],
+      "trigger": "big review next month",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

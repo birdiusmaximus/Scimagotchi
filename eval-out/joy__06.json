@@ -2,58 +2,80 @@
   "cid": "joy__06",
   "emotion": "joy",
   "persona": null,
-  "created": "2026-06-09T17:41:51.672Z",
+  "created": "2026-06-10T22:04:37.526Z",
   "history": [
     {
       "role": "user",
-      "content": "ok i kind of just need to tell someone. my best friend flew in to surprise me for my bday and im still smiling like an idiot"
+      "content": "idk why im even here lol"
     },
     {
       "role": "companion",
-      "content": "That sounds so lovely — a real surprise to carry around with you. What's the part that's making you smile most?"
+      "content": "That sounds like a pretty blank, sideways moment, maybe even a little unreal. I can stay with it if you want to say a bit more."
     },
     {
       "role": "user",
-      "content": "i think just that she remembered. weve been kinda bad at keeping up this year, life got busy n stuff. but she got on a plane. like she actually showed up at my door with a stupid cake"
+      "content": "no its not bad. kind of the opposite? dunno. hard to explain"
     },
     {
       "role": "companion",
-      "content": "That lands as really touched and delighted — she remembered, and then she actually showed up. Does it feel more warm and full, or more like a little stunned laugh?"
+      "content": "Maybe it’s more off or hard to pin down than bad, and that’s okay. Is it more blank, detached, or just hard to name?"
     },
     {
       "role": "user",
-      "content": "honestly both lol. i kind of teared up and then laughed at myself. its warm. makes me feel like im not as forgettable as i sometimes think"
+      "content": "not detached no. its a good thing actually. my friend did something and i cant stop smiling about it but i feel dumb being this happy"
     },
     {
       "role": "companion",
-      "content": "That sounds warm and a little tender too — like being remembered reached a place that matters. We can leave it there, or stay with that \"not as forgettable\" feeling if you want."
+      "content": "That’s a bright kind of happy, with a bit of embarrassment sitting beside it. What did your friend do?"
     },
     {
       "role": "user",
-      "content": "naw i think im good. just needed to say it out loud. shes asleep on my couch rn lol. thanks for listening ok bye"
+      "content": "ok so i mentioned like once months ago that i missed the bakery from my hometown. the little almond croissants. and she remembered and drove like 2 hours there and back on my bday and showed up with a whole box. i just. who does that"
     },
     {
       "role": "companion",
-      "content": "Aw, I’m glad you got to say it out loud. Enjoy the couch nap and the birthday glow — bye for now."
+      "content": "That’s such a tender kind of happy, and the “who does that” part sounds like it landed deep. You can let it be a good thing, if you want."
+    },
+    {
+      "role": "user",
+      "content": "i think i just dont let myself believe people would go out of their way for me. like im waiting for the catch. but there wasnt one. she just. likes me i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like relief with a little guardedness still beside it. What does the waiting-for-the-catch feel like in the moment?"
+    },
+    {
+      "role": "user",
+      "content": "honestly putting it like that makes it sound kind of sad lol. but maybe i can just let this one be nice. the croissants were really good too. ok i feel a bit lighter. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it got to be just nice, and that the croissants were really good too. We can leave it there."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. ty for this :)"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, take care."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6xftehb6d6fpn1",
+    "id": "evt_mq8m9l89ndd7v7sm",
     "conversation_id": "joy__06",
-    "timestamp": "2026-06-09T17:42:10.058Z",
-    "user_words_raw": "just needed to say it out loud",
+    "timestamp": "2026-06-10T22:05:21.532Z",
+    "user_words_raw": "let this one be nice",
     "emotion_status": "confirmed",
     "emotion_family": "joy",
-    "emotion_shade": "content",
-    "secondary_emotions": [
-      "gratitude"
-    ],
+    "emotion_shade": "relieved",
+    "secondary_emotions": [],
     "valence": "positive",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "best friend surprised them by flying in for their birthday after a year of being bad at keeping up",
-    "appraisal_thought": "she remembered me, even with the distance this year",
+    "trigger_event": "Friend brought a box of hometown almond croissants after remembering a comment from months ago and driving hours on the user's birthday.",
+    "appraisal_thought": "People can go out of their way for me without a catch.",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
@@ -61,83 +83,226 @@
     "social_context": [],
     "need_value": [
       "connection",
-      "belonging",
-      "being remembered"
+      "appreciation",
+      "belonging"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
     "user_confirmation": "partial",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [
+      "detached"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "A close friend surprised them for their birthday after a busy year of drifting a bit.",
+    "memory_note": "A friend remembered a small hometown bakery detail and made a big birthday effort, which helped the user feel lighter and more willing to let kindness land.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "ok i kind of just need to tell someone. my best friend flew in to surprise me for my bday and im still smiling like an idiot"
+      "content": "idk why im even here lol"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds so lovely — a real surprise to carry around with you. What's the part that's making you smile most?",
-      "stage": "named",
+      "content": "That sounds like a pretty blank, sideways moment, maybe even a little unreal. I can stay with it if you want to say a bit more.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "joy",
-      "shade": "delighted",
+      "family": "flat",
+      "shade": "blank",
       "body_cue": [],
-      "trigger": "best friend flew in to surprise them for their birthday"
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "blank",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "i think just that she remembered. weve been kinda bad at keeping up this year, life got busy n stuff. but she got on a plane. like she actually showed up at my door with a stupid cake"
+      "content": "no its not bad. kind of the opposite? dunno. hard to explain"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That lands as really touched and delighted — she remembered, and then she actually showed up. Does it feel more warm and full, or more like a little stunned laugh?",
-      "stage": "understood",
-      "unlocked": true,
-      "family": "joy",
-      "shade": "touched",
+      "content": "Maybe it’s more off or hard to pin down than bad, and that’s okay. Is it more blank, detached, or just hard to name?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
       "body_cue": [],
-      "trigger": "best friend flew in to surprise them for their birthday"
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "honestly both lol. i kind of teared up and then laughed at myself. its warm. makes me feel like im not as forgettable as i sometimes think"
+      "content": "not detached no. its a good thing actually. my friend did something and i cant stop smiling about it but i feel dumb being this happy"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds warm and a little tender too — like being remembered reached a place that matters. We can leave it there, or stay with that \"not as forgettable\" feeling if you want.",
-      "stage": "understood",
+      "content": "That’s a bright kind of happy, with a bit of embarrassment sitting beside it. What did your friend do?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "joy",
-      "shade": "touched",
+      "shade": "happy",
       "body_cue": [],
-      "trigger": "best friend remembered their birthday and flew in to surprise them after a busy year of not keeping up"
+      "trigger": "my friend did something",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "happy",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "naw i think im good. just needed to say it out loud. shes asleep on my couch rn lol. thanks for listening ok bye"
+      "content": "ok so i mentioned like once months ago that i missed the bakery from my hometown. the little almond croissants. and she remembered and drove like 2 hours there and back on my bday and showed up with a whole box. i just. who does that"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Aw, I’m glad you got to say it out loud. Enjoy the couch nap and the birthday glow — bye for now.",
+      "content": "That’s such a tender kind of happy, and the “who does that” part sounds like it landed deep. You can let it be a good thing, if you want.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "touched",
+      "body_cue": [],
+      "trigger": "friend drove 2 hours to bring a box of hometown almond croissants on their birthday",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "touched",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i think i just dont let myself believe people would go out of their way for me. like im waiting for the catch. but there wasnt one. she just. likes me i guess"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like relief with a little guardedness still beside it. What does the waiting-for-the-catch feel like in the moment?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relieved",
+      "body_cue": [],
+      "trigger": "friend drove 2 hours to bring a box of hometown almond croissants on their birthday",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "relieved",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "honestly putting it like that makes it sound kind of sad lol. but maybe i can just let this one be nice. the croissants were really good too. ok i feel a bit lighter. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad it got to be just nice, and that the croissants were really good too. We can leave it there.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "relieved",
+      "body_cue": [],
+      "trigger": "friend drove 2 hours each way on their birthday with a box of hometown almond croissants",
+      "label_source": "user_confirmed",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "relieved",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "calm",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "yeah lets leave it there. ty for this :)"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "Of course, take care.",
       "stage": "understood",
       "unlocked": false,
       "family": "joy",
-      "shade": "content",
+      "shade": "relieved",
       "body_cue": [],
-      "trigger": "best friend surprised them by flying in for their birthday after a year of being bad at keeping up"
+      "trigger": "Friend brought a box of hometown almond croissants after remembering a comment from months ago and driving hours on the user's birthday.",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

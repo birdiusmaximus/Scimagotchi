@@ -1,0 +1,271 @@
+{
+  "cid": "calm__07",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-10T17:07:38.301Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so i dont really know what this is supposed to do but here goes. things have been weirdly calm with me and my partner lately and im not used to it"
+    },
+    {
+      "role": "companion",
+      "content": "“Weirdly calm” feels like the centre of this. I’m wondering if it’s a calm that feels safe, or one that feels a bit unfamiliar?"
+    },
+    {
+      "role": "user",
+      "content": "both i guess. its nice but i keep waiting for the other shoe to drop. we used to fight a lot. now we just... dont"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like calm and watchfulness sitting together, with the old fighting still in the room. Is the watchfulness more like waiting, or more like bracing?"
+    },
+    {
+      "role": "user",
+      "content": "less bracing now actually. it was bracing for a while. we did couples counseling for like 4 months and i think it just worked? we worked out a thing where we take a break before either of us gets heated. its boring but it works"
+    },
+    {
+      "role": "companion",
+      "content": "I’m hearing a calm that’s become more real, and a kind of “it worked” relief underneath the boredom. The waiting for the other shoe to drop seems to have loosened as the fighting stopped being the default."
+    },
+    {
+      "role": "user",
+      "content": "yeah relief is the word. i didnt think wed make it past last year if im honest. it feels weird to trust the quiet but i think im starting to"
+    },
+    {
+      "role": "companion",
+      "content": "“Trust the quiet” feels like the newest part here. I’m wondering if this quiet also means safety now, or if it still feels a little unfamiliar?"
+    },
+    {
+      "role": "user",
+      "content": "safety yeah. coming home doesnt feel like walking into a minefield anymore. thats the main thing. ok this was more useful than i expected honestly"
+    },
+    {
+      "role": "companion",
+      "content": "“Walking into a minefield” is the image that lands, and now home sounds more like safety than bracing. We can leave it here, or if you want, I can stay with what changed so the quiet started to feel safe."
+    },
+    {
+      "role": "user",
+      "content": "nah lets leave it there. dont wanna overthink a good thing for once. thanks though, this was alright"
+    },
+    {
+      "role": "companion",
+      "content": "Glad it could be that, and I’ll leave the good thing untouched. Take care of the quiet."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bnnv1p3h2mdgn",
+    "conversation_id": "calm__07",
+    "timestamp": "2026-06-10T17:08:10.139Z",
+    "user_words_raw": "dont wanna overthink a good thing",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "safe enough",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "coming home feeling safe after a long period of conflict, with couples counseling and break-before-heated pattern helping",
+    "appraisal_thought": "the quiet can be trusted now",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "safety",
+      "space",
+      "stability"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Quiet at home feels safe after a long stretch of conflict, and they prefer not to overthink it.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so i dont really know what this is supposed to do but here goes. things have been weirdly calm with me and my partner lately and im not used to it"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "“Weirdly calm” feels like the centre of this. I’m wondering if it’s a calm that feels safe, or one that feels a bit unfamiliar?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "calm",
+      "body_cue": [],
+      "trigger": "things have been weirdly calm with their partner lately",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "both i guess. its nice but i keep waiting for the other shoe to drop. we used to fight a lot. now we just... dont"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like calm and watchfulness sitting together, with the old fighting still in the room. Is the watchfulness more like waiting, or more like bracing?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "calm",
+      "body_cue": [],
+      "trigger": "things have been weirdly calm with their partner lately after a history of a lot of fighting",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "calm",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "less bracing now actually. it was bracing for a while. we did couples counseling for like 4 months and i think it just worked? we worked out a thing where we take a break before either of us gets heated. its boring but it works"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "I’m hearing a calm that’s become more real, and a kind of “it worked” relief underneath the boredom. The waiting for the other shoe to drop seems to have loosened as the fighting stopped being the default.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "calm",
+      "body_cue": [],
+      "trigger": "things have been calm with their partner lately after a period of a lot of fighting, and a break-before-heated pattern has been working",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "calm",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "joy",
+          "shade": "relief",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah relief is the word. i didnt think wed make it past last year if im honest. it feels weird to trust the quiet but i think im starting to"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "“Trust the quiet” feels like the newest part here. I’m wondering if this quiet also means safety now, or if it still feels a little unfamiliar?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "calm",
+      "body_cue": [],
+      "trigger": "things have been calmer with their partner after counseling and a break-before-heated pattern",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "calm",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "joy",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "safety yeah. coming home doesnt feel like walking into a minefield anymore. thats the main thing. ok this was more useful than i expected honestly"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "“Walking into a minefield” is the image that lands, and now home sounds more like safety than bracing. We can leave it here, or if you want, I can stay with what changed so the quiet started to feel safe.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "safe enough",
+      "body_cue": [],
+      "trigger": "couples counseling and a break-before-heated pattern at home",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "safe enough",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "joy",
+          "shade": "relief",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "nah lets leave it there. dont wanna overthink a good thing for once. thanks though, this was alright"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Glad it could be that, and I’ll leave the good thing untouched. Take care of the quiet.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "safe enough",
+      "body_cue": [],
+      "trigger": "coming home feeling safe after a long period of conflict, with couples counseling and break-before-heated pattern helping",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

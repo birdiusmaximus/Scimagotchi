@@ -2,196 +2,362 @@
   "cid": "fear__10",
   "emotion": "fear",
   "persona": null,
-  "created": "2026-06-09T17:35:57.924Z",
+  "created": "2026-06-10T22:06:36.985Z",
   "history": [
     {
       "role": "user",
-      "content": "hi. um i dont really know how to start this. i guess ive just been kind of on edge the last few days and i cant shake it"
+      "content": "hi. i dont really know why im here, today was just a lot. my hands are kind of shaking"
     },
     {
       "role": "companion",
-      "content": "Hey, that sounds really unsettled and hard to shake. Does it feel more like worry, unease, or something else?"
+      "content": "Hey, I’m here with you. That sounds like a lot to carry, and the shaking makes it feel very immediate, could you tell me whether it feels more like tension, restlessness, or something else?"
     },
     {
       "role": "user",
-      "content": "worry yeah. or like dread maybe. its both honestly. i had bloodwork done last week for this thing my doctor noticed and i get the results back monday and i just. ive been googling things i shouldnt be googling lol. and i feel kind of stupid because its probably nothing but my body wont let it go, like my chest is tight all the time now"
+      "content": "its not really pressure i think. more like... scared. theres this thing on my neck, like a lump, and ive been able to feel it for a couple weeks now and i keep telling myself its nothing but i cant stop touching it"
     },
     {
       "role": "companion",
-      "content": "That sounds like worry and dread, especially with Monday coming up. And your chest being tight all the time makes it feel really kept in your body; is it making you want to check or keep googling?"
+      "content": "I had that wrong, and thank you for correcting me. This sounds more like fear than pressure, and maybe a lot of checking around the lump, what word would be closer if fear isn’t quite it?"
     },
     {
       "role": "user",
-      "content": "yeah i keep checking. like i pressed on the spot again this morning to see if it felt different and then i hated myself for doing it. and theres this other thing underneath, im kind of angry too? like at myself for not going in sooner, i had a feeling something was off for months and i just ignored it because i didnt want to deal. so now its like im scared AND im mad at past me for putting us here. does that even make sense"
+      "content": "no fear is right. its dread maybe. like the constant background hum of it. my aunt had lymphoma and it started exactly like this she said, a painless lump, and i know im probably just spiraling and googling at 2am isnt helping but i did it anyway and now my brain wont shut up. i have a doctor appt thursday and i cant tell if im more scared of going or of what theyll say"
     },
     {
       "role": "companion",
-      "content": "Yes, that makes sense — it sounds like worry and dread, with anger turned back on yourself too. And I’m hearing the chest tightness and the checking; is the anger more at past you, or more at the situation now?"
+      "content": "That sounds like fear with dread underneath it, and the waiting has turned into a constant background hum. I can stay with that, or we can look at whether the fear is more about the appointment itself or what it might say."
     },
     {
       "role": "user",
-      "content": "more at past me i think. the situation is just the situation, i cant be mad at a blood test. but past me had so many chances. my mom had the same kind of scare and you'd think that would make me MORE careful not less but somehow it made me not want to look at all. avoidance i guess. and now im sitting here at midnight again not sleeping just waiting for a monday that might be totally fine or might not be"
+      "content": "honestly its the not knowing. right now its like schrodingers lump you know, until someone looks at it its both fine and not fine. and as long as i dont go i dont have to hear the bad version. which is so stupid because not going wont make it not be there. i think part of me wants to cancel thursday. i keep finding reasons. work is busy, maybe ill wait til it goes away on its own"
     },
     {
       "role": "companion",
-      "content": "That sounds like dread that keeps circling back at midnight, with past-you carrying a lot of blame. We can stay with it here, or let it rest for now if you want."
+      "content": "That sounds like fear and dread wrapped around uncertainty, with a pull to avoid the appointment for now. Is that more of a wanting to hide from the bad version, or just wanting to keep not knowing a little longer?"
     },
     {
       "role": "user",
-      "content": "i think i can let it rest a little. honestly just saying it out loud helped, even the part about being mad at myself, i hadnt admitted that to anyone. it doesnt fix monday but my chest feels a tiny bit less tight right now which is something. i was sort of expecting to feel judged for the avoidance and i didnt so. thank you"
+      "content": "keep not knowing longer i think. like the moment they say it out loud it becomes real and i cant un-hear it. ive been kind of holding my breath for two weeks. i havent even told my partner about the lump because saying it makes it real too and i dont want them looking at me like im sick. so im just carrying it around by myself and pretending im fine and im so tired"
     },
     {
       "role": "companion",
-      "content": "I’m glad you could say it here, and I’m glad it felt less judged. We can leave it there for now, or if you want later we can stay with the part that was afraid of being judged."
+      "content": "That makes sense, the not-knowing is doing a kind of sheltering work, and saying it out loud feels like it would make it real. I’m hearing a tired, alone kind of dread there, and you can leave it here if you want."
     },
     {
       "role": "user",
-      "content": "lets leave it there for tonight. i should actually try to sleep. ill find out monday either way and at least im not carrying the mad-at-myself part alone in my head anymore. thanks for sitting with me. goodnight"
+      "content": "no i think i actually needed to say it somewhere. its the first time ive said the word lump out loud to anyone, even if its just typing it to you. it feels a tiny bit less huge now that its outside my head. i dont know. i think im scared that if its bad ive wasted two weeks pretending, like i shouldve gone sooner"
     },
     {
       "role": "companion",
-      "content": "Goodnight — I’m glad you could set it down for tonight, and that the mad-at-myself part doesn’t have to sit alone in your head right now."
+      "content": "That feels like fear with a little shame around the time that passed, and the word itself seems to have taken some weight off. You can leave it there, or we can stay with what “too late” is saying to you."
+    },
+    {
+      "role": "user",
+      "content": "i think too late is saying its my fault for not catching it. which i know logically isnt how it works, two weeks probably doesnt change anything. but the scared part of me doesnt care about logic. i think im gonna keep the thursday appt though. saying all this out loud kind of made canceling feel like the cowardly version of myself and i dont want to be her"
+    },
+    {
+      "role": "companion",
+      "content": "I’m hearing fear and shame sitting together, with the shame getting louder around blame and being \"too late.\" You’ve got the Thursday appointment still in view, and you can tell me if you want to stay with that feeling or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "yeah i think i should leave it here. im pretty wrung out. but thank you, genuinely. i feel like i can breathe a little. maybe ill tell my partner tonight, even just the word lump. we'll see. thanks for sitting with me"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, and I’m glad you could set it down here for now. Take the evening gently, and let the telling be as small as it needs to be."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6x88a3gjbdw2it",
+    "id": "evt_mq8mc5m8a1kaw664",
     "conversation_id": "fear__10",
-    "timestamp": "2026-06-09T17:36:55.280Z",
-    "user_words_raw": "mad-at-myself part",
+    "timestamp": "2026-06-10T22:07:35.952Z",
+    "user_words_raw": "leave it here",
     "emotion_status": "confirmed",
     "emotion_family": "calm",
     "emotion_shade": "settled",
-    "secondary_emotions": [
-      "relief"
-    ],
+    "secondary_emotions": [],
     "valence": "positive",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "waiting for Monday bloodwork results after something the doctor noticed",
-    "appraisal_thought": "at least im not carrying the mad-at-myself part alone in my head anymore",
+    "trigger_event": "the thought that two weeks of waiting might mean it is the user's fault",
+    "appraisal_thought": "if it is bad, I should have caught it sooner",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "acceptance",
+      "rest",
       "space",
-      "rest"
+      "dignity"
     ],
-    "confidence_level": "high",
+    "confidence_level": "medium",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [
+      "pressure"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Waiting for medical test results brought worry, dread, self-directed anger, and some relief from saying it out loud.",
+    "memory_note": "User has been carrying worry about a lump and may tell their partner soon.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hi. um i dont really know how to start this. i guess ive just been kind of on edge the last few days and i cant shake it"
+      "content": "hi. i dont really know why im here, today was just a lot. my hands are kind of shaking"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey, that sounds really unsettled and hard to shake. Does it feel more like worry, unease, or something else?",
-      "stage": "named",
+      "content": "Hey, I’m here with you. That sounds like a lot to carry, and the shaking makes it feel very immediate, could you tell me whether it feels more like tension, restlessness, or something else?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "fear",
-      "shade": "on edge",
-      "body_cue": [],
-      "trigger": null
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [
+        "hands are kind of shaking"
+      ],
+      "trigger": "today was just a lot",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "worry yeah. or like dread maybe. its both honestly. i had bloodwork done last week for this thing my doctor noticed and i get the results back monday and i just. ive been googling things i shouldnt be googling lol. and i feel kind of stupid because its probably nothing but my body wont let it go, like my chest is tight all the time now"
+      "content": "its not really pressure i think. more like... scared. theres this thing on my neck, like a lump, and ive been able to feel it for a couple weeks now and i keep telling myself its nothing but i cant stop touching it"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds like worry and dread, especially with Monday coming up. And your chest being tight all the time makes it feel really kept in your body; is it making you want to check or keep googling?",
-      "stage": "understood",
-      "unlocked": true,
+      "content": "I had that wrong, and thank you for correcting me. This sounds more like fear than pressure, and maybe a lot of checking around the lump, what word would be closer if fear isn’t quite it?",
+      "stage": "shaped",
+      "unlocked": false,
       "family": "fear",
-      "shade": "worry",
+      "shade": "scared",
       "body_cue": [
-        "tight chest"
+        "lump on my neck"
       ],
-      "trigger": "waiting for bloodwork results after something the doctor noticed"
+      "trigger": "feeling a lump on the neck for a couple weeks",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "yeah i keep checking. like i pressed on the spot again this morning to see if it felt different and then i hated myself for doing it. and theres this other thing underneath, im kind of angry too? like at myself for not going in sooner, i had a feeling something was off for months and i just ignored it because i didnt want to deal. so now its like im scared AND im mad at past me for putting us here. does that even make sense"
+      "content": "no fear is right. its dread maybe. like the constant background hum of it. my aunt had lymphoma and it started exactly like this she said, a painless lump, and i know im probably just spiraling and googling at 2am isnt helping but i did it anyway and now my brain wont shut up. i have a doctor appt thursday and i cant tell if im more scared of going or of what theyll say"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "Yes, that makes sense — it sounds like worry and dread, with anger turned back on yourself too. And I’m hearing the chest tightness and the checking; is the anger more at past you, or more at the situation now?",
+      "content": "That sounds like fear with dread underneath it, and the waiting has turned into a constant background hum. I can stay with that, or we can look at whether the fear is more about the appointment itself or what it might say.",
       "stage": "understood",
-      "unlocked": false,
+      "unlocked": true,
       "family": "fear",
       "shade": "dread",
-      "body_cue": [
-        "tight chest"
+      "body_cue": [],
+      "trigger": "a painless lump on the neck and an upcoming doctor appointment",
+      "label_source": "user_confirmed",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "dread",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        }
       ],
-      "trigger": "waiting for bloodwork results after something the doctor noticed"
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "more at past me i think. the situation is just the situation, i cant be mad at a blood test. but past me had so many chances. my mom had the same kind of scare and you'd think that would make me MORE careful not less but somehow it made me not want to look at all. avoidance i guess. and now im sitting here at midnight again not sleeping just waiting for a monday that might be totally fine or might not be"
+      "content": "honestly its the not knowing. right now its like schrodingers lump you know, until someone looks at it its both fine and not fine. and as long as i dont go i dont have to hear the bad version. which is so stupid because not going wont make it not be there. i think part of me wants to cancel thursday. i keep finding reasons. work is busy, maybe ill wait til it goes away on its own"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That sounds like dread that keeps circling back at midnight, with past-you carrying a lot of blame. We can stay with it here, or let it rest for now if you want.",
+      "content": "That sounds like fear and dread wrapped around uncertainty, with a pull to avoid the appointment for now. Is that more of a wanting to hide from the bad version, or just wanting to keep not knowing a little longer?",
       "stage": "understood",
       "unlocked": false,
       "family": "fear",
       "shade": "dread",
       "body_cue": [
-        "tight chest"
+        "shaking"
       ],
-      "trigger": "waiting for Monday bloodwork results after something the doctor noticed"
+      "trigger": "a painless lump on the neck and an upcoming doctor appointment",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "dread",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 8,
       "role": "user",
-      "content": "i think i can let it rest a little. honestly just saying it out loud helped, even the part about being mad at myself, i hadnt admitted that to anyone. it doesnt fix monday but my chest feels a tiny bit less tight right now which is something. i was sort of expecting to feel judged for the avoidance and i didnt so. thank you"
+      "content": "keep not knowing longer i think. like the moment they say it out loud it becomes real and i cant un-hear it. ive been kind of holding my breath for two weeks. i havent even told my partner about the lump because saying it makes it real too and i dont want them looking at me like im sick. so im just carrying it around by myself and pretending im fine and im so tired"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "I’m glad you could say it here, and I’m glad it felt less judged. We can leave it there for now, or if you want later we can stay with the part that was afraid of being judged.",
+      "content": "That makes sense, the not-knowing is doing a kind of sheltering work, and saying it out loud feels like it would make it real. I’m hearing a tired, alone kind of dread there, and you can leave it here if you want.",
       "stage": "understood",
       "unlocked": false,
-      "family": "calm",
-      "shade": "settled",
+      "family": "fear",
+      "shade": "dread",
       "body_cue": [],
-      "trigger": "waiting for Monday bloodwork results after something the doctor noticed"
+      "trigger": "a painless lump on the neck and the thought of saying it out loud or hearing what it means",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "dread",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 10,
       "role": "user",
-      "content": "lets leave it there for tonight. i should actually try to sleep. ill find out monday either way and at least im not carrying the mad-at-myself part alone in my head anymore. thanks for sitting with me. goodnight"
+      "content": "no i think i actually needed to say it somewhere. its the first time ive said the word lump out loud to anyone, even if its just typing it to you. it feels a tiny bit less huge now that its outside my head. i dont know. i think im scared that if its bad ive wasted two weeks pretending, like i shouldve gone sooner"
     },
     {
       "turn": 11,
       "role": "companion",
-      "content": "Goodnight — I’m glad you could set it down for tonight, and that the mad-at-myself part doesn’t have to sit alone in your head right now.",
+      "content": "That feels like fear with a little shame around the time that passed, and the word itself seems to have taken some weight off. You can leave it there, or we can stay with what “too late” is saying to you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [
+        "holding my breath"
+      ],
+      "trigger": "naming the lump and the thought that if it is bad, they waited too long",
+      "label_source": "user_confirmed",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "dread",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "i think too late is saying its my fault for not catching it. which i know logically isnt how it works, two weeks probably doesnt change anything. but the scared part of me doesnt care about logic. i think im gonna keep the thursday appt though. saying all this out loud kind of made canceling feel like the cowardly version of myself and i dont want to be her"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "I’m hearing fear and shame sitting together, with the shame getting louder around blame and being \"too late.\" You’ve got the Thursday appointment still in view, and you can tell me if you want to stay with that feeling or leave it here for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "the thought that two weeks of waiting might mean it is the user's fault",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "fear",
+          "shade": "dread",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah i think i should leave it here. im pretty wrung out. but thank you, genuinely. i feel like i can breathe a little. maybe ill tell my partner tonight, even just the word lump. we'll see. thanks for sitting with me"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "Of course, and I’m glad you could set it down here for now. Take the evening gently, and let the telling be as small as it needs to be.",
       "stage": "understood",
       "unlocked": false,
       "family": "calm",
       "shade": "settled",
       "body_cue": [],
-      "trigger": "waiting for Monday bloodwork results after something the doctor noticed"
+      "trigger": "the thought that two weeks of waiting might mean it is the user's fault",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

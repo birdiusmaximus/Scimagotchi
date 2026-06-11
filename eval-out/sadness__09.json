@@ -2,144 +2,407 @@
   "cid": "sadness__09",
   "emotion": "sadness",
   "persona": null,
-  "created": "2026-06-09T18:19:24.849Z",
+  "created": "2026-06-10T22:09:12.492Z",
   "history": [
     {
       "role": "user",
-      "content": "feel like a fraud at work today"
+      "content": "i dont even know why im opening this. got passed over for the senior role again today. third time"
     },
     {
       "role": "companion",
-      "content": "That sounds like a sharp kind of self-doubt at work. Is it more like embarrassment, fear of being found out, or something else?"
+      "content": "That third time can sting in a very particular way, and you do not even have the shape of why you're here yet. I'm here with you, if you want to say more about today."
     },
     {
       "role": "user",
-      "content": "more like i dont belong there. got promoted and everyone else just seems smarter"
+      "content": "its not even about today. its what it says about me. like everyone else moved up and im just. stuck"
     },
     {
       "role": "companion",
-      "content": "That sounds more like feeling exposed and out of place, with some shame beside it. Does it make you want to hide, explain yourself, or just go quiet?"
+      "content": "That sounds less like the day itself and more like what it seems to say about you, being stuck while everyone else moved on. Does it feel more like hurt, or something closer to shame or being left behind?"
     },
     {
       "role": "user",
-      "content": "go quiet mostly. just feel small. anyway thats it really"
+      "content": "i dunno. the guy they picked is younger than me. i trained him. sat there in the all hands clapping for him"
     },
     {
       "role": "companion",
-      "content": "That makes sense — small and quiet is a clear shape for it. We can leave it there if you want, or I can stay with it a little more; either is fine."
+      "content": "That sounds like it would land hard, sitting there clapping for someone you trained. Where do you notice it most, if you do?"
     },
     {
       "role": "user",
-      "content": "no its good. thanks. gonna go"
+      "content": "chest mostly. and like. tired. been telling myself im a late bloomer for years now. starting to think i just bloomed and this is it"
     },
     {
       "role": "companion",
-      "content": "Of course — take care."
+      "content": "That sounds heavy in the chest, with a tired kind of settling around it. I’m learning this might be less about the role itself and more about what it seems to say about how far things have gone for you."
+    },
+    {
+      "role": "user",
+      "content": "everyone always said i had potential. that word. potential. like it was a promise. and i kept believing it. feels stupid now"
+    },
+    {
+      "role": "companion",
+      "content": "That word carried a promise for you, and now it feels like it turned back on you. If you want, we can stay with what “potential” came to mean here, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "no its fine. i just. my dad worked the same job 30 yrs and i swore id be more than that. and im sitting here being less"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a sharp mix of disappointment and shame, with your dad’s path standing right next to your own. We can leave it here, or if you want, we can stay with what “being less” is doing to you."
+    },
+    {
+      "role": "user",
+      "content": "it makes me wanna not be seen. like i dont want anyone at work looking at me knowing they all know. i ate lunch in my car today"
+    },
+    {
+      "role": "companion",
+      "content": "It makes sense that this wants you out of sight, especially at work. That sounds like shame asking for cover, not for more attention."
+    },
+    {
+      "role": "user",
+      "content": "yeah. shame. thats the one i guess. didnt wanna say it. saying it makes it real"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, saying it can make it feel more real, and a little more exposed too. We can leave it there, or stay with what feels most real about it now."
+    },
+    {
+      "role": "user",
+      "content": "lets leave it there. thanks. needed to say it out loud i think. night"
+    },
+    {
+      "role": "companion",
+      "content": "Night. I’m glad you said it out loud."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6ys40i4nkbm1o7",
+    "id": "evt_mq8mfhu3saq9tq6k",
     "conversation_id": "sadness__09",
-    "timestamp": "2026-06-09T18:19:41.531Z",
-    "user_words_raw": "feel like a fraud",
+    "timestamp": "2026-06-10T22:10:10.183Z",
+    "user_words_raw": "needed to say it out loud",
     "emotion_status": "confirmed",
     "emotion_family": "shame",
-    "emotion_shade": "exposed",
-    "secondary_emotions": [
-      "hurt"
-    ],
+    "emotion_shade": "ashamed",
+    "secondary_emotions": [],
     "valence": "negative",
-    "activation": "low",
+    "activation": "medium",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "got promoted and everyone else just seems smarter",
-    "appraisal_thought": "i dont belong there",
-    "body_cue": [],
+    "trigger_event": "being passed over for the senior role after years of being told there was potential",
+    "appraisal_thought": "saying it makes it real",
+    "body_cue": [
+      "chest",
+      "tired"
+    ],
     "behaviour_action": [
-      "go quiet"
+      "didn't want anyone at work looking at me",
+      "ate lunch in my car"
     ],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "belonging",
       "dignity",
-      "self-respect"
+      "privacy",
+      "being understood"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Work promotion brought up feeling out of place and wanting to go quiet.",
+    "memory_note": "Feels shame after being passed over at work, especially around being seen by coworkers.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "feel like a fraud at work today"
+      "content": "i dont even know why im opening this. got passed over for the senior role again today. third time"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds like a sharp kind of self-doubt at work. Is it more like embarrassment, fear of being found out, or something else?",
-      "stage": "named",
+      "content": "That third time can sting in a very particular way, and you do not even have the shape of why you're here yet. I'm here with you, if you want to say more about today.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "shame",
-      "shade": "feeling like a fraud",
+      "family": "hurt",
+      "shade": "rejected or passed over",
       "body_cue": [],
-      "trigger": "at work today"
+      "trigger": "got passed over for the senior role again today, third time",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "more like i dont belong there. got promoted and everyone else just seems smarter"
+      "content": "its not even about today. its what it says about me. like everyone else moved up and im just. stuck"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds more like feeling exposed and out of place, with some shame beside it. Does it make you want to hide, explain yourself, or just go quiet?",
-      "stage": "named",
+      "content": "That sounds less like the day itself and more like what it seems to say about you, being stuck while everyone else moved on. Does it feel more like hurt, or something closer to shame or being left behind?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "shame",
-      "shade": "exposed",
+      "family": "hurt",
+      "shade": "rejected or passed over",
       "body_cue": [],
-      "trigger": "got promoted and everyone else just seems smarter"
+      "trigger": "got passed over for the senior role again today, third time",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "rejected or passed over",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "go quiet mostly. just feel small. anyway thats it really"
+      "content": "i dunno. the guy they picked is younger than me. i trained him. sat there in the all hands clapping for him"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That makes sense — small and quiet is a clear shape for it. We can leave it there if you want, or I can stay with it a little more; either is fine.",
-      "stage": "understood",
-      "unlocked": true,
-      "family": "shame",
-      "shade": "exposed",
+      "content": "That sounds like it would land hard, sitting there clapping for someone you trained. Where do you notice it most, if you do?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "passed over",
       "body_cue": [],
-      "trigger": "got promoted and everyone else just seems smarter"
+      "trigger": "they picked a younger colleague for the senior role after the user trained him; user sat in the all-hands clapping for him",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "passed over",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "no its good. thanks. gonna go"
+      "content": "chest mostly. and like. tired. been telling myself im a late bloomer for years now. starting to think i just bloomed and this is it"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Of course — take care.",
+      "content": "That sounds heavy in the chest, with a tired kind of settling around it. I’m learning this might be less about the role itself and more about what it seems to say about how far things have gone for you.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "passed over",
+      "body_cue": [
+        "chest",
+        "tired"
+      ],
+      "trigger": "being passed over for the senior role after training the person who got it",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "passed over",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": "tired",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "everyone always said i had potential. that word. potential. like it was a promise. and i kept believing it. feels stupid now"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That word carried a promise for you, and now it feels like it turned back on you. If you want, we can stay with what “potential” came to mean here, or leave it here for now.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "disappointed",
+      "body_cue": [],
+      "trigger": "being passed over for the senior role after years of being told there was potential",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "disappointed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": "null",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "no its fine. i just. my dad worked the same job 30 yrs and i swore id be more than that. and im sitting here being less"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like a sharp mix of disappointment and shame, with your dad’s path standing right next to your own. We can leave it here, or if you want, we can stay with what “being less” is doing to you.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [
+        "chest",
+        "tired"
+      ],
+      "trigger": "being passed over for the senior role after years of being told there was potential",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": "disappointment",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "it makes me wanna not be seen. like i dont want anyone at work looking at me knowing they all know. i ate lunch in my car today"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "It makes sense that this wants you out of sight, especially at work. That sounds like shame asking for cover, not for more attention.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "ashamed",
+      "body_cue": [
+        "chest",
+        "tired"
+      ],
+      "trigger": "being passed over for the senior role after years of being told there was potential",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah. shame. thats the one i guess. didnt wanna say it. saying it makes it real"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "Yeah, saying it can make it feel more real, and a little more exposed too. We can leave it there, or stay with what feels most real about it now.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "ashamed",
+      "body_cue": [
+        "chest",
+        "tired"
+      ],
+      "trigger": "being passed over for the senior role after years of being told there was potential",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "lets leave it there. thanks. needed to say it out loud i think. night"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Night. I’m glad you said it out loud.",
       "stage": "understood",
       "unlocked": false,
       "family": "shame",
-      "shade": "exposed",
-      "body_cue": [],
-      "trigger": "got promoted and everyone else just seems smarter"
+      "shade": "ashamed",
+      "body_cue": [
+        "chest",
+        "tired"
+      ],
+      "trigger": "being passed over for the senior role after years of being told there was potential",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

@@ -1,0 +1,143 @@
+{
+  "cid": "hurt__03",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-09T18:20:42.271Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont really know how to do this"
+    },
+    {
+      "role": "companion",
+      "content": "That’s okay — we can go slowly. What part feels unclear to you?"
+    },
+    {
+      "role": "user",
+      "content": "its money stuff. my brother. i lent him a lot and he just. didnt pay it back"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really frustrating and maybe hurt, too. Is it more the not getting paid back, or what it says about your brother?"
+    },
+    {
+      "role": "user",
+      "content": "not the money really. he didnt even say sorry. acted like i was the problem for asking. thats the part that gets me"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it sounds like the no-sorry and being treated like the problem is the sharp part. Did it feel more hot and reactive, or more tight and stuck?"
+    },
+    {
+      "role": "user",
+      "content": "tight i guess. more like let down than mad. hes my brother. anyway i dont wanna get into it. thanks though"
+    },
+    {
+      "role": "companion",
+      "content": "That feels more let down than mad, and I can leave it here. Thanks for trusting me with it."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ytrdwuq4g896t",
+    "conversation_id": "hurt__03",
+    "timestamp": "2026-06-09T18:21:01.205Z",
+    "user_words_raw": "let down",
+    "emotion_status": "candidate",
+    "emotion_family": "sadness",
+    "emotion_shade": "let down",
+    "secondary_emotions": [
+      "hurt"
+    ],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "brother didn’t say sorry and acted like the user was the problem for asking",
+    "appraisal_thought": "he should have apologized; asking wasn’t wrong",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "respect",
+      "repair",
+      "being heard"
+    ],
+    "confidence_level": "medium",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "Feels let down when someone close doesn’t take responsibility",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont really know how to do this"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That’s okay — we can go slowly. What part feels unclear to you?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "its money stuff. my brother. i lent him a lot and he just. didnt pay it back"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds really frustrating and maybe hurt, too. Is it more the not getting paid back, or what it says about your brother?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustration",
+      "body_cue": [],
+      "trigger": "brother borrowed a lot of money and did not pay it back"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "not the money really. he didnt even say sorry. acted like i was the problem for asking. thats the part that gets me"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That makes sense — it sounds like the no-sorry and being treated like the problem is the sharp part. Did it feel more hot and reactive, or more tight and stuck?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustration",
+      "body_cue": [],
+      "trigger": "brother didn’t say sorry and acted like the user was the problem for asking"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "tight i guess. more like let down than mad. hes my brother. anyway i dont wanna get into it. thanks though"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That feels more let down than mad, and I can leave it here. Thanks for trusting me with it.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "let down",
+      "body_cue": [],
+      "trigger": "brother didn’t say sorry and acted like the user was the problem for asking"
+    }
+  ]
+}

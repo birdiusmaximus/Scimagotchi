@@ -1,0 +1,294 @@
+{
+  "cid": "hurt__08",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-10T17:12:22.167Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. um. not really sure why im here honestly"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that’s completely fine. We can just sit with the not-knowing for a moment, or you can tell me what’s been on your mind if you want."
+    },
+    {
+      "role": "user",
+      "content": "i dunno. just been a weird few days. my head is kind of everywhere. work stuff i guess but not really work"
+    },
+    {
+      "role": "companion",
+      "content": "There’s a lot of “kind of everywhere” in that. I’m wondering if it feels more like pressure, unease, or just a muddled sort of off?"
+    },
+    {
+      "role": "user",
+      "content": "not pressure really. more like. ok so my manager basically promised me the senior role. like said it out loud, march, said it was mine. and then friday they posted it externally. didnt even tell me"
+    },
+    {
+      "role": "companion",
+      "content": "I had that wrong. Let me step back, what word would be closer to what this is feeling like?"
+    },
+    {
+      "role": "user",
+      "content": "let down i think. like i feel stupid for even believing it. and now i dont know whats happening with my job at all, like do i even have a future there"
+    },
+    {
+      "role": "companion",
+      "content": "\"Let down\" feels like the centre of this, and there’s also that sting of feeling stupid for believing it. I’m hearing hurt with a drop of shame around your future there, and maybe we can just stay with the raw edge of it if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah. its the believing it part that gets me. i told my partner, told my mum even. and now its just. embarrassing. and i sit at my desk every day across from the person who did it"
+    },
+    {
+      "role": "companion",
+      "content": "The believing it part is the sore spot here, and now it has turned into “embarrassing” as well. Sitting at your desk across from the person who did it sounds like it keeps the whole thing right there in front of you."
+    },
+    {
+      "role": "user",
+      "content": "yeah. i dont really know what to do with any of it. anyway. i should go. thanks for. this i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, we can leave it here. That embarrassment and hurt are still sitting in the room with you, and I’m glad you said them out loud."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8btqpqzyrgd7na",
+    "conversation_id": "hurt__08",
+    "timestamp": "2026-06-10T17:12:56.921Z",
+    "user_words_raw": "embarrassing",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "embarrassed",
+    "secondary_emotions": [
+      "hurt"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "manager promised the senior role, then posted it externally without telling them",
+    "appraisal_thought": "I believed it, and now I feel stupid and exposed.",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "dignity",
+      "belonging",
+      "being understood"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "user_rejected_shades": [
+      "pressure"
+    ],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "shame",
+        "shade": "embarrassed",
+        "salience": "foreground",
+        "source": "user_stated"
+      },
+      {
+        "family": "hurt",
+        "shade": null,
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Work disappointment after a promise was broken; embarrassment is tied to having told partner and parent.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. um. not really sure why im here honestly"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that’s completely fine. We can just sit with the not-knowing for a moment, or you can tell me what’s been on your mind if you want.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i dunno. just been a weird few days. my head is kind of everywhere. work stuff i guess but not really work"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "There’s a lot of “kind of everywhere” in that. I’m wondering if it feels more like pressure, unease, or just a muddled sort of off?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "muddled",
+      "body_cue": [],
+      "trigger": "work stuff, but not really work",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "muddled",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "flat",
+          "shade": "off",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "not pressure really. more like. ok so my manager basically promised me the senior role. like said it out loud, march, said it was mine. and then friday they posted it externally. didnt even tell me"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "I had that wrong. Let me step back, what word would be closer to what this is feeling like?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": null,
+      "shade": "muddled",
+      "body_cue": [],
+      "trigger": "manager promised senior role, then posted it externally without telling user",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "let down i think. like i feel stupid for even believing it. and now i dont know whats happening with my job at all, like do i even have a future there"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "\"Let down\" feels like the centre of this, and there’s also that sting of feeling stupid for believing it. I’m hearing hurt with a drop of shame around your future there, and maybe we can just stay with the raw edge of it if you want.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "let down",
+      "body_cue": [],
+      "trigger": "manager promised the senior role, then posted it externally without telling them",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "let down",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": "stupid",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. its the believing it part that gets me. i told my partner, told my mum even. and now its just. embarrassing. and i sit at my desk every day across from the person who did it"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "The believing it part is the sore spot here, and now it has turned into “embarrassing” as well. Sitting at your desk across from the person who did it sounds like it keeps the whole thing right there in front of you.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "manager promised the senior role, then posted it externally without telling them",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "embarrassed",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": "let down",
+          "salience": "background",
+          "source": "user_confirmed"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. i dont really know what to do with any of it. anyway. i should go. thanks for. this i guess"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course, we can leave it here. That embarrassment and hurt are still sitting in the room with you, and I’m glad you said them out loud.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "manager promised the senior role, then posted it externally without telling them",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "embarrassed",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    }
+  ]
+}

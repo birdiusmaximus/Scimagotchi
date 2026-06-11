@@ -2,147 +2,335 @@
   "cid": "calm__09",
   "emotion": "calm",
   "persona": null,
-  "created": "2026-06-09T17:43:58.554Z",
+  "created": "2026-06-10T22:05:43.099Z",
   "history": [
     {
       "role": "user",
-      "content": "hey. logging something. feel ok today. settled i guess"
+      "content": "ok so. weird thing. i deleted my linkedin yesterday and i havent felt this still in a long time"
     },
     {
       "role": "companion",
-      "content": "Hey — that sounds pretty settled, maybe even a little steady. Does it feel peaceful, or more just okay?"
+      "content": "That “still” feels important. It sounds like something shifted when you deleted LinkedIn, and the quiet of it has been sitting with you since then."
     },
     {
       "role": "user",
-      "content": "peaceful. stopped trying to be someone i'm not. quit the side hustle everyone wanted me to keep"
+      "content": "yeah. i didnt even announce it or anything. just. gone. been on there since i was 22"
     },
     {
       "role": "companion",
-      "content": "That sounds peaceful in a deep, clear way — like some pressure finally let go. Does it feel lighter in your body, or more like quiet space?"
+      "content": "That sounds like a quiet kind of relief, with a little gravity in it too. Deleting something you’d carried since 22 can make the silence feel bigger than the act itself."
     },
     {
       "role": "user",
-      "content": "lighter. like i can breathe. dont have to prove anything to them anymore"
+      "content": "relief is part of it i think. the whole thing was just me performing a version of myself i stopped believing in. job titles. 'thrilled to announce'. all that"
     },
     {
       "role": "companion",
-      "content": "That sounds lighter in a very real way — like breathing got easier once you didn’t have to prove anything. Does it feel open and spacious, or more like a relief that’s still settling?"
+      "content": "Yes, that sounds like relief from the performance, and maybe a kind of honesty too. What did it mean to let go of that version of yourself?"
     },
     {
       "role": "user",
-      "content": "relief still settling. yeah. thats it. thanks, gonna head off"
+      "content": "honestly it meant admitting i dont want the thing i spent ten years telling everyone i wanted. the ladder. the senior whatever title. i kept curating this person who had it together"
     },
     {
       "role": "companion",
-      "content": "That makes sense — relief still settling can be a gentle kind of quiet. We can leave it there, and I hope the rest of your day stays soft."
+      "content": "That sounds like a hard kind of honesty, not just about the title but about who you’d been trying to be. I’m wondering if the stillness came from no longer having to hold that version together, or from something else?"
+    },
+    {
+      "role": "user",
+      "content": "i think its that. like nobodys watching the dashboard anymore. no metrics on who i am. i woke up today and didnt reach for my phone to check anything and i just. lay there. and it was fine"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like letting go of being measured, and finding out you could just lie there and be fine. I’m learning that the stillness is tied to no longer having to perform for the dashboard."
+    },
+    {
+      "role": "user",
+      "content": "yeah. thats it exactly. its weird to feel safe being a person nobody can look up. like i got smaller and it felt like more room not less"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a real shift, smaller but with more room, and that can be its own kind of safety. If you want, we can stay with what that safety is like, or leave it here."
+    },
+    {
+      "role": "user",
+      "content": "maybe just one more sec. i guess im a little scared its temporary. that monday ill panic and reinstall. but right now its just quiet and im not gonna ruin it by poking it"
+    },
+    {
+      "role": "companion",
+      "content": "That quiet, and not wanting to poke at it, comes through very clearly. It sounds like the fear is hovering in the background, while the quiet is what’s here right now."
+    },
+    {
+      "role": "user",
+      "content": "yeah. the quiets here. thats enough for now. thanks for not making me name it til i was ready. gonna go sit with it"
+    },
+    {
+      "role": "companion",
+      "content": "Of course. I’m glad you can sit with it, and I’ll leave it there with you."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6xij6o04o9ibwi",
+    "id": "evt_mq8mazxgs56yew5s",
     "conversation_id": "calm__09",
-    "timestamp": "2026-06-09T17:44:16.690Z",
-    "user_words_raw": "relief still settling",
+    "timestamp": "2026-06-10T22:06:34.490Z",
+    "user_words_raw": "the quiets here",
     "emotion_status": "confirmed",
-    "emotion_family": "calm",
-    "emotion_shade": "relief",
+    "emotion_family": "fear",
+    "emotion_shade": "scared",
     "secondary_emotions": [],
-    "valence": "positive",
+    "valence": "neutral",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "stopped trying to be someone i'm not; quit the side hustle everyone wanted me to keep",
-    "appraisal_thought": "dont have to prove anything to them anymore",
-    "body_cue": [
-      "can breathe"
-    ],
+    "trigger_event": "The quiet feeling after stepping out of a measured, public version of self, with worry it may not last by Monday.",
+    "appraisal_thought": "This calm might be temporary, and I could ruin it if I test it.",
+    "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [
-      "autonomy",
-      "space",
-      "rest",
-      "self-trust"
-    ],
+    "need_value": [],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Feeling eased after dropping expectations from others and choosing their own path.",
+    "memory_note": "Person is easing into a quieter state after letting go of constant checking and performance.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey. logging something. feel ok today. settled i guess"
+      "content": "ok so. weird thing. i deleted my linkedin yesterday and i havent felt this still in a long time"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey — that sounds pretty settled, maybe even a little steady. Does it feel peaceful, or more just okay?",
-      "stage": "named",
+      "content": "That “still” feels important. It sounds like something shifted when you deleted LinkedIn, and the quiet of it has been sitting with you since then.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "calm",
       "shade": "settled",
       "body_cue": [],
-      "trigger": null
+      "trigger": "deleting LinkedIn yesterday",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "peaceful. stopped trying to be someone i'm not. quit the side hustle everyone wanted me to keep"
+      "content": "yeah. i didnt even announce it or anything. just. gone. been on there since i was 22"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds peaceful in a deep, clear way — like some pressure finally let go. Does it feel lighter in your body, or more like quiet space?",
-      "stage": "named",
+      "content": "That sounds like a quiet kind of relief, with a little gravity in it too. Deleting something you’d carried since 22 can make the silence feel bigger than the act itself.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "calm",
-      "shade": "peaceful",
+      "shade": "settled",
       "body_cue": [],
-      "trigger": "stopped trying to be someone i'm not; quit the side hustle everyone wanted me to keep"
+      "trigger": "deleting LinkedIn yesterday",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "settled",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "lighter. like i can breathe. dont have to prove anything to them anymore"
+      "content": "relief is part of it i think. the whole thing was just me performing a version of myself i stopped believing in. job titles. 'thrilled to announce'. all that"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds lighter in a very real way — like breathing got easier once you didn’t have to prove anything. Does it feel open and spacious, or more like a relief that’s still settling?",
-      "stage": "understood",
-      "unlocked": true,
+      "content": "Yes, that sounds like relief from the performance, and maybe a kind of honesty too. What did it mean to let go of that version of yourself?",
+      "stage": "shaped",
+      "unlocked": false,
       "family": "calm",
-      "shade": "peaceful",
-      "body_cue": [
-        "can breathe"
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "deleting LinkedIn and letting go of the online performance",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "settled",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "joy",
+          "shade": "relief",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
       ],
-      "trigger": "stopped trying to be someone i'm not; quit the side hustle everyone wanted me to keep"
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "relief still settling. yeah. thats it. thanks, gonna head off"
+      "content": "honestly it meant admitting i dont want the thing i spent ten years telling everyone i wanted. the ladder. the senior whatever title. i kept curating this person who had it together"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense — relief still settling can be a gentle kind of quiet. We can leave it there, and I hope the rest of your day stays soft.",
+      "content": "That sounds like a hard kind of honesty, not just about the title but about who you’d been trying to be. I’m wondering if the stillness came from no longer having to hold that version together, or from something else?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "admitting they do not want the thing they spent years saying they wanted and letting go of the curated online version",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "settled",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "joy",
+          "shade": "relief",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i think its that. like nobodys watching the dashboard anymore. no metrics on who i am. i woke up today and didnt reach for my phone to check anything and i just. lay there. and it was fine"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like letting go of being measured, and finding out you could just lie there and be fine. I’m learning that the stillness is tied to no longer having to perform for the dashboard.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "Deleting LinkedIn and stepping out of the curated, measured version of self",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "settled",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "joy",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. thats it exactly. its weird to feel safe being a person nobody can look up. like i got smaller and it felt like more room not less"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels like a real shift, smaller but with more room, and that can be its own kind of safety. If you want, we can stay with what that safety is like, or leave it here.",
       "stage": "understood",
       "unlocked": false,
       "family": "calm",
-      "shade": "relief",
-      "body_cue": [
-        "can breathe"
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "No longer being measurable or publicly readable after stepping out of a curated career identity.",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "maybe just one more sec. i guess im a little scared its temporary. that monday ill panic and reinstall. but right now its just quiet and im not gonna ruin it by poking it"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That quiet, and not wanting to poke at it, comes through very clearly. It sounds like the fear is hovering in the background, while the quiet is what’s here right now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "scared",
+      "body_cue": [],
+      "trigger": "The quiet feeling after stepping out of a measured, public version of self, with worry it may not last by Monday.",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "scared",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "calm",
+          "shade": "quiet",
+          "salience": "background",
+          "source": "user_stated"
+        }
       ],
-      "trigger": "stopped trying to be someone i'm not; quit the side hustle everyone wanted me to keep"
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah. the quiets here. thats enough for now. thanks for not making me name it til i was ready. gonna go sit with it"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "Of course. I’m glad you can sit with it, and I’ll leave it there with you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "scared",
+      "body_cue": [],
+      "trigger": "The quiet feeling after stepping out of a measured, public version of self, with worry it may not last by Monday.",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

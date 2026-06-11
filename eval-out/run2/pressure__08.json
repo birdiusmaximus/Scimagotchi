@@ -1,0 +1,243 @@
+{
+  "cid": "pressure__08",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-10T17:09:37.536Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. um not really sure why im here honestly"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that's okay. We can just take it as it comes, or you can tell me what feels most present right now."
+    },
+    {
+      "role": "user",
+      "content": "idk. just a lot going on. my contract ends in like 6 weeks and i havent figured out whats next"
+    },
+    {
+      "role": "companion",
+      "content": "There is a lot packed into that, especially with the contract ending in six weeks and not knowing what comes next."
+    },
+    {
+      "role": "user",
+      "content": "yeah. and like everyone keeps asking what my plan is. my parents. my partner. i dont have one. and rents due and i keep opening job sites and just closing them again"
+    },
+    {
+      "role": "companion",
+      "content": "That feels more like being overwhelmed and pressed from all sides than just not having a plan. Does it feel more like pressure, or something heavier and more trapped?"
+    },
+    {
+      "role": "user",
+      "content": "pressure i think. not trapped exactly. more like theres too much and i cant hold it all. like im gonna drop something important and i wont even notice which one"
+    },
+    {
+      "role": "companion",
+      "content": "“Too much and I can’t hold it all” feels like the centre of this. I’m wondering if the hardest part is the amount, or the fear of dropping something important without seeing which one?"
+    },
+    {
+      "role": "user",
+      "content": "the dropping thing. yeah. cause i cant tell whats actually urgent anymore its all just loud. the rent is real but so is the not knowing who i even want to be after this"
+    },
+    {
+      "role": "companion",
+      "content": "The rent is real, and the not knowing who you even want to be after this is real too. I’m learning this pressure has a fear in it, like something important could slip past you while everything stays loud."
+    },
+    {
+      "role": "user",
+      "content": "yeah. that. ok i dont really have more in me tonight but that helped a bit. thanks for not making me make a plan lol. gonna go"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, you can leave it there for tonight. Take care, and I’ll be here when you want to pick it up again."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bq7orrnyylthb",
+    "conversation_id": "pressure__08",
+    "timestamp": "2026-06-10T17:10:13.518Z",
+    "user_words_raw": "don't really have more in me tonight",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "pressured",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "contract ending, rent due, and everyone asking what the plan is",
+    "appraisal_thought": "If I drop the wrong thing, I might not notice in time.",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [
+      "trapped"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "They were wrapping up after feeling overwhelmed by job and rent uncertainty.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. um not really sure why im here honestly"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that's okay. We can just take it as it comes, or you can tell me what feels most present right now.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "idk. just a lot going on. my contract ends in like 6 weeks and i havent figured out whats next"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "There is a lot packed into that, especially with the contract ending in six weeks and not knowing what comes next.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "contract ending in six weeks and not having figured out what comes next",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah. and like everyone keeps asking what my plan is. my parents. my partner. i dont have one. and rents due and i keep opening job sites and just closing them again"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That feels more like being overwhelmed and pressed from all sides than just not having a plan. Does it feel more like pressure, or something heavier and more trapped?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "everyone keeps asking what my plan is, plus rent due and the contract ending",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "pressure i think. not trapped exactly. more like theres too much and i cant hold it all. like im gonna drop something important and i wont even notice which one"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "“Too much and I can’t hold it all” feels like the centre of this. I’m wondering if the hardest part is the amount, or the fear of dropping something important without seeing which one?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "everyone keeps asking what my plan is, rent due, and the contract ending",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "the dropping thing. yeah. cause i cant tell whats actually urgent anymore its all just loud. the rent is real but so is the not knowing who i even want to be after this"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "The rent is real, and the not knowing who you even want to be after this is real too. I’m learning this pressure has a fear in it, like something important could slip past you while everything stays loud.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressured",
+      "body_cue": [],
+      "trigger": "contract ending, rent due, and everyone asking what the plan is",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "pressured",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. that. ok i dont really have more in me tonight but that helped a bit. thanks for not making me make a plan lol. gonna go"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course, you can leave it there for tonight. Take care, and I’ll be here when you want to pick it up again.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "pressured",
+      "body_cue": [],
+      "trigger": "contract ending, rent due, and everyone asking what the plan is",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

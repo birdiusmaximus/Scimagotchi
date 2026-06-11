@@ -2,143 +2,250 @@
   "cid": "sadness__05",
   "emotion": "sadness",
   "persona": null,
-  "created": "2026-06-09T18:18:55.680Z",
+  "created": "2026-06-10T22:09:05.636Z",
   "history": [
     {
       "role": "user",
-      "content": "hey. dunno really why im here lol"
+      "content": "ok so this is gonna sound dumb but i saw on instagram that an old college friend got married last weekend. fully did not invite me lol. anyway im fine its whatever"
     },
     {
       "role": "companion",
-      "content": "Hey, that’s okay. We can just hang out a bit — what’s been on your mind today?"
+      "content": "That \"did not invite me\" bit lands with a little sting, even if you're keeping it in the \"it's whatever\" lane. If you want, we can just stay with that moment for a second."
     },
     {
       "role": "user",
-      "content": "idk. nothing really. just one of those days i guess. found an old box of stuff while cleaning, no big deal"
+      "content": "ha yeah a little sting i guess. the dumb thing is i cant even be mad at her. we were super close in uni and then i just... stopped texting back. like for years. so its not like she forgot me, i kind of disappeared first"
     },
     {
       "role": "companion",
-      "content": "Mm, sounds like one of those quiet, kind of blank days. Was the box just a box, or did it stir up anything at all?"
+      "content": "That sounds like a mix of sting and something heavier under it, maybe regret or self-blame for having disappeared first."
     },
     {
       "role": "user",
-      "content": "lol it was my dads old watch and some photos. he passed a few years back. its fine tho, ancient history. i swear i didnt come here to be a downer haha"
+      "content": "yeah. regret is probably the word. i tell people im just bad at keeping in touch which is true but its also a cop out. she used to be my person yknow? wed talk every day. and i let it go cause i got busy and depressed and now its just this thing i scroll past. the wedding photos were really nice though, good for her, genuinely"
     },
     {
       "role": "companion",
-      "content": "That sounds like it carried a little more than “just stuff,” even if you’re keeping it light. I’m wondering if it felt more flat, or more like a small sting under the “fine”?"
+      "content": "Regret fits, and there’s also a quieter ache in the way she used to be your person. The wedding photos being genuinely nice for her gives it a more mixed feel, not just one clean thing."
     },
     {
       "role": "user",
-      "content": "yeah ok. bit of a sting maybe. i keep meaning to wear the watch but i never do. anyway im gonna head off. thanks for letting me ramble"
+      "content": "the disconnected thing yeah. honestly i think im less sad about the wedding and more just realizing how many people ive let slip without meaning to. like she was the big one but shes not the only one. somewhere along the way i just got really good at being alone and i dont totally know how that happened"
     },
     {
       "role": "companion",
-      "content": "That makes sense — a bit of sting, with the watch sitting there as something you keep meaning to wear. We can leave it here, and thanks for telling me about it."
+      "content": "That “really good at being alone” feels like it came with a cost you only noticed looking back. We can stay with that, or leave the wedding part here and just hold the wider drift for a moment."
+    },
+    {
+      "role": "user",
+      "content": "lonely is the honest one yeah. ok i think thats enough emotional damage for one tuesday lol. thanks for this, it actually helped to just say it. gonna go make some dinner now"
+    },
+    {
+      "role": "companion",
+      "content": "Glad you said it out loud. Enjoy dinner, and take the rest of Tuesday gently."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yrhsbxd0xrjqv",
+    "id": "evt_mq8mfci1n2ghi5kn",
     "conversation_id": "sadness__05",
-    "timestamp": "2026-06-09T18:19:14.436Z",
-    "user_words_raw": "bit of a sting",
+    "timestamp": "2026-06-10T22:09:48.439Z",
+    "user_words_raw": "lonely is the honest one",
     "emotion_status": "confirmed",
-    "emotion_family": "sadness",
-    "emotion_shade": "sting",
-    "secondary_emotions": [
-      "hurt"
-    ],
-    "valence": "mixed",
+    "emotion_family": "hurt",
+    "emotion_shade": "disconnected",
+    "secondary_emotions": [],
+    "valence": "neutral",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "finding dad’s old watch and photos while cleaning",
-    "appraisal_thought": "ancient history",
+    "trigger_event": "seeing an old college friend’s wedding photos and then noticing how many people have slipped away over time",
+    "appraisal_thought": "I let people slip away without meaning to, and I don’t fully know how I got here",
     "body_cue": [],
-    "behaviour_action": [
-      "keep meaning to wear the watch"
-    ],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [
-      "remembering",
-      "space"
-    ],
-    "confidence_level": "medium",
+    "need_value": [],
+    "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "A parent’s belongings can bring up a small sting, while the person keeps it light.",
+    "memory_note": "User talked through loneliness and regret about losing touch with people over time.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey. dunno really why im here lol"
+      "content": "ok so this is gonna sound dumb but i saw on instagram that an old college friend got married last weekend. fully did not invite me lol. anyway im fine its whatever"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey, that’s okay. We can just hang out a bit — what’s been on your mind today?",
-      "stage": "noticed",
+      "content": "That \"did not invite me\" bit lands with a little sting, even if you're keeping it in the \"it's whatever\" lane. If you want, we can just stay with that moment for a second.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": null,
-      "shade": null,
+      "family": "hurt",
+      "shade": "sting",
       "body_cue": [],
-      "trigger": null
+      "trigger": "saw an old college friend got married and was not invited",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "sting",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "idk. nothing really. just one of those days i guess. found an old box of stuff while cleaning, no big deal"
+      "content": "ha yeah a little sting i guess. the dumb thing is i cant even be mad at her. we were super close in uni and then i just... stopped texting back. like for years. so its not like she forgot me, i kind of disappeared first"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "Mm, sounds like one of those quiet, kind of blank days. Was the box just a box, or did it stir up anything at all?",
-      "stage": "named",
-      "unlocked": false,
-      "family": "flat",
-      "shade": "unclear",
+      "content": "That sounds like a mix of sting and something heavier under it, maybe regret or self-blame for having disappeared first.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "sting",
       "body_cue": [],
-      "trigger": "found an old box of stuff while cleaning"
+      "trigger": "saw an old college friend got married and was not invited",
+      "label_source": "user_confirmed",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "sting",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "lol it was my dads old watch and some photos. he passed a few years back. its fine tho, ancient history. i swear i didnt come here to be a downer haha"
+      "content": "yeah. regret is probably the word. i tell people im just bad at keeping in touch which is true but its also a cop out. she used to be my person yknow? wed talk every day. and i let it go cause i got busy and depressed and now its just this thing i scroll past. the wedding photos were really nice though, good for her, genuinely"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds like it carried a little more than “just stuff,” even if you’re keeping it light. I’m wondering if it felt more flat, or more like a small sting under the “fine”?",
-      "stage": "named",
+      "content": "Regret fits, and there’s also a quieter ache in the way she used to be your person. The wedding photos being genuinely nice for her gives it a more mixed feel, not just one clean thing.",
+      "stage": "understood",
       "unlocked": false,
-      "family": "flat",
-      "shade": "unclear",
+      "family": "hurt",
+      "shade": "disconnected",
       "body_cue": [],
-      "trigger": "found dad’s old watch and photos while cleaning"
+      "trigger": "seeing an old college friend’s wedding photos and realizing they were not invited",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "disconnected",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "sadness",
+          "shade": "regret",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": "cop out",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "yeah ok. bit of a sting maybe. i keep meaning to wear the watch but i never do. anyway im gonna head off. thanks for letting me ramble"
+      "content": "the disconnected thing yeah. honestly i think im less sad about the wedding and more just realizing how many people ive let slip without meaning to. like she was the big one but shes not the only one. somewhere along the way i just got really good at being alone and i dont totally know how that happened"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense — a bit of sting, with the watch sitting there as something you keep meaning to wear. We can leave it here, and thanks for telling me about it.",
+      "content": "That “really good at being alone” feels like it came with a cost you only noticed looking back. We can stay with that, or leave the wedding part here and just hold the wider drift for a moment.",
       "stage": "understood",
-      "unlocked": true,
-      "family": "sadness",
-      "shade": "sting",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "disconnected",
       "body_cue": [],
-      "trigger": "finding dad’s old watch and photos while cleaning"
+      "trigger": "seeing an old college friend’s wedding photos and then noticing how many people have slipped away over time",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "disconnected",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": "null",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "lonely is the honest one yeah. ok i think thats enough emotional damage for one tuesday lol. thanks for this, it actually helped to just say it. gonna go make some dinner now"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Glad you said it out loud. Enjoy dinner, and take the rest of Tuesday gently.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "seeing an old college friend’s wedding photos and then noticing how many people have slipped away over time",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

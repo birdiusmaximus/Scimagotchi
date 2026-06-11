@@ -1,0 +1,304 @@
+{
+  "cid": "hurt__05",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-10T17:12:09.785Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so this is gonna sound dumb but i made a little guy. hi little guy. anyway i'm fine, just bored, just clicking buttons lol"
+    },
+    {
+      "role": "companion",
+      "content": "Not dumb at all, a little guy deserves a hello. “Just clicking buttons lol” feels like the main thing here, and I’m happy to just witness it."
+    },
+    {
+      "role": "user",
+      "content": "witness it haha you make it sound deep. it's not. i was just scrolling old photos earlier and got a bit. idk. nvm. the little guy is cuter than my problems"
+    },
+    {
+      "role": "companion",
+      "content": "I hear the correction, it sounds more like a passing snag than something deep. Scrolling old photos seems to have brushed something, and the little guy is a nicer place to look just now, do you want to leave it there?"
+    },
+    {
+      "role": "user",
+      "content": "no i mean. ugh. fine. it was a pic of me and my old best friend. we were like 22, sunburnt, idiots. she just. stopped talking to me one day. years ago. no fight no nothing. just gone. and i still don't know what i did, which is the stupid part"
+    },
+    {
+      "role": "companion",
+      "content": "That has a real cut in it, especially the “just gone” part. I’m wondering if the sharpest thing is hurt, or the not knowing what you did."
+    },
+    {
+      "role": "user",
+      "content": "honestly? both and they fight each other. like one second i'm mad, like how dare she just delete me. and the next i'm going through everything wondering if i was a bad friend and deserved it. so yeah. very normal well adjusted stuff over here lol"
+    },
+    {
+      "role": "companion",
+      "content": "Both of those are here at once, and they pull in opposite directions. Is the hurt sitting underneath the anger, or do they keep swapping places?"
+    },
+    {
+      "role": "user",
+      "content": "they swap. mostly tho i think the anger is just the hurt wearing a leather jacket trying to look tough. underneath it's just. i miss her and i never got to ask why"
+    },
+    {
+      "role": "companion",
+      "content": "“Hurt wearing a leather jacket” is a very exact way to say it. Under that, it sounds like missing her and never getting to ask why."
+    },
+    {
+      "role": "user",
+      "content": "ok that one got me a little. rude of you lol. anyway. i think i'm gonna stop before i cry on a cartoon. thanks tho. genuinely. gonna go feed the little guy or whatever"
+    },
+    {
+      "role": "companion",
+      "content": "Go feed the little guy, and we can leave the rest right where it is for now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8btheqxrxvv0wq",
+    "conversation_id": "hurt__05",
+    "timestamp": "2026-06-10T17:12:48.173Z",
+    "user_words_raw": "I miss her and I never got to ask why",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "hurt",
+    "secondary_emotions": [
+      "sadness"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "seeing an old photo of their former best friend and not getting an explanation for the distance",
+    "appraisal_thought": "I miss her and I never got to ask why",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "closeness",
+      "repair",
+      "understanding"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "hurt",
+        "shade": "hurt",
+        "salience": "foreground",
+        "source": "user_stated"
+      },
+      {
+        "family": "sadness",
+        "shade": "sadness",
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Old friendship loss can bring up hurt and missing, especially when there was no explanation.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so this is gonna sound dumb but i made a little guy. hi little guy. anyway i'm fine, just bored, just clicking buttons lol"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Not dumb at all, a little guy deserves a hello. “Just clicking buttons lol” feels like the main thing here, and I’m happy to just witness it.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "bored",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "witness it haha you make it sound deep. it's not. i was just scrolling old photos earlier and got a bit. idk. nvm. the little guy is cuter than my problems"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "I hear the correction, it sounds more like a passing snag than something deep. Scrolling old photos seems to have brushed something, and the little guy is a nicer place to look just now, do you want to leave it there?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "bored",
+      "body_cue": [],
+      "trigger": "scrolling old photos",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "no i mean. ugh. fine. it was a pic of me and my old best friend. we were like 22, sunburnt, idiots. she just. stopped talking to me one day. years ago. no fight no nothing. just gone. and i still don't know what i did, which is the stupid part"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That has a real cut in it, especially the “just gone” part. I’m wondering if the sharpest thing is hurt, or the not knowing what you did.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "seeing a photo of them and an old best friend who stopped talking",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": "sadness",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "honestly? both and they fight each other. like one second i'm mad, like how dare she just delete me. and the next i'm going through everything wondering if i was a bad friend and deserved it. so yeah. very normal well adjusted stuff over here lol"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Both of those are here at once, and they pull in opposite directions. Is the hurt sitting underneath the anger, or do they keep swapping places?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "seeing a photo of an old best friend who stopped talking years ago",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "they swap. mostly tho i think the anger is just the hurt wearing a leather jacket trying to look tough. underneath it's just. i miss her and i never got to ask why"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "“Hurt wearing a leather jacket” is a very exact way to say it. Under that, it sounds like missing her and never getting to ask why.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "seeing a photo of an old best friend who stopped talking years ago",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "anger",
+          "shade": "anger",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": "sadness",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "ok that one got me a little. rude of you lol. anyway. i think i'm gonna stop before i cry on a cartoon. thanks tho. genuinely. gonna go feed the little guy or whatever"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Go feed the little guy, and we can leave the rest right where it is for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "seeing an old photo of their former best friend and not getting an explanation for the distance",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": "sadness",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    }
+  ]
+}

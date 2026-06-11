@@ -1,0 +1,386 @@
+{
+  "cid": "pressure__09",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-10T17:09:39.305Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont even know why im opening this. just one of those days where everything feels like its piling up and i cant keep up"
+    },
+    {
+      "role": "companion",
+      "content": "That “piling up” feeling sounds heavy, and like you’re already running behind it. You don’t need to make sense of it all at once, if you want to just stay with the shape of today for a moment."
+    },
+    {
+      "role": "user",
+      "content": "its not really about today. got passed over for the senior role at work. they gave it to someone i trained. been there 6 yrs"
+    },
+    {
+      "role": "companion",
+      "content": "I had that wrong, let me step back. That sounds like a sharp kind of hurt, or maybe frustration too, do either of those fit?"
+    },
+    {
+      "role": "user",
+      "content": "hurt yeah. but its more than that. like i keep asking myself whats wrong with me. why am i not the kind of person they pick"
+    },
+    {
+      "role": "companion",
+      "content": "That turns the hurt inward, into “what’s wrong with me,” and that can feel a lot heavier. Is it more like shame, or more like feeling unseen and passed over?"
+    },
+    {
+      "role": "user",
+      "content": "both maybe. i smiled and congratulated her. went home and just sat in the car in the driveway for like 40 min. couldnt go in"
+    },
+    {
+      "role": "companion",
+      "content": "There’s both hurt and shame here, and the car in the driveway feels like the place where it all had to stop for a while."
+    },
+    {
+      "role": "user",
+      "content": "the worst part is i started wondering if im just someone who gets used. trains people. does the work. then watches them pass me. like maybe thats just who i am"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the moment turned into a story about your place there, not just this one role. Is it feeling more like being overlooked, or like being used and then left behind?"
+    },
+    {
+      "role": "user",
+      "content": "used and left behind. and the pressure of it is the worst. like i have to prove im not that. work harder. be more. but im already so tired"
+    },
+    {
+      "role": "companion",
+      "content": "Used and left behind sits right on top of the pressure to prove yourself, and being “already so tired” gives it a worn-out shape. Does it feel more like tightness, heaviness, or a kind of urge to keep pushing anyway?"
+    },
+    {
+      "role": "user",
+      "content": "the urge to keep pushing. always. i dont know how to just be enough without doing more. never have"
+    },
+    {
+      "role": "companion",
+      "content": "That “keep pushing” sounds like it has become the default shape of this. We can leave it here, or stay with what “enough” is asking for underneath that."
+    },
+    {
+      "role": "user",
+      "content": "i think i need to leave it here. dont have it in me to dig more tonight. but it helped to say it out loud i guess"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad you said it out loud, and it’s okay to leave it here for tonight."
+    },
+    {
+      "role": "user",
+      "content": "thanks. night"
+    },
+    {
+      "role": "companion",
+      "content": "Night, and take care."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bq9h80d7g3x0i",
+    "conversation_id": "pressure__09",
+    "timestamp": "2026-06-10T17:10:33.445Z",
+    "user_words_raw": "thanks",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "pressure",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "being passed over for the senior role after training the person who got it",
+    "appraisal_thought": "I have to prove I'm not that. I am not enough unless I do more.",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [
+      "pressure",
+      "overwhelmed"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "conversation ended warmly after exploring feeling of being used, left behind, and under pressure",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont even know why im opening this. just one of those days where everything feels like its piling up and i cant keep up"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That “piling up” feeling sounds heavy, and like you’re already running behind it. You don’t need to make sense of it all at once, if you want to just stay with the shape of today for a moment.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "everything feels like its piling up",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "its not really about today. got passed over for the senior role at work. they gave it to someone i trained. been there 6 yrs"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "I had that wrong, let me step back. That sounds like a sharp kind of hurt, or maybe frustration too, do either of those fit?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "got passed over for the senior role at work",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": "frustration",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "hurt yeah. but its more than that. like i keep asking myself whats wrong with me. why am i not the kind of person they pick"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That turns the hurt inward, into “what’s wrong with me,” and that can feel a lot heavier. Is it more like shame, or more like feeling unseen and passed over?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "got passed over for the senior role at work, and it went to someone they trained",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "both maybe. i smiled and congratulated her. went home and just sat in the car in the driveway for like 40 min. couldnt go in"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "There’s both hurt and shame here, and the car in the driveway feels like the place where it all had to stop for a while.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "got passed over for the senior role at work and it went to someone they trained",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "the worst part is i started wondering if im just someone who gets used. trains people. does the work. then watches them pass me. like maybe thats just who i am"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like the moment turned into a story about your place there, not just this one role. Is it feeling more like being overlooked, or like being used and then left behind?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "unwanted",
+      "body_cue": [],
+      "trigger": "being passed over for the senior role after training the person who got it",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "unwanted",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": "null",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "used and left behind. and the pressure of it is the worst. like i have to prove im not that. work harder. be more. but im already so tired"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Used and left behind sits right on top of the pressure to prove yourself, and being “already so tired” gives it a worn-out shape. Does it feel more like tightness, heaviness, or a kind of urge to keep pushing anyway?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressure",
+      "body_cue": [],
+      "trigger": "being passed over for the senior role after training the person who got it",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "used and left behind",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": "pressure",
+          "salience": "foreground",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "the urge to keep pushing. always. i dont know how to just be enough without doing more. never have"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That “keep pushing” sounds like it has become the default shape of this. We can leave it here, or stay with what “enough” is asking for underneath that.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressure",
+      "body_cue": [],
+      "trigger": "being passed over for the senior role after training the person who got it",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "pressure",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": "used and left behind",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": "not enough",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "i think i need to leave it here. dont have it in me to dig more tonight. but it helped to say it out loud i guess"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "I’m glad you said it out loud, and it’s okay to leave it here for tonight.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "pressure",
+      "body_cue": [],
+      "trigger": "being passed over for the senior role after training the person who got it",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "thanks. night"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Night, and take care.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "pressure",
+      "body_cue": [],
+      "trigger": "being passed over for the senior role after training the person who got it",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "cid": "hurt__06",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-10T17:12:13.886Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont really know why im here. just feeling kind of off i guess"
+    },
+    {
+      "role": "companion",
+      "content": "“Kind of off” feels like the clearest thing in the room right now. We can stay with just that, if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah idk. its nothing really. probably stupid"
+    },
+    {
+      "role": "companion",
+      "content": "Nothing really, and “probably stupid” sits close to self-dismissal. I’m wondering if this is more blank, brushed off, or just hard to name?"
+    },
+    {
+      "role": "user",
+      "content": "hard to name maybe. its just a friend thing. i dont even know if im allowed to be upset about it"
+    },
+    {
+      "role": "companion",
+      "content": "There’s something in that friend thing that feels hard to name, and maybe also a question of whether your upset “counts.” What happened?"
+    },
+    {
+      "role": "user",
+      "content": "my best friend had this big birthday thing on the weekend. like a whole dinner. and i found out from someone elses instagram that i wasnt invited. we've been friends since we were 11"
+    },
+    {
+      "role": "companion",
+      "content": "That lands as a very particular kind of hurt, not just the event itself but being outside something that was expected to include you. I’m learning this has the shape of being not chosen, maybe even dismissed, and that can sting in a friend-shaped way."
+    },
+    {
+      "role": "user",
+      "content": "i keep thinking maybe i did something. or maybe i was never as close to her as i thought. like was it all in my head for 15 years. i havent even said anything to her, what would i even say"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the hurt is braided with doubt, especially around whether the closeness was real. Is it more the feeling of being left out, or the thought that the friendship itself might not have been what you thought?"
+    },
+    {
+      "role": "user",
+      "content": "the second one i think. being left out sucks but i could get over that. its more like... if she didnt want me there then maybe i dont actually know where i stand with anyone. anyway. i should go. thanks for listening i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That’s a sharper kind of hurt, more about not knowing where you stand than the dinner itself. We can leave it here if you want, or stay with that question of what it says about the friendship and your place in it."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it. i dont really have the energy to get into it more tonight. thanks though"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, we can leave it there. I’m glad you told me, and you can come back to it another time if you want."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8btk9d9sh9gp3k",
+    "conversation_id": "hurt__06",
+    "timestamp": "2026-06-10T17:12:50.972Z",
+    "user_words_raw": "i dont really have the energy to get into it more tonight",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "rejected",
+    "secondary_emotions": [
+      "sadness"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "found out about a best friend’s birthday dinner from someone else’s Instagram and wasn’t invited",
+    "appraisal_thought": "maybe I don’t actually know where I stand with anyone",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "belonging",
+      "clarity",
+      "being seen"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [
+      "left out"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "A friend exclusion brought up doubt about where they stand with others, and they wanted to leave it for tonight.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont really know why im here. just feeling kind of off i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "“Kind of off” feels like the clearest thing in the room right now. We can stay with just that, if you want.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "off",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah idk. its nothing really. probably stupid"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Nothing really, and “probably stupid” sits close to self-dismissal. I’m wondering if this is more blank, brushed off, or just hard to name?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "off",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "off",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "hard to name maybe. its just a friend thing. i dont even know if im allowed to be upset about it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "There’s something in that friend thing that feels hard to name, and maybe also a question of whether your upset “counts.” What happened?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "a friend thing",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "unclear",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "my best friend had this big birthday thing on the weekend. like a whole dinner. and i found out from someone elses instagram that i wasnt invited. we've been friends since we were 11"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That lands as a very particular kind of hurt, not just the event itself but being outside something that was expected to include you. I’m learning this has the shape of being not chosen, maybe even dismissed, and that can sting in a friend-shaped way.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "unseen",
+      "body_cue": [],
+      "trigger": "finding out a best friend's birthday dinner happened without an invitation",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "unseen",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i keep thinking maybe i did something. or maybe i was never as close to her as i thought. like was it all in my head for 15 years. i havent even said anything to her, what would i even say"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like the hurt is braided with doubt, especially around whether the closeness was real. Is it more the feeling of being left out, or the thought that the friendship itself might not have been what you thought?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [],
+      "trigger": "finding out a best friend’s birthday dinner happened without an invitation",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "left out",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": "unclear",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "the second one i think. being left out sucks but i could get over that. its more like... if she didnt want me there then maybe i dont actually know where i stand with anyone. anyway. i should go. thanks for listening i guess"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That’s a sharper kind of hurt, more about not knowing where you stand than the dinner itself. We can leave it here if you want, or stay with that question of what it says about the friendship and your place in it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "rejected",
+      "body_cue": [],
+      "trigger": "finding out a best friend’s birthday dinner happened without an invitation",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "left out",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "yeah lets leave it. i dont really have the energy to get into it more tonight. thanks though"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "Of course, we can leave it there. I’m glad you told me, and you can come back to it another time if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "rejected",
+      "body_cue": [],
+      "trigger": "found out about a best friend’s birthday dinner from someone else’s Instagram and wasn’t invited",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

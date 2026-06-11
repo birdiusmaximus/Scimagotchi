@@ -2,142 +2,210 @@
   "cid": "joy__03",
   "emotion": "joy",
   "persona": null,
-  "created": "2026-06-09T17:41:51.014Z",
+  "created": "2026-06-10T22:04:37.521Z",
   "history": [
     {
       "role": "user",
-      "content": "got some news about money this week. dunno. feels weird to even bring up"
+      "content": "hey. its been a minute"
     },
     {
       "role": "companion",
-      "content": "That sounds a bit uneasy and maybe hard to put into words. Does it feel more like weird, awkward, or unsettled?"
+      "content": "Hey, good to see you. Yeah, it’s been a minute."
     },
     {
       "role": "user",
-      "content": "no its actually good news. thats the weird part. i think im happy about it and dont know what to do with that"
+      "content": "yeah. dunno why im here really. just kind of a weird day. good weird i guess"
     },
     {
       "role": "companion",
-      "content": "That makes sense — good news can still feel weird when happiness is unfamiliar. Is it more like pleased, relieved, or just unsure what to do with it?"
+      "content": "A weird day, and maybe a good kind of weird. I’m glad you said it plainly, even if it’s still a little fuzzy."
     },
     {
       "role": "user",
-      "content": "finally paid off the last of my credit card. like its actually at zero now. been chipping at it for two years. feels kinda quietly proud i guess"
+      "content": "paid off the last of my credit card this morning. like. zero balance. first time in years honestly. dont really tell people that stuff"
     },
     {
       "role": "companion",
-      "content": "That sounds quietly proud, and maybe a little relieved too. Does it feel more like pride, relief, or a soft kind of satisfaction?"
+      "content": "That feels like a quiet kind of win, and maybe something private you wanted to keep to yourself. Did it land more like relief, pride, or just a little stunned?"
     },
     {
       "role": "user",
-      "content": "yeah. pride. didnt think id get here. anyway thats it really. just wanted to say it out loud once. thanks"
+      "content": "relief mostly. bit proud maybe. like i can breathe. anyway. thats it really. just wanted to say it out loud to something. thanks"
     },
     {
       "role": "companion",
-      "content": "That’s a good place to leave it — quietly proud and said out loud. I’m glad you told me."
+      "content": "I’m glad you said it out loud here, and I’ll leave it with you there."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6xfsterg70ssgu",
+    "id": "evt_mq8m9kvtgak6e6r2",
     "conversation_id": "joy__03",
-    "timestamp": "2026-06-09T17:42:09.046Z",
-    "user_words_raw": "quietly proud",
-    "emotion_status": "candidate",
+    "timestamp": "2026-06-10T22:04:58.042Z",
+    "user_words_raw": "like i can breathe",
+    "emotion_status": "confirmed",
     "emotion_family": "joy",
-    "emotion_shade": "proud",
+    "emotion_shade": "relieved",
     "secondary_emotions": [
-      "relief"
+      "proud"
     ],
     "valence": "positive",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "paid off the last of my credit card",
-    "appraisal_thought": "didn't think I'd get here",
-    "body_cue": [],
-    "behaviour_action": [],
+    "trigger_event": "paid off the last of my credit card this morning",
+    "appraisal_thought": "zero balance for the first time in years",
+    "body_cue": [
+      "can breathe"
+    ],
+    "behaviour_action": [
+      "say it out loud"
+    ],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "achievement",
-      "stability",
-      "self-respect"
+      "relief",
+      "pride",
+      "privacy"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "unknown",
-    "unlock_stage": "named",
-    "memory_note": "Finished paying off debt after two years; wanted to say it out loud once.",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": "simultaneous",
+    "strands": [
+      {
+        "family": "joy",
+        "shade": "relieved",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Paid off last credit card, kept it private, wanted to say it out loud.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "got some news about money this week. dunno. feels weird to even bring up"
+      "content": "hey. its been a minute"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds a bit uneasy and maybe hard to put into words. Does it feel more like weird, awkward, or unsettled?",
-      "stage": "named",
+      "content": "Hey, good to see you. Yeah, it’s been a minute.",
+      "stage": "noticed",
       "unlocked": false,
-      "family": "fear",
-      "shade": "uneasy",
+      "family": null,
+      "shade": null,
       "body_cue": [],
-      "trigger": "got some news about money this week"
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "no its actually good news. thats the weird part. i think im happy about it and dont know what to do with that"
+      "content": "yeah. dunno why im here really. just kind of a weird day. good weird i guess"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That makes sense — good news can still feel weird when happiness is unfamiliar. Is it more like pleased, relieved, or just unsure what to do with it?",
-      "stage": "named",
+      "content": "A weird day, and maybe a good kind of weird. I’m glad you said it plainly, even if it’s still a little fuzzy.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "joy",
-      "shade": "happy",
+      "shade": "hopeful",
       "body_cue": [],
-      "trigger": "got some news about money this week"
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "hopeful",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "calm",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "finally paid off the last of my credit card. like its actually at zero now. been chipping at it for two years. feels kinda quietly proud i guess"
+      "content": "paid off the last of my credit card this morning. like. zero balance. first time in years honestly. dont really tell people that stuff"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds quietly proud, and maybe a little relieved too. Does it feel more like pride, relief, or a soft kind of satisfaction?",
-      "stage": "named",
+      "content": "That feels like a quiet kind of win, and maybe something private you wanted to keep to yourself. Did it land more like relief, pride, or just a little stunned?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "joy",
-      "shade": "proud",
+      "shade": "hopeful",
       "body_cue": [],
-      "trigger": "paid off the last of my credit card"
+      "trigger": "paid off the last of my credit card this morning",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "hopeful",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "calm",
+          "shade": "relief",
+          "salience": "unclear",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "yeah. pride. didnt think id get here. anyway thats it really. just wanted to say it out loud once. thanks"
+      "content": "relief mostly. bit proud maybe. like i can breathe. anyway. thats it really. just wanted to say it out loud to something. thanks"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That’s a good place to leave it — quietly proud and said out loud. I’m glad you told me.",
-      "stage": "named",
-      "unlocked": false,
+      "content": "I’m glad you said it out loud here, and I’ll leave it with you there.",
+      "stage": "understood",
+      "unlocked": true,
       "family": "joy",
-      "shade": "proud",
-      "body_cue": [],
-      "trigger": "paid off the last of my credit card"
+      "shade": "relieved",
+      "body_cue": [
+        "can breathe"
+      ],
+      "trigger": "paid off the last of my credit card this morning",
+      "label_source": "user_confirmed",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "relieved",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        }
+      ],
+      "mixed_confirmed": 0
     }
   ]
 }

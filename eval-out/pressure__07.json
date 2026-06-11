@@ -2,139 +2,303 @@
   "cid": "pressure__07",
   "emotion": "pressure",
   "persona": null,
-  "created": "2026-06-09T17:45:59.568Z",
+  "created": "2026-06-10T22:07:22.626Z",
   "history": [
     {
       "role": "user",
-      "content": "honestly im just so annoyed lately. like everything with my girlfriend feels like a chore"
+      "content": "honestly not sure what this is supposed to do but ok. work has been a lot lately. and other stuff"
     },
     {
       "role": "companion",
-      "content": "That sounds really frustrating — like the relationship itself has started to feel heavy and tiring. Is it more the annoyed part, or the “chore” part that stands out most right now?"
+      "content": "Work has been a lot lately, and then there’s the “other stuff” sitting beside it. We can stay with it loosely if you want, without naming anything yet."
     },
     {
       "role": "user",
-      "content": "the chore part i guess. shes been wanting to plan this whole trip to meet her family and theres a million little things and i feel like im doing all of it on top of work"
+      "content": "the other stuff is my girlfriend. we've been together almost 3 years and lately it feels like im the only one putting any effort in. planning everything, remembering everything. im tired"
     },
     {
       "role": "companion",
-      "content": "That sounds really like being piled on — the trip planning on top of work. Does it feel more like pressure, or more like you want to push back and stop carrying it?"
+      "content": "That sounds worn down and maybe a bit hurt too, from carrying so much of the keeping-things-going. Does it feel more like pressure, or more like feeling let down?"
     },
     {
       "role": "user",
-      "content": "yeah pressure honestly. like theres just too much and im stretched thin. i dont even know how to bring it up to her without it turning into a thing"
+      "content": "more pressure i think. like its all on me. we're supposed to move in together in august and im doing all the apartment hunting, the budget spreadsheet, calling people. she just says 'whatever you think is best' and it makes me want to scream"
     },
     {
       "role": "companion",
-      "content": "That sounds stretched thin and tense, with the worry that bringing it up could turn into a thing. Would you like to stay with that pressure a little, or leave it here for now?"
+      "content": "That “whatever you think is best” sounds like it lands on you as another load to carry, especially with the apartment hunting, the budget spreadsheet, and the calls."
     },
     {
       "role": "user",
-      "content": "leave it here i think. naming it pressure actually helps. ill figure out the convo later. thanks"
+      "content": "yeah exactly. and i dont even think she gets that its work. like the spreadsheet doesnt make itself. i keep thinking if i just stopped doing all of it would anything even happen or would we just not have an apartment"
     },
     {
       "role": "companion",
-      "content": "That makes sense — naming it pressure seems to have given it a shape. We can leave it there for now, and come back if you want."
+      "content": "It sounds like the pressure is now tangled with a sharper question, whether anything would happen at all if you stopped carrying it. What feels most present in that thought, the fear of things falling apart or the feeling of being taken for granted?"
+    },
+    {
+      "role": "user",
+      "content": "taken for granted. definitely that. i dont think shes a bad person she just defaults to letting me handle it and ive let that happen for 3 years so its kind of my fault too. i need to actually say something to her instead of venting to an app lol"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like being taken for granted, and also a bit of self-blame folded into it. You could leave it here, or we can stay with what it might be like to say it to her."
+    },
+    {
+      "role": "user",
+      "content": "nah i think im good. this actually helped me figure out what to say more than i expected. thanks. gonna go talk to her"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it helped clarify things, and good luck talking with her."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6xl51gnfz936cq",
+    "id": "evt_mq8md4xfdgus3sav",
     "conversation_id": "pressure__07",
-    "timestamp": "2026-06-09T17:46:19.806Z",
-    "user_words_raw": "too much",
+    "timestamp": "2026-06-10T22:07:59.250Z",
+    "user_words_raw": "taken for granted",
     "emotion_status": "confirmed",
-    "emotion_family": "pressure",
-    "emotion_shade": "stretched",
-    "secondary_emotions": [],
+    "emotion_family": "hurt",
+    "emotion_shade": "taken for granted",
+    "secondary_emotions": [
+      "pressure"
+    ],
     "valence": "negative",
-    "activation": "high",
+    "activation": "medium",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "planning a trip to meet her family on top of work, with a lot of little tasks",
-    "appraisal_thought": "too much to hold at once; bringing it up might turn into a thing",
+    "trigger_event": "planning a move in together while carrying the apartment hunting, budget spreadsheet, and calls",
+    "appraisal_thought": "she defaults to letting me handle it",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "space",
-      "clarity"
+      "shared effort",
+      "being seen"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
     "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "hurt",
+        "shade": "taken for granted",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      },
+      {
+        "family": "pressure",
+        "shade": null,
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Often feels pressure when there are many tasks on top of work and relationship planning.",
+    "memory_note": "Feeling taken for granted while carrying most of the planning for moving in together.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "honestly im just so annoyed lately. like everything with my girlfriend feels like a chore"
+      "content": "honestly not sure what this is supposed to do but ok. work has been a lot lately. and other stuff"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds really frustrating — like the relationship itself has started to feel heavy and tiring. Is it more the annoyed part, or the “chore” part that stands out most right now?",
-      "stage": "named",
-      "unlocked": false,
-      "family": "anger",
-      "shade": "frustrated",
-      "body_cue": [],
-      "trigger": "Everything with their girlfriend feeling like a chore"
-    },
-    {
-      "turn": 2,
-      "role": "user",
-      "content": "the chore part i guess. shes been wanting to plan this whole trip to meet her family and theres a million little things and i feel like im doing all of it on top of work"
-    },
-    {
-      "turn": 3,
-      "role": "companion",
-      "content": "That sounds really like being piled on — the trip planning on top of work. Does it feel more like pressure, or more like you want to push back and stop carrying it?",
-      "stage": "understood",
-      "unlocked": true,
-      "family": "anger",
-      "shade": "frustrated",
-      "body_cue": [],
-      "trigger": "Planning a trip to meet her family, with a million little things on top of work"
-    },
-    {
-      "turn": 4,
-      "role": "user",
-      "content": "yeah pressure honestly. like theres just too much and im stretched thin. i dont even know how to bring it up to her without it turning into a thing"
-    },
-    {
-      "turn": 5,
-      "role": "companion",
-      "content": "That sounds stretched thin and tense, with the worry that bringing it up could turn into a thing. Would you like to stay with that pressure a little, or leave it here for now?",
-      "stage": "understood",
+      "content": "Work has been a lot lately, and then there’s the “other stuff” sitting beside it. We can stay with it loosely if you want, without naming anything yet.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "pressure",
       "shade": "overwhelmed",
       "body_cue": [],
-      "trigger": "Planning a trip to meet her family on top of work, with a lot of little tasks"
+      "trigger": "work being a lot lately, plus other unspecified stuff",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "the other stuff is my girlfriend. we've been together almost 3 years and lately it feels like im the only one putting any effort in. planning everything, remembering everything. im tired"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds worn down and maybe a bit hurt too, from carrying so much of the keeping-things-going. Does it feel more like pressure, or more like feeling let down?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "worn down",
+      "body_cue": [],
+      "trigger": "feeling like the only one putting in effort in the relationship, planning and remembering everything",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "worn down",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "more pressure i think. like its all on me. we're supposed to move in together in august and im doing all the apartment hunting, the budget spreadsheet, calling people. she just says 'whatever you think is best' and it makes me want to scream"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That “whatever you think is best” sounds like it lands on you as another load to carry, especially with the apartment hunting, the budget spreadsheet, and the calls.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "pressured",
+      "body_cue": [],
+      "trigger": "doing the apartment hunting, budget spreadsheet, and calling people while she says “whatever you think is best”",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "leave it here i think. naming it pressure actually helps. ill figure out the convo later. thanks"
+      "content": "yeah exactly. and i dont even think she gets that its work. like the spreadsheet doesnt make itself. i keep thinking if i just stopped doing all of it would anything even happen or would we just not have an apartment"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense — naming it pressure seems to have given it a shape. We can leave it there for now, and come back if you want.",
+      "content": "It sounds like the pressure is now tangled with a sharper question, whether anything would happen at all if you stopped carrying it. What feels most present in that thought, the fear of things falling apart or the feeling of being taken for granted?",
       "stage": "understood",
       "unlocked": false,
       "family": "pressure",
-      "shade": "stretched",
+      "shade": "pressured",
       "body_cue": [],
-      "trigger": "planning a trip to meet her family on top of work, with a lot of little tasks"
+      "trigger": "doing the apartment hunting, budget spreadsheet, and calling people while she says \"whatever you think is best\"",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "pressured",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "taken for granted. definitely that. i dont think shes a bad person she just defaults to letting me handle it and ive let that happen for 3 years so its kind of my fault too. i need to actually say something to her instead of venting to an app lol"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That feels like being taken for granted, and also a bit of self-blame folded into it. You could leave it here, or we can stay with what it might be like to say it to her.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "taken for granted",
+      "body_cue": [],
+      "trigger": "planning a move in together while carrying most of the apartment hunting, budget spreadsheet, and calls",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "taken for granted",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": "pressured",
+          "salience": "background",
+          "source": "user_confirmed"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "nah i think im good. this actually helped me figure out what to say more than i expected. thanks. gonna go talk to her"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad it helped clarify things, and good luck talking with her.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "taken for granted",
+      "body_cue": [],
+      "trigger": "planning a move in together while carrying the apartment hunting, budget spreadsheet, and calls",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "taken for granted",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     }
   ]
 }

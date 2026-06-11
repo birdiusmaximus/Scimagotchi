@@ -1,0 +1,161 @@
+{
+  "cid": "calm__05",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-09T17:43:35.958Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk why im even here lol. nothings wrong really"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds a bit floaty or unmoored, even while you’re saying nothing’s wrong. Does it feel more like blank, bored, or just hard to pin down?"
+    },
+    {
+      "role": "user",
+      "content": "no its not bad. kinda the opposite? like everythings... fine for once. weird flex i know"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a rare kind of fine — almost weirdly pleasant to notice. What’s the “for once” part like for you?"
+    },
+    {
+      "role": "user",
+      "content": "ehh dunno how to explain it. there was this thing from years ago i used to like cringe about constantly. drove past the old place today n felt nothing. in a good way. finally lol"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds settled, in a relieved way — like the old cringe didn’t hook you this time. Does it feel more like calm, or more like a quiet “finally”?"
+    },
+    {
+      "role": "user",
+      "content": "quiet finally i guess. anyway thats enough feelings for one day haha. thanks tho, this was kinda nice"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a quiet “finally,” and I’m glad it landed that way. We can leave it here, or if you want, we could just notice what makes it feel nice without digging in."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it here. cya"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, let’s leave it here. Cya."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xi1v7xem5n937",
+    "conversation_id": "calm__05",
+    "timestamp": "2026-06-09T17:44:00.148Z",
+    "user_words_raw": "let's leave it here",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "settled",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "drove past the old place",
+    "appraisal_thought": "the old cringe didn’t hook me this time",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "User prefers to pause and end the conversation when ready.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk why im even here lol. nothings wrong really"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds a bit floaty or unmoored, even while you’re saying nothing’s wrong. Does it feel more like blank, bored, or just hard to pin down?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "no its not bad. kinda the opposite? like everythings... fine for once. weird flex i know"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a rare kind of fine — almost weirdly pleasant to notice. What’s the “for once” part like for you?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "ehh dunno how to explain it. there was this thing from years ago i used to like cringe about constantly. drove past the old place today n felt nothing. in a good way. finally lol"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds settled, in a relieved way — like the old cringe didn’t hook you this time. Does it feel more like calm, or more like a quiet “finally”?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "drove past the old place"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "quiet finally i guess. anyway thats enough feelings for one day haha. thanks tho, this was kinda nice"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That feels like a quiet “finally,” and I’m glad it landed that way. We can leave it here, or if you want, we could just notice what makes it feel nice without digging in.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "drove past the old place"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah lets leave it here. cya"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Yeah, let’s leave it here. Cya.",
+      "stage": "named",
+      "unlocked": false,
+      "family": null,
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "drove past the old place"
+    }
+  ]
+}

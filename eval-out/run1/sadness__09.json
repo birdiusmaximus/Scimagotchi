@@ -1,0 +1,145 @@
+{
+  "cid": "sadness__09",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-09T18:19:24.849Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "feel like a fraud at work today"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a sharp kind of self-doubt at work. Is it more like embarrassment, fear of being found out, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "more like i dont belong there. got promoted and everyone else just seems smarter"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds more like feeling exposed and out of place, with some shame beside it. Does it make you want to hide, explain yourself, or just go quiet?"
+    },
+    {
+      "role": "user",
+      "content": "go quiet mostly. just feel small. anyway thats it really"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — small and quiet is a clear shape for it. We can leave it there if you want, or I can stay with it a little more; either is fine."
+    },
+    {
+      "role": "user",
+      "content": "no its good. thanks. gonna go"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — take care."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ys40i4nkbm1o7",
+    "conversation_id": "sadness__09",
+    "timestamp": "2026-06-09T18:19:41.531Z",
+    "user_words_raw": "feel like a fraud",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "exposed",
+    "secondary_emotions": [
+      "hurt"
+    ],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "got promoted and everyone else just seems smarter",
+    "appraisal_thought": "i dont belong there",
+    "body_cue": [],
+    "behaviour_action": [
+      "go quiet"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "belonging",
+      "dignity",
+      "self-respect"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Work promotion brought up feeling out of place and wanting to go quiet.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "feel like a fraud at work today"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a sharp kind of self-doubt at work. Is it more like embarrassment, fear of being found out, or something else?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "feeling like a fraud",
+      "body_cue": [],
+      "trigger": "at work today"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "more like i dont belong there. got promoted and everyone else just seems smarter"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds more like feeling exposed and out of place, with some shame beside it. Does it make you want to hide, explain yourself, or just go quiet?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "exposed",
+      "body_cue": [],
+      "trigger": "got promoted and everyone else just seems smarter"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "go quiet mostly. just feel small. anyway thats it really"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That makes sense — small and quiet is a clear shape for it. We can leave it there if you want, or I can stay with it a little more; either is fine.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "exposed",
+      "body_cue": [],
+      "trigger": "got promoted and everyone else just seems smarter"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "no its good. thanks. gonna go"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Of course — take care.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "exposed",
+      "body_cue": [],
+      "trigger": "got promoted and everyone else just seems smarter"
+    }
+  ]
+}

@@ -2,142 +2,186 @@
   "cid": "flat__03",
   "emotion": "flat",
   "persona": null,
-  "created": "2026-06-09T18:25:54.912Z",
+  "created": "2026-06-10T22:11:21.387Z",
   "history": [
     {
       "role": "user",
-      "content": "i dont know. just feel kind of flat lately"
+      "content": "hey. how's it going"
     },
     {
       "role": "companion",
-      "content": "That sounds more flat or maybe a bit disconnected — like things are there, but not landing. Does it feel more blank, numb, or just hard to name?"
+      "content": "Hey, good to see you. I’m here and ready, what’s on your mind today?"
     },
     {
       "role": "user",
-      "content": "blank i guess. like i should be stressed but i just dont feel anything"
+      "content": "idk. fine i guess. been a weird week"
     },
     {
       "role": "companion",
-      "content": "Blank makes sense here — like the stress is expected, but nothing is really arriving. Does it feel more like nothing is there, or like it’s there but out of reach?"
+      "content": "A weird week can leave things feeling a bit unsteady. If you want, you can just tell me the part that felt strangest."
     },
     {
       "role": "user",
-      "content": "out of reach maybe. got a letter about my account being overdrawn again and i just stared at it. didnt care"
+      "content": "got my bonus thru on friday. the one ive been waiting on all year. and i just. felt nothing. stared at the number and nothing"
     },
     {
       "role": "companion",
-      "content": "Out of reach fits — like the overdrawn letter landed, and you just stared at it without much coming through."
+      "content": "That sounds more like blankness or numbness than joy, and I’m wondering if the waiting had gone so long that it all went quiet when it finally arrived. Was it more like nothing got through, or like you were too drained to react?"
     },
     {
       "role": "user",
-      "content": "yeah. anyway. thanks i guess. gonna go"
+      "content": "like nothing got thru. i thought id be happy or relieved. spent it all paying down the card before i even closed the tab. just felt like a number moving from one place to another. anyway. its whatever"
     },
     {
       "role": "companion",
-      "content": "Of course — we can leave it here."
+      "content": "That “just a number moving from one place to another” feels very stripped of anything personal. You can leave it there if you want, or we can stay with that blankness a little longer."
+    },
+    {
+      "role": "user",
+      "content": "nah ill leave it there. thanks for listening i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, take care."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6z0gznd18onpfe",
+    "id": "evt_mq8mi8nwgbvbyauu",
     "conversation_id": "flat__03",
-    "timestamp": "2026-06-09T18:26:11.798Z",
-    "user_words_raw": "out of reach",
+    "timestamp": "2026-06-10T22:11:46.535Z",
+    "user_words_raw": "thanks for listening i guess",
     "emotion_status": "confirmed",
     "emotion_family": "flat",
-    "emotion_shade": "disconnected",
+    "emotion_shade": "blank",
     "secondary_emotions": [],
     "valence": "neutral",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "got a letter about my account being overdrawn again",
-    "appraisal_thought": "i should be stressed but i just dont feel anything",
+    "trigger_event": "got my bonus thru on friday",
+    "appraisal_thought": "like nothing got through",
     "body_cue": [],
-    "behaviour_action": [
-      "stared at it"
-    ],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [
-      "permission not to know",
-      "reduced pressure",
-      "quiet"
-    ],
+    "need_value": [],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
     "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Feeling of blankness/disconnection shows up around account stress.",
+    "memory_note": "User wrapped up after describing blankness around a bonus payment.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "i dont know. just feel kind of flat lately"
+      "content": "hey. how's it going"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds more flat or maybe a bit disconnected — like things are there, but not landing. Does it feel more blank, numb, or just hard to name?",
-      "stage": "named",
+      "content": "Hey, good to see you. I’m here and ready, what’s on your mind today?",
+      "stage": "noticed",
       "unlocked": false,
-      "family": "flat",
-      "shade": "flat",
+      "family": null,
+      "shade": null,
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "blank i guess. like i should be stressed but i just dont feel anything"
+      "content": "idk. fine i guess. been a weird week"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "Blank makes sense here — like the stress is expected, but nothing is really arriving. Does it feel more like nothing is there, or like it’s there but out of reach?",
-      "stage": "named",
+      "content": "A weird week can leave things feeling a bit unsteady. If you want, you can just tell me the part that felt strangest.",
+      "stage": "noticed",
       "unlocked": false,
-      "family": "flat",
-      "shade": "blank",
+      "family": null,
+      "shade": null,
       "body_cue": [],
-      "trigger": "should be stressed"
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "out of reach maybe. got a letter about my account being overdrawn again and i just stared at it. didnt care"
+      "content": "got my bonus thru on friday. the one ive been waiting on all year. and i just. felt nothing. stared at the number and nothing"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "Out of reach fits — like the overdrawn letter landed, and you just stared at it without much coming through.",
-      "stage": "understood",
-      "unlocked": true,
+      "content": "That sounds more like blankness or numbness than joy, and I’m wondering if the waiting had gone so long that it all went quiet when it finally arrived. Was it more like nothing got through, or like you were too drained to react?",
+      "stage": "shaped",
+      "unlocked": false,
       "family": "flat",
-      "shade": "disconnected",
+      "shade": "blank",
       "body_cue": [],
-      "trigger": "got a letter about my account being overdrawn again"
+      "trigger": "got my bonus thru on friday",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "yeah. anyway. thanks i guess. gonna go"
+      "content": "like nothing got thru. i thought id be happy or relieved. spent it all paying down the card before i even closed the tab. just felt like a number moving from one place to another. anyway. its whatever"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Of course — we can leave it here.",
+      "content": "That “just a number moving from one place to another” feels very stripped of anything personal. You can leave it there if you want, or we can stay with that blankness a little longer.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "got my bonus thru on friday",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "nah ill leave it there. thanks for listening i guess"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Of course, take care.",
       "stage": "understood",
       "unlocked": false,
       "family": "flat",
-      "shade": "disconnected",
+      "shade": "blank",
       "body_cue": [],
-      "trigger": "got a letter about my account being overdrawn again"
+      "trigger": "got my bonus thru on friday",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

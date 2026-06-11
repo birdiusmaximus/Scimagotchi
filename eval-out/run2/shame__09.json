@@ -1,0 +1,255 @@
+{
+  "cid": "shame__09",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-10T17:13:18.488Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i did something at work today and i cant stop replaying it. like its on a loop"
+    },
+    {
+      "role": "companion",
+      "content": "That loop sounds sticky, like it keeps pulling you back to the same moment. If you want, you can tell me the bit that keeps replaying."
+    },
+    {
+      "role": "user",
+      "content": "presentation. i was supposed to lead it. froze halfway thru. couldnt get my words out. everyone just watching"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a lot of pressure, and the watching part seems to have made it sharper. Was the worst part the freeze itself, or everyone seeing it?"
+    },
+    {
+      "role": "user",
+      "content": "everyone seeing it. def that. my manager was there. the new hires too. i train the new hires. theyre supposed to look up to me"
+    },
+    {
+      "role": "companion",
+      "content": "That lands with a kind of exposure, like the moment wasn't just about the presentation, but about being seen by people who were supposed to look up to you. Did it feel more like being judged, or like falling short in front of them?"
+    },
+    {
+      "role": "user",
+      "content": "falling short. like they saw the real me. the one whos faking it. ive been faking competent this whole time and today it slipped"
+    },
+    {
+      "role": "companion",
+      "content": "“The real me” and “faking competent” makes this feel harsher than a single mistake, more like being exposed in front of them. I’m learning that the pain is not just the slip, it’s what the slip seemed to say about you."
+    },
+    {
+      "role": "user",
+      "content": "yeah. and the worst part is i think theyre right to see it. like i dont actually deserve the role. got promoted last yr and ive been waiting for someone to figure out i shouldnt have"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like shame with a very sharp edge, not just about the moment but about what it seemed to confirm. Did it feel like this was saying you don’t belong in the role, or something even more personal than that?"
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8buyayim6iahgs",
+    "conversation_id": "shame__09",
+    "timestamp": "2026-06-10T17:13:48.670Z",
+    "user_words_raw": "i think theyre right to see it",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "exposed",
+    "secondary_emotions": [
+      "fear"
+    ],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "presentation at work, leading it in front of manager and new hires",
+    "appraisal_thought": "they saw the real me, i dont deserve the role, i shouldnt have been promoted",
+    "body_cue": [],
+    "behaviour_action": [
+      "froze halfway thru",
+      "couldnt get my words out"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "belonging",
+      "dignity",
+      "acceptance",
+      "integrity"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "shame",
+        "shade": "exposed",
+        "salience": "foreground",
+        "source": "user_stated"
+      },
+      {
+        "family": "fear",
+        "shade": null,
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Work presentation exposed fears of not deserving a promoted role, especially in front of manager and new hires.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i did something at work today and i cant stop replaying it. like its on a loop"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That loop sounds sticky, like it keeps pulling you back to the same moment. If you want, you can tell me the bit that keeps replaying.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "rumination",
+      "body_cue": [],
+      "trigger": "something at work today",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "presentation. i was supposed to lead it. froze halfway thru. couldnt get my words out. everyone just watching"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a lot of pressure, and the watching part seems to have made it sharper. Was the worst part the freeze itself, or everyone seeing it?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressured",
+      "body_cue": [],
+      "trigger": "presentation at work where they were supposed to lead it",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "pressured",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "everyone seeing it. def that. my manager was there. the new hires too. i train the new hires. theyre supposed to look up to me"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That lands with a kind of exposure, like the moment wasn't just about the presentation, but about being seen by people who were supposed to look up to you. Did it feel more like being judged, or like falling short in front of them?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "exposure",
+      "body_cue": [],
+      "trigger": "presentation at work where they were supposed to lead it, with manager and new hires watching",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "exposure",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": "pressured",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "falling short. like they saw the real me. the one whos faking it. ive been faking competent this whole time and today it slipped"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "“The real me” and “faking competent” makes this feel harsher than a single mistake, more like being exposed in front of them. I’m learning that the pain is not just the slip, it’s what the slip seemed to say about you.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "exposed",
+      "body_cue": [],
+      "trigger": "presentation at work where they were supposed to lead it, with manager and new hires watching",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. and the worst part is i think theyre right to see it. like i dont actually deserve the role. got promoted last yr and ive been waiting for someone to figure out i shouldnt have"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like shame with a very sharp edge, not just about the moment but about what it seemed to confirm. Did it feel like this was saying you don’t belong in the role, or something even more personal than that?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "exposed",
+      "body_cue": [],
+      "trigger": "presentation at work, leading it in front of manager and new hires",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "exposed",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    }
+  ]
+}

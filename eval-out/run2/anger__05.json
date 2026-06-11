@@ -1,0 +1,321 @@
+{
+  "cid": "anger__05",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-10T17:10:18.442Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so i dont even know why im opening this lol. nothing happened today its fine"
+    },
+    {
+      "role": "companion",
+      "content": "You opened it anyway, and “nothing happened today” still feels worth noticing. We can leave it there, or stay with the oddness of opening this for a minute if you want."
+    },
+    {
+      "role": "user",
+      "content": "the oddness lol. ok fine. i was cleaning out a drawer and found my old uni acceptance letter to the program i didnt do. its dumb to be mad about a piece of paper from like 8 years ago right"
+    },
+    {
+      "role": "companion",
+      "content": "Not dumb. I’m hearing a sting in that old letter, maybe something like anger, disappointment, or a more private hurt, but I’m not sure which one is closest. What feels most true, if you let it stay broad?"
+    },
+    {
+      "role": "user",
+      "content": "honestly both at the same time which is annoying. like im FURIOUS at my dad for talking me out of it, he made it sound so reckless. but also under that theres this gross sad thing like i just went along with it??? what does that say about me lol"
+    },
+    {
+      "role": "companion",
+      "content": "I’m holding both, then, fury at your dad on top, and that gross sad thing underneath. Does it feel more like one over the other, or like they’re tangled together?"
+    },
+    {
+      "role": "user",
+      "content": "tangled fully. cant pull em apart. its easier to just be mad at him tbh, the sad one feels like admitting i was a pushover. great so now im a pushover AND petty about stationery, love that for me"
+    },
+    {
+      "role": "companion",
+      "content": "That “pushover and petty about stationery” has a lot of bite in it. I’m hearing how the anger gives you something easier to hold than that sad, self-directed part."
+    },
+    {
+      "role": "user",
+      "content": "yeah. ok the joke kinda dropped there. its true tho, way easier to point at him than to sit with the fact that i didnt fight for it. he didnt make me do anything i just folded"
+    },
+    {
+      "role": "companion",
+      "content": "I’m hearing the shift, the joke dropped and what’s left is that harder, self-directed sting. We can stay with that, or I can help you put a cleaner word to it, if you want."
+    },
+    {
+      "role": "user",
+      "content": "nah i think thats enough digging for one drawer haha. its weirdly less heavy having said it out loud tho. gonna put the letter back and go. thanks for not letting me joke my way out of it"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a natural place to leave it. I’m glad you said it out loud, and I can stay here with it or let you go back to your drawer now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8br3iz2ckjfqmx",
+    "conversation_id": "anger__05",
+    "timestamp": "2026-06-10T17:10:56.509Z",
+    "user_words_raw": "i didnt fight for it",
+    "emotion_status": "candidate",
+    "emotion_family": "shame",
+    "emotion_shade": "guilt",
+    "secondary_emotions": [
+      "sadness",
+      "anger"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "finding the old uni acceptance letter and talking about not fighting for the program",
+    "appraisal_thought": "he didn't make me do anything i just folded",
+    "body_cue": [],
+    "behaviour_action": [
+      "put the letter back",
+      "go"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "integrity",
+      "self-respect",
+      "being understood"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "anger",
+        "shade": "furious",
+        "salience": "foreground",
+        "source": "user_stated"
+      },
+      {
+        "family": "sadness",
+        "shade": "sad",
+        "salience": "background",
+        "source": "user_stated"
+      }
+    ],
+    "mixed_confirmed": 1,
+    "unlock_stage": "shaped",
+    "memory_note": "Finding an old acceptance letter brought up mixed anger and self-directed guilt about not pursuing a program",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so i dont even know why im opening this lol. nothing happened today its fine"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "You opened it anyway, and “nothing happened today” still feels worth noticing. We can leave it there, or stay with the oddness of opening this for a minute if you want.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "the oddness lol. ok fine. i was cleaning out a drawer and found my old uni acceptance letter to the program i didnt do. its dumb to be mad about a piece of paper from like 8 years ago right"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Not dumb. I’m hearing a sting in that old letter, maybe something like anger, disappointment, or a more private hurt, but I’m not sure which one is closest. What feels most true, if you let it stay broad?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "sting",
+      "body_cue": [],
+      "trigger": "found an old uni acceptance letter to a program they did not do",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "sting",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "honestly both at the same time which is annoying. like im FURIOUS at my dad for talking me out of it, he made it sound so reckless. but also under that theres this gross sad thing like i just went along with it??? what does that say about me lol"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "I’m holding both, then, fury at your dad on top, and that gross sad thing underneath. Does it feel more like one over the other, or like they’re tangled together?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "furious",
+      "body_cue": [],
+      "trigger": "finding the old uni acceptance letter and thinking about being talked out of the program",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "furious",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "tangled fully. cant pull em apart. its easier to just be mad at him tbh, the sad one feels like admitting i was a pushover. great so now im a pushover AND petty about stationery, love that for me"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That “pushover and petty about stationery” has a lot of bite in it. I’m hearing how the anger gives you something easier to hold than that sad, self-directed part.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [],
+      "trigger": "finding the old uni acceptance letter and thinking about being talked out of the program",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "resentful",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. ok the joke kinda dropped there. its true tho, way easier to point at him than to sit with the fact that i didnt fight for it. he didnt make me do anything i just folded"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "I’m hearing the shift, the joke dropped and what’s left is that harder, self-directed sting. We can stay with that, or I can help you put a cleaner word to it, if you want.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "guilt",
+      "body_cue": [],
+      "trigger": "finding the old uni acceptance letter and thinking about not fighting for the program",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "furious",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": "guilt",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": "sad",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "nah i think thats enough digging for one drawer haha. its weirdly less heavy having said it out loud tho. gonna put the letter back and go. thanks for not letting me joke my way out of it"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels like a natural place to leave it. I’m glad you said it out loud, and I can stay here with it or let you go back to your drawer now.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "guilt",
+      "body_cue": [],
+      "trigger": "finding the old uni acceptance letter and talking about not fighting for the program",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "furious",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": "sad",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    }
+  ]
+}

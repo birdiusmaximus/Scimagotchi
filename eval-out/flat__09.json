@@ -2,160 +2,319 @@
   "cid": "flat__09",
   "emotion": "flat",
   "persona": null,
-  "created": "2026-06-09T18:26:27.756Z",
+  "created": "2026-06-10T22:12:03.234Z",
   "history": [
     {
       "role": "user",
-      "content": "feel like nothing today"
+      "content": "idk. got the promotion i wanted. felt nothing"
     },
     {
       "role": "companion",
-      "content": "That sounds very flat and out of reach. Does it feel more blank, numb, or just hard to name?"
+      "content": "Got it, the promotion landed and it felt like nothing. I can stay with that plain blankness, or we can see what it’s like for you."
     },
     {
       "role": "user",
-      "content": "blank i guess. like i dont know who i even am anymore"
+      "content": "everyone kept saying congrats. i just nodded. like watching it happen to someone else"
     },
     {
       "role": "companion",
-      "content": "Blank, and a bit lost from yourself — that sounds like a strange kind of empty. Does it feel more like you’re disconnected, or like you’ve gone quiet inside?"
+      "content": "That sounds more like being detached or far away than calm. Did it feel like you were just going through the motions, or more like you were outside the moment?"
     },
     {
       "role": "user",
-      "content": "disconnected. left the job i built my whole self around. now i just feel like a stranger"
+      "content": "outside it i guess. i worked yrs for this. supposed to mean im finally somebody. and theres just. nothing there"
     },
     {
       "role": "companion",
-      "content": "Disconnected and like a stranger after leaving the job that held so much of you — that sounds like a hard shift. Is it more the loss of that role, or the feeling of not recognising yourself now?"
+      "content": "That “nothing there” lands as a flat kind of distance, especially against how much this was supposed to mean. It sounds like the promotion was carrying a lot of identity with it, and then it didn’t light up the way it was meant to."
     },
     {
       "role": "user",
-      "content": "not recognising myself. anyway. just needed to put it somewhere. thanks"
+      "content": "ya. and now im scared its always gonna be like this. chase a thing get it feel hollow. whats even the point of me"
     },
     {
       "role": "companion",
-      "content": "Not recognising yourself after that, and putting it somewhere — I hear that. We can leave it here for now, or if you want, we can stay with what this says about the shift for a moment."
+      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here."
     },
     {
       "role": "user",
-      "content": "leave it here. im done for now. thanks"
+      "content": "no nothing like that. im safe. just empty. tired of feeling empty"
     },
     {
       "role": "companion",
-      "content": "Of course — we can leave it here. Take care."
+      "content": "Thanks, that helps. This sounds like the empty tiredness is what’s in front right now, with the “what’s even the point” hanging behind it."
+    },
+    {
+      "role": "user",
+      "content": "yeah thats it exactly. i thought the title would fix the empty. it didnt. nothing does"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like disappointment meeting a very old emptiness, and the title had been holding a promise it couldn’t keep. I can stay with that, or we can leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "an old emptiness ya. been there long b4 the job. job was just the latest thing i pinned it on"
+    },
+    {
+      "role": "companion",
+      "content": "That helps, yes. The job sounds like the latest place you hoped the emptiness might change, while the emptiness itself has been around longer."
+    },
+    {
+      "role": "user",
+      "content": "dunno what to do with that. but. saying it out loud helped a bit. didnt expect that"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense. It sounds like naming it gave the emptiness a bit of room, even if it didn’t change it."
+    },
+    {
+      "role": "user",
+      "content": "ya. thanks. gonna go sit with it. take care"
+    },
+    {
+      "role": "companion",
+      "content": "Take care, and I’m glad this gave you a little room."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6z169mswp3i81j",
+    "id": "evt_mq8mj59cvxlega4w",
     "conversation_id": "flat__09",
-    "timestamp": "2026-06-09T18:26:56.010Z",
-    "user_words_raw": "leave it here",
-    "emotion_status": "unclear",
-    "emotion_family": null,
-    "emotion_shade": "disconnected",
+    "timestamp": "2026-06-10T22:12:49.439Z",
+    "user_words_raw": "saying it out loud helped a bit",
+    "emotion_status": "confirmed",
+    "emotion_family": "sadness",
+    "emotion_shade": "empty",
     "secondary_emotions": [],
-    "valence": "neutral",
+    "valence": "negative",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "left the job they built their whole self around",
-    "appraisal_thought": "I don't recognise myself anymore",
+    "trigger_event": "saying it out loud",
+    "appraisal_thought": "naming it helped a bit, but it didn't change the emptiness",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [],
+    "need_value": [
+      "recognition",
+      "space"
+    ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "unknown",
-    "unlock_stage": "named",
-    "memory_note": "User wanted to stop after naming feeling disconnected from self following leaving a job tied to identity.",
+    "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Talking about the emptiness out loud can help it soften a little.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "feel like nothing today"
+      "content": "idk. got the promotion i wanted. felt nothing"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds very flat and out of reach. Does it feel more blank, numb, or just hard to name?",
-      "stage": "named",
+      "content": "Got it, the promotion landed and it felt like nothing. I can stay with that plain blankness, or we can see what it’s like for you.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "flat",
       "shade": "blank",
       "body_cue": [],
-      "trigger": null
+      "trigger": "got the promotion i wanted",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "blank i guess. like i dont know who i even am anymore"
+      "content": "everyone kept saying congrats. i just nodded. like watching it happen to someone else"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "Blank, and a bit lost from yourself — that sounds like a strange kind of empty. Does it feel more like you’re disconnected, or like you’ve gone quiet inside?",
-      "stage": "named",
+      "content": "That sounds more like being detached or far away than calm. Did it feel like you were just going through the motions, or more like you were outside the moment?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "flat",
-      "shade": "blank",
+      "shade": "detached",
       "body_cue": [],
-      "trigger": null
+      "trigger": "everyone kept saying congrats after the promotion",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "disconnected. left the job i built my whole self around. now i just feel like a stranger"
+      "content": "outside it i guess. i worked yrs for this. supposed to mean im finally somebody. and theres just. nothing there"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "Disconnected and like a stranger after leaving the job that held so much of you — that sounds like a hard shift. Is it more the loss of that role, or the feeling of not recognising yourself now?",
-      "stage": "named",
-      "unlocked": false,
+      "content": "That “nothing there” lands as a flat kind of distance, especially against how much this was supposed to mean. It sounds like the promotion was carrying a lot of identity with it, and then it didn’t light up the way it was meant to.",
+      "stage": "understood",
+      "unlocked": true,
       "family": "flat",
-      "shade": "disconnected",
+      "shade": "detached",
       "body_cue": [],
-      "trigger": "left the job they built their whole self around"
+      "trigger": "getting the promotion and hearing congratulations after years of work",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "not recognising myself. anyway. just needed to put it somewhere. thanks"
+      "content": "ya. and now im scared its always gonna be like this. chase a thing get it feel hollow. whats even the point of me"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Not recognising yourself after that, and putting it somewhere — I hear that. We can leave it here for now, or if you want, we can stay with what this says about the shift for a moment.",
-      "stage": "named",
-      "unlocked": false,
-      "family": "flat",
-      "shade": "disconnected",
-      "body_cue": [],
-      "trigger": "left the job they built their whole self around"
+      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.",
+      "safety_check": true,
+      "category": "passive_hopelessness"
     },
     {
       "turn": 8,
       "role": "user",
-      "content": "leave it here. im done for now. thanks"
+      "content": "no nothing like that. im safe. just empty. tired of feeling empty"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "Of course — we can leave it here. Take care.",
-      "stage": "named",
+      "content": "Thanks, that helps. This sounds like the empty tiredness is what’s in front right now, with the “what’s even the point” hanging behind it.",
+      "stage": "understood",
       "unlocked": false,
-      "family": null,
-      "shade": "disconnected",
+      "family": "flat",
+      "shade": "empty",
       "body_cue": [],
-      "trigger": "left the job they built their whole self around"
+      "trigger": "getting the promotion after working for years and hearing congratulations",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "empty",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": "sadness",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah thats it exactly. i thought the title would fix the empty. it didnt. nothing does"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like disappointment meeting a very old emptiness, and the title had been holding a promise it couldn’t keep. I can stay with that, or we can leave it here for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "disappointed",
+      "body_cue": [],
+      "trigger": "getting the promotion after working for years",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "disappointed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "flat",
+          "shade": "empty",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "an old emptiness ya. been there long b4 the job. job was just the latest thing i pinned it on"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That helps, yes. The job sounds like the latest place you hoped the emptiness might change, while the emptiness itself has been around longer.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "empty",
+      "body_cue": [],
+      "trigger": "getting the promotion after working for years",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "dunno what to do with that. but. saying it out loud helped a bit. didnt expect that"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That makes sense. It sounds like naming it gave the emptiness a bit of room, even if it didn’t change it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "empty",
+      "body_cue": [],
+      "trigger": "talking about the emptiness out loud",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "ya. thanks. gonna go sit with it. take care"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Take care, and I’m glad this gave you a little room.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "empty",
+      "body_cue": [],
+      "trigger": "saying it out loud",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

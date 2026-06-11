@@ -2,190 +2,396 @@
   "cid": "sadness__10",
   "emotion": "sadness",
   "persona": null,
-  "created": "2026-06-09T18:19:25.688Z",
+  "created": "2026-06-10T22:09:13.544Z",
   "history": [
     {
       "role": "user",
-      "content": "hi. i dont really know how to do this. i guess im just having a hard day and someone said writing it down might help"
+      "content": "hi. i dont really know why im here honestly. ive just been feeling really flat the last few weeks and i cant shake it"
     },
     {
       "role": "companion",
-      "content": "Hey, that’s okay — we can just keep it simple. What feels most present in the hard part right now?"
+      "content": "Hey, I’m glad you came by. “Really flat” makes sense as the closest word for now, and we can leave it broad if you want."
     },
     {
       "role": "user",
-      "content": "i got some test results back last week. my doctor found a thing on my thyroid and theyre making me do more scans before they say if its bad or not. and now i just feel like my body betrayed me, like i did everything right, i eat ok, i walk every day, and it still happened. and i keep refreshing the patient portal like the answer will just appear. sorry im rambling"
+      "content": "i guess its not really flat. flat is too clean a word. its more like. ok this is gonna sound dramatic but i got some test results back a few weeks ago and theyre not. great. and ive just been kind of moving through fog since"
     },
     {
       "role": "companion",
-      "content": "You’re not rambling — this sounds really unsettling, and maybe betrayed by your own body. Is the sharpest part the waiting, or the feeling that your body didn’t keep its promise?"
+      "content": "I had that wrong, let me step back. That sounds less like flat and more like fog or something heavier, and we can keep it broad if that’s easier."
     },
     {
       "role": "user",
-      "content": "honestly both but theyre different. the waiting is this jittery cant sit still thing, like i keep googling stuff i know i shouldnt. but underneath that is just... sad? like grief almost. ive always been the healthy one in my family. my mum was the sick one and i swore id never be that person and now im sitting in waiting rooms and i feel like im losing the version of me that was fine"
+      "content": "yeah heavier. its my thyroid theres these nodules and they want to biopsy and the dr said the word that starts with c real casual like it was nothing and i just nodded and said ok and walked to my car and sat there for like 40 min not even crying just. nothing. and i havent told anyone. not my mum not my partner nobody. i dont know why im telling a phone app instead"
     },
     {
       "role": "companion",
-      "content": "That sounds like two layers at once: the jittery, can’t-sit-still waiting, and a deeper grief for the version of you that was fine. Do you want to stay with the grief, or leave it here for now?"
+      "content": "That sounds heavy in a very quiet way, like everything went still when he said that word. Do you want to stay with the heaviness itself, or leave it there for now?"
     },
     {
       "role": "user",
-      "content": "i think i wanna stay with it a sec. its weird saying grief out loud cause nobodys even told me anything bad yet, maybe its all fine. but i think im grieving the feeling of being untouchable. like i used to make plans years out without thinking and now theres this little voice going what if. and i havent told my partner how scared i am cause i dont want them to worry too"
+      "content": "stay with it i think. i dont even know if its fear honestly. like everyone keeps. well nobody knows so nobody keeps anything but in my head everyone would say oh thyroid ones are the good kind the treatable kind youll be fine and maybe thats true but it doesnt feel like relief it feels like im not even allowed to be sad about it. like i havent earned the right to fall apart because its 'the good cancer' if it even is cancer we dont know yet"
     },
     {
       "role": "companion",
-      "content": "That makes sense — it’s grief for being untouchable, and there’s fear tucked under it too. I’m wondering if the part that hurts most is the future feeling less certain, or holding it alone with your partner?"
+      "content": "I’m hearing the part where relief doesn’t land, because it comes with not being allowed to be sad about it. That “the good cancer” line is doing a lot of work there."
     },
     {
       "role": "user",
-      "content": "yeah the holding it alone part. saying it here made me realise i kinda want to just tell them, even the scared bits. they wouldnt want me carrying it by myself. idk this helped more than i thought it would. i think i can put my phone down now instead of refreshing the portal for the hundredth time"
+      "content": "yeah. and the thing is its not even mostly fear of dying or whatever like im 34 i logically know the odds are probably ok. its more. ok so my dad had thyroid stuff too and watching him go thru the scans and the waiting and the way it made him small and scared, he hated being a patient, and now its me and i just keep thinking i dont want to become that. i dont want to be the sick one in the family the one people lower their voices around. and i feel guilty even saying that cos hes fine now hes ok but watching it changed how i see him and i dont want anyone to see me different"
     },
     {
       "role": "companion",
-      "content": "I’m glad it helped. We can leave it here, and it sounds like you’ve found the next thing you want to do — tell them the scared bits when you’re ready."
+      "content": "That makes the fear feel very social, not just medical, being seen as “the sick one” and watched differently. I’m also hearing guilt sitting right beside it, because your dad is okay now and you don’t want this to change how you see him or how people see you."
     },
     {
       "role": "user",
-      "content": "thank you. really. gonna go find them now. bye"
+      "content": "the guilt is the loud part yeah but underneath i think im just. sad. like really sad in a way i havent let myself be. the biopsy is thursday and ive been carrying this alone for 3 weeks smiling at work answering my mums calls like everything is normal and i think im so tired. im so tired of holding it. and i keep thinking what if i tell my partner and they get scared too then i have to manage their fear on top of mine and i just cant"
     },
     {
       "role": "companion",
-      "content": "Bye — I’m glad you’re going to find them now."
+      "content": "That sounds like carrying it for three weeks while still acting normal, and it’s left you exhausted. The part about having to manage your partner’s fear on top of yours feels especially heavy."
+    },
+    {
+      "role": "user",
+      "content": "yeah. exhausted is the right word. i think the saddest bit honestly is that ive spent 3 weeks protecting everyone from this and nobody even knows i need protecting. like i made myself completely alone in it and i did that, its not even anyone elses fault, i just couldnt find the words and now its thursday and ill go to that appointment by myself probably and tell everyone after when i 'have more information' which is just code for when i can present it without falling apart"
+    },
+    {
+      "role": "companion",
+      "content": "I’m really struck by how much you’ve been protecting everyone and ending up alone with it. The “when I can present it without falling apart” part feels very precise."
+    },
+    {
+      "role": "user",
+      "content": "ok that one got me a bit. nobody has said that back to me cos nobody knows but seeing it written out like that. yeah. maybe i tell my partner tonight. not the whole thing maybe but enough that im not walking into thursday alone. i dont know. i think i needed to say it out loud first to someone who wasnt gonna panic. thank you for not telling me itll be fine"
+    },
+    {
+      "role": "companion",
+      "content": "That landed, and I’m glad you could say it here without having to manage anyone else’s panic. We can leave it here, or stay with what feels hardest about tonight if you want."
+    },
+    {
+      "role": "user",
+      "content": "lets leave it here i think. im gonna go find my partner. thank you, really. this helped more than i thought it would"
+    },
+    {
+      "role": "companion",
+      "content": "Go be with your partner, and take this with you as gently as you can."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6ys4gbgijb42rf",
+    "id": "evt_mq8mfhzwylqt0vr8",
     "conversation_id": "sadness__10",
-    "timestamp": "2026-06-09T18:20:07.768Z",
-    "user_words_raw": "the scared bits",
+    "timestamp": "2026-06-10T22:10:25.411Z",
+    "user_words_raw": "this helped more than i thought it would",
     "emotion_status": "confirmed",
-    "emotion_family": "calm",
-    "emotion_shade": "settled",
-    "secondary_emotions": [
-      "sadness"
-    ],
-    "valence": "mixed",
+    "emotion_family": "sadness",
+    "emotion_shade": "sad",
+    "secondary_emotions": [],
+    "valence": "neutral",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "ending the conversation after sharing fear and grief about the thyroid scans",
-    "appraisal_thought": "I can leave this here and move on to telling my partner",
+    "trigger_event": "carrying the biopsy alone, deciding whether to tell partner before Thursday",
+    "appraisal_thought": "I have to hold this alone and can only tell people once I can keep myself together",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [
-      "connection",
-      "being accompanied",
-      "relief"
-    ],
+    "need_value": [],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
     "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [
+      "flat"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Waiting for more scans brought grief, fear, and a wish to tell their partner the scared bits.",
+    "memory_note": "They were carrying a biopsy alone and planned to tell their partner before Thursday.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hi. i dont really know how to do this. i guess im just having a hard day and someone said writing it down might help"
+      "content": "hi. i dont really know why im here honestly. ive just been feeling really flat the last few weeks and i cant shake it"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey, that’s okay — we can just keep it simple. What feels most present in the hard part right now?",
-      "stage": "noticed",
+      "content": "Hey, I’m glad you came by. “Really flat” makes sense as the closest word for now, and we can leave it broad if you want.",
+      "stage": "named",
       "unlocked": false,
-      "family": null,
-      "shade": null,
+      "family": "flat",
+      "shade": "flat",
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "i got some test results back last week. my doctor found a thing on my thyroid and theyre making me do more scans before they say if its bad or not. and now i just feel like my body betrayed me, like i did everything right, i eat ok, i walk every day, and it still happened. and i keep refreshing the patient portal like the answer will just appear. sorry im rambling"
+      "content": "i guess its not really flat. flat is too clean a word. its more like. ok this is gonna sound dramatic but i got some test results back a few weeks ago and theyre not. great. and ive just been kind of moving through fog since"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "You’re not rambling — this sounds really unsettling, and maybe betrayed by your own body. Is the sharpest part the waiting, or the feeling that your body didn’t keep its promise?",
-      "stage": "understood",
-      "unlocked": true,
-      "family": "fear",
-      "shade": "uneasy",
+      "content": "I had that wrong, let me step back. That sounds less like flat and more like fog or something heavier, and we can keep it broad if that’s easier.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "foggy",
       "body_cue": [],
-      "trigger": "test results showed a thyroid finding and more scans are pending"
+      "trigger": "test results back a few weeks ago",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "honestly both but theyre different. the waiting is this jittery cant sit still thing, like i keep googling stuff i know i shouldnt. but underneath that is just... sad? like grief almost. ive always been the healthy one in my family. my mum was the sick one and i swore id never be that person and now im sitting in waiting rooms and i feel like im losing the version of me that was fine"
+      "content": "yeah heavier. its my thyroid theres these nodules and they want to biopsy and the dr said the word that starts with c real casual like it was nothing and i just nodded and said ok and walked to my car and sat there for like 40 min not even crying just. nothing. and i havent told anyone. not my mum not my partner nobody. i dont know why im telling a phone app instead"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds like two layers at once: the jittery, can’t-sit-still waiting, and a deeper grief for the version of you that was fine. Do you want to stay with the grief, or leave it here for now?",
-      "stage": "understood",
+      "content": "That sounds heavy in a very quiet way, like everything went still when he said that word. Do you want to stay with the heaviness itself, or leave it there for now?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "sadness",
-      "shade": "grief",
+      "family": "fear",
+      "shade": "heavy",
       "body_cue": [],
-      "trigger": "waiting for more scans and an answer about a thyroid finding"
+      "trigger": "doctor said the word that starts with c about thyroid nodules and biopsy",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "heavy",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "flat",
+          "shade": "nothing",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "i think i wanna stay with it a sec. its weird saying grief out loud cause nobodys even told me anything bad yet, maybe its all fine. but i think im grieving the feeling of being untouchable. like i used to make plans years out without thinking and now theres this little voice going what if. and i havent told my partner how scared i am cause i dont want them to worry too"
+      "content": "stay with it i think. i dont even know if its fear honestly. like everyone keeps. well nobody knows so nobody keeps anything but in my head everyone would say oh thyroid ones are the good kind the treatable kind youll be fine and maybe thats true but it doesnt feel like relief it feels like im not even allowed to be sad about it. like i havent earned the right to fall apart because its 'the good cancer' if it even is cancer we dont know yet"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense — it’s grief for being untouchable, and there’s fear tucked under it too. I’m wondering if the part that hurts most is the future feeling less certain, or holding it alone with your partner?",
-      "stage": "understood",
+      "content": "I’m hearing the part where relief doesn’t land, because it comes with not being allowed to be sad about it. That “the good cancer” line is doing a lot of work there.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "sadness",
-      "shade": "grief",
+      "family": "shame",
+      "shade": "ashamed",
       "body_cue": [],
-      "trigger": "more scans after a thyroid finding, and waiting for an answer"
+      "trigger": "doctor said the word that starts with c about thyroid nodules and biopsy",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "dread",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": "sadness",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": "ashamed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 8,
       "role": "user",
-      "content": "yeah the holding it alone part. saying it here made me realise i kinda want to just tell them, even the scared bits. they wouldnt want me carrying it by myself. idk this helped more than i thought it would. i think i can put my phone down now instead of refreshing the portal for the hundredth time"
+      "content": "yeah. and the thing is its not even mostly fear of dying or whatever like im 34 i logically know the odds are probably ok. its more. ok so my dad had thyroid stuff too and watching him go thru the scans and the waiting and the way it made him small and scared, he hated being a patient, and now its me and i just keep thinking i dont want to become that. i dont want to be the sick one in the family the one people lower their voices around. and i feel guilty even saying that cos hes fine now hes ok but watching it changed how i see him and i dont want anyone to see me different"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "I’m glad it helped. We can leave it here, and it sounds like you’ve found the next thing you want to do — tell them the scared bits when you’re ready.",
-      "stage": "understood",
+      "content": "That makes the fear feel very social, not just medical, being seen as “the sick one” and watched differently. I’m also hearing guilt sitting right beside it, because your dad is okay now and you don’t want this to change how you see him or how people see you.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "sadness",
-      "shade": "grief",
+      "family": "shame",
+      "shade": "guilty",
       "body_cue": [],
-      "trigger": "waiting for more scans after a thyroid finding and not knowing if it’s bad"
+      "trigger": "Thinking about your dad's thyroid scans and the idea of becoming \"the sick one\" in the family",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "fearful",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": "guilty",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 10,
       "role": "user",
-      "content": "thank you. really. gonna go find them now. bye"
+      "content": "the guilt is the loud part yeah but underneath i think im just. sad. like really sad in a way i havent let myself be. the biopsy is thursday and ive been carrying this alone for 3 weeks smiling at work answering my mums calls like everything is normal and i think im so tired. im so tired of holding it. and i keep thinking what if i tell my partner and they get scared too then i have to manage their fear on top of mine and i just cant"
     },
     {
       "turn": 11,
       "role": "companion",
-      "content": "Bye — I’m glad you’re going to find them now.",
+      "content": "That sounds like carrying it for three weeks while still acting normal, and it’s left you exhausted. The part about having to manage your partner’s fear on top of yours feels especially heavy.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "sad",
+      "body_cue": [],
+      "trigger": "Waiting for the biopsy after thyroid nodules and the thought of telling a partner",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "sad",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "yeah. exhausted is the right word. i think the saddest bit honestly is that ive spent 3 weeks protecting everyone from this and nobody even knows i need protecting. like i made myself completely alone in it and i did that, its not even anyone elses fault, i just couldnt find the words and now its thursday and ill go to that appointment by myself probably and tell everyone after when i 'have more information' which is just code for when i can present it without falling apart"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "I’m really struck by how much you’ve been protecting everyone and ending up alone with it. The “when I can present it without falling apart” part feels very precise.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "sadness",
+      "shade": "sad",
+      "body_cue": [],
+      "trigger": "Waiting for the biopsy and carrying it alone while deciding when to tell people",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "sad",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "ok that one got me a bit. nobody has said that back to me cos nobody knows but seeing it written out like that. yeah. maybe i tell my partner tonight. not the whole thing maybe but enough that im not walking into thursday alone. i dont know. i think i needed to say it out loud first to someone who wasnt gonna panic. thank you for not telling me itll be fine"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That landed, and I’m glad you could say it here without having to manage anyone else’s panic. We can leave it here, or stay with what feels hardest about tonight if you want.",
       "stage": "understood",
       "unlocked": false,
-      "family": "calm",
-      "shade": "settled",
+      "family": "sadness",
+      "shade": "sad",
       "body_cue": [],
-      "trigger": "ending the conversation after sharing fear and grief about the thyroid scans"
+      "trigger": "carrying the biopsy alone, deciding whether to tell partner before Thursday",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "sad",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "lets leave it here i think. im gonna go find my partner. thank you, really. this helped more than i thought it would"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Go be with your partner, and take this with you as gently as you can.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "sad",
+      "body_cue": [],
+      "trigger": "carrying the biopsy alone, deciding whether to tell partner before Thursday",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

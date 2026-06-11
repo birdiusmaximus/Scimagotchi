@@ -2,173 +2,183 @@
   "cid": "calm__04",
   "emotion": "calm",
   "persona": null,
-  "created": "2026-06-09T17:43:26.686Z",
+  "created": "2026-06-10T22:05:27.388Z",
   "history": [
     {
       "role": "user",
-      "content": "hey there, good evening"
+      "content": "i dont really know why im here. felt kind of empty after i got off the phone with my dad. like nothing. is that weird"
     },
     {
       "role": "companion",
-      "content": "Hey, good evening. How’s your evening going?"
+      "content": "Not weird. That sounds more like emptiness or going a bit blank after the call, and I’m glad you said it plainly."
     },
     {
       "role": "user",
-      "content": "pretty good honestly. quiet night in. my dad just left after dinner, we had him over"
+      "content": "maybe not empty actually. hm. its just that we usually argue. every call for years its been tense. and this one we just talked about his garden and it was fine. i kept waiting for the bad part and it didnt come"
     },
     {
       "role": "companion",
-      "content": "That sounds like a calm, good kind of evening — with a bit of connection in it too. What was it like having him over?"
+      "content": "That waiting for the bad part, and it never arriving, feels important. I’m wondering if what showed up was more like relief, uncertainty, or something else entirely?"
     },
     {
       "role": "user",
-      "content": "really nice actually. me and my dad went thru a rough patch for a few years, didnt talk much. but tonight we just sat and ate and it was easy. no tension. felt settled, like things are ok between us again"
+      "content": "yeah. relief. thats the word. like i can finally put something down i didnt know i was holding. he sounded happy about the tomatoes lol"
     },
     {
       "role": "companion",
-      "content": "That feels settled and easy — like the rough patch loosened its grip for a while. Did it feel more steady in your body, or more like you could just relax into the evening?"
+      "content": "Yeah, relief fits. It sounds like you could finally set something down, and his happiness about the tomatoes gave the call a softer ending."
     },
     {
       "role": "user",
-      "content": "yeah just relaxed into it. shoulders down for once. didnt realize how much id been bracing. anyway thats all really, just wanted to sit with that for a sec. thanks for listening"
+      "content": "yeah. thanks for this. i feel lighter than when i opened it. gonna go text him back about the tomatoes"
     },
     {
       "role": "companion",
-      "content": "I’m glad you could sit with it for a second. We can leave it there, or if you want, we can stay with what it meant to notice how much you’d been bracing."
-    },
-    {
-      "role": "user",
-      "content": "lets leave it there for tonight. feels like enough. night :)"
-    },
-    {
-      "role": "companion",
-      "content": "Of course — enough for tonight. Night :)"
+      "content": "I’m glad it landed softly. Enjoy the tomatoes, and take the lighter note with you."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6xhufz8e3ni96v",
+    "id": "evt_mq8manmmjpsvk6wo",
     "conversation_id": "calm__04",
-    "timestamp": "2026-06-09T17:43:51.036Z",
-    "user_words_raw": "felt settled",
+    "timestamp": "2026-06-10T22:05:49.209Z",
+    "user_words_raw": "put something down",
     "emotion_status": "confirmed",
     "emotion_family": "calm",
-    "emotion_shade": "settled",
+    "emotion_shade": "relief",
     "secondary_emotions": [],
     "valence": "positive",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "dad visited for dinner after a rough patch and they sat and ate without tension",
-    "appraisal_thought": "things are ok between us again",
-    "body_cue": [
-      "shoulders down"
-    ],
-    "behaviour_action": [
-      "relax into it"
-    ],
+    "trigger_event": "A phone call with dad stayed fine instead of turning tense.",
+    "appraisal_thought": "I can put something down now.",
+    "body_cue": [],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "connection",
+      "space",
       "safety",
-      "relief",
-      "space"
+      "ease"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [
+      "empty"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "A family dinner after a long rough patch felt easy and tension-free.",
+    "memory_note": "A tense pattern with a parent can ease when a call stays ordinary.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey there, good evening"
+      "content": "i dont really know why im here. felt kind of empty after i got off the phone with my dad. like nothing. is that weird"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey, good evening. How’s your evening going?",
-      "stage": "noticed",
+      "content": "Not weird. That sounds more like emptiness or going a bit blank after the call, and I’m glad you said it plainly.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": null,
-      "shade": null,
+      "family": "flat",
+      "shade": "empty",
       "body_cue": [],
-      "trigger": null
+      "trigger": "got off the phone with dad",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "pretty good honestly. quiet night in. my dad just left after dinner, we had him over"
+      "content": "maybe not empty actually. hm. its just that we usually argue. every call for years its been tense. and this one we just talked about his garden and it was fine. i kept waiting for the bad part and it didnt come"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds like a calm, good kind of evening — with a bit of connection in it too. What was it like having him over?",
-      "stage": "named",
+      "content": "That waiting for the bad part, and it never arriving, feels important. I’m wondering if what showed up was more like relief, uncertainty, or something else entirely?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "calm",
-      "shade": "content",
+      "shade": "relief",
       "body_cue": [],
-      "trigger": "dad visited for dinner and then left"
+      "trigger": "A phone call with dad stayed fine instead of turning tense",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "relief",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": "uneasy",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "really nice actually. me and my dad went thru a rough patch for a few years, didnt talk much. but tonight we just sat and ate and it was easy. no tension. felt settled, like things are ok between us again"
+      "content": "yeah. relief. thats the word. like i can finally put something down i didnt know i was holding. he sounded happy about the tomatoes lol"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That feels settled and easy — like the rough patch loosened its grip for a while. Did it feel more steady in your body, or more like you could just relax into the evening?",
+      "content": "Yeah, relief fits. It sounds like you could finally set something down, and his happiness about the tomatoes gave the call a softer ending.",
       "stage": "understood",
       "unlocked": true,
       "family": "calm",
-      "shade": "settled",
+      "shade": "relief",
       "body_cue": [],
-      "trigger": "dad visited for dinner and they sat and ate without tension"
+      "trigger": "A phone call with dad stayed fine instead of turning tense",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "yeah just relaxed into it. shoulders down for once. didnt realize how much id been bracing. anyway thats all really, just wanted to sit with that for a sec. thanks for listening"
+      "content": "yeah. thanks for this. i feel lighter than when i opened it. gonna go text him back about the tomatoes"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "I’m glad you could sit with it for a second. We can leave it there, or if you want, we can stay with what it meant to notice how much you’d been bracing.",
+      "content": "I’m glad it landed softly. Enjoy the tomatoes, and take the lighter note with you.",
       "stage": "understood",
       "unlocked": false,
       "family": "calm",
-      "shade": "settled",
-      "body_cue": [
-        "shoulders down"
-      ],
-      "trigger": "dad visited for dinner after a rough patch and they sat and ate without tension"
-    },
-    {
-      "turn": 8,
-      "role": "user",
-      "content": "lets leave it there for tonight. feels like enough. night :)"
-    },
-    {
-      "turn": 9,
-      "role": "companion",
-      "content": "Of course — enough for tonight. Night :)",
-      "stage": "understood",
-      "unlocked": false,
-      "family": "calm",
-      "shade": "settled",
-      "body_cue": [
-        "shoulders down"
-      ],
-      "trigger": "dad visited for dinner after a rough patch and they sat and ate without tension"
+      "shade": "relief",
+      "body_cue": [],
+      "trigger": "A phone call with dad stayed fine instead of turning tense.",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

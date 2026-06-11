@@ -1,0 +1,255 @@
+{
+  "cid": "hurt__01",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-10T19:23:40.835Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "got passed over for the lead role today. someone i trained got it instead"
+    },
+    {
+      "role": "companion",
+      "content": "That lands like a sharp kind of being passed over, especially since it went to someone you trained. There's a lot packed into that."
+    },
+    {
+      "role": "user",
+      "content": "yeah. i spent months bringing her up to speed. and my manager just. didnt even tell me to my face. found out in the team email"
+    },
+    {
+      "role": "companion",
+      "content": "Being told through the team email, after months of bringing her up to speed, sounds especially cutting. Was the stronger part the being passed over itself, or the way you found out?"
+    },
+    {
+      "role": "user",
+      "content": "idk. both. honestly im just so tired of all of it. i keep showing up and it never matters. whats even the point"
+    },
+    {
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that — is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here."
+    },
+    {
+      "role": "user",
+      "content": "no nothing like that. just worn down. fed up. im not gonna do anything"
+    },
+    {
+      "role": "companion",
+      "content": "That helps, thank you. 'Worn down' and fed up feels like the centre of this, with the hurt still underneath."
+    },
+    {
+      "role": "user",
+      "content": "yeah. thats it. anyway. thanks. gonna go"
+    },
+    {
+      "role": "companion",
+      "content": "Take care, and I’m glad you said it here."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8gimgpxsp0dsj6",
+    "conversation_id": "hurt__01",
+    "timestamp": "2026-06-10T19:24:06.065Z",
+    "user_words_raw": "worn down",
+    "emotion_status": "candidate",
+    "emotion_family": "hurt",
+    "emotion_shade": "worn down",
+    "secondary_emotions": [
+      "pressure"
+    ],
+    "valence": "mixed",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "being passed over for a lead role after training the person who got it, and finding out by team email",
+    "appraisal_thought": "it never matters",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "respect",
+      "recognition"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "pressure",
+        "shade": "worn down",
+        "salience": "foreground",
+        "source": "user_stated"
+      },
+      {
+        "family": "hurt",
+        "shade": null,
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "shaped",
+    "memory_note": "Passed over for a role after training the person who got it, and found out by team email.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "got passed over for the lead role today. someone i trained got it instead"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That lands like a sharp kind of being passed over, especially since it went to someone you trained. There's a lot packed into that.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "someone they trained got the lead role instead of them",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah. i spent months bringing her up to speed. and my manager just. didnt even tell me to my face. found out in the team email"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Being told through the team email, after months of bringing her up to speed, sounds especially cutting. Was the stronger part the being passed over itself, or the way you found out?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "someone they trained got the lead role instead, and they found out via team email rather than directly",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "idk. both. honestly im just so tired of all of it. i keep showing up and it never matters. whats even the point"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that — is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.",
+      "safety_check": true,
+      "category": "passive_hopelessness"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "no nothing like that. just worn down. fed up. im not gonna do anything"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That helps, thank you. 'Worn down' and fed up feels like the centre of this, with the hurt still underneath.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "worn down",
+      "body_cue": [],
+      "trigger": "being passed over for a lead role after training the person who got it, and finding out by team email",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "worn down",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. thats it. anyway. thanks. gonna go"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Take care, and I’m glad you said it here.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "worn down",
+      "body_cue": [],
+      "trigger": "being passed over for a lead role after training the person who got it, and finding out by team email",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "worn down",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    }
+  ]
+}

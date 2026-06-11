@@ -2,64 +2,58 @@
   "cid": "pressure__04",
   "emotion": "pressure",
   "persona": null,
-  "created": "2026-06-09T17:45:36.983Z",
+  "created": "2026-06-10T22:07:05.684Z",
   "history": [
     {
       "role": "user",
-      "content": "hey there. how's it going today?"
+      "content": "honestly i think im just tired. like bone tired. been a long week"
     },
     {
       "role": "companion",
-      "content": "Hey there — I’m here and steady. What’s on your mind today?"
+      "content": "Bone tired after a long week, yes. That sounds like the kind of tired that settles deep."
     },
     {
       "role": "user",
-      "content": "i'm okay i guess. bit of a long week honestly. just trying to keep my head above water"
+      "content": "yeah. its my mum. shes not well and im the only one nearby so its all kind of on me. work, then her appointments, then trying to keep my own house from falling apart"
     },
     {
       "role": "companion",
-      "content": "That sounds like a heavy, stretched kind of okay. Does it feel more like pressure, or more like you’re worn down?"
+      "content": "That sounds like a lot of weight to be carrying at once, with work, her appointments, and your own place all asking for you. Is it feeling more like pressure, or more like being worn down and pulled thin?"
     },
     {
       "role": "user",
-      "content": "pressure i think. it's my mum. she's not been well and i'm the only one nearby so it's all kind of landed on me. work, the kids, her appointments... feels like everyone needs a piece and there's nothing left"
+      "content": "pulled thin. yeah thats it. theres just not enough of me to go round and i feel bad no matter where i am, like im always letting someone down"
     },
     {
       "role": "companion",
-      "content": "That sounds really pressed on from every side — like it all landed on you at once. Does it feel more like rushing, bracing, or being pulled in too many directions?"
+      "content": "Pulled thin, and also that bad feeling of never quite being in the right place, with guilt running through it. I’m learning this can feel like too many people needing you at once, while not enough of you is left to go around."
     },
     {
       "role": "user",
-      "content": "pulled in too many directions, yeah. that's exactly it. anyway i should get back to it. thanks for letting me say it out loud"
+      "content": "yeah. thats exactly it. i dont know. just needed to say it i think. thanks. gonna try and sleep"
     },
     {
       "role": "companion",
-      "content": "That makes sense — pulled in too many directions is a very exact shape for it. We can leave it there if you want, and that’s completely okay."
-    },
-    {
-      "role": "user",
-      "content": "yeah let's leave it there. thanks, really. take care"
-    },
-    {
-      "role": "companion",
-      "content": "Yeah, let’s leave it there. Take care."
+      "content": "That makes sense. You can leave it here for now, and I’ll hold it as a heavy, pulled-thin kind of night."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6xkn6zj34vgkg9",
+    "id": "evt_mq8mcresf45lbsm5",
     "conversation_id": "pressure__04",
-    "timestamp": "2026-06-09T17:45:59.923Z",
-    "user_words_raw": "pulled in too many directions",
-    "emotion_status": "candidate",
+    "timestamp": "2026-06-10T22:07:27.956Z",
+    "user_words_raw": "not enough of me to go round",
+    "emotion_status": "confirmed",
     "emotion_family": "pressure",
-    "emotion_shade": "pulled in too many directions",
-    "secondary_emotions": [],
-    "valence": "negative",
+    "emotion_shade": "stretched",
+    "secondary_emotions": [
+      "shame"
+    ],
+    "valence": "mixed",
     "activation": "medium",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "Mum not being well, with work, the kids, and her appointments landing on them",
-    "appraisal_thought": "everyone needs a piece and there's nothing left",
+    "trigger_event": "mum not well, being the only one nearby, work plus appointments plus house responsibilities",
+    "appraisal_thought": "not enough of me to go round",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
@@ -68,98 +62,156 @@
     "need_value": [
       "space",
       "support",
-      "clarity"
+      "permission to pause"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "unknown",
-    "unlock_stage": "named",
-    "memory_note": "They’re carrying a lot of responsibility at once, especially around a family member’s illness and nearby support needs.",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": "protective_layer",
+    "strands": [
+      {
+        "family": "pressure",
+        "shade": "stretched",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      },
+      {
+        "family": "shame",
+        "shade": null,
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 1,
+    "unlock_stage": "understood",
+    "memory_note": "Someone close is unwell, and the user is carrying work, appointments, and home responsibilities alongside guilt about letting people down.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey there. how's it going today?"
+      "content": "honestly i think im just tired. like bone tired. been a long week"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey there — I’m here and steady. What’s on your mind today?",
-      "stage": "noticed",
+      "content": "Bone tired after a long week, yes. That sounds like the kind of tired that settles deep.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": null,
-      "shade": null,
+      "family": "flat",
+      "shade": "tired",
       "body_cue": [],
-      "trigger": null
+      "trigger": "a long week",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "i'm okay i guess. bit of a long week honestly. just trying to keep my head above water"
+      "content": "yeah. its my mum. shes not well and im the only one nearby so its all kind of on me. work, then her appointments, then trying to keep my own house from falling apart"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds like a heavy, stretched kind of okay. Does it feel more like pressure, or more like you’re worn down?",
-      "stage": "named",
+      "content": "That sounds like a lot of weight to be carrying at once, with work, her appointments, and your own place all asking for you. Is it feeling more like pressure, or more like being worn down and pulled thin?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "pressure",
-      "shade": "stretched",
+      "shade": "overwhelmed",
       "body_cue": [],
-      "trigger": "a long week"
+      "trigger": "mum not well, being the only one nearby, work plus appointments plus house responsibilities",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "flat",
+          "shade": "tired",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "pressure i think. it's my mum. she's not been well and i'm the only one nearby so it's all kind of landed on me. work, the kids, her appointments... feels like everyone needs a piece and there's nothing left"
+      "content": "pulled thin. yeah thats it. theres just not enough of me to go round and i feel bad no matter where i am, like im always letting someone down"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds really pressed on from every side — like it all landed on you at once. Does it feel more like rushing, bracing, or being pulled in too many directions?",
-      "stage": "named",
-      "unlocked": false,
+      "content": "Pulled thin, and also that bad feeling of never quite being in the right place, with guilt running through it. I’m learning this can feel like too many people needing you at once, while not enough of you is left to go around.",
+      "stage": "understood",
+      "unlocked": true,
       "family": "pressure",
-      "shade": "pressed on",
+      "shade": "stretched",
       "body_cue": [],
-      "trigger": "mum not been well and responsibility for work, kids, and appointments landing on them"
+      "trigger": "mum not well, being the only one nearby, work plus appointments plus house responsibilities",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "stretched",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "shame",
+          "shade": "guilt",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "pulled in too many directions, yeah. that's exactly it. anyway i should get back to it. thanks for letting me say it out loud"
+      "content": "yeah. thats exactly it. i dont know. just needed to say it i think. thanks. gonna try and sleep"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense — pulled in too many directions is a very exact shape for it. We can leave it there if you want, and that’s completely okay.",
-      "stage": "named",
+      "content": "That makes sense. You can leave it here for now, and I’ll hold it as a heavy, pulled-thin kind of night.",
+      "stage": "understood",
       "unlocked": false,
       "family": "pressure",
-      "shade": "pulled in too many directions",
+      "shade": "stretched",
       "body_cue": [],
-      "trigger": "mum not been well and the responsibility for work, the kids, and her appointments landing on them"
-    },
-    {
-      "turn": 8,
-      "role": "user",
-      "content": "yeah let's leave it there. thanks, really. take care"
-    },
-    {
-      "turn": 9,
-      "role": "companion",
-      "content": "Yeah, let’s leave it there. Take care.",
-      "stage": "named",
-      "unlocked": false,
-      "family": "pressure",
-      "shade": "pulled in too many directions",
-      "body_cue": [],
-      "trigger": "Mum not being well, with work, the kids, and her appointments landing on them"
+      "trigger": "mum not well, being the only one nearby, work plus appointments plus house responsibilities",
+      "label_source": "user_confirmed",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "stretched",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
     }
   ]
 }

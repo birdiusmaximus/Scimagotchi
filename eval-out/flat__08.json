@@ -2,64 +2,72 @@
   "cid": "flat__08",
   "emotion": "flat",
   "persona": null,
-  "created": "2026-06-09T18:26:25.222Z",
+  "created": "2026-06-10T22:12:02.851Z",
   "history": [
     {
       "role": "user",
-      "content": "idk man. been feeling kind of nothing lately. just flat"
+      "content": "hi. i dont really know why im here. just been feeling kind of off lately i guess"
     },
     {
       "role": "companion",
-      "content": "That sounds pretty flat and hard to reach. Does it feel more blank, numb, or just far away?"
+      "content": "Hey, that “kind of off lately” is a real thing to bring in. We can stay with it gently, or just leave it here if that’s all you wanted to say."
     },
     {
       "role": "user",
-      "content": "blank i guess? like i should be panicking about stuff but theres just. nothing there. not sure this app thing even helps tbh"
+      "content": "idk. its not even sad really. more like nothing. like i graduated in december and everyones asking whats next and i just. shrug. theres nothing there"
     },
     {
       "role": "companion",
-      "content": "Blank makes sense here, and I’m hearing the “nothing there” part too. Do you want to keep it broad, or stay with the part that feels like this app might not help?"
+      "content": "That sounds more like flatness than sadness, maybe a kind of blank or “nothing there” feeling. Did anything change around graduation, or did it just start showing up after that?"
     },
     {
       "role": "user",
-      "content": "i dont know. graduate in like a month and everyones asking whats next and i just. shrug. no job no plan no feelings about it. should care right"
+      "content": "i mean it was supposed to be the big thing right. four years. and now im just back in my old room and my friends all scattered. i had this whole plan to do grad school but i didnt even apply. couldnt make myself. and now i dont know if i wanted it or just thought i should. everything feels kind of greyed out"
     },
     {
       "role": "companion",
-      "content": "That sounds blank in a very specific way: a shrug where you’d expect feeling. Is it more like blank, or more like everything about “what’s next” is just out of reach?"
+      "content": "That “greyed out” feeling sounds like things went a bit muted after the big shift. I’m wondering if it sits more in your body as heavy, foggy, or just hard to reach?"
     },
     {
       "role": "user",
-      "content": "out of reach yeah. like its happening to someone else. anyway. dunno what i expected typing into an app lol. gonna head off"
+      "content": "foggy i guess. or just like. far away from myself? i sleep a lot. i open my laptop to look at jobs and then 3 hours go by and ive just been staring. its not even that im upset about it. i just cant find the part of me that cares what happens next"
     },
     {
       "role": "companion",
-      "content": "Yeah, that sounds out of reach and a bit distant from you. We can leave it here, or if you want, I can stay with that “someone else” feeling for one more turn."
+      "content": "There’s something foggy and far-away in this, with a lot of sleep and staring folded into it. We can leave it there for now, or stay with what feels out of reach next."
     },
     {
       "role": "user",
-      "content": "nah leave it here. that was. weirdly okay actually. thanks"
+      "content": "i think the out of reach part is like. i used to actually want things. had this image of who id be by now. and shes just not here. and im scared the nothing is gonna stay. but even saying that doesnt feel like much. im kind of tired now honestly"
     },
     {
       "role": "companion",
-      "content": "Okay — we can leave it right there. I’m glad it was weirdly okay."
+      "content": "That tiredness makes sense after carrying all of that, especially the gap between who you pictured and who feels here now. We can leave it here for tonight if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah. lets leave it there. it helped a little to say it out loud i think. thanks for not trying to fix it. night"
+    },
+    {
+      "role": "companion",
+      "content": "Night. I’m glad you said it out loud."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6z14e5drziimfz",
+    "id": "evt_mq8mj4sqq6lve0vs",
     "conversation_id": "flat__08",
-    "timestamp": "2026-06-09T18:26:52.073Z",
-    "user_words_raw": "weirdly okay",
-    "emotion_status": "unclear",
-    "emotion_family": null,
-    "emotion_shade": "disconnected",
+    "timestamp": "2026-06-10T22:12:42.077Z",
+    "user_words_raw": "it helped a little to say it out loud",
+    "emotion_status": "confirmed",
+    "emotion_family": "flat",
+    "emotion_shade": "foggy",
     "secondary_emotions": [],
     "valence": "neutral",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "graduating soon and people asking what's next",
-    "appraisal_thought": "it's happening to someone else",
+    "trigger_event": "graduation, being back in an old room, friends scattered, and the pressure of what happens next",
+    "appraisal_thought": "the part of me that cared is missing, and the nothing might stay",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
@@ -71,91 +79,182 @@
       "self_report"
     ],
     "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "User may prefer to stop after brief reflection.",
+    "memory_note": "They sometimes feel better just naming the feeling, and prefer not to be fixed.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "idk man. been feeling kind of nothing lately. just flat"
+      "content": "hi. i dont really know why im here. just been feeling kind of off lately i guess"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds pretty flat and hard to reach. Does it feel more blank, numb, or just far away?",
-      "stage": "named",
+      "content": "Hey, that “kind of off lately” is a real thing to bring in. We can stay with it gently, or just leave it here if that’s all you wanted to say.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "flat",
-      "shade": "flat",
+      "shade": "unclear",
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "blank i guess? like i should be panicking about stuff but theres just. nothing there. not sure this app thing even helps tbh"
+      "content": "idk. its not even sad really. more like nothing. like i graduated in december and everyones asking whats next and i just. shrug. theres nothing there"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "Blank makes sense here, and I’m hearing the “nothing there” part too. Do you want to keep it broad, or stay with the part that feels like this app might not help?",
-      "stage": "named",
+      "content": "That sounds more like flatness than sadness, maybe a kind of blank or “nothing there” feeling. Did anything change around graduation, or did it just start showing up after that?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "flat",
       "shade": "blank",
       "body_cue": [],
-      "trigger": null
+      "trigger": "graduation and people asking what's next",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "i dont know. graduate in like a month and everyones asking whats next and i just. shrug. no job no plan no feelings about it. should care right"
+      "content": "i mean it was supposed to be the big thing right. four years. and now im just back in my old room and my friends all scattered. i had this whole plan to do grad school but i didnt even apply. couldnt make myself. and now i dont know if i wanted it or just thought i should. everything feels kind of greyed out"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds blank in a very specific way: a shrug where you’d expect feeling. Is it more like blank, or more like everything about “what’s next” is just out of reach?",
-      "stage": "understood",
-      "unlocked": true,
+      "content": "That “greyed out” feeling sounds like things went a bit muted after the big shift. I’m wondering if it sits more in your body as heavy, foggy, or just hard to reach?",
+      "stage": "shaped",
+      "unlocked": false,
       "family": "flat",
-      "shade": "blank",
+      "shade": "greyed out",
       "body_cue": [],
-      "trigger": "graduating soon and people asking what's next"
+      "trigger": "graduation and scattered friends, plans after college not happening",
+      "label_source": "user_stated",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "greyed out",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "out of reach yeah. like its happening to someone else. anyway. dunno what i expected typing into an app lol. gonna head off"
+      "content": "foggy i guess. or just like. far away from myself? i sleep a lot. i open my laptop to look at jobs and then 3 hours go by and ive just been staring. its not even that im upset about it. i just cant find the part of me that cares what happens next"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Yeah, that sounds out of reach and a bit distant from you. We can leave it here, or if you want, I can stay with that “someone else” feeling for one more turn.",
-      "stage": "understood",
+      "content": "There’s something foggy and far-away in this, with a lot of sleep and staring folded into it. We can leave it there for now, or stay with what feels out of reach next.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "flat",
-      "shade": "disconnected",
+      "shade": "foggy",
       "body_cue": [],
-      "trigger": "graduating soon and people asking what's next"
+      "trigger": "graduation, being back in an old room, friends scattered, and the pressure of what happens next",
+      "label_source": "user_stated",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "foggy",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 8,
       "role": "user",
-      "content": "nah leave it here. that was. weirdly okay actually. thanks"
+      "content": "i think the out of reach part is like. i used to actually want things. had this image of who id be by now. and shes just not here. and im scared the nothing is gonna stay. but even saying that doesnt feel like much. im kind of tired now honestly"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "Okay — we can leave it right there. I’m glad it was weirdly okay.",
+      "content": "That tiredness makes sense after carrying all of that, especially the gap between who you pictured and who feels here now. We can leave it here for tonight if you want.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "foggy",
+      "body_cue": [],
+      "trigger": "graduation, being back in an old room, friends scattered, and the pressure of what happens next",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "foggy",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": "fear",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. lets leave it there. it helped a little to say it out loud i think. thanks for not trying to fix it. night"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Night. I’m glad you said it out loud.",
       "stage": "understood",
       "unlocked": false,
-      "family": null,
-      "shade": "disconnected",
+      "family": "flat",
+      "shade": "foggy",
       "body_cue": [],
-      "trigger": "graduating soon and people asking what's next"
+      "trigger": "graduation, being back in an old room, friends scattered, and the pressure of what happens next",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

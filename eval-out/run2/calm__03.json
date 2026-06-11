@@ -1,0 +1,179 @@
+{
+  "cid": "calm__03",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-10T17:07:20.243Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey there"
+    },
+    {
+      "role": "companion",
+      "content": "Hey there, good to see you."
+    },
+    {
+      "role": "user",
+      "content": "yeah. dunno really. just kind of a quiet day i guess"
+    },
+    {
+      "role": "companion",
+      "content": "A quiet day, just kind of sitting there. If you want, you can stay broad and tell me what that quiet feels like."
+    },
+    {
+      "role": "user",
+      "content": "paid off the last of the credit card this morning. been hanging over me forever. weird to not have it there now"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a shift, maybe relief with a kind of strange empty space after something heavy moved. Does it feel more calm, or more blank and unreal?"
+    },
+    {
+      "role": "user",
+      "content": "calm i think. like i can breathe. just gonna leave it there for now. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Glad to leave it there with you. Take care of the quiet space."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bn9p3t5j57xfo",
+    "conversation_id": "calm__03",
+    "timestamp": "2026-06-10T17:07:38.149Z",
+    "user_words_raw": "can breathe",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "calm",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "paid off the last of the credit card",
+    "appraisal_thought": "it's weird to not have it there now",
+    "body_cue": [
+      "can breathe"
+    ],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "relief",
+      "space"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Debt pressure lifted, leaving a calm, strange sense of space.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey there"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey there, good to see you.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah. dunno really. just kind of a quiet day i guess"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "A quiet day, just kind of sitting there. If you want, you can stay broad and tell me what that quiet feels like.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "quiet",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "paid off the last of the credit card this morning. been hanging over me forever. weird to not have it there now"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like a shift, maybe relief with a kind of strange empty space after something heavy moved. Does it feel more calm, or more blank and unreal?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "quiet",
+      "body_cue": [],
+      "trigger": "paid off the last of the credit card",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "relief",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "flat",
+          "shade": "quiet",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "calm i think. like i can breathe. just gonna leave it there for now. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Glad to leave it there with you. Take care of the quiet space.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "calm",
+      "body_cue": [
+        "can breathe"
+      ],
+      "trigger": "paid off the last of the credit card",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

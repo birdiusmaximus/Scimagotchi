@@ -1,0 +1,144 @@
+{
+  "cid": "shame__05",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-09T18:24:15.479Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk why im even here lol. nothing major"
+    },
+    {
+      "role": "companion",
+      "content": "Sounds like you’re here, but it feels a bit hard to pin down why. Is it more like blank, off, or just not much going on?"
+    },
+    {
+      "role": "user",
+      "content": "nah not blank. more like cringe. theres this thing from years ago that pops in my head and i wanna die a lil. dumb i know"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds more like shame or embarrassment than blank — a cringey old memory that still stings. What’s the part that flashes up first?"
+    },
+    {
+      "role": "user",
+      "content": "ok dont laugh. gave this big speech at my mates wedding like 4 yrs ago and totally bombed. mixed up the brides name. THE BRIDE. everyone just kinda stared lol"
+    },
+    {
+      "role": "companion",
+      "content": "Oof — that sounds painfully exposed, like one of those moments that keeps its grip because it was so public. Does it feel more like embarrassment, guilt, or just wanting to hide when it comes back?"
+    },
+    {
+      "role": "user",
+      "content": "wanting to hide mostly. like why do i still care lol its done. anyway thats enough digging for one day i think. ta"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that makes sense — wanting to hide after a moment like that can linger a long time. We can leave it here for today, and if you ever want, we can come back to what it still hooks into."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yych2bl1i5x42",
+    "conversation_id": "shame__05",
+    "timestamp": "2026-06-09T18:24:36.109Z",
+    "user_words_raw": "wanting to hide",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "exposed",
+    "secondary_emotions": [
+      "embarrassment"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "gave a speech at a mate’s wedding and mixed up the bride’s name",
+    "appraisal_thought": "why do i still care lol its done",
+    "body_cue": [],
+    "behaviour_action": [
+      "wanting to hide"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "dignity",
+      "acceptance"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Public mistake at a wedding still lingers years later.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk why im even here lol. nothing major"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Sounds like you’re here, but it feels a bit hard to pin down why. Is it more like blank, off, or just not much going on?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "nah not blank. more like cringe. theres this thing from years ago that pops in my head and i wanna die a lil. dumb i know"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds more like shame or embarrassment than blank — a cringey old memory that still stings. What’s the part that flashes up first?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "cringe",
+      "body_cue": [],
+      "trigger": "a thing from years ago that pops into their head"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "ok dont laugh. gave this big speech at my mates wedding like 4 yrs ago and totally bombed. mixed up the brides name. THE BRIDE. everyone just kinda stared lol"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Oof — that sounds painfully exposed, like one of those moments that keeps its grip because it was so public. Does it feel more like embarrassment, guilt, or just wanting to hide when it comes back?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "exposed",
+      "body_cue": [],
+      "trigger": "gave a speech at a mate's wedding and mixed up the bride's name"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "wanting to hide mostly. like why do i still care lol its done. anyway thats enough digging for one day i think. ta"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Yeah, that makes sense — wanting to hide after a moment like that can linger a long time. We can leave it here for today, and if you ever want, we can come back to what it still hooks into.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "exposed",
+      "body_cue": [],
+      "trigger": "gave a speech at a mate’s wedding and mixed up the bride’s name"
+    }
+  ]
+}

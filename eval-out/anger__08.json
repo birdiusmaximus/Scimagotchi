@@ -2,140 +2,279 @@
   "cid": "anger__08",
   "emotion": "anger",
   "persona": null,
-  "created": "2026-06-09T18:17:05.855Z",
+  "created": "2026-06-10T22:08:16.030Z",
   "history": [
     {
       "role": "user",
-      "content": "i dont even know what im supposed to do here. just type stuff and you reply? whatever. been kind of pissed off all day honestly"
+      "content": "i dont even know why im opening this. just one of those days where everything feels like its up in the air and i cant do anything about it"
     },
     {
       "role": "companion",
-      "content": "Yeah — you can just type whatever’s there, and I’ll जवाब back. “Pissed off all day” sounds like the main thing; is it more frustrated, resentful, or just plain angry?"
+      "content": "That “up in the air” feeling sounds very present today, like nothing will settle enough to grab hold of. You don’t have to name it yet."
     },
     {
       "role": "user",
-      "content": "frustrated i guess. i found out my whole team might get moved to a different department next quarter and nobody will tell us anything. like just SAY whats happening. i cant plan anything"
+      "content": "its not really overwhelmed. more like im just. mad? like i did everything right and it still might not matter. my whole contract thing is up in march and nobody will tell me anything"
     },
     {
       "role": "companion",
-      "content": "That sounds really frustrating — the not knowing and not being told straight is the sharp part here. Does it feel more like blocked and stuck, or more like you want to push back and get a clear answer?"
+      "content": "I had that wrong, let me step back. This sounds closer to anger, maybe with a pressure underneath, and the contract silence is stirring it up, does that fit?"
     },
     {
       "role": "user",
-      "content": "blocked. theres nothing to push against thats the worst part. just vague emails about exciting changes coming. i might not even have the same job in six months and im supposed to act normal"
+      "content": "yeah. i mean i renewed my lease assuming. i turned down that other place in feb. and now its like all this limbo and HR just keeps saying decisions are pending. pending. for four months"
     },
     {
       "role": "companion",
-      "content": "Blocked makes sense here — it’s like there’s nowhere solid to put your protest. Is it more a tight, pent-up kind of blocked, or more a quiet, resentful one?"
+      "content": "“Pending” for four months sounds like a very specific kind of stuck, especially after you made choices based on it. I’m just hearing how much this limbo has been handed to you."
     },
     {
       "role": "user",
-      "content": "honestly idk. pent up i think. anyway this is a lot of questions lol. i think i just needed to say it out loud. gonna go. thanks i guess"
+      "content": "and the thing that gets me is they act like im supposed to just be patient and grateful. meanwhile i cant plan anything. cant book a trip cant say yes to my sister moving in. its like my life is on hold for people who wont even email me back"
     },
     {
       "role": "companion",
-      "content": "That makes sense — pent-up and nowhere to push it, just sitting there under the vague emails. We can leave it here, and that’s completely fine."
+      "content": "That sounds less like hot anger and more like being blocked and dismissed at the same time. Is it closer to frustrated, or does it feel more resentful and fed up?"
+    },
+    {
+      "role": "user",
+      "content": "resentful. definitely resentful. ive given them so much and i just feel like a placeholder to them. honestly im tired of being the easygoing one who waits"
+    },
+    {
+      "role": "companion",
+      "content": "Resentful fits here. It sounds like you’ve been the easygoing one for so long that this has started to feel like being treated as a placeholder."
+    },
+    {
+      "role": "user",
+      "content": "yeah. i dont know what im supposed to do with it though. nothing changes until they decide. anyway. its just nice to say it out loud i guess. gonna try to get some sleep"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense, saying it out loud can give it a little room without changing the situation. Sleep sounds like a good place to leave it for now."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yp4tzsmnkkue8",
+    "id": "evt_mq8me9ww3d1zm2sa",
     "conversation_id": "anger__08",
-    "timestamp": "2026-06-09T18:17:26.337Z",
-    "user_words_raw": "pent up",
-    "emotion_status": "candidate",
+    "timestamp": "2026-06-10T22:08:52.462Z",
+    "user_words_raw": "just nice to say it out loud",
+    "emotion_status": "confirmed",
     "emotion_family": "anger",
-    "emotion_shade": "blocked",
+    "emotion_shade": "resentful",
     "secondary_emotions": [],
     "valence": "negative",
     "activation": "medium",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "vague emails about possible team changes and no clear information about the job",
-    "appraisal_thought": "nothing solid to push against; not being told straight; cannot plan",
+    "trigger_event": "HR keeps decisions pending while the user cannot plan their life or make commitments",
+    "appraisal_thought": "I'm being treated like a placeholder and my time does not seem to matter.",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "clarity",
       "respect",
-      "autonomy"
+      "autonomy",
+      "recognition"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "unknown",
-    "unlock_stage": "named",
-    "memory_note": "Feeling blocked by unclear work changes and uncertainty about the future of the job.",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [
+      "overwhelmed"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Work uncertainty has been dragging on for months and affects housing and family plans.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "i dont even know what im supposed to do here. just type stuff and you reply? whatever. been kind of pissed off all day honestly"
+      "content": "i dont even know why im opening this. just one of those days where everything feels like its up in the air and i cant do anything about it"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Yeah — you can just type whatever’s there, and I’ll जवाब back. “Pissed off all day” sounds like the main thing; is it more frustrated, resentful, or just plain angry?",
-      "stage": "named",
+      "content": "That “up in the air” feeling sounds very present today, like nothing will settle enough to grab hold of. You don’t have to name it yet.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "anger",
-      "shade": "frustrated",
+      "family": "pressure",
+      "shade": "overwhelmed",
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "frustrated i guess. i found out my whole team might get moved to a different department next quarter and nobody will tell us anything. like just SAY whats happening. i cant plan anything"
+      "content": "its not really overwhelmed. more like im just. mad? like i did everything right and it still might not matter. my whole contract thing is up in march and nobody will tell me anything"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds really frustrating — the not knowing and not being told straight is the sharp part here. Does it feel more like blocked and stuck, or more like you want to push back and get a clear answer?",
-      "stage": "named",
+      "content": "I had that wrong, let me step back. This sounds closer to anger, maybe with a pressure underneath, and the contract silence is stirring it up, does that fit?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "anger",
-      "shade": "frustrated",
+      "shade": "mad",
       "body_cue": [],
-      "trigger": "finding out the team might be moved departments, while nobody will say what’s happening"
+      "trigger": "nobody will tell me anything about the contract thing",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "mad",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": "pressured",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "blocked. theres nothing to push against thats the worst part. just vague emails about exciting changes coming. i might not even have the same job in six months and im supposed to act normal"
+      "content": "yeah. i mean i renewed my lease assuming. i turned down that other place in feb. and now its like all this limbo and HR just keeps saying decisions are pending. pending. for four months"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "Blocked makes sense here — it’s like there’s nowhere solid to put your protest. Is it more a tight, pent-up kind of blocked, or more a quiet, resentful one?",
-      "stage": "named",
-      "unlocked": false,
+      "content": "“Pending” for four months sounds like a very specific kind of stuck, especially after you made choices based on it. I’m just hearing how much this limbo has been handed to you.",
+      "stage": "understood",
+      "unlocked": true,
       "family": "anger",
-      "shade": "blocked",
+      "shade": "frustrated",
       "body_cue": [],
-      "trigger": "vague emails about possible team changes and no clear information about the job"
+      "trigger": "HR keeps saying decisions are pending for four months",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "frustrated",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "honestly idk. pent up i think. anyway this is a lot of questions lol. i think i just needed to say it out loud. gonna go. thanks i guess"
+      "content": "and the thing that gets me is they act like im supposed to just be patient and grateful. meanwhile i cant plan anything. cant book a trip cant say yes to my sister moving in. its like my life is on hold for people who wont even email me back"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense — pent-up and nowhere to push it, just sitting there under the vague emails. We can leave it here, and that’s completely fine.",
-      "stage": "named",
+      "content": "That sounds less like hot anger and more like being blocked and dismissed at the same time. Is it closer to frustrated, or does it feel more resentful and fed up?",
+      "stage": "understood",
       "unlocked": false,
       "family": "anger",
-      "shade": "blocked",
+      "shade": "frustrated",
       "body_cue": [],
-      "trigger": "vague emails about possible team changes and no clear information about the job"
+      "trigger": "HR keeping decisions pending while the user cannot plan life decisions",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "frustrated",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "resentful. definitely resentful. ive given them so much and i just feel like a placeholder to them. honestly im tired of being the easygoing one who waits"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Resentful fits here. It sounds like you’ve been the easygoing one for so long that this has started to feel like being treated as a placeholder.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [],
+      "trigger": "HR keeping decisions pending while the user cannot plan life decisions",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "resentful",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. i dont know what im supposed to do with it though. nothing changes until they decide. anyway. its just nice to say it out loud i guess. gonna try to get some sleep"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That makes sense, saying it out loud can give it a little room without changing the situation. Sleep sounds like a good place to leave it for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [],
+      "trigger": "HR keeps decisions pending while the user cannot plan their life or make commitments",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

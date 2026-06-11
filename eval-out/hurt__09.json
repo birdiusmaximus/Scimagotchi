@@ -2,143 +2,399 @@
   "cid": "hurt__09",
   "emotion": "hurt",
   "persona": null,
-  "created": "2026-06-09T18:21:34.301Z",
+  "created": "2026-06-10T22:10:05.672Z",
   "history": [
     {
       "role": "user",
-      "content": "didnt get the promotion. they gave it to someone i trained"
+      "content": "didnt get the thing at work. they gave it to someone else"
     },
     {
       "role": "companion",
-      "content": "That sounds really disappointing — and maybe sharp with the “someone I trained” part. Does it feel more like hurt, frustration, or both?"
+      "content": "That sounds like a sharp miss, especially when it was something you were aiming for."
     },
     {
       "role": "user",
-      "content": "both i guess. mostly just makes me feel like im not good enough. like whats the point"
+      "content": "its not even the role. its that my manager looked me in the eye last month and said i was next in line"
     },
     {
       "role": "companion",
-      "content": "That sounds like a heavy mix of hurt and disappointment, with a thought of “I’m not good enough.” Does it feel more heavy, hollow, or tired in you right now?"
+      "content": "Ah, so it is not the role itself, it is the gap between what you were told and what happened. Did it land more like being misled, or more like being passed over?"
     },
     {
       "role": "user",
-      "content": "tired. just done with today honestly"
+      "content": "misled i guess. but worse than that. like i actually believed her. i told my partner it was basically done"
     },
     {
       "role": "companion",
-      "content": "Yeah, that sounds tired and worn out, like today has just gone flat. You could leave it there for now if you want, or we can stay with it a little longer — what part feels most done?"
+      "content": "Misled fits, and the part that seems to sting harder is that you believed her and had already said it out loud to your partner. What does that feel like in you, if you stay with it for a second?"
     },
     {
       "role": "user",
-      "content": "nah im good. gonna leave it there. thanks"
+      "content": "stupid. like i should have known better. i always do this. trust someone and then im the idiot standing there"
     },
     {
       "role": "companion",
-      "content": "Of course — we can leave it there. Thanks for trusting me with it."
+      "content": "That sounds less like the event itself and more like turning it back on yourself, with a harsh kind of self-blame. I’m wondering if the sharper edge is embarrassment, shame, or just that sinking feeling of being left holding the loss alone."
+    },
+    {
+      "role": "user",
+      "content": "i dont know. its both. im angry at her but mostly im just sitting here wondering whats wrong with me that people keep doing this"
+    },
+    {
+      "role": "companion",
+      "content": "I’m holding both, then, the anger at her and the harder question turning inward. It sounds like the self-blame is louder right now, with that exposed, “what’s wrong with me” feeling underneath."
+    },
+    {
+      "role": "user",
+      "content": "yeah. exposed is the word. like everyone in that office can see i wasnt good enough and i was dumb enough to think i was"
+    },
+    {
+      "role": "companion",
+      "content": "That exposed feeling makes sense here, especially with the thought that everyone can see it. It sounds like something in you wants to hide or fold in on itself a bit, does that fit?"
+    },
+    {
+      "role": "user",
+      "content": "yeah it does. i called in sick today honestly. couldnt face walking past her office"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like the moment turned into proof, not just embarrassment. If you want, we can stay with what it seemed to say about you, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "proof. yeah. thats exactly it. like it confirmed the thing ive always been scared is true about me"
+    },
+    {
+      "role": "companion",
+      "content": "That lands as the moment becoming “proof” of a fear that was already waiting there. If you want to stay with it, we can look at what that thing about you is, or we can leave it here."
+    },
+    {
+      "role": "user",
+      "content": "not today. i cant go there right now. but it helped to say it out loud. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, we can leave it here. I’m glad saying it out loud gave it a little more room."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yuvz7vc330k17",
+    "id": "evt_mq8mgmkgb8zo4aka",
     "conversation_id": "hurt__09",
-    "timestamp": "2026-06-09T18:21:55.059Z",
-    "user_words_raw": "just done with today honestly",
-    "emotion_status": "candidate",
-    "emotion_family": "sadness",
-    "emotion_shade": "tired",
-    "secondary_emotions": [
-      "hurt",
-      "disappointment"
-    ],
+    "timestamp": "2026-06-10T22:11:05.863Z",
+    "user_words_raw": "proof",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "exposed",
+    "secondary_emotions": [],
     "valence": "negative",
-    "activation": "low",
+    "activation": "medium",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "didn't get the promotion; it was given to someone they trained",
-    "appraisal_thought": "I'm not good enough",
+    "trigger_event": "seeing her office after feeling misled and publicly exposed at work",
+    "appraisal_thought": "everyone can see i wasnt good enough, and it confirmed the thing ive always been scared is true about me",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "recognition",
-      "respect",
-      "rest"
+      "dignity",
+      "acceptance",
+      "being understood"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "unknown",
-    "unlock_stage": "named",
-    "memory_note": "A promotion disappointment that felt personal and draining",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Work exposure around being seen as not good enough, with avoidance of passing someone’s office.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "didnt get the promotion. they gave it to someone i trained"
+      "content": "didnt get the thing at work. they gave it to someone else"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds really disappointing — and maybe sharp with the “someone I trained” part. Does it feel more like hurt, frustration, or both?",
-      "stage": "named",
+      "content": "That sounds like a sharp miss, especially when it was something you were aiming for.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "sadness",
-      "shade": "disappointment",
+      "family": "hurt",
+      "shade": "left out",
       "body_cue": [],
-      "trigger": "didn't get the promotion; it was given to someone they trained"
+      "trigger": "didn't get the thing at work, it was given to someone else",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "left out",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "both i guess. mostly just makes me feel like im not good enough. like whats the point"
+      "content": "its not even the role. its that my manager looked me in the eye last month and said i was next in line"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds like a heavy mix of hurt and disappointment, with a thought of “I’m not good enough.” Does it feel more heavy, hollow, or tired in you right now?",
-      "stage": "named",
+      "content": "Ah, so it is not the role itself, it is the gap between what you were told and what happened. Did it land more like being misled, or more like being passed over?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "sadness",
-      "shade": "disappointment",
+      "family": "hurt",
+      "shade": "left out",
       "body_cue": [],
-      "trigger": "didn't get the promotion; it was given to someone they trained"
+      "trigger": "manager said user was next in line, then the thing went to someone else",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "left out",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": "null",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "tired. just done with today honestly"
+      "content": "misled i guess. but worse than that. like i actually believed her. i told my partner it was basically done"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "Yeah, that sounds tired and worn out, like today has just gone flat. You could leave it there for now if you want, or we can stay with it a little longer — what part feels most done?",
-      "stage": "named",
+      "content": "Misled fits, and the part that seems to sting harder is that you believed her and had already said it out loud to your partner. What does that feel like in you, if you stay with it for a second?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "sadness",
-      "shade": "tired",
+      "family": "hurt",
+      "shade": "misled",
       "body_cue": [],
-      "trigger": "didn't get the promotion; it was given to someone they trained"
+      "trigger": "manager said user was next in line, then it went to someone else",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "misled",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "nah im good. gonna leave it there. thanks"
+      "content": "stupid. like i should have known better. i always do this. trust someone and then im the idiot standing there"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Of course — we can leave it there. Thanks for trusting me with it.",
-      "stage": "named",
+      "content": "That sounds less like the event itself and more like turning it back on yourself, with a harsh kind of self-blame. I’m wondering if the sharper edge is embarrassment, shame, or just that sinking feeling of being left holding the loss alone.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "sadness",
-      "shade": "tired",
+      "family": "shame",
+      "shade": "self-blame",
       "body_cue": [],
-      "trigger": "didn't get the promotion; it was given to someone they trained"
+      "trigger": "manager said they were next in line, then gave it to someone else",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "self-blame",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": "misled",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i dont know. its both. im angry at her but mostly im just sitting here wondering whats wrong with me that people keep doing this"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "I’m holding both, then, the anger at her and the harder question turning inward. It sounds like the self-blame is louder right now, with that exposed, “what’s wrong with me” feeling underneath.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "manager said they were next in line, then gave it to someone else",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "self-critical",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. exposed is the word. like everyone in that office can see i wasnt good enough and i was dumb enough to think i was"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That exposed feeling makes sense here, especially with the thought that everyone can see it. It sounds like something in you wants to hide or fold in on itself a bit, does that fit?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "exposed",
+      "body_cue": [],
+      "trigger": "manager said they were next in line, then gave it to someone else",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "exposed",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "yeah it does. i called in sick today honestly. couldnt face walking past her office"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That feels like the moment turned into proof, not just embarrassment. If you want, we can stay with what it seemed to say about you, or leave it here for now.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "exposed",
+      "body_cue": [],
+      "trigger": "seeing her office after feeling misled and publicly exposed at work",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "exposed",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "proof. yeah. thats exactly it. like it confirmed the thing ive always been scared is true about me"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That lands as the moment becoming “proof” of a fear that was already waiting there. If you want to stay with it, we can look at what that thing about you is, or we can leave it here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "exposed",
+      "body_cue": [],
+      "trigger": "seeing her office after feeling misled and publicly exposed at work",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "not today. i cant go there right now. but it helped to say it out loud. thanks"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Of course, we can leave it here. I’m glad saying it out loud gave it a little more room.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "exposed",
+      "body_cue": [],
+      "trigger": "seeing her office after feeling misled and publicly exposed at work",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

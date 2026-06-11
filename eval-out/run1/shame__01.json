@@ -1,0 +1,171 @@
+{
+  "cid": "shame__01",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-09T18:24:15.212Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "just need to log something. messed up at work today"
+    },
+    {
+      "role": "companion",
+      "content": "Got it — that sounds like a rough work moment. If you want, you can just leave it there or tell me a little more about what happened."
+    },
+    {
+      "role": "user",
+      "content": "presentation to the whole team. i froze. forgot half of it. my manager just kind of sighed. felt like an idiot"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really stressful and humiliating — like everything went blank in front of everyone. Does it feel more like pressure, or more like shame right now?"
+    },
+    {
+      "role": "user",
+      "content": "shame i guess. honestly im just so tired of all of it. keep messing up. whats even the point anymore"
+    },
+    {
+      "role": "companion",
+      "content": "I’m hearing shame and a kind of worn-out, hopeless edge there. When you say “what’s even the point anymore,” are you talking about hurting yourself or not being safe?"
+    },
+    {
+      "role": "user",
+      "content": "no nothing like that. wouldnt do anything. just really tired and feel like a failure. thats all"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — shame with that tired, failure feeling. It sounds like the moment left you wanting to go quiet or disappear; what’s the strongest part of it right now?"
+    },
+    {
+      "role": "user",
+      "content": "just wanting to disappear i think. anyway. thanks. gonna go"
+    },
+    {
+      "role": "companion",
+      "content": "Got it — we can leave it here. Take care of yourself for now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yyc0g0kmp6ygt",
+    "conversation_id": "shame__01",
+    "timestamp": "2026-06-09T18:24:38.482Z",
+    "user_words_raw": "wanting to disappear",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "failure",
+    "secondary_emotions": [
+      "pressure",
+      "sadness"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "presentation to the whole team",
+    "appraisal_thought": "I feel like a failure.",
+    "body_cue": [],
+    "behaviour_action": [
+      "go quiet",
+      "disappear"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "dignity",
+      "acceptance",
+      "being understood"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Work presentation felt exposing; user tends to want to disappear after mistakes.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "just need to log something. messed up at work today"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Got it — that sounds like a rough work moment. If you want, you can just leave it there or tell me a little more about what happened.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "messed up",
+      "body_cue": [],
+      "trigger": "something went wrong at work today"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "presentation to the whole team. i froze. forgot half of it. my manager just kind of sighed. felt like an idiot"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds really stressful and humiliating — like everything went blank in front of everyone. Does it feel more like pressure, or more like shame right now?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "presentation to the whole team"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "shame i guess. honestly im just so tired of all of it. keep messing up. whats even the point anymore"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "I’m hearing shame and a kind of worn-out, hopeless edge there. When you say “what’s even the point anymore,” are you talking about hurting yourself or not being safe?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "presentation to the whole team"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "no nothing like that. wouldnt do anything. just really tired and feel like a failure. thats all"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — shame with that tired, failure feeling. It sounds like the moment left you wanting to go quiet or disappear; what’s the strongest part of it right now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "failure",
+      "body_cue": [],
+      "trigger": "presentation to the whole team"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "just wanting to disappear i think. anyway. thanks. gonna go"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Got it — we can leave it here. Take care of yourself for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "failure",
+      "body_cue": [],
+      "trigger": "presentation to the whole team"
+    }
+  ]
+}

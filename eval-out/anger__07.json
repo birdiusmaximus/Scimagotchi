@@ -2,142 +2,268 @@
   "cid": "anger__07",
   "emotion": "anger",
   "persona": null,
-  "created": "2026-06-09T18:17:05.711Z",
+  "created": "2026-06-10T22:08:14.420Z",
   "history": [
     {
       "role": "user",
-      "content": "honestly im just tired. didnt sleep great"
+      "content": "honestly not sure what this app even does but ok. had kind of a rough one"
     },
     {
       "role": "companion",
-      "content": "That sounds like a rough, drained kind of tired. Was it more the bad sleep itself, or the kind of tired that’s been building for a while?"
+      "content": "That sounds like you’ve had a rough one, and you’re not even sure what to make of the app yet. We can keep it simple, if you want."
     },
     {
       "role": "user",
-      "content": "been building i guess. me and my gf had it out again last night. same thing every time"
+      "content": "not really sad. more like annoyed. my girlfriend bailed on dinner again. third time this month"
     },
     {
       "role": "companion",
-      "content": "That sounds worn down and fed up, like the same fight keeps landing on you again and again. Does it feel more like frustration, or more like hurt?"
+      "content": "Got it, I had that wrong. This sounds more like annoyance, and maybe a bit of being let down too, but I’ll leave the rest to you."
     },
     {
       "role": "user",
-      "content": "frustration yeah. she said shed leave work early so we could do the thing for my mums bday and then texts me at 6 shes still at the office. third time shes done that"
+      "content": "yeah she texts like an hour before. work thing came up. always a work thing. i already left early and got the table and everything"
     },
     {
       "role": "companion",
-      "content": "That makes the frustration feel very tied to being let down again, especially with your mum’s birthday in the middle of it. Did it make you want to snap, shut down, or something else?"
+      "content": "That last-minute text after you’d already left early and set things up feels especially irritating. I’m wondering if it’s more frustrated, or more that you feel brushed aside?"
     },
     {
       "role": "user",
-      "content": "kinda just went quiet on her tbh. didnt wanna start it again. anyway. thanks for letting me vent, gonna try get some sleep"
+      "content": "brushed aside i guess. like her job is always the emergency and i just reschedule around it. i dont think she even notices im annoyed"
     },
     {
       "role": "companion",
-      "content": "Got it — you went quiet rather than starting it again. Rest sounds like a good place to leave it, and we can pick it up another time if you want."
+      "content": "That sounds like more than annoyance now, maybe feeling brushed aside and taken for granted. Her job keeps becoming the emergency, and your plans end up being the thing that moves."
+    },
+    {
+      "role": "user",
+      "content": "yeah. taken for granted is the word. i havent said anything cause i dont wanna be the nagging one but its building up. not sure what i expected typing it here honestly"
+    },
+    {
+      "role": "companion",
+      "content": "“Taken for granted” fits what you’ve been carrying here, and the not saying anything sounds like it’s been stacking up under the surface. We can leave it there, or stay with what it’s asking for."
+    },
+    {
+      "role": "user",
+      "content": "nah lets leave it there. probably need to actually just talk to her not an app. but this was less dumb than i thought. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense, and I’m glad it was useful in its own way. Take care of yourself."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yp4frzf3kh6yy",
+    "id": "evt_mq8me8xv9tbmopcu",
     "conversation_id": "anger__07",
-    "timestamp": "2026-06-09T18:17:23.702Z",
-    "user_words_raw": "went quiet on her",
+    "timestamp": "2026-06-10T22:08:54.589Z",
+    "user_words_raw": "less dumb than i thought",
     "emotion_status": "confirmed",
     "emotion_family": "anger",
-    "emotion_shade": "frustration",
+    "emotion_shade": "taken for granted",
     "secondary_emotions": [],
-    "valence": "negative",
-    "activation": "medium",
+    "valence": "neutral",
+    "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "she said she'd leave work early for my mum’s bday, then texted at 6 that she was still at the office; third time she's done that",
-    "appraisal_thought": "same thing every time",
+    "trigger_event": "girlfriend repeatedly cancels dinner last minute because of work",
+    "appraisal_thought": "her job keeps becoming the emergency, and my plans keep getting moved; if I say something I might seem nagging",
     "body_cue": [],
-    "behaviour_action": [
-      "went quiet"
-    ],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [
-      "respect",
-      "being heard",
-      "repair"
-    ],
+    "need_value": [],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [
+      "sad"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "frustration after repeated letdown by girlfriend",
+    "memory_note": "User prefers to wrap up when ready, and may want a place to sort feelings before talking to someone directly.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "honestly im just tired. didnt sleep great"
+      "content": "honestly not sure what this app even does but ok. had kind of a rough one"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds like a rough, drained kind of tired. Was it more the bad sleep itself, or the kind of tired that’s been building for a while?",
+      "content": "That sounds like you’ve had a rough one, and you’re not even sure what to make of the app yet. We can keep it simple, if you want.",
       "stage": "named",
       "unlocked": false,
-      "family": "pressure",
-      "shade": "tired",
+      "family": "sadness",
+      "shade": "rough",
       "body_cue": [],
-      "trigger": "didnt sleep great"
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "been building i guess. me and my gf had it out again last night. same thing every time"
+      "content": "not really sad. more like annoyed. my girlfriend bailed on dinner again. third time this month"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds worn down and fed up, like the same fight keeps landing on you again and again. Does it feel more like frustration, or more like hurt?",
-      "stage": "named",
+      "content": "Got it, I had that wrong. This sounds more like annoyance, and maybe a bit of being let down too, but I’ll leave the rest to you.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "pressure",
-      "shade": "worn down",
+      "family": "anger",
+      "shade": "annoyed",
       "body_cue": [],
-      "trigger": "me and my gf had it out again last night"
+      "trigger": "girlfriend bailed on dinner again, third time this month",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "annoyed",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "frustration yeah. she said shed leave work early so we could do the thing for my mums bday and then texts me at 6 shes still at the office. third time shes done that"
+      "content": "yeah she texts like an hour before. work thing came up. always a work thing. i already left early and got the table and everything"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That makes the frustration feel very tied to being let down again, especially with your mum’s birthday in the middle of it. Did it make you want to snap, shut down, or something else?",
-      "stage": "named",
+      "content": "That last-minute text after you’d already left early and set things up feels especially irritating. I’m wondering if it’s more frustrated, or more that you feel brushed aside?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "anger",
-      "shade": "frustration",
+      "shade": "frustrated",
       "body_cue": [],
-      "trigger": "she said she'd leave work early for my mum’s bday, then texted at 6 that she was still at the office; third time she's done that"
+      "trigger": "girlfriend bailed on dinner again, third time this month",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "frustrated",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "kinda just went quiet on her tbh. didnt wanna start it again. anyway. thanks for letting me vent, gonna try get some sleep"
+      "content": "brushed aside i guess. like her job is always the emergency and i just reschedule around it. i dont think she even notices im annoyed"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Got it — you went quiet rather than starting it again. Rest sounds like a good place to leave it, and we can pick it up another time if you want.",
+      "content": "That sounds like more than annoyance now, maybe feeling brushed aside and taken for granted. Her job keeps becoming the emergency, and your plans end up being the thing that moves.",
       "stage": "understood",
       "unlocked": true,
       "family": "anger",
-      "shade": "frustration",
+      "shade": "frustrated",
       "body_cue": [],
-      "trigger": "she said she'd leave work early for my mum’s bday, then texted at 6 that she was still at the office; third time she's done that"
+      "trigger": "girlfriend bailed on dinner again after an hour-before text about work",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "frustrated",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "hurt",
+          "shade": "brushed aside",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. taken for granted is the word. i havent said anything cause i dont wanna be the nagging one but its building up. not sure what i expected typing it here honestly"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "“Taken for granted” fits what you’ve been carrying here, and the not saying anything sounds like it’s been stacking up under the surface. We can leave it there, or stay with what it’s asking for.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "taken for granted",
+      "body_cue": [],
+      "trigger": "girlfriend repeatedly cancels dinner last minute because of work",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "taken for granted",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "nah lets leave it there. probably need to actually just talk to her not an app. but this was less dumb than i thought. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That makes sense, and I’m glad it was useful in its own way. Take care of yourself.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "taken for granted",
+      "body_cue": [],
+      "trigger": "girlfriend repeatedly cancels dinner last minute because of work",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

@@ -1,0 +1,197 @@
+{
+  "cid": "joy__10",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-09T17:41:51.977Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so this is kind of dumb but i went for a run this morning and i actually finished the whole loop without stopping?? like the full thing. i havent been able to do that in literally years"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound dumb at all — it sounds big. I’m wondering if it feels more like surprise, pride, or something gentler than that?"
+    },
+    {
+      "role": "user",
+      "content": "pride yeah i think? like im genuinely proud, ive been trying to get back into running since the start of the year after my knee thing and its been so slow and frustrating. but theres this other part of me thats almost.. scared to be happy about it? like dont jinx it. idk thats the weird bit"
+    },
+    {
+      "role": "companion",
+      "content": "Pride makes sense, and that “don’t jinx it” part sounds like a careful kind of fear sitting next to it. What does that cautious feeling make you want to do — hold back, stay quiet, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "hold back i guess. like i didnt even tell my partner properly, i just kind of mentioned it casual like oh yeah went for a run, didnt say it was a big deal. cause last spring i got all excited and signed up for a 10k and then my knee went again two weeks in and i felt so stupid. like i made this whole thing of it and then nothing. so part of me is just waiting for the other shoe. but also?? i ran the whole loop today. i did that. nobody can take that"
+    },
+    {
+      "role": "companion",
+      "content": "That makes a lot of sense — the pride is real, and the holding back sounds tied to not wanting to get caught in that letdown again. Would it feel right to leave it there, or stay with the part of you that’s still saying “I did that” ?"
+    },
+    {
+      "role": "user",
+      "content": "no i wanna stay with the i did that part for a sec. cause honestly the whole way round i kept thinking i was gonna have to walk, every corner i was like ok this is where you stop. and i just.. didnt. my legs were fine. knee was fine. and theres this stupid hill near the end and i always walk it and today i ran up the whole thing. i actually teared up a little at the top which is so embarrassing lol but it just felt like getting a piece of myself back you know"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really moving — not just pride, but a sense of getting a piece of yourself back. Was the tearful part more like relief, or more like being surprised by what your body could do?"
+    },
+    {
+      "role": "user",
+      "content": "relief mostly i think. like ive spent so long being scared of my own body, every twinge i catastrophise, and today it just.. worked. it did the thing i asked. relief that maybe im not as broken as my brain keeps telling me. ok writing it out like that the scared part feels a bit smaller actually. maybe i will tell my partner properly tonight. make it a thing. i did run up that stupid hill after all"
+    },
+    {
+      "role": "companion",
+      "content": "That relief sounds like your body answering back after a long stretch of fear. If you want, we can leave it right there — or stay with what it might mean to “make it a thing” tonight."
+    },
+    {
+      "role": "user",
+      "content": "nah i think we can leave it there. i feel kind of lighter actually, thank you. gonna go tell him about the hill. and maybe quietly look at that 10k again lol. ok bye"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a good place to let it rest. Have a good talk about the hill — and I hope the 10k can wait there quietly until you’re ready."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xftrx3otn3iys",
+    "conversation_id": "joy__10",
+    "timestamp": "2026-06-09T17:42:32.788Z",
+    "user_words_raw": "make it a thing",
+    "emotion_status": "confirmed",
+    "emotion_family": "joy",
+    "emotion_shade": "relief",
+    "secondary_emotions": [
+      "pride"
+    ],
+    "valence": "positive",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "finished the whole running loop and ran up the hill after years of not being able to",
+    "appraisal_thought": "maybe i will tell my partner properly tonight",
+    "body_cue": [],
+    "behaviour_action": [
+      "tell my partner properly tonight",
+      "make it a thing",
+      "quietly look at that 10k again"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "recognition",
+      "connection",
+      "self-trust"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "They felt pride and relief after running a full loop and the hill; they may want to revisit a 10k later.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so this is kind of dumb but i went for a run this morning and i actually finished the whole loop without stopping?? like the full thing. i havent been able to do that in literally years"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That doesn’t sound dumb at all — it sounds big. I’m wondering if it feels more like surprise, pride, or something gentler than that?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "pride",
+      "body_cue": [],
+      "trigger": "finished the whole run loop without stopping for the first time in years"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "pride yeah i think? like im genuinely proud, ive been trying to get back into running since the start of the year after my knee thing and its been so slow and frustrating. but theres this other part of me thats almost.. scared to be happy about it? like dont jinx it. idk thats the weird bit"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Pride makes sense, and that “don’t jinx it” part sounds like a careful kind of fear sitting next to it. What does that cautious feeling make you want to do — hold back, stay quiet, or something else?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "pride",
+      "body_cue": [],
+      "trigger": "finished the full run loop without stopping after years of not being able to"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "hold back i guess. like i didnt even tell my partner properly, i just kind of mentioned it casual like oh yeah went for a run, didnt say it was a big deal. cause last spring i got all excited and signed up for a 10k and then my knee went again two weeks in and i felt so stupid. like i made this whole thing of it and then nothing. so part of me is just waiting for the other shoe. but also?? i ran the whole loop today. i did that. nobody can take that"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That makes a lot of sense — the pride is real, and the holding back sounds tied to not wanting to get caught in that letdown again. Would it feel right to leave it there, or stay with the part of you that’s still saying “I did that” ?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "pride",
+      "body_cue": [],
+      "trigger": "finished the full loop after years of not being able to, after a slow return from a knee issue"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "no i wanna stay with the i did that part for a sec. cause honestly the whole way round i kept thinking i was gonna have to walk, every corner i was like ok this is where you stop. and i just.. didnt. my legs were fine. knee was fine. and theres this stupid hill near the end and i always walk it and today i ran up the whole thing. i actually teared up a little at the top which is so embarrassing lol but it just felt like getting a piece of myself back you know"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds really moving — not just pride, but a sense of getting a piece of yourself back. Was the tearful part more like relief, or more like being surprised by what your body could do?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "finished the full running loop and ran the hill after years of not being able to"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "relief mostly i think. like ive spent so long being scared of my own body, every twinge i catastrophise, and today it just.. worked. it did the thing i asked. relief that maybe im not as broken as my brain keeps telling me. ok writing it out like that the scared part feels a bit smaller actually. maybe i will tell my partner properly tonight. make it a thing. i did run up that stupid hill after all"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That relief sounds like your body answering back after a long stretch of fear. If you want, we can leave it right there — or stay with what it might mean to “make it a thing” tonight.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relief",
+      "body_cue": [
+        "teared up at the top"
+      ],
+      "trigger": "finished the full running loop and ran up the hill after years of not being able to"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "nah i think we can leave it there. i feel kind of lighter actually, thank you. gonna go tell him about the hill. and maybe quietly look at that 10k again lol. ok bye"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels like a good place to let it rest. Have a good talk about the hill — and I hope the 10k can wait there quietly until you’re ready.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relief",
+      "body_cue": [],
+      "trigger": "finished the whole running loop and ran up the hill after years of not being able to"
+    }
+  ]
+}

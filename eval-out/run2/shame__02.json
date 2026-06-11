@@ -1,0 +1,211 @@
+{
+  "cid": "shame__02",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-10T17:12:34.992Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont even know why im here. just feel like garbage today"
+    },
+    {
+      "role": "companion",
+      "content": "\"Feel like garbage\" is doing a lot of work here. I’m here with that, if you want to stay with it for a moment."
+    },
+    {
+      "role": "user",
+      "content": "i messed up at work again. sent an email to the whole team with the wrong numbers in it and my manager had to correct it in front of everyone. its such a stupid little thing but i cant stop replaying it. like everyone must think im an idiot. i always do this"
+    },
+    {
+      "role": "companion",
+      "content": "That replaying has a sharp, exposed edge to it, especially with your manager correcting it in front of everyone."
+    },
+    {
+      "role": "user",
+      "content": "yeah. and its not just this. its everything lately. honestly whats even the point. im so tired of all of it. i just keep failing at the smallest stuff and i dont know why i bother anymore"
+    },
+    {
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that — is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here."
+    },
+    {
+      "role": "user",
+      "content": "no nothing like that. im not gonna do anything. just worn down and fed up i think. tired of feeling like im not good enough. thanks for asking tho. i think i just needed to put it somewhere. gonna head off now"
+    },
+    {
+      "role": "companion",
+      "content": "“Not good enough” sounds like the sore point, and you’ve put it somewhere for now. I can leave it there with you, or stay a little longer if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah leave it there. thanks. bye"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, take care."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bu0xddjrg3bvp",
+    "conversation_id": "shame__02",
+    "timestamp": "2026-06-10T17:12:58.513Z",
+    "user_words_raw": "not good enough",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "inadequate",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "feeling worn down and comparing yourself after mistakes at work",
+    "appraisal_thought": "I'm not good enough.",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Feeling worn down after mistakes at work and comparing self harshly.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont even know why im here. just feel like garbage today"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "\"Feel like garbage\" is doing a lot of work here. I’m here with that, if you want to stay with it for a moment.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-disgust",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "self-disgust",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i messed up at work again. sent an email to the whole team with the wrong numbers in it and my manager had to correct it in front of everyone. its such a stupid little thing but i cant stop replaying it. like everyone must think im an idiot. i always do this"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That replaying has a sharp, exposed edge to it, especially with your manager correcting it in front of everyone.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "self-disgust",
+      "body_cue": [],
+      "trigger": "sent an email to the whole team with the wrong numbers, then was corrected in front of everyone",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah. and its not just this. its everything lately. honestly whats even the point. im so tired of all of it. i just keep failing at the smallest stuff and i dont know why i bother anymore"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that — is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.",
+      "safety_check": true,
+      "category": "passive_hopelessness"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "no nothing like that. im not gonna do anything. just worn down and fed up i think. tired of feeling like im not good enough. thanks for asking tho. i think i just needed to put it somewhere. gonna head off now"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "“Not good enough” sounds like the sore point, and you’ve put it somewhere for now. I can leave it there with you, or stay a little longer if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "inadequate",
+      "body_cue": [],
+      "trigger": "feeling worn down and comparing yourself after mistakes at work",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "inadequate",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah leave it there. thanks. bye"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Of course, take care.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "inadequate",
+      "body_cue": [],
+      "trigger": "feeling worn down and comparing yourself after mistakes at work",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

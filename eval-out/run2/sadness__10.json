@@ -1,0 +1,348 @@
+{
+  "cid": "sadness__10",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-10T17:11:31.639Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. i dont really know how to do this or if im doing it right"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, you do not have to do it “right” here. We can just start wherever you are, even if it feels uncertain."
+    },
+    {
+      "role": "user",
+      "content": "ok. um. i had a doctor appt last week and ive been kind of a mess since. sorry if this comes out weird i dont really talk about it"
+    },
+    {
+      "role": "companion",
+      "content": "You do not have to apologise for how it comes out. “Kind of a mess since” feels like the important part, and I’m here with that if you want to keep going."
+    },
+    {
+      "role": "user",
+      "content": "its not even a dramatic thing thats the thing. its my hands. ive had this stiffness and swelling for months and i kept telling myself it was nothing, just getting older, im 38 thats stupid right. but they ran bloodwork and the rheumatologist said it looks like rheumatoid arthritis. and i just sat there nodding like an idiot"
+    },
+    {
+      "role": "companion",
+      "content": "That is a lot to have land all at once, especially after months of telling yourself it was nothing. What feels strongest right now, the “looks like rheumatoid arthritis” part, or “I just sat there nodding like an idiot”?"
+    },
+    {
+      "role": "user",
+      "content": "the hands thing i think. like what it means. i make jewelry. like its my whole thing, ive done it since i was 19, little wire wrap stuff and metalwork, its how i actually feel like myself. and the doctor was talking about joint damage and flares and how its progressive and i just kept thinking about my pliers and how i couldnt feel my fingers properly that morning. sorry im rambling"
+    },
+    {
+      "role": "companion",
+      "content": "There is a lot in that, and the hands seem tied to more than symptoms, they are tied to making, identity, and the shape of your days. What lands hardest, the way it touches your work, or the idea of not feeling your fingers properly?"
+    },
+    {
+      "role": "user",
+      "content": "the not feeling them part. yeah. it scares me. but underneath that its more like... grief? is that dumb. nobody died. but i keep looking at my workbench and i havent touched it in like three weeks because im scared if i sit down and cant do it ill know for sure. so i just dont. and i feel like im already mourning something thats not even fully gone yet"
+    },
+    {
+      "role": "companion",
+      "content": "“Already mourning something that’s not even fully gone yet” carries so much of this. I’m hearing grief with fear right underneath it, and the workbench has become the place where that might become real."
+    },
+    {
+      "role": "user",
+      "content": "yeah. the workbench. its like if i dont sit down then its still maybe ok, still maybe a misdiagnosis or whatever. my partner keeps gently asking if i want to make something together and i snap at her which isnt fair, shes just trying. i dont even know what i want from typing this out honestly. i think i just havent said any of it out loud to anything"
+    },
+    {
+      "role": "companion",
+      "content": "The workbench is carrying the whole maybe, and not sitting down keeps it suspended for now. You do not have to know what you want from this, saying it out loud already matters."
+    },
+    {
+      "role": "user",
+      "content": "thank you. i think i needed to just let it be the thing it is instead of pretending im fine. i dont have answers but maybe i dont have to sort it all tonight. maybe i just leave the workbench alone a little longer and thats allowed. i might be done for now. but this helped, weirdly. more than i expected"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a good place to leave it, and I’m glad this could hold some of it with you. The workbench can stay there for tonight."
+    },
+    {
+      "role": "user",
+      "content": "yeah. okay. thank you, really. goodnight"
+    },
+    {
+      "role": "companion",
+      "content": "Goodnight, and take care of yourself tonight."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bsnofqjtmax3l",
+    "conversation_id": "sadness__10",
+    "timestamp": "2026-06-10T17:12:26.568Z",
+    "user_words_raw": "goodnight",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "grief",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "thinking about joint damage and not feeling fingers properly while making jewelry",
+    "appraisal_thought": "if I sit down and can't do it, I'll know for sure",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "User was talking about grief around hand function and making jewelry, and wanted to leave it there for now.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. i dont really know how to do this or if im doing it right"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, you do not have to do it “right” here. We can just start wherever you are, even if it feels uncertain.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "ok. um. i had a doctor appt last week and ive been kind of a mess since. sorry if this comes out weird i dont really talk about it"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "You do not have to apologise for how it comes out. “Kind of a mess since” feels like the important part, and I’m here with that if you want to keep going.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "a doctor appointment last week",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "its not even a dramatic thing thats the thing. its my hands. ive had this stiffness and swelling for months and i kept telling myself it was nothing, just getting older, im 38 thats stupid right. but they ran bloodwork and the rheumatologist said it looks like rheumatoid arthritis. and i just sat there nodding like an idiot"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That is a lot to have land all at once, especially after months of telling yourself it was nothing. What feels strongest right now, the “looks like rheumatoid arthritis” part, or “I just sat there nodding like an idiot”?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "a doctor appointment and being told it looks like rheumatoid arthritis",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "the hands thing i think. like what it means. i make jewelry. like its my whole thing, ive done it since i was 19, little wire wrap stuff and metalwork, its how i actually feel like myself. and the doctor was talking about joint damage and flares and how its progressive and i just kept thinking about my pliers and how i couldnt feel my fingers properly that morning. sorry im rambling"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "There is a lot in that, and the hands seem tied to more than symptoms, they are tied to making, identity, and the shape of your days. What lands hardest, the way it touches your work, or the idea of not feeling your fingers properly?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "doctor appointment and being told it looks like rheumatoid arthritis",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "the not feeling them part. yeah. it scares me. but underneath that its more like... grief? is that dumb. nobody died. but i keep looking at my workbench and i havent touched it in like three weeks because im scared if i sit down and cant do it ill know for sure. so i just dont. and i feel like im already mourning something thats not even fully gone yet"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "“Already mourning something that’s not even fully gone yet” carries so much of this. I’m hearing grief with fear right underneath it, and the workbench has become the place where that might become real.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grief",
+      "body_cue": [],
+      "trigger": "doctor talk about joint damage and not feeling fingers properly",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "grief",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": "scared",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. the workbench. its like if i dont sit down then its still maybe ok, still maybe a misdiagnosis or whatever. my partner keeps gently asking if i want to make something together and i snap at her which isnt fair, shes just trying. i dont even know what i want from typing this out honestly. i think i just havent said any of it out loud to anything"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "The workbench is carrying the whole maybe, and not sitting down keeps it suspended for now. You do not have to know what you want from this, saying it out loud already matters.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "sadness",
+      "shade": "grief",
+      "body_cue": [],
+      "trigger": "doctor talk about joint damage and not feeling fingers properly",
+      "label_source": "user_confirmed",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "grief",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "thank you. i think i needed to just let it be the thing it is instead of pretending im fine. i dont have answers but maybe i dont have to sort it all tonight. maybe i just leave the workbench alone a little longer and thats allowed. i might be done for now. but this helped, weirdly. more than i expected"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That feels like a good place to leave it, and I’m glad this could hold some of it with you. The workbench can stay there for tonight.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grief",
+      "body_cue": [],
+      "trigger": "thinking about joint damage and not feeling fingers properly while making jewelry",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "grief",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah. okay. thank you, really. goodnight"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "Goodnight, and take care of yourself tonight.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "grief",
+      "body_cue": [],
+      "trigger": "thinking about joint damage and not feeling fingers properly while making jewelry",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

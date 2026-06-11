@@ -1,0 +1,236 @@
+{
+  "cid": "fear__07",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-10T17:08:32.528Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so i guess i just type here. not really sure this does anything but whatever"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, this is the place to type. If you want, just say whatever is on your mind, and we can take it from there."
+    },
+    {
+      "role": "user",
+      "content": "i dunno. been a bit on edge about my girlfriend lately. she got back in touch with her ex and it just sits in my chest"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a wary kind of edge, and it landing in your chest gives it a very immediate shape. Is it more tight, heavy, or restless there?"
+    },
+    {
+      "role": "user",
+      "content": "tight i guess. like when she texts and turns her phone over so i cant see. she says theyre just friends now and im reading into it. maybe i am"
+    },
+    {
+      "role": "companion",
+      "content": "A tight chest and that phone-turning moment feel like the center of it. Is the sharp part more about not knowing what’s going on, or about what it seems to mean when she hides the screen?"
+    },
+    {
+      "role": "user",
+      "content": "the not knowing mostly. if she just showed me id probably be fine. its the hiding that makes my head go everywhere. i keep thinking am i about to get blindsided"
+    },
+    {
+      "role": "companion",
+      "content": "The hiding is what turns this into something bigger in your head, not the texting itself. I’m learning that the fear here is really about being blindsided, about not knowing enough to feel settled."
+    },
+    {
+      "role": "user",
+      "content": "yeah. blindsided. thats the word. i think i just need to actually ask her instead of stewing. not a fun convo but better than this"
+    },
+    {
+      "role": "companion",
+      "content": "“Blindsided” fits cleanly here. If you want, we can leave it there, or stay with what that conversation feels like before you have it."
+    },
+    {
+      "role": "user",
+      "content": "nah ill leave it there. honestly thought this would be useless but naming it helped a bit. gonna go talk to her. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it gave you a clearer word to hold. Go gently with the conversation, and come back any time if you want to pick it up again."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8botor89bhpapp",
+    "conversation_id": "fear__07",
+    "timestamp": "2026-06-10T17:09:09.499Z",
+    "user_words_raw": "naming it helped a bit",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "on edge",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "she texts and turns her phone over so i cant see",
+    "appraisal_thought": "am i about to get blindsided",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Naming the feeling can help them sort through relationship uncertainty.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so i guess i just type here. not really sure this does anything but whatever"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Yeah, this is the place to type. If you want, just say whatever is on your mind, and we can take it from there.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i dunno. been a bit on edge about my girlfriend lately. she got back in touch with her ex and it just sits in my chest"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a wary kind of edge, and it landing in your chest gives it a very immediate shape. Is it more tight, heavy, or restless there?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "on edge",
+      "body_cue": [
+        "sits in my chest"
+      ],
+      "trigger": "she got back in touch with her ex",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "on edge",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "tight i guess. like when she texts and turns her phone over so i cant see. she says theyre just friends now and im reading into it. maybe i am"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "A tight chest and that phone-turning moment feel like the center of it. Is the sharp part more about not knowing what’s going on, or about what it seems to mean when she hides the screen?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "on edge",
+      "body_cue": [
+        "tight chest"
+      ],
+      "trigger": "she texts and turns her phone over so i cant see",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "the not knowing mostly. if she just showed me id probably be fine. its the hiding that makes my head go everywhere. i keep thinking am i about to get blindsided"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "The hiding is what turns this into something bigger in your head, not the texting itself. I’m learning that the fear here is really about being blindsided, about not knowing enough to feel settled.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "on edge",
+      "body_cue": [
+        "tight chest"
+      ],
+      "trigger": "she texts and turns her phone over so i cant see",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. blindsided. thats the word. i think i just need to actually ask her instead of stewing. not a fun convo but better than this"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "“Blindsided” fits cleanly here. If you want, we can leave it there, or stay with what that conversation feels like before you have it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "on edge",
+      "body_cue": [
+        "tight chest"
+      ],
+      "trigger": "she texts and turns her phone over so i cant see",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "nah ill leave it there. honestly thought this would be useless but naming it helped a bit. gonna go talk to her. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad it gave you a clearer word to hold. Go gently with the conversation, and come back any time if you want to pick it up again.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "on edge",
+      "body_cue": [],
+      "trigger": "she texts and turns her phone over so i cant see",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

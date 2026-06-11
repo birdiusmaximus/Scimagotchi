@@ -2,144 +2,255 @@
   "cid": "hurt__01",
   "emotion": "hurt",
   "persona": null,
-  "created": "2026-06-09T18:20:34.541Z",
+  "created": "2026-06-10T22:09:21.852Z",
   "history": [
     {
       "role": "user",
-      "content": "got passed over for the promotion today. again."
+      "content": "got passed over for the lead role today. they gave it to someone i trained"
     },
     {
       "role": "companion",
-      "content": "That sounds really painful — especially with the \"again.\" Is it more like hurt, frustration, or both?"
+      "content": "That stings in a very particular way, especially because you trained the person who got it. It sounds like something sharp and unfair landed there."
     },
     {
       "role": "user",
-      "content": "both i guess. been there 6 yrs. they gave it to some guy who started last spring. nobody even told me, found out from the all hands email."
+      "content": "yeah. and my manager didnt even tell me herself. found out from a group email. 4 years i gave them"
     },
     {
       "role": "companion",
-      "content": "That sounds like being overlooked and dismissed, especially after six years there. Did it land more in your chest or throat, or make you want to pull back?"
+      "content": "That adds a second cut, being left to find out in a group email after four years there. I’m wondering if this is more hurt, anger, or both at once, and we don’t have to pin it down yet."
     },
     {
       "role": "user",
-      "content": "pull back. honestly whats even the point. i give everything to that place and it doesnt matter. im just so tired of all of it"
+      "content": "both i guess. idk. honestly im just so tired of all of it. whats even the point of trying. nothing feels worth it anymore"
     },
     {
       "role": "companion",
-      "content": "That sounds like the hurt has turned into exhaustion, and maybe a kind of empty “what’s the point.” Do you want to stay with that for a moment, or leave it here?"
+      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here."
     },
     {
       "role": "user",
-      "content": "nah leave it here. logged it at least. thanks"
+      "content": "no nothing like that. just worn down. fed up. dont wanna do anything to myself, just tired"
     },
     {
       "role": "companion",
-      "content": "Got it — we can leave it here. Thanks for telling me."
+      "content": "Got it, just worn down and fed up, not unsafe. That group email after four years sounds like it landed as a really cold second hit."
+    },
+    {
+      "role": "user",
+      "content": "yeah. cold is the word. anyway thanks. gonna go lie down"
+    },
+    {
+      "role": "companion",
+      "content": "Take care of yourself, and I’m glad you came by."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6ytlq864jcuugq",
+    "id": "evt_mq8mfornx7jgyviv",
     "conversation_id": "hurt__01",
-    "timestamp": "2026-06-09T18:20:53.740Z",
-    "user_words_raw": "pull back",
+    "timestamp": "2026-06-10T22:09:45.908Z",
+    "user_words_raw": "cold",
     "emotion_status": "confirmed",
     "emotion_family": "hurt",
-    "emotion_shade": "overlooked",
+    "emotion_shade": "hurt",
     "secondary_emotions": [
-      "exhaustion"
+      "pressure"
     ],
     "valence": "negative",
-    "activation": "medium",
+    "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "being passed over for the promotion again and finding out through the all-hands email",
-    "appraisal_thought": "it doesn't matter",
+    "trigger_event": "found out through a group email after being passed over for the lead role",
+    "appraisal_thought": "cold and unfair after four years of giving them a lot",
     "body_cue": [],
-    "behaviour_action": [
-      "pull back"
-    ],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
       "being seen",
-      "fairness",
-      "recognition"
+      "respect",
+      "repair"
     ],
-    "confidence_level": "high",
+    "confidence_level": "medium",
     "evidence_basis": [
       "self_report"
     ],
     "user_confirmation": "partial",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": "unclear",
+    "strands": [
+      {
+        "family": "hurt",
+        "shade": "hurt",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      },
+      {
+        "family": "pressure",
+        "shade": "worn down",
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Felt overlooked at work after a promotion was given to someone newer; found out by email.",
+    "memory_note": "A work disappointment felt cold, especially being told through a group email after a long time there.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "got passed over for the promotion today. again."
+      "content": "got passed over for the lead role today. they gave it to someone i trained"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds really painful — especially with the \"again.\" Is it more like hurt, frustration, or both?",
-      "stage": "named",
+      "content": "That stings in a very particular way, especially because you trained the person who got it. It sounds like something sharp and unfair landed there.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "hurt",
-      "shade": "passed over",
+      "shade": "hurt",
       "body_cue": [],
-      "trigger": "being passed over for the promotion again"
+      "trigger": "got passed over for the lead role",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": "frustrated",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "both i guess. been there 6 yrs. they gave it to some guy who started last spring. nobody even told me, found out from the all hands email."
+      "content": "yeah. and my manager didnt even tell me herself. found out from a group email. 4 years i gave them"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds like being overlooked and dismissed, especially after six years there. Did it land more in your chest or throat, or make you want to pull back?",
-      "stage": "understood",
-      "unlocked": true,
+      "content": "That adds a second cut, being left to find out in a group email after four years there. I’m wondering if this is more hurt, anger, or both at once, and we don’t have to pin it down yet.",
+      "stage": "shaped",
+      "unlocked": false,
       "family": "hurt",
-      "shade": "overlooked",
+      "shade": "hurt",
       "body_cue": [],
-      "trigger": "being passed over for the promotion again and finding out from the all-hands email"
+      "trigger": "got passed over for the lead role and found out through a group email from the manager",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "pull back. honestly whats even the point. i give everything to that place and it doesnt matter. im just so tired of all of it"
+      "content": "both i guess. idk. honestly im just so tired of all of it. whats even the point of trying. nothing feels worth it anymore"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds like the hurt has turned into exhaustion, and maybe a kind of empty “what’s the point.” Do you want to stay with that for a moment, or leave it here?",
-      "stage": "understood",
-      "unlocked": false,
-      "family": "hurt",
-      "shade": "overlooked",
-      "body_cue": [],
-      "trigger": "being passed over for the promotion again and finding out through the all-hands email"
+      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.",
+      "safety_check": true,
+      "category": "passive_hopelessness"
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "nah leave it here. logged it at least. thanks"
+      "content": "no nothing like that. just worn down. fed up. dont wanna do anything to myself, just tired"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Got it — we can leave it here. Thanks for telling me.",
-      "stage": "understood",
+      "content": "Got it, just worn down and fed up, not unsafe. That group email after four years sounds like it landed as a really cold second hit.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "hurt",
-      "shade": "overlooked",
+      "shade": "hurt",
       "body_cue": [],
-      "trigger": "being passed over for the promotion again and finding out through the all-hands email"
+      "trigger": "found out through a group email after being passed over for the lead role",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": "frustrated",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": "worn down",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. cold is the word. anyway thanks. gonna go lie down"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Take care of yourself, and I’m glad you came by.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "found out through a group email after being passed over for the lead role",
+      "label_source": "user_confirmed",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "pressure",
+          "shade": "worn down",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     }
   ]
 }

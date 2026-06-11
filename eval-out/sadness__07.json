@@ -2,144 +2,312 @@
   "cid": "sadness__07",
   "emotion": "sadness",
   "persona": null,
-  "created": "2026-06-09T18:19:18.359Z",
+  "created": "2026-06-10T22:09:09.881Z",
   "history": [
     {
       "role": "user",
-      "content": "hey. i think im just tired or whatever. been a weird week"
+      "content": "not sure this is really my thing but ok. been kind of a rough week"
     },
     {
       "role": "companion",
-      "content": "Hey — yeah, that sounds like one of those strangely tired weeks. What’s been making it weird?"
+      "content": "A rough week, and a part of you is still unsure whether this is your thing. We can keep it light and just stay with that for now."
     },
     {
       "role": "user",
-      "content": "dunno. me and my girlfriend ended things on sunday. well she ended it. so probably thats it"
+      "content": "not pressure really. me and my girlfriend broke up. well she broke up with me. last sunday"
     },
     {
       "role": "companion",
-      "content": "That makes sense — it sounds like there’s sadness here, maybe hurt too. Does it feel more like sadness, hurt, or just that flat tiredness?"
+      "content": "I had that wrong, let me step back. That sounds more like a breakup than pressure, and if you want, we can just stay with what last Sunday was like."
     },
     {
       "role": "user",
-      "content": "yeah sad i guess. we were together almost 3 years. i keep waiting for her to text and she just isnt going to"
+      "content": "it was fine honestly. that's the weird part. no big fight. she just said she didnt feel it anymore. 2 years and that was it"
     },
     {
       "role": "companion",
-      "content": "Yeah — that waiting sounds like part of the sadness, and maybe a little hurt too. Does it feel more hollow, restless, or heavy?"
+      "content": "That kind of ending can leave a strange emptiness, especially when there was no fight and it just stopped. Does it feel more like sadness, or more like being left with a question mark?"
     },
     {
       "role": "user",
-      "content": "heavy mostly. anyway thanks. gonna try to sleep"
+      "content": "question mark yeah. like i keep going back over it trying to find the thing i missed. there has to be a reason right. people dont just stop"
     },
     {
       "role": "companion",
-      "content": "Heavy makes sense here. We can leave it there for now, and if you want, we can stay with what this absence is like a little longer another time."
+      "content": "That looping over it sounds less like plain sadness and more like trying to make the ending make sense. I’m wondering if it feels closer to confusion, or to blame turning back on you?"
+    },
+    {
+      "role": "user",
+      "content": "bit of both i guess. anyway i dont know what im supposed to get from typing this out. it is what it is. she's gone and i just have to deal"
+    },
+    {
+      "role": "companion",
+      "content": "Both at once makes sense, the question mark and the blame can sit together. You can leave it here for now, or we can stay with what “deal” feels like to you."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. that was more than i expected honestly. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, and thank you for trusting me with it."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yryup0mhid748",
+    "id": "evt_mq8mffpwrd6twckb",
     "conversation_id": "sadness__07",
-    "timestamp": "2026-06-09T18:19:37.219Z",
-    "user_words_raw": "heavy mostly",
+    "timestamp": "2026-06-10T22:09:46.638Z",
+    "user_words_raw": "that's the weird part",
     "emotion_status": "confirmed",
     "emotion_family": "sadness",
-    "emotion_shade": "heavy",
+    "emotion_shade": "confusion",
     "secondary_emotions": [
       "hurt"
     ],
     "valence": "negative",
-    "activation": "low",
+    "activation": "medium",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "my girlfriend ended things on sunday",
-    "appraisal_thought": "she just isnt going to",
+    "trigger_event": "girlfriend ended a 2-year relationship last Sunday without a fight",
+    "appraisal_thought": "trying to make the ending make sense",
     "body_cue": [],
-    "behaviour_action": [
-      "waiting for her to text"
-    ],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "connection",
-      "comfort",
-      "recognition"
+      "recognition",
+      "space"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "user_stated",
+    "user_rejected_shades": [
+      "pressure"
+    ],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "sadness",
+        "shade": "confusion",
+        "salience": "foreground",
+        "source": "user_stated"
+      },
+      {
+        "family": "hurt",
+        "shade": "left out",
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Recent breakup after a long relationship; still waiting for contact.",
+    "memory_note": "Breakup ended suddenly after a long relationship, with no fight and a lot of replaying for reasons.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey. i think im just tired or whatever. been a weird week"
+      "content": "not sure this is really my thing but ok. been kind of a rough week"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey — yeah, that sounds like one of those strangely tired weeks. What’s been making it weird?",
-      "stage": "named",
+      "content": "A rough week, and a part of you is still unsure whether this is your thing. We can keep it light and just stay with that for now.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "flat",
-      "shade": "tired",
+      "family": "pressure",
+      "shade": "rough week",
       "body_cue": [],
-      "trigger": null
+      "trigger": "the week felt rough",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "calm",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "dunno. me and my girlfriend ended things on sunday. well she ended it. so probably thats it"
+      "content": "not pressure really. me and my girlfriend broke up. well she broke up with me. last sunday"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That makes sense — it sounds like there’s sadness here, maybe hurt too. Does it feel more like sadness, hurt, or just that flat tiredness?",
-      "stage": "named",
+      "content": "I had that wrong, let me step back. That sounds more like a breakup than pressure, and if you want, we can just stay with what last Sunday was like.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "sadness",
       "shade": "sadness",
       "body_cue": [],
-      "trigger": "my girlfriend ended it on sunday"
+      "trigger": "my girlfriend broke up with me last sunday",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "sadness",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "yeah sad i guess. we were together almost 3 years. i keep waiting for her to text and she just isnt going to"
+      "content": "it was fine honestly. that's the weird part. no big fight. she just said she didnt feel it anymore. 2 years and that was it"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "Yeah — that waiting sounds like part of the sadness, and maybe a little hurt too. Does it feel more hollow, restless, or heavy?",
-      "stage": "understood",
-      "unlocked": true,
+      "content": "That kind of ending can leave a strange emptiness, especially when there was no fight and it just stopped. Does it feel more like sadness, or more like being left with a question mark?",
+      "stage": "shaped",
+      "unlocked": false,
       "family": "sadness",
-      "shade": "sadness",
+      "shade": "low",
       "body_cue": [],
-      "trigger": "my girlfriend ended things on sunday"
+      "trigger": "girlfriend ended the relationship last Sunday after 2 years, with no big fight",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "low",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "heavy mostly. anyway thanks. gonna try to sleep"
+      "content": "question mark yeah. like i keep going back over it trying to find the thing i missed. there has to be a reason right. people dont just stop"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Heavy makes sense here. We can leave it there for now, and if you want, we can stay with what this absence is like a little longer another time.",
+      "content": "That looping over it sounds less like plain sadness and more like trying to make the ending make sense. I’m wondering if it feels closer to confusion, or to blame turning back on you?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "confusion",
+      "body_cue": [],
+      "trigger": "girlfriend ended a 2-year relationship last Sunday without a fight",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "confusion",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "bit of both i guess. anyway i dont know what im supposed to get from typing this out. it is what it is. she's gone and i just have to deal"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Both at once makes sense, the question mark and the blame can sit together. You can leave it here for now, or we can stay with what “deal” feels like to you.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "sadness",
+      "shade": "confusion",
+      "body_cue": [],
+      "trigger": "girlfriend ended a 2-year relationship last Sunday without a fight",
+      "label_source": "user_confirmed",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "confusion",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "shame",
+          "shade": "blame",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it there. that was more than i expected honestly. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course, and thank you for trusting me with it.",
       "stage": "understood",
       "unlocked": false,
       "family": "sadness",
-      "shade": "heavy",
+      "shade": "confusion",
       "body_cue": [],
-      "trigger": "my girlfriend ended things on sunday"
+      "trigger": "girlfriend ended a 2-year relationship last Sunday without a fight",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "confusion",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": "left out",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     }
   ]
 }

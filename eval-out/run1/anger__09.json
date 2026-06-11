@@ -1,0 +1,144 @@
+{
+  "cid": "anger__09",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-09T18:17:04.110Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "got passed over for the lead role again. third time"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really disappointing — maybe even like a mix of hurt and frustration. Does it feel more like one of those for you, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "not sad. im angry. they keep telling me im 'not ready' like im nobody"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds angry and pretty cutting — especially with “not ready” landing like “I’m nobody.” What does the anger make you want to do?"
+    },
+    {
+      "role": "user",
+      "content": "idk. quit probably. ive earned it more than the guy they picked"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like frustrated, fed-up protest — wanting to quit and feeling passed over for someone you see as less earned. Is it more like wanting to walk away, or wanting to push back?"
+    },
+    {
+      "role": "user",
+      "content": "push back maybe. dunno. needed to get it out. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — I can leave it here for now, or stay with the push-back if you want to see what it’s asking for."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yp4i7r57jf2q4",
+    "conversation_id": "anger__09",
+    "timestamp": "2026-06-09T18:17:30.339Z",
+    "user_words_raw": "push back",
+    "emotion_status": "confirmed",
+    "emotion_family": "anger",
+    "emotion_shade": "frustrated",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "being passed over for the lead role again and told “not ready”",
+    "appraisal_thought": "they keep telling me im 'not ready' like im nobody",
+    "body_cue": [],
+    "behaviour_action": [
+      "push back"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "respect",
+      "fairness",
+      "recognition",
+      "autonomy"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "feeling passed over at work and wanting to push back",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "got passed over for the lead role again. third time"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds really disappointing — maybe even like a mix of hurt and frustration. Does it feel more like one of those for you, or something else?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "disappointed",
+      "body_cue": [],
+      "trigger": "being passed over for the lead role again for the third time"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "not sad. im angry. they keep telling me im 'not ready' like im nobody"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds angry and pretty cutting — especially with “not ready” landing like “I’m nobody.” What does the anger make you want to do?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "being passed over for the lead role again and being told “not ready”"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "idk. quit probably. ive earned it more than the guy they picked"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like frustrated, fed-up protest — wanting to quit and feeling passed over for someone you see as less earned. Is it more like wanting to walk away, or wanting to push back?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "being passed over for the lead role again and told “not ready”"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "push back maybe. dunno. needed to get it out. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — I can leave it here for now, or stay with the push-back if you want to see what it’s asking for.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "being passed over for the lead role again and told “not ready”"
+    }
+  ]
+}

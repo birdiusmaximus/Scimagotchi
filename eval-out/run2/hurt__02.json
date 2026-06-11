@@ -1,0 +1,216 @@
+{
+  "cid": "hurt__02",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-10T17:11:45.841Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk i just need to put this somewhere. my sister didnt show up again"
+    },
+    {
+      "role": "companion",
+      "content": "You needed to put it somewhere, and “my sister didn’t show up again” lands with a lot of weight. I’m here with that, if you want to leave it there or say more."
+    },
+    {
+      "role": "user",
+      "content": "yeah its like the third time. we were supposed to do lunch she does this. says shell be there and then nothing. just a text two hours later. i dont even know why i keep believing her honestly. im so tired of all of it"
+    },
+    {
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that — is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here."
+    },
+    {
+      "role": "user",
+      "content": "no no nothing like that. just worn down. fed up. like whats even the point of making plans w people. im not gonna do anything im just tired"
+    },
+    {
+      "role": "companion",
+      "content": "Got it, you’re worn down and fed up, not unsafe. “What’s even the point of making plans with people” sounds like the sting is bigger than the lunch itself, does it feel more like anger, hurt, or both?"
+    },
+    {
+      "role": "user",
+      "content": "both i guess. mostly hurt. anyway i just needed to get it out. thanks for listening"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense, hurt in front with anger around it. We can leave it here, and I’ll hold onto the part that this was about being let down again."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bszbeu7un021n",
+    "conversation_id": "hurt__02",
+    "timestamp": "2026-06-10T17:12:05.737Z",
+    "user_words_raw": "hurt",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "hurt",
+    "secondary_emotions": [
+      "anger"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "sister did not show up again after making lunch plans and texting late",
+    "appraisal_thought": "what's even the point of making plans with people",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "reliability",
+      "being seen",
+      "honesty",
+      "repair"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "hurt",
+        "shade": "hurt",
+        "salience": "foreground",
+        "source": "user_stated"
+      },
+      {
+        "family": "anger",
+        "shade": null,
+        "salience": "background",
+        "source": "user_stated"
+      }
+    ],
+    "mixed_confirmed": 1,
+    "unlock_stage": "understood",
+    "memory_note": "A repeated no-show from a sibling leaves them feeling hurt, with anger in front of it.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk i just need to put this somewhere. my sister didnt show up again"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "You needed to put it somewhere, and “my sister didn’t show up again” lands with a lot of weight. I’m here with that, if you want to leave it there or say more.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [],
+      "trigger": "sister did not show up again",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "left out",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah its like the third time. we were supposed to do lunch she does this. says shell be there and then nothing. just a text two hours later. i dont even know why i keep believing her honestly. im so tired of all of it"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that — is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.",
+      "safety_check": true,
+      "category": "passive_hopelessness"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "no no nothing like that. just worn down. fed up. like whats even the point of making plans w people. im not gonna do anything im just tired"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Got it, you’re worn down and fed up, not unsafe. “What’s even the point of making plans with people” sounds like the sting is bigger than the lunch itself, does it feel more like anger, hurt, or both?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [],
+      "trigger": "sister did not show up again after making lunch plans and texting late",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "left out",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "both i guess. mostly hurt. anyway i just needed to get it out. thanks for listening"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense, hurt in front with anger around it. We can leave it here, and I’ll hold onto the part that this was about being let down again.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "sister did not show up again after making lunch plans and texting late",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    }
+  ]
+}

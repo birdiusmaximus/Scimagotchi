@@ -1,0 +1,198 @@
+{
+  "cid": "pressure__04",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-10T17:09:22.885Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "honestly i think im just tired. like bone tired. been a weird week"
+    },
+    {
+      "role": "companion",
+      "content": "\"Bone tired\" lands hard, especially with a weird week sitting behind it."
+    },
+    {
+      "role": "user",
+      "content": "yeah idk. my mum moved in with us three weeks ago after her fall and i feel like im running two households now. work, the kids, her appointments. theres no off button"
+    },
+    {
+      "role": "companion",
+      "content": "There’s a lot packed into that, and “no off button” sounds less like plain tired and more like being stretched past comfort. Is it the constant demands, or the feeling that nothing gets to stop?"
+    },
+    {
+      "role": "user",
+      "content": "the nothing gets to stop part. yeah. i love her, i do, but i didnt get a say in any of it and now im just expected to absorb it all. and im scared to even say that out loud"
+    },
+    {
+      "role": "companion",
+      "content": "\"Expected to absorb it all\" feels like the centre of this, and the fear of saying it out loud makes it heavier. Would you like to stay with that for a moment, or leave it here?"
+    },
+    {
+      "role": "user",
+      "content": "leave it here i think. but it helps to have actually said it. thank you. i should go check on her"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, let it rest here. I’m glad you said it, and I hope the check-in goes gently."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bpwrj53nkocv5",
+    "conversation_id": "pressure__04",
+    "timestamp": "2026-06-10T17:09:47.322Z",
+    "user_words_raw": "leave it here",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "overwhelmed",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "mum moved in after her fall, with work, the kids, and her appointments",
+    "appraisal_thought": "I didn't get a say, and I'm expected to absorb it all",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "User wanted to leave the feeling here after saying it out loud; had a lot of responsibility at home with mum, work, and kids.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "honestly i think im just tired. like bone tired. been a weird week"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "\"Bone tired\" lands hard, especially with a weird week sitting behind it.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "tired",
+      "body_cue": [],
+      "trigger": "a weird week",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "tired",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah idk. my mum moved in with us three weeks ago after her fall and i feel like im running two households now. work, the kids, her appointments. theres no off button"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "There’s a lot packed into that, and “no off button” sounds less like plain tired and more like being stretched past comfort. Is it the constant demands, or the feeling that nothing gets to stop?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "mum moved in after her fall, work, the kids, her appointments",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "flat",
+          "shade": "tired",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "the nothing gets to stop part. yeah. i love her, i do, but i didnt get a say in any of it and now im just expected to absorb it all. and im scared to even say that out loud"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "\"Expected to absorb it all\" feels like the centre of this, and the fear of saying it out loud makes it heavier. Would you like to stay with that for a moment, or leave it here?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "mum moved in after her fall, with work, the kids, and her appointments",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "leave it here i think. but it helps to have actually said it. thank you. i should go check on her"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Of course, let it rest here. I’m glad you said it, and I hope the check-in goes gently.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "mum moved in after her fall, with work, the kids, and her appointments",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

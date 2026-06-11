@@ -1,0 +1,253 @@
+{
+  "cid": "shame__05",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-10T17:13:06.736Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so i need to vent about something incredibly stupid lol. brace yourself for the most embarrassing thing youve ever heard"
+    },
+    {
+      "role": "companion",
+      "content": "I'm here, go on. The word \"embarrassing\" already gives this a shape, and I'm curious what happened."
+    },
+    {
+      "role": "user",
+      "content": "ok ok. so this is from like years ago, uni days. i gave this big presentation, like a final year thing, super important. and i completely froze. like full blank. just stood there. someone in the front row actually laughed. anyway its fine its whatever, just popped into my head today for no reason lol"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a very exposed kind of embarrassing, especially with someone laughing in the front row. Does it feel more like embarrassment, or more like shame about freezing?"
+    },
+    {
+      "role": "user",
+      "content": "oof thats a good question. embarrassing in the moment yeah. but honestly the thing that lingers is more like... i felt like a fraud? like everyone finally saw i didnt belong in that room. and the weird part is im also kind of mad about it still which feels dumb after this long"
+    },
+    {
+      "role": "companion",
+      "content": "“Everyone finally saw I didn’t belong in that room” is the sharp part of this, and the anger still sitting beside it doesn't sound dumb at all. I can stay with that, or we can look at what the anger is guarding if you want."
+    },
+    {
+      "role": "user",
+      "content": "what the anger is guarding, listen to you. ok fine. i think im mad because i actually worked SO hard on that thing. like weeks. and one bad 30 seconds erased all of it in my head. so maybe the anger is like.. defending the version of me that did try? idk that might be reaching"
+    },
+    {
+      "role": "companion",
+      "content": "No, that doesn't feel like reaching. The anger seems to be standing up for the part of you that worked for weeks and doesn't want one frozen minute to erase it."
+    },
+    {
+      "role": "user",
+      "content": "yeah. ok that actually like.. hit something. i never really thought about it as the angry part being on my side. always just felt like more proof i was a mess. huh. the weeks of work were real even if the 30 seconds were too i guess"
+    },
+    {
+      "role": "companion",
+      "content": "The weeks of work were real, even if the 30 seconds were too. That lands with a lot of weight, and I can leave it there if you want."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bur1lq4stblb7",
+    "conversation_id": "shame__05",
+    "timestamp": "2026-06-10T17:13:41.839Z",
+    "user_words_raw": "the weeks of work were real",
+    "emotion_status": "confirmed",
+    "emotion_family": "anger",
+    "emotion_shade": "protective",
+    "secondary_emotions": [
+      "shame"
+    ],
+    "valence": "mixed",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "A final-year presentation, freezing completely, and being laughed at by someone in the front row.",
+    "appraisal_thought": "one bad 30 seconds erased all of it in my head",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "fairness",
+      "recognition",
+      "self-respect",
+      "protection"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": "protective_layer",
+    "strands": [
+      {
+        "family": "anger",
+        "shade": "protective",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      },
+      {
+        "family": "shame",
+        "shade": "fraud",
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Public freezing during an important presentation can leave a lingering sense of fraudulence, with anger protecting the effort that went into it.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so i need to vent about something incredibly stupid lol. brace yourself for the most embarrassing thing youve ever heard"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "I'm here, go on. The word \"embarrassing\" already gives this a shape, and I'm curious what happened.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "embarrassed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "ok ok. so this is from like years ago, uni days. i gave this big presentation, like a final year thing, super important. and i completely froze. like full blank. just stood there. someone in the front row actually laughed. anyway its fine its whatever, just popped into my head today for no reason lol"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a very exposed kind of embarrassing, especially with someone laughing in the front row. Does it feel more like embarrassment, or more like shame about freezing?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "A final-year presentation, freezing completely, and being laughed at by someone in the front row.",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "oof thats a good question. embarrassing in the moment yeah. but honestly the thing that lingers is more like... i felt like a fraud? like everyone finally saw i didnt belong in that room. and the weird part is im also kind of mad about it still which feels dumb after this long"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "“Everyone finally saw I didn’t belong in that room” is the sharp part of this, and the anger still sitting beside it doesn't sound dumb at all. I can stay with that, or we can look at what the anger is guarding if you want.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "fraud",
+      "body_cue": [],
+      "trigger": "A final-year presentation, freezing completely, and being laughed at by someone in the front row.",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "fraud",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "what the anger is guarding, listen to you. ok fine. i think im mad because i actually worked SO hard on that thing. like weeks. and one bad 30 seconds erased all of it in my head. so maybe the anger is like.. defending the version of me that did try? idk that might be reaching"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "No, that doesn't feel like reaching. The anger seems to be standing up for the part of you that worked for weeks and doesn't want one frozen minute to erase it.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "protective",
+      "body_cue": [],
+      "trigger": "A final-year presentation, freezing completely, and being laughed at by someone in the front row.",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "protective",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": "fraud",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. ok that actually like.. hit something. i never really thought about it as the angry part being on my side. always just felt like more proof i was a mess. huh. the weeks of work were real even if the 30 seconds were too i guess"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "The weeks of work were real, even if the 30 seconds were too. That lands with a lot of weight, and I can leave it there if you want.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "protective",
+      "body_cue": [],
+      "trigger": "A final-year presentation, freezing completely, and being laughed at by someone in the front row.",
+      "label_source": "user_confirmed",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "protective",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "shame",
+          "shade": "fraud",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    }
+  ]
+}

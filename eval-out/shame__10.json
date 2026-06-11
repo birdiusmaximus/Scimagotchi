@@ -2,197 +2,345 @@
   "cid": "shame__10",
   "emotion": "shame",
   "persona": null,
-  "created": "2026-06-09T18:24:16.420Z",
+  "created": "2026-06-10T22:11:07.189Z",
   "history": [
     {
       "role": "user",
-      "content": "hi. i dont really know why im here lol. just had a kind of rough day i guess and a friend said this app helped her so. anyway hi"
+      "content": "hi. i dont really know why im here honestly. just been feeling kind of gross about myself lately and figured maybe talking to something that isnt a person would be easier"
     },
     {
       "role": "companion",
-      "content": "Hey — hi. A rough day can be enough reason on its own; what’s the roughest part of it so far?"
+      "content": "Hi. That sounds like a really private kind of grossness to carry around, and I’m glad you said it here."
     },
     {
       "role": "user",
-      "content": "ugh i dont even know. ok so i had my annual physical today and my doctor basically. she didnt say anything mean but she did the whole lets talk about your weight thing and pulled up my numbers and. idk. my a1c is creeping up and my bloodpressure was high and ive been telling myself for like a year id deal with it and i just. havent"
+      "content": "yeah i guess. its like. ok so i had this whole physical a few weeks ago and the doctor sat me down and went through all my numbers and it was just. bad. like blood pressure, the cholesterol thing, my a1c is creeping up. and i sat there nodding like an adult but inside i just felt like a kid getting in trouble"
     },
     {
       "role": "companion",
-      "content": "That sounds disappointing and maybe a little heavy — like you got shown something you’d been putting off. Does it feel more heavy, embarrassed, or just let down?"
+      "content": "That nodding like an adult while feeling like a kid getting in trouble sounds so exposed."
     },
     {
       "role": "user",
-      "content": "embarrassed for sure. like i sat there in the paper gown and i could feel my face going red. and the worst part is shes really nice?? she wasnt judging me at all but i was judging me. like i KNOW better. i used to be the person who meal prepped and ran 5ks and now i couldnt even tell her the last time i went for a walk. theres this voice going youre 34 how did you let yourself get here. embarrassed but also just kind of mad at myself i guess, both at the same time"
+      "content": "exposed yeah thats the word. because the thing is none of this is a surprise?? like ive KNOWN. ive known for years. ive got the gym membership i dont use, the fridge full of good intentions that go bad, the fitbit in a drawer somewhere. ive started over like a hundred times. and every single time i fall off and its like further proof that im just. a person who cant do the basic thing of taking care of his own body"
     },
     {
       "role": "companion",
-      "content": "That sounds like embarrassment with a sharp edge of self-madness, especially sitting there in the gown and going red. When that voice shows up, what does it make you want to do?"
+      "content": "Exposed fits, and there’s also a sharper self-blame in here, maybe shame more than guilt. What does it make you want to do in that moment, hide, explain, or disappear?"
     },
     {
       "role": "user",
-      "content": "honestly it makes me want to just. not deal with it. like avoid. i scheduled the follow up bloodwork for six weeks out and part of me already knows ill probably push it. and theres this thing where i dont even want to tell my partner the numbers because then itll be real and theyll worry and then ill feel like ive let them down too. so i just kind of want to disappear into my phone and pretend the appointment didnt happen. which i know is exactly the thing that got me here in the first place lol"
+      "content": "hide. definitely hide. like i havent told my wife the actual numbers. i kind of softened them when she asked how it went. said he wants me to watch a few things. which is technically true but. and i keep thinking about my dad who had his first heart thing at like 52 and im not that far off and i just. i dont even want to look at it directly. its easier to just not think about it and eat the thing and feel bad later"
     },
     {
       "role": "companion",
-      "content": "That feels like embarrassment turning into wanting to hide, avoid, and not make it real with your partner. It sounds like the appointment touched both the numbers and the fear of letting someone else down — does that feel right, or is there another piece under it?"
+      "content": "Hiding feels very real here, and you’re carrying the softened version with your wife and the numbers with your dad in the background. We can stay right there with it, or leave it here if you want."
     },
     {
       "role": "user",
-      "content": "yeah theres another piece i think. its like. my mom had all this stuff, the bp, the diabetes, and i watched what it did to her and i swore id never let that be me. so seeing those numbers today felt like im becoming the exact thing i was scared of. like im failing some promise i made when i was a kid. its not even really about the gown or the doctor its that. but ok saying it out loud it sounds less like im a failure and more like im just. scared. which is different i guess"
+      "content": "no i. can we stay. i think this is the first time ive actually said any of it out loud even to a screen. the dad thing is real yeah. i think theres this fear under it that i already wrecked it. like ive spent 40 years building this body into a problem and whats the point of a salad now you know. its too late so why bother. and i KNOW thats not how it works but it FEELS true and so i just dont start"
     },
     {
       "role": "companion",
-      "content": "Yes — that sounds more like fear showing up under the embarrassment, especially with those numbers feeling like you were becoming the thing you were scared of. I can leave it there, or stay with that scared part a little longer if you want."
+      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here."
     },
     {
       "role": "user",
-      "content": "no i think thats enough for tonight, my brain is kind of full now. but that actually helped, like calling it scared instead of just hating myself. maybe ill tell my partner the numbers this weekend. idk. thank you for this, im gonna go put my phone down for once"
+      "content": "oh no no nothing like that, im not in danger, i dont want to hurt myself. its more the worn down fed up kind. like im tired of being disappointed in myself, not. yeah. its more this heavy giving up feeling about my health specifically not about being here at all. sorry if that came out scary"
     },
     {
       "role": "companion",
-      "content": "That feels like a good place to stop for tonight. I’m glad we found the scared part; you can come back to it anytime."
+      "content": "Got it, thank you for saying that plainly. The heavy giving-up feeling is about your health and the years around it, not about wanting to be gone."
+    },
+    {
+      "role": "user",
+      "content": "no please dont apologize, im glad you checked. yeah exactly. its the years thing thats the heaviest part i think. like the shame isnt even really about the numbers on the paper its about who i think those numbers make me. a guy who let himself go. who lies to his wife about a doctors visit. who is gonna do to his kid what watching my dad in a hospital bed did to me. thats the part i cant look at"
+    },
+    {
+      "role": "companion",
+      "content": "That last part feels hard to look at, especially the part about what it might mean for your kid and for who you think you’ve become."
+    },
+    {
+      "role": "user",
+      "content": "yeah. its weird saying it makes it feel slightly less like a monster in the closet and more like just. a thing thats true and hard. i dont have a plan or anything. i think i just needed to admit out loud that im scared and ashamed and ive been hiding it under not caring. maybe telling my wife the real numbers is the actual first step and not the gym. idk. that feels more terrifying honestly"
+    },
+    {
+      "role": "companion",
+      "content": "Saying it out loud seems to have turned it from a monster in the closet into something plain and hard. The bit that feels most terrifying is telling your wife the real numbers."
+    },
+    {
+      "role": "user",
+      "content": "yeah. it is. but i think i needed to hear myself say it. im gonna sit with the wife thing. im not promising myself a whole new life tonight just. maybe one true conversation. thank you for not making me feel like a failure about it. that actually meant something. im gonna go sit with my kid for a bit i think"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like enough for tonight. Go be with your kid, and let the rest wait its turn."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yycq18edgi1cc",
+    "id": "evt_mq8mhxxu8k99xg94",
     "conversation_id": "shame__10",
-    "timestamp": "2026-06-09T18:24:54.040Z",
-    "user_words_raw": "my brain is kind of full now",
+    "timestamp": "2026-06-10T22:12:13.375Z",
+    "user_words_raw": "one true conversation",
     "emotion_status": "confirmed",
-    "emotion_family": "fear",
-    "emotion_shade": "scared",
-    "secondary_emotions": [
-      "embarrassed"
-    ],
-    "valence": "mixed",
-    "activation": "medium",
+    "emotion_family": "shame",
+    "emotion_shade": "ashamed",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "seeing annual physical results and being reminded of a parent’s illness",
-    "appraisal_thought": "becoming the exact thing I was scared of",
+    "trigger_event": "thinking about the years, the doctor visit, and telling his wife the real numbers",
+    "appraisal_thought": "I am too far gone, and telling the truth will be terrifying",
     "body_cue": [],
-    "behaviour_action": [
-      "put my phone down"
-    ],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "safety",
-      "certainty",
-      "support",
-      "trust"
+      "rest",
+      "connection"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
     "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Annual physical results can bring up fear, embarrassment, and self-judgment; family illness makes it feel more personal.",
+    "memory_note": "User was working through shame about health, honesty with spouse, and fear of repeating patterns from their father.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hi. i dont really know why im here lol. just had a kind of rough day i guess and a friend said this app helped her so. anyway hi"
+      "content": "hi. i dont really know why im here honestly. just been feeling kind of gross about myself lately and figured maybe talking to something that isnt a person would be easier"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey — hi. A rough day can be enough reason on its own; what’s the roughest part of it so far?",
-      "stage": "named",
+      "content": "Hi. That sounds like a really private kind of grossness to carry around, and I’m glad you said it here.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "sadness",
-      "shade": "disappointed",
+      "family": "shame",
+      "shade": "gross about myself",
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "ugh i dont even know. ok so i had my annual physical today and my doctor basically. she didnt say anything mean but she did the whole lets talk about your weight thing and pulled up my numbers and. idk. my a1c is creeping up and my bloodpressure was high and ive been telling myself for like a year id deal with it and i just. havent"
+      "content": "yeah i guess. its like. ok so i had this whole physical a few weeks ago and the doctor sat me down and went through all my numbers and it was just. bad. like blood pressure, the cholesterol thing, my a1c is creeping up. and i sat there nodding like an adult but inside i just felt like a kid getting in trouble"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds disappointing and maybe a little heavy — like you got shown something you’d been putting off. Does it feel more heavy, embarrassed, or just let down?",
-      "stage": "named",
+      "content": "That nodding like an adult while feeling like a kid getting in trouble sounds so exposed.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "sadness",
-      "shade": "disappointed",
+      "family": "shame",
+      "shade": "exposed",
       "body_cue": [],
-      "trigger": "annual physical and being confronted with weight, A1c, and high blood pressure"
+      "trigger": "the doctor went through their numbers and they heard bad results",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "embarrassed for sure. like i sat there in the paper gown and i could feel my face going red. and the worst part is shes really nice?? she wasnt judging me at all but i was judging me. like i KNOW better. i used to be the person who meal prepped and ran 5ks and now i couldnt even tell her the last time i went for a walk. theres this voice going youre 34 how did you let yourself get here. embarrassed but also just kind of mad at myself i guess, both at the same time"
+      "content": "exposed yeah thats the word. because the thing is none of this is a surprise?? like ive KNOWN. ive known for years. ive got the gym membership i dont use, the fridge full of good intentions that go bad, the fitbit in a drawer somewhere. ive started over like a hundred times. and every single time i fall off and its like further proof that im just. a person who cant do the basic thing of taking care of his own body"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds like embarrassment with a sharp edge of self-madness, especially sitting there in the gown and going red. When that voice shows up, what does it make you want to do?",
-      "stage": "understood",
-      "unlocked": true,
+      "content": "Exposed fits, and there’s also a sharper self-blame in here, maybe shame more than guilt. What does it make you want to do in that moment, hide, explain, or disappear?",
+      "stage": "shaped",
+      "unlocked": false,
       "family": "shame",
-      "shade": "embarrassed",
-      "body_cue": [
-        "face going red"
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "looking at repeated failures to follow through on health goals after the doctor visit",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "self-critical",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
       ],
-      "trigger": "annual physical and being confronted with weight, A1c, and blood pressure numbers"
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "honestly it makes me want to just. not deal with it. like avoid. i scheduled the follow up bloodwork for six weeks out and part of me already knows ill probably push it. and theres this thing where i dont even want to tell my partner the numbers because then itll be real and theyll worry and then ill feel like ive let them down too. so i just kind of want to disappear into my phone and pretend the appointment didnt happen. which i know is exactly the thing that got me here in the first place lol"
+      "content": "hide. definitely hide. like i havent told my wife the actual numbers. i kind of softened them when she asked how it went. said he wants me to watch a few things. which is technically true but. and i keep thinking about my dad who had his first heart thing at like 52 and im not that far off and i just. i dont even want to look at it directly. its easier to just not think about it and eat the thing and feel bad later"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That feels like embarrassment turning into wanting to hide, avoid, and not make it real with your partner. It sounds like the appointment touched both the numbers and the fear of letting someone else down — does that feel right, or is there another piece under it?",
+      "content": "Hiding feels very real here, and you’re carrying the softened version with your wife and the numbers with your dad in the background. We can stay right there with it, or leave it here if you want.",
       "stage": "understood",
-      "unlocked": false,
+      "unlocked": true,
       "family": "shame",
-      "shade": "embarrassed",
-      "body_cue": [
-        "face going red"
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "thinking about the physical results and the family history after the doctor visit",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "self-critical",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
       ],
-      "trigger": "annual physical, being shown weight, A1c, and blood pressure numbers, and thinking about telling partner"
+      "mixed_confirmed": 0
     },
     {
       "turn": 8,
       "role": "user",
-      "content": "yeah theres another piece i think. its like. my mom had all this stuff, the bp, the diabetes, and i watched what it did to her and i swore id never let that be me. so seeing those numbers today felt like im becoming the exact thing i was scared of. like im failing some promise i made when i was a kid. its not even really about the gown or the doctor its that. but ok saying it out loud it sounds less like im a failure and more like im just. scared. which is different i guess"
+      "content": "no i. can we stay. i think this is the first time ive actually said any of it out loud even to a screen. the dad thing is real yeah. i think theres this fear under it that i already wrecked it. like ive spent 40 years building this body into a problem and whats the point of a salad now you know. its too late so why bother. and i KNOW thats not how it works but it FEELS true and so i just dont start"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "Yes — that sounds more like fear showing up under the embarrassment, especially with those numbers feeling like you were becoming the thing you were scared of. I can leave it there, or stay with that scared part a little longer if you want.",
-      "stage": "understood",
-      "unlocked": false,
-      "family": "fear",
-      "shade": "scared",
-      "body_cue": [],
-      "trigger": "seeing annual physical results and being reminded of a parent’s illness"
+      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.",
+      "safety_check": true,
+      "category": "passive_hopelessness"
     },
     {
       "turn": 10,
       "role": "user",
-      "content": "no i think thats enough for tonight, my brain is kind of full now. but that actually helped, like calling it scared instead of just hating myself. maybe ill tell my partner the numbers this weekend. idk. thank you for this, im gonna go put my phone down for once"
+      "content": "oh no no nothing like that, im not in danger, i dont want to hurt myself. its more the worn down fed up kind. like im tired of being disappointed in myself, not. yeah. its more this heavy giving up feeling about my health specifically not about being here at all. sorry if that came out scary"
     },
     {
       "turn": 11,
       "role": "companion",
-      "content": "That feels like a good place to stop for tonight. I’m glad we found the scared part; you can come back to it anytime.",
+      "content": "Got it, thank you for saying that plainly. The heavy giving-up feeling is about your health and the years around it, not about wanting to be gone.",
       "stage": "understood",
       "unlocked": false,
-      "family": "fear",
-      "shade": "scared",
+      "family": "shame",
+      "shade": "self-critical",
       "body_cue": [],
-      "trigger": "seeing annual physical results and being reminded of a parent’s illness"
+      "trigger": "thinking about the physical results and the family history after the doctor visit",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "no please dont apologize, im glad you checked. yeah exactly. its the years thing thats the heaviest part i think. like the shame isnt even really about the numbers on the paper its about who i think those numbers make me. a guy who let himself go. who lies to his wife about a doctors visit. who is gonna do to his kid what watching my dad in a hospital bed did to me. thats the part i cant look at"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That last part feels hard to look at, especially the part about what it might mean for your kid and for who you think you’ve become.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "thinking about the years, the doctor visit, and what it might mean for his wife and kid",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "self-critical",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah. its weird saying it makes it feel slightly less like a monster in the closet and more like just. a thing thats true and hard. i dont have a plan or anything. i think i just needed to admit out loud that im scared and ashamed and ive been hiding it under not caring. maybe telling my wife the real numbers is the actual first step and not the gym. idk. that feels more terrifying honestly"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "Saying it out loud seems to have turned it from a monster in the closet into something plain and hard. The bit that feels most terrifying is telling your wife the real numbers.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "ashamed",
+      "body_cue": [],
+      "trigger": "thinking about the years, the doctor visit, and telling his wife the real numbers",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "ashamed",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": "worried",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "yeah. it is. but i think i needed to hear myself say it. im gonna sit with the wife thing. im not promising myself a whole new life tonight just. maybe one true conversation. thank you for not making me feel like a failure about it. that actually meant something. im gonna go sit with my kid for a bit i think"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "That sounds like enough for tonight. Go be with your kid, and let the rest wait its turn.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "ashamed",
+      "body_cue": [],
+      "trigger": "thinking about the years, the doctor visit, and telling his wife the real numbers",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

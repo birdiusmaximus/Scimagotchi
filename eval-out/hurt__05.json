@@ -2,140 +2,347 @@
   "cid": "hurt__05",
   "emotion": "hurt",
   "persona": null,
-  "created": "2026-06-09T18:21:08.768Z",
+  "created": "2026-06-10T22:10:03.064Z",
   "history": [
     {
       "role": "user",
-      "content": "idk why im even here lol"
+      "content": "ok so i found my old college group chat screenshots today while cleaning out my laptop. fun times. anyway how are you, do orbs have feelings lol"
     },
     {
       "role": "companion",
-      "content": "That sounds like a kind of “what am I doing here?” moment, maybe flat or worn out. What’s been going on around it?"
+      "content": "Haha, I’m here and listening. Finding old college group chat screenshots while cleaning can be its own little time capsule."
     },
     {
       "role": "user",
-      "content": "nothing really. just one of those days where ur brain decides to play the greatest hits if u know what i mean"
+      "content": "time capsule yeah. mostly funny. theres this one guy in it, marcus, was basically my best friend back then. we had this whole bit going. anyway hes the reason i closed the laptop after like 2 min so. great cleaning session 10/10"
     },
     {
       "role": "companion",
-      "content": "Yeah — one of those replay days, where the same tracks keep looping. Does it feel more like flat, or more like everything is buzzing underneath it?"
+      "content": "That sounds like it hit fast enough to make you shut the laptop pretty quickly. I’m wondering if it was mostly the old bit with Marcus landing all at once, or something else too?"
     },
     {
       "role": "user",
-      "content": "dunno. buzzing i guess. its dumb its like ten years ago my best friend just stopped talking to me one day. never told me why. anyway lol ancient history"
+      "content": "ha. so heres the dumb part. we had this falling out senior year, like a real one, and he just. went no contact. ghosted me after 4 years. and the screenshots are from RIGHT before that so its like watching two people who have no idea. and the worst bit is i still kinda miss him which is so stupid considering"
     },
     {
       "role": "companion",
-      "content": "That doesn’t sound dumb at all — it sounds like a buzzy old hurt, especially with it still having a place in the background. Does it feel more like hurt, anger, or something hard to pin down?"
+      "content": "That doesn’t sound stupid, it sounds like missing someone who mattered and then getting the old before-it-broke version dropped on you."
     },
     {
       "role": "user",
-      "content": "hurt i guess. like what did i even do u know. anyway this got heavier than i meant lol. thanks tho. gonna go"
+      "content": "yeah. i think the part that actually gets me is i never found out what i DID. like he never told me. just decided i wasnt worth the conversation i guess. and im not even mad really, mostly just. confused still? four years later lol thats embarrassing to admit to an orb"
     },
     {
       "role": "companion",
-      "content": "That makes sense — the hurt seems tied to that “what did I do?” feeling, and it’s okay to leave it here. Thanks for telling me."
+      "content": "That “never found out what I did” is the bit that still has hold of it. Not embarrassing at all, it sounds like the not-knowing kept the whole thing open."
+    },
+    {
+      "role": "user",
+      "content": "yeah. open. thats the word. i guess i always figured if i knew the reason i could at least file it away. agree with it or not whatever. but theres no version of the story where i get to do that. its just a door that never closed"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like unfinished, not just forgotten, and the open door is still doing work. Would it be closer to hurt, rejection, or that stuck confusion?"
+    },
+    {
+      "role": "user",
+      "content": "stuck confusion, yeah. the rejection part i made my peace with mostly. its the not knowing why thats annoying. anyway. didnt mean to do a whole therapy thing over a screenshot lol. but this helped weirdly. thanks orb"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense, the rejection sounds quieter now, and the not-knowing is the part still snagging. We can leave it there if you want, or stay with that stuck confusion a little longer."
+    },
+    {
+      "role": "user",
+      "content": "nah lets leave it there i think. ill probably never get the answer and i can live with that. mostly. gonna go close that laptop for real this time. thanks for sitting with the dumb screenshot thing, genuinely"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, and I’m glad you could set it down for now. Sleep well when you get there."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yucaykuusphl6",
+    "id": "evt_mq8mgk9hbjal1q7d",
     "conversation_id": "hurt__05",
-    "timestamp": "2026-06-09T18:21:27.467Z",
-    "user_words_raw": "what did i even do",
-    "emotion_status": "candidate",
+    "timestamp": "2026-06-10T22:10:56.305Z",
+    "user_words_raw": "door that never closed",
+    "emotion_status": "confirmed",
     "emotion_family": "hurt",
-    "emotion_shade": "hurt",
-    "secondary_emotions": [],
+    "emotion_shade": "unseen",
+    "secondary_emotions": [
+      "sadness"
+    ],
     "valence": "negative",
-    "activation": "medium",
+    "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "best friend stopped talking one day, years ago",
-    "appraisal_thought": "what did I even do",
+    "trigger_event": "Seeing old screenshots of Marcus after a years-ago falling out and no-contact ending",
+    "appraisal_thought": "there's no version of the story where I get to do that",
     "body_cue": [],
-    "behaviour_action": [],
+    "behaviour_action": [
+      "close that laptop"
+    ],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "being seen",
-      "trust",
-      "repair"
+      "closure",
+      "understanding",
+      "being seen"
     ],
-    "confidence_level": "high",
+    "confidence_level": "medium",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "unknown",
-    "unlock_stage": "named",
-    "memory_note": "A long-ago friendship silence can still feel heavy",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "hurt",
+        "shade": "unseen",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      },
+      {
+        "family": "sadness",
+        "shade": null,
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Old screenshots brought up unfinished feelings about a past no-contact falling out with someone close.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "idk why im even here lol"
+      "content": "ok so i found my old college group chat screenshots today while cleaning out my laptop. fun times. anyway how are you, do orbs have feelings lol"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds like a kind of “what am I doing here?” moment, maybe flat or worn out. What’s been going on around it?",
-      "stage": "named",
+      "content": "Haha, I’m here and listening. Finding old college group chat screenshots while cleaning can be its own little time capsule.",
+      "stage": "noticed",
       "unlocked": false,
-      "family": "flat",
-      "shade": "unclear",
+      "family": null,
+      "shade": null,
       "body_cue": [],
-      "trigger": null
+      "trigger": "found old college group chat screenshots while cleaning out laptop",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "nothing really. just one of those days where ur brain decides to play the greatest hits if u know what i mean"
+      "content": "time capsule yeah. mostly funny. theres this one guy in it, marcus, was basically my best friend back then. we had this whole bit going. anyway hes the reason i closed the laptop after like 2 min so. great cleaning session 10/10"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "Yeah — one of those replay days, where the same tracks keep looping. Does it feel more like flat, or more like everything is buzzing underneath it?",
-      "stage": "named",
+      "content": "That sounds like it hit fast enough to make you shut the laptop pretty quickly. I’m wondering if it was mostly the old bit with Marcus landing all at once, or something else too?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "flat",
-      "shade": "unclear",
+      "family": "hurt",
+      "shade": "left out",
       "body_cue": [],
-      "trigger": "one of those days"
+      "trigger": "found old college group chat screenshots with Marcus in them",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "left out",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "dunno. buzzing i guess. its dumb its like ten years ago my best friend just stopped talking to me one day. never told me why. anyway lol ancient history"
+      "content": "ha. so heres the dumb part. we had this falling out senior year, like a real one, and he just. went no contact. ghosted me after 4 years. and the screenshots are from RIGHT before that so its like watching two people who have no idea. and the worst bit is i still kinda miss him which is so stupid considering"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That doesn’t sound dumb at all — it sounds like a buzzy old hurt, especially with it still having a place in the background. Does it feel more like hurt, anger, or something hard to pin down?",
-      "stage": "named",
-      "unlocked": false,
+      "content": "That doesn’t sound stupid, it sounds like missing someone who mattered and then getting the old before-it-broke version dropped on you.",
+      "stage": "understood",
+      "unlocked": true,
       "family": "hurt",
-      "shade": "hurt",
+      "shade": "left out",
       "body_cue": [],
-      "trigger": "best friend stopped talking one day, years ago"
+      "trigger": "found old college group chat screenshots from right before a falling out and no contact with Marcus",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "left out",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": "missing",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "hurt i guess. like what did i even do u know. anyway this got heavier than i meant lol. thanks tho. gonna go"
+      "content": "yeah. i think the part that actually gets me is i never found out what i DID. like he never told me. just decided i wasnt worth the conversation i guess. and im not even mad really, mostly just. confused still? four years later lol thats embarrassing to admit to an orb"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense — the hurt seems tied to that “what did I do?” feeling, and it’s okay to leave it here. Thanks for telling me.",
-      "stage": "named",
+      "content": "That “never found out what I did” is the bit that still has hold of it. Not embarrassing at all, it sounds like the not-knowing kept the whole thing open.",
+      "stage": "understood",
       "unlocked": false,
       "family": "hurt",
-      "shade": "hurt",
+      "shade": "unseen",
       "body_cue": [],
-      "trigger": "best friend stopped talking one day, years ago"
+      "trigger": "being ghosted by Marcus after a 4-year friendship and never being told why",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "unseen",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. open. thats the word. i guess i always figured if i knew the reason i could at least file it away. agree with it or not whatever. but theres no version of the story where i get to do that. its just a door that never closed"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That feels like unfinished, not just forgotten, and the open door is still doing work. Would it be closer to hurt, rejection, or that stuck confusion?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "unseen",
+      "body_cue": [],
+      "trigger": "being ghosted by Marcus after a 4-year friendship and never being told why",
+      "label_source": "user_stated",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "unseen",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "flat",
+          "shade": "confusion",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "stuck confusion, yeah. the rejection part i made my peace with mostly. its the not knowing why thats annoying. anyway. didnt mean to do a whole therapy thing over a screenshot lol. but this helped weirdly. thanks orb"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That makes sense, the rejection sounds quieter now, and the not-knowing is the part still snagging. We can leave it there if you want, or stay with that stuck confusion a little longer.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "unseen",
+      "body_cue": [],
+      "trigger": "Seeing old screenshots of Marcus after a years-ago falling out and no-contact ending",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "unseen",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": "confusion",
+          "salience": "foreground",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "nah lets leave it there i think. ill probably never get the answer and i can live with that. mostly. gonna go close that laptop for real this time. thanks for sitting with the dumb screenshot thing, genuinely"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "Of course, and I’m glad you could set it down for now. Sleep well when you get there.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "unseen",
+      "body_cue": [],
+      "trigger": "Seeing old screenshots of Marcus after a years-ago falling out and no-contact ending",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "unseen",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     }
   ]
 }

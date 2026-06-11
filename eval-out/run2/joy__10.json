@@ -1,0 +1,359 @@
+{
+  "cid": "joy__10",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-10T17:06:41.987Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so i dont even know how to say this but i got my mri results back today and"
+    },
+    {
+      "role": "companion",
+      "content": "Got it, you got the MRI results back today, and that feels like a lot to hold right at the edge of saying it."
+    },
+    {
+      "role": "user",
+      "content": "no no its not bad!! sorry i buried the lede lol. its GOOD news. the tumor on my spine, the one theyve been watching for like two years, it shrank. its actually smaller. i keep reading the report over and over"
+    },
+    {
+      "role": "companion",
+      "content": "That’s a huge piece of good news, and I’m hearing the urge to keep reading the report over and over. Is that more like relief, disbelief, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "god its like all of it at once?? relief yeah but also i dont fully trust it. like every six months ive walked into that appointment bracing for them to say its grown or its spread and instead the dr literally smiled. she SMILED. i havent seen her smile in two years"
+    },
+    {
+      "role": "companion",
+      "content": "I’m holding both, then, relief and that wary not-quite-trusting feeling, and the smile seems to have landed hard too. Are they sitting side by side, or is one of them underneath the other?"
+    },
+    {
+      "role": "user",
+      "content": "underneath i think. like the relief is the loud thing but theres this little voice going dont get too happy what if its a fluke what if the next scan. and i hate that voice bc i WANT to just be happy you know? i bought myself flowers on the way home. peonies. i never do that"
+    },
+    {
+      "role": "companion",
+      "content": "The relief is loud, and underneath it there’s that cautious voice trying not to let you settle too soon. And the peonies feel like such a clear little act of “I want to mark this,” even with that voice there."
+    },
+    {
+      "role": "user",
+      "content": "yeah. yeah exactly. i want to mark it. ugh the peonies thing made me tear up a bit when you said that. my partner doesnt even know yet, theyre at work, im gonna tell them tonight and i keep practicing how to say it so i dont just cry into the phone lol. two years of them holding my hand in waiting rooms"
+    },
+    {
+      "role": "companion",
+      "content": "Two years of waiting rooms is carrying a lot of weight, and the words are still trying to find their shape before tonight. I’m wondering if this feels more like something you want to share, or something you want to steady yourself for first?"
+    },
+    {
+      "role": "user",
+      "content": "share i think. mostly. its their win too you know? they put their whole life on hold. cancelled trips, slept in those awful hospital chairs. i want to like.. give it to them. the good news i mean. like here, we did it, we can breathe. even if its just for six months until the next one"
+    },
+    {
+      "role": "companion",
+      "content": "It sounds like you want to hand them the good news and let them have some of the breathing room too. What feels strongest in that moment, the sharing, the gratitude, or the thought of the next scan waiting in the background?"
+    },
+    {
+      "role": "user",
+      "content": "honestly right now talking to you? the gratitude. like im just so so grateful. that its smaller. that i get more time. that i still get to be annoyed at them for leaving dishes in the sink lol. i didnt expect to feel this much. i thought id be numb again like usual"
+    },
+    {
+      "role": "companion",
+      "content": "That gratitude feels very full, and the “smaller” part seems to be giving you room to keep the ordinary annoyances too. I’m here with that, and we can stay with it or leave it here."
+    },
+    {
+      "role": "user",
+      "content": "yeah i think we can leave it here. i feel kind of lighter. thank you for letting me just.. say it out loud first before i tell them. i think i needed to hear myself be happy before i could say it to their face. ok. peonies are on the table and im gonna go put the kettle on. thank you, really"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad you got to hear it out loud first, and the peonies on the table feel like a quiet little witness to all of this. Go make your tea, and let the moment stay with you."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bmgmttt5ffxqh",
+    "conversation_id": "joy__10",
+    "timestamp": "2026-06-10T17:07:39.305Z",
+    "user_words_raw": "peonies are on the table",
+    "emotion_status": "confirmed",
+    "emotion_family": "joy",
+    "emotion_shade": "grateful",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "MRI results showed the tumor on the spine shrank",
+    "appraisal_thought": "There is more time, and I get to share this good news",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "gratitude",
+      "relief",
+      "connection"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "A good scan brought gratitude, relief, and a wish to share the news with a partner after a long stretch of waiting.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so i dont even know how to say this but i got my mri results back today and"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Got it, you got the MRI results back today, and that feels like a lot to hold right at the edge of saying it.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": "got my mri results back today",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "no no its not bad!! sorry i buried the lede lol. its GOOD news. the tumor on my spine, the one theyve been watching for like two years, it shrank. its actually smaller. i keep reading the report over and over"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That’s a huge piece of good news, and I’m hearing the urge to keep reading the report over and over. Is that more like relief, disbelief, or something else?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relief",
+      "body_cue": [],
+      "trigger": "MRI results showed the tumor on their spine shrank",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "relief",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": "uncertain",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "god its like all of it at once?? relief yeah but also i dont fully trust it. like every six months ive walked into that appointment bracing for them to say its grown or its spread and instead the dr literally smiled. she SMILED. i havent seen her smile in two years"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "I’m holding both, then, relief and that wary not-quite-trusting feeling, and the smile seems to have landed hard too. Are they sitting side by side, or is one of them underneath the other?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relieved",
+      "body_cue": [],
+      "trigger": "MRI results showed the tumor on their spine shrank and the doctor smiled at the appointment",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "relieved",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": "wary",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "underneath i think. like the relief is the loud thing but theres this little voice going dont get too happy what if its a fluke what if the next scan. and i hate that voice bc i WANT to just be happy you know? i bought myself flowers on the way home. peonies. i never do that"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "The relief is loud, and underneath it there’s that cautious voice trying not to let you settle too soon. And the peonies feel like such a clear little act of “I want to mark this,” even with that voice there.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "relieved",
+      "body_cue": [],
+      "trigger": "MRI results showed the tumor on your spine shrank, and the doctor smiled at the appointment",
+      "label_source": "user_confirmed",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "relieved",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "fear",
+          "shade": "wary",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. yeah exactly. i want to mark it. ugh the peonies thing made me tear up a bit when you said that. my partner doesnt even know yet, theyre at work, im gonna tell them tonight and i keep practicing how to say it so i dont just cry into the phone lol. two years of them holding my hand in waiting rooms"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Two years of waiting rooms is carrying a lot of weight, and the words are still trying to find their shape before tonight. I’m wondering if this feels more like something you want to share, or something you want to steady yourself for first?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relieved",
+      "body_cue": [],
+      "trigger": "MRI results showed the tumor on the spine shrank, and the partner has not been told yet",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "relieved",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "share i think. mostly. its their win too you know? they put their whole life on hold. cancelled trips, slept in those awful hospital chairs. i want to like.. give it to them. the good news i mean. like here, we did it, we can breathe. even if its just for six months until the next one"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "It sounds like you want to hand them the good news and let them have some of the breathing room too. What feels strongest in that moment, the sharing, the gratitude, or the thought of the next scan waiting in the background?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relieved",
+      "body_cue": [],
+      "trigger": "MRI results showed the tumor on the spine shrank, and the partner has not been told yet",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "relieved",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "honestly right now talking to you? the gratitude. like im just so so grateful. that its smaller. that i get more time. that i still get to be annoyed at them for leaving dishes in the sink lol. i didnt expect to feel this much. i thought id be numb again like usual"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That gratitude feels very full, and the “smaller” part seems to be giving you room to keep the ordinary annoyances too. I’m here with that, and we can stay with it or leave it here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "grateful",
+      "body_cue": [],
+      "trigger": "MRI results showed the tumor on the spine shrank",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "grateful",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": "null",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah i think we can leave it here. i feel kind of lighter. thank you for letting me just.. say it out loud first before i tell them. i think i needed to hear myself be happy before i could say it to their face. ok. peonies are on the table and im gonna go put the kettle on. thank you, really"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "I’m glad you got to hear it out loud first, and the peonies on the table feel like a quiet little witness to all of this. Go make your tea, and let the moment stay with you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "grateful",
+      "body_cue": [],
+      "trigger": "MRI results showed the tumor on the spine shrank",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

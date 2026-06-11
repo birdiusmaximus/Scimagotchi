@@ -1,0 +1,288 @@
+{
+  "cid": "calm__05",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-10T17:07:33.685Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok this is gonna sound dumb but i found my grandma's old recipe box this morning while unpacking and i just kind of sat on the kitchen floor with it for like 20 minutes lol"
+    },
+    {
+      "role": "companion",
+      "content": "Not dumb at all. Sitting on the kitchen floor with your grandma's old recipe box for 20 minutes feels like a moment that landed hard, even if you just said it lightly."
+    },
+    {
+      "role": "user",
+      "content": "oh see now youre making it deep haha. its literally just a box of index cards with her handwriting on em. half of em are stained with butter or whatever"
+    },
+    {
+      "role": "companion",
+      "content": "Right, so it's not me making it deep, it's the actual thing, a box of index cards with her handwriting and butter stains on some of them. That kind of ordinary-physical detail can carry a lot without turning into a speech about it."
+    },
+    {
+      "role": "user",
+      "content": "yeah. i didnt expect to feel anything tbh. shes been gone like 6 years and i figured i was past the misty eyed stuff. but it wasnt even sad really? more like... she was right there for a sec. her butter chicken card has a little doodle of a smiley face she always drew"
+    },
+    {
+      "role": "companion",
+      "content": "“She was right there for a sec” feels like the centre of it, and the smiley face on the butter chicken card makes that even clearer."
+    },
+    {
+      "role": "user",
+      "content": "yeah its kinda both at once you know. theres this little ache underneath but mostly im just... ok. like calm. settled i guess is the word. having her handwriting in a drawer in MY kitchen now feels good. like she got passed down"
+    },
+    {
+      "role": "companion",
+      "content": "I’m holding both, then, that little ache underneath and the calm settled part on top. Does it feel like they’re together at the same time, or more like the ache is underneath the settled feeling?"
+    },
+    {
+      "role": "user",
+      "content": "underneath for sure. like the floor under the floor lol. the settled bit is what im standing on. i think im gonna make her butter chicken this weekend. maybe thatll be my way of saying hi back"
+    },
+    {
+      "role": "companion",
+      "content": "The settled part sounds like the ground, and the ache like something lower and older that still stays there. 'Saying hi back' makes this feel like a quiet kind of reaching, does that fit?"
+    },
+    {
+      "role": "user",
+      "content": "yeah that fits. ok im gonna go dig out the big pot. thanks for like... sitting on the floor with me i guess. take care"
+    },
+    {
+      "role": "companion",
+      "content": "That felt like a gentle place to set it down. Take care with the big pot, and I’ll be here when you want to pick it up again."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bnkessytwzbwg",
+    "conversation_id": "calm__05",
+    "timestamp": "2026-06-10T17:08:17.018Z",
+    "user_words_raw": "sitting on the floor with me",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [
+      "sadness"
+    ],
+    "valence": "mixed",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "having her handwriting in a drawer in my kitchen now",
+    "appraisal_thought": "it feels like a way of saying hi back",
+    "body_cue": [],
+    "behaviour_action": [
+      "go dig out the big pot"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "continuity",
+      "remembrance"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "calm",
+        "shade": "settled",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      },
+      {
+        "family": "sadness",
+        "shade": null,
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Old family handwriting can bring up a settled, close feeling with a little ache underneath.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok this is gonna sound dumb but i found my grandma's old recipe box this morning while unpacking and i just kind of sat on the kitchen floor with it for like 20 minutes lol"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Not dumb at all. Sitting on the kitchen floor with your grandma's old recipe box for 20 minutes feels like a moment that landed hard, even if you just said it lightly.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": "found grandma's old recipe box while unpacking",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "oh see now youre making it deep haha. its literally just a box of index cards with her handwriting on em. half of em are stained with butter or whatever"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Right, so it's not me making it deep, it's the actual thing, a box of index cards with her handwriting and butter stains on some of them. That kind of ordinary-physical detail can carry a lot without turning into a speech about it.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "calm",
+      "shade": null,
+      "body_cue": [],
+      "trigger": "finding grandma's old recipe box while unpacking",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah. i didnt expect to feel anything tbh. shes been gone like 6 years and i figured i was past the misty eyed stuff. but it wasnt even sad really? more like... she was right there for a sec. her butter chicken card has a little doodle of a smiley face she always drew"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "“She was right there for a sec” feels like the centre of it, and the smiley face on the butter chicken card makes that even clearer.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "finding grandma's old recipe box while unpacking",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "settled",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah its kinda both at once you know. theres this little ache underneath but mostly im just... ok. like calm. settled i guess is the word. having her handwriting in a drawer in MY kitchen now feels good. like she got passed down"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "I’m holding both, then, that little ache underneath and the calm settled part on top. Does it feel like they’re together at the same time, or more like the ache is underneath the settled feeling?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "having her handwriting in a drawer in my kitchen now",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "ache",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "calm",
+          "shade": "settled",
+          "salience": "foreground",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "underneath for sure. like the floor under the floor lol. the settled bit is what im standing on. i think im gonna make her butter chicken this weekend. maybe thatll be my way of saying hi back"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "The settled part sounds like the ground, and the ache like something lower and older that still stays there. 'Saying hi back' makes this feel like a quiet kind of reaching, does that fit?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "having her handwriting in a drawer in my kitchen now",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "settled",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah that fits. ok im gonna go dig out the big pot. thanks for like... sitting on the floor with me i guess. take care"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That felt like a gentle place to set it down. Take care with the big pot, and I’ll be here when you want to pick it up again.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "having her handwriting in a drawer in my kitchen now",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "settled",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    }
+  ]
+}

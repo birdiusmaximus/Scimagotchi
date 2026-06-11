@@ -2,175 +2,274 @@
   "cid": "hurt__06",
   "emotion": "hurt",
   "persona": null,
-  "created": "2026-06-09T18:21:13.165Z",
+  "created": "2026-06-10T22:10:03.565Z",
   "history": [
     {
       "role": "user",
-      "content": "hey. kind of a weird night. i dont really know why im typing this"
+      "content": "i dont really know why im here. just kind of a weird day i guess"
     },
     {
       "role": "companion",
-      "content": "Hey — no need to have a reason ready. What’s the night feeling like, if anything?"
+      "content": "A weird day can leave things feeling a bit unmoored, even when you can't quite pin down why. We can just stay with that if you want."
     },
     {
       "role": "user",
-      "content": "i guess just let down. my best friend kind of forgot my birthday. like fully forgot. it was thursday and shes said nothing"
+      "content": "idk its not really nothing. theres this thing with a friend but i dont even know if its a big deal. probably not"
     },
     {
       "role": "companion",
-      "content": "That sounds like a sharp kind of let down — like something important to you went unnoticed. Does it feel more like hurt, disappointment, or both?"
+      "content": "I had that wrong, let me step back. That sounds more like something uncertain than nothing at all, and if you want we can keep it very small."
     },
     {
       "role": "user",
-      "content": "both i think. we tell each other everything. or i thought we did. i didnt even get a text. and i kept checking my phone all day like an idiot"
+      "content": "i found out my best friend had a whole birthday dinner and didnt invite me. saw it on instagram. everyone was there except me"
     },
     {
       "role": "companion",
-      "content": "Yeah — that sounds like hurt and disappointment, with that “checking my phone all day” feeling hanging over it. Does it feel more tight, heavy, or restless?"
+      "content": "That sounds like it could be hurt, maybe mixed with feeling left out. Did it land more like hurt, or more like being shut out?"
     },
     {
       "role": "user",
-      "content": "heavy. mostly heavy. i dont know. maybe shes just busy and im overthinking it. anyway thanks for this. gonna try to sleep"
+      "content": "i guess both? like more hurt. we've been friends since we were like 12. i dont get how you just forget someone like that. or maybe you dont forget. maybe you just dont want them there"
     },
     {
       "role": "companion",
-      "content": "That makes sense — heavy, and also a bit of “maybe I’m overthinking it” in the same breath. We can leave it here for tonight if you want, and let it rest."
+      "content": "That “best friends since 12” part makes it sound especially sharp, and the thought of “maybe you just don’t want them there” gives it a cruel edge."
     },
     {
       "role": "user",
-      "content": "yeah lets leave it. thanks. goodnight"
+      "content": "yeah. and the worst part is i havent even said anything to her. like i dont want to seem needy or whatever. so im just sitting here pretending im fine when im really not"
     },
     {
       "role": "companion",
-      "content": "Goodnight. I’ll leave it here."
+      "content": "There’s hurt there, and also a kind of self-protective holding back so you don’t seem “needy.” What does it do in you to keep pretending you’re fine?"
+    },
+    {
+      "role": "user",
+      "content": "makes me feel small. like im not even worth a text. idk. i think i just needed to say it out loud to something. gonna try to sleep. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That “not even worth a text” lands very small and very alone. I can leave it here with you, and I’m glad you said it out loud."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yufb6oduvqg1r",
+    "id": "evt_mq8mgkxnhr64yx18",
     "conversation_id": "hurt__06",
-    "timestamp": "2026-06-09T18:21:36.584Z",
-    "user_words_raw": "heavy",
+    "timestamp": "2026-06-10T22:10:42.095Z",
+    "user_words_raw": "not even worth a text",
     "emotion_status": "confirmed",
-    "emotion_family": "sadness",
-    "emotion_shade": "heavy",
+    "emotion_family": "hurt",
+    "emotion_shade": "hurt",
     "secondary_emotions": [
-      "hurt",
-      "disappointment"
+      "shame"
     ],
     "valence": "negative",
-    "activation": "low",
+    "activation": "medium",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "best friend forgot their birthday and hasn’t said anything since Thursday",
-    "appraisal_thought": "we tell each other everything; i thought we did",
-    "body_cue": [
-      "heavy"
-    ],
+    "trigger_event": "best friend had a birthday dinner and did not invite them, then they saw it on Instagram",
+    "appraisal_thought": "I'm not worth a text.",
+    "body_cue": [],
     "behaviour_action": [
-      "checking my phone all day"
+      "pretending I'm fine"
     ],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "connection",
-      "being remembered",
-      "recognition"
+      "being seen",
+      "belonging",
+      "reassurance"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Feeling let down after a close friend forgot their birthday and didn’t reach out.",
+    "memory_note": "Feeling small after not being invited to a close friend's birthday dinner and seeing it on social media.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey. kind of a weird night. i dont really know why im typing this"
+      "content": "i dont really know why im here. just kind of a weird day i guess"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey — no need to have a reason ready. What’s the night feeling like, if anything?",
-      "stage": "noticed",
+      "content": "A weird day can leave things feeling a bit unmoored, even when you can't quite pin down why. We can just stay with that if you want.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": null,
-      "shade": null,
+      "family": "flat",
+      "shade": "unclear",
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": null,
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "i guess just let down. my best friend kind of forgot my birthday. like fully forgot. it was thursday and shes said nothing"
+      "content": "idk its not really nothing. theres this thing with a friend but i dont even know if its a big deal. probably not"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds like a sharp kind of let down — like something important to you went unnoticed. Does it feel more like hurt, disappointment, or both?",
-      "stage": "named",
+      "content": "I had that wrong, let me step back. That sounds more like something uncertain than nothing at all, and if you want we can keep it very small.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "sadness",
-      "shade": "let down",
+      "family": "flat",
+      "shade": "unclear",
       "body_cue": [],
-      "trigger": "best friend forgot their birthday and has said nothing since Thursday"
+      "trigger": "something with a friend",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "both i think. we tell each other everything. or i thought we did. i didnt even get a text. and i kept checking my phone all day like an idiot"
+      "content": "i found out my best friend had a whole birthday dinner and didnt invite me. saw it on instagram. everyone was there except me"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "Yeah — that sounds like hurt and disappointment, with that “checking my phone all day” feeling hanging over it. Does it feel more tight, heavy, or restless?",
-      "stage": "understood",
-      "unlocked": true,
-      "family": "sadness",
-      "shade": "let down",
+      "content": "That sounds like it could be hurt, maybe mixed with feeling left out. Did it land more like hurt, or more like being shut out?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
       "body_cue": [],
-      "trigger": "best friend forgot their birthday and said nothing since Thursday"
+      "trigger": "best friend had a birthday dinner and did not invite them, seen on Instagram",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "heavy. mostly heavy. i dont know. maybe shes just busy and im overthinking it. anyway thanks for this. gonna try to sleep"
+      "content": "i guess both? like more hurt. we've been friends since we were like 12. i dont get how you just forget someone like that. or maybe you dont forget. maybe you just dont want them there"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense — heavy, and also a bit of “maybe I’m overthinking it” in the same breath. We can leave it here for tonight if you want, and let it rest.",
+      "content": "That “best friends since 12” part makes it sound especially sharp, and the thought of “maybe you just don’t want them there” gives it a cruel edge.",
       "stage": "understood",
-      "unlocked": false,
-      "family": "sadness",
-      "shade": "heavy",
-      "body_cue": [
-        "heavy"
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "Best friend had a birthday dinner and did not invite them, then they saw it on Instagram.",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
       ],
-      "trigger": "best friend forgot their birthday and hasn’t said anything since Thursday"
+      "mixed_confirmed": 0
     },
     {
       "turn": 8,
       "role": "user",
-      "content": "yeah lets leave it. thanks. goodnight"
+      "content": "yeah. and the worst part is i havent even said anything to her. like i dont want to seem needy or whatever. so im just sitting here pretending im fine when im really not"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "Goodnight. I’ll leave it here.",
+      "content": "There’s hurt there, and also a kind of self-protective holding back so you don’t seem “needy.” What does it do in you to keep pretending you’re fine?",
       "stage": "understood",
       "unlocked": false,
-      "family": "sadness",
-      "shade": "heavy",
-      "body_cue": [
-        "heavy"
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "Best friend had a birthday dinner and did not invite them, then they saw it on Instagram.",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": "needy",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
       ],
-      "trigger": "best friend forgot their birthday and hasn’t said anything since Thursday"
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "makes me feel small. like im not even worth a text. idk. i think i just needed to say it out loud to something. gonna try to sleep. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That “not even worth a text” lands very small and very alone. I can leave it here with you, and I’m glad you said it out loud.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "best friend had a birthday dinner and did not invite them, then they saw it on Instagram",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

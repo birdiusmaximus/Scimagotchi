@@ -1,0 +1,147 @@
+{
+  "cid": "calm__02",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-09T17:43:15.518Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. um not really sure why im opening this but i had a kind of nice morning for once and i wanted to like. hold onto it i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that makes sense. I’m glad you had a nice morning; what felt nicest about it?"
+    },
+    {
+      "role": "user",
+      "content": "i think it was just. i finally got around to fixing my coffee maker that broke like 2 months ago and i sat with an actual cup at the window and it was quiet. no phone really. felt settled in a way i havent in ages. tho theres a weird guilt under it too like i shouldnt be allowed to just sit there yk"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds genuinely settled, with a little guilt sitting under it too. Was the guilt more like a twinge of “I shouldn’t be allowed,” or something else?"
+    },
+    {
+      "role": "user",
+      "content": "yeah the shouldnt be allowed one. like theres always a list and sitting still feels like im falling behind. but honestly the coffee was really good and the light was nice and for ten min i didnt care about the list. that part felt kind of like relief"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a small pocket of relief, right inside the pressure of the list. If you want, we can stay with that feeling a little longer, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "no i think i can leave it here. just wanted to keep the ten min i guess. thanks for that. gonna go finish the coffee before it gets cold"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a good little place to let it rest. Enjoy the rest of your coffee."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xhmcorxsztrz9",
+    "conversation_id": "calm__02",
+    "timestamp": "2026-06-09T17:43:37.432Z",
+    "user_words_raw": "the ten min",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [
+      "pressure"
+    ],
+    "valence": "mixed",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "sitting with coffee at the window in quiet, away from the list",
+    "appraisal_thought": "I can have a brief pause, even though there’s a list waiting",
+    "body_cue": [],
+    "behaviour_action": [
+      "sit with coffee",
+      "keep the ten min",
+      "finish the coffee"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "rest",
+      "quiet"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "A short quiet morning moment with coffee felt settled and relieving, though touched by guilt about not doing the list.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. um not really sure why im opening this but i had a kind of nice morning for once and i wanted to like. hold onto it i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that makes sense. I’m glad you had a nice morning; what felt nicest about it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i think it was just. i finally got around to fixing my coffee maker that broke like 2 months ago and i sat with an actual cup at the window and it was quiet. no phone really. felt settled in a way i havent in ages. tho theres a weird guilt under it too like i shouldnt be allowed to just sit there yk"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds genuinely settled, with a little guilt sitting under it too. Was the guilt more like a twinge of “I shouldn’t be allowed,” or something else?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "fixing the coffee maker and sitting by the window in quiet"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah the shouldnt be allowed one. like theres always a list and sitting still feels like im falling behind. but honestly the coffee was really good and the light was nice and for ten min i didnt care about the list. that part felt kind of like relief"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like a small pocket of relief, right inside the pressure of the list. If you want, we can stay with that feeling a little longer, or leave it here for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "relief",
+      "body_cue": [],
+      "trigger": "sitting with coffee by the window in quiet, away from the list"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "no i think i can leave it here. just wanted to keep the ten min i guess. thanks for that. gonna go finish the coffee before it gets cold"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like a good little place to let it rest. Enjoy the rest of your coffee.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "sitting with coffee at the window in quiet, away from the list"
+    }
+  ]
+}

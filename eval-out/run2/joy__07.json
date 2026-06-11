@@ -1,0 +1,277 @@
+{
+  "cid": "joy__07",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-10T17:06:40.984Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so i dont really know what this is supposed to do but here goes. feeling pretty good today actually"
+    },
+    {
+      "role": "companion",
+      "content": "Nice, \"pretty good today\" lands clearly. We can just stay with that for a moment if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah i guess. its about my girlfriend honestly. we hit six months yesterday which doesnt sound like much but for me thats kind of a record lol"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like it carries some pride and maybe a bit of warmth too, especially with it being a record for you. Did it feel more like quiet contentment, or more like a little lift when you thought about it?"
+    },
+    {
+      "role": "user",
+      "content": "more of a lift i think. like she cooked this whole dinner and didnt make a big thing of it, just had it ready when i got home from work. i dont usually have someone do stuff like that for me"
+    },
+    {
+      "role": "companion",
+      "content": "A little lift makes sense there, and the dinner sounds like it landed as being cared for without a fuss. I’m wondering if the good part was less the meal itself and more the quiet way she showed up for you?"
+    },
+    {
+      "role": "user",
+      "content": "huh. yeah ok thats actually it. its not the food. its that she pays attention. i mentioned like once weeks ago that work has been brutal and she just remembered and did something about it without me asking"
+    },
+    {
+      "role": "companion",
+      "content": "That points to being seen, not just being fed. It sounds like the lift came from her remembering, and from not having to ask."
+    },
+    {
+      "role": "user",
+      "content": "being seen. yeah. thats the thing i usually do the looking after in relationships and it goes the other way and then they leave. this is different and im trying not to overthink why it feels so good"
+    },
+    {
+      "role": "companion",
+      "content": "“Being seen” feels like the centre of this, and there’s a lot of history sitting behind why it lands so strongly. What does that good feeling do in you, if you stay with it a little, lighter, warmer, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "warmer i guess. lighter in my chest. ok thats probably enough digging for one day, i dont wanna jinx it. but this wasnt as dumb as i thought it would be. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Warmer, with a lighter chest, is a clear shape. We can leave it there, and it doesn’t sound dumb at all."
+    },
+    {
+      "role": "user",
+      "content": "warmer i guess. lighter in my chest. ok thats probably enough digging for one day, i dont wanna jinx it. but this wasnt as dumb as i thought it would be. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "We can leave it right there, and it doesn’t sound dumb at all. I’m glad it got a shape instead of just staying vague."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bmfhj4n9lyohd",
+    "conversation_id": "joy__07",
+    "timestamp": "2026-06-10T17:12:21.090Z",
+    "user_words_raw": "lighter in my chest",
+    "emotion_status": "confirmed",
+    "emotion_family": "joy",
+    "emotion_shade": "content",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "girlfriend remembered work had been brutal and cooked dinner without making a big thing of it",
+    "appraisal_thought": "it felt good to be remembered and cared for without asking",
+    "body_cue": [
+      "warmer",
+      "lighter in my chest"
+    ],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "being seen",
+      "care",
+      "ease",
+      "connection"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Feeling of warmth and lightness comes from a partner quietly remembering and caring after a brutal workday.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so i dont really know what this is supposed to do but here goes. feeling pretty good today actually"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Nice, \"pretty good today\" lands clearly. We can just stay with that for a moment if you want.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "content",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah i guess. its about my girlfriend honestly. we hit six months yesterday which doesnt sound like much but for me thats kind of a record lol"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That feels like it carries some pride and maybe a bit of warmth too, especially with it being a record for you. Did it feel more like quiet contentment, or more like a little lift when you thought about it?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "content",
+      "body_cue": [],
+      "trigger": "hitting six months with girlfriend",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "content",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "more of a lift i think. like she cooked this whole dinner and didnt make a big thing of it, just had it ready when i got home from work. i dont usually have someone do stuff like that for me"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "A little lift makes sense there, and the dinner sounds like it landed as being cared for without a fuss. I’m wondering if the good part was less the meal itself and more the quiet way she showed up for you?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "content",
+      "body_cue": [],
+      "trigger": "girlfriend cooked dinner and had it ready after work",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "huh. yeah ok thats actually it. its not the food. its that she pays attention. i mentioned like once weeks ago that work has been brutal and she just remembered and did something about it without me asking"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That points to being seen, not just being fed. It sounds like the lift came from her remembering, and from not having to ask.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "content",
+      "body_cue": [],
+      "trigger": "girlfriend remembered a mention about work being brutal and made dinner without being asked",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "being seen. yeah. thats the thing i usually do the looking after in relationships and it goes the other way and then they leave. this is different and im trying not to overthink why it feels so good"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "“Being seen” feels like the centre of this, and there’s a lot of history sitting behind why it lands so strongly. What does that good feeling do in you, if you stay with it a little, lighter, warmer, or something else?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "content",
+      "body_cue": [],
+      "trigger": "girlfriend remembered a mention about work being brutal and made dinner without being asked",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "content",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "warmer i guess. lighter in my chest. ok thats probably enough digging for one day, i dont wanna jinx it. but this wasnt as dumb as i thought it would be. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Warmer, with a lighter chest, is a clear shape. We can leave it there, and it doesn’t sound dumb at all.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "content",
+      "body_cue": [
+        "warmer",
+        "lighter in my chest"
+      ],
+      "trigger": "girlfriend remembered work had been brutal and did something caring without being asked",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "warmer i guess. lighter in my chest. ok thats probably enough digging for one day, i dont wanna jinx it. but this wasnt as dumb as i thought it would be. thanks"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "We can leave it right there, and it doesn’t sound dumb at all. I’m glad it got a shape instead of just staying vague.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "content",
+      "body_cue": [
+        "warmer",
+        "lighter in my chest"
+      ],
+      "trigger": "girlfriend remembered work had been brutal and cooked dinner without making a big thing of it",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

@@ -2,144 +2,404 @@
   "cid": "fear__09",
   "emotion": "fear",
   "persona": null,
-  "created": "2026-06-09T17:35:57.307Z",
+  "created": "2026-06-10T22:06:29.125Z",
   "history": [
     {
       "role": "user",
-      "content": "ok so. been feeling weird lately. kind of anxious idk"
+      "content": "got passed over for the senior role today. third time. they gave it to someone i trained"
     },
     {
       "role": "companion",
-      "content": "That sounds a bit uneasy and unclear — like the feeling is there, but still fuzzy. Is it more like worry, on edge, or something else?"
+      "content": "That hurts to read, especially the third time and then seeing it go to someone you trained."
     },
     {
       "role": "user",
-      "content": "worry i guess. more like dread. got a review at work next week and i keep thinking they're gonna realize im not actually good at this"
+      "content": "its not really the role. its what it means. like maybe i was never as good as i thought"
     },
     {
       "role": "companion",
-      "content": "That sounds like dread around the review, and the thought that they might see you as not actually good at this. Does it bring more of a checking, freezing, or wanting-to-avoid feeling?"
+      "content": "I had that wrong, let me step back. What word feels closer than hurt?"
     },
     {
       "role": "user",
-      "content": "avoid mostly. i keep not opening the prep doc. like if i dont look at it its not real"
+      "content": "idk a word. its more like. my hands go cold when i open my laptop now. keep thinking theyre all gonna figure out im a fraud"
     },
     {
       "role": "companion",
-      "content": "That makes sense — the dread seems to pull you toward not opening it, almost as if not looking can keep it unreal for a while. Does it feel more like avoiding the fear, or protecting yourself from what the review might confirm?"
+      "content": "My guess is this sits more in that shaky, exposed place than in hurt alone, and your hands going cold gives it a very clear body. What does it do in you when you open the laptop, besides the cold?"
     },
     {
       "role": "user",
-      "content": "yeah. protecting i think. anyway thats enough for now. thanks"
+      "content": "chest gets tight. i reread old emails looking for proof i screwed up. cant stop. like im building a case against myself"
     },
     {
       "role": "companion",
-      "content": "Yeah, that feels like protection, and we can leave it here for now. Thanks for telling me about it."
+      "content": "That sounds like a tightening, self-checking loop, and it carries that exposed, “I’ve got to prove myself wrong” feeling. We can stay with just that, or keep going a little if you want."
+    },
+    {
+      "role": "user",
+      "content": "keep going i guess. its been there longer than today honestly. my whole life ive been the one who tries hard not the one whos actually talented. today just proved it"
+    },
+    {
+      "role": "companion",
+      "content": "That “today just proved it” sounds like it gave the old story fresh evidence, not just a bad day. Does it feel more like shame about who you are, or disappointment in what this meant?"
+    },
+    {
+      "role": "user",
+      "content": "neither really. its more scared. like if im not the talented one then who even am i. and what happens when everyone sees it. that part keeps me up"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like the fear has opened into a question about belonging and being seen, not just the role itself. What happens when everyone sees it, in the version that keeps you up?"
+    },
+    {
+      "role": "user",
+      "content": "they let me go. quietly. and everyone nods like they always knew. and i go back to being nobody. thats the loop. over and over at 3am"
+    },
+    {
+      "role": "companion",
+      "content": "That loop has a very stark kind of fear in it, with being let go, everyone nodding, and then dropping back into “nobody.” We can stay here with the loop, or if you want, we can look at what it’s asking for underneath."
+    },
+    {
+      "role": "user",
+      "content": "yeah. underneath. i think i just want to know im worth something even if im not the best. dont know if i believe that yet"
+    },
+    {
+      "role": "companion",
+      "content": "There’s a longing there for worth that doesn’t depend on being the best, and the not believing it yet matters too. We can stay with that, or if you want, we can look at what makes it so hard to trust."
+    },
+    {
+      "role": "user",
+      "content": "not tonight. but this helped. didnt have words for it til now. thanks. gonna try to sleep"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it has words now, and we can leave it there for tonight. I hope sleep comes gently."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6x87u65xu2zyqf",
+    "id": "evt_mq8mbzsv2ipphm2s",
     "conversation_id": "fear__09",
-    "timestamp": "2026-06-09T17:36:18.163Z",
-    "user_words_raw": "protecting",
+    "timestamp": "2026-06-10T22:07:31.382Z",
+    "user_words_raw": "didnt have words for it til now",
     "emotion_status": "confirmed",
-    "emotion_family": "fear",
-    "emotion_shade": "dread",
-    "secondary_emotions": [
-      "pressure"
-    ],
-    "valence": "negative",
-    "activation": "medium",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "a review at work next week",
-    "appraisal_thought": "they're gonna realize im not actually good at this",
+    "trigger_event": "being passed over for the senior role and seeing it go to someone they trained",
+    "appraisal_thought": "if im not the talented one then who even am i",
     "body_cue": [],
-    "behaviour_action": [
-      "not opening the prep doc"
-    ],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "safety",
-      "reassurance",
-      "protection"
+      "rest"
     ],
-    "confidence_level": "high",
+    "confidence_level": "medium",
     "evidence_basis": [
       "self_report"
     ],
     "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [
+      "hurt",
+      "shame",
+      "disappointment"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Work review is linked with dread and avoidance around preparation.",
+    "memory_note": "User often has a recurring fear about worth, being seen as not talented enough, and being left with no value.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "ok so. been feeling weird lately. kind of anxious idk"
+      "content": "got passed over for the senior role today. third time. they gave it to someone i trained"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds a bit uneasy and unclear — like the feeling is there, but still fuzzy. Is it more like worry, on edge, or something else?",
-      "stage": "named",
+      "content": "That hurts to read, especially the third time and then seeing it go to someone you trained.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "fear",
-      "shade": "uneasy",
+      "family": "hurt",
+      "shade": "hurt",
       "body_cue": [],
-      "trigger": null
+      "trigger": "got passed over for the senior role, again, and it went to someone the user trained",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": "anger",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": "sadness",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "worry i guess. more like dread. got a review at work next week and i keep thinking they're gonna realize im not actually good at this"
+      "content": "its not really the role. its what it means. like maybe i was never as good as i thought"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds like dread around the review, and the thought that they might see you as not actually good at this. Does it bring more of a checking, freezing, or wanting-to-avoid feeling?",
-      "stage": "named",
+      "content": "I had that wrong, let me step back. What word feels closer than hurt?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "fear",
-      "shade": "dread",
+      "family": "hurt",
+      "shade": "hurt",
       "body_cue": [],
-      "trigger": "a work review next week"
+      "trigger": "got passed over for the senior role, again, and it went to someone the user trained",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "avoid mostly. i keep not opening the prep doc. like if i dont look at it its not real"
+      "content": "idk a word. its more like. my hands go cold when i open my laptop now. keep thinking theyre all gonna figure out im a fraud"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That makes sense — the dread seems to pull you toward not opening it, almost as if not looking can keep it unreal for a while. Does it feel more like avoiding the fear, or protecting yourself from what the review might confirm?",
-      "stage": "understood",
-      "unlocked": true,
-      "family": "fear",
-      "shade": "dread",
-      "body_cue": [],
-      "trigger": "a review at work next week"
+      "content": "My guess is this sits more in that shaky, exposed place than in hurt alone, and your hands going cold gives it a very clear body. What does it do in you when you open the laptop, besides the cold?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "fraud",
+      "body_cue": [
+        "hands go cold"
+      ],
+      "trigger": "opening my laptop and thinking they're all gonna figure out I'm a fraud",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "fraud",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": "none",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "yeah. protecting i think. anyway thats enough for now. thanks"
+      "content": "chest gets tight. i reread old emails looking for proof i screwed up. cant stop. like im building a case against myself"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Yeah, that feels like protection, and we can leave it here for now. Thanks for telling me about it.",
+      "content": "That sounds like a tightening, self-checking loop, and it carries that exposed, “I’ve got to prove myself wrong” feeling. We can stay with just that, or keep going a little if you want.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "fraud",
+      "body_cue": [
+        "hands go cold",
+        "chest gets tight"
+      ],
+      "trigger": "opening my laptop and thinking they're all gonna figure out I'm a fraud",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "keep going i guess. its been there longer than today honestly. my whole life ive been the one who tries hard not the one whos actually talented. today just proved it"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That “today just proved it” sounds like it gave the old story fresh evidence, not just a bad day. Does it feel more like shame about who you are, or disappointment in what this meant?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "fraud",
+      "body_cue": [
+        "hands go cold",
+        "chest gets tight"
+      ],
+      "trigger": "being passed over for the senior role and seeing it go to someone they trained",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "fraud",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": "disappointment",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "neither really. its more scared. like if im not the talented one then who even am i. and what happens when everyone sees it. that part keeps me up"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels like the fear has opened into a question about belonging and being seen, not just the role itself. What happens when everyone sees it, in the version that keeps you up?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "scared",
+      "body_cue": [
+        "hands go cold",
+        "chest gets tight"
+      ],
+      "trigger": "being passed over for the senior role and seeing it go to someone they trained",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "scared",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": "fraud",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "they let me go. quietly. and everyone nods like they always knew. and i go back to being nobody. thats the loop. over and over at 3am"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That loop has a very stark kind of fear in it, with being let go, everyone nodding, and then dropping back into “nobody.” We can stay here with the loop, or if you want, we can look at what it’s asking for underneath.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "scared",
+      "body_cue": [
+        "hands go cold",
+        "chest gets tight"
+      ],
+      "trigger": "being passed over for the senior role and seeing it go to someone they trained",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah. underneath. i think i just want to know im worth something even if im not the best. dont know if i believe that yet"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "There’s a longing there for worth that doesn’t depend on being the best, and the not believing it yet matters too. We can stay with that, or if you want, we can look at what makes it so hard to trust.",
       "stage": "understood",
       "unlocked": false,
       "family": "fear",
-      "shade": "dread",
+      "shade": "scared",
+      "body_cue": [
+        "chest gets tight"
+      ],
+      "trigger": "being passed over for the senior role and seeing it go to someone they trained",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "scared",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "not tonight. but this helped. didnt have words for it til now. thanks. gonna try to sleep"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "I’m glad it has words now, and we can leave it there for tonight. I hope sleep comes gently.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
       "body_cue": [],
-      "trigger": "a review at work next week"
+      "trigger": "being passed over for the senior role and seeing it go to someone they trained",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

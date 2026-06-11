@@ -2,142 +2,217 @@
   "cid": "hurt__03",
   "emotion": "hurt",
   "persona": null,
-  "created": "2026-06-09T18:20:42.271Z",
+  "created": "2026-06-10T22:09:34.033Z",
   "history": [
     {
       "role": "user",
-      "content": "i dont really know how to do this"
+      "content": "hey. how's it going"
     },
     {
       "role": "companion",
-      "content": "That’s okay — we can go slowly. What part feels unclear to you?"
+      "content": "Hey, good to see you. I’m here and ready to chat, what’s been up with you?"
     },
     {
       "role": "user",
-      "content": "its money stuff. my brother. i lent him a lot and he just. didnt pay it back"
+      "content": "eh. not much. been a weird couple days i guess"
     },
     {
       "role": "companion",
-      "content": "That sounds really frustrating and maybe hurt, too. Is it more the not getting paid back, or what it says about your brother?"
+      "content": "A weird couple days can sit in a strange way, even when nothing specific is happening. If you want, you can tell me a little about what’s been weird."
     },
     {
       "role": "user",
-      "content": "not the money really. he didnt even say sorry. acted like i was the problem for asking. thats the part that gets me"
+      "content": "lent my brother money. like a lot. and i found out he went on holiday last week. didnt even ask how id pay rent"
     },
     {
       "role": "companion",
-      "content": "That makes sense — it sounds like the no-sorry and being treated like the problem is the sharp part. Did it feel more hot and reactive, or more tight and stuck?"
+      "content": "That sounds pretty raw, especially with rent sitting there too. Was it more anger, hurt, or something else?"
     },
     {
       "role": "user",
-      "content": "tight i guess. more like let down than mad. hes my brother. anyway i dont wanna get into it. thanks though"
+      "content": "hurt mostly. like i thought wed look out for each other. guess i was the only one"
     },
     {
       "role": "companion",
-      "content": "That feels more let down than mad, and I can leave it here. Thanks for trusting me with it."
+      "content": "That lands as hurt in a very relational way, like the expectation of looking out for each other met distance instead."
+    },
+    {
+      "role": "user",
+      "content": "yeah. that's it exactly. anyway. thanks. gonna head off"
+    },
+    {
+      "role": "companion",
+      "content": "Got it, I’ll leave it there. Take care of yourself tonight, and come back any time if you want to pick it up again."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6ytrdwuq4g896t",
+    "id": "evt_mq8mfxtknepb4yog",
     "conversation_id": "hurt__03",
-    "timestamp": "2026-06-09T18:21:01.205Z",
-    "user_words_raw": "let down",
-    "emotion_status": "candidate",
-    "emotion_family": "sadness",
-    "emotion_shade": "let down",
-    "secondary_emotions": [
-      "hurt"
-    ],
+    "timestamp": "2026-06-10T22:10:01.097Z",
+    "user_words_raw": "I thought wed look out for each other",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "hurt",
+    "secondary_emotions": [],
     "valence": "negative",
-    "activation": "low",
+    "activation": "medium",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "brother didn’t say sorry and acted like the user was the problem for asking",
-    "appraisal_thought": "he should have apologized; asking wasn’t wrong",
+    "trigger_event": "lent money to brother, then found out he went on holiday without asking about rent",
+    "appraisal_thought": "I thought we'd look out for each other, but I was the only one",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "respect",
-      "repair",
-      "being heard"
+      "belonging",
+      "care",
+      "trust",
+      "repair"
     ],
-    "confidence_level": "medium",
+    "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "unknown",
-    "unlock_stage": "named",
-    "memory_note": "Feels let down when someone close doesn’t take responsibility",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "User felt hurt after a close family member took money and did not check in about rent.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "i dont really know how to do this"
+      "content": "hey. how's it going"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That’s okay — we can go slowly. What part feels unclear to you?",
+      "content": "Hey, good to see you. I’m here and ready to chat, what’s been up with you?",
       "stage": "noticed",
       "unlocked": false,
       "family": null,
       "shade": null,
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "its money stuff. my brother. i lent him a lot and he just. didnt pay it back"
+      "content": "eh. not much. been a weird couple days i guess"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds really frustrating and maybe hurt, too. Is it more the not getting paid back, or what it says about your brother?",
-      "stage": "named",
+      "content": "A weird couple days can sit in a strange way, even when nothing specific is happening. If you want, you can tell me a little about what’s been weird.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "anger",
-      "shade": "frustration",
+      "family": "flat",
+      "shade": "unclear",
       "body_cue": [],
-      "trigger": "brother borrowed a lot of money and did not pay it back"
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "unclear",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "not the money really. he didnt even say sorry. acted like i was the problem for asking. thats the part that gets me"
+      "content": "lent my brother money. like a lot. and i found out he went on holiday last week. didnt even ask how id pay rent"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That makes sense — it sounds like the no-sorry and being treated like the problem is the sharp part. Did it feel more hot and reactive, or more tight and stuck?",
-      "stage": "named",
+      "content": "That sounds pretty raw, especially with rent sitting there too. Was it more anger, hurt, or something else?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "anger",
-      "shade": "frustration",
+      "family": "hurt",
+      "shade": "hurt",
       "body_cue": [],
-      "trigger": "brother didn’t say sorry and acted like the user was the problem for asking"
+      "trigger": "lent money to brother, then found out he went on holiday without asking about rent",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": "anger",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": "pressure",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "tight i guess. more like let down than mad. hes my brother. anyway i dont wanna get into it. thanks though"
+      "content": "hurt mostly. like i thought wed look out for each other. guess i was the only one"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That feels more let down than mad, and I can leave it here. Thanks for trusting me with it.",
-      "stage": "named",
-      "unlocked": false,
-      "family": "sadness",
-      "shade": "let down",
+      "content": "That lands as hurt in a very relational way, like the expectation of looking out for each other met distance instead.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "hurt",
       "body_cue": [],
-      "trigger": "brother didn’t say sorry and acted like the user was the problem for asking"
+      "trigger": "lent money to brother, then found out he went on holiday without asking about rent",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. that's it exactly. anyway. thanks. gonna head off"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Got it, I’ll leave it there. Take care of yourself tonight, and come back any time if you want to pick it up again.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "lent money to brother, then found out he went on holiday without asking about rent",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

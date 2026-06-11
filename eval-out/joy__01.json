@@ -2,142 +2,212 @@
   "cid": "joy__01",
   "emotion": "joy",
   "persona": null,
-  "created": "2026-06-09T17:41:50.450Z",
+  "created": "2026-06-10T22:04:32.868Z",
   "history": [
     {
       "role": "user",
-      "content": "got the promotion today"
+      "content": "got the promotion today. team lead. didnt think id get it"
     },
     {
       "role": "companion",
-      "content": "That sounds like a big moment. I’m wondering what it’s like for you right now — more pleased, relieved, or something else?"
+      "content": "That’s a big moment, and “didn’t think I’d get it” carries a real jolt of surprise. I’m glad you told me."
     },
     {
       "role": "user",
-      "content": "pleased yeah. been grinding for it like two yrs"
+      "content": "yeah. been grinding two years. boss pulled me aside after standup"
     },
     {
       "role": "companion",
-      "content": "That feels well-earned — two years of grinding, and now it’s landed. Does it feel like you want to celebrate it, or just let it sink in quietly?"
+      "content": "That sounds like a mix of relief and being recognised after a long stretch of effort. Did it leave you feeling more light, or more keyed up?"
     },
     {
       "role": "user",
-      "content": "honestly still sinking in. proud of myself i think. dont say that much"
+      "content": "keyed up honestly. proud but cant sit still. wanna tell everyone but also nervous now lol"
     },
     {
       "role": "companion",
-      "content": "That makes sense — proud, and still letting it settle in a bit. Where do you notice that in you, or is it more of a wanting to sit with it quietly?"
+      "content": "Proud and keyed up makes sense, and there’s also that nervous edge sitting right beside it. Does it feel like both at once, or like one is in front and the other is underneath?"
     },
     {
       "role": "user",
-      "content": "yeah just gonna sit with it. thanks. gotta run"
+      "content": "proud is on top for sure. nerves underneath. anyway gonna go call my mom. thanks"
     },
     {
       "role": "companion",
-      "content": "Of course — enjoy sitting with it. I’ll leave it there."
+      "content": "That feels like a good place to leave it, and calling your mom sounds like a fitting next step."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6xfsi851z90vzw",
+    "id": "evt_mq8m9hunckb1c1an",
     "conversation_id": "joy__01",
-    "timestamp": "2026-06-09T17:42:06.751Z",
-    "user_words_raw": "sit with it",
+    "timestamp": "2026-06-10T22:04:51.178Z",
+    "user_words_raw": "proud is on top for sure",
     "emotion_status": "confirmed",
     "emotion_family": "joy",
     "emotion_shade": "proud",
-    "secondary_emotions": [],
-    "valence": "positive",
-    "activation": "low",
+    "secondary_emotions": [
+      "fear"
+    ],
+    "valence": "mixed",
+    "activation": "high",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "got the promotion today after two years of grinding for it",
-    "appraisal_thought": "this was earned and it matters",
+    "trigger_event": "got the promotion today after two years of grinding, boss pulled them aside after standup",
+    "appraisal_thought": "didn’t think i’d get it",
     "body_cue": [],
     "behaviour_action": [
-      "sit with it quietly"
+      "wanna tell everyone"
     ],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "achievement",
       "recognition",
-      "freedom"
+      "achievement",
+      "connection"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
     "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "joy",
+        "shade": "proud",
+        "salience": "foreground",
+        "source": "user_stated"
+      },
+      {
+        "family": "fear",
+        "shade": "nervous",
+        "salience": "background",
+        "source": "user_stated"
+      }
+    ],
+    "mixed_confirmed": 1,
     "unlock_stage": "understood",
-    "memory_note": "User got a promotion after two years of working for it and felt proud, preferring to sit with it quietly.",
+    "memory_note": "Got promoted to team lead after two years of grinding, and wants to share it with family.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "got the promotion today"
+      "content": "got the promotion today. team lead. didnt think id get it"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds like a big moment. I’m wondering what it’s like for you right now — more pleased, relieved, or something else?",
-      "stage": "named",
+      "content": "That’s a big moment, and “didn’t think I’d get it” carries a real jolt of surprise. I’m glad you told me.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "joy",
-      "shade": "pleased",
+      "shade": "surprise",
       "body_cue": [],
-      "trigger": "got the promotion today"
+      "trigger": "got the promotion today",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "pleased yeah. been grinding for it like two yrs"
+      "content": "yeah. been grinding two years. boss pulled me aside after standup"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That feels well-earned — two years of grinding, and now it’s landed. Does it feel like you want to celebrate it, or just let it sink in quietly?",
-      "stage": "named",
+      "content": "That sounds like a mix of relief and being recognised after a long stretch of effort. Did it leave you feeling more light, or more keyed up?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "joy",
-      "shade": "pleased",
+      "shade": "relieved",
       "body_cue": [],
-      "trigger": "got the promotion today after two years of grinding for it"
+      "trigger": "got the promotion today after two years of grinding, boss pulled them aside after standup",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "relieved",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "honestly still sinking in. proud of myself i think. dont say that much"
+      "content": "keyed up honestly. proud but cant sit still. wanna tell everyone but also nervous now lol"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That makes sense — proud, and still letting it settle in a bit. Where do you notice that in you, or is it more of a wanting to sit with it quietly?",
+      "content": "Proud and keyed up makes sense, and there’s also that nervous edge sitting right beside it. Does it feel like both at once, or like one is in front and the other is underneath?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "got the promotion today after two years of grinding, boss pulled them aside after standup",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "proud",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": "nervous",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "proud is on top for sure. nerves underneath. anyway gonna go call my mom. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That feels like a good place to leave it, and calling your mom sounds like a fitting next step.",
       "stage": "understood",
       "unlocked": true,
       "family": "joy",
       "shade": "proud",
       "body_cue": [],
-      "trigger": "got the promotion after two years of grinding for it"
-    },
-    {
-      "turn": 6,
-      "role": "user",
-      "content": "yeah just gonna sit with it. thanks. gotta run"
-    },
-    {
-      "turn": 7,
-      "role": "companion",
-      "content": "Of course — enjoy sitting with it. I’ll leave it there.",
-      "stage": "understood",
-      "unlocked": false,
-      "family": "joy",
-      "shade": "proud",
-      "body_cue": [],
-      "trigger": "got the promotion today after two years of grinding for it"
+      "trigger": "got the promotion today after two years of grinding, boss pulled them aside after standup",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "proud",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": "nervous",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
     }
   ]
 }

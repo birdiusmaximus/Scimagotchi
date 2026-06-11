@@ -1,0 +1,239 @@
+{
+  "cid": "shame__07",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-10T17:13:18.839Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok not sure how this works. a friend told me to try it. i said something pretty bad to my girlfriend the other night and its been sitting with me"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like it's been sitting heavy with you. We can just stay with that for a moment, if you want."
+    },
+    {
+      "role": "user",
+      "content": "i mean yeah. we were arguing about money stuff and i just lost it and made a comment about her body. like a low blow about her weight. i dont even believe it i just wanted to hurt her in the moment"
+    },
+    {
+      "role": "companion",
+      "content": "You meant to hurt her in the moment, and now it’s sitting with you. I’m here if you want to stay with that a little longer, or leave it there for now."
+    },
+    {
+      "role": "user",
+      "content": "the thing that gets me is i sounded exactly like my mom. she used to pick at me about how i looked constantly. swore id never do that to anyone. and there i was doing it. feels gross"
+    },
+    {
+      "role": "companion",
+      "content": "There’s a lot in that, especially the part where you found yourself sounding like your mom. Is the worst part the “I did what I swore I’d never do” piece, or the fact that it landed on her body?"
+    },
+    {
+      "role": "user",
+      "content": "honestly the first one. becoming her. like maybe im just a mean person underneath and this is proof. she apologized to me after which made it worse cause i was the one who screwed up"
+    },
+    {
+      "role": "companion",
+      "content": "“Becoming her” sounds like the sharpest part, more than the argument itself. Does that feel more like guilt about what you did, or shame about what it says about you?"
+    },
+    {
+      "role": "user",
+      "content": "shame i guess. the what it says about me part. i was ready to write this app off but that question actually landed. i think i need to just apologize to her properly instead of sitting here marinating in it"
+    },
+    {
+      "role": "companion",
+      "content": "“What it says about me” is the part that landed. I can leave it here with you, or stay with that shame a little longer if you want."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8buynsuet9gfxv",
+    "conversation_id": "shame__07",
+    "timestamp": "2026-06-10T17:13:49.758Z",
+    "user_words_raw": "what it says about me",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "self-critical",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "Saying something hurtful in an argument about money, then seeing it as proof about what kind of person they are",
+    "appraisal_thought": "maybe I am a mean person underneath",
+    "body_cue": [],
+    "behaviour_action": [
+      "marinating in it"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "integrity",
+      "repair",
+      "self-respect"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Shame gets tied to seeing themselves as mean underneath after hurting someone in an argument.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok not sure how this works. a friend told me to try it. i said something pretty bad to my girlfriend the other night and its been sitting with me"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like it's been sitting heavy with you. We can just stay with that for a moment, if you want.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "guilt",
+      "body_cue": [],
+      "trigger": "said something pretty bad to girlfriend the other night",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "guilt",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i mean yeah. we were arguing about money stuff and i just lost it and made a comment about her body. like a low blow about her weight. i dont even believe it i just wanted to hurt her in the moment"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "You meant to hurt her in the moment, and now it’s sitting with you. I’m here if you want to stay with that a little longer, or leave it there for now.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "guilt",
+      "body_cue": [],
+      "trigger": "argument about money stuff, then making a comment about her body and weight",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "guilt",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "anger",
+          "shade": "frustration",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "the thing that gets me is i sounded exactly like my mom. she used to pick at me about how i looked constantly. swore id never do that to anyone. and there i was doing it. feels gross"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "There’s a lot in that, especially the part where you found yourself sounding like your mom. Is the worst part the “I did what I swore I’d never do” piece, or the fact that it landed on her body?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "guilty",
+      "body_cue": [],
+      "trigger": "Argument about money, then making a comment about her body and weight",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "guilty",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "honestly the first one. becoming her. like maybe im just a mean person underneath and this is proof. she apologized to me after which made it worse cause i was the one who screwed up"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "“Becoming her” sounds like the sharpest part, more than the argument itself. Does that feel more like guilt about what you did, or shame about what it says about you?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "guilty",
+      "body_cue": [],
+      "trigger": "Saying something hurtful in an argument about money, then hearing the girlfriend apologize after the user felt they were the one who screwed up",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "guilty",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "shame i guess. the what it says about me part. i was ready to write this app off but that question actually landed. i think i need to just apologize to her properly instead of sitting here marinating in it"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "“What it says about me” is the part that landed. I can leave it here with you, or stay with that shame a little longer if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "Saying something hurtful in an argument about money, then seeing it as proof about what kind of person they are",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

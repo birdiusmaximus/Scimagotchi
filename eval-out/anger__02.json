@@ -2,160 +2,201 @@
   "cid": "anger__02",
   "emotion": "anger",
   "persona": null,
-  "created": "2026-06-09T18:17:04.533Z",
+  "created": "2026-06-10T22:07:45.798Z",
   "history": [
     {
       "role": "user",
-      "content": "ugh i dont even know why im opening this. just had the worst morning"
+      "content": "ugh i just need to put this somewhere. my roommate left their dishes in the sink AGAIN. like a full sink. for the third day"
     },
     {
       "role": "companion",
-      "content": "That sounds rough. I’m wondering if it feels more like pressure, hurt, or just a heavy kind of morning?"
+      "content": "A full sink for the third day would get under my skin too. That repetition feels like it really hit a nerve."
     },
     {
       "role": "user",
-      "content": "honestly its anger. my flatmate ate the leftovers i was literally saving for lunch today, like the box had my name on it. but also im kind of annoyed at myself for caring this much over food its so stupid"
+      "content": "yeah and i already asked nicely last week. like i left a note even. and they just. ignored it? idk it feels small but it builds up when youre the only one who cares about the place"
     },
     {
       "role": "companion",
-      "content": "That doesn’t sound stupid at all — I’m hearing anger, and maybe a bit of self-directed annoyance too. Was it more the leftovers themselves, or the feeling of your space not being respected?"
+      "content": "That sounds less like one small thing and more like being worn down by it not being taken seriously. Is it closer to irritation, resentment, or feeling dismissed?"
     },
     {
       "role": "user",
-      "content": "yeah its the not being respected thing. its not even the first time. i label stuff and they just... dont care. and then i feel like the annoying flatmate for bringing it up so i just dont say anything which makes it worse"
+      "content": "resentment yeah. thats the word. like im not even mad about the dishes its that they dont care and i always end up doing it"
     },
     {
       "role": "companion",
-      "content": "Yeah — that sounds like protest at being dismissed, and then that extra sting of feeling like the “annoying flatmate” for speaking up. Does it go more quiet and resentful, or more hot and ready to push back?"
+      "content": "Yes, resentment fits. It sounds like the dishes matter less than the feeling of being the one who ends up carrying it."
     },
     {
       "role": "user",
-      "content": "more quiet and resentful tbh. i just go silent and stew. ok saying it out loud it does feel a bit lighter though. maybe ill just actually say something to them tonight. thanks for this"
+      "content": "yeah. ok that actually helps to just say it out loud. thanks. gonna go deal with the sink lol"
     },
     {
       "role": "companion",
-      "content": "That makes sense — quiet resentment can sit heavy until it’s named. We can leave it there, or if you want, we can stay with what it is asking for underneath."
-    },
-    {
-      "role": "user",
-      "content": "nah lets leave it there for now. i feel better. thanks again, gonna go make some actual lunch lol"
-    },
-    {
-      "role": "companion",
-      "content": "Glad we could leave it there. Hope lunch is better than the leftovers situation lol."
+      "content": "I’m glad it got a little clearer. Hope the sink is brief."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yp3o5xlfjdhmm",
+    "id": "evt_mq8mdmntueh8g36c",
     "conversation_id": "anger__02",
-    "timestamp": "2026-06-09T18:17:31.126Z",
-    "user_words_raw": "make some actual lunch",
-    "emotion_status": "unclear",
-    "emotion_family": null,
-    "emotion_shade": "resentful",
+    "timestamp": "2026-06-10T22:08:07.937Z",
+    "user_words_raw": "they dont care",
+    "emotion_status": "confirmed",
+    "emotion_family": "anger",
+    "emotion_shade": "resentment",
     "secondary_emotions": [],
-    "valence": "positive",
-    "activation": "low",
+    "valence": "negative",
+    "activation": "medium",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "flatmate repeatedly ignores labeled leftovers and boundaries",
-    "appraisal_thought": "my space isn’t being respected",
+    "trigger_event": "roommate leaving dishes in the sink again after being asked and left a note",
+    "appraisal_thought": "they don’t care and I always end up doing it",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [],
+    "need_value": [
+      "respect",
+      "fairness",
+      "shared responsibility"
+    ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Feeling eased after naming resentment about a flatmate repeatedly ignoring labeled food.",
+    "memory_note": "Tension with someone close over repeated chores and not feeling taken seriously.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "ugh i dont even know why im opening this. just had the worst morning"
+      "content": "ugh i just need to put this somewhere. my roommate left their dishes in the sink AGAIN. like a full sink. for the third day"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds rough. I’m wondering if it feels more like pressure, hurt, or just a heavy kind of morning?",
-      "stage": "named",
+      "content": "A full sink for the third day would get under my skin too. That repetition feels like it really hit a nerve.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "pressure",
-      "shade": "worst",
+      "family": "anger",
+      "shade": "irritation",
       "body_cue": [],
-      "trigger": "the morning"
+      "trigger": "roommate left dishes in the sink for the third day",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "irritation",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "honestly its anger. my flatmate ate the leftovers i was literally saving for lunch today, like the box had my name on it. but also im kind of annoyed at myself for caring this much over food its so stupid"
+      "content": "yeah and i already asked nicely last week. like i left a note even. and they just. ignored it? idk it feels small but it builds up when youre the only one who cares about the place"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That doesn’t sound stupid at all — I’m hearing anger, and maybe a bit of self-directed annoyance too. Was it more the leftovers themselves, or the feeling of your space not being respected?",
-      "stage": "named",
+      "content": "That sounds less like one small thing and more like being worn down by it not being taken seriously. Is it closer to irritation, resentment, or feeling dismissed?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "anger",
-      "shade": "annoyed",
+      "shade": "resentment",
       "body_cue": [],
-      "trigger": "flatmate ate the leftovers they were saving for lunch"
+      "trigger": "roommate leaving dishes in the sink again after being asked and left a note",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "resentment",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "yeah its the not being respected thing. its not even the first time. i label stuff and they just... dont care. and then i feel like the annoying flatmate for bringing it up so i just dont say anything which makes it worse"
+      "content": "resentment yeah. thats the word. like im not even mad about the dishes its that they dont care and i always end up doing it"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "Yeah — that sounds like protest at being dismissed, and then that extra sting of feeling like the “annoying flatmate” for speaking up. Does it go more quiet and resentful, or more hot and ready to push back?",
+      "content": "Yes, resentment fits. It sounds like the dishes matter less than the feeling of being the one who ends up carrying it.",
       "stage": "understood",
       "unlocked": true,
       "family": "anger",
-      "shade": "dismissed",
+      "shade": "resentment",
       "body_cue": [],
-      "trigger": "flatmate repeatedly ignores labeled leftovers and boundaries"
+      "trigger": "roommate leaving dishes after being asked and left a note",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "resentment",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "more quiet and resentful tbh. i just go silent and stew. ok saying it out loud it does feel a bit lighter though. maybe ill just actually say something to them tonight. thanks for this"
+      "content": "yeah. ok that actually helps to just say it out loud. thanks. gonna go deal with the sink lol"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense — quiet resentment can sit heavy until it’s named. We can leave it there, or if you want, we can stay with what it is asking for underneath.",
+      "content": "I’m glad it got a little clearer. Hope the sink is brief.",
       "stage": "understood",
       "unlocked": false,
       "family": "anger",
-      "shade": "resentful",
+      "shade": "resentment",
       "body_cue": [],
-      "trigger": "flatmate repeatedly ignores labeled leftovers and boundaries"
-    },
-    {
-      "turn": 8,
-      "role": "user",
-      "content": "nah lets leave it there for now. i feel better. thanks again, gonna go make some actual lunch lol"
-    },
-    {
-      "turn": 9,
-      "role": "companion",
-      "content": "Glad we could leave it there. Hope lunch is better than the leftovers situation lol.",
-      "stage": "understood",
-      "unlocked": false,
-      "family": null,
-      "shade": "resentful",
-      "body_cue": [],
-      "trigger": "flatmate repeatedly ignores labeled leftovers and boundaries"
+      "trigger": "roommate leaving dishes in the sink again after being asked and left a note",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

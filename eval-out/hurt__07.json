@@ -2,145 +2,321 @@
   "cid": "hurt__07",
   "emotion": "hurt",
   "persona": null,
-  "created": "2026-06-09T18:21:15.134Z",
+  "created": "2026-06-10T22:10:04.325Z",
   "history": [
     {
       "role": "user",
-      "content": "honestly im just annoyed. my girlfriend forgot our anniversary last week and i cant let it go"
+      "content": "not really sure what this is supposed to do but ok. found out my girlfriend has been texting her ex for like 2 months and didnt tell me"
     },
     {
       "role": "companion",
-      "content": "That sounds really annoying, and maybe a bit stuck in your mind because it mattered. Was it more like feeling disrespected, or more like frustration that it got missed?"
+      "content": "I had that wrong, let me step back. That sounds like a lot to take in at once, and I won’t put a label on it yet, what word feels closest?"
     },
     {
       "role": "user",
-      "content": "i guess not disrespected exactly. more like... i had this whole night planned and she just blanked on it. like it didnt even register for her"
+      "content": "i mean betrayed i guess. like she swore there was nothing going on with him when they broke up but now im looking at 2 months of messages"
     },
     {
       "role": "companion",
-      "content": "That sounds more like frustration and a little let-down — like you had something real in mind and it just didn’t land for her. Did it feel more blocked or sharp, or did it make you want to pull back?"
+      "content": "Betrayed makes sense here, especially with two months of messages after she said there was nothing going on. That kind of split between what was said and what you found can hit hard."
     },
     {
       "role": "user",
-      "content": "yeah pull back i think. i didnt even say anything to her about it. just kind of went quiet. feels stupid to be this bothered but it stings that i remembered and she didnt"
+      "content": "yeah. and the worst part is i wasnt even snooping, her phone lit up on the counter and i just saw his name. been together almost 3 years"
     },
     {
       "role": "companion",
-      "content": "That sting makes sense to me — it sounds like a quiet hurt wrapped inside the frustration. Do you want to stay with it a little, or leave it here for now?"
+      "content": "That makes the whole thing feel even more exposed, like you ran into it rather than looking for it. Almost three years can make that sting land very differently, too."
     },
     {
       "role": "user",
-      "content": "yeah hurt is probably the right word for it. i think ill leave it here. maybe ill actually just tell her instead of sulking. thanks"
+      "content": "i havent said anything to her yet. dont even know how to bring it up without it turning into me being the bad guy for seeing it. and part of me is scared what shell say"
     },
     {
       "role": "companion",
-      "content": "That feels like a clear place to pause. Thanks for telling me what it is."
+      "content": "That sounds like both dread and self-protection at once, with the fear of how she’ll answer sitting right beside the worry about being blamed. Does it feel like those two are side by side, or is one of them underneath the other?"
+    },
+    {
+      "role": "user",
+      "content": "underneath i think. the blame thing is just the surface. underneath im scared shes gonna tell me she still has feelings for him and that this is it. like im already grieving something she hasnt even confirmed"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the fear is doing two jobs at once, the blame on top, and underneath, already grieving something she has not confirmed. I can stay with that with you, or we can just leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. didnt expect to actually say that out loud, even to an app. i think i just needed to admit im already bracing for the end. gonna have to talk to her tonight i guess. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, and thank you for trusting me with it. I’m glad you could say it out loud, even here."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yuhk8uss3wvd9",
+    "id": "evt_mq8mglrvx3ddzbo7",
     "conversation_id": "hurt__07",
-    "timestamp": "2026-06-09T18:21:34.589Z",
-    "user_words_raw": "it stings",
+    "timestamp": "2026-06-10T22:10:41.368Z",
+    "user_words_raw": "bracing for the end",
     "emotion_status": "confirmed",
-    "emotion_family": "hurt",
-    "emotion_shade": "hurt",
+    "emotion_family": "fear",
+    "emotion_shade": "dread",
     "secondary_emotions": [
-      "frustration"
+      "sadness"
     ],
-    "valence": "negative",
-    "activation": "medium",
+    "valence": "mixed",
+    "activation": "high",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "girlfriend forgot their anniversary and it didn't register for her",
-    "appraisal_thought": "i remembered and she didnt",
+    "trigger_event": "needing to talk to her tonight after seeing messages with his name",
+    "appraisal_thought": "she may still have feelings for him and this could be the end",
     "body_cue": [],
     "behaviour_action": [
-      "went quiet",
-      "pull back"
+      "bracing for the end"
     ],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "being seen",
-      "care",
-      "repair"
+      "certainty",
+      "protection",
+      "support"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [
+      "anxiety"
+    ],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "fear",
+        "shade": "dread",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      },
+      {
+        "family": "sadness",
+        "shade": null,
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 1,
     "unlock_stage": "understood",
-    "memory_note": "Anniversary forgetfulness can land as hurt and withdrawal when they had planned something important.",
+    "memory_note": "Worried about an impending relationship conversation after finding messages on a partner's phone.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "honestly im just annoyed. my girlfriend forgot our anniversary last week and i cant let it go"
+      "content": "not really sure what this is supposed to do but ok. found out my girlfriend has been texting her ex for like 2 months and didnt tell me"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds really annoying, and maybe a bit stuck in your mind because it mattered. Was it more like feeling disrespected, or more like frustration that it got missed?",
-      "stage": "named",
+      "content": "I had that wrong, let me step back. That sounds like a lot to take in at once, and I won’t put a label on it yet, what word feels closest?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "anger",
-      "shade": "annoyed",
+      "family": "hurt",
+      "shade": null,
       "body_cue": [],
-      "trigger": "girlfriend forgot their anniversary"
+      "trigger": "found out girlfriend had been texting her ex for two months without telling them",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "i guess not disrespected exactly. more like... i had this whole night planned and she just blanked on it. like it didnt even register for her"
+      "content": "i mean betrayed i guess. like she swore there was nothing going on with him when they broke up but now im looking at 2 months of messages"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds more like frustration and a little let-down — like you had something real in mind and it just didn’t land for her. Did it feel more blocked or sharp, or did it make you want to pull back?",
+      "content": "Betrayed makes sense here, especially with two months of messages after she said there was nothing going on. That kind of split between what was said and what you found can hit hard.",
       "stage": "understood",
       "unlocked": true,
-      "family": "anger",
-      "shade": "frustrated",
+      "family": "hurt",
+      "shade": "betrayed",
       "body_cue": [],
-      "trigger": "girlfriend forgot their anniversary and it didn’t register for her"
+      "trigger": "found out girlfriend had been texting her ex for two months without telling them",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "betrayed",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "yeah pull back i think. i didnt even say anything to her about it. just kind of went quiet. feels stupid to be this bothered but it stings that i remembered and she didnt"
+      "content": "yeah. and the worst part is i wasnt even snooping, her phone lit up on the counter and i just saw his name. been together almost 3 years"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sting makes sense to me — it sounds like a quiet hurt wrapped inside the frustration. Do you want to stay with it a little, or leave it here for now?",
+      "content": "That makes the whole thing feel even more exposed, like you ran into it rather than looking for it. Almost three years can make that sting land very differently, too.",
       "stage": "understood",
       "unlocked": false,
       "family": "hurt",
-      "shade": "sting",
+      "shade": "betrayed",
       "body_cue": [],
-      "trigger": "girlfriend forgot their anniversary and it didn't register for her"
+      "trigger": "finding ex's messages on girlfriend's phone after seeing his name light up on the counter",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "betrayed",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "yeah hurt is probably the right word for it. i think ill leave it here. maybe ill actually just tell her instead of sulking. thanks"
+      "content": "i havent said anything to her yet. dont even know how to bring it up without it turning into me being the bad guy for seeing it. and part of me is scared what shell say"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That feels like a clear place to pause. Thanks for telling me what it is.",
+      "content": "That sounds like both dread and self-protection at once, with the fear of how she’ll answer sitting right beside the worry about being blamed. Does it feel like those two are side by side, or is one of them underneath the other?",
       "stage": "understood",
       "unlocked": false,
-      "family": "hurt",
-      "shade": "hurt",
+      "family": "fear",
+      "shade": "dread",
       "body_cue": [],
-      "trigger": "girlfriend forgot their anniversary and it didn't register for her"
+      "trigger": "not having brought it up yet and fearing her response",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "dread",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": "betrayed",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "underneath i think. the blame thing is just the surface. underneath im scared shes gonna tell me she still has feelings for him and that this is it. like im already grieving something she hasnt even confirmed"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like the fear is doing two jobs at once, the blame on top, and underneath, already grieving something she has not confirmed. I can stay with that with you, or we can just leave it here for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [],
+      "trigger": "not having brought it up yet and fearing her response",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "dread",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "sadness",
+          "shade": "grieving",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it there. didnt expect to actually say that out loud, even to an app. i think i just needed to admit im already bracing for the end. gonna have to talk to her tonight i guess. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course, and thank you for trusting me with it. I’m glad you could say it out loud, even here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [],
+      "trigger": "needing to talk to her tonight after seeing messages with his name",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "dread",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
     }
   ]
 }

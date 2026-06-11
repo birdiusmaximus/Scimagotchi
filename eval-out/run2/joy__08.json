@@ -1,0 +1,285 @@
+{
+  "cid": "joy__08",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-10T17:06:40.924Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. um not really sure how to do this"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that’s completely fine. We can just take it one small bit at a time, or not do anything at all if that feels better."
+    },
+    {
+      "role": "user",
+      "content": "ok. i think im supposed to talk about how im feeling. theres this thing happening and i dont even know if its good or bad"
+    },
+    {
+      "role": "companion",
+      "content": "There’s a real unsure edge in that, like you can tell something is happening without knowing yet whether it lands as good or bad. What’s the thing that’s happening?"
+    },
+    {
+      "role": "user",
+      "content": "i got into a grad program. like the one i actually wanted. fully funded. i found out tuesday and i still havent really told anyone properly"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a lot to be holding at once, and the “haven’t really told anyone properly” part feels important. Does it feel more excited, guarded, or kind of unreal?"
+    },
+    {
+      "role": "user",
+      "content": "unreal mostly?? like i keep opening the acceptance email to check its still there lol. but also its in another city and everything changes in september and idk. its good. it is good. i think im just scared of how much i want it"
+    },
+    {
+      "role": "companion",
+      "content": "I’m holding both, then, the unreal checking and the scared wanting. One feels like it can’t quite settle yet, and the other seems to make the good thing feel exposed."
+    },
+    {
+      "role": "user",
+      "content": "yeah. exposed is the right word. like if i let myself be happy about it then it becomes real and then i could lose it or fail at it. easier to keep it kind of at arms length you know. but i did actually buy myself a coffee tuesday. tiny little private celebration"
+    },
+    {
+      "role": "companion",
+      "content": "“At arms length” and that tiny private coffee feel like they belong together. I’m here if you want to stay with that, or we can leave it right there."
+    },
+    {
+      "role": "user",
+      "content": "yeah i think i can leave it there. that helped actually. maybe ill let myself say it out loud to someone this week. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a clean place to rest it. I’m glad it helped, and I hope saying it out loud this week feels good in your own way."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bmfjffug1nykt",
+    "conversation_id": "joy__08",
+    "timestamp": "2026-06-10T17:07:16.737Z",
+    "user_words_raw": "say it out loud to someone this week",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "unreal",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "got into a fully funded grad program in another city",
+    "appraisal_thought": "if I let myself be happy about it then it becomes real and then I could lose it or fail at it",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "A big achievement felt unreal and exposed, with a private small celebration and a wish to tell someone later.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. um not really sure how to do this"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that’s completely fine. We can just take it one small bit at a time, or not do anything at all if that feels better.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "ok. i think im supposed to talk about how im feeling. theres this thing happening and i dont even know if its good or bad"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "There’s a real unsure edge in that, like you can tell something is happening without knowing yet whether it lands as good or bad. What’s the thing that’s happening?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "something happening that feels hard to place as good or bad",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "unclear",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "i got into a grad program. like the one i actually wanted. fully funded. i found out tuesday and i still havent really told anyone properly"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like a lot to be holding at once, and the “haven’t really told anyone properly” part feels important. Does it feel more excited, guarded, or kind of unreal?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "got into a grad program they wanted, fully funded",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "flat",
+          "shade": "unclear",
+          "salience": "unclear",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "unreal mostly?? like i keep opening the acceptance email to check its still there lol. but also its in another city and everything changes in september and idk. its good. it is good. i think im just scared of how much i want it"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "I’m holding both, then, the unreal checking and the scared wanting. One feels like it can’t quite settle yet, and the other seems to make the good thing feel exposed.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unreal",
+      "body_cue": [],
+      "trigger": "got into a fully funded grad program in another city",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "unreal",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. exposed is the right word. like if i let myself be happy about it then it becomes real and then i could lose it or fail at it. easier to keep it kind of at arms length you know. but i did actually buy myself a coffee tuesday. tiny little private celebration"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "“At arms length” and that tiny private coffee feel like they belong together. I’m here if you want to stay with that, or we can leave it right there.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "unreal",
+      "body_cue": [],
+      "trigger": "got into a fully funded grad program in another city",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "unreal",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "joy",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah i think i can leave it there. that helped actually. maybe ill let myself say it out loud to someone this week. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels like a clean place to rest it. I’m glad it helped, and I hope saying it out loud this week feels good in your own way.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "unreal",
+      "body_cue": [],
+      "trigger": "got into a fully funded grad program in another city",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

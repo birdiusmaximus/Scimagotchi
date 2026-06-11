@@ -1,0 +1,143 @@
+{
+  "cid": "flat__06",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-09T18:26:20.169Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. i dont really know why im here honestly. just feeling kind of nothing lately"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that sounds pretty flat and hard to pin down. Does it feel more numb, blank, or just kind of off?"
+    },
+    {
+      "role": "user",
+      "content": "blank i guess. like theres this friend, weve been close for years and lately when we hang out i just feel nothing. like im watching it happen from somewhere else"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds more like blank and a little distant — almost like you’re watching from somewhere else. Is it more like you feel detached, or more like there’s nothing there at all?"
+    },
+    {
+      "role": "user",
+      "content": "detached i think. shes still my best friend on paper but i cant feel it anymore. she texts and i just stare at it. dunno whats wrong with me"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds detached and a bit shut down, especially with the texts just sitting there. Is it more like the feeling goes quiet, or like there’s too much distance to reach her?"
+    },
+    {
+      "role": "user",
+      "content": "the feeling just goes quiet i think. idk. i dont have the energy for this rn but thanks for listening. gonna go"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — we can leave it right here. Take care."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z10lny3kthtac",
+    "conversation_id": "flat__06",
+    "timestamp": "2026-06-09T18:26:39.249Z",
+    "user_words_raw": "the feeling just goes quiet",
+    "emotion_status": "confirmed",
+    "emotion_family": "flat",
+    "emotion_shade": "detached",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "when your best friend texts or when we hang out lately",
+    "appraisal_thought": "she's still my best friend on paper but i cant feel it anymore",
+    "body_cue": [],
+    "behaviour_action": [
+      "stare at it"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "permission not to know",
+      "less pressure"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feeling detached from a close friend and not having energy to stay with it right now.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. i dont really know why im here honestly. just feeling kind of nothing lately"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that sounds pretty flat and hard to pin down. Does it feel more numb, blank, or just kind of off?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "blank i guess. like theres this friend, weve been close for years and lately when we hang out i just feel nothing. like im watching it happen from somewhere else"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds more like blank and a little distant — almost like you’re watching from somewhere else. Is it more like you feel detached, or more like there’s nothing there at all?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "when hanging out with a close friend lately"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "detached i think. shes still my best friend on paper but i cant feel it anymore. she texts and i just stare at it. dunno whats wrong with me"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds detached and a bit shut down, especially with the texts just sitting there. Is it more like the feeling goes quiet, or like there’s too much distance to reach her?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "detached",
+      "body_cue": [],
+      "trigger": "when your best friend texts or when you hang out lately"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "the feeling just goes quiet i think. idk. i dont have the energy for this rn but thanks for listening. gonna go"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Of course — we can leave it right here. Take care.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "detached",
+      "body_cue": [],
+      "trigger": "when your best friend texts or when we hang out lately"
+    }
+  ]
+}

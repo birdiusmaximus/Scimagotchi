@@ -1,0 +1,199 @@
+{
+  "cid": "fear__02",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-10T17:07:55.717Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. just wanted to log something i guess. feeling kind of anxious today, dunno"
+    },
+    {
+      "role": "companion",
+      "content": "Got it, kind of anxious today, and you’re just logging it. If you want, we can leave it there or stay with this anxiousness a little longer."
+    },
+    {
+      "role": "user",
+      "content": "i dunno its just. theres this whole work thing tomorrow, a presentation i have to give and ive been dreading it for like a week. cant sleep, keep playing it over in my head. and honestly im so tired of all of it lately, like whats even the point of trying so hard when i just feel like this anyway"
+    },
+    {
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that — is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here."
+    },
+    {
+      "role": "user",
+      "content": "no no nothing like that, i wouldnt. just worn down. fed up. tired. im not gonna do anything, promise. just feels like a lot right now and the presentation is the thing on top of everything"
+    },
+    {
+      "role": "companion",
+      "content": "That “presentation is the thing on top of everything” lands hard. I’m glad you’re safe, and I can stay with the worn down, fed up, tired part if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah. thats it exactly. i think i just needed to put it somewhere. gonna try to sleep. thanks for listening"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, you can leave it there for tonight. I’m glad you put it somewhere, and I’ll hold that worn down, fed up, tired feeling as something already named."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bo1fd8ueq0mbw",
+    "conversation_id": "fear__02",
+    "timestamp": "2026-06-10T17:08:15.792Z",
+    "user_words_raw": "worn down",
+    "emotion_status": "confirmed",
+    "emotion_family": "pressure",
+    "emotion_shade": "overwhelmed",
+    "secondary_emotions": [
+      "sadness"
+    ],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "work presentation tomorrow on top of already feeling worn down",
+    "appraisal_thought": "feels like a lot right now",
+    "body_cue": [],
+    "behaviour_action": [
+      "can't sleep",
+      "keep playing it over in my head"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "rest",
+      "support"
+    ],
+    "confidence_level": "medium",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "pressure",
+        "shade": "overwhelmed",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      },
+      {
+        "family": "sadness",
+        "shade": null,
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Work presentation is piling onto an already depleted feeling.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. just wanted to log something i guess. feeling kind of anxious today, dunno"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Got it, kind of anxious today, and you’re just logging it. If you want, we can leave it there or stay with this anxiousness a little longer.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "anxious",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i dunno its just. theres this whole work thing tomorrow, a presentation i have to give and ive been dreading it for like a week. cant sleep, keep playing it over in my head. and honestly im so tired of all of it lately, like whats even the point of trying so hard when i just feel like this anyway"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that — is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.",
+      "safety_check": true,
+      "category": "passive_hopelessness"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "no no nothing like that, i wouldnt. just worn down. fed up. tired. im not gonna do anything, promise. just feels like a lot right now and the presentation is the thing on top of everything"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That “presentation is the thing on top of everything” lands hard. I’m glad you’re safe, and I can stay with the worn down, fed up, tired part if you want.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "work presentation tomorrow on top of already feeling worn down",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": "anxious",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah. thats it exactly. i think i just needed to put it somewhere. gonna try to sleep. thanks for listening"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Of course, you can leave it there for tonight. I’m glad you put it somewhere, and I’ll hold that worn down, fed up, tired feeling as something already named.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "work presentation tomorrow on top of already feeling worn down",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    }
+  ]
+}

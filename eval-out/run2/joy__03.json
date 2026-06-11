@@ -1,0 +1,210 @@
+{
+  "cid": "joy__03",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-10T17:06:40.737Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, good to see you. What’s on your mind today?"
+    },
+    {
+      "role": "user",
+      "content": "not much. kind of a weird day honestly"
+    },
+    {
+      "role": "companion",
+      "content": "A weird day can sit in a strange middle place, not quite one thing or another."
+    },
+    {
+      "role": "user",
+      "content": "no its not bad. paid off my last credit card today. like fully gone. i dunno feels strange to actually say it out loud"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a real marker, and maybe a little unreal to say out loud. Is it more relief, pride, or just a strange kind of quiet?"
+    },
+    {
+      "role": "user",
+      "content": "pride i guess. took me almost 3 years. dont really tell people about money stuff but yeah. quietly kind of proud of myself"
+    },
+    {
+      "role": "companion",
+      "content": "Quiet pride fits here, and there’s also something private in how you’re holding it. I’m wondering if the “dont really tell people” part makes it feel more protected, or just more yours?"
+    },
+    {
+      "role": "user",
+      "content": "more mine i think. anyway thats all really. felt good to just say it once. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad you said it here, and I’ll leave it with you there."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bmfd9ghrk18da",
+    "conversation_id": "joy__03",
+    "timestamp": "2026-06-10T17:07:06.533Z",
+    "user_words_raw": "more mine",
+    "emotion_status": "confirmed",
+    "emotion_family": "joy",
+    "emotion_shade": "pride",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "paid off the last credit card after almost 3 years",
+    "appraisal_thought": "more mine",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "autonomy",
+      "self-respect",
+      "privacy"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Finishing a long financial goal felt quietly proud and personal.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, good to see you. What’s on your mind today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "not much. kind of a weird day honestly"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "A weird day can sit in a strange middle place, not quite one thing or another.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "no its not bad. paid off my last credit card today. like fully gone. i dunno feels strange to actually say it out loud"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like a real marker, and maybe a little unreal to say out loud. Is it more relief, pride, or just a strange kind of quiet?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "paid off last credit card",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "pleased",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "calm",
+          "shade": "settled",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "flat",
+          "shade": "unclear",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "pride i guess. took me almost 3 years. dont really tell people about money stuff but yeah. quietly kind of proud of myself"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Quiet pride fits here, and there’s also something private in how you’re holding it. I’m wondering if the “dont really tell people” part makes it feel more protected, or just more yours?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "pride",
+      "body_cue": [],
+      "trigger": "paid off the last credit card after almost 3 years",
+      "label_source": "user_stated",
+      "mixed_relation": "unclear",
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "more mine i think. anyway thats all really. felt good to just say it once. thanks"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "I’m glad you said it here, and I’ll leave it with you there.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "pride",
+      "body_cue": [],
+      "trigger": "paid off the last credit card after almost 3 years",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

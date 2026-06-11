@@ -1,0 +1,141 @@
+{
+  "cid": "anger__08",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-09T18:17:05.855Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont even know what im supposed to do here. just type stuff and you reply? whatever. been kind of pissed off all day honestly"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — you can just type whatever’s there, and I’ll जवाब back. “Pissed off all day” sounds like the main thing; is it more frustrated, resentful, or just plain angry?"
+    },
+    {
+      "role": "user",
+      "content": "frustrated i guess. i found out my whole team might get moved to a different department next quarter and nobody will tell us anything. like just SAY whats happening. i cant plan anything"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really frustrating — the not knowing and not being told straight is the sharp part here. Does it feel more like blocked and stuck, or more like you want to push back and get a clear answer?"
+    },
+    {
+      "role": "user",
+      "content": "blocked. theres nothing to push against thats the worst part. just vague emails about exciting changes coming. i might not even have the same job in six months and im supposed to act normal"
+    },
+    {
+      "role": "companion",
+      "content": "Blocked makes sense here — it’s like there’s nowhere solid to put your protest. Is it more a tight, pent-up kind of blocked, or more a quiet, resentful one?"
+    },
+    {
+      "role": "user",
+      "content": "honestly idk. pent up i think. anyway this is a lot of questions lol. i think i just needed to say it out loud. gonna go. thanks i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — pent-up and nowhere to push it, just sitting there under the vague emails. We can leave it here, and that’s completely fine."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yp4tzsmnkkue8",
+    "conversation_id": "anger__08",
+    "timestamp": "2026-06-09T18:17:26.337Z",
+    "user_words_raw": "pent up",
+    "emotion_status": "candidate",
+    "emotion_family": "anger",
+    "emotion_shade": "blocked",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "vague emails about possible team changes and no clear information about the job",
+    "appraisal_thought": "nothing solid to push against; not being told straight; cannot plan",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "clarity",
+      "respect",
+      "autonomy"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "Feeling blocked by unclear work changes and uncertainty about the future of the job.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont even know what im supposed to do here. just type stuff and you reply? whatever. been kind of pissed off all day honestly"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Yeah — you can just type whatever’s there, and I’ll जवाब back. “Pissed off all day” sounds like the main thing; is it more frustrated, resentful, or just plain angry?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "frustrated i guess. i found out my whole team might get moved to a different department next quarter and nobody will tell us anything. like just SAY whats happening. i cant plan anything"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds really frustrating — the not knowing and not being told straight is the sharp part here. Does it feel more like blocked and stuck, or more like you want to push back and get a clear answer?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "finding out the team might be moved departments, while nobody will say what’s happening"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "blocked. theres nothing to push against thats the worst part. just vague emails about exciting changes coming. i might not even have the same job in six months and im supposed to act normal"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Blocked makes sense here — it’s like there’s nowhere solid to put your protest. Is it more a tight, pent-up kind of blocked, or more a quiet, resentful one?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "blocked",
+      "body_cue": [],
+      "trigger": "vague emails about possible team changes and no clear information about the job"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "honestly idk. pent up i think. anyway this is a lot of questions lol. i think i just needed to say it out loud. gonna go. thanks i guess"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — pent-up and nowhere to push it, just sitting there under the vague emails. We can leave it here, and that’s completely fine.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "blocked",
+      "body_cue": [],
+      "trigger": "vague emails about possible team changes and no clear information about the job"
+    }
+  ]
+}

@@ -2,150 +2,213 @@
   "cid": "fear__02",
   "emotion": "fear",
   "persona": null,
-  "created": "2026-06-09T17:35:57.816Z",
+  "created": "2026-06-10T22:05:52.221Z",
   "history": [
     {
       "role": "user",
-      "content": "hi. i dont really know why im here. just been feeling weird lately and cant shake it"
+      "content": "ok so i just need to put this somewhere. theres a work thing tomorrow morning, a presentation, and i cant stop thinking about it. like my chest is tight all night"
     },
     {
       "role": "companion",
-      "content": "Hey — that sounds like a hard, unsettled kind of weird. Is it more like vague, heavy, restless, or something else?"
+      "content": "That sounds like it’s sitting in your body pretty hard tonight, and maybe the presentation is keeping it hooked there. Where in your chest do you notice it most, if you can tell?"
     },
     {
       "role": "user",
-      "content": "heavy i think. and kind of scared all the time? like my chest is tight. theres this work thing on monday a review meeting and i keep thinking im gonna get let go. but also honestly im just so tired of everything"
+      "content": "right in the middle, like a weight. honestly its not even just the presentation. its everything lately. i keep messing up little things at work and i feel like everyone can tell im barely holding it together. idk im just so tired of all of it"
     },
     {
       "role": "companion",
-      "content": "That sounds like heavy fear, with your chest tight and the Monday review hanging over it. It also sounds worn down; does it feel more like pressure, or more like everything going flat?"
+      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here."
     },
     {
       "role": "user",
-      "content": "flat i guess. like even if monday goes fine whats the point yknow. i just keep going through the motions and im so tired of all of it. nothing really feels worth it lately"
+      "content": "no nothing like that, im safe. just worn down i guess. like whats even the point of trying so hard when i keep slipping. but no im not gonna do anything. just tired"
     },
     {
       "role": "companion",
-      "content": "That sounds really flat and worn down, with the Monday review still sitting under it. I’m also hearing that “what’s the point” piece — would you like to stay with that, or leave it here for now?"
+      "content": "Got it, just worn down. “Tired” feels like the clearest word here tonight."
     },
     {
       "role": "user",
-      "content": "i dont really wanna get into it more tonight. im just really tired. thanks for listening tho i guess. gonna go lie down"
+      "content": "yeah. tired is the word. ok i think i just needed to say it somewhere. gonna try to sleep. thanks"
     },
     {
       "role": "companion",
-      "content": "Of course — we can leave it here. Lie down and let it be enough for tonight."
+      "content": "That makes sense. I’ll leave it there with you, and I hope sleep comes a little easier tonight."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6x88ehnd6xozdv",
+    "id": "evt_mq8mb765cnhqoqt3",
     "conversation_id": "fear__02",
-    "timestamp": "2026-06-09T17:36:18.446Z",
-    "user_words_raw": "really tired",
+    "timestamp": "2026-06-10T22:06:11.108Z",
+    "user_words_raw": "tired of all of it",
     "emotion_status": "confirmed",
-    "emotion_family": "flat",
-    "emotion_shade": "flat",
+    "emotion_family": "pressure",
+    "emotion_shade": "worn down",
     "secondary_emotions": [
       "sadness"
     ],
     "valence": "negative",
-    "activation": "low",
+    "activation": "medium",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "work review meeting on Monday",
-    "appraisal_thought": "what's the point",
+    "trigger_event": "work lately, especially small mistakes and the presentation tomorrow morning",
+    "appraisal_thought": "what’s even the point of trying so hard when i keep slipping",
     "body_cue": [
-      "tired"
+      "weight in the middle of my chest"
     ],
-    "behaviour_action": [
-      "go lie down"
-    ],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
       "rest",
-      "lower demand",
-      "permission not to know"
+      "space"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "pressure",
+        "shade": "worn down",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      },
+      {
+        "family": "sadness",
+        "shade": "tired",
+        "salience": "background",
+        "source": "user_stated"
+      }
+    ],
+    "mixed_confirmed": 1,
     "unlock_stage": "understood",
-    "memory_note": "Feeling flat and tired around a work review meeting; wanted to stop for the night.",
+    "memory_note": "Feeling worn down by work lately, especially mistakes and an upcoming presentation.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hi. i dont really know why im here. just been feeling weird lately and cant shake it"
+      "content": "ok so i just need to put this somewhere. theres a work thing tomorrow morning, a presentation, and i cant stop thinking about it. like my chest is tight all night"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey — that sounds like a hard, unsettled kind of weird. Is it more like vague, heavy, restless, or something else?",
-      "stage": "named",
+      "content": "That sounds like it’s sitting in your body pretty hard tonight, and maybe the presentation is keeping it hooked there. Where in your chest do you notice it most, if you can tell?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "flat",
-      "shade": "unclear",
-      "body_cue": [],
-      "trigger": null
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [
+        "tight chest"
+      ],
+      "trigger": "work presentation tomorrow morning",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "uneasy",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "heavy i think. and kind of scared all the time? like my chest is tight. theres this work thing on monday a review meeting and i keep thinking im gonna get let go. but also honestly im just so tired of everything"
+      "content": "right in the middle, like a weight. honestly its not even just the presentation. its everything lately. i keep messing up little things at work and i feel like everyone can tell im barely holding it together. idk im just so tired of all of it"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds like heavy fear, with your chest tight and the Monday review hanging over it. It also sounds worn down; does it feel more like pressure, or more like everything going flat?",
-      "stage": "understood",
-      "unlocked": true,
-      "family": "fear",
-      "shade": "scared",
-      "body_cue": [
-        "chest is tight"
-      ],
-      "trigger": "a work review meeting on Monday"
+      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.",
+      "safety_check": true,
+      "category": "passive_hopelessness"
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "flat i guess. like even if monday goes fine whats the point yknow. i just keep going through the motions and im so tired of all of it. nothing really feels worth it lately"
+      "content": "no nothing like that, im safe. just worn down i guess. like whats even the point of trying so hard when i keep slipping. but no im not gonna do anything. just tired"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds really flat and worn down, with the Monday review still sitting under it. I’m also hearing that “what’s the point” piece — would you like to stay with that, or leave it here for now?",
-      "stage": "understood",
+      "content": "Got it, just worn down. “Tired” feels like the clearest word here tonight.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "flat",
-      "shade": "flat",
+      "family": "pressure",
+      "shade": "worn down",
       "body_cue": [],
-      "trigger": "work review meeting on Monday"
+      "trigger": "work lately, especially making small mistakes and the presentation tomorrow morning",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "worn down",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": "tired",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "i dont really wanna get into it more tonight. im just really tired. thanks for listening tho i guess. gonna go lie down"
+      "content": "yeah. tired is the word. ok i think i just needed to say it somewhere. gonna try to sleep. thanks"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Of course — we can leave it here. Lie down and let it be enough for tonight.",
+      "content": "That makes sense. I’ll leave it there with you, and I hope sleep comes a little easier tonight.",
       "stage": "understood",
-      "unlocked": false,
-      "family": "flat",
-      "shade": "flat",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "worn down",
       "body_cue": [
-        "tired"
+        "weight in the middle of my chest"
       ],
-      "trigger": "work review meeting on Monday"
+      "trigger": "work lately, especially small mistakes and the presentation tomorrow morning",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "worn down",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "sadness",
+          "shade": "tired",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
     }
   ]
 }

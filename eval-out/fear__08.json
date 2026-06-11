@@ -2,144 +2,280 @@
   "cid": "fear__08",
   "emotion": "fear",
   "persona": null,
-  "created": "2026-06-09T17:35:57.596Z",
+  "created": "2026-06-10T22:06:28.232Z",
   "history": [
     {
       "role": "user",
-      "content": "idk if these things even work but ok. cant really sleep lately"
+      "content": "hi. i dont really know why im here. just kind of a weird day i guess"
     },
     {
       "role": "companion",
-      "content": "That sounds like a rough kind of unsettled. Is it more like your mind won’t settle, or your body won’t let go?"
+      "content": "Hey, glad you came by. A “weird day” is enough to start with, and we can just stay with that for a bit."
     },
     {
       "role": "user",
-      "content": "mind mostly. just keeps spinning about work stuff. my contract ends in like two months and theres no word on renewal"
+      "content": "yeah idk. ive just had this knot in my stomach all week. cant really shake it. probably nothing"
     },
     {
       "role": "companion",
-      "content": "That sounds pretty anxious and on edge, with work hanging there in the background. Does it feel more like worry about not knowing, or dread about what the no-word might mean?"
+      "content": "That knot in your stomach sounds like it’s been hanging around for a while. Is it more tight, twisty, or just there?"
     },
     {
       "role": "user",
-      "content": "the not knowing i think. like i cant plan anything. rent, whether to even look elsewhere. just floating. anyway its prob fine"
+      "content": "just there mostly. heavy. like. ok my contract ends in 3 months and theyve been weird about renewing anyone. nobodys saying anything and thats kind of the worst part"
     },
     {
       "role": "companion",
-      "content": "That floating-not-knowing makes sense here — it sounds like the part that’s hardest is not being able to plan. Would you say it’s more restless, or more stuck?"
+      "content": "That uncertainty seems to be pressing on the knot, especially with nobody saying anything."
     },
     {
       "role": "user",
-      "content": "stuck yeah. ok this actually helped a little, didnt expect that. gonna try to sleep. thanks"
+      "content": "yeah and like i keep doing the math in my head. rent, my lease renews in august too, what if i have to move back home. and then i feel stupid for spiraling when nothings even happened yet. its just the not knowing"
     },
     {
       "role": "companion",
-      "content": "I’m glad it helped a little. We can leave it here for now, and I hope sleep comes quietly."
+      "content": "It sounds like the not knowing is making your mind do the math before anything has even landed."
+    },
+    {
+      "role": "user",
+      "content": "yeah. exactly that. i think i just wanted to say it out loud to something. its been kind of loud in my head and i havent told anyone bc i dont want to worry my mom"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense, saying it out loud can give the noise somewhere to go. I can stay with it here, or we can leave it sitting as said for now."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it sitting. that helped a little actually. thank you. gonna try to get some sleep"
+    },
+    {
+      "role": "companion",
+      "content": "Of course. I’ll leave it right there with you, and I hope sleep is gentle."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6x8865ljkig3b3",
+    "id": "evt_mq8mbyhs8fobb69r",
     "conversation_id": "fear__08",
-    "timestamp": "2026-06-09T17:36:15.825Z",
-    "user_words_raw": "just floating",
+    "timestamp": "2026-06-10T22:07:01.680Z",
+    "user_words_raw": "the not knowing",
     "emotion_status": "confirmed",
-    "emotion_family": "fear",
-    "emotion_shade": "uncertain",
-    "secondary_emotions": [],
-    "valence": "negative",
-    "activation": "medium",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [
+      "fear"
+    ],
+    "valence": "mixed",
+    "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "contract ends in about two months and there’s no word on renewal",
-    "appraisal_thought": "I can’t plan anything",
+    "trigger_event": "uncertainty about contract renewal and housing",
+    "appraisal_thought": "the not knowing is the worst part",
     "body_cue": [],
-    "behaviour_action": [
-      "can’t plan anything",
-      "floating",
-      "stuck"
-    ],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
       "certainty",
-      "control",
-      "support"
+      "support",
+      "reassurance"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
     "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "calm",
+        "shade": "settled",
+        "salience": "foreground",
+        "source": "companion_hypothesis"
+      },
+      {
+        "family": "fear",
+        "shade": "uneasy",
+        "salience": "background",
+        "source": "user_stated"
+      }
+    ],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Work uncertainty tends to make them feel stuck and unable to plan, especially around rent and renewal.",
+    "memory_note": "Work and housing uncertainty can turn into a quiet looping worry; they sometimes want to say it out loud before sleeping.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "idk if these things even work but ok. cant really sleep lately"
+      "content": "hi. i dont really know why im here. just kind of a weird day i guess"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds like a rough kind of unsettled. Is it more like your mind won’t settle, or your body won’t let go?",
-      "stage": "named",
+      "content": "Hey, glad you came by. A “weird day” is enough to start with, and we can just stay with that for a bit.",
+      "stage": "noticed",
       "unlocked": false,
-      "family": "fear",
-      "shade": "uneasy",
+      "family": null,
+      "shade": null,
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "mind mostly. just keeps spinning about work stuff. my contract ends in like two months and theres no word on renewal"
+      "content": "yeah idk. ive just had this knot in my stomach all week. cant really shake it. probably nothing"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds pretty anxious and on edge, with work hanging there in the background. Does it feel more like worry about not knowing, or dread about what the no-word might mean?",
-      "stage": "named",
+      "content": "That knot in your stomach sounds like it’s been hanging around for a while. Is it more tight, twisty, or just there?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "fear",
-      "shade": "on edge",
-      "body_cue": [],
-      "trigger": "contract ends in about two months and there’s no word on renewal"
+      "shade": "uneasy",
+      "body_cue": [
+        "knot in my stomach"
+      ],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "the not knowing i think. like i cant plan anything. rent, whether to even look elsewhere. just floating. anyway its prob fine"
+      "content": "just there mostly. heavy. like. ok my contract ends in 3 months and theyve been weird about renewing anyone. nobodys saying anything and thats kind of the worst part"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That floating-not-knowing makes sense here — it sounds like the part that’s hardest is not being able to plan. Would you say it’s more restless, or more stuck?",
-      "stage": "understood",
-      "unlocked": true,
+      "content": "That uncertainty seems to be pressing on the knot, especially with nobody saying anything.",
+      "stage": "shaped",
+      "unlocked": false,
       "family": "fear",
-      "shade": "uncertain",
-      "body_cue": [],
-      "trigger": "contract ends in about two months and there’s no word on renewal"
+      "shade": "uneasy",
+      "body_cue": [
+        "knot in my stomach"
+      ],
+      "trigger": "contract ends in 3 months and nobody is saying anything about renewal",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "uneasy",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "stuck yeah. ok this actually helped a little, didnt expect that. gonna try to sleep. thanks"
+      "content": "yeah and like i keep doing the math in my head. rent, my lease renews in august too, what if i have to move back home. and then i feel stupid for spiraling when nothings even happened yet. its just the not knowing"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "I’m glad it helped a little. We can leave it here for now, and I hope sleep comes quietly.",
+      "content": "It sounds like the not knowing is making your mind do the math before anything has even landed.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [
+        "heavy"
+      ],
+      "trigger": "contract ends in 3 months and renewal is unclear, with lease renewing in august too",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "uneasy",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. exactly that. i think i just wanted to say it out loud to something. its been kind of loud in my head and i havent told anyone bc i dont want to worry my mom"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That makes sense, saying it out loud can give the noise somewhere to go. I can stay with it here, or we can leave it sitting as said for now.",
       "stage": "understood",
       "unlocked": false,
       "family": "fear",
-      "shade": "uncertain",
+      "shade": "uneasy",
+      "body_cue": [
+        "heavy"
+      ],
+      "trigger": "contract ends in 3 months, lease renews in august, and renewal is unclear",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it sitting. that helped a little actually. thank you. gonna try to get some sleep"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course. I’ll leave it right there with you, and I hope sleep is gentle.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
       "body_cue": [],
-      "trigger": "contract ends in about two months and there’s no word on renewal"
+      "trigger": "uncertainty about contract renewal and housing",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "settled",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": "uneasy",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
     }
   ]
 }

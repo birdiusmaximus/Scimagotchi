@@ -1,0 +1,300 @@
+{
+  "cid": "anger__08",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-10T17:10:28.195Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. i dont really know why im here honestly"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, I'm glad you said that. We can keep it simple and just notice what's on your mind, if anything."
+    },
+    {
+      "role": "user",
+      "content": "i dont know. its been a weird couple weeks. i keep snapping at people and its not even like me. work stuff. or i guess not work exactly"
+    },
+    {
+      "role": "companion",
+      "content": "There’s a lot packed into that, and I’m hearing a change in how you’ve been moving through people lately. Is it more the snapping itself, or the pressure around whatever’s going on around work?"
+    },
+    {
+      "role": "user",
+      "content": "the pressure i guess. they announced this 'restructure' last month. nobody will say if my team even exists in 6 months. and im just supposed to keep showing up like everythings normal"
+    },
+    {
+      "role": "companion",
+      "content": "“Nobody will say if my team even exists in 6 months” lands hard, and “just supposed to keep showing up” carries a lot. I’m here with that."
+    },
+    {
+      "role": "user",
+      "content": "yeah and honestly it makes me so mad. like just TELL us. the not knowing is the worst part. i cant plan anything. cant decide if i should be job hunting or what. my lease is up in august too and i dont even know if ill have income"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like anger with a lot of pressure underneath it, especially where the not knowing reaches into housing and income. Is the hardest part the uncertainty itself, or feeling like you have to keep living on it?"
+    },
+    {
+      "role": "user",
+      "content": "having to live on it. thats it exactly. like i could handle bad news i think. its the limbo. just floating waiting for someone else to decide my whole life. and i smile in meetings like im fine"
+    },
+    {
+      "role": "companion",
+      "content": "“Floating waiting for someone else to decide my whole life” feels like the centre of it, and the smiling in meetings sounds like a hard kind of holding on. Does it feel more blocked and trapped, or more angry and fed up?"
+    },
+    {
+      "role": "user",
+      "content": "trapped i think. fed up too but mostly just stuck. anyway. i dont know. it helps a little to say it out loud even if nothing changes. im gonna go. thanks for listening"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad you said it out loud, and I can leave it here with you."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8brcjo21ggjh17",
+    "conversation_id": "anger__08",
+    "timestamp": "2026-06-10T17:11:06.705Z",
+    "user_words_raw": "floating waiting for someone else to decide my whole life",
+    "emotion_status": "confirmed",
+    "emotion_family": "anger",
+    "emotion_shade": "frustrated",
+    "secondary_emotions": [
+      "pressure"
+    ],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "unclear workplace restructure with no clear answer about the future",
+    "appraisal_thought": "it feels trapped and unfair to have your life held up by someone else’s decision",
+    "body_cue": [],
+    "behaviour_action": [
+      "smile in meetings"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "autonomy",
+      "clarity",
+      "stability"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "anger",
+        "shade": "frustrated",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      },
+      {
+        "family": "pressure",
+        "shade": null,
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "A work uncertainty is spilling into housing and income decisions, and they mask it in meetings.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. i dont really know why im here honestly"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, I'm glad you said that. We can keep it simple and just notice what's on your mind, if anything.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i dont know. its been a weird couple weeks. i keep snapping at people and its not even like me. work stuff. or i guess not work exactly"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "There’s a lot packed into that, and I’m hearing a change in how you’ve been moving through people lately. Is it more the snapping itself, or the pressure around whatever’s going on around work?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressure",
+      "body_cue": [],
+      "trigger": "work stuff, or something around work",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "pressure",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": "frustration",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "the pressure i guess. they announced this 'restructure' last month. nobody will say if my team even exists in 6 months. and im just supposed to keep showing up like everythings normal"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "“Nobody will say if my team even exists in 6 months” lands hard, and “just supposed to keep showing up” carries a lot. I’m here with that.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "pressure",
+      "body_cue": [],
+      "trigger": "a work restructure and uncertainty about the team",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah and honestly it makes me so mad. like just TELL us. the not knowing is the worst part. i cant plan anything. cant decide if i should be job hunting or what. my lease is up in august too and i dont even know if ill have income"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like anger with a lot of pressure underneath it, especially where the not knowing reaches into housing and income. Is the hardest part the uncertainty itself, or feeling like you have to keep living on it?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "uncertainty after a workplace restructure, including unclear income and lease timing",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "frustrated",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": "pressure",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "having to live on it. thats it exactly. like i could handle bad news i think. its the limbo. just floating waiting for someone else to decide my whole life. and i smile in meetings like im fine"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "“Floating waiting for someone else to decide my whole life” feels like the centre of it, and the smiling in meetings sounds like a hard kind of holding on. Does it feel more blocked and trapped, or more angry and fed up?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "unclear workplace restructure with no clear answer about the future",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "frustrated",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "trapped i think. fed up too but mostly just stuck. anyway. i dont know. it helps a little to say it out loud even if nothing changes. im gonna go. thanks for listening"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad you said it out loud, and I can leave it here with you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "unclear workplace restructure with no clear answer about the future",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "frustrated",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    }
+  ]
+}

@@ -2,56 +2,56 @@
   "cid": "anger__01",
   "emotion": "anger",
   "persona": null,
-  "created": "2026-06-09T18:17:04.366Z",
+  "created": "2026-06-10T22:07:28.521Z",
   "history": [
     {
       "role": "user",
-      "content": "got passed over for the lead role again. third time"
+      "content": "got passed over for the lead role again. third time. they gave it to someone i trained"
     },
     {
       "role": "companion",
-      "content": "That sounds really disappointing — especially with it happening a third time. Does it feel more like disappointment, frustration, or something else?"
+      "content": "That feels especially sharp, being passed over again and seeing it go to someone you trained."
     },
     {
       "role": "user",
-      "content": "not sad. im pissed. they gave it to the guy who started after me"
+      "content": "honestly its less hurt more just done. i bust my ass and they hand it to a guy who cant even run the reports without me"
     },
     {
       "role": "companion",
-      "content": "That sounds angry and unfair — especially with him starting after you. Does it feel more like pissed, insulted, or pushed aside?"
+      "content": "That sounds less like hurt and more like being worn down and fed up. Did it leave you feeling more tense, heavy, or just flat?"
     },
     {
       "role": "user",
-      "content": "pushed aside yeah. like all the late nights didnt count for anything"
+      "content": "tense. like my jaw is tight. i keep replaying the meeting where they told me. just nodded like an idiot"
     },
     {
       "role": "companion",
-      "content": "Pushed aside fits — like your late nights were made to count for nothing. Does it make you want to push back, or just go quiet?"
+      "content": "Your jaw going tight and the replaying give this a very tense, worked-up feel. The “just nodded like an idiot” part sounds like a sting too, maybe some embarrassment under the tension."
     },
     {
       "role": "user",
-      "content": "just needed to get it out. thanks. gotta go"
+      "content": "yeah maybe. anyway. dont feel like getting into it more. thanks"
     },
     {
       "role": "companion",
-      "content": "Got it — I’ll leave it here. Take care."
+      "content": "Of course. We can leave it there, and I’m glad you told me."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yp3saynzwawei",
+    "id": "evt_mq8md9iae9jhsowq",
     "conversation_id": "anger__01",
-    "timestamp": "2026-06-09T18:17:20.693Z",
-    "user_words_raw": "needed to get it out",
-    "emotion_status": "unclear",
-    "emotion_family": null,
-    "emotion_shade": "pushed aside",
+    "timestamp": "2026-06-10T22:07:49.334Z",
+    "user_words_raw": "dont feel like getting into it more",
+    "emotion_status": "candidate",
+    "emotion_family": "pressure",
+    "emotion_shade": "tense",
     "secondary_emotions": [],
     "valence": "neutral",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "they gave it to the guy who started after me",
-    "appraisal_thought": "all the late nights didnt count for anything",
+    "trigger_event": "they told me they gave the lead role to someone else",
+    "appraisal_thought": "just nodded like an idiot",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
@@ -63,75 +63,140 @@
       "self_report"
     ],
     "user_confirmation": "unknown",
-    "unlock_stage": "named",
-    "memory_note": "User wanted to vent about being passed over for a role at work.",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [
+      "hurt"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "shaped",
+    "memory_note": "They may want to stop exploring a feeling and keep things brief.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "got passed over for the lead role again. third time"
+      "content": "got passed over for the lead role again. third time. they gave it to someone i trained"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds really disappointing — especially with it happening a third time. Does it feel more like disappointment, frustration, or something else?",
-      "stage": "named",
+      "content": "That feels especially sharp, being passed over again and seeing it go to someone you trained.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "sadness",
-      "shade": "disappointment",
+      "family": "hurt",
+      "shade": "left out",
       "body_cue": [],
-      "trigger": "got passed over for the lead role again"
+      "trigger": "got passed over for the lead role again, and it went to someone the user trained",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "left out",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": "frustration",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "not sad. im pissed. they gave it to the guy who started after me"
+      "content": "honestly its less hurt more just done. i bust my ass and they hand it to a guy who cant even run the reports without me"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds angry and unfair — especially with him starting after you. Does it feel more like pissed, insulted, or pushed aside?",
-      "stage": "named",
+      "content": "That sounds less like hurt and more like being worn down and fed up. Did it leave you feeling more tense, heavy, or just flat?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "anger",
-      "shade": "frustrated",
+      "family": "pressure",
+      "shade": "worn down",
       "body_cue": [],
-      "trigger": "they gave it to the guy who started after me"
+      "trigger": "got passed over for the lead role again, and it went to someone the user trained",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "worn down",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": "fed up",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "pushed aside yeah. like all the late nights didnt count for anything"
+      "content": "tense. like my jaw is tight. i keep replaying the meeting where they told me. just nodded like an idiot"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "Pushed aside fits — like your late nights were made to count for nothing. Does it make you want to push back, or just go quiet?",
-      "stage": "named",
+      "content": "Your jaw going tight and the replaying give this a very tense, worked-up feel. The “just nodded like an idiot” part sounds like a sting too, maybe some embarrassment under the tension.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "anger",
-      "shade": "pushed aside",
-      "body_cue": [],
-      "trigger": "they gave it to the guy who started after me"
+      "family": "pressure",
+      "shade": "tense",
+      "body_cue": [
+        "jaw is tight"
+      ],
+      "trigger": "they told me they gave the lead role to someone else",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "tense",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "just needed to get it out. thanks. gotta go"
+      "content": "yeah maybe. anyway. dont feel like getting into it more. thanks"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Got it — I’ll leave it here. Take care.",
-      "stage": "named",
+      "content": "Of course. We can leave it there, and I’m glad you told me.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": null,
-      "shade": "pushed aside",
+      "family": "pressure",
+      "shade": "tense",
       "body_cue": [],
-      "trigger": "they gave it to the guy who started after me"
+      "trigger": "they told me they gave the lead role to someone else",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

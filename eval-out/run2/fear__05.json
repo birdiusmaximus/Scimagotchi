@@ -1,0 +1,295 @@
+{
+  "cid": "fear__05",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-10T17:08:25.819Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so this is dumb but i keep thinking about something from like years ago and i cant make it stop lol"
+    },
+    {
+      "role": "companion",
+      "content": "Not dumb at all. \"keeps thinking about something from like years ago\" feels like it still has a hook in you."
+    },
+    {
+      "role": "user",
+      "content": "yeah hook is one word for it haha. its this thing from uni. i basically froze in a group presentation final year, like full blank, just stood there. everyone saw. i can still feel my face going hot just typing this which is honestly pathetic"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a mix of embarrassment and hurt, with the “full blank” moment still lighting up your face. Does it feel more like shame, or more like that old scene still has too much power?"
+    },
+    {
+      "role": "user",
+      "content": "kinda both? but honestly the bigger thing is im scared its gonna happen again. ive got a work presentation next week and my brain keeps going 'what if you freeze like uni'. so its like the old cringe AND this dread about thursday all mashed together"
+    },
+    {
+      "role": "companion",
+      "content": "The old cringe and the dread about Thursday are mashed together here. I’m with the part that still remembers uni, and the part already bracing for next week."
+    },
+    {
+      "role": "user",
+      "content": "exactly. its like the uni me is sitting in the room going 'remember when you blew it' every time i try to prep. i keep rehearsing at like midnight which probably isnt helping my whole 'be normal and rested' plan lol"
+    },
+    {
+      "role": "companion",
+      "content": "That midnight rehearsing sounds like the fear has turned into a kind of guarding. When it shows up, does it make you want to check, rehearse, avoid, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "yeah def rehearse and check. like ill read my slides over and over till the words stop meaning anything. i think part of me believes if i just prepare hard enough i cant possibly freeze again. which kinda makes sense when you say it out loud, its trying to protect me from the uni thing"
+    },
+    {
+      "role": "companion",
+      "content": "That protective logic makes a lot of sense, it is trying to keep the uni moment from happening again. Do you want to stay with how it feels when that guard starts taking over, or leave it there for now?"
+    },
+    {
+      "role": "user",
+      "content": "honestly i think leave it there for now. but this actually helped, like just seeing that the midnight cramming is the uni thing in disguise. gonna try to close the laptop at a reasonable hour for once lol. thanks, ill come back if thursday goes sideways"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a clear place to stop, and I’m glad it helped put a shape on the midnight cramming. Come back anytime if you want to pick it up again."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8booo4m5him50y",
+    "conversation_id": "fear__05",
+    "timestamp": "2026-06-10T17:09:11.263Z",
+    "user_words_raw": "midnight cramming",
+    "emotion_status": "confirmed",
+    "emotion_family": "fear",
+    "emotion_shade": "dread",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "upcoming work presentation next week, with the old university presentation memory getting activated",
+    "appraisal_thought": "if I prepare hard enough I can't possibly freeze again",
+    "body_cue": [],
+    "behaviour_action": [
+      "rehearse",
+      "check"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "protection",
+      "certainty",
+      "control"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "A past group presentation froze into a lasting fear around presenting again, and preparation can get pulled into that old moment.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so this is dumb but i keep thinking about something from like years ago and i cant make it stop lol"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Not dumb at all. \"keeps thinking about something from like years ago\" feels like it still has a hook in you.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "repetitive",
+      "body_cue": [],
+      "trigger": "something from years ago",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": null,
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah hook is one word for it haha. its this thing from uni. i basically froze in a group presentation final year, like full blank, just stood there. everyone saw. i can still feel my face going hot just typing this which is honestly pathetic"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a mix of embarrassment and hurt, with the “full blank” moment still lighting up your face. Does it feel more like shame, or more like that old scene still has too much power?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [
+        "face going hot"
+      ],
+      "trigger": "group presentation in final year at university",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "embarrassed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "kinda both? but honestly the bigger thing is im scared its gonna happen again. ive got a work presentation next week and my brain keeps going 'what if you freeze like uni'. so its like the old cringe AND this dread about thursday all mashed together"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "The old cringe and the dread about Thursday are mashed together here. I’m with the part that still remembers uni, and the part already bracing for next week.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [],
+      "trigger": "an upcoming work presentation next week, with the old university presentation memory getting activated",
+      "label_source": "user_stated",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "embarrassed",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": "dread",
+          "salience": "foreground",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "exactly. its like the uni me is sitting in the room going 'remember when you blew it' every time i try to prep. i keep rehearsing at like midnight which probably isnt helping my whole 'be normal and rested' plan lol"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That midnight rehearsing sounds like the fear has turned into a kind of guarding. When it shows up, does it make you want to check, rehearse, avoid, or something else?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [],
+      "trigger": "upcoming work presentation next week, with the old university presentation memory getting activated",
+      "label_source": "user_confirmed",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "dread",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah def rehearse and check. like ill read my slides over and over till the words stop meaning anything. i think part of me believes if i just prepare hard enough i cant possibly freeze again. which kinda makes sense when you say it out loud, its trying to protect me from the uni thing"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That protective logic makes a lot of sense, it is trying to keep the uni moment from happening again. Do you want to stay with how it feels when that guard starts taking over, or leave it there for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [],
+      "trigger": "upcoming work presentation next week, with the old university presentation memory getting activated",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "dread",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "honestly i think leave it there for now. but this actually helped, like just seeing that the midnight cramming is the uni thing in disguise. gonna try to close the laptop at a reasonable hour for once lol. thanks, ill come back if thursday goes sideways"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels like a clear place to stop, and I’m glad it helped put a shape on the midnight cramming. Come back anytime if you want to pick it up again.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [],
+      "trigger": "upcoming work presentation next week, with the old university presentation memory getting activated",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

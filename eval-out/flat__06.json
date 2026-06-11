@@ -2,142 +2,263 @@
   "cid": "flat__06",
   "emotion": "flat",
   "persona": null,
-  "created": "2026-06-09T18:26:20.169Z",
+  "created": "2026-06-10T22:11:55.972Z",
   "history": [
     {
       "role": "user",
-      "content": "hey. i dont really know why im here honestly. just feeling kind of nothing lately"
+      "content": "i dont really know why im here. nothing feels wrong exactly. i just feel kind of nothing lately"
     },
     {
       "role": "companion",
-      "content": "Hey — that sounds pretty flat and hard to pin down. Does it feel more numb, blank, or just kind of off?"
+      "content": "That sounds very much like a kind of \"nothing\", not something sharp or obvious. We can just stay with it as it is for now."
     },
     {
       "role": "user",
-      "content": "blank i guess. like theres this friend, weve been close for years and lately when we hang out i just feel nothing. like im watching it happen from somewhere else"
+      "content": "i guess. i dont even know what to stay with tho. its not like anything happened. i just dont feel much about anyone anymore"
     },
     {
       "role": "companion",
-      "content": "That sounds more like blank and a little distant — almost like you’re watching from somewhere else. Is it more like you feel detached, or more like there’s nothing there at all?"
+      "content": "That sounds less like one clear feeling and more like a kind of blankness or distance, especially around people. Does it feel more blank, detached, or just hard to reach?"
     },
     {
       "role": "user",
-      "content": "detached i think. shes still my best friend on paper but i cant feel it anymore. she texts and i just stare at it. dunno whats wrong with me"
+      "content": "hard to reach maybe. theres this friend, my closest one i guess. she texts and i just look at it and feel nothing. dont even want to open it"
     },
     {
       "role": "companion",
-      "content": "That sounds detached and a bit shut down, especially with the texts just sitting there. Is it more like the feeling goes quiet, or like there’s too much distance to reach her?"
+      "content": "That feels more like being cut off from reach than a feeling that has a clear name yet. The not wanting to open it is useful to notice, if you want to stay with that."
     },
     {
       "role": "user",
-      "content": "the feeling just goes quiet i think. idk. i dont have the energy for this rn but thanks for listening. gonna go"
+      "content": "idk. we used to talk every day. now its like shes a stranger and i cant make myself care. and the worst part is i dont even feel bad about it. just flat"
     },
     {
       "role": "companion",
-      "content": "Of course — we can leave it right here. Take care."
+      "content": "That sounds like the flatness is sitting over something that used to matter a lot, especially with someone who was once close. We can stay with what changed, or leave it here if that feels like enough."
+    },
+    {
+      "role": "user",
+      "content": "i dont know what changed. thats the thing. nothing did. maybe i did. i dont really know what im supposed to do with that"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like being left with a gap you can't make sense of yet. If you want, we can stay with the part that says \"maybe I did,\" or we can leave it right here."
+    },
+    {
+      "role": "user",
+      "content": "yeah. lets leave it there. i dont have more than that right now. thanks i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, we can leave it there for now."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6z10lny3kthtac",
+    "id": "evt_mq8mj05vsbiw6qdm",
     "conversation_id": "flat__06",
-    "timestamp": "2026-06-09T18:26:39.249Z",
-    "user_words_raw": "the feeling just goes quiet",
+    "timestamp": "2026-06-10T22:12:33.827Z",
+    "user_words_raw": "don't have more than that right now",
     "emotion_status": "confirmed",
     "emotion_family": "flat",
-    "emotion_shade": "detached",
+    "emotion_shade": "flat",
     "secondary_emotions": [],
-    "valence": "negative",
+    "valence": "neutral",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "when your best friend texts or when we hang out lately",
-    "appraisal_thought": "she's still my best friend on paper but i cant feel it anymore",
+    "trigger_event": "friend texts / closeness changing without a clear reason",
+    "appraisal_thought": "nothing changed, maybe I did",
     "body_cue": [],
-    "behaviour_action": [
-      "stare at it"
-    ],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "space",
-      "permission not to know",
-      "less pressure"
+      "permission_not_to_know",
+      "lower_demand"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Feeling detached from a close friend and not having energy to stay with it right now.",
+    "memory_note": "Sometimes goes flat around a close friend and then wants to stop there.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey. i dont really know why im here honestly. just feeling kind of nothing lately"
+      "content": "i dont really know why im here. nothing feels wrong exactly. i just feel kind of nothing lately"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey — that sounds pretty flat and hard to pin down. Does it feel more numb, blank, or just kind of off?",
-      "stage": "named",
+      "content": "That sounds very much like a kind of \"nothing\", not something sharp or obvious. We can just stay with it as it is for now.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "flat",
       "shade": "blank",
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "blank i guess. like theres this friend, weve been close for years and lately when we hang out i just feel nothing. like im watching it happen from somewhere else"
+      "content": "i guess. i dont even know what to stay with tho. its not like anything happened. i just dont feel much about anyone anymore"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds more like blank and a little distant — almost like you’re watching from somewhere else. Is it more like you feel detached, or more like there’s nothing there at all?",
-      "stage": "named",
+      "content": "That sounds less like one clear feeling and more like a kind of blankness or distance, especially around people. Does it feel more blank, detached, or just hard to reach?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "flat",
       "shade": "blank",
       "body_cue": [],
-      "trigger": "when hanging out with a close friend lately"
+      "trigger": "nothing happened",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "blank",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "detached i think. shes still my best friend on paper but i cant feel it anymore. she texts and i just stare at it. dunno whats wrong with me"
+      "content": "hard to reach maybe. theres this friend, my closest one i guess. she texts and i just look at it and feel nothing. dont even want to open it"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds detached and a bit shut down, especially with the texts just sitting there. Is it more like the feeling goes quiet, or like there’s too much distance to reach her?",
-      "stage": "understood",
-      "unlocked": true,
+      "content": "That feels more like being cut off from reach than a feeling that has a clear name yet. The not wanting to open it is useful to notice, if you want to stay with that.",
+      "stage": "shaped",
+      "unlocked": false,
       "family": "flat",
-      "shade": "detached",
+      "shade": "disconnected",
       "body_cue": [],
-      "trigger": "when your best friend texts or when you hang out lately"
+      "trigger": "friend texts",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "disconnected",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "the feeling just goes quiet i think. idk. i dont have the energy for this rn but thanks for listening. gonna go"
+      "content": "idk. we used to talk every day. now its like shes a stranger and i cant make myself care. and the worst part is i dont even feel bad about it. just flat"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Of course — we can leave it right here. Take care.",
+      "content": "That sounds like the flatness is sitting over something that used to matter a lot, especially with someone who was once close. We can stay with what changed, or leave it here if that feels like enough.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": "friend texts",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "flat",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i dont know what changed. thats the thing. nothing did. maybe i did. i dont really know what im supposed to do with that"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That feels like being left with a gap you can't make sense of yet. If you want, we can stay with the part that says \"maybe I did,\" or we can leave it right here.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": "friend texts / closeness changing without a clear reason",
+      "label_source": "user_stated",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "flat",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. lets leave it there. i dont have more than that right now. thanks i guess"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course, we can leave it there for now.",
       "stage": "understood",
       "unlocked": false,
       "family": "flat",
-      "shade": "detached",
+      "shade": "flat",
       "body_cue": [],
-      "trigger": "when your best friend texts or when we hang out lately"
+      "trigger": "friend texts / closeness changing without a clear reason",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

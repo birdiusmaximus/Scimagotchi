@@ -2,169 +2,332 @@
   "cid": "shame__06",
   "emotion": "shame",
   "persona": null,
-  "created": "2026-06-09T18:24:15.230Z",
+  "created": "2026-06-10T22:10:57.473Z",
   "history": [
     {
       "role": "user",
-      "content": "hey. i dunno. feeling kinda off today i guess"
+      "content": "i dont even know why im here. just feeling kind of off today i guess"
     },
     {
       "role": "companion",
-      "content": "Hey — “kind of off” feels like the main thing here. Does it seem more blank, foggy, or just hard to name?"
+      "content": "That sounds like one of those off days that is hard to pin down. You don't have to know why it is here yet."
     },
     {
       "role": "user",
-      "content": "no its not foggy. i know exactly what it is. i think i messed things up with my friend maya and i feel like such an idiot"
+      "content": "yeah. idk its nothing really. theres this thing with a friend but its dumb. i dont even wanna make it a big deal"
     },
     {
       "role": "companion",
-      "content": "That sounds more like hurt and shame than just “off.” What happened with Maya?"
+      "content": "Something with a friend, and it feels too small or awkward to make a thing of. Does it feel more like flat and vague, or more like something is being held back?"
     },
     {
       "role": "user",
-      "content": "she told me smth big a while ago, about her and her ex, in confidence. and last week at dinner i kinda let it slip in front of the group. didnt even think. her face just dropped and she hasnt rly texted me back since. i feel awful"
+      "content": "held back maybe. i said something to her that i shouldnt have. like behind her back kind of. and it got back to her and now i just feel gross about it"
     },
     {
       "role": "companion",
-      "content": "That sounds really exposed and guilty — like the moment with her face dropping is still sitting close. Does it make you want to hide, apologise, or fix it?"
+      "content": "That “gross” feeling sounds like it may be shame, or something close to it. What about this moment makes it feel gross to you?"
     },
     {
       "role": "user",
-      "content": "honestly just wanna hide. but i know i should apologise properly. she trusted me and i blew it. thanks for letting me say it out loud i think i needed that. gonna go text her"
+      "content": "i dunno. like she trusted me and i just. i complained about her to someone else cause i was annoyed and it was such a small thing and now shes hurt and its my fault. i hate that im the kind of person who does that"
     },
     {
       "role": "companion",
-      "content": "That makes sense — the hiding and the wanting to apologise both fit here. We can leave it here if you want, or stay with what this says about what mattered to you."
+      "content": "It sounds painful to sit with the fact that she trusted you, and then hear yourself say, “it’s my fault.”"
     },
     {
       "role": "user",
-      "content": "yeah lets leave it here. thank you. gonna go message her now"
+      "content": "yeah. and like its not even the first time. i do this thing where i vent about people i love and then i feel like a fraud. like maybe im not actually a good friend i just pretend to be"
     },
     {
       "role": "companion",
-      "content": "Of course — I’ll leave it here. Good luck with the message."
+      "content": "I’m hearing shame mixed with self-doubt, especially around the thought that you might be a fraud. Does it feel more like wanting to hide, or wanting to repair?"
+    },
+    {
+      "role": "user",
+      "content": "repair i think. i wanna fix it but im scared shes gonna look at me different now. anyway idk. i should probably just text her or something. thanks for letting me get that out"
+    },
+    {
+      "role": "companion",
+      "content": "That fear of her looking at you differently is sitting right beside the wish to repair. We can leave it there, and I’m glad you said it out loud."
+    },
+    {
+      "role": "user",
+      "content": "yeah. thanks. gonna go try"
+    },
+    {
+      "role": "companion",
+      "content": "Take care, and I’m glad you came by to say it."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yyc2fidexp8rq",
+    "id": "evt_mq8mhq632dl0k2gc",
     "conversation_id": "shame__06",
-    "timestamp": "2026-06-09T18:24:42.691Z",
-    "user_words_raw": "she trusted me and i blew it",
+    "timestamp": "2026-06-10T22:11:44.294Z",
+    "user_words_raw": "it’s my fault",
     "emotion_status": "confirmed",
     "emotion_family": "shame",
-    "emotion_shade": "guilty",
+    "emotion_shade": "shame",
     "secondary_emotions": [
-      "hurt"
+      "fear"
     ],
-    "valence": "negative",
+    "valence": "mixed",
     "activation": "medium",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "letting a confidential thing slip in front of the group and seeing her reaction",
-    "appraisal_thought": "I blew it",
+    "trigger_event": "she found out about something said behind her back",
+    "appraisal_thought": "it’s my fault",
     "body_cue": [],
-    "behaviour_action": [
-      "hide",
-      "apologise"
-    ],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
       "repair",
       "integrity",
-      "trust"
+      "belonging"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
     "user_confirmation": "partial",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": "protective_layer",
+    "strands": [
+      {
+        "family": "shame",
+        "shade": "shame",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      },
+      {
+        "family": "fear",
+        "shade": null,
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Feeling guilty after breaking someone’s trust in a group setting.",
+    "memory_note": "Feeling shame after a friend found out about being talked about behind her back; strong wish to repair and fear of being seen differently.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey. i dunno. feeling kinda off today i guess"
+      "content": "i dont even know why im here. just feeling kind of off today i guess"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey — “kind of off” feels like the main thing here. Does it seem more blank, foggy, or just hard to name?",
-      "stage": "named",
+      "content": "That sounds like one of those off days that is hard to pin down. You don't have to know why it is here yet.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "flat",
-      "shade": "off",
+      "shade": "unclear",
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "no its not foggy. i know exactly what it is. i think i messed things up with my friend maya and i feel like such an idiot"
+      "content": "yeah. idk its nothing really. theres this thing with a friend but its dumb. i dont even wanna make it a big deal"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds more like hurt and shame than just “off.” What happened with Maya?",
-      "stage": "named",
+      "content": "Something with a friend, and it feels too small or awkward to make a thing of. Does it feel more like flat and vague, or more like something is being held back?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "shame",
-      "shade": "shame",
+      "family": "flat",
+      "shade": "unclear",
       "body_cue": [],
-      "trigger": null
+      "trigger": "something with a friend",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "unclear",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "she told me smth big a while ago, about her and her ex, in confidence. and last week at dinner i kinda let it slip in front of the group. didnt even think. her face just dropped and she hasnt rly texted me back since. i feel awful"
+      "content": "held back maybe. i said something to her that i shouldnt have. like behind her back kind of. and it got back to her and now i just feel gross about it"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds really exposed and guilty — like the moment with her face dropping is still sitting close. Does it make you want to hide, apologise, or fix it?",
-      "stage": "understood",
-      "unlocked": true,
+      "content": "That “gross” feeling sounds like it may be shame, or something close to it. What about this moment makes it feel gross to you?",
+      "stage": "shaped",
+      "unlocked": false,
       "family": "shame",
-      "shade": "guilty",
+      "shade": "shame",
       "body_cue": [],
-      "trigger": "letting a confidential thing slip in front of the group and seeing her reaction"
+      "trigger": "said something about a friend behind her back and it got back to her",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "honestly just wanna hide. but i know i should apologise properly. she trusted me and i blew it. thanks for letting me say it out loud i think i needed that. gonna go text her"
+      "content": "i dunno. like she trusted me and i just. i complained about her to someone else cause i was annoyed and it was such a small thing and now shes hurt and its my fault. i hate that im the kind of person who does that"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense — the hiding and the wanting to apologise both fit here. We can leave it here if you want, or stay with what this says about what mattered to you.",
+      "content": "It sounds painful to sit with the fact that she trusted you, and then hear yourself say, “it’s my fault.”",
       "stage": "understood",
-      "unlocked": false,
+      "unlocked": true,
       "family": "shame",
-      "shade": "guilty",
+      "shade": "shame",
       "body_cue": [],
-      "trigger": "letting a confidential thing slip in front of the group and seeing her reaction"
+      "trigger": "said something about a friend behind her back and it got back to her",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 8,
       "role": "user",
-      "content": "yeah lets leave it here. thank you. gonna go message her now"
+      "content": "yeah. and like its not even the first time. i do this thing where i vent about people i love and then i feel like a fraud. like maybe im not actually a good friend i just pretend to be"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "Of course — I’ll leave it here. Good luck with the message.",
+      "content": "I’m hearing shame mixed with self-doubt, especially around the thought that you might be a fraud. Does it feel more like wanting to hide, or wanting to repair?",
       "stage": "understood",
       "unlocked": false,
       "family": "shame",
-      "shade": "guilty",
+      "shade": "shame",
       "body_cue": [],
-      "trigger": "letting a confidential thing slip in front of the group and seeing her reaction"
+      "trigger": "venting about someone they love and it got back to the person",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "repair i think. i wanna fix it but im scared shes gonna look at me different now. anyway idk. i should probably just text her or something. thanks for letting me get that out"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That fear of her looking at you differently is sitting right beside the wish to repair. We can leave it there, and I’m glad you said it out loud.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "she found out about something said behind her back",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "fear",
+          "shade": "fear",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "yeah. thanks. gonna go try"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "Take care, and I’m glad you came by to say it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "she found out about something said behind her back",
+      "label_source": "user_confirmed",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     }
   ]
 }

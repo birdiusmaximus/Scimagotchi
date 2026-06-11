@@ -2,145 +2,320 @@
   "cid": "anger__06",
   "emotion": "anger",
   "persona": null,
-  "created": "2026-06-09T18:17:04.876Z",
+  "created": "2026-06-10T22:08:13.849Z",
   "history": [
     {
       "role": "user",
-      "content": "ugh i dont even know why im typing this. just had the most annoying day"
+      "content": "i dont even know why im here honestly. just kind of annoyed i guess"
     },
     {
       "role": "companion",
-      "content": "That sounds like a day full of friction. Was it more annoyance, frustration, or something feeling unfair?"
+      "content": "Annoyed makes sense, and the not even knowing why you came here says there may be something else mixed in too. Is it more irritation, being blocked, or just a vague worn-down feeling?"
     },
     {
       "role": "user",
-      "content": "unfair mostly. my friend cancelled on me AGAIN like an hour before. third time this month. i had the whole evening blocked out"
+      "content": "i dunno. all of it maybe. its stupid really i shouldnt even be this bothered"
     },
     {
       "role": "companion",
-      "content": "Yeah, that sounds unfair and really blocking. Did it make you want to push back, go quiet, or just get out of there?"
+      "content": "Not stupid, just more tangled than it first looked. I’m hearing annoyed sitting with some self-judgment too, and we can stay with just that if you want."
     },
     {
       "role": "user",
-      "content": "honestly i just went quiet. didnt even reply to her text. i hate that she does this and im always the one waiting around. like is my time worth nothing"
+      "content": "i guess its about my friend. she didnt show up. again. but whatever its fine people are busy"
     },
     {
       "role": "companion",
-      "content": "That quiet sounds like a sharp kind of protest, with hurt under it too. It sounds like being left waiting started to feel like “is my time worth nothing?”"
+      "content": "That sounds like the kind of not-showing-up that can leave a mark, even when you say “whatever.” I’m wondering if there’s irritation here, or if it’s edging toward feeling let down."
     },
     {
       "role": "user",
-      "content": "yeah. exactly that. idk i feel a bit lighter saying it out loud tbh. gonna go for now but thanks"
+      "content": "no its not let down its more like im just done. i always show up for her. always. and she cant even text me back. it pisses me off"
     },
     {
       "role": "companion",
-      "content": "That makes sense — we can leave it here for now. Thanks for saying it out loud."
+      "content": "That’s sounding much more like anger than let down, and it has a sharp edge to it. Is there also a sense of being ignored or not mattered to, under the anger?"
+    },
+    {
+      "role": "user",
+      "content": "yeah maybe. like i dont matter enough for her to bother. i dont know. its just always one sided and im tired of it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like anger with some hurt underneath it, and it’s been going on long enough to feel tiring. We can stay with that, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "yeah. i think thats it. im just tired. dunno what to even do about her. anyway thanks i guess. gonna go"
+    },
+    {
+      "role": "companion",
+      "content": "Take care, and thanks for trusting me with it."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yp3sb5nrvwfd7",
+    "id": "evt_mq8me8lhcfpq48a7",
     "conversation_id": "anger__06",
-    "timestamp": "2026-06-09T18:17:25.269Z",
-    "user_words_raw": "went quiet",
+    "timestamp": "2026-06-10T22:08:51.255Z",
+    "user_words_raw": "i dont matter enough for her to bother",
     "emotion_status": "confirmed",
-    "emotion_family": "anger",
-    "emotion_shade": "resigned",
+    "emotion_family": "sadness",
+    "emotion_shade": "tired",
     "secondary_emotions": [
+      "anger",
       "hurt"
     ],
     "valence": "negative",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "friend cancelled on me AGAIN like an hour before, third time this month",
-    "appraisal_thought": "is my time worth nothing",
+    "trigger_event": "friend did not show up and did not text back",
+    "appraisal_thought": "it feels one sided and like I don't matter enough",
     "body_cue": [],
-    "behaviour_action": [
-      "went quiet",
-      "didnt even reply to her text"
-    ],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
       "respect",
-      "being heard",
-      "fairness"
+      "reciprocity",
+      "being heard"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "user_stated",
+    "user_rejected_shades": [
+      "let down"
+    ],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "anger",
+        "shade": "frustrated",
+        "salience": "foreground",
+        "source": "user_stated"
+      },
+      {
+        "family": "hurt",
+        "shade": null,
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "feels put off by repeated last-minute cancellations from someone close",
+    "memory_note": "A friendship pattern feels one sided, with missed plans and no reply.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "ugh i dont even know why im typing this. just had the most annoying day"
+      "content": "i dont even know why im here honestly. just kind of annoyed i guess"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds like a day full of friction. Was it more annoyance, frustration, or something feeling unfair?",
+      "content": "Annoyed makes sense, and the not even knowing why you came here says there may be something else mixed in too. Is it more irritation, being blocked, or just a vague worn-down feeling?",
       "stage": "named",
       "unlocked": false,
       "family": "anger",
-      "shade": "annoying",
+      "shade": "annoyed",
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "user_stated",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "annoyed",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "unfair mostly. my friend cancelled on me AGAIN like an hour before. third time this month. i had the whole evening blocked out"
+      "content": "i dunno. all of it maybe. its stupid really i shouldnt even be this bothered"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "Yeah, that sounds unfair and really blocking. Did it make you want to push back, go quiet, or just get out of there?",
-      "stage": "named",
+      "content": "Not stupid, just more tangled than it first looked. I’m hearing annoyed sitting with some self-judgment too, and we can stay with just that if you want.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "anger",
-      "shade": "frustrated",
+      "shade": "annoyed",
       "body_cue": [],
-      "trigger": "a friend cancelled an hour before, for the third time this month"
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "annoyed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "honestly i just went quiet. didnt even reply to her text. i hate that she does this and im always the one waiting around. like is my time worth nothing"
+      "content": "i guess its about my friend. she didnt show up. again. but whatever its fine people are busy"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That quiet sounds like a sharp kind of protest, with hurt under it too. It sounds like being left waiting started to feel like “is my time worth nothing?”",
-      "stage": "understood",
-      "unlocked": true,
-      "family": "anger",
-      "shade": "resigned",
+      "content": "That sounds like the kind of not-showing-up that can leave a mark, even when you say “whatever.” I’m wondering if there’s irritation here, or if it’s edging toward feeling let down.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "let down",
       "body_cue": [],
-      "trigger": "friend cancelled on me AGAIN like an hour before, third time this month"
+      "trigger": "friend didn't show up again",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "annoyed",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": "let down",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "yeah. exactly that. idk i feel a bit lighter saying it out loud tbh. gonna go for now but thanks"
+      "content": "no its not let down its more like im just done. i always show up for her. always. and she cant even text me back. it pisses me off"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense — we can leave it here for now. Thanks for saying it out loud.",
-      "stage": "understood",
+      "content": "That’s sounding much more like anger than let down, and it has a sharp edge to it. Is there also a sense of being ignored or not mattered to, under the anger?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "anger",
-      "shade": "resigned",
+      "shade": "frustrated",
       "body_cue": [],
-      "trigger": "friend cancelled on me AGAIN like an hour before, third time this month"
+      "trigger": "friend didn't show up again and didn't text back",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "frustrated",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah maybe. like i dont matter enough for her to bother. i dont know. its just always one sided and im tired of it"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like anger with some hurt underneath it, and it’s been going on long enough to feel tiring. We can stay with that, or leave it here for now.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "friend did not show up again and did not text back",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "frustrated",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. i think thats it. im just tired. dunno what to even do about her. anyway thanks i guess. gonna go"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Take care, and thanks for trusting me with it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "tired",
+      "body_cue": [],
+      "trigger": "friend did not show up and did not text back",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "frustrated",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     }
   ]
 }

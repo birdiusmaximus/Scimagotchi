@@ -1,0 +1,146 @@
+{
+  "cid": "hurt__07",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-09T18:21:15.134Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "honestly im just annoyed. my girlfriend forgot our anniversary last week and i cant let it go"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really annoying, and maybe a bit stuck in your mind because it mattered. Was it more like feeling disrespected, or more like frustration that it got missed?"
+    },
+    {
+      "role": "user",
+      "content": "i guess not disrespected exactly. more like... i had this whole night planned and she just blanked on it. like it didnt even register for her"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds more like frustration and a little let-down — like you had something real in mind and it just didn’t land for her. Did it feel more blocked or sharp, or did it make you want to pull back?"
+    },
+    {
+      "role": "user",
+      "content": "yeah pull back i think. i didnt even say anything to her about it. just kind of went quiet. feels stupid to be this bothered but it stings that i remembered and she didnt"
+    },
+    {
+      "role": "companion",
+      "content": "That sting makes sense to me — it sounds like a quiet hurt wrapped inside the frustration. Do you want to stay with it a little, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "yeah hurt is probably the right word for it. i think ill leave it here. maybe ill actually just tell her instead of sulking. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a clear place to pause. Thanks for telling me what it is."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yuhk8uss3wvd9",
+    "conversation_id": "hurt__07",
+    "timestamp": "2026-06-09T18:21:34.589Z",
+    "user_words_raw": "it stings",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "hurt",
+    "secondary_emotions": [
+      "frustration"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "girlfriend forgot their anniversary and it didn't register for her",
+    "appraisal_thought": "i remembered and she didnt",
+    "body_cue": [],
+    "behaviour_action": [
+      "went quiet",
+      "pull back"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "being seen",
+      "care",
+      "repair"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Anniversary forgetfulness can land as hurt and withdrawal when they had planned something important.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "honestly im just annoyed. my girlfriend forgot our anniversary last week and i cant let it go"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds really annoying, and maybe a bit stuck in your mind because it mattered. Was it more like feeling disrespected, or more like frustration that it got missed?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "annoyed",
+      "body_cue": [],
+      "trigger": "girlfriend forgot their anniversary"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i guess not disrespected exactly. more like... i had this whole night planned and she just blanked on it. like it didnt even register for her"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds more like frustration and a little let-down — like you had something real in mind and it just didn’t land for her. Did it feel more blocked or sharp, or did it make you want to pull back?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "girlfriend forgot their anniversary and it didn’t register for her"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah pull back i think. i didnt even say anything to her about it. just kind of went quiet. feels stupid to be this bothered but it stings that i remembered and she didnt"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sting makes sense to me — it sounds like a quiet hurt wrapped inside the frustration. Do you want to stay with it a little, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "sting",
+      "body_cue": [],
+      "trigger": "girlfriend forgot their anniversary and it didn't register for her"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah hurt is probably the right word for it. i think ill leave it here. maybe ill actually just tell her instead of sulking. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That feels like a clear place to pause. Thanks for telling me what it is.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "girlfriend forgot their anniversary and it didn't register for her"
+    }
+  ]
+}

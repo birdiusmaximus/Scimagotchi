@@ -1,0 +1,288 @@
+{
+  "cid": "joy__05",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-10T17:06:42.035Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok this is gonna sound dumb but i found my old guitar in my parents garage last weekend lol"
+    },
+    {
+      "role": "companion",
+      "content": "Not dumb at all, finding an old guitar can land in a surprisingly specific way. An old thing from a garage has a whole kind of weight to it."
+    },
+    {
+      "role": "user",
+      "content": "ha yeah. it's all dusty and one string snapped but i kinda lit up when i saw it. i played constantly when i was like 16. badly. but constantly"
+    },
+    {
+      "role": "companion",
+      "content": "\"I kinda lit up\" and the old, dusty guitar both stand out to me. It sounds like the guitar is carrying a lot of that 16-year-old version of you, even with one string snapped."
+    },
+    {
+      "role": "user",
+      "content": "yeah idk. it's a good memory, my best mate and i had this 'band' that played like one party and broke up the same night lol. but holding it again was kind of a gut punch too? we don't really talk anymore"
+    },
+    {
+      "role": "companion",
+      "content": "That one-night \"band\" and then the gut punch both matter here. What feels closest when you hold that, the good memory or the part about not really talking anymore?"
+    },
+    {
+      "role": "user",
+      "content": "honestly mostly the good part, i smile every time i think about how bad we were. but theres a little ache under it. like grateful it happened more than sad it ended? if that makes sense. (also we were SO bad. genuinely awful)"
+    },
+    {
+      "role": "companion",
+      "content": "“Grateful it happened more than sad it ended” feels like the centre of it, with a little ache underneath. I’m hearing that the badness is part of what makes the memory funny and dear, too."
+    },
+    {
+      "role": "user",
+      "content": "yeah. wistful is a good word for it. maybe ill text him a pic of the cursed guitar lol. worst case he leaves me on read which is very on brand for that band"
+    },
+    {
+      "role": "companion",
+      "content": "“Wistful” fits neatly here, with a playful edge around the old band too. Does the ache feel more like missing him, or just that tender pull of the memory?"
+    },
+    {
+      "role": "user",
+      "content": "bit of both probably. but mostly just a nice pull. anyway im gonna go restring this thing and embarrass myself. thanks, this was kinda nice"
+    },
+    {
+      "role": "companion",
+      "content": "A nice pull is a good way to leave it, and I hope the cursed guitar behaves itself."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bmgguj6c64bf9",
+    "conversation_id": "joy__05",
+    "timestamp": "2026-06-10T17:07:21.346Z",
+    "user_words_raw": "a nice pull",
+    "emotion_status": "confirmed",
+    "emotion_family": "sadness",
+    "emotion_shade": "wistful",
+    "secondary_emotions": [],
+    "valence": "mixed",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "finding the old guitar and thinking about the one-night band and the friend",
+    "appraisal_thought": "mostly a nice pull, with a little ache underneath",
+    "body_cue": [],
+    "behaviour_action": [
+      "restring the guitar",
+      "text him a picture"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "meaning",
+      "memory"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "sadness",
+        "shade": "wistful",
+        "salience": "foreground",
+        "source": "user_stated"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "An old music memory with a close friend still feels tender and playful.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok this is gonna sound dumb but i found my old guitar in my parents garage last weekend lol"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Not dumb at all, finding an old guitar can land in a surprisingly specific way. An old thing from a garage has a whole kind of weight to it.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": "found old guitar in parents' garage",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "ha yeah. it's all dusty and one string snapped but i kinda lit up when i saw it. i played constantly when i was like 16. badly. but constantly"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "\"I kinda lit up\" and the old, dusty guitar both stand out to me. It sounds like the guitar is carrying a lot of that 16-year-old version of you, even with one string snapped.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "delight",
+      "body_cue": [],
+      "trigger": "found old guitar in parents' garage",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "delight",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah idk. it's a good memory, my best mate and i had this 'band' that played like one party and broke up the same night lol. but holding it again was kind of a gut punch too? we don't really talk anymore"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That one-night \"band\" and then the gut punch both matter here. What feels closest when you hold that, the good memory or the part about not really talking anymore?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "loss",
+      "body_cue": [],
+      "trigger": "holding the old guitar again after not talking with a best mate anymore",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "delight",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": "loss",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "honestly mostly the good part, i smile every time i think about how bad we were. but theres a little ache under it. like grateful it happened more than sad it ended? if that makes sense. (also we were SO bad. genuinely awful)"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "“Grateful it happened more than sad it ended” feels like the centre of it, with a little ache underneath. I’m hearing that the badness is part of what makes the memory funny and dear, too.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "wistful",
+      "body_cue": [],
+      "trigger": "Holding the old guitar and remembering the one-night band with a best mate",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "wistful",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "joy",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. wistful is a good word for it. maybe ill text him a pic of the cursed guitar lol. worst case he leaves me on read which is very on brand for that band"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "“Wistful” fits neatly here, with a playful edge around the old band too. Does the ache feel more like missing him, or just that tender pull of the memory?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "sadness",
+      "shade": "wistful",
+      "body_cue": [],
+      "trigger": "Finding the old guitar and thinking about the one-night band and the friend",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "wistful",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "joy",
+          "shade": "playful",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "bit of both probably. but mostly just a nice pull. anyway im gonna go restring this thing and embarrass myself. thanks, this was kinda nice"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "A nice pull is a good way to leave it, and I hope the cursed guitar behaves itself.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "wistful",
+      "body_cue": [],
+      "trigger": "finding the old guitar and thinking about the one-night band and the friend",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "wistful",
+          "salience": "foreground",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    }
+  ]
+}

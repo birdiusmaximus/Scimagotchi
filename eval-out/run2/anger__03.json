@@ -1,0 +1,213 @@
+{
+  "cid": "anger__03",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-10T17:10:01.789Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. how's it going"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, good to see you. I'm here and ready, what's been going on today?"
+    },
+    {
+      "role": "user",
+      "content": "eh. not much. just dealing with money stuff. it's fine i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Money stuff can make the day feel heavier than it should. I’m here if you want to say a bit more, or we can leave it there."
+    },
+    {
+      "role": "user",
+      "content": "my roommate still hasn't paid me back his half of rent. third month now. i covered it again and i'm just. ugh"
+    },
+    {
+      "role": "companion",
+      "content": "That “ugh” feels like the sharpest part of it. Is this more pressure, frustration, or something like being taken for granted?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. taken for granted. like he just assumes i'll cover it and never says anything. it's frustrating. anyway. i don't really wanna get into it more"
+    },
+    {
+      "role": "companion",
+      "content": "Taken for granted and frustrated both fit here. We can leave it there, or if you want to stay with it, I can help you notice whether it feels more tense, heavy, or like you want to pull back."
+    },
+    {
+      "role": "user",
+      "content": "nah let's leave it there. thanks tho. i feel a bit better just saying it out loud"
+    },
+    {
+      "role": "companion",
+      "content": "Glad it could have a bit of air, and we can leave it right here."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bqqleg1d862xr",
+    "conversation_id": "anger__03",
+    "timestamp": "2026-06-10T17:10:24.231Z",
+    "user_words_raw": "a bit better just saying it out loud",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "frustrated",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "roommate still hasn't paid back his half of rent for the third month",
+    "appraisal_thought": "he assumes i'll cover it",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "User sometimes feels lighter after naming a frustration out loud.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. how's it going"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, good to see you. I'm here and ready, what's been going on today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "eh. not much. just dealing with money stuff. it's fine i guess"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Money stuff can make the day feel heavier than it should. I’m here if you want to say a bit more, or we can leave it there.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressure",
+      "body_cue": [],
+      "trigger": "dealing with money stuff",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "my roommate still hasn't paid me back his half of rent. third month now. i covered it again and i'm just. ugh"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That “ugh” feels like the sharpest part of it. Is this more pressure, frustration, or something like being taken for granted?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressure",
+      "body_cue": [],
+      "trigger": "roommate still hasn't paid back his half of rent for the third month",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "pressure",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": "frustration",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah. taken for granted. like he just assumes i'll cover it and never says anything. it's frustrating. anyway. i don't really wanna get into it more"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Taken for granted and frustrated both fit here. We can leave it there, or if you want to stay with it, I can help you notice whether it feels more tense, heavy, or like you want to pull back.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "roommate still hasn't paid back his half of rent for the third month",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "frustrated",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "pressure",
+          "shade": "pressure",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "nah let's leave it there. thanks tho. i feel a bit better just saying it out loud"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Glad it could have a bit of air, and we can leave it right here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "roommate still hasn't paid back his half of rent for the third month",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

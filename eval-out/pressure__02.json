@@ -2,168 +2,161 @@
   "cid": "pressure__02",
   "emotion": "pressure",
   "persona": null,
-  "created": "2026-06-09T17:45:14.734Z",
+  "created": "2026-06-10T22:06:47.351Z",
   "history": [
     {
       "role": "user",
-      "content": "hi. um i dont really know how to use this but i just feel like everything is too much right now"
+      "content": "honestly just feeling so stretched right now. theres too much going on and i cant keep up with any of it"
     },
     {
       "role": "companion",
-      "content": "Hey, that sounds like a lot to be carrying. Is it more like pressure, too much to do, or too much feeling?"
+      "content": "That sounds like everything is pulling at once, and there isn’t enough room to keep up."
     },
     {
       "role": "user",
-      "content": "honestly both? like theres too much to do but also i feel kind of guilty that im even stressed about it. its not even big stuff. just the dishes and laundry and like 40 unread emails and my mom keeps texting and i havent answered and now its been days"
+      "content": "yeah exactly. like work is insane this week and then my mum needs me to sort out her appointments and the house is a mess and i havent even done laundry in like 2 weeks. its all just piling"
     },
     {
       "role": "companion",
-      "content": "That sounds like overwhelmed plus a guilty edge, especially with the dishes, laundry, and unread emails piling up. Does it feel more rushed, trapped, or just heavy?"
+      "content": "It sounds piled up into one heavy pile, with work, your mum, and all the unfinished home stuff pressing at once. Is it feeling more rushed, overloaded, or trapped?"
     },
     {
       "role": "user",
-      "content": "heavy i think. like i open the laptop and just close it again. the mom thing is the worst part tho, i love her i just cant find the words and it makes me feel like a bad daughter"
+      "content": "overloaded i think. theres just no room to breathe. anyway i dont have time to get into it all right now i just needed to get it out somewhere"
     },
     {
       "role": "companion",
-      "content": "Heavy, and then the mom texts seem to carry the worst of it — like there’s love there, and also that “bad daughter” feeling. Does it feel more like shame, or more like being stuck and unable to answer?"
+      "content": "That makes sense, overloaded fits better, and “no room to breathe” gives it a really clear edge. We can leave it there for now, or stay with it another time if you want."
     },
     {
       "role": "user",
-      "content": "stuck i think. saying it out loud makes it feel smaller tho. maybe ill just text her something tiny tonight. thank you, i needed this. gonna go try"
+      "content": "yeah lets leave it there. thanks, that actually helped a bit. gotta run"
     },
     {
       "role": "companion",
-      "content": "I'm glad saying it made it feel a little smaller. We can leave it here, or if you want, we can sit with that stuck feeling a bit longer before you go."
-    },
-    {
-      "role": "user",
-      "content": "lets leave it here for now. im gonna go do the tiny thing before i lose the nerve. thanks again"
-    },
-    {
-      "role": "companion",
-      "content": "Of course — that sounds like enough for now. Go do the tiny thing, and we can pick this up anytime."
+      "content": "Of course, I’m glad you could let it out here. Go on with your day, and take care."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6xk87h1alsic0s",
+    "id": "evt_mq8mcda5yt4yg4hu",
     "conversation_id": "pressure__02",
-    "timestamp": "2026-06-09T17:45:44.584Z",
-    "user_words_raw": "bad daughter",
+    "timestamp": "2026-06-10T22:07:08.524Z",
+    "user_words_raw": "no room to breathe",
     "emotion_status": "confirmed",
-    "emotion_family": "shame",
-    "emotion_shade": "stuck",
-    "secondary_emotions": [
-      "pressure"
-    ],
-    "valence": "mixed",
-    "activation": "medium",
+    "emotion_family": "pressure",
+    "emotion_shade": "overloaded",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "high",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "too many small tasks and not replying to mom's texts for days",
-    "appraisal_thought": "I'm a bad daughter",
+    "trigger_event": "work is intense this week, mum needs appointments sorted, house chores and laundry are backing up",
+    "appraisal_thought": "there is too much coming at once and no room to breathe",
     "body_cue": [],
-    "behaviour_action": [
-      "open the laptop and just close it again"
-    ],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "repair",
-      "belonging",
-      "dignity"
+      "space",
+      "clarity"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Feels stuck and guilty around small tasks and replying to mom",
+    "memory_note": "User sometimes just wants to get it out somewhere and then leave it there.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hi. um i dont really know how to use this but i just feel like everything is too much right now"
+      "content": "honestly just feeling so stretched right now. theres too much going on and i cant keep up with any of it"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey, that sounds like a lot to be carrying. Is it more like pressure, too much to do, or too much feeling?",
-      "stage": "named",
+      "content": "That sounds like everything is pulling at once, and there isn’t enough room to keep up.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "pressure",
-      "shade": "overwhelmed",
+      "shade": "stretched",
       "body_cue": [],
-      "trigger": null
+      "trigger": "too much going on",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "honestly both? like theres too much to do but also i feel kind of guilty that im even stressed about it. its not even big stuff. just the dishes and laundry and like 40 unread emails and my mom keeps texting and i havent answered and now its been days"
+      "content": "yeah exactly. like work is insane this week and then my mum needs me to sort out her appointments and the house is a mess and i havent even done laundry in like 2 weeks. its all just piling"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds like overwhelmed plus a guilty edge, especially with the dishes, laundry, and unread emails piling up. Does it feel more rushed, trapped, or just heavy?",
-      "stage": "named",
+      "content": "It sounds piled up into one heavy pile, with work, your mum, and all the unfinished home stuff pressing at once. Is it feeling more rushed, overloaded, or trapped?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "pressure",
-      "shade": "overwhelmed",
+      "shade": "overloaded",
       "body_cue": [],
-      "trigger": "too many small tasks and missed messages piling up"
+      "trigger": "work is insane this week, mum needs appointments sorted, house is a mess, laundry backed up",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "heavy i think. like i open the laptop and just close it again. the mom thing is the worst part tho, i love her i just cant find the words and it makes me feel like a bad daughter"
+      "content": "overloaded i think. theres just no room to breathe. anyway i dont have time to get into it all right now i just needed to get it out somewhere"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "Heavy, and then the mom texts seem to carry the worst of it — like there’s love there, and also that “bad daughter” feeling. Does it feel more like shame, or more like being stuck and unable to answer?",
+      "content": "That makes sense, overloaded fits better, and “no room to breathe” gives it a really clear edge. We can leave it there for now, or stay with it another time if you want.",
       "stage": "understood",
       "unlocked": true,
-      "family": "shame",
-      "shade": "guilty",
+      "family": "pressure",
+      "shade": "overloaded",
       "body_cue": [],
-      "trigger": "too many small tasks and not replying to mom's texts for days"
+      "trigger": "work is insane this week, mum needs appointments sorted, house is a mess, laundry backed up",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "stuck i think. saying it out loud makes it feel smaller tho. maybe ill just text her something tiny tonight. thank you, i needed this. gonna go try"
+      "content": "yeah lets leave it there. thanks, that actually helped a bit. gotta run"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "I'm glad saying it made it feel a little smaller. We can leave it here, or if you want, we can sit with that stuck feeling a bit longer before you go.",
+      "content": "Of course, I’m glad you could let it out here. Go on with your day, and take care.",
       "stage": "understood",
       "unlocked": false,
-      "family": "shame",
-      "shade": "stuck",
+      "family": "pressure",
+      "shade": "overloaded",
       "body_cue": [],
-      "trigger": "too many small tasks and not replying to mom's texts for days"
-    },
-    {
-      "turn": 8,
-      "role": "user",
-      "content": "lets leave it here for now. im gonna go do the tiny thing before i lose the nerve. thanks again"
-    },
-    {
-      "turn": 9,
-      "role": "companion",
-      "content": "Of course — that sounds like enough for now. Go do the tiny thing, and we can pick this up anytime.",
-      "stage": "understood",
-      "unlocked": false,
-      "family": "shame",
-      "shade": "stuck",
-      "body_cue": [],
-      "trigger": "too many small tasks and not replying to mom's texts for days"
+      "trigger": "work is intense this week, mum needs appointments sorted, house chores and laundry are backing up",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

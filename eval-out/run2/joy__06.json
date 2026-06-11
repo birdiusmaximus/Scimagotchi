@@ -1,0 +1,270 @@
+{
+  "cid": "joy__06",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-10T17:06:42.211Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk why im even opening this. nothings wrong. i just feel kind of... good? i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That little hesitation around \"good?\" is the part that stands out to me. We can just stay with that as it is, if you want."
+    },
+    {
+      "role": "user",
+      "content": "i dont know. its not a big deal. someone just texted me out of nowhere today and i guess it stuck with me"
+    },
+    {
+      "role": "companion",
+      "content": "There is something quietly good in that, and maybe a little surprising too. Where does it show up for you, if you notice it at all, in your body or in the moment when the text landed?"
+    },
+    {
+      "role": "user",
+      "content": "ugh i dont know how to answer that. um. it was my friend from uni. we kind of fell off like 2 years ago and i always figured she just forgot about me"
+    },
+    {
+      "role": "companion",
+      "content": "That lands as more than a random text, I think. It sounds like it touched the place where you had already been bracing to be forgotten."
+    },
+    {
+      "role": "user",
+      "content": "no its not a sad thing tho. like thats the weird part. i read it and i actually smiled? she said she found an old photo of us and missed me. ive been kind of glowing about it all day and i feel silly even saying that"
+    },
+    {
+      "role": "companion",
+      "content": "\"Glowing all day\" feels like the centre of this, and the old photo seems to have opened something warm and a bit tender. Want to stay with that glow, or leave it there for now?"
+    },
+    {
+      "role": "user",
+      "content": "i can stay a sec. i think it just means more than id admit. like maybe i didnt ruin it. maybe she actually thinks about me too. we havent even made plans yet but just knowing im still in her head somewhere... yeah. that"
+    },
+    {
+      "role": "companion",
+      "content": "“Maybe I didn’t ruin it” and “I’m still in her head somewhere” feels like the heart of it. It sounds like being thought of again, without having to prove anything first, really mattered, does that fit?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. that fits. ok im a little teary now lol. didnt expect that from a text. thanks for letting me say it out loud. gonna go reply to her now"
+    },
+    {
+      "role": "companion",
+      "content": "I'm glad you said it here, and it can rest with you as you go reply to her."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bmgkko4q5xh3n",
+    "conversation_id": "joy__06",
+    "timestamp": "2026-06-10T17:07:19.784Z",
+    "user_words_raw": "a little teary",
+    "emotion_status": "confirmed",
+    "emotion_family": "joy",
+    "emotion_shade": "touched",
+    "secondary_emotions": [
+      "relief"
+    ],
+    "valence": "positive",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "A friend from uni texted after two years apart and said she found an old photo and missed them.",
+    "appraisal_thought": "Maybe I didn't ruin it. Maybe she actually thinks about me too.",
+    "body_cue": [],
+    "behaviour_action": [
+      "teary"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "belonging",
+      "being remembered"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": "simultaneous",
+    "strands": [
+      {
+        "family": "joy",
+        "shade": "touched",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "A friend from uni reaching out after a long gap can bring warmth, relief, and tears.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk why im even opening this. nothings wrong. i just feel kind of... good? i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That little hesitation around \"good?\" is the part that stands out to me. We can just stay with that as it is, if you want.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "hopeful",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i dont know. its not a big deal. someone just texted me out of nowhere today and i guess it stuck with me"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "There is something quietly good in that, and maybe a little surprising too. Where does it show up for you, if you notice it at all, in your body or in the moment when the text landed?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "hopeful",
+      "body_cue": [],
+      "trigger": "someone texted out of nowhere today",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "hopeful",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "ugh i dont know how to answer that. um. it was my friend from uni. we kind of fell off like 2 years ago and i always figured she just forgot about me"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That lands as more than a random text, I think. It sounds like it touched the place where you had already been bracing to be forgotten.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [],
+      "trigger": "a friend from uni texted out of nowhere after two years apart",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "left out",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "joy",
+          "shade": "hopeful",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "no its not a sad thing tho. like thats the weird part. i read it and i actually smiled? she said she found an old photo of us and missed me. ive been kind of glowing about it all day and i feel silly even saying that"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "\"Glowing all day\" feels like the centre of this, and the old photo seems to have opened something warm and a bit tender. Want to stay with that glow, or leave it there for now?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "pleased",
+      "body_cue": [],
+      "trigger": "friend from uni texted after two years apart and said she found an old photo and missed them",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "pleased",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": "left out",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i can stay a sec. i think it just means more than id admit. like maybe i didnt ruin it. maybe she actually thinks about me too. we havent even made plans yet but just knowing im still in her head somewhere... yeah. that"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "“Maybe I didn’t ruin it” and “I’m still in her head somewhere” feels like the heart of it. It sounds like being thought of again, without having to prove anything first, really mattered, does that fit?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relieved",
+      "body_cue": [],
+      "trigger": "a friend from uni texted after two years apart, said she found an old photo and missed them",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. that fits. ok im a little teary now lol. didnt expect that from a text. thanks for letting me say it out loud. gonna go reply to her now"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I'm glad you said it here, and it can rest with you as you go reply to her.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "touched",
+      "body_cue": [],
+      "trigger": "A friend from uni texted after two years apart and said she found an old photo and missed them.",
+      "label_source": "user_confirmed",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "touched",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        }
+      ],
+      "mixed_confirmed": 0
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "cid": "hurt__04",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-10T17:11:53.033Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i think im just annoyed. my sister didnt invite me to her birthday dinner this weekend"
+    },
+    {
+      "role": "companion",
+      "content": "Annoyed fits, and the dinner invite sounds like the kind of thing that can feel cutting. Was it more the exclusion itself, or the fact that it was your sister?"
+    },
+    {
+      "role": "user",
+      "content": "honestly its that its my sister. like she invited her coworkers and her boyfriends friends but not me. we used to be so close"
+    },
+    {
+      "role": "companion",
+      "content": "That lands like more than a small annoyance, maybe hurt or a kind of being pushed aside. Did it feel more like being left out, or more like the closeness itself changed?"
+    },
+    {
+      "role": "user",
+      "content": "yeah... the closeness changed. i guess it just hurts that she didnt even think of me. like im not someone she wants around anymore"
+    },
+    {
+      "role": "companion",
+      "content": "“Didn’t even think of me” feels like the centre of this, and it sounds painful in a very personal way. You could leave it there if you want, or we can stay with what it seemed to say about you."
+    },
+    {
+      "role": "user",
+      "content": "yeah i think ill leave it there for now. just needed to say it out loud. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, and I’m glad you said it out loud here."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bt4njld0526kr",
+    "conversation_id": "hurt__04",
+    "timestamp": "2026-06-10T17:12:15.813Z",
+    "user_words_raw": "didnt even think of me",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "rejected",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "sister invited coworkers and boyfriend's friends to birthday dinner but not user",
+    "appraisal_thought": "she didnt even think of me",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "belonging",
+      "care",
+      "being seen"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "user_rejected_shades": [
+      "left out"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Feeling left out by a sibling’s social exclusion from a birthday dinner, and the closeness between them feels changed.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i think im just annoyed. my sister didnt invite me to her birthday dinner this weekend"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Annoyed fits, and the dinner invite sounds like the kind of thing that can feel cutting. Was it more the exclusion itself, or the fact that it was your sister?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "annoyed",
+      "body_cue": [],
+      "trigger": "not being invited to sister's birthday dinner",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "annoyed",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "honestly its that its my sister. like she invited her coworkers and her boyfriends friends but not me. we used to be so close"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That lands like more than a small annoyance, maybe hurt or a kind of being pushed aside. Did it feel more like being left out, or more like the closeness itself changed?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [],
+      "trigger": "sister invited coworkers and boyfriend's friends to birthday dinner but not user",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "left out",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": "annoyed",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah... the closeness changed. i guess it just hurts that she didnt even think of me. like im not someone she wants around anymore"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "“Didn’t even think of me” feels like the centre of this, and it sounds painful in a very personal way. You could leave it there if you want, or we can stay with what it seemed to say about you.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "rejected",
+      "body_cue": [],
+      "trigger": "sister invited others to birthday dinner but not user",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "rejected",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah i think ill leave it there for now. just needed to say it out loud. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Of course, and I’m glad you said it out loud here.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "rejected",
+      "body_cue": [],
+      "trigger": "sister invited coworkers and boyfriend's friends to birthday dinner but not user",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

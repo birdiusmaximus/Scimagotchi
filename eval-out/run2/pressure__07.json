@@ -1,0 +1,281 @@
+{
+  "cid": "pressure__07",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-10T17:09:35.495Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so i dont really get how this works but here goes. honestly just feeling kind of stretched thin lately"
+    },
+    {
+      "role": "companion",
+      "content": "“Stretched thin” feels like the centre of this. I’m here with that, and we can just stay with it for a moment if you want."
+    },
+    {
+      "role": "user",
+      "content": "i mean its mostly my partner. we moved in together like 3 months ago and its just a lot more than i expected. feels like im always on"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a lot of constant pressure, maybe with some feeling of being on all the time. Is the hardest part the amount, the urgency, or not getting any real off-switch?"
+    },
+    {
+      "role": "user",
+      "content": "the off switch thing yeah. like she wants to talk through everything the second i walk in the door. dishes, plans, her day, our day. i barely sit down before its go time"
+    },
+    {
+      "role": "companion",
+      "content": "The second you walk in the door, it is already “go time.” That no off-switch part feels very clear."
+    },
+    {
+      "role": "user",
+      "content": "and then i feel bad cuz shes not doing anything wrong. she just wants to connect. but i need like 20 min of quiet and i dont know how to ask for that without it turning into a thing"
+    },
+    {
+      "role": "companion",
+      "content": "There is a lot of guilt braided into this, alongside the pressure. Does the “turning into a thing” feel more like fear of upsetting her, or pressure to explain yourself?"
+    },
+    {
+      "role": "user",
+      "content": "more like having to explain myself. like if i say i need a minute shell ask why and i dont have a good reason, i just do. saying it out loud it sounds kind of small honestly"
+    },
+    {
+      "role": "companion",
+      "content": "That does not sound small to me, it sounds exposed, especially when you already have to account for it out loud. Is it more like guilt about needing the quiet, or embarrassment at having to explain it?"
+    },
+    {
+      "role": "user",
+      "content": "guilt mostly. anyway this was less weird than i thought it would be. i think i just needed to say it somewhere. gonna try actually asking her for the 20 min tonight. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Guilt mostly, and the part that needed saying was that you just do need the quiet. I can leave it here, and I’m glad you got to put it somewhere."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bq66rrg1pyumi",
+    "conversation_id": "pressure__07",
+    "timestamp": "2026-06-10T17:10:11.974Z",
+    "user_words_raw": "guilt mostly",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "exposed",
+    "secondary_emotions": [
+      "pressure"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "being asked why they need a minute of quiet after coming home",
+    "appraisal_thought": "I need quiet, but I have to justify it.",
+    "body_cue": [],
+    "behaviour_action": [
+      "wanting to explain yourself"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "quiet",
+      "understanding",
+      "dignity"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "shame",
+        "shade": "exposed",
+        "salience": "foreground",
+        "source": "user_stated"
+      },
+      {
+        "family": "pressure",
+        "shade": null,
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 1,
+    "unlock_stage": "understood",
+    "memory_note": "After coming home, they need quiet before talking things through, and needing to explain that feels exposed.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so i dont really get how this works but here goes. honestly just feeling kind of stretched thin lately"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "“Stretched thin” feels like the centre of this. I’m here with that, and we can just stay with it for a moment if you want.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "stretched",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i mean its mostly my partner. we moved in together like 3 months ago and its just a lot more than i expected. feels like im always on"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a lot of constant pressure, maybe with some feeling of being on all the time. Is the hardest part the amount, the urgency, or not getting any real off-switch?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressured",
+      "body_cue": [],
+      "trigger": "moved in together 3 months ago and the relationship feels like more than expected",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "the off switch thing yeah. like she wants to talk through everything the second i walk in the door. dishes, plans, her day, our day. i barely sit down before its go time"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "The second you walk in the door, it is already “go time.” That no off-switch part feels very clear.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "pressured",
+      "body_cue": [],
+      "trigger": "coming home and being met with immediate conversation about dishes, plans, and the day",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "and then i feel bad cuz shes not doing anything wrong. she just wants to connect. but i need like 20 min of quiet and i dont know how to ask for that without it turning into a thing"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "There is a lot of guilt braided into this, alongside the pressure. Does the “turning into a thing” feel more like fear of upsetting her, or pressure to explain yourself?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "guilty",
+      "body_cue": [],
+      "trigger": "coming home and being met with immediate conversation about dishes, plans, the day",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "guilty",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": "pressured",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "more like having to explain myself. like if i say i need a minute shell ask why and i dont have a good reason, i just do. saying it out loud it sounds kind of small honestly"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That does not sound small to me, it sounds exposed, especially when you already have to account for it out loud. Is it more like guilt about needing the quiet, or embarrassment at having to explain it?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "exposed",
+      "body_cue": [],
+      "trigger": "being asked why they need a minute of quiet after coming home",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "exposed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": "pressure",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "guilt mostly. anyway this was less weird than i thought it would be. i think i just needed to say it somewhere. gonna try actually asking her for the 20 min tonight. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Guilt mostly, and the part that needed saying was that you just do need the quiet. I can leave it here, and I’m glad you got to put it somewhere.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "exposed",
+      "body_cue": [],
+      "trigger": "being asked why they need a minute of quiet after coming home",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "exposed",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
+    }
+  ]
+}

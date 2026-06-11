@@ -2,184 +2,201 @@
   "cid": "hurt__04",
   "emotion": "hurt",
   "persona": null,
-  "created": "2026-06-09T18:20:53.281Z",
+  "created": "2026-06-10T22:09:39.712Z",
   "history": [
     {
       "role": "user",
-      "content": "hey there. how are you today?"
+      "content": "i think im just annoyed. my sister didnt show up to my kids birthday and didnt even text"
     },
     {
       "role": "companion",
-      "content": "Hey there — I'm here and glad you stopped by. How’s your day been so far?"
+      "content": "Annoyed fits here, and it also sounds like there’s some hurt or feeling brushed aside underneath it. What part of her not showing up landed the hardest?"
     },
     {
       "role": "user",
-      "content": "ok i guess. quiet. its been a weird week tbh"
+      "content": "i guess that she just forgot. like we werent even worth a reminder in her phone. shes my sister"
     },
     {
       "role": "companion",
-      "content": "Quiet, and a little weird — that gives it a particular kind of feel. What’s making the week feel weird?"
+      "content": "That sounds like it might be more than annoyance, maybe hurt with a kind of being overlooked in it. Her being your sister seems to make that land even sharper."
     },
     {
       "role": "user",
-      "content": "my dad. it was my graduation last weekend and he just didnt show. said he would and then nothing. not even a text"
+      "content": "yeah. overlooked is the word. my kid kept asking where auntie was and i didnt know what to say"
     },
     {
       "role": "companion",
-      "content": "That sounds really hurtful — you were there for a graduation moment, and he didn’t show or even text. Does it feel more hurt, anger, or disappointment?"
+      "content": "Overlooked seems right, and there’s also the sting of having to answer your kid while you were still taking it in."
     },
     {
       "role": "user",
-      "content": "hurt mostly. i shouldnt even be surprised anymore but i still kept looking at the door. dumb"
+      "content": "yeah that was the worst part. anyway. thanks for letting me get that out"
     },
     {
       "role": "companion",
-      "content": "Hurt, and still looking at the door — that doesn’t sound dumb at all. Did it feel more like waiting, or like a little hope that kept tugging you back?"
-    },
-    {
-      "role": "user",
-      "content": "hope i guess. always hope with him. anyway. thanks for listening. gonna go lie down for a bit"
-    },
-    {
-      "role": "companion",
-      "content": "That makes sense — hope can keep showing up even when it’s been let down before. I can leave it here for now, or if you want, we can stay with what that hope has been asking for."
-    },
-    {
-      "role": "user",
-      "content": "leave it here for now. thanks. night"
-    },
-    {
-      "role": "companion",
-      "content": "Of course — goodnight, and we can leave it here."
+      "content": "Yeah, that was the worst part. We can leave it there, and I’m glad you said it out loud."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yu08qi1krb077",
+    "id": "evt_mq8mg2k3gl0cdb97",
     "conversation_id": "hurt__04",
-    "timestamp": "2026-06-09T18:21:21.275Z",
-    "user_words_raw": "leave it here for now",
-    "emotion_status": "unclear",
-    "emotion_family": null,
-    "emotion_shade": "hurt",
+    "timestamp": "2026-06-10T22:09:59.011Z",
+    "user_words_raw": "that was the worst part",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "overlooked",
     "secondary_emotions": [],
-    "valence": "neutral",
-    "activation": "low",
+    "valence": "negative",
+    "activation": "medium",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "Dad promised to come to graduation and didn’t show or text.",
-    "appraisal_thought": "hope with him",
+    "trigger_event": "sister did not show up to the child's birthday and did not text",
+    "appraisal_thought": "we were not worth a reminder",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [],
+    "need_value": [
+      "being seen",
+      "belonging",
+      "care"
+    ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "User may want to pause after talking about being let down by someone close.",
+    "memory_note": "Pain around a close family member not showing up for a child’s birthday, especially having to explain it to the child.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey there. how are you today?"
+      "content": "i think im just annoyed. my sister didnt show up to my kids birthday and didnt even text"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey there — I'm here and glad you stopped by. How’s your day been so far?",
-      "stage": "noticed",
+      "content": "Annoyed fits here, and it also sounds like there’s some hurt or feeling brushed aside underneath it. What part of her not showing up landed the hardest?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": null,
-      "shade": null,
+      "family": "anger",
+      "shade": "annoyed",
       "body_cue": [],
-      "trigger": null
+      "trigger": "sister did not show up to child's birthday and did not text",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "annoyed",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "ok i guess. quiet. its been a weird week tbh"
+      "content": "i guess that she just forgot. like we werent even worth a reminder in her phone. shes my sister"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "Quiet, and a little weird — that gives it a particular kind of feel. What’s making the week feel weird?",
-      "stage": "noticed",
+      "content": "That sounds like it might be more than annoyance, maybe hurt with a kind of being overlooked in it. Her being your sister seems to make that land even sharper.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": null,
-      "shade": null,
+      "family": "hurt",
+      "shade": "overlooked",
       "body_cue": [],
-      "trigger": null
+      "trigger": "sister did not show up to child's birthday and did not text",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "overlooked",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": "annoyed",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "my dad. it was my graduation last weekend and he just didnt show. said he would and then nothing. not even a text"
+      "content": "yeah. overlooked is the word. my kid kept asking where auntie was and i didnt know what to say"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds really hurtful — you were there for a graduation moment, and he didn’t show or even text. Does it feel more hurt, anger, or disappointment?",
-      "stage": "named",
-      "unlocked": false,
+      "content": "Overlooked seems right, and there’s also the sting of having to answer your kid while you were still taking it in.",
+      "stage": "understood",
+      "unlocked": true,
       "family": "hurt",
-      "shade": "hurt",
+      "shade": "overlooked",
       "body_cue": [],
-      "trigger": "Dad promised to come to graduation and then didn’t show or text."
+      "trigger": "sister did not show up to the child's birthday and did not text",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "overlooked",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "hurt mostly. i shouldnt even be surprised anymore but i still kept looking at the door. dumb"
+      "content": "yeah that was the worst part. anyway. thanks for letting me get that out"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Hurt, and still looking at the door — that doesn’t sound dumb at all. Did it feel more like waiting, or like a little hope that kept tugging you back?",
-      "stage": "understood",
-      "unlocked": true,
-      "family": "hurt",
-      "shade": "hurt",
-      "body_cue": [],
-      "trigger": "Dad promised to come to graduation and didn’t show or text."
-    },
-    {
-      "turn": 8,
-      "role": "user",
-      "content": "hope i guess. always hope with him. anyway. thanks for listening. gonna go lie down for a bit"
-    },
-    {
-      "turn": 9,
-      "role": "companion",
-      "content": "That makes sense — hope can keep showing up even when it’s been let down before. I can leave it here for now, or if you want, we can stay with what that hope has been asking for.",
+      "content": "Yeah, that was the worst part. We can leave it there, and I’m glad you said it out loud.",
       "stage": "understood",
       "unlocked": false,
       "family": "hurt",
-      "shade": "hurt",
+      "shade": "overlooked",
       "body_cue": [],
-      "trigger": "Dad promised to come to graduation and didn’t show or text."
-    },
-    {
-      "turn": 10,
-      "role": "user",
-      "content": "leave it here for now. thanks. night"
-    },
-    {
-      "turn": 11,
-      "role": "companion",
-      "content": "Of course — goodnight, and we can leave it here.",
-      "stage": "understood",
-      "unlocked": false,
-      "family": null,
-      "shade": "hurt",
-      "body_cue": [],
-      "trigger": "Dad promised to come to graduation and didn’t show or text."
+      "trigger": "sister did not show up to the child's birthday and did not text",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

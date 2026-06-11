@@ -1,0 +1,191 @@
+{
+  "cid": "sadness__10",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-09T18:19:25.688Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. i dont really know how to do this. i guess im just having a hard day and someone said writing it down might help"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that’s okay — we can just keep it simple. What feels most present in the hard part right now?"
+    },
+    {
+      "role": "user",
+      "content": "i got some test results back last week. my doctor found a thing on my thyroid and theyre making me do more scans before they say if its bad or not. and now i just feel like my body betrayed me, like i did everything right, i eat ok, i walk every day, and it still happened. and i keep refreshing the patient portal like the answer will just appear. sorry im rambling"
+    },
+    {
+      "role": "companion",
+      "content": "You’re not rambling — this sounds really unsettling, and maybe betrayed by your own body. Is the sharpest part the waiting, or the feeling that your body didn’t keep its promise?"
+    },
+    {
+      "role": "user",
+      "content": "honestly both but theyre different. the waiting is this jittery cant sit still thing, like i keep googling stuff i know i shouldnt. but underneath that is just... sad? like grief almost. ive always been the healthy one in my family. my mum was the sick one and i swore id never be that person and now im sitting in waiting rooms and i feel like im losing the version of me that was fine"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like two layers at once: the jittery, can’t-sit-still waiting, and a deeper grief for the version of you that was fine. Do you want to stay with the grief, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "i think i wanna stay with it a sec. its weird saying grief out loud cause nobodys even told me anything bad yet, maybe its all fine. but i think im grieving the feeling of being untouchable. like i used to make plans years out without thinking and now theres this little voice going what if. and i havent told my partner how scared i am cause i dont want them to worry too"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it’s grief for being untouchable, and there’s fear tucked under it too. I’m wondering if the part that hurts most is the future feeling less certain, or holding it alone with your partner?"
+    },
+    {
+      "role": "user",
+      "content": "yeah the holding it alone part. saying it here made me realise i kinda want to just tell them, even the scared bits. they wouldnt want me carrying it by myself. idk this helped more than i thought it would. i think i can put my phone down now instead of refreshing the portal for the hundredth time"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it helped. We can leave it here, and it sounds like you’ve found the next thing you want to do — tell them the scared bits when you’re ready."
+    },
+    {
+      "role": "user",
+      "content": "thank you. really. gonna go find them now. bye"
+    },
+    {
+      "role": "companion",
+      "content": "Bye — I’m glad you’re going to find them now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ys4gbgijb42rf",
+    "conversation_id": "sadness__10",
+    "timestamp": "2026-06-09T18:20:07.768Z",
+    "user_words_raw": "the scared bits",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [
+      "sadness"
+    ],
+    "valence": "mixed",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "ending the conversation after sharing fear and grief about the thyroid scans",
+    "appraisal_thought": "I can leave this here and move on to telling my partner",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "being accompanied",
+      "relief"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Waiting for more scans brought grief, fear, and a wish to tell their partner the scared bits.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. i dont really know how to do this. i guess im just having a hard day and someone said writing it down might help"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that’s okay — we can just keep it simple. What feels most present in the hard part right now?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i got some test results back last week. my doctor found a thing on my thyroid and theyre making me do more scans before they say if its bad or not. and now i just feel like my body betrayed me, like i did everything right, i eat ok, i walk every day, and it still happened. and i keep refreshing the patient portal like the answer will just appear. sorry im rambling"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "You’re not rambling — this sounds really unsettling, and maybe betrayed by your own body. Is the sharpest part the waiting, or the feeling that your body didn’t keep its promise?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": "test results showed a thyroid finding and more scans are pending"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "honestly both but theyre different. the waiting is this jittery cant sit still thing, like i keep googling stuff i know i shouldnt. but underneath that is just... sad? like grief almost. ive always been the healthy one in my family. my mum was the sick one and i swore id never be that person and now im sitting in waiting rooms and i feel like im losing the version of me that was fine"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like two layers at once: the jittery, can’t-sit-still waiting, and a deeper grief for the version of you that was fine. Do you want to stay with the grief, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grief",
+      "body_cue": [],
+      "trigger": "waiting for more scans and an answer about a thyroid finding"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "i think i wanna stay with it a sec. its weird saying grief out loud cause nobodys even told me anything bad yet, maybe its all fine. but i think im grieving the feeling of being untouchable. like i used to make plans years out without thinking and now theres this little voice going what if. and i havent told my partner how scared i am cause i dont want them to worry too"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — it’s grief for being untouchable, and there’s fear tucked under it too. I’m wondering if the part that hurts most is the future feeling less certain, or holding it alone with your partner?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grief",
+      "body_cue": [],
+      "trigger": "more scans after a thyroid finding, and waiting for an answer"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah the holding it alone part. saying it here made me realise i kinda want to just tell them, even the scared bits. they wouldnt want me carrying it by myself. idk this helped more than i thought it would. i think i can put my phone down now instead of refreshing the portal for the hundredth time"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "I’m glad it helped. We can leave it here, and it sounds like you’ve found the next thing you want to do — tell them the scared bits when you’re ready.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grief",
+      "body_cue": [],
+      "trigger": "waiting for more scans after a thyroid finding and not knowing if it’s bad"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "thank you. really. gonna go find them now. bye"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Bye — I’m glad you’re going to find them now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "ending the conversation after sharing fear and grief about the thyroid scans"
+    }
+  ]
+}

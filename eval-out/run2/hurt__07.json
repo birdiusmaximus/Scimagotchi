@@ -1,0 +1,308 @@
+{
+  "cid": "hurt__07",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-10T17:12:16.167Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont really know what im supposed to do here. someone said this app helps you think through stuff so im trying it i guess"
+    },
+    {
+      "role": "companion",
+      "content": "You're trying it, even without knowing exactly what to do yet. That little \"i guess\" feels like a real opening, and we can just take it slowly."
+    },
+    {
+      "role": "user",
+      "content": "see thats the kind of thing that makes me roll my eyes a little. but ok. its about my girlfriend. she told me she was working late last fri and i found out she was actually out with her ex. didnt even mention it"
+    },
+    {
+      "role": "companion",
+      "content": "There’s a sharpness in that, maybe annoyance, hurt, or both. Which of those is closest, if any?"
+    },
+    {
+      "role": "user",
+      "content": "hurt mostly. the annoyance is there but underneath it im just hurt. like why lie to me. i wouldve been fine if she just told me"
+    },
+    {
+      "role": "companion",
+      "content": "Hurt underneath, with the annoyance sitting on top, and the lie is the part that landed hardest. Did it make you want to pull back, or did it feel more like a jolt in the moment?"
+    },
+    {
+      "role": "user",
+      "content": "pull back i think. i havent really said much to her since. been kind of short with her and i can tell she knows somethings off but i dont know how to bring it up without it turning into a whole thing"
+    },
+    {
+      "role": "companion",
+      "content": "Pulling back makes sense here, especially when the hurt is still live and the whole thing feels like it could turn into “a whole thing.” I’m wondering what it feels like in you when you think about bringing it up, if you can tell yet."
+    },
+    {
+      "role": "user",
+      "content": "honestly kind of tight in my chest. like im bracing for her to make it my fault somehow. or to find out theres more to it than just one dinner. thats the part i dont want to know"
+    },
+    {
+      "role": "companion",
+      "content": "That tight chest and the bracing sound like your body is already expecting a hit. Do you want to stay with that part, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. i think i need to just talk to her instead of typing it out tbh. this was less weird than i expected though. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, and I’m glad it felt less weird than you expected. Take care of the talking part in your own way."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8btm9h7wu1jo2k",
+    "conversation_id": "hurt__07",
+    "timestamp": "2026-06-10T17:12:54.086Z",
+    "user_words_raw": "i dont want to know",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "hurt",
+    "secondary_emotions": [
+      "anger"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "found out girlfriend was out with her ex after saying she was working late",
+    "appraisal_thought": "bracing for her to make it my fault somehow",
+    "body_cue": [
+      "tight chest"
+    ],
+    "behaviour_action": [
+      "bracing",
+      "pull back"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "honesty",
+      "repair",
+      "being seen"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "hurt",
+        "shade": "hurt",
+        "salience": "foreground",
+        "source": "user_stated"
+      },
+      {
+        "family": "anger",
+        "shade": null,
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Feeling hurt after discovering a partner lied about where they were, with a strong urge to pull back and avoid more details.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont really know what im supposed to do here. someone said this app helps you think through stuff so im trying it i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "You're trying it, even without knowing exactly what to do yet. That little \"i guess\" feels like a real opening, and we can just take it slowly.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "see thats the kind of thing that makes me roll my eyes a little. but ok. its about my girlfriend. she told me she was working late last fri and i found out she was actually out with her ex. didnt even mention it"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "There’s a sharpness in that, maybe annoyance, hurt, or both. Which of those is closest, if any?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "annoyed",
+      "body_cue": [],
+      "trigger": "girlfriend said she was working late but was actually out with her ex",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "annoyed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "hurt mostly. the annoyance is there but underneath it im just hurt. like why lie to me. i wouldve been fine if she just told me"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Hurt underneath, with the annoyance sitting on top, and the lie is the part that landed hardest. Did it make you want to pull back, or did it feel more like a jolt in the moment?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "girlfriend said she was working late but was actually out with her ex",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "anger",
+          "shade": "annoyance",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "pull back i think. i havent really said much to her since. been kind of short with her and i can tell she knows somethings off but i dont know how to bring it up without it turning into a whole thing"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Pulling back makes sense here, especially when the hurt is still live and the whole thing feels like it could turn into “a whole thing.” I’m wondering what it feels like in you when you think about bringing it up, if you can tell yet.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "found out girlfriend was out with her ex after she said she was working late",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "honestly kind of tight in my chest. like im bracing for her to make it my fault somehow. or to find out theres more to it than just one dinner. thats the part i dont want to know"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That tight chest and the bracing sound like your body is already expecting a hit. Do you want to stay with that part, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [
+        "tight in my chest"
+      ],
+      "trigger": "found out girlfriend was out with her ex after saying she was working late",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it there. i think i need to just talk to her instead of typing it out tbh. this was less weird than i expected though. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course, and I’m glad it felt less weird than you expected. Take care of the talking part in your own way.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [
+        "tight chest"
+      ],
+      "trigger": "found out girlfriend was out with her ex after saying she was working late",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    }
+  ]
+}

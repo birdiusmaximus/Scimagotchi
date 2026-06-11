@@ -1,0 +1,178 @@
+{
+  "cid": "fear__04",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-09T17:35:56.886Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey there"
+    },
+    {
+      "role": "companion",
+      "content": "Hey there — good to see you. What’s been going on today?"
+    },
+    {
+      "role": "user",
+      "content": "not much, just a slow tuesday. kind of tired honestly. how does this work, do i just talk"
+    },
+    {
+      "role": "companion",
+      "content": "Pretty much — you can just talk, and I’ll follow your lead. Want to keep it light, or is there something specific on your mind?"
+    },
+    {
+      "role": "user",
+      "content": "i guess there is something. my mom has a biopsy on thursday and i cant stop thinking about it. my stomach is in knots"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like worry, maybe with some pressure around it too. When you say your stomach is in knots, does it feel more tight, churned up, or restless?"
+    },
+    {
+      "role": "user",
+      "content": "churned up i think. like i keep imagining bad news before we even know anything. she keeps saying its routine but i cant make my brain believe it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like worry that keeps reaching for bad news before there’s any to hold onto. It may be pulling for certainty more than anything else — would you want to stay with it a little, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it here for now. that actually helped a little, just saying it out loud. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad you said it out loud. We can leave it here, and I’ll stay with you whenever you want to come back to it."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6x8bm0wcxn04lw",
+    "conversation_id": "fear__04",
+    "timestamp": "2026-06-09T17:36:35.747Z",
+    "user_words_raw": "i cant stop thinking about it",
+    "emotion_status": "confirmed",
+    "emotion_family": "fear",
+    "emotion_shade": "worry",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "mom has a biopsy on thursday",
+    "appraisal_thought": "something bad might happen before there’s any news yet",
+    "body_cue": [
+      "stomach is in knots",
+      "churned up"
+    ],
+    "behaviour_action": [
+      "imagining bad news",
+      "can't make my brain believe it"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "certainty",
+      "reassurance"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "User gets caught in worry when a loved one has a medical test coming up.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey there"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey there — good to see you. What’s been going on today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "not much, just a slow tuesday. kind of tired honestly. how does this work, do i just talk"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Pretty much — you can just talk, and I’ll follow your lead. Want to keep it light, or is there something specific on your mind?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "i guess there is something. my mom has a biopsy on thursday and i cant stop thinking about it. my stomach is in knots"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like worry, maybe with some pressure around it too. When you say your stomach is in knots, does it feel more tight, churned up, or restless?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "worry",
+      "body_cue": [
+        "stomach is in knots"
+      ],
+      "trigger": "mom has a biopsy on thursday"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "churned up i think. like i keep imagining bad news before we even know anything. she keeps saying its routine but i cant make my brain believe it"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like worry that keeps reaching for bad news before there’s any to hold onto. It may be pulling for certainty more than anything else — would you want to stay with it a little, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "worry",
+      "body_cue": [
+        "stomach is in knots",
+        "churned up"
+      ],
+      "trigger": "mom has a biopsy on thursday"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah lets leave it here for now. that actually helped a little, just saying it out loud. thanks"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "I’m glad you said it out loud. We can leave it here, and I’ll stay with you whenever you want to come back to it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "worry",
+      "body_cue": [
+        "stomach is in knots",
+        "churned up"
+      ],
+      "trigger": "mom has a biopsy on thursday"
+    }
+  ]
+}

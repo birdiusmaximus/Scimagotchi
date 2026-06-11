@@ -2,160 +2,231 @@
   "cid": "anger__04",
   "emotion": "anger",
   "persona": null,
-  "created": "2026-06-09T18:17:03.741Z",
+  "created": "2026-06-10T22:07:54.609Z",
   "history": [
     {
       "role": "user",
-      "content": "hey there"
+      "content": "feeling kind of off today. just tired i guess. my sister keeps doing this thing where she volunteers me for stuff without asking"
     },
     {
       "role": "companion",
-      "content": "Hey there — good to see you. What’s been going on today?"
+      "content": "That sounds like a tired, off kind of day, and the bit with your sister keeps putting you in things without asking. If you want, we can just stay with that for a moment."
     },
     {
       "role": "user",
-      "content": "not much. long day. work was fine i guess. mostly just thinking about my sister honestly"
+      "content": "yeah maybe. this weekend she told our whole family id host thanksgiving at my place. didnt even text me first. just announced it"
     },
     {
       "role": "companion",
-      "content": "That sounds like a long, quiet kind of day, with your sister staying in the background of it. What’s coming up when you think about her?"
+      "content": "That kind of announcement can feel pretty intrusive, like your space got claimed before you could even answer. Is it more pressure, annoyance, or something more personal than that?"
     },
     {
       "role": "user",
-      "content": "she borrowed money again. like the third time. and she didnt even ask this time she just assumed id cover the rent thing. and im the one who looks like the bad guy if i say no. it makes me so mad"
+      "content": "honestly its annoyance. no its more than that. im actually kind of pissed. she always does this and i always just say yes"
     },
     {
       "role": "companion",
-      "content": "That sounds really maddening — like you’re being put in the bad-guy spot for not agreeing. Is it more anger, or anger mixed with hurt?"
+      "content": "That’s moving into anger, with some pressure still in the mix, especially if this keeps happening and you end up saying yes anyway. If you want, we can stay with the anger, or I can help you find the sharper word for it."
     },
     {
       "role": "user",
-      "content": "both i think. mostly anger though. she just expects it cause im the older one. anyway. just needed to say it out loud. thanks"
+      "content": "yeah. its the saying yes part that gets me honestly. anyway thanks. i should go start dinner"
     },
     {
       "role": "companion",
-      "content": "That makes sense — mostly anger, with some hurt underneath it, and the “older one” expectation sounds like part of what’s stinging. We can leave it here, or if you want, I can stay with the feeling a little longer."
-    },
-    {
-      "role": "user",
-      "content": "lets leave it there. feels a bit better just saying it. night"
-    },
-    {
-      "role": "companion",
-      "content": "Night — I’m glad you said it out loud. It can rest here for now."
+      "content": "That makes sense, the saying yes part is what seems to sting here. We can leave it there, and hope dinner goes smoothly."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yp3988p5wwmkz",
+    "id": "evt_mq8mdtpoyd3z3a1i",
     "conversation_id": "anger__04",
-    "timestamp": "2026-06-09T18:17:31.603Z",
-    "user_words_raw": "feels a bit better just saying it",
-    "emotion_status": "unclear",
-    "emotion_family": null,
-    "emotion_shade": "frustrated",
-    "secondary_emotions": [],
-    "valence": "neutral",
-    "activation": "low",
+    "timestamp": "2026-06-10T22:08:16.258Z",
+    "user_words_raw": "the saying yes part",
+    "emotion_status": "confirmed",
+    "emotion_family": "anger",
+    "emotion_shade": "pissed",
+    "secondary_emotions": [
+      "pressure"
+    ],
+    "valence": "negative",
+    "activation": "high",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "she borrowed money again and assumed I'd cover the rent thing",
-    "appraisal_thought": "it makes me look like the bad guy if I say no",
+    "trigger_event": "sister announced the user would host Thanksgiving at their place without asking first",
+    "appraisal_thought": "she always does this and i always just say yes",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [],
-    "confidence_level": "high",
+    "need_value": [
+      "autonomy",
+      "respect",
+      "being heard"
+    ],
+    "confidence_level": "medium",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "unknown",
-    "unlock_stage": "named",
-    "memory_note": "User may want to pause after naming a family-related resentment and hurt.",
+    "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "user_rejected_shades": [
+      "annoyance"
+    ],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "anger",
+        "shade": "pissed",
+        "salience": "foreground",
+        "source": "user_stated"
+      },
+      {
+        "family": "pressure",
+        "shade": null,
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "A family member keeps volunteering them for plans without asking, and the user gets caught in saying yes.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey there"
+      "content": "feeling kind of off today. just tired i guess. my sister keeps doing this thing where she volunteers me for stuff without asking"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey there — good to see you. What’s been going on today?",
-      "stage": "noticed",
+      "content": "That sounds like a tired, off kind of day, and the bit with your sister keeps putting you in things without asking. If you want, we can just stay with that for a moment.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": null,
-      "shade": null,
+      "family": "pressure",
+      "shade": "worn down",
       "body_cue": [],
-      "trigger": null
+      "trigger": "sister volunteering them for stuff without asking",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "worn down",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "not much. long day. work was fine i guess. mostly just thinking about my sister honestly"
+      "content": "yeah maybe. this weekend she told our whole family id host thanksgiving at my place. didnt even text me first. just announced it"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds like a long, quiet kind of day, with your sister staying in the background of it. What’s coming up when you think about her?",
-      "stage": "named",
+      "content": "That kind of announcement can feel pretty intrusive, like your space got claimed before you could even answer. Is it more pressure, annoyance, or something more personal than that?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "flat",
-      "shade": "quiet preoccupation",
+      "family": "pressure",
+      "shade": "intrusive",
       "body_cue": [],
-      "trigger": null
+      "trigger": "sister announced hosting Thanksgiving at the user's place without asking first",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "intrusive",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "she borrowed money again. like the third time. and she didnt even ask this time she just assumed id cover the rent thing. and im the one who looks like the bad guy if i say no. it makes me so mad"
+      "content": "honestly its annoyance. no its more than that. im actually kind of pissed. she always does this and i always just say yes"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds really maddening — like you’re being put in the bad-guy spot for not agreeing. Is it more anger, or anger mixed with hurt?",
-      "stage": "named",
+      "content": "That’s moving into anger, with some pressure still in the mix, especially if this keeps happening and you end up saying yes anyway. If you want, we can stay with the anger, or I can help you find the sharper word for it.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "anger",
-      "shade": "maddening",
+      "shade": "pissed",
       "body_cue": [],
-      "trigger": "she borrowed money again and assumed I'd cover the rent thing"
+      "trigger": "sister announced the user would host Thanksgiving at their place without asking first",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "pissed",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": "null",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "both i think. mostly anger though. she just expects it cause im the older one. anyway. just needed to say it out loud. thanks"
+      "content": "yeah. its the saying yes part that gets me honestly. anyway thanks. i should go start dinner"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense — mostly anger, with some hurt underneath it, and the “older one” expectation sounds like part of what’s stinging. We can leave it here, or if you want, I can stay with the feeling a little longer.",
-      "stage": "named",
-      "unlocked": false,
+      "content": "That makes sense, the saying yes part is what seems to sting here. We can leave it there, and hope dinner goes smoothly.",
+      "stage": "understood",
+      "unlocked": true,
       "family": "anger",
-      "shade": "frustrated",
+      "shade": "pissed",
       "body_cue": [],
-      "trigger": "she borrowed money again and assumed I'd cover the rent thing"
-    },
-    {
-      "turn": 8,
-      "role": "user",
-      "content": "lets leave it there. feels a bit better just saying it. night"
-    },
-    {
-      "turn": 9,
-      "role": "companion",
-      "content": "Night — I’m glad you said it out loud. It can rest here for now.",
-      "stage": "named",
-      "unlocked": false,
-      "family": null,
-      "shade": "frustrated",
-      "body_cue": [],
-      "trigger": "she borrowed money again and assumed I'd cover the rent thing"
+      "trigger": "sister announced the user would host Thanksgiving at their place without asking first",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "pissed",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     }
   ]
 }

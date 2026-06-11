@@ -1,0 +1,329 @@
+{
+  "cid": "anger__06",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-10T17:10:22.638Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont even know why im here honestly"
+    },
+    {
+      "role": "companion",
+      "content": "There is a kind of unmoored feeling in “i dont even know why im here honestly.” If you want, you can just say what today has been like."
+    },
+    {
+      "role": "user",
+      "content": "idk it was just a normal day i guess. annoying. people are annoying"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds less like a big emotion and more like irritation rubbing against an otherwise ordinary day. Is it the people part that feels sharpest, or the whole day had that edge?"
+    },
+    {
+      "role": "user",
+      "content": "one person. idk. its stupid its not even a big deal"
+    },
+    {
+      "role": "companion",
+      "content": "Not stupid, just small and sharp. Did it feel more like being irritated, or more like being put off by that one person?"
+    },
+    {
+      "role": "user",
+      "content": "my friend. shes supposed to be my best friend. i had this thing on friday id been stressing about for weeks and she just. didnt come. and didnt even text till the next day like it was nothing"
+    },
+    {
+      "role": "companion",
+      "content": "That landed as a breach of something important, not just a small annoyance. I’m learning there’s hurt here too, underneath the anger, and maybe a sense of being left hanging."
+    },
+    {
+      "role": "user",
+      "content": "im not hurt im pissed. like this is the third time. i always show up for her stuff always. and her excuse was she lost track of time. lost track of time. ok"
+    },
+    {
+      "role": "companion",
+      "content": "I had the hurt piece wrong, let me step back. This sounds more like anger that has been building because it feels one-sided, and “lost track of time” didn’t hold much weight for you. Is it more irritation, resentment, or feeling disrespected?"
+    },
+    {
+      "role": "user",
+      "content": "disrespected yeah. like my time doesnt matter to her. and im so tired of being the only one who tries"
+    },
+    {
+      "role": "companion",
+      "content": "Yes, that sounds disrespected, and also worn down by being the one who keeps trying. What does it make you want to do, push back, pull away, or say something straight?"
+    },
+    {
+      "role": "user",
+      "content": "idk. probably nothing like always. i dont have the energy for it tonight. but thanks i guess. needed to get that out"
+    },
+    {
+      "role": "companion",
+      "content": "You got it out, and that’s enough for tonight. I can leave it there with the anger and the tiredness, if you want."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8br6a3j254u8br",
+    "conversation_id": "anger__06",
+    "timestamp": "2026-06-10T17:11:09.504Z",
+    "user_words_raw": "the only one who tries",
+    "emotion_status": "confirmed",
+    "emotion_family": "anger",
+    "emotion_shade": "disrespected",
+    "secondary_emotions": [
+      "pressure"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "friend did not come to something they had been stressed about for weeks and texted the next day",
+    "appraisal_thought": "my time doesnt matter to her",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "respect",
+      "reciprocity",
+      "being heard"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [
+      "hurt"
+    ],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "anger",
+        "shade": "disrespected",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      },
+      {
+        "family": "pressure",
+        "shade": "worn down",
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 1,
+    "unlock_stage": "understood",
+    "memory_note": "Feels worn down by a one-sided friendship and repeated unreliability from a friend.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont even know why im here honestly"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "There is a kind of unmoored feeling in “i dont even know why im here honestly.” If you want, you can just say what today has been like.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "idk it was just a normal day i guess. annoying. people are annoying"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds less like a big emotion and more like irritation rubbing against an otherwise ordinary day. Is it the people part that feels sharpest, or the whole day had that edge?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "irritated",
+      "body_cue": [],
+      "trigger": "people being annoying on a normal day",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "irritated",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "one person. idk. its stupid its not even a big deal"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Not stupid, just small and sharp. Did it feel more like being irritated, or more like being put off by that one person?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "irritated",
+      "body_cue": [],
+      "trigger": "one person being annoying on a normal day",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "irritated",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "my friend. shes supposed to be my best friend. i had this thing on friday id been stressing about for weeks and she just. didnt come. and didnt even text till the next day like it was nothing"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That landed as a breach of something important, not just a small annoyance. I’m learning there’s hurt here too, underneath the anger, and maybe a sense of being left hanging.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [],
+      "trigger": "friend did not come to something they had been stressed about for weeks and texted the next day",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "resentful",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "im not hurt im pissed. like this is the third time. i always show up for her stuff always. and her excuse was she lost track of time. lost track of time. ok"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "I had the hurt piece wrong, let me step back. This sounds more like anger that has been building because it feels one-sided, and “lost track of time” didn’t hold much weight for you. Is it more irritation, resentment, or feeling disrespected?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "resentful",
+      "body_cue": [],
+      "trigger": "friend did not come to something they had been stressed about for weeks and texted the next day",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "disrespected yeah. like my time doesnt matter to her. and im so tired of being the only one who tries"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Yes, that sounds disrespected, and also worn down by being the one who keeps trying. What does it make you want to do, push back, pull away, or say something straight?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "disrespected",
+      "body_cue": [],
+      "trigger": "friend did not come to something they had been stressed about for weeks and texted the next day",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "disrespected",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "pressure",
+          "shade": "worn down",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "idk. probably nothing like always. i dont have the energy for it tonight. but thanks i guess. needed to get that out"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "You got it out, and that’s enough for tonight. I can leave it there with the anger and the tiredness, if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "disrespected",
+      "body_cue": [],
+      "trigger": "friend did not come to something they had been stressed about for weeks and texted the next day",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "disrespected",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "pressure",
+          "shade": "worn down",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
+    }
+  ]
+}

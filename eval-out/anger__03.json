@@ -2,140 +2,203 @@
   "cid": "anger__03",
   "emotion": "anger",
   "persona": null,
-  "created": "2026-06-09T18:17:04.843Z",
+  "created": "2026-06-10T22:07:45.555Z",
   "history": [
     {
       "role": "user",
-      "content": "i dunno. just kind of annoyed i guess"
+      "content": "hey. you there?"
     },
     {
       "role": "companion",
-      "content": "That sounds like a fairly quiet kind of annoyed. Is it more like irritated, frustrated, or just something rubbing you the wrong way?"
+      "content": "Hey, I’m here. What’s been going on today?"
     },
     {
       "role": "user",
-      "content": "frustrated more like. its money stuff. dont really wanna get into it"
+      "content": "eh. not much. just kind of annoyed if im honest"
     },
     {
       "role": "companion",
-      "content": "Frustrated makes sense, and we can leave the money stuff right there if you want. If you do want to stay with it, does it feel more blocked, pressured, or just plain stuck?"
+      "content": "Yeah, annoyed makes sense. Is it more irritation, frustration, or that feeling of being blocked?"
     },
     {
       "role": "user",
-      "content": "stuck i guess. my sister still hasnt paid me back the 400 i lent her. been months. and now shes posting holiday pics"
+      "content": "blocked i guess. my flatmate still hasnt paid me back for the bills. its been two months and i keep covering it"
     },
     {
       "role": "companion",
-      "content": "That sounds really stuck — like the money part has been hanging there for months, and the holiday pics make it feel sharper. Does it feel more like blocked, resentful, or disrespected?"
+      "content": "That sounds like the kind of annoyed that starts to feel blocked and worn thin, especially when you keep covering it. I’m learning there’s a fairness piece in it too."
     },
     {
       "role": "user",
-      "content": "disrespected yeah. like my money doesnt matter to her. anyway. its fine. thanks"
+      "content": "yeah. its not even the money really its that i have to keep bringing it up like im the bad guy. anyway. its whatever"
     },
     {
       "role": "companion",
-      "content": "That feels like disrespected, and I can leave it here. Thanks for telling me."
+      "content": "That sounds less like the money and more like being put in the bad-guy role for asking. If you want, we can leave it there."
+    },
+    {
+      "role": "user",
+      "content": "yeah. lets leave it. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, we can leave it there. Thanks for telling me."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yp4i48yvfc507",
+    "id": "evt_mq8mdm41c814c978",
     "conversation_id": "anger__03",
-    "timestamp": "2026-06-09T18:17:23.978Z",
-    "user_words_raw": "disrespected",
-    "emotion_status": "candidate",
+    "timestamp": "2026-06-10T22:08:09.668Z",
+    "user_words_raw": "im the bad guy",
+    "emotion_status": "confirmed",
     "emotion_family": "anger",
-    "emotion_shade": "disrespected",
+    "emotion_shade": "resigned",
     "secondary_emotions": [],
     "valence": "negative",
-    "activation": "medium",
+    "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "sister hasn’t paid back $400 for months; seeing holiday pics",
-    "appraisal_thought": "my money doesnt matter to her",
+    "trigger_event": "flatmate not paying back bills and user having to keep bringing it up",
+    "appraisal_thought": "having to keep bringing it up like im the bad guy",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "respect",
       "fairness",
-      "being heard"
+      "being heard",
+      "respect"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "unknown",
-    "unlock_stage": "named",
-    "memory_note": "Money lent to someone close is still unpaid after months, and social posts made it feel sharper.",
+    "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Ongoing money-sharing friction with someone close, and the harder part is being cast as the one in the wrong for asking.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "i dunno. just kind of annoyed i guess"
+      "content": "hey. you there?"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds like a fairly quiet kind of annoyed. Is it more like irritated, frustrated, or just something rubbing you the wrong way?",
+      "content": "Hey, I’m here. What’s been going on today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "eh. not much. just kind of annoyed if im honest"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Yeah, annoyed makes sense. Is it more irritation, frustration, or that feeling of being blocked?",
       "stage": "named",
       "unlocked": false,
       "family": "anger",
       "shade": "annoyed",
       "body_cue": [],
-      "trigger": null
-    },
-    {
-      "turn": 2,
-      "role": "user",
-      "content": "frustrated more like. its money stuff. dont really wanna get into it"
-    },
-    {
-      "turn": 3,
-      "role": "companion",
-      "content": "Frustrated makes sense, and we can leave the money stuff right there if you want. If you do want to stay with it, does it feel more blocked, pressured, or just plain stuck?",
-      "stage": "named",
-      "unlocked": false,
-      "family": "anger",
-      "shade": "frustrated",
-      "body_cue": [],
-      "trigger": "money stuff"
+      "trigger": null,
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "stuck i guess. my sister still hasnt paid me back the 400 i lent her. been months. and now shes posting holiday pics"
+      "content": "blocked i guess. my flatmate still hasnt paid me back for the bills. its been two months and i keep covering it"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds really stuck — like the money part has been hanging there for months, and the holiday pics make it feel sharper. Does it feel more like blocked, resentful, or disrespected?",
-      "stage": "named",
+      "content": "That sounds like the kind of annoyed that starts to feel blocked and worn thin, especially when you keep covering it. I’m learning there’s a fairness piece in it too.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "anger",
-      "shade": "frustrated",
+      "shade": "blocked",
       "body_cue": [],
-      "trigger": "sister still hasn't paid back $400 after months; seeing holiday pics"
+      "trigger": "flatmate has not paid back bills for two months",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "disrespected yeah. like my money doesnt matter to her. anyway. its fine. thanks"
+      "content": "yeah. its not even the money really its that i have to keep bringing it up like im the bad guy. anyway. its whatever"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That feels like disrespected, and I can leave it here. Thanks for telling me.",
-      "stage": "named",
+      "content": "That sounds less like the money and more like being put in the bad-guy role for asking. If you want, we can leave it there.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "anger",
-      "shade": "disrespected",
+      "shade": "resigned",
       "body_cue": [],
-      "trigger": "sister hasn’t paid back $400 for months; seeing holiday pics"
+      "trigger": "flatmate not paying back bills and the user having to keep bringing it up",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "resigned",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. lets leave it. thanks"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Of course, we can leave it there. Thanks for telling me.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "resigned",
+      "body_cue": [],
+      "trigger": "flatmate not paying back bills and user having to keep bringing it up",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

@@ -1,0 +1,168 @@
+{
+  "cid": "joy__05",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-09T17:41:51.212Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk why im even opening this lol. nothing's wrong really"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a very light, half-curious kind of opening. What pulled you in just now?"
+    },
+    {
+      "role": "user",
+      "content": "dunno. boredom probably. or my thumbs needed a hobby"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds pretty plain and restless, maybe just looking for something to do. Is it more boredom, or more that your thumbs wanted a job?"
+    },
+    {
+      "role": "user",
+      "content": "ok fine it's not boredom. i found an old mixtape my brother made me when i was like 14. dumb little thing. been stuck in my head all day"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound dumb at all — it sounds like it caught something old and stayed there. Is it more sweet, or more aching?"
+    },
+    {
+      "role": "user",
+      "content": "nah it's good. made me grin like an idiot in the kitchen. he put the worst songs on there on purpose to annoy me lol. kind of love that"
+    },
+    {
+      "role": "companion",
+      "content": "That has a warm, teasing kind of feel to it — like being grinning and annoyed-at-the-same-time in a good way. What was it about that little prank that hit you?"
+    },
+    {
+      "role": "user",
+      "content": "eh i think it's just that he still gets me, even from back then. anyway this got soft fast lol. gonna go text him before i start crying into the dishes. thanks weird app"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it sounds like being seen by him from way back there landed pretty hard, in a good way. You can leave it here, or tell me what part of it feels closest if you want to stay with it."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xfstevuus51z8",
+    "conversation_id": "joy__05",
+    "timestamp": "2026-06-09T17:42:17.209Z",
+    "user_words_raw": "he still gets me",
+    "emotion_status": "confirmed",
+    "emotion_family": "joy",
+    "emotion_shade": "touched",
+    "secondary_emotions": [
+      "grateful",
+      "fond"
+    ],
+    "valence": "positive",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "found an old mixtape their brother made when they were 14",
+    "appraisal_thought": "he still gets me, even from back then",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "being seen",
+      "belonging"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "old sibling mixtape brought up feeling seen across time",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk why im even opening this lol. nothing's wrong really"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a very light, half-curious kind of opening. What pulled you in just now?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "dunno. boredom probably. or my thumbs needed a hobby"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds pretty plain and restless, maybe just looking for something to do. Is it more boredom, or more that your thumbs wanted a job?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "restless",
+      "body_cue": [],
+      "trigger": "opening this"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "ok fine it's not boredom. i found an old mixtape my brother made me when i was like 14. dumb little thing. been stuck in my head all day"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That doesn’t sound dumb at all — it sounds like it caught something old and stayed there. Is it more sweet, or more aching?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "restless",
+      "body_cue": [],
+      "trigger": "found an old mixtape from their brother"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "nah it's good. made me grin like an idiot in the kitchen. he put the worst songs on there on purpose to annoy me lol. kind of love that"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That has a warm, teasing kind of feel to it — like being grinning and annoyed-at-the-same-time in a good way. What was it about that little prank that hit you?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "fond",
+      "body_cue": [],
+      "trigger": "found an old mixtape made by their brother"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "eh i think it's just that he still gets me, even from back then. anyway this got soft fast lol. gonna go text him before i start crying into the dishes. thanks weird app"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That makes sense — it sounds like being seen by him from way back there landed pretty hard, in a good way. You can leave it here, or tell me what part of it feels closest if you want to stay with it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "touched",
+      "body_cue": [],
+      "trigger": "found an old mixtape their brother made when they were 14"
+    }
+  ]
+}

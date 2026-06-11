@@ -1,0 +1,177 @@
+{
+  "cid": "flat__04",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-10T19:23:04.760Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i think im just bored or something. been feeling really flat lately, like nothing really matters that much"
+    },
+    {
+      "role": "companion",
+      "content": "“Really flat” feels like the centre of this. I’m wondering if it’s more bored, blank, or just hard to get traction on anything?"
+    },
+    {
+      "role": "user",
+      "content": "not really bored i guess. more like... blank. my mum called the other day and i just sat there while she talked and felt nothing. didnt feel anything at all"
+    },
+    {
+      "role": "companion",
+      "content": "I had the bored part wrong, let me step back. \"Blank\" sounds closer here, and I’m wondering if it felt more like nothing was there, or like nothing could reach you?"
+    },
+    {
+      "role": "user",
+      "content": "like nothing could reach me i think. shes my mum and i love her but it was like watching her through glass. used to feel guilty about it now i dont even feel that"
+    },
+    {
+      "role": "companion",
+      "content": "“Watching her through glass” and not even feeling guilty anymore gives this a very distant shape. I’m here with that, and I can stay with it or leave it there if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah. leave it there i think. through glass is about right. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "“Through glass” feels like the right edge of it. I’ll leave it there with you."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8ghv1w38zk3v22",
+    "conversation_id": "flat__04",
+    "timestamp": "2026-06-10T19:23:26.137Z",
+    "user_words_raw": "through glass",
+    "emotion_status": "confirmed",
+    "emotion_family": "flat",
+    "emotion_shade": "disconnected",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "your mum called and you felt out of reach from her",
+    "appraisal_thought": "nothing could reach me",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "lower demand"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "user_rejected_shades": [
+      "bored"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Feeling disconnected from someone close, especially in contact with mum.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i think im just bored or something. been feeling really flat lately, like nothing really matters that much"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "“Really flat” feels like the centre of this. I’m wondering if it’s more bored, blank, or just hard to get traction on anything?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "user_stated",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "flat",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "joy",
+          "shade": "bored",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "not really bored i guess. more like... blank. my mum called the other day and i just sat there while she talked and felt nothing. didnt feel anything at all"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "I had the bored part wrong, let me step back. \"Blank\" sounds closer here, and I’m wondering if it felt more like nothing was there, or like nothing could reach you?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "like nothing could reach me i think. shes my mum and i love her but it was like watching her through glass. used to feel guilty about it now i dont even feel that"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "“Watching her through glass” and not even feeling guilty anymore gives this a very distant shape. I’m here with that, and I can stay with it or leave it there if you want.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "your mum called and you felt out of reach from her",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah. leave it there i think. through glass is about right. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "“Through glass” feels like the right edge of it. I’ll leave it there with you.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "your mum called and you felt out of reach from her",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

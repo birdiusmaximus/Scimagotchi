@@ -2,46 +2,54 @@
   "cid": "calm__03",
   "emotion": "calm",
   "persona": null,
-  "created": "2026-06-09T17:43:16.885Z",
+  "created": "2026-06-10T22:05:14.019Z",
   "history": [
     {
       "role": "user",
-      "content": "hey. dont really know how to do this"
+      "content": "hey"
     },
     {
       "role": "companion",
-      "content": "Hey — that’s completely okay. We can just go slowly, or we can leave it here for now if you want."
+      "content": "Hey, good to see you. What’s on your mind today?"
     },
     {
       "role": "user",
-      "content": "no its fine. just. i checked my bank this morning and it was ok for once"
+      "content": "nothing much. just kind of a quiet day. you?"
     },
     {
       "role": "companion",
-      "content": "That sounds like a small bit of relief — maybe even a moment of “okay, for once.” What was that like to see?"
+      "content": "Quiet days have their own weather. Mine’s pretty steady, and I’m glad to keep you company for a bit."
     },
     {
       "role": "user",
-      "content": "dunno. quiet i guess. paid the rent and there was still a bit left. havent had that in a while"
+      "content": "yeah i guess. paid off my credit card finally. like the whole thing. been hanging over me forever"
     },
     {
       "role": "companion",
-      "content": "Quiet makes sense here — like something in you could rest for a moment after the rent was paid and there was still a bit left. Does that quiet feel more settled, or more like you went still?"
+      "content": "That sounds like a real exhale after something that’s been hanging over you for a long time. Does it feel more relieved, or more quietly settled?"
     },
     {
       "role": "user",
-      "content": "settled maybe. like i can breathe for a sec. anyway thats it really. thanks"
+      "content": "settled i think. not jumping around happy just. quiet. like i can breathe"
     },
     {
       "role": "companion",
-      "content": "Settled, with room to breathe for a second — that feels like enough to leave it here. Thanks for telling me."
+      "content": "That sounds like settled calm, with a little more room to breathe."
+    },
+    {
+      "role": "user",
+      "content": "yeah. thats it. thanks. gonna go enjoy the quiet"
+    },
+    {
+      "role": "companion",
+      "content": "Enjoy the quiet, that feels well earned."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6xhmuqep0i1o5a",
+    "id": "evt_mq8mad20x1ynb29w",
     "conversation_id": "calm__03",
-    "timestamp": "2026-06-09T17:43:34.208Z",
-    "user_words_raw": "can breathe for a sec",
+    "timestamp": "2026-06-10T22:05:38.098Z",
+    "user_words_raw": "like i can breathe",
     "emotion_status": "confirmed",
     "emotion_family": "calm",
     "emotion_shade": "settled",
@@ -50,98 +58,153 @@
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "paid the rent and there was still a bit left",
-    "appraisal_thought": "I can breathe for a sec.",
-    "body_cue": [
-      "can breathe for a sec"
-    ],
-    "behaviour_action": [
-      "leave it here"
-    ],
+    "trigger_event": "paid off credit card debt",
+    "appraisal_thought": "I can breathe",
+    "body_cue": [],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
       "space",
-      "safety",
-      "relief"
+      "rest",
+      "clarity"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Money felt steadier after rent was paid and there was still some left.",
+    "memory_note": "A debt payoff can bring a quiet, settled calm.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey. dont really know how to do this"
+      "content": "hey"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey — that’s completely okay. We can just go slowly, or we can leave it here for now if you want.",
+      "content": "Hey, good to see you. What’s on your mind today?",
       "stage": "noticed",
       "unlocked": false,
       "family": null,
       "shade": null,
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "no its fine. just. i checked my bank this morning and it was ok for once"
+      "content": "nothing much. just kind of a quiet day. you?"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds like a small bit of relief — maybe even a moment of “okay, for once.” What was that like to see?",
-      "stage": "named",
-      "unlocked": false,
-      "family": "calm",
-      "shade": "relief",
-      "body_cue": [],
-      "trigger": "checked bank this morning and it was ok for once"
-    },
-    {
-      "turn": 4,
-      "role": "user",
-      "content": "dunno. quiet i guess. paid the rent and there was still a bit left. havent had that in a while"
-    },
-    {
-      "turn": 5,
-      "role": "companion",
-      "content": "Quiet makes sense here — like something in you could rest for a moment after the rent was paid and there was still a bit left. Does that quiet feel more settled, or more like you went still?",
+      "content": "Quiet days have their own weather. Mine’s pretty steady, and I’m glad to keep you company for a bit.",
       "stage": "named",
       "unlocked": false,
       "family": "calm",
       "shade": "quiet",
       "body_cue": [],
-      "trigger": "paid the rent and there was still a bit left"
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah i guess. paid off my credit card finally. like the whole thing. been hanging over me forever"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like a real exhale after something that’s been hanging over you for a long time. Does it feel more relieved, or more quietly settled?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "paid off credit card debt",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "settled",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "joy",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "settled maybe. like i can breathe for a sec. anyway thats it really. thanks"
+      "content": "settled i think. not jumping around happy just. quiet. like i can breathe"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Settled, with room to breathe for a second — that feels like enough to leave it here. Thanks for telling me.",
+      "content": "That sounds like settled calm, with a little more room to breathe.",
       "stage": "understood",
       "unlocked": true,
       "family": "calm",
       "shade": "settled",
-      "body_cue": [
-        "can breathe for a sec"
-      ],
-      "trigger": "paid the rent and there was still a bit left"
+      "body_cue": [],
+      "trigger": "paid off credit card debt",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. thats it. thanks. gonna go enjoy the quiet"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Enjoy the quiet, that feels well earned.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "paid off credit card debt",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

@@ -1,0 +1,173 @@
+{
+  "cid": "joy__02",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-10T17:06:42.150Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so my sourdough actually WORKED this time lol. like a real loaf. ear and everything"
+    },
+    {
+      "role": "companion",
+      "content": "Yes, a real loaf, with an ear and everything. That sounds properly satisfying."
+    },
+    {
+      "role": "user",
+      "content": "yeah!! ive been trying for like two months and they kept coming out flat n sad. this one actually rose. im weirdly proud of a bread haha"
+    },
+    {
+      "role": "companion",
+      "content": "That “weirdly proud” feels like the centre of it, and maybe a bit of relief too. Did it land more in your body as a little lift, or more as a grin you wanted to keep sharing?"
+    },
+    {
+      "role": "user",
+      "content": "def a grin lol. i literally texted a pic to like 4 people nobody asked. anyway just wanted to put it somewhere, thats my little win for the day"
+    },
+    {
+      "role": "companion",
+      "content": "A grin, and the “little win for the day” makes it feel nicely alive. You can leave it right there if you want, or we can stay with what made this one count so much."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. thanks for letting me brag about my bread haha. bye!"
+    },
+    {
+      "role": "companion",
+      "content": "Bye, and please keep the bread-bragging coming when it earns it."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bmggaaqvzs9j8",
+    "conversation_id": "joy__02",
+    "timestamp": "2026-06-10T17:07:01.558Z",
+    "user_words_raw": "my bread",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "proud",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "Their sourdough finally rose after two months of flat loaves.",
+    "appraisal_thought": "This one actually rose.",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "User likes sharing small wins and being able to brag about them.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so my sourdough actually WORKED this time lol. like a real loaf. ear and everything"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Yes, a real loaf, with an ear and everything. That sounds properly satisfying.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "pleased",
+      "body_cue": [],
+      "trigger": "their sourdough actually worked and became a real loaf",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah!! ive been trying for like two months and they kept coming out flat n sad. this one actually rose. im weirdly proud of a bread haha"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That “weirdly proud” feels like the centre of it, and maybe a bit of relief too. Did it land more in your body as a little lift, or more as a grin you wanted to keep sharing?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "Their sourdough finally rose after two months of failures",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "proud",
+          "salience": "foreground",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "def a grin lol. i literally texted a pic to like 4 people nobody asked. anyway just wanted to put it somewhere, thats my little win for the day"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "A grin, and the “little win for the day” makes it feel nicely alive. You can leave it right there if you want, or we can stay with what made this one count so much.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "Their sourdough finally rose after two months of flat loaves.",
+      "label_source": "user_stated",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "proud",
+          "salience": "foreground",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah lets leave it there. thanks for letting me brag about my bread haha. bye!"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Bye, and please keep the bread-bragging coming when it earns it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "Their sourdough finally rose after two months of flat loaves.",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

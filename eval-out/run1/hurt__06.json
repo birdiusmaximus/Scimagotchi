@@ -1,0 +1,176 @@
+{
+  "cid": "hurt__06",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-09T18:21:13.165Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. kind of a weird night. i dont really know why im typing this"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — no need to have a reason ready. What’s the night feeling like, if anything?"
+    },
+    {
+      "role": "user",
+      "content": "i guess just let down. my best friend kind of forgot my birthday. like fully forgot. it was thursday and shes said nothing"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a sharp kind of let down — like something important to you went unnoticed. Does it feel more like hurt, disappointment, or both?"
+    },
+    {
+      "role": "user",
+      "content": "both i think. we tell each other everything. or i thought we did. i didnt even get a text. and i kept checking my phone all day like an idiot"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah — that sounds like hurt and disappointment, with that “checking my phone all day” feeling hanging over it. Does it feel more tight, heavy, or restless?"
+    },
+    {
+      "role": "user",
+      "content": "heavy. mostly heavy. i dont know. maybe shes just busy and im overthinking it. anyway thanks for this. gonna try to sleep"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — heavy, and also a bit of “maybe I’m overthinking it” in the same breath. We can leave it here for tonight if you want, and let it rest."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it. thanks. goodnight"
+    },
+    {
+      "role": "companion",
+      "content": "Goodnight. I’ll leave it here."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yufb6oduvqg1r",
+    "conversation_id": "hurt__06",
+    "timestamp": "2026-06-09T18:21:36.584Z",
+    "user_words_raw": "heavy",
+    "emotion_status": "confirmed",
+    "emotion_family": "sadness",
+    "emotion_shade": "heavy",
+    "secondary_emotions": [
+      "hurt",
+      "disappointment"
+    ],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "best friend forgot their birthday and hasn’t said anything since Thursday",
+    "appraisal_thought": "we tell each other everything; i thought we did",
+    "body_cue": [
+      "heavy"
+    ],
+    "behaviour_action": [
+      "checking my phone all day"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "being remembered",
+      "recognition"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feeling let down after a close friend forgot their birthday and didn’t reach out.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. kind of a weird night. i dont really know why im typing this"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — no need to have a reason ready. What’s the night feeling like, if anything?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i guess just let down. my best friend kind of forgot my birthday. like fully forgot. it was thursday and shes said nothing"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a sharp kind of let down — like something important to you went unnoticed. Does it feel more like hurt, disappointment, or both?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "let down",
+      "body_cue": [],
+      "trigger": "best friend forgot their birthday and has said nothing since Thursday"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "both i think. we tell each other everything. or i thought we did. i didnt even get a text. and i kept checking my phone all day like an idiot"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Yeah — that sounds like hurt and disappointment, with that “checking my phone all day” feeling hanging over it. Does it feel more tight, heavy, or restless?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "sadness",
+      "shade": "let down",
+      "body_cue": [],
+      "trigger": "best friend forgot their birthday and said nothing since Thursday"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "heavy. mostly heavy. i dont know. maybe shes just busy and im overthinking it. anyway thanks for this. gonna try to sleep"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — heavy, and also a bit of “maybe I’m overthinking it” in the same breath. We can leave it here for tonight if you want, and let it rest.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "heavy",
+      "body_cue": [
+        "heavy"
+      ],
+      "trigger": "best friend forgot their birthday and hasn’t said anything since Thursday"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah lets leave it. thanks. goodnight"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Goodnight. I’ll leave it here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "heavy",
+      "body_cue": [
+        "heavy"
+      ],
+      "trigger": "best friend forgot their birthday and hasn’t said anything since Thursday"
+    }
+  ]
+}

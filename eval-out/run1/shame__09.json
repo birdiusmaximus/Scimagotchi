@@ -1,0 +1,145 @@
+{
+  "cid": "shame__09",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-09T18:24:15.199Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "felt like an idiot at work today"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really sharp and self-cutting. I’m wondering if it was more embarrassment, shame, or just that painful “I messed up” feeling?"
+    },
+    {
+      "role": "user",
+      "content": "embarrassment i guess. said something dumb in the meeting and everyone just went quiet"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that kind of silence can make the moment feel very exposed. Does it make you want to hide, explain, or just replay it?"
+    },
+    {
+      "role": "user",
+      "content": "replay it. keeps looping. like why did i even open my mouth"
+    },
+    {
+      "role": "companion",
+      "content": "That loop sounds harsh, and like the silence turned one moment into something much bigger. We can leave it here, or stay with what that moment seemed to say about you — which feels closer?"
+    },
+    {
+      "role": "user",
+      "content": "leave it here. just needed to get it out. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — I’m glad you said it out loud. We can leave it right there."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yybz1xuea4303",
+    "conversation_id": "shame__09",
+    "timestamp": "2026-06-09T18:25:19.403Z",
+    "user_words_raw": "keep looping",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "self-critical",
+    "secondary_emotions": [
+      "embarrassment"
+    ],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "said something dumb in the meeting and everyone just went quiet",
+    "appraisal_thought": "why did I even open my mouth",
+    "body_cue": [],
+    "behaviour_action": [
+      "replay it",
+      "keep looping"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "acceptance",
+      "dignity"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Feels self-critical after speaking up in a meeting and being met with silence.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "felt like an idiot at work today"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds really sharp and self-cutting. I’m wondering if it was more embarrassment, shame, or just that painful “I messed up” feeling?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "felt like an idiot",
+      "body_cue": [],
+      "trigger": "at work today"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "embarrassment i guess. said something dumb in the meeting and everyone just went quiet"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Yeah, that kind of silence can make the moment feel very exposed. Does it make you want to hide, explain, or just replay it?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "said something dumb in the meeting and everyone just went quiet"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "replay it. keeps looping. like why did i even open my mouth"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That loop sounds harsh, and like the silence turned one moment into something much bigger. We can leave it here, or stay with what that moment seemed to say about you — which feels closer?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "said something dumb in the meeting and everyone just went quiet"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "leave it here. just needed to get it out. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Of course — I’m glad you said it out loud. We can leave it right there.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "said something dumb in the meeting and everyone just went quiet"
+    }
+  ]
+}

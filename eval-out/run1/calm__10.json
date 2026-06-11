@@ -1,0 +1,194 @@
+{
+  "cid": "calm__10",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-09T17:44:03.919Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. um not really sure how to do this lol. i guess i just had this thing happen today and i kind of wanted to put it somewhere"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that’s completely okay. You can just put it here in your own words—what happened today?"
+    },
+    {
+      "role": "user",
+      "content": "ok so. i had a doctors appointment this morning. like a follow up scan thing. ive been waiting on it for honestly weeks and i barely slept. and it came back clear. totally fine. and i dont even know how to describe it i just sat in the car after and kind of breathed for like ten minutes"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a big release after a long wait. I’m wondering if it was mostly relief, or maybe something else too?"
+    },
+    {
+      "role": "user",
+      "content": "yeah see thats the weird part. its relief obviously. like this huge weight gone. but theres also this other thing underneath that i feel kind of guilty about?? like im so calm now and settled but part of me is almost angry that i spent weeks terrified for nothing. like i lost weeks of my life to dread and now its just. nothing. and i dont know what to do with that energy now"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like relief with something sharper underneath — maybe anger, and some guilt about those lost weeks. Does the “energy” feel more restless, or more like protest?"
+    },
+    {
+      "role": "user",
+      "content": "protest maybe? idk. like i kept thinking the whole time about all the things i wasnt doing because i was so scared. i canceled plans. i didnt call my sister back for like two weeks because i didnt want to lie to her about being fine. i just sort of shut down and waited. and now im sitting here clear and healthy and i feel almost silly for how much i let it eat me. but also like. i was allowed to be scared right. it was a scan. anyone would be"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — it sounds like the protest is rubbing up against guilt and maybe a little shame about how much space the fear took. I’m wondering whether the sharper part is more about losing those weeks, or about feeling silly now?"
+    },
+    {
+      "role": "user",
+      "content": "i think... its the losing the weeks part more. the silly thing fades when i actually say it out loud cause yeah of course i was scared. but the weeks. i cant get those back. ugh. ok but writing this out im realising the relief is bigger than the rest of it honestly. like underneath all the protest im just so so glad. im gonna call my sister tonight. i think i just needed to feel both things without picking one"
+    },
+    {
+      "role": "companion",
+      "content": "That feels clear: the protest is about the weeks you lost, and underneath it the relief is still bigger. If you want, we can stay with the protest a little longer, or just leave it here with the gladness."
+    },
+    {
+      "role": "user",
+      "content": "lets leave it there i think. with the gladness. that feels right. thank you for letting me just kind of sit in the mess of it, i feel a lot lighter than when i opened this. ok. going to go call her now x"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a good place to let it rest — with the gladness. I’m glad you could sit with the mess of it and find what felt right; go call her."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xindegrlqdoyu",
+    "conversation_id": "calm__10",
+    "timestamp": "2026-06-09T17:44:40.904Z",
+    "user_words_raw": "the gladness",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [
+      "joy"
+    ],
+    "valence": "mixed",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "the scan came back clear after weeks of waiting and fear",
+    "appraisal_thought": "I lost weeks I can’t get back, but the relief is bigger and it’s okay to hold both",
+    "body_cue": [],
+    "behaviour_action": [
+      "go call her"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "relief",
+      "understanding",
+      "space",
+      "connection"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "After a clear scan, they felt relief mixed with protest about lost weeks, and later wanted to leave it there with the gladness.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. um not really sure how to do this lol. i guess i just had this thing happen today and i kind of wanted to put it somewhere"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that’s completely okay. You can just put it here in your own words—what happened today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "ok so. i had a doctors appointment this morning. like a follow up scan thing. ive been waiting on it for honestly weeks and i barely slept. and it came back clear. totally fine. and i dont even know how to describe it i just sat in the car after and kind of breathed for like ten minutes"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a big release after a long wait. I’m wondering if it was mostly relief, or maybe something else too?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "relief",
+      "body_cue": [],
+      "trigger": "the follow-up scan came back clear after waiting for weeks"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah see thats the weird part. its relief obviously. like this huge weight gone. but theres also this other thing underneath that i feel kind of guilty about?? like im so calm now and settled but part of me is almost angry that i spent weeks terrified for nothing. like i lost weeks of my life to dread and now its just. nothing. and i dont know what to do with that energy now"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like relief with something sharper underneath — maybe anger, and some guilt about those lost weeks. Does the “energy” feel more restless, or more like protest?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustration",
+      "body_cue": [],
+      "trigger": "the scan came back clear after weeks of waiting and fear"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "protest maybe? idk. like i kept thinking the whole time about all the things i wasnt doing because i was so scared. i canceled plans. i didnt call my sister back for like two weeks because i didnt want to lie to her about being fine. i just sort of shut down and waited. and now im sitting here clear and healthy and i feel almost silly for how much i let it eat me. but also like. i was allowed to be scared right. it was a scan. anyone would be"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — it sounds like the protest is rubbing up against guilt and maybe a little shame about how much space the fear took. I’m wondering whether the sharper part is more about losing those weeks, or about feeling silly now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustration",
+      "body_cue": [],
+      "trigger": "the scan came back clear after weeks of waiting and fear"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i think... its the losing the weeks part more. the silly thing fades when i actually say it out loud cause yeah of course i was scared. but the weeks. i cant get those back. ugh. ok but writing this out im realising the relief is bigger than the rest of it honestly. like underneath all the protest im just so so glad. im gonna call my sister tonight. i think i just needed to feel both things without picking one"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That feels clear: the protest is about the weeks you lost, and underneath it the relief is still bigger. If you want, we can stay with the protest a little longer, or just leave it here with the gladness.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustration",
+      "body_cue": [],
+      "trigger": "the scan came back clear after weeks of waiting and fear"
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "lets leave it there i think. with the gladness. that feels right. thank you for letting me just kind of sit in the mess of it, i feel a lot lighter than when i opened this. ok. going to go call her now x"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels like a good place to let it rest — with the gladness. I’m glad you could sit with the mess of it and find what felt right; go call her.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "the scan came back clear after weeks of waiting and fear"
+    }
+  ]
+}

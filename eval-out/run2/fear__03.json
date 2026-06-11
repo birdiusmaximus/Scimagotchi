@@ -1,0 +1,190 @@
+{
+  "cid": "fear__03",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-10T17:07:59.859Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. uh, not sure how this works lol"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, no rush, we can just talk normally. If you want, you can tell me what’s on your mind in whatever way feels easiest."
+    },
+    {
+      "role": "user",
+      "content": "i dunno. been kind of on edge lately. money stuff mostly"
+    },
+    {
+      "role": "companion",
+      "content": "“On edge lately” with money stuff in the background feels like a lot to be carrying. What’s it been like for you day to day?"
+    },
+    {
+      "role": "user",
+      "content": "rents going up in august. like a lot. dont know if i can cover it and i keep doing the math in my head at night"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the kind of fear that keeps checking itself over and over, especially at night. Is it more the not-knowing, or the numbers themselves, that hooks you?"
+    },
+    {
+      "role": "user",
+      "content": "the not knowing i guess. anyway. just needed to say it out loud i think. gonna head off"
+    },
+    {
+      "role": "companion",
+      "content": "The not knowing feels like the part that keeps catching, and saying it out loud sounds like enough for tonight. We can leave it there."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bo48s4yael2g6",
+    "conversation_id": "fear__03",
+    "timestamp": "2026-06-10T17:08:25.128Z",
+    "user_words_raw": "the not knowing",
+    "emotion_status": "candidate",
+    "emotion_family": "fear",
+    "emotion_shade": "uneasy",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "rent going up in august",
+    "appraisal_thought": "the not knowing",
+    "body_cue": [],
+    "behaviour_action": [
+      "doing the math in my head"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "certainty",
+      "control"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "shaped",
+    "memory_note": "Money pressure is tied to uncertainty about future rent, especially at night.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. uh, not sure how this works lol"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, no rush, we can just talk normally. If you want, you can tell me what’s on your mind in whatever way feels easiest.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i dunno. been kind of on edge lately. money stuff mostly"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "“On edge lately” with money stuff in the background feels like a lot to be carrying. What’s it been like for you day to day?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "on edge",
+      "body_cue": [],
+      "trigger": "money stuff",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "on edge",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "rents going up in august. like a lot. dont know if i can cover it and i keep doing the math in my head at night"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like the kind of fear that keeps checking itself over and over, especially at night. Is it more the not-knowing, or the numbers themselves, that hooks you?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "on edge",
+      "body_cue": [],
+      "trigger": "rent going up in august",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "on edge",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "the not knowing i guess. anyway. just needed to say it out loud i think. gonna head off"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "The not knowing feels like the part that keeps catching, and saying it out loud sounds like enough for tonight. We can leave it there.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": "rent going up in august",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

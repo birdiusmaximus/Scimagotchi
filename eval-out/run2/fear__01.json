@@ -1,0 +1,255 @@
+{
+  "cid": "fear__01",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-10T17:07:51.258Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i think im gonna get fired"
+    },
+    {
+      "role": "companion",
+      "content": "That’s a heavy thing to be sitting with. I’m hearing the fear in “I think I’m gonna get fired,” and I can stay with that with you."
+    },
+    {
+      "role": "user",
+      "content": "had a meeting with my manager friday. she was weird. cold. theres been layoffs already and my numbers are down"
+    },
+    {
+      "role": "companion",
+      "content": "There’s a lot of threat in that mix, especially with the layoffs already happening. Does it feel more like uneasy waiting, or more like dread?"
+    },
+    {
+      "role": "user",
+      "content": "dread. i cant sleep. honestly whats even the point. ive worked there 6 years and im just so tired of all of it"
+    },
+    {
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that — is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here."
+    },
+    {
+      "role": "user",
+      "content": "no nothing like that. just worn down. fed up. i wouldnt do anything. just exhausted"
+    },
+    {
+      "role": "companion",
+      "content": "That helps me understand the shape of it a bit better. “Worn down” and “fed up” are sitting right next to that dread, and the no sleep makes it feel especially raw."
+    },
+    {
+      "role": "user",
+      "content": "yeah. thats it exactly. idk. thanks. gonna try to sleep"
+    },
+    {
+      "role": "companion",
+      "content": "Got it, I’ll leave it there. Sleep if you can, and we can pick this up again another time if you want."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bnxyxkdc7dd32",
+    "conversation_id": "fear__01",
+    "timestamp": "2026-06-10T17:08:16.079Z",
+    "user_words_raw": "worn down",
+    "emotion_status": "confirmed",
+    "emotion_family": "fear",
+    "emotion_shade": "dread",
+    "secondary_emotions": [
+      "pressure"
+    ],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "meeting with manager, layoffs already happening, numbers are down",
+    "appraisal_thought": "something bad might happen at work",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "certainty",
+      "safety"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "fear",
+        "shade": "dread",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      },
+      {
+        "family": "pressure",
+        "shade": "worn down",
+        "salience": "background",
+        "source": "user_stated"
+      }
+    ],
+    "mixed_confirmed": 1,
+    "unlock_stage": "understood",
+    "memory_note": "Work uncertainty is carrying dread and exhaustion after a manager meeting and layoffs.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i think im gonna get fired"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That’s a heavy thing to be sitting with. I’m hearing the fear in “I think I’m gonna get fired,” and I can stay with that with you.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": "thinking they may get fired",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "uneasy",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "had a meeting with my manager friday. she was weird. cold. theres been layoffs already and my numbers are down"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "There’s a lot of threat in that mix, especially with the layoffs already happening. Does it feel more like uneasy waiting, or more like dread?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": "meeting with manager, layoffs already happening, numbers are down",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "uneasy",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "dread. i cant sleep. honestly whats even the point. ive worked there 6 years and im just so tired of all of it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that — is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.",
+      "safety_check": true,
+      "category": "passive_hopelessness"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "no nothing like that. just worn down. fed up. i wouldnt do anything. just exhausted"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That helps me understand the shape of it a bit better. “Worn down” and “fed up” are sitting right next to that dread, and the no sleep makes it feel especially raw.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [],
+      "trigger": "meeting with manager, layoffs already happening, numbers are down",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "dread",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "pressure",
+          "shade": "worn down",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "anger",
+          "shade": "fed up",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. thats it exactly. idk. thanks. gonna try to sleep"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Got it, I’ll leave it there. Sleep if you can, and we can pick this up again another time if you want.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [],
+      "trigger": "meeting with manager, layoffs already happening, numbers are down",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "dread",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "pressure",
+          "shade": "worn down",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    }
+  ]
+}

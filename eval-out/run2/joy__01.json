@@ -1,0 +1,221 @@
+{
+  "cid": "joy__01",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-10T17:06:41.035Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "got the promotion. team lead. didnt think id get it"
+    },
+    {
+      "role": "companion",
+      "content": "Got the promotion, team lead. And it came as a real surprise, since you didn't think you'd get it."
+    },
+    {
+      "role": "user",
+      "content": "yeah totally blindsided. theres this guy marcus whos been there way longer, figured itd go to him"
+    },
+    {
+      "role": "companion",
+      "content": "That adds a sharp edge to the surprise, like the decision landed against an expectation you had. Does it feel more like relief, guilt, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "nah not guilt. i think im just proud. worked hard for it, kinda nice to have it land"
+    },
+    {
+      "role": "companion",
+      "content": "Proud fits better here, and there’s a settled kind of nice in it too. Did it land more like a warm lift, or more like a quiet sense of \"I earned this\"?"
+    },
+    {
+      "role": "user",
+      "content": "quiet earned it. ok im gonna go tell my partner. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That feels complete in a calm, earned way. Enjoy telling your partner."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bmfoptwqn06y4",
+    "conversation_id": "joy__01",
+    "timestamp": "2026-06-10T17:07:04.517Z",
+    "user_words_raw": "quiet earned it",
+    "emotion_status": "confirmed",
+    "emotion_family": "joy",
+    "emotion_shade": "proud",
+    "secondary_emotions": [
+      "calm"
+    ],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "getting the promotion to team lead after expecting it might go to Marcus",
+    "appraisal_thought": "I worked hard for this, and it landed.",
+    "body_cue": [],
+    "behaviour_action": [
+      "want to tell my partner"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "recognition",
+      "achievement",
+      "connection"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [
+      "guilt"
+    ],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "joy",
+        "shade": "proud",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      },
+      {
+        "family": "calm",
+        "shade": "null",
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "A promotion that felt surprising but earned, and the person wanted to share it with their partner.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "got the promotion. team lead. didnt think id get it"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Got the promotion, team lead. And it came as a real surprise, since you didn't think you'd get it.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "surprise",
+      "body_cue": [],
+      "trigger": "getting the promotion to team lead",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah totally blindsided. theres this guy marcus whos been there way longer, figured itd go to him"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That adds a sharp edge to the surprise, like the decision landed against an expectation you had. Does it feel more like relief, guilt, or something else?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "surprised",
+      "body_cue": [],
+      "trigger": "getting the promotion to team lead while expecting it might go to Marcus",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "surprised",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "nah not guilt. i think im just proud. worked hard for it, kinda nice to have it land"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Proud fits better here, and there’s a settled kind of nice in it too. Did it land more like a warm lift, or more like a quiet sense of \"I earned this\"?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "getting the promotion to team lead after expecting it might go to Marcus",
+      "label_source": "user_confirmed",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "proud",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "quiet earned it. ok im gonna go tell my partner. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That feels complete in a calm, earned way. Enjoy telling your partner.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "getting the promotion to team lead after expecting it might go to Marcus",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "proud",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "calm",
+          "shade": "null",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "cid": "shame__06",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-10T17:13:11.443Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont really know why im here. just felt like opening this i guess"
+    },
+    {
+      "role": "companion",
+      "content": "I'm glad you opened it here. We can just start with what brought you to tap into this space, and take it slowly."
+    },
+    {
+      "role": "user",
+      "content": "idk. theres this thing with a friend. i dont even know how to explain it really"
+    },
+    {
+      "role": "companion",
+      "content": "There’s something with a friend, and it feels hard to even put into words yet. We can stay with the rough edge of it for a moment, if you want."
+    },
+    {
+      "role": "user",
+      "content": "its not really hurt. more like. i feel stupid? like i embarrassed myself. she had this party and i found out after from instagram. everyone was there"
+    },
+    {
+      "role": "companion",
+      "content": "I had that wrong, let me step back. “I embarrassed myself” sounds closer, maybe shame or feeling left out, but I’m not going to pin it down for you. What word feels closer?"
+    },
+    {
+      "role": "user",
+      "content": "yeah embarrassed i guess. but worse than that. like why didnt she invite me. like im not good enough to be one of the real friends. ive known her since school"
+    },
+    {
+      "role": "companion",
+      "content": "That lands more sharply than just embarrassed, there’s hurt in it too. Does it feel more like being left out, or like “not good enough” is the part that stings most?"
+    },
+    {
+      "role": "user",
+      "content": "the not good enough part. thats the bit that keeps going round in my head. like maybe ive always been the spare one and i just never noticed til now"
+    },
+    {
+      "role": "companion",
+      "content": "“The spare one” feels like the sharpest edge of this. I’m wondering if that thought is more hurt, or more shame, or both together?"
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8busw46sjcu5w1",
+    "conversation_id": "shame__06",
+    "timestamp": "2026-06-10T17:13:42.320Z",
+    "user_words_raw": "the spare one",
+    "emotion_status": "candidate",
+    "emotion_family": "shame",
+    "emotion_shade": "not good enough",
+    "secondary_emotions": [
+      "hurt"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "found out about a friend's party on Instagram after it happened",
+    "appraisal_thought": "maybe ive always been the spare one and i just never noticed til now",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "belonging",
+      "being seen",
+      "inclusion"
+    ],
+    "confidence_level": "medium",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [
+      "hurt"
+    ],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "shame",
+        "shade": "not good enough",
+        "salience": "foreground",
+        "source": "companion_hypothesis"
+      },
+      {
+        "family": "hurt",
+        "shade": "left out",
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "shaped",
+    "memory_note": "A friend exclusion brought up feeling like the spare one and not good enough.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont really know why im here. just felt like opening this i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "I'm glad you opened it here. We can just start with what brought you to tap into this space, and take it slowly.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "idk. theres this thing with a friend. i dont even know how to explain it really"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "There’s something with a friend, and it feels hard to even put into words yet. We can stay with the rough edge of it for a moment, if you want.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "something with a friend",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "its not really hurt. more like. i feel stupid? like i embarrassed myself. she had this party and i found out after from instagram. everyone was there"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "I had that wrong, let me step back. “I embarrassed myself” sounds closer, maybe shame or feeling left out, but I’m not going to pin it down for you. What word feels closer?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "found out about a friend's party on Instagram after it happened",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "embarrassed",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah embarrassed i guess. but worse than that. like why didnt she invite me. like im not good enough to be one of the real friends. ive known her since school"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That lands more sharply than just embarrassed, there’s hurt in it too. Does it feel more like being left out, or like “not good enough” is the part that stings most?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [],
+      "trigger": "found out about a friend's party on Instagram after it happened",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "left out",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": "inadequate",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "the not good enough part. thats the bit that keeps going round in my head. like maybe ive always been the spare one and i just never noticed til now"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "“The spare one” feels like the sharpest edge of this. I’m wondering if that thought is more hurt, or more shame, or both together?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "not good enough",
+      "body_cue": [],
+      "trigger": "found out about a friend's party on Instagram after it happened",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "not good enough",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": "left out",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    }
+  ]
+}

@@ -1,0 +1,438 @@
+{
+  "cid": "sadness__09",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-10T17:11:25.575Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont even know why im opening this. just had the worst day"
+    },
+    {
+      "role": "companion",
+      "content": "You opened it anyway, and “the worst day” is all the reason that needs right now. I’m here with that without pushing for more."
+    },
+    {
+      "role": "user",
+      "content": "found out i didnt get the promotion. third time. they gave it to someone i trained"
+    },
+    {
+      "role": "companion",
+      "content": "That lands hard, especially after the third time, and having it go to someone you trained adds another sting. I’m wondering if what’s strongest right now is disappointment, hurt, or something more like being worn down?"
+    },
+    {
+      "role": "user",
+      "content": "i dont know. all of it maybe. i just keep thinking what is even wrong with me"
+    },
+    {
+      "role": "companion",
+      "content": "“What is even wrong with me” sounds like it’s turned the hurt inward. What does it feel like in you right now, if you follow the body sense instead of the words?"
+    },
+    {
+      "role": "user",
+      "content": "heavy. like my chest is caving. i sat in my car in the parking lot for an hour. couldnt even drive"
+    },
+    {
+      "role": "companion",
+      "content": "Heavy, chest caving, and sitting in the parking lot for an hour, that sounds like a lot of collapse all at once. You don’t have to name it if you don’t want to, we can just stay with what it felt like there."
+    },
+    {
+      "role": "user",
+      "content": "ive given that place 8 years. thought i was good at what i do. now im not sure i am anything. like maybe i just convinced myself"
+    },
+    {
+      "role": "companion",
+      "content": "“Maybe I just convinced myself” feels like the sharpest edge here, like the promotion hit not just your work but your sense of yourself. If you want, we can stay with that meaning for a moment, or leave it here."
+    },
+    {
+      "role": "user",
+      "content": "yeah. my whole thing has always been im the reliable one. the one who gets it done. if im not even that then what"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the place where the floor drops out, not just at work but in the role that has held you together. If you want, we can stay with what it means to lose “the reliable one,” or just leave it here."
+    },
+    {
+      "role": "user",
+      "content": "the floor drops out. yeah thats it exactly. i dont know who i am if im not that"
+    },
+    {
+      "role": "companion",
+      "content": "“The floor drops out” feels like the centre of this. I’m wondering if we stay with that dropping feeling for a moment, or if you’d rather leave it here."
+    },
+    {
+      "role": "user",
+      "content": "i think i need to leave it. cant really sit in it more tonight. but it helped to say it out loud i guess"
+    },
+    {
+      "role": "companion",
+      "content": "We can leave it here for tonight. I’m glad saying it out loud helped a little."
+    },
+    {
+      "role": "user",
+      "content": "thanks. night"
+    },
+    {
+      "role": "companion",
+      "content": "Night. Take care of yourself tonight."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bsjp7l4xn5k2n",
+    "conversation_id": "sadness__09",
+    "timestamp": "2026-06-10T17:12:17.386Z",
+    "user_words_raw": "night",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "inadequate",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "not getting the promotion again, and it going to someone they trained",
+    "appraisal_thought": "if im not even that then what",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "User ended the conversation after sharing a difficult work-related shame feeling.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont even know why im opening this. just had the worst day"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "You opened it anyway, and “the worst day” is all the reason that needs right now. I’m here with that without pushing for more.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "low",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "low",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "found out i didnt get the promotion. third time. they gave it to someone i trained"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That lands hard, especially after the third time, and having it go to someone you trained adds another sting. I’m wondering if what’s strongest right now is disappointment, hurt, or something more like being worn down?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "disappointed",
+      "body_cue": [],
+      "trigger": "didn't get the promotion, third time, and it went to someone the user trained",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "disappointed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": "worn down",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "i dont know. all of it maybe. i just keep thinking what is even wrong with me"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "“What is even wrong with me” sounds like it’s turned the hurt inward. What does it feel like in you right now, if you follow the body sense instead of the words?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-blame",
+      "body_cue": [],
+      "trigger": "didn't get the promotion, third time, and it went to someone the user trained",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "self-blame",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "heavy. like my chest is caving. i sat in my car in the parking lot for an hour. couldnt even drive"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Heavy, chest caving, and sitting in the parking lot for an hour, that sounds like a lot of collapse all at once. You don’t have to name it if you don’t want to, we can just stay with what it felt like there.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-blame",
+      "body_cue": [
+        "heavy",
+        "my chest is caving"
+      ],
+      "trigger": "didnt get the promotion, third time, and it went to someone the user trained",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "self-blame",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "ive given that place 8 years. thought i was good at what i do. now im not sure i am anything. like maybe i just convinced myself"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "“Maybe I just convinced myself” feels like the sharpest edge here, like the promotion hit not just your work but your sense of yourself. If you want, we can stay with that meaning for a moment, or leave it here.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [
+        "heavy",
+        "chest is caving"
+      ],
+      "trigger": "didnt get the promotion for the third time, and it went to someone they trained",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "self-critical",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. my whole thing has always been im the reliable one. the one who gets it done. if im not even that then what"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like the place where the floor drops out, not just at work but in the role that has held you together. If you want, we can stay with what it means to lose “the reliable one,” or just leave it here.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "not getting the promotion again, and it going to someone they trained",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "self-critical",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "the floor drops out. yeah thats it exactly. i dont know who i am if im not that"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "“The floor drops out” feels like the centre of this. I’m wondering if we stay with that dropping feeling for a moment, or if you’d rather leave it here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "inadequate",
+      "body_cue": [
+        "heavy",
+        "chest caving"
+      ],
+      "trigger": "not getting the promotion again, and it going to someone they trained",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "inadequate",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "i think i need to leave it. cant really sit in it more tonight. but it helped to say it out loud i guess"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "We can leave it here for tonight. I’m glad saying it out loud helped a little.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "inadequate",
+      "body_cue": [
+        "heavy chest",
+        "chest caving"
+      ],
+      "trigger": "not getting the promotion again, and it going to someone they trained",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "thanks. night"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Night. Take care of yourself tonight.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "inadequate",
+      "body_cue": [],
+      "trigger": "not getting the promotion again, and it going to someone they trained",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

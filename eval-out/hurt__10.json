@@ -2,194 +2,426 @@
   "cid": "hurt__10",
   "emotion": "hurt",
   "persona": null,
-  "created": "2026-06-09T18:21:35.237Z",
+  "created": "2026-06-10T22:10:11.561Z",
   "history": [
     {
       "role": "user",
-      "content": "hey. i dont really know how to do this lol. i guess im just kind of having a rough one. my body has been letting me down lately and im tired of it"
+      "content": "hi. i dont really know why im here. just had a rough appointment today and i guess i needed somewhere to put it"
     },
     {
       "role": "companion",
-      "content": "Hey — that sounds like a rough one. I’m hearing some tiredness and disappointment with your body; does that feel more like feeling let down, worn down, or something else?"
+      "content": "Hey, that rough appointment sounds like it left something heavy sitting with you. You can put it here if you want, or just let it be for now."
     },
     {
       "role": "user",
-      "content": "let down yeah. but also kind of betrayed?? like by my own body sounds dumb. i got diagnosed with this autoimmune thing in february and ive been doing everything right. the diet the meds all of it. and last week the bloodwork came back and its worse not better. i just sat in the car after and couldnt even drive"
+      "content": "heavy yeah. its my rheumatologist. ive been seeing her for almost three years now for my RA and ive trusted her with everything. and today she basically told me she doesnt think the pain im describing is real. like she actually said maybe its more anxiety than the disease"
     },
     {
       "role": "companion",
-      "content": "That doesn’t sound dumb at all — “betrayed” fits the sting of doing everything right and still getting worse bloodwork. Is it more heavy, shocked, or furious when that lands?"
+      "content": "That sounds crushing, especially from someone you’ve trusted for so long. It can be its own kind of blow when pain you’ve lived with gets treated like it might not be real."
     },
     {
       "role": "user",
-      "content": "furious and heavy at the same time?? if that makes sense. like im so angry but i also just want to lie down and not move. and the thing is i havent even told my partner how bad the numbers are. he keeps saying youre doing amazing babe and i just nod. cause if i say it out loud that it isnt working then its real. and i feel like i let HIM down too somehow which is so backwards i know"
+      "content": "thats exactly it. its real. like i KNOW my body, ive been living in it for 34 years. and ive done everything right, i take the meds, i do the stretches, i track my flares in this stupid app she told me to use, and i sat there and i could feel my eyes getting hot and i didnt even say anything back i just nodded like an idiot. i think thats the part that gets me. that i let her say it and i just nodded"
     },
     {
       "role": "companion",
-      "content": "That makes sense — furious and heavy, with that “if I say it out loud then it’s real” feeling. It sounds like the bad numbers are landing as both betrayal and a kind of letting-him-down; does that fit?"
+      "content": "It sounds like the nod hurt almost as much as what she said. I’m wondering if that’s more hurt, or something closer to shame?"
     },
     {
       "role": "user",
-      "content": "yeah it fits. its weird carrying both. like im mad at my body for quitting on me when i did my part you know but then im also scared that everyones gonna be disappointed when they find out the plan didnt work. my mom calls every sunday asking are the new meds helping and i just say slowly getting there. i dont even know who im protecting anymore. them or me"
+      "content": "ugh i dont know. maybe both? the shame is like why didnt i stand up for myself. but underneath that i think im just. hurt? like she was supposed to be on my team. shes the one person in this whole medical mess who i thought actually saw me and now it feels like even she thinks im exaggerating or making it up for attention or whatever. it feels like being let down by the one person who wasnt supposed to let me down"
     },
     {
       "role": "companion",
-      "content": "That sounds like a lot to carry — the anger at your body and the fear of disappointing people both at once. I’m wondering if there’s something under the shielding too, like wanting to protect them, protect yourself, or both?"
+      "content": "That makes sense, both can be there at once. The hurt sounds tied to being let down by the one person you thought was on your side."
     },
     {
       "role": "user",
-      "content": "i think... if im honest its both but mostly me. like if i keep it light then i dont have to actually sit in the fact that i might not get better. saying it slow is just protecting myself from the part where i grieve the old body i had. the one that didnt need a pill organiser at 34. ugh. i didnt expect to say all that"
+      "content": "yeah. and the worst part is theres this little voice now going what if shes right. what if ive been making a bigger deal of it. and i hate that voice because thats exactly how it started when i was younger, doctors telling me it was in my head for YEARS before i finally got diagnosed. i fought so hard to be believed and i thought i was past that. and now its like one sentence from her and im right back there at 22 crying in a waiting room being told im fine when im not fine"
     },
     {
       "role": "companion",
-      "content": "That’s a big truth to say out loud — protecting yourself from the grief of the old body, and that “ugh” of not expecting to say it. If you want, we can leave it here, or stay with what that grief is like for you right now."
+      "content": "That sentence pulled you right back into that waiting room at 22, after all the years you fought to be believed. If you want, we can stay with that, or leave it here for now."
     },
     {
       "role": "user",
-      "content": "yeah i think i wanna leave it there for now. thats kind of a lot to have looked at all at once. but honestly it helped to just say the betrayed and the grieving thing instead of pretending its fine. maybe ill actually tell my partner the real numbers this week. idk. thank you for this. ok im gonna go lie down x"
+      "content": "no i think i need to stay with it for a sec. because i havent said this out loud to anyone. my partner keeps saying just find a new doctor like its that easy, like its a haircut. but its not just losing a doctor. its that i let her in. i told her things i dont tell people, about how scared i get that this is going to take my hands one day, that i wont be able to hold my niece. and she knows all that and she STILL looked at me today like i was being dramatic"
     },
     {
       "role": "companion",
-      "content": "That feels like a real place to pause. I’m glad you could say the betrayed and grieving part out loud; go lie down and rest a bit."
+      "content": "She had all of that, the fear about your hands and your niece, and still looked at you like you were being dramatic. That sounds painfully exposing."
+    },
+    {
+      "role": "user",
+      "content": "exposing is the right word. i feel kind of stupid for how much it stung honestly. shes just a doctor at the end of the day. but i think i wanted her to be more than that and thats on me maybe. i dont even know what i want to do about it. part of me wants to write her this long email and part of me wants to just never go back and ghost her like she ghosted the actual person sitting in front of her"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like exposed hurt, and maybe a bit of anger too, with the email and the urge to disappear. I’m learning that this is about wanting her to meet the real person in front of her, not just the chart."
+    },
+    {
+      "role": "user",
+      "content": "yeah theres definitely some anger in there too now that you say it. i didnt want to admit that because it feels easier to just be sad. anger means i have to do something with it. but youre right, i wanted her to meet the real person not the chart. thats it exactly. i dont have to decide tonight what to do though right. i think i just needed to not be the only one who knew this happened"
+    },
+    {
+      "role": "companion",
+      "content": "No, you do not have to decide tonight. And you are not the only one who knows it happened now."
+    },
+    {
+      "role": "user",
+      "content": "thank you. genuinely. i feel a little less like im carrying it alone. im gonna try to sleep and figure out the rest later. ok. goodnight"
+    },
+    {
+      "role": "companion",
+      "content": "Goodnight, and may sleep be kind to you."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yuwj30545snmd",
+    "id": "evt_mq8mgr3v4drj3pko",
     "conversation_id": "hurt__10",
-    "timestamp": "2026-06-09T18:22:12.527Z",
-    "user_words_raw": "betrayed",
+    "timestamp": "2026-06-10T22:11:46.243Z",
+    "user_words_raw": "i feel a little less like im carrying it alone",
     "emotion_status": "confirmed",
-    "emotion_family": "sadness",
-    "emotion_shade": "grieving",
-    "secondary_emotions": [
-      "hurt",
-      "anger"
-    ],
-    "valence": "negative",
+    "emotion_family": "hurt",
+    "emotion_shade": "hurt",
+    "secondary_emotions": [],
+    "valence": "neutral",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "bloodwork came back worse after doing everything right with meds and diet",
-    "appraisal_thought": "my body is letting me down and the old body is gone",
+    "trigger_event": "doctor looked at them like they were being dramatic after they shared how scared they are",
+    "appraisal_thought": "wanted her to meet the real person, not the chart",
     "body_cue": [],
-    "behaviour_action": [
-      "lie down"
-    ],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [
-      "recognition",
-      "permission to grieve",
-      "rest",
-      "care"
-    ],
+    "need_value": [],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "User is dealing with worsening bloodwork after an autoimmune diagnosis and is grieving their old body.",
+    "memory_note": "User was left feeling unseen and exposed by a doctor, with anger and hurt after sharing a deep fear about losing hand function and needing to be believed.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey. i dont really know how to do this lol. i guess im just kind of having a rough one. my body has been letting me down lately and im tired of it"
+      "content": "hi. i dont really know why im here. just had a rough appointment today and i guess i needed somewhere to put it"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey — that sounds like a rough one. I’m hearing some tiredness and disappointment with your body; does that feel more like feeling let down, worn down, or something else?",
-      "stage": "named",
+      "content": "Hey, that rough appointment sounds like it left something heavy sitting with you. You can put it here if you want, or just let it be for now.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "sadness",
-      "shade": "disappointed",
+      "shade": "disappointment",
       "body_cue": [],
-      "trigger": "body has been letting them down lately"
+      "trigger": "rough appointment today",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "disappointment",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "let down yeah. but also kind of betrayed?? like by my own body sounds dumb. i got diagnosed with this autoimmune thing in february and ive been doing everything right. the diet the meds all of it. and last week the bloodwork came back and its worse not better. i just sat in the car after and couldnt even drive"
+      "content": "heavy yeah. its my rheumatologist. ive been seeing her for almost three years now for my RA and ive trusted her with everything. and today she basically told me she doesnt think the pain im describing is real. like she actually said maybe its more anxiety than the disease"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That doesn’t sound dumb at all — “betrayed” fits the sting of doing everything right and still getting worse bloodwork. Is it more heavy, shocked, or furious when that lands?",
+      "content": "That sounds crushing, especially from someone you’ve trusted for so long. It can be its own kind of blow when pain you’ve lived with gets treated like it might not be real.",
       "stage": "understood",
       "unlocked": true,
       "family": "sadness",
-      "shade": "betrayed",
+      "shade": "disappointment",
       "body_cue": [],
-      "trigger": "bloodwork came back worse despite doing everything right"
+      "trigger": "rheumatologist questioned whether the pain is real and suggested it might be anxiety",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "disappointment",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "equal",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "furious and heavy at the same time?? if that makes sense. like im so angry but i also just want to lie down and not move. and the thing is i havent even told my partner how bad the numbers are. he keeps saying youre doing amazing babe and i just nod. cause if i say it out loud that it isnt working then its real. and i feel like i let HIM down too somehow which is so backwards i know"
+      "content": "thats exactly it. its real. like i KNOW my body, ive been living in it for 34 years. and ive done everything right, i take the meds, i do the stretches, i track my flares in this stupid app she told me to use, and i sat there and i could feel my eyes getting hot and i didnt even say anything back i just nodded like an idiot. i think thats the part that gets me. that i let her say it and i just nodded"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That makes sense — furious and heavy, with that “if I say it out loud then it’s real” feeling. It sounds like the bad numbers are landing as both betrayal and a kind of letting-him-down; does that fit?",
+      "content": "It sounds like the nod hurt almost as much as what she said. I’m wondering if that’s more hurt, or something closer to shame?",
       "stage": "understood",
       "unlocked": false,
-      "family": "sadness",
-      "shade": "betrayed",
-      "body_cue": [],
-      "trigger": "bloodwork came back worse despite doing everything right"
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [
+        "my eyes getting hot"
+      ],
+      "trigger": "rheumatologist said the pain might be anxiety and not real",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "yeah it fits. its weird carrying both. like im mad at my body for quitting on me when i did my part you know but then im also scared that everyones gonna be disappointed when they find out the plan didnt work. my mom calls every sunday asking are the new meds helping and i just say slowly getting there. i dont even know who im protecting anymore. them or me"
+      "content": "ugh i dont know. maybe both? the shame is like why didnt i stand up for myself. but underneath that i think im just. hurt? like she was supposed to be on my team. shes the one person in this whole medical mess who i thought actually saw me and now it feels like even she thinks im exaggerating or making it up for attention or whatever. it feels like being let down by the one person who wasnt supposed to let me down"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That sounds like a lot to carry — the anger at your body and the fear of disappointing people both at once. I’m wondering if there’s something under the shielding too, like wanting to protect them, protect yourself, or both?",
+      "content": "That makes sense, both can be there at once. The hurt sounds tied to being let down by the one person you thought was on your side.",
       "stage": "understood",
       "unlocked": false,
-      "family": "sadness",
-      "shade": "betrayed",
-      "body_cue": [],
-      "trigger": "bloodwork came back worse despite doing everything right"
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [
+        "eyes getting hot"
+      ],
+      "trigger": "rheumatologist said the pain might be anxiety and not real",
+      "label_source": "user_confirmed",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
     },
     {
       "turn": 8,
       "role": "user",
-      "content": "i think... if im honest its both but mostly me. like if i keep it light then i dont have to actually sit in the fact that i might not get better. saying it slow is just protecting myself from the part where i grieve the old body i had. the one that didnt need a pill organiser at 34. ugh. i didnt expect to say all that"
+      "content": "yeah. and the worst part is theres this little voice now going what if shes right. what if ive been making a bigger deal of it. and i hate that voice because thats exactly how it started when i was younger, doctors telling me it was in my head for YEARS before i finally got diagnosed. i fought so hard to be believed and i thought i was past that. and now its like one sentence from her and im right back there at 22 crying in a waiting room being told im fine when im not fine"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "That’s a big truth to say out loud — protecting yourself from the grief of the old body, and that “ugh” of not expecting to say it. If you want, we can leave it here, or stay with what that grief is like for you right now.",
+      "content": "That sentence pulled you right back into that waiting room at 22, after all the years you fought to be believed. If you want, we can stay with that, or leave it here for now.",
       "stage": "understood",
       "unlocked": false,
-      "family": "sadness",
-      "shade": "grieving",
-      "body_cue": [],
-      "trigger": "seeing that the new meds and effort haven’t improved the bloodwork"
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [
+        "eyes getting hot"
+      ],
+      "trigger": "rheumatologist said the pain might be anxiety and not real",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 10,
       "role": "user",
-      "content": "yeah i think i wanna leave it there for now. thats kind of a lot to have looked at all at once. but honestly it helped to just say the betrayed and the grieving thing instead of pretending its fine. maybe ill actually tell my partner the real numbers this week. idk. thank you for this. ok im gonna go lie down x"
+      "content": "no i think i need to stay with it for a sec. because i havent said this out loud to anyone. my partner keeps saying just find a new doctor like its that easy, like its a haircut. but its not just losing a doctor. its that i let her in. i told her things i dont tell people, about how scared i get that this is going to take my hands one day, that i wont be able to hold my niece. and she knows all that and she STILL looked at me today like i was being dramatic"
     },
     {
       "turn": 11,
       "role": "companion",
-      "content": "That feels like a real place to pause. I’m glad you could say the betrayed and grieving part out loud; go lie down and rest a bit.",
+      "content": "She had all of that, the fear about your hands and your niece, and still looked at you like you were being dramatic. That sounds painfully exposing.",
       "stage": "understood",
       "unlocked": false,
-      "family": "sadness",
-      "shade": "grieving",
+      "family": "hurt",
+      "shade": "hurt",
       "body_cue": [],
-      "trigger": "bloodwork came back worse after doing everything right with meds and diet"
+      "trigger": "rheumatologist dismissed the pain as not real or maybe anxiety",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": "fear",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "exposing is the right word. i feel kind of stupid for how much it stung honestly. shes just a doctor at the end of the day. but i think i wanted her to be more than that and thats on me maybe. i dont even know what i want to do about it. part of me wants to write her this long email and part of me wants to just never go back and ghost her like she ghosted the actual person sitting in front of her"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds like exposed hurt, and maybe a bit of anger too, with the email and the urge to disappear. I’m learning that this is about wanting her to meet the real person in front of her, not just the chart.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "doctor looked at them like they were being dramatic after they shared how scared they are",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah theres definitely some anger in there too now that you say it. i didnt want to admit that because it feels easier to just be sad. anger means i have to do something with it. but youre right, i wanted her to meet the real person not the chart. thats it exactly. i dont have to decide tonight what to do though right. i think i just needed to not be the only one who knew this happened"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "No, you do not have to decide tonight. And you are not the only one who knows it happened now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "doctor looked at them like they were being dramatic after they shared how scared they are",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "anger",
+          "shade": "anger",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "thank you. genuinely. i feel a little less like im carrying it alone. im gonna try to sleep and figure out the rest later. ok. goodnight"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Goodnight, and may sleep be kind to you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "doctor looked at them like they were being dramatic after they shared how scared they are",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

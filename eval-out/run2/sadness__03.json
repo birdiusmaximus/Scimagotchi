@@ -1,0 +1,215 @@
+{
+  "cid": "sadness__03",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-10T17:10:52.505Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. didnt really plan to open this lol"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that’s okay. Just glad you opened it at all."
+    },
+    {
+      "role": "user",
+      "content": "yeah. dunno. just been one of those weeks i guess"
+    },
+    {
+      "role": "companion",
+      "content": "“One of those weeks” carries a lot without saying much. I’m here with it if you want to keep going, or we can leave it there."
+    },
+    {
+      "role": "user",
+      "content": "car broke down and the repair bill basically ate the bit i'd been saving. feels like im never gonna get ahead"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like pressure, with a hard pinch of defeat underneath. Does it feel more like stressed and boxed in, or more like disappointed and worn down?"
+    },
+    {
+      "role": "user",
+      "content": "disappointed and worn down, yeah. just tired of it"
+    },
+    {
+      "role": "companion",
+      "content": "“Disappointed and worn down” feels like the centre of this, and “just tired of it” gives it a heavy shape. Is there a wanting to shut down, keep pushing, or just get some space from it?"
+    },
+    {
+      "role": "user",
+      "content": "just space i think. anyway. thanks for listening, gonna go"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, take care for now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8brtnee1mzkqkl",
+    "conversation_id": "sadness__03",
+    "timestamp": "2026-06-10T17:11:24.512Z",
+    "user_words_raw": "just space",
+    "emotion_status": "confirmed",
+    "emotion_family": "sadness",
+    "emotion_shade": "disappointed",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "car broke down and the repair bill used the savings",
+    "appraisal_thought": "never gonna get ahead",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Car trouble and an unexpected repair cost used up savings, leaving the person feeling disappointed and worn down.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. didnt really plan to open this lol"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that’s okay. Just glad you opened it at all.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah. dunno. just been one of those weeks i guess"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "“One of those weeks” carries a lot without saying much. I’m here with it if you want to keep going, or we can leave it there.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "car broke down and the repair bill basically ate the bit i'd been saving. feels like im never gonna get ahead"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like pressure, with a hard pinch of defeat underneath. Does it feel more like stressed and boxed in, or more like disappointed and worn down?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressure",
+      "body_cue": [],
+      "trigger": "car broke down and the repair bill used the savings",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "pressure",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": "disappointed",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "disappointed and worn down, yeah. just tired of it"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "“Disappointed and worn down” feels like the centre of this, and “just tired of it” gives it a heavy shape. Is there a wanting to shut down, keep pushing, or just get some space from it?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "sadness",
+      "shade": "disappointed",
+      "body_cue": [],
+      "trigger": "car broke down and the repair bill used the savings",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "disappointed",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "pressure",
+          "shade": "pressure",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "just space i think. anyway. thanks for listening, gonna go"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Of course, take care for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "disappointed",
+      "body_cue": [],
+      "trigger": "car broke down and the repair bill used the savings",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

@@ -1,0 +1,353 @@
+{
+  "cid": "calm__10",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-10T17:07:52.707Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. i dont really know how to start this. i had my follow up scan yesterday and they said its clear. like. clear clear. and i think im still kind of in shock about it honestly"
+    },
+    {
+      "role": "companion",
+      "content": "That “clear clear” lands like a big moment, and being “still kind of in shock” makes sense. I’m here with that if you want to stay with it, or we can just leave it there for now."
+    },
+    {
+      "role": "user",
+      "content": "yeah i think i want to stay with it for a sec. its weird because i feel so calm right now and i wasnt expecting that. like the whole last year ive been this tight little knot and now its just. quiet. its the thyroid stuff if that matters, they found a nodule last spring and there was a whole biopsy and the waiting was the worst part honestly"
+    },
+    {
+      "role": "companion",
+      "content": "That shift from a “tight little knot” to “quiet” feels really stark, especially after a year of waiting. I’m hearing calm on the surface, with the waiting still sitting underneath it."
+    },
+    {
+      "role": "user",
+      "content": "yeah. yeah thats it exactly. the waiting is still kind of in my body even though the news is good?? does that make sense. like i keep catching myself bracing for a phone call that already came. my hands were actually shaking in the parking lot after but it wasnt fear it was more like. relief that didnt have anywhere to go"
+    },
+    {
+      "role": "companion",
+      "content": "“Relief that didn’t have anywhere to go” feels like the sharpest part of this. The shaking in the parking lot sounds like the body catching up after a long hold."
+    },
+    {
+      "role": "user",
+      "content": "the body catching up. god yeah. i sat in the car for like 20 minutes before i could drive. i didnt even call anyone right away which is weird for me i usually tell my sister everything. i just wanted to sit in it by myself first. is that bad? like i feel a little guilty that the first thing i felt wasnt joy it was just this huge exhale. like my whole chest unclenched"
+    },
+    {
+      "role": "companion",
+      "content": "That huge exhale and your chest unclenching feel like the centre of it. I’m wondering if the guilt is sitting alongside the relief, or if it’s more about what you expected yourself to feel first?"
+    },
+    {
+      "role": "user",
+      "content": "hm. its more the what i expected to feel thing i think. everyone kept saying youll be SO happy youll cry youll celebrate and i wasnt like that at all. i was just. still. and so quiet. like i didnt earn the right to be relieved yet or something. but honestly the relief is the realer thing. the calm is the real thing. the guilt is kind of just noise i guess now that i say it out loud"
+    },
+    {
+      "role": "companion",
+      "content": "The calm feels like the real thing here, and the guilt sounds like background noise beside it. We can leave it there, or stay with what that quietness has been like for you?"
+    },
+    {
+      "role": "user",
+      "content": "no i want to stay with the quietness a bit more if thats ok. its kind of new for me. ive spent so long being scared and reading every little symptom and googling at 2am. and now theres just this space where all that used to be. its almost unfamiliar. like i dont know what to do with a body i can trust again. but it feels safe. like the ground stopped moving"
+    },
+    {
+      "role": "companion",
+      "content": "That unfamiliar safety feels important, especially after so much 2am scanning and waiting. I’m learning that for you, calm can feel like the ground finally stopped moving."
+    },
+    {
+      "role": "user",
+      "content": "the ground finally stopped moving. yeah. im gonna sit with that one. i think i needed to say all this somewhere that wasnt going to immediately throw a party about it you know. just somewhere quiet to put it down. thank you for that. genuinely"
+    },
+    {
+      "role": "companion",
+      "content": "You put it down here without having to perform it, and that matters. We can leave it quiet here."
+    },
+    {
+      "role": "user",
+      "content": "yeah. lets leave it quiet here. think im gonna go call my sister now. okay bye. thank you again x"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a good place to stop. Take care, and I’m glad you have your sister to call."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bnzommrtklhja",
+    "conversation_id": "calm__10",
+    "timestamp": "2026-06-10T17:08:45.110Z",
+    "user_words_raw": "leave it quiet here",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "safe enough",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "clear follow-up after a year of thyroid monitoring and waiting",
+    "appraisal_thought": "I can trust this body again and don't need to brace for the next call right now",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "A quiet, steady moment after long medical waiting; wants space to sit with relief before sharing widely.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. i dont really know how to start this. i had my follow up scan yesterday and they said its clear. like. clear clear. and i think im still kind of in shock about it honestly"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That “clear clear” lands like a big moment, and being “still kind of in shock” makes sense. I’m here with that if you want to stay with it, or we can just leave it there for now.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "shocked",
+      "body_cue": [],
+      "trigger": "follow-up scan was clear",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "relief",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": "shock",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah i think i want to stay with it for a sec. its weird because i feel so calm right now and i wasnt expecting that. like the whole last year ive been this tight little knot and now its just. quiet. its the thyroid stuff if that matters, they found a nodule last spring and there was a whole biopsy and the waiting was the worst part honestly"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That shift from a “tight little knot” to “quiet” feels really stark, especially after a year of waiting. I’m hearing calm on the surface, with the waiting still sitting underneath it.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "calm",
+      "body_cue": [],
+      "trigger": "follow-up scan came back clear after a year of thyroid monitoring and waiting",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "calm",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "flat",
+          "shade": "quiet",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah. yeah thats it exactly. the waiting is still kind of in my body even though the news is good?? does that make sense. like i keep catching myself bracing for a phone call that already came. my hands were actually shaking in the parking lot after but it wasnt fear it was more like. relief that didnt have anywhere to go"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "“Relief that didn’t have anywhere to go” feels like the sharpest part of this. The shaking in the parking lot sounds like the body catching up after a long hold.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "calm",
+      "body_cue": [
+        "hands were shaking",
+        "waiting is still kind of in my body"
+      ],
+      "trigger": "follow-up scan came back clear after a year of thyroid monitoring and waiting",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "calm",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "joy",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "the body catching up. god yeah. i sat in the car for like 20 minutes before i could drive. i didnt even call anyone right away which is weird for me i usually tell my sister everything. i just wanted to sit in it by myself first. is that bad? like i feel a little guilty that the first thing i felt wasnt joy it was just this huge exhale. like my whole chest unclenched"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That huge exhale and your chest unclenching feel like the centre of it. I’m wondering if the guilt is sitting alongside the relief, or if it’s more about what you expected yourself to feel first?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "calm",
+      "body_cue": [
+        "chest unclenched"
+      ],
+      "trigger": "follow-up scan came back clear after a year of thyroid monitoring and waiting",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "calm",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": "guilty",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "joy",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "hm. its more the what i expected to feel thing i think. everyone kept saying youll be SO happy youll cry youll celebrate and i wasnt like that at all. i was just. still. and so quiet. like i didnt earn the right to be relieved yet or something. but honestly the relief is the realer thing. the calm is the real thing. the guilt is kind of just noise i guess now that i say it out loud"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "The calm feels like the real thing here, and the guilt sounds like background noise beside it. We can leave it there, or stay with what that quietness has been like for you?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "calm",
+      "body_cue": [],
+      "trigger": "Follow-up scan came back clear after a year of thyroid monitoring and waiting.",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "calm",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "no i want to stay with the quietness a bit more if thats ok. its kind of new for me. ive spent so long being scared and reading every little symptom and googling at 2am. and now theres just this space where all that used to be. its almost unfamiliar. like i dont know what to do with a body i can trust again. but it feels safe. like the ground stopped moving"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That unfamiliar safety feels important, especially after so much 2am scanning and waiting. I’m learning that for you, calm can feel like the ground finally stopped moving.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "safe enough",
+      "body_cue": [],
+      "trigger": "clear follow-up after a year of thyroid monitoring and waiting",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "the ground finally stopped moving. yeah. im gonna sit with that one. i think i needed to say all this somewhere that wasnt going to immediately throw a party about it you know. just somewhere quiet to put it down. thank you for that. genuinely"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "You put it down here without having to perform it, and that matters. We can leave it quiet here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "safe enough",
+      "body_cue": [],
+      "trigger": "clear follow-up after a year of thyroid monitoring and waiting",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah. lets leave it quiet here. think im gonna go call my sister now. okay bye. thank you again x"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That feels like a good place to stop. Take care, and I’m glad you have your sister to call.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "safe enough",
+      "body_cue": [],
+      "trigger": "clear follow-up after a year of thyroid monitoring and waiting",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

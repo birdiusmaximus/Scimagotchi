@@ -1,0 +1,166 @@
+{
+  "cid": "shame__03",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-09T18:24:14.964Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, good to see you. What’s been going on today?"
+    },
+    {
+      "role": "user",
+      "content": "idk. not much. just kind of a rough day i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds a bit rough. Is it more like tired, frustrated, or just weighed down?"
+    },
+    {
+      "role": "user",
+      "content": "weighed down i think. i had to ask my brother to cover my half of rent again. third time this year. i hate that hes the one who always has to bail me out"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds weighed down and maybe embarrassed or guilty too. What part of that hits hardest — needing the help, or that he keeps being the one to cover for you?"
+    },
+    {
+      "role": "user",
+      "content": "that hes younger than me and has his stuff together. makes me feel like a failure honestly. like im 31 and cant even cover rent"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really heavy — like shame is sitting right on top of the money stress. Does it feel more like sinking, tight, or stuck?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. stuck i guess. idk im not really good at this. think im gonna go. thanks tho"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, stuck makes sense here. We can leave it there for now, and thanks for telling me."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yybkwl6jpqmw0",
+    "conversation_id": "shame__03",
+    "timestamp": "2026-06-09T18:24:39.778Z",
+    "user_words_raw": "stuck",
+    "emotion_status": "candidate",
+    "emotion_family": "shame",
+    "emotion_shade": "stuck",
+    "secondary_emotions": [
+      "pressure"
+    ],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "having to ask a younger brother to cover rent again",
+    "appraisal_thought": "like a failure",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "dignity",
+      "acceptance"
+    ],
+    "confidence_level": "medium",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "Feeling ashamed about needing financial help from someone younger",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, good to see you. What’s been going on today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "idk. not much. just kind of a rough day i guess"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds a bit rough. Is it more like tired, frustrated, or just weighed down?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "weighed down i think. i had to ask my brother to cover my half of rent again. third time this year. i hate that hes the one who always has to bail me out"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds weighed down and maybe embarrassed or guilty too. What part of that hits hardest — needing the help, or that he keeps being the one to cover for you?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "weighed down",
+      "body_cue": [],
+      "trigger": "having to ask a brother to cover their half of rent again"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "that hes younger than me and has his stuff together. makes me feel like a failure honestly. like im 31 and cant even cover rent"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds really heavy — like shame is sitting right on top of the money stress. Does it feel more like sinking, tight, or stuck?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "failure",
+      "body_cue": [],
+      "trigger": "having to ask a younger brother to cover rent again"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. stuck i guess. idk im not really good at this. think im gonna go. thanks tho"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Yeah, stuck makes sense here. We can leave it there for now, and thanks for telling me.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "stuck",
+      "body_cue": [],
+      "trigger": "having to ask a younger brother to cover rent again"
+    }
+  ]
+}

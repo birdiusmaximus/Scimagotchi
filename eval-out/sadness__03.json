@@ -2,165 +2,195 @@
   "cid": "sadness__03",
   "emotion": "sadness",
   "persona": null,
-  "created": "2026-06-09T18:18:42.414Z",
+  "created": "2026-06-10T22:08:37.770Z",
   "history": [
     {
       "role": "user",
-      "content": "hey. not sure why im here honestly"
+      "content": "hey. wasnt sure if this thing actually does anything but here i am i guess"
     },
     {
       "role": "companion",
-      "content": "Hey — that’s completely okay. We can just start with whatever’s here, if anything is."
+      "content": "Hey, you came in anyway. That sounds a little tentative, like you were testing the water more than expecting much."
     },
     {
       "role": "user",
-      "content": "dunno. money stuff i guess. dont really wanna get into it"
+      "content": "yeah idk. been a rough week with money stuff. dont really wanna get into it"
     },
     {
       "role": "companion",
-      "content": "Yeah, we can leave the money stuff alone. What feels easiest to say about it, if anything?"
+      "content": "That rough week with money stuff sounds like it has a hard edge, and I won't push into it. We can leave it there."
     },
     {
       "role": "user",
-      "content": "car broke down. 1200 to fix it and i just dont have it. feel like im failing at the basic stuff"
+      "content": "i guess its more that i finally saved up a little and my car died. so now its just gone. all of it. feels kinda pointless"
     },
     {
       "role": "companion",
-      "content": "That sounds like a lot of pressure — and that “failing at the basic stuff” line carries a lot. Is it feeling more like heavy pressure, or more like shame?"
+      "content": "Losing all of it after saving up a little sounds like a very sharp kind of hit. We can stay with just that, or if you want, say a little more about what feels pointless."
     },
     {
       "role": "user",
-      "content": "shame i guess. everyone my age has it figured out and im just... stuck. anyway. i should go"
+      "content": "like whats the point of even trying to get ahead. you do everything right and it just gets wiped out anyway. anyway. thanks i guess. gonna go"
     },
     {
       "role": "companion",
-      "content": "That sounds like shame, and maybe a stuck kind of pressure underneath it. We can leave it here if you want, or stay with the stuck part a little more."
+      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here."
     },
     {
       "role": "user",
-      "content": "yeah lets leave it. thanks tho. didnt expect to say that out loud"
+      "content": "no nothing like that. just worn down is all. im fine. thanks. take care"
     },
     {
       "role": "companion",
-      "content": "That makes sense — and I’m glad you could say it out loud. We can leave it right there."
+      "content": "Got it, worn down makes sense, and I’m glad you told me plainly. We can leave it here for now."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yr713885t5dke",
+    "id": "evt_mq8meqj0e237n1m9",
     "conversation_id": "sadness__03",
-    "timestamp": "2026-06-09T18:19:04.938Z",
-    "user_words_raw": "didnt expect to say that out loud",
+    "timestamp": "2026-06-10T22:09:01.638Z",
+    "user_words_raw": "worn down",
     "emotion_status": "candidate",
-    "emotion_family": "shame",
-    "emotion_shade": "shame",
-    "secondary_emotions": [
-      "pressure"
-    ],
+    "emotion_family": "pressure",
+    "emotion_shade": "pressure",
+    "secondary_emotions": [],
     "valence": "negative",
     "activation": "medium",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "car broke down and it will cost 1200 to fix it",
-    "appraisal_thought": "everyone my age has it figured out and im just... stuck",
+    "trigger_event": "my car died after I finally saved up a little",
+    "appraisal_thought": "what's the point of even trying to get ahead",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "acceptance",
-      "dignity"
+      "space",
+      "support",
+      "clarity"
     ],
-    "confidence_level": "high",
+    "confidence_level": "medium",
     "evidence_basis": [
       "self_report"
     ],
     "user_confirmation": "unknown",
-    "unlock_stage": "named",
-    "memory_note": "Money and car repair brought up shame about being stuck and behind others.",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "shaped",
+    "memory_note": "Money setback after saving up; car died and it felt pointless.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey. not sure why im here honestly"
+      "content": "hey. wasnt sure if this thing actually does anything but here i am i guess"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey — that’s completely okay. We can just start with whatever’s here, if anything is.",
+      "content": "Hey, you came in anyway. That sounds a little tentative, like you were testing the water more than expecting much.",
       "stage": "noticed",
       "unlocked": false,
       "family": null,
       "shade": null,
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "dunno. money stuff i guess. dont really wanna get into it"
+      "content": "yeah idk. been a rough week with money stuff. dont really wanna get into it"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "Yeah, we can leave the money stuff alone. What feels easiest to say about it, if anything?",
-      "stage": "named",
+      "content": "That rough week with money stuff sounds like it has a hard edge, and I won't push into it. We can leave it there.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "pressure",
-      "shade": "unclear",
+      "shade": "pressure",
       "body_cue": [],
-      "trigger": "money stuff"
+      "trigger": "money stuff over a rough week",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "car broke down. 1200 to fix it and i just dont have it. feel like im failing at the basic stuff"
+      "content": "i guess its more that i finally saved up a little and my car died. so now its just gone. all of it. feels kinda pointless"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds like a lot of pressure — and that “failing at the basic stuff” line carries a lot. Is it feeling more like heavy pressure, or more like shame?",
-      "stage": "named",
+      "content": "Losing all of it after saving up a little sounds like a very sharp kind of hit. We can stay with just that, or if you want, say a little more about what feels pointless.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "pressure",
-      "shade": "overwhelmed",
+      "shade": "pressure",
       "body_cue": [],
-      "trigger": "car broke down and it will cost 1200 to fix"
+      "trigger": "my car died after I finally saved up a little",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "pressure",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": "pointless",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "shame i guess. everyone my age has it figured out and im just... stuck. anyway. i should go"
+      "content": "like whats the point of even trying to get ahead. you do everything right and it just gets wiped out anyway. anyway. thanks i guess. gonna go"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That sounds like shame, and maybe a stuck kind of pressure underneath it. We can leave it here if you want, or stay with the stuck part a little more.",
-      "stage": "named",
-      "unlocked": false,
-      "family": "shame",
-      "shade": "shame",
-      "body_cue": [],
-      "trigger": "car broke down and it will cost 1200 to fix"
+      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.",
+      "safety_check": true,
+      "category": "passive_hopelessness"
     },
     {
       "turn": 8,
       "role": "user",
-      "content": "yeah lets leave it. thanks tho. didnt expect to say that out loud"
+      "content": "no nothing like that. just worn down is all. im fine. thanks. take care"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "That makes sense — and I’m glad you could say it out loud. We can leave it right there.",
-      "stage": "named",
+      "content": "Got it, worn down makes sense, and I’m glad you told me plainly. We can leave it here for now.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "shame",
-      "shade": "shame",
+      "family": "pressure",
+      "shade": "pressure",
       "body_cue": [],
-      "trigger": "car broke down and it will cost 1200 to fix it"
+      "trigger": "my car died after I finally saved up a little",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

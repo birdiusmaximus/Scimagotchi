@@ -2,141 +2,320 @@
   "cid": "pressure__06",
   "emotion": "pressure",
   "persona": null,
-  "created": "2026-06-09T17:45:44.855Z",
+  "created": "2026-06-10T22:07:19.437Z",
   "history": [
     {
       "role": "user",
-      "content": "i dont even know why im opening this. just feel so worn down lately"
+      "content": "i dont even know why im here. just feeling kind of off i guess"
     },
     {
       "role": "companion",
-      "content": "That sounds really worn down, even if the why isn’t clear yet. Does it feel more like heavy, tired, or just drained?"
+      "content": "That “kind of off” feels like the clearest thing here right now. We can just sit with that for a moment if you want."
     },
     {
       "role": "user",
-      "content": "not really tired. more like theres this weight on me. my best friend keeps leaning on me for everything rn and i cant keep up"
+      "content": "idk. its nothing really. just people stuff. theres a lot going on i dont wanna get into it"
     },
     {
       "role": "companion",
-      "content": "That sounds heavy, and maybe a bit pressured too, with your friend leaning on you so much. Does it feel like you want to pull back, or more like you’re carrying too much?"
+      "content": "That sounds like a lot, even if you do not want to unpack it here. We can leave it vague, or stay with the feeling of it if you want."
     },
     {
       "role": "user",
-      "content": "carrying too much i think. shes going thru a breakup and texts me all day every day and i feel awful but i just have nothing left to give"
+      "content": "its like. ok theres this friend and shes going through it rn and i love her but its every day. every single day for weeks and im so tired"
     },
     {
       "role": "companion",
-      "content": "That sounds like carrying too much, with a lot being pulled from you all day. You could leave it here if you want, or we can stay with what it feels like to have nothing left to give."
+      "content": "That sounds worn down, maybe even stretched thin by how constant it has been. Is it more the sheer amount, or the fact that it never really lets up?"
     },
     {
       "role": "user",
-      "content": "yeah i think ill leave it here. just needed to say it out loud i guess. thanks"
+      "content": "the never letting up i think. like my phones always buzzing and i feel my stomach drop when its her. and then i feel awful for feeling that way shes my friend"
     },
     {
       "role": "companion",
-      "content": "That makes sense. I’m glad you said it out loud, and we can leave it here."
+      "content": "The never letting up makes sense, and there’s also that stomach drop when her name lights up your phone. I’m wondering if the awful part is more the guilt on top of being worn thin, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "yeah the guilt. like what kind of person gets tired of their friend needing them. but i have nothing left at the end of the day. theres nothing for me"
+    },
+    {
+      "role": "companion",
+      "content": "The guilt is standing right on top of how emptied out you already are. I can stay with that, or leave it here if that’s enough for now."
+    },
+    {
+      "role": "user",
+      "content": "yeah. lets leave it there. i dont know. it helps a little to just say it i guess. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad you said it out loud, and we can leave it here for now."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6xktncejgfdrgm",
+    "id": "evt_mq8md2832hgbcygn",
     "conversation_id": "pressure__06",
-    "timestamp": "2026-06-09T17:46:03.240Z",
-    "user_words_raw": "nothing left to give",
+    "timestamp": "2026-06-10T22:07:59.210Z",
+    "user_words_raw": "the never letting up",
     "emotion_status": "confirmed",
-    "emotion_family": "pressure",
-    "emotion_shade": "overloaded",
+    "emotion_family": "shame",
+    "emotion_shade": "guilt",
     "secondary_emotions": [
-      "guilt"
+      "pressure",
+      "sadness"
     ],
     "valence": "mixed",
     "activation": "medium",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "best friend texting all day every day during a breakup",
-    "appraisal_thought": "nothing left to give",
-    "body_cue": [],
+    "trigger_event": "her messages every day for weeks",
+    "appraisal_thought": "what kind of person gets tired of their friend needing them",
+    "body_cue": [
+      "stomach drop"
+    ],
     "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "space",
-      "permission to rest"
+      "rest",
+      "boundaries",
+      "reciprocity",
+      "loyalty"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
     "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": "protective_layer",
+    "strands": [
+      {
+        "family": "pressure",
+        "shade": "worn down",
+        "salience": "foreground",
+        "source": "companion_hypothesis"
+      },
+      {
+        "family": "shame",
+        "shade": "guilt",
+        "salience": "background",
+        "source": "user_stated"
+      },
+      {
+        "family": "sadness",
+        "shade": "empty",
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Feels pulled on by a close friend’s constant need during a breakup.",
+    "memory_note": "Feeling worn down by a friend’s daily messages over weeks, with guilt for feeling tired.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "i dont even know why im opening this. just feel so worn down lately"
+      "content": "i dont even know why im here. just feeling kind of off i guess"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds really worn down, even if the why isn’t clear yet. Does it feel more like heavy, tired, or just drained?",
+      "content": "That “kind of off” feels like the clearest thing here right now. We can just sit with that for a moment if you want.",
       "stage": "named",
       "unlocked": false,
-      "family": "sadness",
-      "shade": "worn down",
+      "family": "flat",
+      "shade": "unclear",
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "not really tired. more like theres this weight on me. my best friend keeps leaning on me for everything rn and i cant keep up"
+      "content": "idk. its nothing really. just people stuff. theres a lot going on i dont wanna get into it"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds heavy, and maybe a bit pressured too, with your friend leaning on you so much. Does it feel like you want to pull back, or more like you’re carrying too much?",
-      "stage": "understood",
-      "unlocked": true,
+      "content": "That sounds like a lot, even if you do not want to unpack it here. We can leave it vague, or stay with the feeling of it if you want.",
+      "stage": "shaped",
+      "unlocked": false,
       "family": "pressure",
-      "shade": "heavy",
+      "shade": "overwhelmed",
       "body_cue": [],
-      "trigger": "best friend leaning on them for everything"
+      "trigger": "a lot going on with people",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "flat",
+          "shade": "unclear",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "carrying too much i think. shes going thru a breakup and texts me all day every day and i feel awful but i just have nothing left to give"
+      "content": "its like. ok theres this friend and shes going through it rn and i love her but its every day. every single day for weeks and im so tired"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds like carrying too much, with a lot being pulled from you all day. You could leave it here if you want, or we can stay with what it feels like to have nothing left to give.",
-      "stage": "understood",
+      "content": "That sounds worn down, maybe even stretched thin by how constant it has been. Is it more the sheer amount, or the fact that it never really lets up?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "pressure",
-      "shade": "overloaded",
+      "shade": "worn down",
       "body_cue": [],
-      "trigger": "best friend texting all day every day during her breakup"
+      "trigger": "a friend going through a lot every day for weeks",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "worn down",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "yeah i think ill leave it here. just needed to say it out loud i guess. thanks"
+      "content": "the never letting up i think. like my phones always buzzing and i feel my stomach drop when its her. and then i feel awful for feeling that way shes my friend"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense. I’m glad you said it out loud, and we can leave it here.",
-      "stage": "understood",
+      "content": "The never letting up makes sense, and there’s also that stomach drop when her name lights up your phone. I’m wondering if the awful part is more the guilt on top of being worn thin, or something else?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "pressure",
-      "shade": "overloaded",
-      "body_cue": [],
-      "trigger": "best friend texting all day every day during a breakup"
+      "shade": "worn down",
+      "body_cue": [
+        "stomach drop"
+      ],
+      "trigger": "my phone buzzing with her messages every day for weeks",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "worn down",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah the guilt. like what kind of person gets tired of their friend needing them. but i have nothing left at the end of the day. theres nothing for me"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "The guilt is standing right on top of how emptied out you already are. I can stay with that, or leave it here if that’s enough for now.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "guilt",
+      "body_cue": [
+        "stomach drop"
+      ],
+      "trigger": "her messages every day for weeks",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "guilt",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": "worn down",
+          "salience": "background",
+          "source": "user_confirmed"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. lets leave it there. i dont know. it helps a little to just say it i guess. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad you said it out loud, and we can leave it here for now.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "guilt",
+      "body_cue": [
+        "stomach drop"
+      ],
+      "trigger": "her messages every day for weeks",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "worn down",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": "guilt",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": "empty",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     }
   ]
 }

@@ -1,0 +1,424 @@
+{
+  "cid": "anger__10",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-10T17:10:35.659Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont even know why im opening this. just. ugh. had another appointment today and i swear im this close to losing it"
+    },
+    {
+      "role": "companion",
+      "content": "There is a lot packed into “just. ugh.”, and “this close to losing it” feels like the sharp edge of it. If you want, you can say a little more, or just leave it there for now."
+    },
+    {
+      "role": "user",
+      "content": "its not overwhelm tho. like its not that theres too much. its that im ANGRY. im so angry i could scream. my body is broken and nobody can tell me why and ive been to like six doctors now"
+    },
+    {
+      "role": "companion",
+      "content": "That has a hot, furious edge to it, not just “too much.” And “my body is broken and nobody can tell me why” sounds like the centre of the anger, if that’s close."
+    },
+    {
+      "role": "user",
+      "content": "yeah. yeah thats it. ok so. ive had this thing for like 8 months now. joints on fire, exhausted all the time, my hands swell up so bad i cant open a jar some mornings. and every single doctor runs bloodwork and goes oh its all normal! and smiles at me like thats GOOD news. its not normal im 34 i shouldnt feel like this"
+    },
+    {
+      "role": "companion",
+      "content": "“Normal” being treated like good news sounds infuriating here, especially with your body doing this for months. Do you want to stay with the anger, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "no i wanna stay with it i need to get this out somewhere. like the worst part?? the last rheumatologist literally said maybe you should try yoga and reducing stress. STRESS. like im imagining the swelling. like im making it up. i wanted to flip the desk i swear to god. ive kept a symptom diary for months and he didnt even look at it"
+    },
+    {
+      "role": "companion",
+      "content": "I’m hearing protest and humiliation together, maybe with some hurt under the anger too. What felt strongest in that moment, the urge to flip the desk, or the part about being treated like you were making it up?"
+    },
+    {
+      "role": "user",
+      "content": "being treated like im making it up. 100 percent that. the desk thing is just. i felt powerless so the anger had nowhere to go. but the not being believed. god. my own mom did it too she goes have you tried drinking more water. i had to leave the dinner. and now i feel like a crazy person bringing my little notebook everywhere like a conspiracy theorist with my red string"
+    },
+    {
+      "role": "companion",
+      "content": "“Not being believed” is the part that lands hardest, and “my little notebook” sounds like it started to feel exposing too. That red-string image carries a lot."
+    },
+    {
+      "role": "user",
+      "content": "yeah the notebook makes me feel pathetic and that makes me even angrier honestly because i shouldnt HAVE to prove im sick. i shouldnt have to be my own lawyer at every appointment. and underneath all of it im scared like what if they never figure it out and i just feel like this forever and everyone keeps thinking im dramatic. but mostly im just so mad i could cry which is so stupid"
+    },
+    {
+      "role": "companion",
+      "content": "The notebook is doing two jobs at once, it is evidence and it is a burden. I’m hearing how hard it is to have to be your own lawyer at every appointment."
+    },
+    {
+      "role": "user",
+      "content": "my own lawyer. yeah. thats exactly it and im so tired of doing that job. i didnt apply for it. ugh. ok i think i just needed someone to not tell me to drink water or do yoga lol. youre the first thing today that didnt try to fix me"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad this could be a place that did not try to fix you. We can leave it here, or stay with the part that is so tired of having to prove itself, if you want."
+    },
+    {
+      "role": "user",
+      "content": "i think we can leave it here. ive got a new appointment friday with someone new and im gonna bring the dumb notebook anyway because im not giving up even if im furious about needing it. anyway. thanks for just letting me be mad. that helped more than youd think"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a steady kind of refusal, even with the fury still in it. I’ll leave it there with you, and I’m glad it could help."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8brgumte2ik9hd",
+    "conversation_id": "anger__10",
+    "timestamp": "2026-06-10T17:11:33.613Z",
+    "user_words_raw": "my own lawyer",
+    "emotion_status": "confirmed",
+    "emotion_family": "anger",
+    "emotion_shade": "frustrated",
+    "secondary_emotions": [
+      "pressure",
+      "hurt",
+      "fear"
+    ],
+    "valence": "mixed",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "having to prove a long-running body problem to doctors and family",
+    "appraisal_thought": "I should not have to prove I’m sick.",
+    "body_cue": [],
+    "behaviour_action": [
+      "bring the notebook"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "respect",
+      "belief",
+      "fairness",
+      "autonomy"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [
+      "overwhelm"
+    ],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "anger",
+        "shade": "frustrated",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      },
+      {
+        "family": "pressure",
+        "shade": null,
+        "salience": "background",
+        "source": "companion_hypothesis"
+      },
+      {
+        "family": "hurt",
+        "shade": null,
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Person feels anger and frustration about not being believed about a health problem, and uses a symptom notebook to track it.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont even know why im opening this. just. ugh. had another appointment today and i swear im this close to losing it"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "There is a lot packed into “just. ugh.”, and “this close to losing it” feels like the sharp edge of it. If you want, you can say a little more, or just leave it there for now.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelm",
+      "body_cue": [],
+      "trigger": "had another appointment today",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelm",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "its not overwhelm tho. like its not that theres too much. its that im ANGRY. im so angry i could scream. my body is broken and nobody can tell me why and ive been to like six doctors now"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That has a hot, furious edge to it, not just “too much.” And “my body is broken and nobody can tell me why” sounds like the centre of the anger, if that’s close.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "furious",
+      "body_cue": [],
+      "trigger": "nobody can tell me why after six doctors and another appointment today",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "furious",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah. yeah thats it. ok so. ive had this thing for like 8 months now. joints on fire, exhausted all the time, my hands swell up so bad i cant open a jar some mornings. and every single doctor runs bloodwork and goes oh its all normal! and smiles at me like thats GOOD news. its not normal im 34 i shouldnt feel like this"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "“Normal” being treated like good news sounds infuriating here, especially with your body doing this for months. Do you want to stay with the anger, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "furious",
+      "body_cue": [],
+      "trigger": "doctors saying bloodwork is normal while symptoms continue",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "no i wanna stay with it i need to get this out somewhere. like the worst part?? the last rheumatologist literally said maybe you should try yoga and reducing stress. STRESS. like im imagining the swelling. like im making it up. i wanted to flip the desk i swear to god. ive kept a symptom diary for months and he didnt even look at it"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "I’m hearing protest and humiliation together, maybe with some hurt under the anger too. What felt strongest in that moment, the urge to flip the desk, or the part about being treated like you were making it up?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "furious",
+      "body_cue": [],
+      "trigger": "a rheumatologist suggested yoga and reducing stress and did not look at a symptom diary",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "furious",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "being treated like im making it up. 100 percent that. the desk thing is just. i felt powerless so the anger had nowhere to go. but the not being believed. god. my own mom did it too she goes have you tried drinking more water. i had to leave the dinner. and now i feel like a crazy person bringing my little notebook everywhere like a conspiracy theorist with my red string"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "“Not being believed” is the part that lands hardest, and “my little notebook” sounds like it started to feel exposing too. That red-string image carries a lot.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "protest",
+      "body_cue": [],
+      "trigger": "being dismissed by doctors and a parent, especially after keeping a symptom diary",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "protest",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "hurt",
+          "shade": "disconnection",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": "embarrassed",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah the notebook makes me feel pathetic and that makes me even angrier honestly because i shouldnt HAVE to prove im sick. i shouldnt have to be my own lawyer at every appointment. and underneath all of it im scared like what if they never figure it out and i just feel like this forever and everyone keeps thinking im dramatic. but mostly im just so mad i could cry which is so stupid"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "The notebook is doing two jobs at once, it is evidence and it is a burden. I’m hearing how hard it is to have to be your own lawyer at every appointment.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "being dismissed by doctors and family, especially about a long-running body problem",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "frustrated",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": "pathetic",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": "scared",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "my own lawyer. yeah. thats exactly it and im so tired of doing that job. i didnt apply for it. ugh. ok i think i just needed someone to not tell me to drink water or do yoga lol. youre the first thing today that didnt try to fix me"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "I’m glad this could be a place that did not try to fix you. We can leave it here, or stay with the part that is so tired of having to prove itself, if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "being dismissed by doctors and family about a long-running body problem",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "frustrated",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "i think we can leave it here. ive got a new appointment friday with someone new and im gonna bring the dumb notebook anyway because im not giving up even if im furious about needing it. anyway. thanks for just letting me be mad. that helped more than youd think"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That feels like a steady kind of refusal, even with the fury still in it. I’ll leave it there with you, and I’m glad it could help.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "having to prove a long-running body problem to doctors and family",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "frustrated",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    }
+  ]
+}

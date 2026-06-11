@@ -1,0 +1,219 @@
+{
+  "cid": "pressure__01",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-10T17:08:59.571Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "cant even think straight today. work is just too much rn"
+    },
+    {
+      "role": "companion",
+      "content": "There’s a lot packed into “can’t even think straight today.” Work being “too much rn” sounds like it’s taking up all the room."
+    },
+    {
+      "role": "user",
+      "content": "yeah. got handed two more projects friday and my plate was already full. everyones acting like its normal"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like pressure piling on top of being already full, and “everyone’s acting like it’s normal” adds a sharp edge to it. Does it feel more rushed, trapped, or just overloaded?"
+    },
+    {
+      "role": "user",
+      "content": "trapped i think. cant say no without looking like i cant handle it. so i just keep nodding"
+    },
+    {
+      "role": "companion",
+      "content": "“Trapped” fits here, and the nodding sounds like the part that has to keep things moving. I’m wondering if there’s also a bit of fear about how you’d be seen, or is it mostly the pressure itself?"
+    },
+    {
+      "role": "user",
+      "content": "bit of both honestly. anyway gotta get back to it. thanks for listening"
+    },
+    {
+      "role": "companion",
+      "content": "Bit of both, then, and I’m holding that with the trapped feeling. We can leave it here, and I’m glad you said it out loud."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bpemq4d1u5oll",
+    "conversation_id": "pressure__01",
+    "timestamp": "2026-06-10T17:09:22.799Z",
+    "user_words_raw": "bit of both honestly",
+    "emotion_status": "confirmed",
+    "emotion_family": "pressure",
+    "emotion_shade": "trapped",
+    "secondary_emotions": [
+      "fear"
+    ],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "being handed more work when already full, with others treating it as normal",
+    "appraisal_thought": "can't say no without looking like i cant handle it",
+    "body_cue": [],
+    "behaviour_action": [
+      "keep nodding"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "support",
+      "clarity"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "pressure",
+        "shade": "trapped",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      },
+      {
+        "family": "fear",
+        "shade": null,
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Feeling trapped by extra work when already full, and worried about how saying no would be seen.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "cant even think straight today. work is just too much rn"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "There’s a lot packed into “can’t even think straight today.” Work being “too much rn” sounds like it’s taking up all the room.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "work being too much",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah. got handed two more projects friday and my plate was already full. everyones acting like its normal"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like pressure piling on top of being already full, and “everyone’s acting like it’s normal” adds a sharp edge to it. Does it feel more rushed, trapped, or just overloaded?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressured",
+      "body_cue": [],
+      "trigger": "got handed two more projects friday when already full, others acting like it is normal",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "pressured",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": "irritated",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "trapped i think. cant say no without looking like i cant handle it. so i just keep nodding"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "“Trapped” fits here, and the nodding sounds like the part that has to keep things moving. I’m wondering if there’s also a bit of fear about how you’d be seen, or is it mostly the pressure itself?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "trapped",
+      "body_cue": [],
+      "trigger": "being given more work when already full, with others treating it as normal",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "trapped",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "bit of both honestly. anyway gotta get back to it. thanks for listening"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Bit of both, then, and I’m holding that with the trapped feeling. We can leave it here, and I’m glad you said it out loud.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "trapped",
+      "body_cue": [],
+      "trigger": "being handed more work when already full, with others treating it as normal",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "trapped",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    }
+  ]
+}

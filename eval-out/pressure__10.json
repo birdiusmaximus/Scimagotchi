@@ -2,193 +2,472 @@
   "cid": "pressure__10",
   "emotion": "pressure",
   "persona": null,
-  "created": "2026-06-09T17:46:05.505Z",
+  "created": "2026-06-10T22:07:25.845Z",
   "history": [
     {
       "role": "user",
-      "content": "hey. i dont really know how to do this lol. i guess im just kind of stressed? like my body feels like its falling apart and i dont have time to deal with it"
+      "content": "hi. um. i dont really know why im here honestly. just kind of a lot right now and i needed to put it somewhere i guess"
     },
     {
       "role": "companion",
-      "content": "Hey — that sounds really heavy and stretched thin. Is it more like pressure, or more like your body is sounding the alarm?"
+      "content": "Hey, that makes sense. You don't have to know exactly why you're here for this to count."
     },
     {
       "role": "user",
-      "content": "both?? like ok so i got these test results back a few weeks ago and my doctor wants me to do all this followup stuff, more bloodwork, a scan, see a specialist. and i just. i havent booked any of it. and every day i dont its like this weight gets heavier. but also im scared of what theyll find so theres that too"
+      "content": "yeah. ok. its just been a really weird few weeks. my body is kind of falling apart and im trying to hold everything together at the same time and it doesnt work. like i cant do both"
     },
     {
       "role": "companion",
-      "content": "That sounds like pressure and fear tangled together — the weight of not booking it, and the fear of what they might find. What feels bigger right now: the heaviness of all the follow-up, or the scared part underneath it?"
+      "content": "That sounds like a lot to carry at once, and maybe two strains are sitting there together. Is it more like pressure on one side and fear on the other, or something else?"
     },
     {
       "role": "user",
-      "content": "honestly i think theyre feeding each other. like the scared part is WHY i keep not booking, and then not booking makes me feel like a failure who cant even take care of herself, and that makes everything heavier. and i work full time and im supposed to be the put together one for everyone else. my mom calls me to fix HER stuff. i dont have room to be the sick scared one. theres no room"
+      "content": "yeah. yeah theres fear in there for sure. i didnt want to say it but yeah. ok so. i found a lump like three weeks ago and ive been to the gp and now im waiting on a scan and the waiting is the thing thats killing me. and meanwhile work doesnt stop and my kid still needs picking up and i still have to be a normal person"
     },
     {
       "role": "companion",
-      "content": "That feels like fear feeding pressure, and then the pressure turning into shame and heaviness. When you say “there’s no room,” what feels most true — the scared part, the failure part, or the one who has to stay put together?"
+      "content": "The waiting is the thing that’s killing you, while work and picking up your kid keep going anyway."
     },
     {
       "role": "user",
-      "content": "the put together one i think. thats the oldest one. like ive been her since i was a kid. and if i let myself be scared or sick then who holds it all up?? but god im so tired of holding it. saying that out loud feels weird. ive never actually said theres no room for me to be the scared one. huh"
+      "content": "exactly. and like nobody knows. i havent told my partner the full thing because i dont want to scare him and i definitely havent told work because i just took leave in feb for something else and i cant be the person whos always having a crisis you know. so im just carrying it by myself and smiling at the school gate and answering emails at 11pm because i cant sleep anyway"
     },
     {
       "role": "companion",
-      "content": "That sounds like the old “put together one” has been carrying this for a long time, and there’s a tiredness under it. If you want, we can stay with that, or leave it here for now — what feels right?"
+      "content": "That sounds lonely, and also very tightly managed. I’m wondering if this is more than fear now, maybe fear with hurt or pressure mixed in, but I don’t want to pin it down too fast."
     },
     {
       "role": "user",
-      "content": "can we stay just a sec more. i think i needed to hear that the tired part is allowed to exist. maybe i dont have to book all of it today. maybe i just book the bloodwork. one thing. thats not failing thats just. one thing"
+      "content": "lonely yeah. thats the word. i dont even know if its the fear of the scan or just. being so tired of holding it all. like im so so tired. i keep thinking if i just get through this week. but then theres another week. and i dont actually get a break i just keep going. my body literally gave me a warning sign and im still not stopping"
     },
     {
       "role": "companion",
-      "content": "That sounds like a small opening in the weight — one thing instead of all of it. What does the tired part ask for when it finally gets a little room?"
+      "content": "That “I just keep going” feels worn-down in a very plain, exhausting way. I can stay with it here, or we can keep following what this week has been asking of you."
     },
     {
       "role": "user",
-      "content": "rest. it just wants to rest and not be in charge for five minutes lol. ok. im gonna book the bloodwork tomorrow and let the rest wait. thank you for this, i didnt expect to actually feel a little lighter. ok im gonna go before i cry at my desk haha. thanks"
+      "content": "i dont know. follow it i guess. its just. i used to be someone who had it together. and now i feel like a fraud. everyone thinks im so capable and on top of it and inside im just bracing for bad news every time my phone buzzes thinking its the hospital. and i hate that i cant control this one. i can manage a whole team but i cant make the scan come faster"
     },
     {
       "role": "companion",
-      "content": "That makes sense — the tired part just wanted rest, not the whole load. I’m glad we found a little room for it; go gently, and we can leave it here."
+      "content": "There’s a sharp split there, between the capable version people see and the one that’s bracing for bad news. Does it feel more like shame, pressure, or something closer to frustration?"
+    },
+    {
+      "role": "user",
+      "content": "frustration. and like. powerlessness. i think thats the real one. i can out work any problem normally but theres nothing to DO here except wait and be scared and keep everyone elses life running. theres no task i can complete to make it okay. and i think thats why im so wound up all the time"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like being stuck with no task to finish, while you still have to keep everyone else’s life running."
+    },
+    {
+      "role": "user",
+      "content": "yeah. that. god its weird seeing it written like that. no task to finish. i think ive been so busy being functional that i never let myself just go like. this is awful and im scared and im allowed to be. nobody in my life has space for me to fall apart so ive just been. not. the scan is thursday btw. so i just have to get through a few more days"
+    },
+    {
+      "role": "companion",
+      "content": "That “no task to finish” lands very clearly, and it sounds like you’ve been holding the awful and the scared behind being functional. We can stay with that, or leave it here for now if that’s enough."
+    },
+    {
+      "role": "user",
+      "content": "yeah. i think thats enough for now. i feel a tiny bit lighter just having said it out loud somewhere. thank you for not trying to fix it. ill come back after thursday maybe. ok. going to try to sleep. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Good. I’m glad it could sit somewhere outside you for a moment. Sleep well, and if you come back after Thursday, I’ll be here to follow whatever’s there."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6xl9aladqipbd1",
+    "id": "evt_mq8md73b87i3zw29",
     "conversation_id": "pressure__10",
-    "timestamp": "2026-06-09T17:46:40.997Z",
-    "user_words_raw": "not be in charge for five minutes",
+    "timestamp": "2026-06-10T22:08:36.222Z",
+    "user_words_raw": "no task to finish",
     "emotion_status": "confirmed",
     "emotion_family": "pressure",
-    "emotion_shade": "overloaded",
+    "emotion_shade": "wound up",
     "secondary_emotions": [
       "fear",
-      "shame"
+      "sadness",
+      "hurt"
     ],
     "valence": "mixed",
     "activation": "medium",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "follow-up medical tasks alongside work and family demands, with no room to be the scared or sick one",
-    "appraisal_thought": "there’s no room for me to be the scared one",
+    "trigger_event": "waiting for the scan on Thursday and having to keep going with no way to make it happen faster",
+    "appraisal_thought": "there’s nothing to do except wait and be scared",
     "body_cue": [],
     "behaviour_action": [
-      "not be in charge for five minutes"
+      "being functional",
+      "keep everyone else’s life running",
+      "bracing for bad news",
+      "waiting for the scan"
     ],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "rest",
       "space",
-      "permission to pause"
+      "permission",
+      "support"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "pressure",
+        "shade": "wound up",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      },
+      {
+        "family": "fear",
+        "shade": "scared",
+        "salience": "background",
+        "source": "user_stated"
+      },
+      {
+        "family": "sadness",
+        "shade": null,
+        "salience": "background",
+        "source": "user_stated"
+      }
+    ],
+    "mixed_confirmed": 1,
     "unlock_stage": "understood",
-    "memory_note": "Often carries the load for others and feels little room to be the vulnerable one; rest matters.",
+    "memory_note": "Waiting for a medical scan has been making them feel wound up, powerless, and expected to stay functional for others.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey. i dont really know how to do this lol. i guess im just kind of stressed? like my body feels like its falling apart and i dont have time to deal with it"
+      "content": "hi. um. i dont really know why im here honestly. just kind of a lot right now and i needed to put it somewhere i guess"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey — that sounds really heavy and stretched thin. Is it more like pressure, or more like your body is sounding the alarm?",
-      "stage": "named",
+      "content": "Hey, that makes sense. You don't have to know exactly why you're here for this to count.",
+      "stage": "noticed",
       "unlocked": false,
-      "family": "pressure",
-      "shade": "stressed",
+      "family": null,
+      "shade": null,
       "body_cue": [],
-      "trigger": "not having time to deal with what their body is doing"
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "both?? like ok so i got these test results back a few weeks ago and my doctor wants me to do all this followup stuff, more bloodwork, a scan, see a specialist. and i just. i havent booked any of it. and every day i dont its like this weight gets heavier. but also im scared of what theyll find so theres that too"
+      "content": "yeah. ok. its just been a really weird few weeks. my body is kind of falling apart and im trying to hold everything together at the same time and it doesnt work. like i cant do both"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds like pressure and fear tangled together — the weight of not booking it, and the fear of what they might find. What feels bigger right now: the heaviness of all the follow-up, or the scared part underneath it?",
-      "stage": "named",
+      "content": "That sounds like a lot to carry at once, and maybe two strains are sitting there together. Is it more like pressure on one side and fear on the other, or something else?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "fear",
-      "shade": "scared",
+      "family": "pressure",
+      "shade": "overwhelmed",
       "body_cue": [],
-      "trigger": "doctor wants follow-up after test results"
+      "trigger": "weird few weeks, body feeling like it is falling apart, trying to hold everything together",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "honestly i think theyre feeding each other. like the scared part is WHY i keep not booking, and then not booking makes me feel like a failure who cant even take care of herself, and that makes everything heavier. and i work full time and im supposed to be the put together one for everyone else. my mom calls me to fix HER stuff. i dont have room to be the sick scared one. theres no room"
+      "content": "yeah. yeah theres fear in there for sure. i didnt want to say it but yeah. ok so. i found a lump like three weeks ago and ive been to the gp and now im waiting on a scan and the waiting is the thing thats killing me. and meanwhile work doesnt stop and my kid still needs picking up and i still have to be a normal person"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That feels like fear feeding pressure, and then the pressure turning into shame and heaviness. When you say “there’s no room,” what feels most true — the scared part, the failure part, or the one who has to stay put together?",
+      "content": "The waiting is the thing that’s killing you, while work and picking up your kid keep going anyway.",
       "stage": "understood",
       "unlocked": true,
-      "family": "pressure",
-      "shade": "overwhelmed",
+      "family": "fear",
+      "shade": "worried",
       "body_cue": [],
-      "trigger": "follow-up medical tasks after test results, while carrying work and family demands"
+      "trigger": "found a lump, went to the GP, waiting on a scan, work and childcare not stopping",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "worried",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "the put together one i think. thats the oldest one. like ive been her since i was a kid. and if i let myself be scared or sick then who holds it all up?? but god im so tired of holding it. saying that out loud feels weird. ive never actually said theres no room for me to be the scared one. huh"
+      "content": "exactly. and like nobody knows. i havent told my partner the full thing because i dont want to scare him and i definitely havent told work because i just took leave in feb for something else and i cant be the person whos always having a crisis you know. so im just carrying it by myself and smiling at the school gate and answering emails at 11pm because i cant sleep anyway"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That sounds like the old “put together one” has been carrying this for a long time, and there’s a tiredness under it. If you want, we can stay with that, or leave it here for now — what feels right?",
+      "content": "That sounds lonely, and also very tightly managed. I’m wondering if this is more than fear now, maybe fear with hurt or pressure mixed in, but I don’t want to pin it down too fast.",
       "stage": "understood",
       "unlocked": false,
-      "family": "pressure",
-      "shade": "overloaded",
-      "body_cue": [],
-      "trigger": "having to hold together work, family, and medical follow-up without room to be scared or sick"
+      "family": "fear",
+      "shade": "worried",
+      "body_cue": [
+        "can't sleep"
+      ],
+      "trigger": "waiting on a scan while keeping it hidden from partner and work",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "worried",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "equal",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 8,
       "role": "user",
-      "content": "can we stay just a sec more. i think i needed to hear that the tired part is allowed to exist. maybe i dont have to book all of it today. maybe i just book the bloodwork. one thing. thats not failing thats just. one thing"
+      "content": "lonely yeah. thats the word. i dont even know if its the fear of the scan or just. being so tired of holding it all. like im so so tired. i keep thinking if i just get through this week. but then theres another week. and i dont actually get a break i just keep going. my body literally gave me a warning sign and im still not stopping"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "That sounds like a small opening in the weight — one thing instead of all of it. What does the tired part ask for when it finally gets a little room?",
+      "content": "That “I just keep going” feels worn-down in a very plain, exhausting way. I can stay with it here, or we can keep following what this week has been asking of you.",
       "stage": "understood",
       "unlocked": false,
       "family": "pressure",
-      "shade": "overloaded",
+      "shade": "overwhelmed",
       "body_cue": [],
-      "trigger": "having to handle follow-up care alongside work and family demands without room to be the scared or sick one"
+      "trigger": "waiting for a scan while carrying work and parenting alone",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": "fear",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": "tired",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 10,
       "role": "user",
-      "content": "rest. it just wants to rest and not be in charge for five minutes lol. ok. im gonna book the bloodwork tomorrow and let the rest wait. thank you for this, i didnt expect to actually feel a little lighter. ok im gonna go before i cry at my desk haha. thanks"
+      "content": "i dont know. follow it i guess. its just. i used to be someone who had it together. and now i feel like a fraud. everyone thinks im so capable and on top of it and inside im just bracing for bad news every time my phone buzzes thinking its the hospital. and i hate that i cant control this one. i can manage a whole team but i cant make the scan come faster"
     },
     {
       "turn": 11,
       "role": "companion",
-      "content": "That makes sense — the tired part just wanted rest, not the whole load. I’m glad we found a little room for it; go gently, and we can leave it here.",
+      "content": "There’s a sharp split there, between the capable version people see and the one that’s bracing for bad news. Does it feel more like shame, pressure, or something closer to frustration?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "waiting for the scan and not being able to control when it happens",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": "pressured",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": "fearful",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "frustration. and like. powerlessness. i think thats the real one. i can out work any problem normally but theres nothing to DO here except wait and be scared and keep everyone elses life running. theres no task i can complete to make it okay. and i think thats why im so wound up all the time"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That feels like being stuck with no task to finish, while you still have to keep everyone else’s life running.",
       "stage": "understood",
       "unlocked": false,
       "family": "pressure",
-      "shade": "overloaded",
+      "shade": "wound up",
       "body_cue": [],
-      "trigger": "follow-up medical tasks alongside work and family demands, with no room to be the scared or sick one"
+      "trigger": "waiting for the scan and having nothing to do that can make it okay",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "wound up",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": "scared",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "anger",
+          "shade": "frustration",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah. that. god its weird seeing it written like that. no task to finish. i think ive been so busy being functional that i never let myself just go like. this is awful and im scared and im allowed to be. nobody in my life has space for me to fall apart so ive just been. not. the scan is thursday btw. so i just have to get through a few more days"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That “no task to finish” lands very clearly, and it sounds like you’ve been holding the awful and the scared behind being functional. We can stay with that, or leave it here for now if that’s enough.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "wound up",
+      "body_cue": [],
+      "trigger": "waiting for the scan on Thursday and having no way to make it happen faster",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "wound up",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "yeah. i think thats enough for now. i feel a tiny bit lighter just having said it out loud somewhere. thank you for not trying to fix it. ill come back after thursday maybe. ok. going to try to sleep. thanks"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Good. I’m glad it could sit somewhere outside you for a moment. Sleep well, and if you come back after Thursday, I’ll be here to follow whatever’s there.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "wound up",
+      "body_cue": [],
+      "trigger": "waiting for the scan on Thursday and having to keep going with no way to make it happen faster",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "wound up",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "fear",
+          "shade": "scared",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
     }
   ]
 }

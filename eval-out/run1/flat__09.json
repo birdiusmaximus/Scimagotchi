@@ -1,0 +1,161 @@
+{
+  "cid": "flat__09",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-09T18:26:27.756Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "feel like nothing today"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds very flat and out of reach. Does it feel more blank, numb, or just hard to name?"
+    },
+    {
+      "role": "user",
+      "content": "blank i guess. like i dont know who i even am anymore"
+    },
+    {
+      "role": "companion",
+      "content": "Blank, and a bit lost from yourself — that sounds like a strange kind of empty. Does it feel more like you’re disconnected, or like you’ve gone quiet inside?"
+    },
+    {
+      "role": "user",
+      "content": "disconnected. left the job i built my whole self around. now i just feel like a stranger"
+    },
+    {
+      "role": "companion",
+      "content": "Disconnected and like a stranger after leaving the job that held so much of you — that sounds like a hard shift. Is it more the loss of that role, or the feeling of not recognising yourself now?"
+    },
+    {
+      "role": "user",
+      "content": "not recognising myself. anyway. just needed to put it somewhere. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Not recognising yourself after that, and putting it somewhere — I hear that. We can leave it here for now, or if you want, we can stay with what this says about the shift for a moment."
+    },
+    {
+      "role": "user",
+      "content": "leave it here. im done for now. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — we can leave it here. Take care."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z169mswp3i81j",
+    "conversation_id": "flat__09",
+    "timestamp": "2026-06-09T18:26:56.010Z",
+    "user_words_raw": "leave it here",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "disconnected",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "left the job they built their whole self around",
+    "appraisal_thought": "I don't recognise myself anymore",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "User wanted to stop after naming feeling disconnected from self following leaving a job tied to identity.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "feel like nothing today"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds very flat and out of reach. Does it feel more blank, numb, or just hard to name?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "blank i guess. like i dont know who i even am anymore"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Blank, and a bit lost from yourself — that sounds like a strange kind of empty. Does it feel more like you’re disconnected, or like you’ve gone quiet inside?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "disconnected. left the job i built my whole self around. now i just feel like a stranger"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Disconnected and like a stranger after leaving the job that held so much of you — that sounds like a hard shift. Is it more the loss of that role, or the feeling of not recognising yourself now?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "left the job they built their whole self around"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "not recognising myself. anyway. just needed to put it somewhere. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Not recognising yourself after that, and putting it somewhere — I hear that. We can leave it here for now, or if you want, we can stay with what this says about the shift for a moment.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "left the job they built their whole self around"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "leave it here. im done for now. thanks"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Of course — we can leave it here. Take care.",
+      "stage": "named",
+      "unlocked": false,
+      "family": null,
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "left the job they built their whole self around"
+    }
+  ]
+}

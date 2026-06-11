@@ -1,0 +1,290 @@
+{
+  "cid": "sadness__08",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-10T17:11:23.253Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. i dont really know why im here honestly"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, it’s good to see you. We can stay with the “don’t really know why” part, or just talk plain for a bit, whichever feels easier."
+    },
+    {
+      "role": "user",
+      "content": "i guess just. everything feels kind of up in the air right now and i cant settle"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a kind of unsettled pressure, or maybe more of a vague unease. Is it mostly restless, heavy, or just hard to pin down?"
+    },
+    {
+      "role": "user",
+      "content": "hard to pin down. not really restless more like. heavy i think. my contract at work ends in like 3 weeks and theres nothing lined up after"
+    },
+    {
+      "role": "companion",
+      "content": "I had the shape wrong, let me step back. 'Heavy' feels closer, and the contract ending sounds like part of the weight, what word fits best for it?"
+    },
+    {
+      "role": "user",
+      "content": "idk. sad maybe? like im grieving something that hasnt even happened yet. i actually liked that job and now its just. gone soon and i dont know whats next"
+    },
+    {
+      "role": "companion",
+      "content": "“Grieving something that hasn’t even happened yet” feels like the centre of this, and there’s sadness in the loss of a job you actually liked. We can leave it there for now, or stay with what it’s like to have it ending while the next part is still blank."
+    },
+    {
+      "role": "user",
+      "content": "the blank part is the worst i think. like i keep refreshing job sites and theres nothing and i just feel myself kind of shutting down about it. its easier to not think about it but then 3 weeks keeps getting closer"
+    },
+    {
+      "role": "companion",
+      "content": "The blank part sounds like the sharpest edge here, and “shutting down” is a very clear shape of it. I’m wondering if it feels more like heaviness, or like going numb when the three weeks comes closer?"
+    },
+    {
+      "role": "user",
+      "content": "numb i think. like i go quiet and just sort of stare. anyway. i dont really have anything else to say about it but it helped to put it somewhere. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "I'm glad it helped to put it somewhere. We can leave it here, and if you want later, we can come back to what that quiet numbness is like for you."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bsh8iy8nhdul2",
+    "conversation_id": "sadness__08",
+    "timestamp": "2026-06-10T17:11:57.030Z",
+    "user_words_raw": "numb",
+    "emotion_status": "confirmed",
+    "emotion_family": "flat",
+    "emotion_shade": "numb",
+    "secondary_emotions": [
+      "sadness"
+    ],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "contract at work ends in 3 weeks with nothing lined up after",
+    "appraisal_thought": "the blank part is the worst",
+    "body_cue": [],
+    "behaviour_action": [
+      "go quiet",
+      "stare"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "recognition"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "user_rejected_shades": [
+      "unsettled"
+    ],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "flat",
+        "shade": "numb",
+        "salience": "foreground",
+        "source": "user_stated"
+      },
+      {
+        "family": "sadness",
+        "shade": "sad",
+        "salience": "background",
+        "source": "user_stated"
+      }
+    ],
+    "mixed_confirmed": 1,
+    "unlock_stage": "understood",
+    "memory_note": "Work ending soon with nothing lined up brings a quiet, staring numbness and sadness.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. i dont really know why im here honestly"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, it’s good to see you. We can stay with the “don’t really know why” part, or just talk plain for a bit, whichever feels easier.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i guess just. everything feels kind of up in the air right now and i cant settle"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a kind of unsettled pressure, or maybe more of a vague unease. Is it mostly restless, heavy, or just hard to pin down?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "unsettled",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "unsettled",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "hard to pin down. not really restless more like. heavy i think. my contract at work ends in like 3 weeks and theres nothing lined up after"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "I had the shape wrong, let me step back. 'Heavy' feels closer, and the contract ending sounds like part of the weight, what word fits best for it?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "heavy",
+      "body_cue": [],
+      "trigger": "contract at work ending in three weeks with nothing lined up after",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "idk. sad maybe? like im grieving something that hasnt even happened yet. i actually liked that job and now its just. gone soon and i dont know whats next"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "“Grieving something that hasn’t even happened yet” feels like the centre of this, and there’s sadness in the loss of a job you actually liked. We can leave it there for now, or stay with what it’s like to have it ending while the next part is still blank.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grieving",
+      "body_cue": [],
+      "trigger": "contract at work ending in three weeks with nothing lined up after",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "grieving",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": "heavy",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "the blank part is the worst i think. like i keep refreshing job sites and theres nothing and i just feel myself kind of shutting down about it. its easier to not think about it but then 3 weeks keeps getting closer"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "The blank part sounds like the sharpest edge here, and “shutting down” is a very clear shape of it. I’m wondering if it feels more like heaviness, or like going numb when the three weeks comes closer?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "sadness",
+      "shade": "grieving",
+      "body_cue": [],
+      "trigger": "contract at work ending in three weeks with nothing lined up after",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "grieving",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "flat",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "numb i think. like i go quiet and just sort of stare. anyway. i dont really have anything else to say about it but it helped to put it somewhere. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I'm glad it helped to put it somewhere. We can leave it here, and if you want later, we can come back to what that quiet numbness is like for you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": "contract at work ends in 3 weeks with nothing lined up after",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "numb",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": "sad",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    }
+  ]
+}

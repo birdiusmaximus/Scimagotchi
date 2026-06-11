@@ -1,0 +1,359 @@
+{
+  "cid": "calm__09",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-10T17:07:51.659Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "took my name badge off at work today. the old one. they finally reprinted it"
+    },
+    {
+      "role": "companion",
+      "content": "That old badge coming off feels like a small but real marker of change. I'm here if you want to stay with what that moment was like, or leave it there for now."
+    },
+    {
+      "role": "user",
+      "content": "yeah. it has my actual name on it now. not the one i was hired under"
+    },
+    {
+      "role": "companion",
+      "content": "\"My actual name\" on it now feels like the centre of this. That sounds important."
+    },
+    {
+      "role": "user",
+      "content": "took 3 years. forms, hr, two managers who kept forgetting. and today it was just. there. printed right"
+    },
+    {
+      "role": "companion",
+      "content": "It sounds like something eased into place at last, after a long, tedious wait. Did it land more as settled relief, or as a quiet kind of satisfaction?"
+    },
+    {
+      "role": "user",
+      "content": "settled i think. i didnt cry or anything. just held it and my shoulders kind of dropped"
+    },
+    {
+      "role": "companion",
+      "content": "That drop in your shoulders feels like the clearest sign of it, settled and finally real in your hands. Is there a little more to notice in the body, or is that enough for now?"
+    },
+    {
+      "role": "user",
+      "content": "its weird how a piece of plastic does that. like the company finally sees me as me. not the old paperwork version"
+    },
+    {
+      "role": "companion",
+      "content": "\"Sees me as me\" feels like the center of it, not just the plastic. I’m learning this calm came with being recognised, after a long stretch of being the paperwork version."
+    },
+    {
+      "role": "user",
+      "content": "i stopped expecting it tbh. got used to correcting people, or just letting it slide. easier to not hope"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a kind of guardedness, maybe protecting you from being let down again. Do you want to stay with that piece, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "yeah maybe. but today the guard kind of. wasnt needed. i could just have the good thing. thats the part that feels new"
+    },
+    {
+      "role": "companion",
+      "content": "That newness matters, the guard could step back and you could just receive it. I’m wondering if it also touched the older part that had learned not to hope?"
+    },
+    {
+      "role": "user",
+      "content": "it did. like the old me that gave up gets to be a bit wrong for once. in a good way. i dunno. i just feel ok. quiet ok"
+    },
+    {
+      "role": "companion",
+      "content": "Quiet ok has a gentle shape here, and the old part that gave up gets a small correction without having to fight for it. We can leave it there, or stay with what this kind of “a bit wrong for once” means to you."
+    },
+    {
+      "role": "user",
+      "content": "lets leave it there. thanks for this. needed to put it somewhere. gonna go look at the badge again lol"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, and I’m glad it had a place to land. Enjoy looking at the badge again, lol."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bnz0v0e0pvgjd",
+    "conversation_id": "calm__09",
+    "timestamp": "2026-06-10T17:08:46.673Z",
+    "user_words_raw": "needed to put it somewhere",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "finally receiving the corrected identity document after years of being misnamed or overlooked",
+    "appraisal_thought": "the old paperwork version can be wrong for once",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "recognition",
+      "space",
+      "rest"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Received a corrected identity document after years of being misnamed or overlooked, and felt quietly okay about it.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "took my name badge off at work today. the old one. they finally reprinted it"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That old badge coming off feels like a small but real marker of change. I'm here if you want to stay with what that moment was like, or leave it there for now.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": "they finally reprinted it",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah. it has my actual name on it now. not the one i was hired under"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "\"My actual name\" on it now feels like the centre of this. That sounds important.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "the name badge was reprinted with their actual name instead of the one they were hired under",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "took 3 years. forms, hr, two managers who kept forgetting. and today it was just. there. printed right"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "It sounds like something eased into place at last, after a long, tedious wait. Did it land more as settled relief, or as a quiet kind of satisfaction?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "their name badge was finally reprinted with their actual name after years of forms and people forgetting",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "settled",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "joy",
+          "shade": "relief",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "settled i think. i didnt cry or anything. just held it and my shoulders kind of dropped"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That drop in your shoulders feels like the clearest sign of it, settled and finally real in your hands. Is there a little more to notice in the body, or is that enough for now?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [
+        "shoulders kind of dropped"
+      ],
+      "trigger": "their name badge was reprinted with their actual name after years of forms and people forgetting",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "its weird how a piece of plastic does that. like the company finally sees me as me. not the old paperwork version"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "\"Sees me as me\" feels like the center of it, not just the plastic. I’m learning this calm came with being recognised, after a long stretch of being the paperwork version.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [
+        "shoulders kind of dropped"
+      ],
+      "trigger": "the company finally reprinted the badge with their actual name after years of forms and people forgetting",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "i stopped expecting it tbh. got used to correcting people, or just letting it slide. easier to not hope"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like a kind of guardedness, maybe protecting you from being let down again. Do you want to stay with that piece, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "guarded",
+      "body_cue": [],
+      "trigger": "years of being misnamed or overlooked in paperwork and by people at work",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "guarded",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "yeah maybe. but today the guard kind of. wasnt needed. i could just have the good thing. thats the part that feels new"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That newness matters, the guard could step back and you could just receive it. I’m wondering if it also touched the older part that had learned not to hope?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "guarded",
+      "body_cue": [],
+      "trigger": "finally receiving the corrected identity document after years of paperwork and being misnamed or overlooked",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "guarded",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "calm",
+          "shade": "settled",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "it did. like the old me that gave up gets to be a bit wrong for once. in a good way. i dunno. i just feel ok. quiet ok"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "Quiet ok has a gentle shape here, and the old part that gave up gets a small correction without having to fight for it. We can leave it there, or stay with what this kind of “a bit wrong for once” means to you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "finally receiving the corrected identity document after years of being misnamed or overlooked",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "settled",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": "guarded",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "lets leave it there. thanks for this. needed to put it somewhere. gonna go look at the badge again lol"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Of course, and I’m glad it had a place to land. Enjoy looking at the badge again, lol.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "finally receiving the corrected identity document after years of being misnamed or overlooked",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

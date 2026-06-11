@@ -1,0 +1,357 @@
+{
+  "cid": "hurt__09",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-10T17:12:22.571Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont even know why im typing this"
+    },
+    {
+      "role": "companion",
+      "content": "You're here anyway, even without a clear reason. We can just sit with that and see what, if anything, shows up."
+    },
+    {
+      "role": "user",
+      "content": "my sister got promoted at the firm. our dad started it. i found out from linkedin"
+    },
+    {
+      "role": "companion",
+      "content": "Finding out through LinkedIn, and that it was your sister getting the promotion, lands with a lot in it. I’m here with the part of this that stung, if you want to stay with it."
+    },
+    {
+      "role": "user",
+      "content": "ive worked there 9 yrs. she came in 3 yrs ago. nobody told me. nobody thought to"
+    },
+    {
+      "role": "companion",
+      "content": "“Nobody told me” carries a sharp kind of being overlooked. Did it feel more like hurt, or more like anger on top of it?"
+    },
+    {
+      "role": "user",
+      "content": "not angry. idk. like i thought i mattered there. guess i read it wrong"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like hurt, and maybe a bruise to what you thought the place meant. Was the painful part more the overlook itself, or what it seemed to say about where you stand there?"
+    },
+    {
+      "role": "user",
+      "content": "where i stand. my dad called HER first. didnt even think of me. like im just staff now not his kid"
+    },
+    {
+      "role": "companion",
+      "content": "That lands as more than being overlooked, it sounds like your place with him got pulled into question. I’m wondering if the sharpest part is the shift from “his kid” to “just staff,” or something else?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. the kid part. i stayed bc of him. she didnt even want this job. and he picked her"
+    },
+    {
+      "role": "companion",
+      "content": "The “kid part” is right at the centre of this, and there’s also the sting of staying for him and then seeing him choose her. If you want, we can stay with what that shift felt like, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "i dont know what i wanted him to say. just that he saw me i guess. nine years and im invisible to my own dad"
+    },
+    {
+      "role": "companion",
+      "content": "“Saw me” feels like the heart of it, more than the job itself. Did that land as a tight, heavy kind of hurt, or something else in the moment?"
+    },
+    {
+      "role": "user",
+      "content": "heavy. chest. whatever. saying it doesnt change that he didnt pick me"
+    },
+    {
+      "role": "companion",
+      "content": "Heavy in the chest, and the “didn’t pick me” part stays untouched by naming it. We can leave it there, or keep close to what that meant about him and about you."
+    },
+    {
+      "role": "user",
+      "content": "leave it there. ive got to get back to my desk anyway. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, we can leave it here. Good luck getting back to your desk."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8btr4geog6gd3f",
+    "conversation_id": "hurt__09",
+    "timestamp": "2026-06-10T17:13:06.866Z",
+    "user_words_raw": "got to get back to my desk",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "unseen",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "father called sister first about her promotion and did not see or acknowledge them",
+    "appraisal_thought": "he didn't pick me",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [
+      "anger",
+      "angry"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "shaped",
+    "memory_note": "User was hurt by being overlooked by father in a family/work-related situation.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont even know why im typing this"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "You're here anyway, even without a clear reason. We can just sit with that and see what, if anything, shows up.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "my sister got promoted at the firm. our dad started it. i found out from linkedin"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Finding out through LinkedIn, and that it was your sister getting the promotion, lands with a lot in it. I’m here with the part of this that stung, if you want to stay with it.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [],
+      "trigger": "finding out about a sister's promotion at a family firm through LinkedIn",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "left out",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "ive worked there 9 yrs. she came in 3 yrs ago. nobody told me. nobody thought to"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "“Nobody told me” carries a sharp kind of being overlooked. Did it feel more like hurt, or more like anger on top of it?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "overlooked",
+      "body_cue": [],
+      "trigger": "finding out about a sister's promotion at the family firm through LinkedIn",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "overlooked",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "not angry. idk. like i thought i mattered there. guess i read it wrong"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like hurt, and maybe a bruise to what you thought the place meant. Was the painful part more the overlook itself, or what it seemed to say about where you stand there?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "overlooked",
+      "body_cue": [],
+      "trigger": "learning of sister's promotion at the family firm through LinkedIn after 9 years there",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "overlooked",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "where i stand. my dad called HER first. didnt even think of me. like im just staff now not his kid"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That lands as more than being overlooked, it sounds like your place with him got pulled into question. I’m wondering if the sharpest part is the shift from “his kid” to “just staff,” or something else?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "unseen",
+      "body_cue": [],
+      "trigger": "dad called sister first about her promotion at the family firm and did not think of them",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. the kid part. i stayed bc of him. she didnt even want this job. and he picked her"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "The “kid part” is right at the centre of this, and there’s also the sting of staying for him and then seeing him choose her. If you want, we can stay with what that shift felt like, or leave it here for now.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "unseen",
+      "body_cue": [],
+      "trigger": "dad called sister first about her promotion and did not think of them",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "unseen",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "i dont know what i wanted him to say. just that he saw me i guess. nine years and im invisible to my own dad"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "“Saw me” feels like the heart of it, more than the job itself. Did that land as a tight, heavy kind of hurt, or something else in the moment?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "unseen",
+      "body_cue": [],
+      "trigger": "father called sister first about her promotion and did not see or acknowledge them",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "heavy. chest. whatever. saying it doesnt change that he didnt pick me"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "Heavy in the chest, and the “didn’t pick me” part stays untouched by naming it. We can leave it there, or keep close to what that meant about him and about you.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "unseen",
+      "body_cue": [
+        "heavy",
+        "chest"
+      ],
+      "trigger": "father called sister first about her promotion and did not see or acknowledge them",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "leave it there. ive got to get back to my desk anyway. thanks"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Of course, we can leave it here. Good luck getting back to your desk.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": null,
+      "shade": "unseen",
+      "body_cue": [],
+      "trigger": "father called sister first about her promotion and did not see or acknowledge them",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

@@ -2,145 +2,443 @@
   "cid": "pressure__09",
   "emotion": "pressure",
   "persona": null,
-  "created": "2026-06-09T17:46:03.619Z",
+  "created": "2026-06-10T22:07:24.747Z",
   "history": [
     {
       "role": "user",
-      "content": "feel like im never gonna be good enough no matter what i do"
+      "content": "i dont even know why im opening this. just one of those days where everything feels like too much"
     },
     {
       "role": "companion",
-      "content": "That sounds painfully heavy and discouraging. Is it more like shame, sadness, or pressure right now?"
+      "content": "One of those days where everything feels like too much, and you do not even know why you opened this. I’m here with that."
     },
     {
       "role": "user",
-      "content": "pressure i think but its about me. like i should be way further along by now and im just not"
+      "content": "got passed over for the senior role at work. third time. they gave it to someone i trained"
     },
     {
       "role": "companion",
-      "content": "That sounds like pressure turned inward, with a sharp sense of being behind. Does it feel more rushed, heavy, or trapped?"
+      "content": "That sounds really loaded, maybe overwhelmed with a sharp edge of hurt or anger too. What feels strongest right now, the too much of it, or the being passed over?"
     },
     {
       "role": "user",
-      "content": "heavy. everyone my age has it figured out and im still nowhere. turning 30 soon and i got nothing to show"
+      "content": "the too much. like i keep waiting to feel angry but i just feel. flattened. like maybe theyre right and i was never the one for it"
     },
     {
       "role": "companion",
-      "content": "That heavy comparison sounds like a lot to carry, especially with turning 30 coming up. Is it more of a sinking weight, or does it make you want to push harder?"
+      "content": "Flattened makes sense here, and that thought has a sting of shame or hurt in it. If you want, we can stay with this, or leave it here for now."
     },
     {
       "role": "user",
-      "content": "sinking. anyway just needed to get it out. thanks"
+      "content": "no i. i think i wanna stay. its the shame one yeah. ive been telling everyone for years that im on track. my parents. my partner. like that was the whole point of me"
     },
     {
       "role": "companion",
-      "content": "That sinking feeling makes sense, and we can leave it here for now if you want."
+      "content": "That lands as a painful kind of shame, tied to years of telling people you were on track. I’m hearing how much of you was built around that."
+    },
+    {
+      "role": "user",
+      "content": "i havent told my partner yet. its been four days. i just. cant make the words come out. how do you say hey turns out im not the person you thought you signed up for"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like shame that wants to hide, and maybe also protect you from being seen in that moment. What does the not saying feel like in you, more frozen, tight, or heavy?"
+    },
+    {
+      "role": "user",
+      "content": "tight. like my chest. every time i open my mouth to tell her it just closes back up. its stupid its just a job"
+    },
+    {
+      "role": "companion",
+      "content": "That tight chest sounds like the words hitting a wall. We can stay with that, or keep it very small and just notice what happens right before your mouth closes."
+    },
+    {
+      "role": "user",
+      "content": "right before. i think its her face. like i can see her being disappointed even though she never would be. its me. im the one whos disappointed"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like the moment is carrying her imagined disappointment, and then turning it back on you. I'm learning this shame is doing both at once, seeing her face and then judging you with it."
+    },
+    {
+      "role": "user",
+      "content": "yeah. yeah thats it exactly. i didnt have words for that until just now. its lighter saying it out loud even if nothings actually fixed"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense, and nothing has to be fixed for it to be clearer. We can leave it here for now, or stay with what it felt like to finally say it out loud."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. i think i can maybe tell her tonight now. thanks. needed this more than i thought"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad this helped get you unstuck, and I’ll leave it here with you."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6xl7t2rkfe8tn8",
+    "id": "evt_mq8md69idp735fip",
     "conversation_id": "pressure__09",
-    "timestamp": "2026-06-09T17:46:20.359Z",
-    "user_words_raw": "got nothing to show",
+    "timestamp": "2026-06-10T22:08:22.484Z",
+    "user_words_raw": "needed this more than i thought",
     "emotion_status": "confirmed",
-    "emotion_family": "pressure",
-    "emotion_shade": "heavy",
-    "secondary_emotions": [
-      "sadness"
-    ],
+    "emotion_family": "shame",
+    "emotion_shade": "shame",
+    "secondary_emotions": [],
     "valence": "negative",
     "activation": "medium",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "turning 30 and feeling behind compared with others",
-    "appraisal_thought": "I should be further along by now and I have nothing to show",
+    "trigger_event": "thinking about telling partner about being passed over for the senior role at work",
+    "appraisal_thought": "not the person you thought you signed up for",
     "body_cue": [
-      "sinking"
+      "tight chest"
     ],
-    "behaviour_action": [],
+    "behaviour_action": [
+      "mouth closes back up"
+    ],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "space",
-      "permission to pause"
+      "dignity",
+      "being understood",
+      "acceptance"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": "simultaneous",
+    "strands": [
+      {
+        "family": "shame",
+        "shade": "shame",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      },
+      {
+        "family": "hurt",
+        "shade": null,
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Feeling behind in life milestones around age 30",
+    "memory_note": "Had trouble telling a partner about being passed over for a senior role at work, with shame and tight chest.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "feel like im never gonna be good enough no matter what i do"
+      "content": "i dont even know why im opening this. just one of those days where everything feels like too much"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds painfully heavy and discouraging. Is it more like shame, sadness, or pressure right now?",
-      "stage": "named",
+      "content": "One of those days where everything feels like too much, and you do not even know why you opened this. I’m here with that.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "pressure",
-      "shade": "never gonna be good enough",
+      "shade": "overwhelmed",
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "pressure i think but its about me. like i should be way further along by now and im just not"
+      "content": "got passed over for the senior role at work. third time. they gave it to someone i trained"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds like pressure turned inward, with a sharp sense of being behind. Does it feel more rushed, heavy, or trapped?",
-      "stage": "named",
+      "content": "That sounds really loaded, maybe overwhelmed with a sharp edge of hurt or anger too. What feels strongest right now, the too much of it, or the being passed over?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "pressure",
-      "shade": "behind / not far enough along",
+      "shade": "overwhelmed",
       "body_cue": [],
-      "trigger": "being where they are now compared with where they think they should be"
+      "trigger": "got passed over for the senior role at work, third time, and they gave it to someone the user trained",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "heavy. everyone my age has it figured out and im still nowhere. turning 30 soon and i got nothing to show"
+      "content": "the too much. like i keep waiting to feel angry but i just feel. flattened. like maybe theyre right and i was never the one for it"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That heavy comparison sounds like a lot to carry, especially with turning 30 coming up. Is it more of a sinking weight, or does it make you want to push harder?",
-      "stage": "named",
+      "content": "Flattened makes sense here, and that thought has a sting of shame or hurt in it. If you want, we can stay with this, or leave it here for now.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "pressure",
-      "shade": "heavy",
+      "family": "flat",
+      "shade": "flattened",
       "body_cue": [],
-      "trigger": "being where they are now compared with where they think they should be"
+      "trigger": "got passed over for the senior role at work, third time, and they gave it to someone the user trained",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "flattened",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "sinking. anyway just needed to get it out. thanks"
+      "content": "no i. i think i wanna stay. its the shame one yeah. ive been telling everyone for years that im on track. my parents. my partner. like that was the whole point of me"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That sinking feeling makes sense, and we can leave it here for now if you want.",
+      "content": "That lands as a painful kind of shame, tied to years of telling people you were on track. I’m hearing how much of you was built around that.",
       "stage": "understood",
       "unlocked": true,
-      "family": "pressure",
-      "shade": "heavy",
-      "body_cue": [
-        "sinking"
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "being passed over for the senior role at work after years of saying they were on track",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
       ],
-      "trigger": "turning 30 and feeling behind compared with others"
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i havent told my partner yet. its been four days. i just. cant make the words come out. how do you say hey turns out im not the person you thought you signed up for"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like shame that wants to hide, and maybe also protect you from being seen in that moment. What does the not saying feel like in you, more frozen, tight, or heavy?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "being passed over for the senior role at work for the third time",
+      "label_source": "user_confirmed",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "tight. like my chest. every time i open my mouth to tell her it just closes back up. its stupid its just a job"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That tight chest sounds like the words hitting a wall. We can stay with that, or keep it very small and just notice what happens right before your mouth closes.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [
+        "tight chest"
+      ],
+      "trigger": "not telling partner about being passed over for the senior role at work",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "right before. i think its her face. like i can see her being disappointed even though she never would be. its me. im the one whos disappointed"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That feels like the moment is carrying her imagined disappointment, and then turning it back on you. I'm learning this shame is doing both at once, seeing her face and then judging you with it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [
+        "tight chest"
+      ],
+      "trigger": "thinking about telling partner about being passed over for the senior role at work",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah. yeah thats it exactly. i didnt have words for that until just now. its lighter saying it out loud even if nothings actually fixed"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That makes sense, and nothing has to be fixed for it to be clearer. We can leave it here for now, or stay with what it felt like to finally say it out loud.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [
+        "tight chest"
+      ],
+      "trigger": "thinking about telling partner about being passed over for the senior role at work",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "calm",
+          "shade": "lightness",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "yeah lets leave it there. i think i can maybe tell her tonight now. thanks. needed this more than i thought"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "I’m glad this helped get you unstuck, and I’ll leave it here with you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [
+        "tight chest"
+      ],
+      "trigger": "thinking about telling partner about being passed over for the senior role at work",
+      "label_source": "user_confirmed",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     }
   ]
 }

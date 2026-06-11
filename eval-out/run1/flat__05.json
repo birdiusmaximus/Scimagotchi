@@ -1,0 +1,140 @@
+{
+  "cid": "flat__05",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-09T18:26:18.916Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk man. just feel kind of nothing lately. not sad really. just flat"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds more like flat or blank than sad. Does it feel more empty, numb, or just kind of muted?"
+    },
+    {
+      "role": "user",
+      "content": "ha. numb i guess? like someone unplugged something. very on brand for me tbh"
+    },
+    {
+      "role": "companion",
+      "content": "Numb fits, and “someone unplugged something” gives it a very disconnected feel. Is it more like things go quiet inside, or like you’re just not getting much signal at all?"
+    },
+    {
+      "role": "user",
+      "content": "no signal. started after i found a box of old photos from before everything changed. dunno why thatd do it lol"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the old photos hit something and left you with almost no signal. Would you want to stay with that, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it. dont really wanna poke the box today. thanks tho"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, leaving the box closed sounds right for today. Thanks for telling me about it."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6z0zsi1iodybe0",
+    "conversation_id": "flat__05",
+    "timestamp": "2026-06-09T18:26:37.153Z",
+    "user_words_raw": "no signal",
+    "emotion_status": "candidate",
+    "emotion_family": "flat",
+    "emotion_shade": "numb",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "found a box of old photos from before everything changed",
+    "appraisal_thought": "dont really wanna poke the box today",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "lower demand"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "Old photos can bring on a numb, disconnected feeling.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk man. just feel kind of nothing lately. not sad really. just flat"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds more like flat or blank than sad. Does it feel more empty, numb, or just kind of muted?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "ha. numb i guess? like someone unplugged something. very on brand for me tbh"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Numb fits, and “someone unplugged something” gives it a very disconnected feel. Is it more like things go quiet inside, or like you’re just not getting much signal at all?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "no signal. started after i found a box of old photos from before everything changed. dunno why thatd do it lol"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like the old photos hit something and left you with almost no signal. Would you want to stay with that, or leave it here for now?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": "found a box of old photos from before everything changed"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah lets leave it. dont really wanna poke the box today. thanks tho"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Yeah, leaving the box closed sounds right for today. Thanks for telling me about it.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": "found a box of old photos from before everything changed"
+    }
+  ]
+}

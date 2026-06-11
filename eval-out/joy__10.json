@@ -2,196 +2,410 @@
   "cid": "joy__10",
   "emotion": "joy",
   "persona": null,
-  "created": "2026-06-09T17:41:51.977Z",
+  "created": "2026-06-10T22:04:33.345Z",
   "history": [
     {
       "role": "user",
-      "content": "ok so this is kind of dumb but i went for a run this morning and i actually finished the whole loop without stopping?? like the full thing. i havent been able to do that in literally years"
+      "content": "ok so this is kind of dumb but i need to tell someone. i ran 5k this morning. like actually ran the whole thing without stopping"
     },
     {
       "role": "companion",
-      "content": "That doesn’t sound dumb at all — it sounds big. I’m wondering if it feels more like surprise, pride, or something gentler than that?"
+      "content": "That’s a real thing to want to tell someone. You ran the whole 5k without stopping, and that matters."
     },
     {
       "role": "user",
-      "content": "pride yeah i think? like im genuinely proud, ive been trying to get back into running since the start of the year after my knee thing and its been so slow and frustrating. but theres this other part of me thats almost.. scared to be happy about it? like dont jinx it. idk thats the weird bit"
+      "content": "yeah but here's the thing thats making me weird about it. like a year ago i couldnt walk up the stairs at the train station without stopping halfway. my resting heart rate was insane. doctor used the word prediabetic which i still hate. and now i just. ran 5k"
     },
     {
       "role": "companion",
-      "content": "Pride makes sense, and that “don’t jinx it” part sounds like a careful kind of fear sitting next to it. What does that cautious feeling make you want to do — hold back, stay quiet, or something else?"
+      "content": "That sounds less like one neat feeling and more like a mix of pride, relief, and maybe some old dread getting touched too. I’m curious what it feels like the moment you put those two versions of you side by side?"
     },
     {
       "role": "user",
-      "content": "hold back i guess. like i didnt even tell my partner properly, i just kind of mentioned it casual like oh yeah went for a run, didnt say it was a big deal. cause last spring i got all excited and signed up for a 10k and then my knee went again two weeks in and i felt so stupid. like i made this whole thing of it and then nothing. so part of me is just waiting for the other shoe. but also?? i ran the whole loop today. i did that. nobody can take that"
+      "content": "ok yeah you nailed it actually. its not just happy. when i put them side by side i kind of want to cry?? like proud but also so sad for the version of me that was scared all the time. she really thought that was just how her body was gonna be forever. and i was so ashamed back then i wouldnt even tell people i was struggling"
     },
     {
       "role": "companion",
-      "content": "That makes a lot of sense — the pride is real, and the holding back sounds tied to not wanting to get caught in that letdown again. Would it feel right to leave it there, or stay with the part of you that’s still saying “I did that” ?"
+      "content": "I’m holding both, then, pride and a sad kind of grief for that scared version of you, with shame sitting around the edges. You can leave it there, or we can stay with what that shame was doing back then."
     },
     {
       "role": "user",
-      "content": "no i wanna stay with the i did that part for a sec. cause honestly the whole way round i kept thinking i was gonna have to walk, every corner i was like ok this is where you stop. and i just.. didnt. my legs were fine. knee was fine. and theres this stupid hill near the end and i always walk it and today i ran up the whole thing. i actually teared up a little at the top which is so embarrassing lol but it just felt like getting a piece of myself back you know"
+      "content": "no lets stay with it. the shame thing is the part i havent figured out. i think i was ashamed because i felt like id done it to myself? like i let my body get to that point and everyone could SEE it. my mom would make these little comments. so today running felt like proving something but also i hate that i still need to prove anything you know"
     },
     {
       "role": "companion",
-      "content": "That sounds really moving — not just pride, but a sense of getting a piece of yourself back. Was the tearful part more like relief, or more like being surprised by what your body could do?"
+      "content": "That feels like shame mixed with a kind of protest, and maybe some hurt where those comments landed. It sounds like running was both proof and a way of pushing back, in a body that felt visible to everyone."
     },
     {
       "role": "user",
-      "content": "relief mostly i think. like ive spent so long being scared of my own body, every twinge i catastrophise, and today it just.. worked. it did the thing i asked. relief that maybe im not as broken as my brain keeps telling me. ok writing it out like that the scared part feels a bit smaller actually. maybe i will tell my partner properly tonight. make it a thing. i did run up that stupid hill after all"
+      "content": "the hurt one yeah. she still does it. i lost the weight and got fit and last week she goes 'see doesnt it feel better to take care of yourself' like as if i wasnt a whole person before. and the worst part is part of me agreed with her in the moment and i hate that. crossing that finish line this morning i wanted to call her and i dont even know if it was to share it or to win"
     },
     {
       "role": "companion",
-      "content": "That relief sounds like your body answering back after a long stretch of fear. If you want, we can leave it right there — or stay with what it might mean to “make it a thing” tonight."
+      "content": "That sounds like hurt with some shame still hooked into it, and the finish line pulled at both wanting to share and wanting to win. Does it feel more like those two were together, or like one was underneath the other?"
     },
     {
       "role": "user",
-      "content": "nah i think we can leave it there. i feel kind of lighter actually, thank you. gonna go tell him about the hill. and maybe quietly look at that 10k again lol. ok bye"
+      "content": "underneath i think. like the wanting to win was on top, loud, but if im honest underneath it was just this little kid still wanting her to say im proud of you without the lesson attached. and i didnt call her. i called my sister instead and she just screamed and i cried and that was actually the best part of the whole day"
     },
     {
       "role": "companion",
-      "content": "That feels like a good place to let it rest. Have a good talk about the hill — and I hope the 10k can wait there quietly until you’re ready."
+      "content": "That little kid wanting “I’m proud of you” without the lesson attached lands very clearly. And calling your sister, then crying while she screamed, sounds like the best part found some real company."
+    },
+    {
+      "role": "user",
+      "content": "yeah. company is the word. honestly i think thats what i actually wanted from the run too, not to prove anything to my mom but to feel like im finally on my own side instead of at war with my body. that probably sounds cheesy but the 5k was kind of me showing up for myself for once"
+    },
+    {
+      "role": "companion",
+      "content": "Not cheesy. It sounds like the run was making room for company on your own side, instead of that war with your body."
+    },
+    {
+      "role": "user",
+      "content": "on my own side. im gonna keep that one. ok i didnt expect to cry into my phone before lunch but i feel weirdly lighter. thank you for not just saying yay good job and actually letting it be the complicated thing it was"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad we could let it stay complicated. It can rest here now, and you can keep “on my own side” if that feels worth keeping."
+    },
+    {
+      "role": "user",
+      "content": "yeah. letting it rest. thank you, really. ok going to go drink an absurd amount of water and feel my legs being sore in the good way. bye for now"
+    },
+    {
+      "role": "companion",
+      "content": "Bye for now. That sore-in-the-good-way sounds nicely earned, and I’ll let it be there with the rest of today."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6xftrx3otn3iys",
+    "id": "evt_mq8m9i8box9a656o",
     "conversation_id": "joy__10",
-    "timestamp": "2026-06-09T17:42:32.788Z",
-    "user_words_raw": "make it a thing",
+    "timestamp": "2026-06-10T22:05:38.738Z",
+    "user_words_raw": "legs being sore in the good way",
     "emotion_status": "confirmed",
-    "emotion_family": "joy",
-    "emotion_shade": "relief",
-    "secondary_emotions": [
-      "pride"
-    ],
-    "valence": "positive",
-    "activation": "medium",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [],
+    "valence": "mixed",
+    "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "finished the whole running loop and ran up the hill after years of not being able to",
-    "appraisal_thought": "maybe i will tell my partner properly tonight",
-    "body_cue": [],
+    "trigger_event": "finishing the 5k and letting it rest",
+    "appraisal_thought": "letting it rest",
+    "body_cue": [
+      "legs being sore in the good way"
+    ],
     "behaviour_action": [
-      "tell my partner properly tonight",
-      "make it a thing",
-      "quietly look at that 10k again"
+      "going to go drink an absurd amount of water"
     ],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "recognition",
-      "connection",
-      "self-trust"
+      "rest",
+      "space",
+      "care"
     ],
-    "confidence_level": "high",
+    "confidence_level": "medium",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": "unclear",
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "They felt pride and relief after running a full loop and the hill; they may want to revisit a 10k later.",
+    "memory_note": "After a 5k, they felt lighter and wanted the feeling to rest; being on their own side mattered.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "ok so this is kind of dumb but i went for a run this morning and i actually finished the whole loop without stopping?? like the full thing. i havent been able to do that in literally years"
+      "content": "ok so this is kind of dumb but i need to tell someone. i ran 5k this morning. like actually ran the whole thing without stopping"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That doesn’t sound dumb at all — it sounds big. I’m wondering if it feels more like surprise, pride, or something gentler than that?",
-      "stage": "named",
+      "content": "That’s a real thing to want to tell someone. You ran the whole 5k without stopping, and that matters.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "joy",
       "shade": "pride",
       "body_cue": [],
-      "trigger": "finished the whole run loop without stopping for the first time in years"
+      "trigger": "ran 5k this morning",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "pride yeah i think? like im genuinely proud, ive been trying to get back into running since the start of the year after my knee thing and its been so slow and frustrating. but theres this other part of me thats almost.. scared to be happy about it? like dont jinx it. idk thats the weird bit"
+      "content": "yeah but here's the thing thats making me weird about it. like a year ago i couldnt walk up the stairs at the train station without stopping halfway. my resting heart rate was insane. doctor used the word prediabetic which i still hate. and now i just. ran 5k"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "Pride makes sense, and that “don’t jinx it” part sounds like a careful kind of fear sitting next to it. What does that cautious feeling make you want to do — hold back, stay quiet, or something else?",
-      "stage": "understood",
-      "unlocked": true,
+      "content": "That sounds less like one neat feeling and more like a mix of pride, relief, and maybe some old dread getting touched too. I’m curious what it feels like the moment you put those two versions of you side by side?",
+      "stage": "shaped",
+      "unlocked": false,
       "family": "joy",
       "shade": "pride",
       "body_cue": [],
-      "trigger": "finished the full run loop without stopping after years of not being able to"
+      "trigger": "ran 5k this morning after a year of health changes",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "pride",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": "dread",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "hold back i guess. like i didnt even tell my partner properly, i just kind of mentioned it casual like oh yeah went for a run, didnt say it was a big deal. cause last spring i got all excited and signed up for a 10k and then my knee went again two weeks in and i felt so stupid. like i made this whole thing of it and then nothing. so part of me is just waiting for the other shoe. but also?? i ran the whole loop today. i did that. nobody can take that"
+      "content": "ok yeah you nailed it actually. its not just happy. when i put them side by side i kind of want to cry?? like proud but also so sad for the version of me that was scared all the time. she really thought that was just how her body was gonna be forever. and i was so ashamed back then i wouldnt even tell people i was struggling"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That makes a lot of sense — the pride is real, and the holding back sounds tied to not wanting to get caught in that letdown again. Would it feel right to leave it there, or stay with the part of you that’s still saying “I did that” ?",
-      "stage": "understood",
+      "content": "I’m holding both, then, pride and a sad kind of grief for that scared version of you, with shame sitting around the edges. You can leave it there, or we can stay with what that shame was doing back then.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "joy",
-      "shade": "pride",
+      "family": "sadness",
+      "shade": "grief",
       "body_cue": [],
-      "trigger": "finished the full loop after years of not being able to, after a slow return from a knee issue"
+      "trigger": "putting the old and current versions of self side by side after running 5k",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "pride",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": "grief",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": "null",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "no i wanna stay with the i did that part for a sec. cause honestly the whole way round i kept thinking i was gonna have to walk, every corner i was like ok this is where you stop. and i just.. didnt. my legs were fine. knee was fine. and theres this stupid hill near the end and i always walk it and today i ran up the whole thing. i actually teared up a little at the top which is so embarrassing lol but it just felt like getting a piece of myself back you know"
+      "content": "no lets stay with it. the shame thing is the part i havent figured out. i think i was ashamed because i felt like id done it to myself? like i let my body get to that point and everyone could SEE it. my mom would make these little comments. so today running felt like proving something but also i hate that i still need to prove anything you know"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That sounds really moving — not just pride, but a sense of getting a piece of yourself back. Was the tearful part more like relief, or more like being surprised by what your body could do?",
+      "content": "That feels like shame mixed with a kind of protest, and maybe some hurt where those comments landed. It sounds like running was both proof and a way of pushing back, in a body that felt visible to everyone.",
       "stage": "understood",
-      "unlocked": false,
-      "family": "joy",
-      "shade": "proud",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "shame",
       "body_cue": [],
-      "trigger": "finished the full running loop and ran the hill after years of not being able to"
+      "trigger": "putting the old and current versions of self side by side after running 5k, with comments from mom about body changes",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "anger",
+          "shade": "protest",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 8,
       "role": "user",
-      "content": "relief mostly i think. like ive spent so long being scared of my own body, every twinge i catastrophise, and today it just.. worked. it did the thing i asked. relief that maybe im not as broken as my brain keeps telling me. ok writing it out like that the scared part feels a bit smaller actually. maybe i will tell my partner properly tonight. make it a thing. i did run up that stupid hill after all"
+      "content": "the hurt one yeah. she still does it. i lost the weight and got fit and last week she goes 'see doesnt it feel better to take care of yourself' like as if i wasnt a whole person before. and the worst part is part of me agreed with her in the moment and i hate that. crossing that finish line this morning i wanted to call her and i dont even know if it was to share it or to win"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "That relief sounds like your body answering back after a long stretch of fear. If you want, we can leave it right there — or stay with what it might mean to “make it a thing” tonight.",
+      "content": "That sounds like hurt with some shame still hooked into it, and the finish line pulled at both wanting to share and wanting to win. Does it feel more like those two were together, or like one was underneath the other?",
       "stage": "understood",
       "unlocked": false,
-      "family": "joy",
-      "shade": "relief",
-      "body_cue": [
-        "teared up at the top"
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "mother's comment about 'take care of yourself' after weight loss and fitness, and crossing the finish line after the 5k",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "background",
+          "source": "user_stated"
+        }
       ],
-      "trigger": "finished the full running loop and ran up the hill after years of not being able to"
+      "mixed_confirmed": 1
     },
     {
       "turn": 10,
       "role": "user",
-      "content": "nah i think we can leave it there. i feel kind of lighter actually, thank you. gonna go tell him about the hill. and maybe quietly look at that 10k again lol. ok bye"
+      "content": "underneath i think. like the wanting to win was on top, loud, but if im honest underneath it was just this little kid still wanting her to say im proud of you without the lesson attached. and i didnt call her. i called my sister instead and she just screamed and i cried and that was actually the best part of the whole day"
     },
     {
       "turn": 11,
       "role": "companion",
-      "content": "That feels like a good place to let it rest. Have a good talk about the hill — and I hope the 10k can wait there quietly until you’re ready.",
+      "content": "That little kid wanting “I’m proud of you” without the lesson attached lands very clearly. And calling your sister, then crying while she screamed, sounds like the best part found some real company.",
       "stage": "understood",
       "unlocked": false,
-      "family": "joy",
-      "shade": "relief",
+      "family": "hurt",
+      "shade": "hurt",
       "body_cue": [],
-      "trigger": "finished the whole running loop and ran up the hill after years of not being able to"
+      "trigger": "mother's comment about 'take care of yourself' after weight loss and fitness, and crossing the finish line after the 5k",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "joy",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "yeah. company is the word. honestly i think thats what i actually wanted from the run too, not to prove anything to my mom but to feel like im finally on my own side instead of at war with my body. that probably sounds cheesy but the 5k was kind of me showing up for myself for once"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "Not cheesy. It sounds like the run was making room for company on your own side, instead of that war with your body.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "hurt",
+      "body_cue": [],
+      "trigger": "the 5k and what it meant about being on my own side instead of at war with my body",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "hurt",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "joy",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "calm",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "on my own side. im gonna keep that one. ok i didnt expect to cry into my phone before lunch but i feel weirdly lighter. thank you for not just saying yay good job and actually letting it be the complicated thing it was"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "I’m glad we could let it stay complicated. It can rest here now, and you can keep “on my own side” if that feels worth keeping.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "the 5k and what it meant about being on my own side instead of at war with my body",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "yeah. letting it rest. thank you, really. ok going to go drink an absurd amount of water and feel my legs being sore in the good way. bye for now"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Bye for now. That sore-in-the-good-way sounds nicely earned, and I’ll let it be there with the rest of today.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [
+        "legs being sore in the good way"
+      ],
+      "trigger": "finishing the 5k and letting it rest",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

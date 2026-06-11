@@ -1,0 +1,355 @@
+{
+  "cid": "joy__09",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-10T17:06:41.733Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "didnt think id ever say this but i actually said no today. in a meeting. to my boss."
+    },
+    {
+      "role": "companion",
+      "content": "That lands as a pretty big moment, saying no in a meeting to your boss. There's a lot packed into that."
+    },
+    {
+      "role": "user",
+      "content": "yeah. theyve been piling stuff on me for months. just kept taking it. today they tried to hand me another project and i just. didnt"
+    },
+    {
+      "role": "companion",
+      "content": "“Piling stuff on me for months” and then not taking the extra project, that feels like a real breaking point. I’m wondering if it was more pressure, frustration, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "no thats the weird part. i thought id feel bad after. like guilty or sick about it. but i dont. walked out and felt taller somehow"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds more like relief and a little strength than guilt. Did it leave any aftertaste at all, or mostly just that taller feeling?"
+    },
+    {
+      "role": "user",
+      "content": "relief sort of. but theres more to it. like ive spent my whole life being the yes person. the one who never makes a fuss. and i just. wasnt that today"
+    },
+    {
+      "role": "companion",
+      "content": "That feels bigger than one meeting, more like you stepped out of a whole old role for a moment. I’m wondering if what landed most was not just relief, but what it meant to not be \"the yes person\" today."
+    },
+    {
+      "role": "user",
+      "content": "yeah exactly. its weird to even type this but. im kind of proud of me? like little me whod never have dared. she wouldve just smiled and said sure ill do it"
+    },
+    {
+      "role": "companion",
+      "content": "“Kind of proud of me” and that younger part of you feel really present here. Is there a bit of grief mixed into that pride, or mostly just pride?"
+    },
+    {
+      "role": "user",
+      "content": "huh. maybe a little. like sad it took me 34 years. all that time being small for people who didnt even notice. but mostly its the good kind today. mostly proud"
+    },
+    {
+      "role": "companion",
+      "content": "It sounds like the heart of it is pride, with a small thread of sadness for how long you stayed small. Do you want to leave it there, or stay with what this new “not the yes person” feeling is connected to?"
+    },
+    {
+      "role": "user",
+      "content": "can stay a sec. i think its connected to. like maybe im allowed to take up space now? thats new. scary but good"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a new kind of permission, and it has both fear and goodness in it. I’m learning this is not just pride, it also touches what you’re allowed to be here."
+    },
+    {
+      "role": "user",
+      "content": "yeah. thats it exactly. ok i needed that. gonna go hold onto the taller feeling lol. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Hold onto the taller feeling, then. I’m glad it found words here."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bmga4wsvlzeju",
+    "conversation_id": "joy__09",
+    "timestamp": "2026-06-10T17:07:32.998Z",
+    "user_words_raw": "the taller feeling",
+    "emotion_status": "confirmed",
+    "emotion_family": "joy",
+    "emotion_shade": "proud",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "being able to say no to another project after years of being the yes person",
+    "appraisal_thought": "i'm allowed to take up space now",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "autonomy",
+      "recognition",
+      "self-respect"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [
+      "guilt"
+    ],
+    "mixed_relation": "simultaneous",
+    "strands": [
+      {
+        "family": "joy",
+        "shade": "proud",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      },
+      {
+        "family": "fear",
+        "shade": "null",
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "A new sense of permission and pride after saying no, with some sadness about how long it took.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "didnt think id ever say this but i actually said no today. in a meeting. to my boss."
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That lands as a pretty big moment, saying no in a meeting to your boss. There's a lot packed into that.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": "saying no in a meeting to their boss",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah. theyve been piling stuff on me for months. just kept taking it. today they tried to hand me another project and i just. didnt"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "“Piling stuff on me for months” and then not taking the extra project, that feels like a real breaking point. I’m wondering if it was more pressure, frustration, or something else?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "being handed another project after months of increasing workload",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": "frustration",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "no thats the weird part. i thought id feel bad after. like guilty or sick about it. but i dont. walked out and felt taller somehow"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds more like relief and a little strength than guilt. Did it leave any aftertaste at all, or mostly just that taller feeling?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relief",
+      "body_cue": [],
+      "trigger": "saying no to another project after months of increasing demands",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "relief sort of. but theres more to it. like ive spent my whole life being the yes person. the one who never makes a fuss. and i just. wasnt that today"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That feels bigger than one meeting, more like you stepped out of a whole old role for a moment. I’m wondering if what landed most was not just relief, but what it meant to not be \"the yes person\" today.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "relief",
+      "body_cue": [],
+      "trigger": "saying no to another project after months of increasing demands",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah exactly. its weird to even type this but. im kind of proud of me? like little me whod never have dared. she wouldve just smiled and said sure ill do it"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "“Kind of proud of me” and that younger part of you feel really present here. Is there a bit of grief mixed into that pride, or mostly just pride?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "being asked to take another project after months of increasing demands",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "proud",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "huh. maybe a little. like sad it took me 34 years. all that time being small for people who didnt even notice. but mostly its the good kind today. mostly proud"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "It sounds like the heart of it is pride, with a small thread of sadness for how long you stayed small. Do you want to leave it there, or stay with what this new “not the yes person” feeling is connected to?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "being asked to take another project after months of increasing demands",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "proud",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": "null",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "can stay a sec. i think its connected to. like maybe im allowed to take up space now? thats new. scary but good"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That feels like a new kind of permission, and it has both fear and goodness in it. I’m learning this is not just pride, it also touches what you’re allowed to be here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "being asked to take another project after months of increasing demands",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "proud",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah. thats it exactly. ok i needed that. gonna go hold onto the taller feeling lol. thanks"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "Hold onto the taller feeling, then. I’m glad it found words here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "being able to say no to another project after years of being the yes person",
+      "label_source": "user_confirmed",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "proud",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "fear",
+          "shade": "null",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    }
+  ]
+}

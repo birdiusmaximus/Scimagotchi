@@ -2,160 +2,205 @@
   "cid": "pressure__01",
   "emotion": "pressure",
   "persona": null,
-  "created": "2026-06-09T17:45:06.987Z",
+  "created": "2026-06-10T22:06:37.178Z",
   "history": [
     {
       "role": "user",
-      "content": "work is just a lot right now"
+      "content": "everything is due at once. i cant keep up"
     },
     {
       "role": "companion",
-      "content": "That sounds like a lot to be carrying. Is it more the amount of work, or the pressure of it?"
+      "content": "That lands as everything arriving at once, with no room to breathe."
     },
     {
       "role": "user",
-      "content": "amount i guess. boss dumped a whole launch on me, deadline friday and im solo on it"
+      "content": "yeah. three deadlines this week and my manager just added another. no way it all gets done"
     },
     {
       "role": "companion",
-      "content": "That sounds really overloaded — a whole launch, a Friday deadline, and doing it solo. Does it feel more stretched, rushed, or trapped?"
+      "content": "That sounds intensely pressured, with a heavy sense of not enough space to hold it all. Is it the amount, the timing, or the feeling of being pinned by it that hits hardest?"
     },
     {
       "role": "user",
-      "content": "stretched. theres just no way one person does all that by friday"
+      "content": "the pinned part. like i cant say no. just keeps piling and im the one who looks bad if it slips"
     },
     {
       "role": "companion",
-      "content": "Stretched makes sense here — like there isn’t enough room for one person to hold all of that by Friday. Does it feel like you want to speed up, shut down, or push back?"
+      "content": "That pinned feeling makes sense, especially with the risk of looking bad if it slips. I’m wondering if this is more pressure, or if there’s some shame threaded through it too?"
     },
     {
       "role": "user",
-      "content": "push back probably. anyway just needed to get that out. thanks"
+      "content": "maybe a bit of both. dunno. gotta get back to it anyway. thanks"
     },
     {
       "role": "companion",
-      "content": "That makes sense — it sounds like something you wanted to push back against, and you’ve gotten it out for now. We can leave it here, or stay with what that push back is about if you want."
-    },
-    {
-      "role": "user",
-      "content": "yeah lets leave it here. gotta get back to it. thanks"
-    },
-    {
-      "role": "companion",
-      "content": "Got it — we can leave it here. Hope the rest of the day is as manageable as it can be."
+      "content": "A bit of both makes sense, and you can leave it here if you need to. Thanks for trusting me with it."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6xk0691y97mxku",
+    "id": "evt_mq8mc5gnqees5m5o",
     "conversation_id": "pressure__01",
-    "timestamp": "2026-06-09T17:45:29.233Z",
-    "user_words_raw": "gotta get back to it",
-    "emotion_status": "unclear",
-    "emotion_family": null,
-    "emotion_shade": "stretched",
-    "secondary_emotions": [],
-    "valence": "neutral",
-    "activation": "low",
+    "timestamp": "2026-06-10T22:06:56.351Z",
+    "user_words_raw": "the pinned part",
+    "emotion_status": "candidate",
+    "emotion_family": "pressure",
+    "emotion_shade": "pinned",
+    "secondary_emotions": [
+      "shame"
+    ],
+    "valence": "mixed",
+    "activation": "high",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "boss dumped a whole launch on me, deadline friday, solo on it",
-    "appraisal_thought": "there's no way one person does all that by friday",
+    "trigger_event": "deadlines keep piling up and the user feels responsible if work slips",
+    "appraisal_thought": "If it slips, I look bad.",
     "body_cue": [],
-    "behaviour_action": [],
+    "behaviour_action": [
+      "can't say no"
+    ],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [],
+    "need_value": [
+      "space",
+      "support",
+      "clarity"
+    ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
-    "unlock_stage": "understood",
-    "memory_note": "Workload felt stretched by a solo launch with a Friday deadline; user wanted to push back and then rest the topic.",
+    "user_confirmation": "unknown",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": "protective_layer",
+    "strands": [
+      {
+        "family": "pressure",
+        "shade": "pinned",
+        "salience": "foreground",
+        "source": "user_stated"
+      },
+      {
+        "family": "shame",
+        "shade": null,
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "shaped",
+    "memory_note": "Workload keeps piling up, with pressure to keep saying yes and worry about looking bad if things slip.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "work is just a lot right now"
+      "content": "everything is due at once. i cant keep up"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds like a lot to be carrying. Is it more the amount of work, or the pressure of it?",
-      "stage": "named",
+      "content": "That lands as everything arriving at once, with no room to breathe.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "pressure",
       "shade": "overwhelmed",
       "body_cue": [],
-      "trigger": "work being a lot right now"
+      "trigger": "everything is due at once",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "amount i guess. boss dumped a whole launch on me, deadline friday and im solo on it"
+      "content": "yeah. three deadlines this week and my manager just added another. no way it all gets done"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds really overloaded — a whole launch, a Friday deadline, and doing it solo. Does it feel more stretched, rushed, or trapped?",
-      "stage": "named",
+      "content": "That sounds intensely pressured, with a heavy sense of not enough space to hold it all. Is it the amount, the timing, or the feeling of being pinned by it that hits hardest?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "pressure",
-      "shade": "overloaded",
+      "shade": "overwhelmed",
       "body_cue": [],
-      "trigger": "boss dumped a whole launch on me, deadline friday, solo on it"
+      "trigger": "three deadlines this week and another was added",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "stretched. theres just no way one person does all that by friday"
+      "content": "the pinned part. like i cant say no. just keeps piling and im the one who looks bad if it slips"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "Stretched makes sense here — like there isn’t enough room for one person to hold all of that by Friday. Does it feel like you want to speed up, shut down, or push back?",
-      "stage": "named",
+      "content": "That pinned feeling makes sense, especially with the risk of looking bad if it slips. I’m wondering if this is more pressure, or if there’s some shame threaded through it too?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "pressure",
-      "shade": "stretched",
+      "shade": "pinned",
       "body_cue": [],
-      "trigger": "boss dumped a whole launch on me, deadline friday, solo on it"
+      "trigger": "workload keeps piling up and user feels responsible if it slips",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "pinned",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "push back probably. anyway just needed to get that out. thanks"
+      "content": "maybe a bit of both. dunno. gotta get back to it anyway. thanks"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense — it sounds like something you wanted to push back against, and you’ve gotten it out for now. We can leave it here, or stay with what that push back is about if you want.",
-      "stage": "understood",
-      "unlocked": true,
-      "family": "pressure",
-      "shade": "stretched",
-      "body_cue": [],
-      "trigger": "boss dumped a whole launch on me, deadline friday, solo on it"
-    },
-    {
-      "turn": 8,
-      "role": "user",
-      "content": "yeah lets leave it here. gotta get back to it. thanks"
-    },
-    {
-      "turn": 9,
-      "role": "companion",
-      "content": "Got it — we can leave it here. Hope the rest of the day is as manageable as it can be.",
-      "stage": "understood",
+      "content": "A bit of both makes sense, and you can leave it here if you need to. Thanks for trusting me with it.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": null,
-      "shade": "stretched",
+      "family": "pressure",
+      "shade": "pinned",
       "body_cue": [],
-      "trigger": "boss dumped a whole launch on me, deadline friday, solo on it"
+      "trigger": "deadlines keep piling up and the user feels responsible if work slips",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "pinned",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     }
   ]
 }

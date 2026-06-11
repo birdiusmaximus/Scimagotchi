@@ -1,0 +1,265 @@
+{
+  "cid": "fear__06",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-10T17:08:31.843Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont really know why im here. just feeling kind of off i guess"
+    },
+    {
+      "role": "companion",
+      "content": "“Kind of off” feels like the centre of this, even if the reason is still hazy."
+    },
+    {
+      "role": "user",
+      "content": "yeah idk. its probably nothing. its just this thing with a friend i guess but im prob overthinking it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like it might be something flat and a little unsettled, with the friend piece sitting underneath. Is it more like blank, foggy, or just hard to pin down?"
+    },
+    {
+      "role": "user",
+      "content": "not foggy really. more like. i dunno. theres this knot in my stomach. like ive done something wrong but i dont even know if i have"
+    },
+    {
+      "role": "companion",
+      "content": "That knot in your stomach sounds like the sharpest part, and it carries a “I’ve done something wrong” feeling. What happened with your friend, or what was the moment right before that knot showed up?"
+    },
+    {
+      "role": "user",
+      "content": "ok so. my best friend maya. shes been distant for like two weeks. takes forever to text back, cancelled on me twice. and i keep thinking i said something at her birthday thing that pissed her off but i cant even remember what. and im scared to ask bc what if shes just done with me"
+    },
+    {
+      "role": "companion",
+      "content": "Maya being distant, and the fear that she might be “done with me,” really sits at the centre here. I’m holding both the guilt and the scared part, and I can stay with it or leave it here if you want."
+    },
+    {
+      "role": "user",
+      "content": "i guess the scared part is bigger. like the not knowing is the worst. shes the person i tell everything to and if shes pulling away i dont know what id do. but i also dont wanna seem clingy by asking"
+    },
+    {
+      "role": "companion",
+      "content": "The not knowing sounds like the sharp edge, with fear in front and the “don’t wanna seem clingy” part sitting close behind. Is that more the feeling, or is there another word that fits better?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. uneasy is right. idk. i think i just needed to say it out loud. still scared but a bit less alone with it i guess. thanks. gonna go"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad you said it out loud, and I’ll leave it there with you. Take care for now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bou5l8l88fov5",
+    "conversation_id": "fear__06",
+    "timestamp": "2026-06-10T17:09:14.465Z",
+    "user_words_raw": "still scared but a bit less alone with it",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "uneasy",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "friend has been distant and hard to read",
+    "appraisal_thought": "if I ask, I’ll seem clingy; if I don’t know, I’m left in the dark",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "shaped",
+    "memory_note": "User was talking about a distant best friend and felt uneasy, scared, and less alone after saying it out loud.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont really know why im here. just feeling kind of off i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "“Kind of off” feels like the centre of this, even if the reason is still hazy.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "off",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "off",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah idk. its probably nothing. its just this thing with a friend i guess but im prob overthinking it"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like it might be something flat and a little unsettled, with the friend piece sitting underneath. Is it more like blank, foggy, or just hard to pin down?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "off",
+      "body_cue": [],
+      "trigger": "this thing with a friend",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "off",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "not foggy really. more like. i dunno. theres this knot in my stomach. like ive done something wrong but i dont even know if i have"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That knot in your stomach sounds like the sharpest part, and it carries a “I’ve done something wrong” feeling. What happened with your friend, or what was the moment right before that knot showed up?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "guilty",
+      "body_cue": [
+        "knot in my stomach"
+      ],
+      "trigger": "this thing with a friend",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "ok so. my best friend maya. shes been distant for like two weeks. takes forever to text back, cancelled on me twice. and i keep thinking i said something at her birthday thing that pissed her off but i cant even remember what. and im scared to ask bc what if shes just done with me"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Maya being distant, and the fear that she might be “done with me,” really sits at the centre here. I’m holding both the guilt and the scared part, and I can stay with it or leave it here if you want.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "guilty",
+      "body_cue": [
+        "knot in my stomach"
+      ],
+      "trigger": "friend has been distant after a birthday gathering",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "guilty",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i guess the scared part is bigger. like the not knowing is the worst. shes the person i tell everything to and if shes pulling away i dont know what id do. but i also dont wanna seem clingy by asking"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "The not knowing sounds like the sharp edge, with fear in front and the “don’t wanna seem clingy” part sitting close behind. Is that more the feeling, or is there another word that fits better?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": "friend has been distant and hard to read",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "uneasy",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. uneasy is right. idk. i think i just needed to say it out loud. still scared but a bit less alone with it i guess. thanks. gonna go"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad you said it out loud, and I’ll leave it there with you. Take care for now.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": null,
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": "friend has been distant and hard to read",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

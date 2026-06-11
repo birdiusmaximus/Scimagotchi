@@ -2,143 +2,248 @@
   "cid": "sadness__08",
   "emotion": "sadness",
   "persona": null,
-  "created": "2026-06-09T18:19:31.474Z",
+  "created": "2026-06-10T22:09:10.797Z",
   "history": [
     {
       "role": "user",
-      "content": "idk if this app thing even does anything but ok. i guess i just feel kind of flat lately"
+      "content": "hey. i dont really know why im here honestly. just been feeling kind of off"
     },
     {
       "role": "companion",
-      "content": "Yeah, that sounds like a kind of flatness that’s just been sitting there. Does it feel more numb, blank, or disconnected?"
+      "content": "Hey, that off feeling is here with you, even if the reason isn’t clear yet. We can just sit with it for a moment, if you want."
     },
     {
       "role": "user",
-      "content": "blank maybe. like i dont know whats coming and i cant picture anything good. my contract ends in like 2 months and after that its just. nothing. no plan"
+      "content": "i dunno. its not really off like sad exactly. more like i keep looking at whats coming next and theres just. nothing there. like a blank wall"
     },
     {
       "role": "companion",
-      "content": "Blank makes sense here, and the “after that it’s just nothing” part sounds really stark. Is it more the blankness itself, or the no plan that feels biggest?"
+      "content": "I had that wrong, let me step back. Does it feel more blank, or more like you’re staring at something blocked off?"
     },
     {
       "role": "user",
-      "content": "the no plan i guess. everyone my age seems to have it figured out and im just here at 31 with no idea. feels like ive already lost or smth. dunno"
+      "content": "blocked off i think. i finish my contract in like 8 weeks and i havent lined anything up. everyone keeps asking whats next and i just. i used to have a plan for everything and now i open my laptop to job sites and close it again"
     },
     {
       "role": "companion",
-      "content": "That sounds heavy and pretty bruising, especially with other people seeming so far ahead. Does it feel more like pressure, shame, or being left behind?"
+      "content": "That sounds like the blank wall has a reason now, the “what’s next” question and not having a plan in place. It makes sense that opening the laptop and closing it again would come with that blocked-off feeling."
     },
     {
       "role": "user",
-      "content": "left behind yeah. anyway idk this is kinda more than i meant to say. gonna go. thanks i guess"
+      "content": "its not even the pressure really. like its sad more than anything. i was the person who always knew where i was going. and that person is just. gone? i miss her. its dumb"
     },
     {
       "role": "companion",
-      "content": "Yeah, left behind fits here, and that sounds like enough for now. We can leave it there, or come back to what “already lost” is pointing at if you want."
+      "content": "That doesn’t sound dumb. It sounds like you’re missing the version of you who always knew where you were going, and that has a grief to it."
+    },
+    {
+      "role": "user",
+      "content": "yeah. grief. thats the word. i didnt expect to feel like im mourning something thats not even a person. its just a future i thought id have. i keep waiting to feel motivated and instead i just feel like crying at my desk"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, it’s a future you thought you’d have, and now it leaves you at your desk feeling like crying. I’m here if you want to stay with that a little longer, or we can leave it here."
+    },
+    {
+      "role": "user",
+      "content": "i think i wanna leave it there for now. i dont have answers tonight and thats ok i guess. it helped to just. say it out loud. thank you. gonna close the laptop. the right way this time"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a good place to stop, and I’m glad saying it out loud helped. Closing the laptop can be enough for tonight."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6ys8v3vs000znb",
+    "id": "evt_mq8mfg7x0qbcerqv",
     "conversation_id": "sadness__08",
-    "timestamp": "2026-06-09T18:19:51.158Z",
-    "user_words_raw": "left behind",
-    "emotion_status": "candidate",
-    "emotion_family": "hurt",
-    "emotion_shade": "left behind",
-    "secondary_emotions": [
-      "shame",
-      "sadness"
-    ],
+    "timestamp": "2026-06-10T22:09:47.803Z",
+    "user_words_raw": "closing the laptop",
+    "emotion_status": "confirmed",
+    "emotion_family": "sadness",
+    "emotion_shade": "grief",
+    "secondary_emotions": [],
     "valence": "negative",
-    "activation": "medium",
+    "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "their contract ending soon and comparing themselves to peers with clearer plans",
-    "appraisal_thought": "I've already lost",
+    "trigger_event": "finishing a contract in 8 weeks without anything lined up",
+    "appraisal_thought": "mourning a future I thought I’d have",
     "body_cue": [],
-    "behaviour_action": [],
+    "behaviour_action": [
+      "close the laptop"
+    ],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "belonging",
-      "dignity",
-      "acceptance"
+      "recognition",
+      "space"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "unknown",
-    "unlock_stage": "named",
-    "memory_note": "Worries about having no plan as a contract ends soon; compares self to peers and feels behind.",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [
+      "sad",
+      "pressure"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Talked about grief around an ending and not having the next step lined up.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "idk if this app thing even does anything but ok. i guess i just feel kind of flat lately"
+      "content": "hey. i dont really know why im here honestly. just been feeling kind of off"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Yeah, that sounds like a kind of flatness that’s just been sitting there. Does it feel more numb, blank, or disconnected?",
+      "content": "Hey, that off feeling is here with you, even if the reason isn’t clear yet. We can just sit with it for a moment, if you want.",
       "stage": "named",
       "unlocked": false,
       "family": "flat",
-      "shade": "flat",
+      "shade": "unclear",
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "unclear",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "blank maybe. like i dont know whats coming and i cant picture anything good. my contract ends in like 2 months and after that its just. nothing. no plan"
+      "content": "i dunno. its not really off like sad exactly. more like i keep looking at whats coming next and theres just. nothing there. like a blank wall"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "Blank makes sense here, and the “after that it’s just nothing” part sounds really stark. Is it more the blankness itself, or the no plan that feels biggest?",
-      "stage": "named",
+      "content": "I had that wrong, let me step back. Does it feel more blank, or more like you’re staring at something blocked off?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "flat",
       "shade": "blank",
       "body_cue": [],
-      "trigger": "their contract ending in 2 months and not having a plan after that"
+      "trigger": "thinking about what's coming next",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "the no plan i guess. everyone my age seems to have it figured out and im just here at 31 with no idea. feels like ive already lost or smth. dunno"
+      "content": "blocked off i think. i finish my contract in like 8 weeks and i havent lined anything up. everyone keeps asking whats next and i just. i used to have a plan for everything and now i open my laptop to job sites and close it again"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds heavy and pretty bruising, especially with other people seeming so far ahead. Does it feel more like pressure, shame, or being left behind?",
-      "stage": "named",
+      "content": "That sounds like the blank wall has a reason now, the “what’s next” question and not having a plan in place. It makes sense that opening the laptop and closing it again would come with that blocked-off feeling.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "shame",
-      "shade": "behind",
+      "family": "pressure",
+      "shade": "blocked off",
       "body_cue": [],
-      "trigger": "their contract ending soon and comparing themselves to peers with clearer plans"
+      "trigger": "finishing the contract in 8 weeks and not having anything lined up",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "blocked off",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "flat",
+          "shade": "blank",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "left behind yeah. anyway idk this is kinda more than i meant to say. gonna go. thanks i guess"
+      "content": "its not even the pressure really. like its sad more than anything. i was the person who always knew where i was going. and that person is just. gone? i miss her. its dumb"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Yeah, left behind fits here, and that sounds like enough for now. We can leave it there, or come back to what “already lost” is pointing at if you want.",
-      "stage": "named",
-      "unlocked": false,
-      "family": "hurt",
-      "shade": "left behind",
+      "content": "That doesn’t sound dumb. It sounds like you’re missing the version of you who always knew where you were going, and that has a grief to it.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "sadness",
+      "shade": "missing",
       "body_cue": [],
-      "trigger": "their contract ending soon and comparing themselves to peers with clearer plans"
+      "trigger": "finishing a contract in 8 weeks and not having anything lined up",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. grief. thats the word. i didnt expect to feel like im mourning something thats not even a person. its just a future i thought id have. i keep waiting to feel motivated and instead i just feel like crying at my desk"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Yeah, it’s a future you thought you’d have, and now it leaves you at your desk feeling like crying. I’m here if you want to stay with that a little longer, or we can leave it here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grief",
+      "body_cue": [],
+      "trigger": "finishing a contract in 8 weeks without anything lined up",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "i think i wanna leave it there for now. i dont have answers tonight and thats ok i guess. it helped to just. say it out loud. thank you. gonna close the laptop. the right way this time"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels like a good place to stop, and I’m glad saying it out loud helped. Closing the laptop can be enough for tonight.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "grief",
+      "body_cue": [],
+      "trigger": "finishing a contract in 8 weeks without anything lined up",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

@@ -1,0 +1,165 @@
+{
+  "cid": "fear__06",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-09T17:35:57.107Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. cant really sleep. somethings been bugging me about my friend"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that sounds like it’s sitting there with you tonight. What about your friend has been bugging you?"
+    },
+    {
+      "role": "user",
+      "content": "my best friend maya. shes been kinda distant lately and i keep thinking shes mad at me but i dont know why. left her on read sort of thing but the other way around"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds uneasy and a bit stuck in not knowing. Is it more like worry, or more like feeling left hanging by it?"
+    },
+    {
+      "role": "user",
+      "content": "worry mostly. like i keep replaying our last hangout wondering if i said something weird. my stomachs in knots and i hate this feeling"
+    },
+    {
+      "role": "companion",
+      "content": "Worry makes sense here, and it sounds like it’s got your stomach in knots. Is it more about what you said at that hangout, or more about not knowing why she’s been distant?"
+    },
+    {
+      "role": "user",
+      "content": "honestly the not knowing part. if she just told me i could fix it. anyway maybe ill just text her tomorrow and stop spiraling. thanks for listening"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — the not knowing seems to be the sharp part here. We can leave it there for now, or if you want, I can stay with what this waiting is like for you tonight."
+    },
+    {
+      "role": "user",
+      "content": "lets leave it there. im gonna try to sleep. thanks again"
+    },
+    {
+      "role": "companion",
+      "content": "Of course. I hope the night gets quieter for you."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6x87rygqbprlfj",
+    "conversation_id": "fear__06",
+    "timestamp": "2026-06-09T17:37:05.632Z",
+    "user_words_raw": "try to sleep",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "worried",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "my best friend being distant and not knowing why",
+    "appraisal_thought": "if she just told me i could fix it",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Person was feeling uneasy about a distant best friend and wanted to leave it there for now.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. cant really sleep. somethings been bugging me about my friend"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that sounds like it’s sitting there with you tonight. What about your friend has been bugging you?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "my best friend maya. shes been kinda distant lately and i keep thinking shes mad at me but i dont know why. left her on read sort of thing but the other way around"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds uneasy and a bit stuck in not knowing. Is it more like worry, or more like feeling left hanging by it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uneasy",
+      "body_cue": [],
+      "trigger": "my best friend being distant and not knowing why"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "worry mostly. like i keep replaying our last hangout wondering if i said something weird. my stomachs in knots and i hate this feeling"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Worry makes sense here, and it sounds like it’s got your stomach in knots. Is it more about what you said at that hangout, or more about not knowing why she’s been distant?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "worried",
+      "body_cue": [
+        "stomach's in knots"
+      ],
+      "trigger": "my best friend being distant and not knowing why"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "honestly the not knowing part. if she just told me i could fix it. anyway maybe ill just text her tomorrow and stop spiraling. thanks for listening"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — the not knowing seems to be the sharp part here. We can leave it there for now, or if you want, I can stay with what this waiting is like for you tonight.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "worried",
+      "body_cue": [
+        "stomach's in knots"
+      ],
+      "trigger": "my best friend being distant and not knowing why"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "lets leave it there. im gonna try to sleep. thanks again"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Of course. I hope the night gets quieter for you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "worried",
+      "body_cue": [],
+      "trigger": "my best friend being distant and not knowing why"
+    }
+  ]
+}

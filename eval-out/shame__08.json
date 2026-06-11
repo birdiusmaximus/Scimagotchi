@@ -2,58 +2,72 @@
   "cid": "shame__08",
   "emotion": "shame",
   "persona": null,
-  "created": "2026-06-09T18:24:15.686Z",
+  "created": "2026-06-10T22:10:59.820Z",
   "history": [
     {
       "role": "user",
-      "content": "idk if this is gonna do anything but ok. cant stop thinking about how i still dont have a job lined up after i graduate"
+      "content": "hi. not really sure why im here. just kind of a weird day i guess"
     },
     {
       "role": "companion",
-      "content": "That sounds like a pretty heavy worry sitting there in the background. Is it more the “don’t have a job lined up” part, the graduating part, or the two together?"
+      "content": "Hey, that sounds a bit off-kilter. We can keep it light if you want, or just sit with the weirdness for a minute."
     },
     {
       "role": "user",
-      "content": "both i guess? everyone in my class already has stuff figured out. like theyve got grad school or offers and im just. nothing. feels like i wasted four years honestly"
+      "content": "idk. its like everyone my age has it figured out and im just. behind. like i missed some memo"
     },
     {
       "role": "companion",
-      "content": "That sounds like pressure mixed with hurt — especially with everyone else seeming sorted while you feel like “nothing.” Does it feel more like tight and rushed, or more like heavy and stuck?"
+      "content": "That “missed some memo” feeling sounds lonely and a bit bruising. I’m here with it, and you can just let it be for now if that’s enough."
     },
     {
       "role": "user",
-      "content": "heavy and stuck for sure. like a kind of embarrassing. my parents keep asking whats next and i just dont have an answer and i feel like such a letdown"
+      "content": "not really left out tho. more like. im 29 and i still dont know what im doing with my life. my friends have careers, mortgages. i quit my job in march and ive just been. floundering. its embarrassing"
     },
     {
       "role": "companion",
-      "content": "That sounds heavy and stuck, with some embarrassment and letdown folded into it. Is the strongest part the pressure from your parents, or the feeling of being a letdown?"
+      "content": "I had that wrong, let me step back. “Embarrassing” feels closer than left out, or is there another word that fits better?"
     },
     {
       "role": "user",
-      "content": "the letdown part i think. anyway idk if saying it helps but its less stuck in my head now. gonna go. thanks"
+      "content": "yeah embarrassed. or like. not enough? i had this whole plan to go freelance and its just not happening. and my mom keeps asking whats next and i dont have an answer and i can see her worrying and that makes it worse somehow"
     },
     {
       "role": "companion",
-      "content": "That makes sense — the letdown part was the sharpest piece, and it sounds a little looser now. We can leave it here; thanks for saying it out loud."
+      "content": "That sounds like embarrassment with a sharp edge of “not enough,” and your mom asking keeps pressing on it. If you want, we can stay with the part that feels most exposed."
+    },
+    {
+      "role": "user",
+      "content": "the exposed part is probably that i think maybe theyre right to worry. like what if i actually cant do it. what if im just not the kind of person who makes things work. i dont even know who id be if i stopped pretending i have a plan"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like embarrassment tipping into something harsher, where it starts to touch who you are, not just what’s going on. We can stay with the exposed part, or leave it here if that’s enough."
+    },
+    {
+      "role": "user",
+      "content": "yeah. i think i need to leave it here for now. its a lot to look at. but it helped to say it out loud i guess. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Of course. I’m glad you said it out loud, and it’s okay to leave it here."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yycl9z5j1lddz",
+    "id": "evt_mq8mhs0htbd6jfp1",
     "conversation_id": "shame__08",
-    "timestamp": "2026-06-09T18:24:37.908Z",
-    "user_words_raw": "such a letdown",
-    "emotion_status": "candidate",
+    "timestamp": "2026-06-10T22:11:44.358Z",
+    "user_words_raw": "not enough",
+    "emotion_status": "confirmed",
     "emotion_family": "shame",
-    "emotion_shade": "letdown",
-    "secondary_emotions": [
-      "pressure"
-    ],
+    "emotion_shade": "inadequate",
+    "secondary_emotions": [],
     "valence": "negative",
     "activation": "medium",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "parents asking what's next after graduation",
-    "appraisal_thought": "I'm a letdown",
+    "trigger_event": "friends having careers and mortgages, quitting a job in March, and mom asking what's next",
+    "appraisal_thought": "what if I actually can't do it",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
@@ -68,76 +82,172 @@
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "unknown",
-    "unlock_stage": "named",
-    "memory_note": "Feels like a letdown when asked what’s next after graduation.",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [
+      "left out"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Worries about being behind and feeling inadequate about work and life direction",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "idk if this is gonna do anything but ok. cant stop thinking about how i still dont have a job lined up after i graduate"
+      "content": "hi. not really sure why im here. just kind of a weird day i guess"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds like a pretty heavy worry sitting there in the background. Is it more the “don’t have a job lined up” part, the graduating part, or the two together?",
-      "stage": "named",
+      "content": "Hey, that sounds a bit off-kilter. We can keep it light if you want, or just sit with the weirdness for a minute.",
+      "stage": "noticed",
       "unlocked": false,
-      "family": "pressure",
-      "shade": "worried",
+      "family": null,
+      "shade": null,
       "body_cue": [],
-      "trigger": "still not having a job lined up after graduating"
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "both i guess? everyone in my class already has stuff figured out. like theyve got grad school or offers and im just. nothing. feels like i wasted four years honestly"
+      "content": "idk. its like everyone my age has it figured out and im just. behind. like i missed some memo"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds like pressure mixed with hurt — especially with everyone else seeming sorted while you feel like “nothing.” Does it feel more like tight and rushed, or more like heavy and stuck?",
-      "stage": "named",
+      "content": "That “missed some memo” feeling sounds lonely and a bit bruising. I’m here with it, and you can just let it be for now if that’s enough.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "pressure",
-      "shade": "overwhelmed",
+      "family": "hurt",
+      "shade": "left out",
       "body_cue": [],
-      "trigger": "Still not having a job lined up after graduating, while classmates seem to already have grad school or offers."
+      "trigger": "seeing other people your age seem settled or ahead",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "left out",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": "discouraged",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": "embarrassed",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "heavy and stuck for sure. like a kind of embarrassing. my parents keep asking whats next and i just dont have an answer and i feel like such a letdown"
+      "content": "not really left out tho. more like. im 29 and i still dont know what im doing with my life. my friends have careers, mortgages. i quit my job in march and ive just been. floundering. its embarrassing"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds heavy and stuck, with some embarrassment and letdown folded into it. Is the strongest part the pressure from your parents, or the feeling of being a letdown?",
-      "stage": "named",
+      "content": "I had that wrong, let me step back. “Embarrassing” feels closer than left out, or is there another word that fits better?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "shame",
-      "shade": "embarrassing",
+      "shade": "embarrassed",
       "body_cue": [],
-      "trigger": "parents asking what's next and not having an answer"
+      "trigger": "seeing friends with careers and mortgages after quitting a job in March",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "the letdown part i think. anyway idk if saying it helps but its less stuck in my head now. gonna go. thanks"
+      "content": "yeah embarrassed. or like. not enough? i had this whole plan to go freelance and its just not happening. and my mom keeps asking whats next and i dont have an answer and i can see her worrying and that makes it worse somehow"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense — the letdown part was the sharpest piece, and it sounds a little looser now. We can leave it here; thanks for saying it out loud.",
-      "stage": "named",
+      "content": "That sounds like embarrassment with a sharp edge of “not enough,” and your mom asking keeps pressing on it. If you want, we can stay with the part that feels most exposed.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "embarrassed",
+      "body_cue": [],
+      "trigger": "friends having careers and mortgages, quitting a job in March, and being asked what's next by mom",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "the exposed part is probably that i think maybe theyre right to worry. like what if i actually cant do it. what if im just not the kind of person who makes things work. i dont even know who id be if i stopped pretending i have a plan"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like embarrassment tipping into something harsher, where it starts to touch who you are, not just what’s going on. We can stay with the exposed part, or leave it here if that’s enough.",
+      "stage": "understood",
       "unlocked": false,
       "family": "shame",
-      "shade": "letdown",
+      "shade": "inadequate",
       "body_cue": [],
-      "trigger": "parents asking what's next after graduation"
+      "trigger": "friends having careers and mortgages, quitting a job in March, and mom asking what's next",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "inadequate",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. i think i need to leave it here for now. its a lot to look at. but it helped to say it out loud i guess. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course. I’m glad you said it out loud, and it’s okay to leave it here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "inadequate",
+      "body_cue": [],
+      "trigger": "friends having careers and mortgages, quitting a job in March, and mom asking what's next",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

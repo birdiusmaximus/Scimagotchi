@@ -1,0 +1,267 @@
+{
+  "cid": "calm__06",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-10T17:07:38.166Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. i dont really know why im here honestly"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that's okay. We can just start with the part that made you open this, if you want."
+    },
+    {
+      "role": "user",
+      "content": "i dunno. nothing made me. just kind of a quiet day i guess. nothing happened really"
+    },
+    {
+      "role": "companion",
+      "content": "A quiet day, and nothing really happened. We can stay with just that, or if you want, tell me what this “nothing happened” feels like to sit inside."
+    },
+    {
+      "role": "user",
+      "content": "idk how to describe it. its not bad tho. kinda soft? like nothing is pulling at me right now. thats weird for me honestly"
+    },
+    {
+      "role": "companion",
+      "content": "“Nothing is pulling at me right now” feels like the centre of this. I’m hearing something soft and unusual for you, and I can stay with that if you want."
+    },
+    {
+      "role": "user",
+      "content": "i think maybe its bc i talked to mara last night. we hadnt spoken in like 4 months. stupid fight. and it was just... fine. like no big thing. we just picked back up"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like more than just “fine”, maybe calm with a bit of relief around the edge. Does it feel steady and soft, or more like the tension just let go?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. the tension letting go. i didnt even know i was holding it til it was gone. like i can breathe and not be braced for a text back. its just steady now"
+    },
+    {
+      "role": "companion",
+      "content": "That “braced for a text back” loosened, and now it sounds steady. We can leave it there, or I’m curious whether this steady feeling feels more restful or more open."
+    },
+    {
+      "role": "user",
+      "content": "restful i think. yeah lets leave it there. thanks. i didnt think id have anything to say but that helped"
+    },
+    {
+      "role": "companion",
+      "content": "Glad we found the shape of it, and we can leave it right here."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bnnv0t43897tc",
+    "conversation_id": "calm__06",
+    "timestamp": "2026-06-10T17:08:09.397Z",
+    "user_words_raw": "restful",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "steady",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "talked to Mara after 4 months apart and it was fine",
+    "appraisal_thought": "the tension let go and now it feels restful",
+    "body_cue": [
+      "can breathe"
+    ],
+    "behaviour_action": [
+      "not be braced for a text back"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "rest",
+      "safety",
+      "clarity"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "A calm, steady feeling can come after contact with someone close and can show up as breathing easier and no longer waiting tensely for a reply.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. i dont really know why im here honestly"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that's okay. We can just start with the part that made you open this, if you want.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i dunno. nothing made me. just kind of a quiet day i guess. nothing happened really"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "A quiet day, and nothing really happened. We can stay with just that, or if you want, tell me what this “nothing happened” feels like to sit inside.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "idk how to describe it. its not bad tho. kinda soft? like nothing is pulling at me right now. thats weird for me honestly"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "“Nothing is pulling at me right now” feels like the centre of this. I’m hearing something soft and unusual for you, and I can stay with that if you want.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "calm",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "calm",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "flat",
+          "shade": "soft",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "i think maybe its bc i talked to mara last night. we hadnt spoken in like 4 months. stupid fight. and it was just... fine. like no big thing. we just picked back up"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That feels like more than just “fine”, maybe calm with a bit of relief around the edge. Does it feel steady and soft, or more like the tension just let go?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "calm",
+      "body_cue": [],
+      "trigger": "talked to someone after months apart and it was just fine",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "calm",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "joy",
+          "shade": "relief",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. the tension letting go. i didnt even know i was holding it til it was gone. like i can breathe and not be braced for a text back. its just steady now"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That “braced for a text back” loosened, and now it sounds steady. We can leave it there, or I’m curious whether this steady feeling feels more restful or more open.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "steady",
+      "body_cue": [
+        "can breathe"
+      ],
+      "trigger": "talked to Mara after 4 months apart and it was fine",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "steady",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "joy",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "restful i think. yeah lets leave it there. thanks. i didnt think id have anything to say but that helped"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Glad we found the shape of it, and we can leave it right here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "steady",
+      "body_cue": [
+        "can breathe"
+      ],
+      "trigger": "talked to Mara after 4 months apart and it was fine",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

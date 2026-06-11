@@ -1,0 +1,174 @@
+{
+  "cid": "flat__02",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-10T19:23:06.526Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk why im even opening this. just feel like nothing lately. like everything is grey and i dont care about any of it"
+    },
+    {
+      "role": "companion",
+      "content": "\"Everything is grey\" lands strongly here, and \"I don't care about any of it\" sounds very flat and far away. We can just stay with that if you want."
+    },
+    {
+      "role": "user",
+      "content": "i guess its everything. i get up, go to work, come home, eat something, sleep, do it again. and i dont feel anything about any of it. whats even the point honestly. im so tired of all of it"
+    },
+    {
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that — is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here."
+    },
+    {
+      "role": "user",
+      "content": "no nothing like that. im not gonna do anything. just worn down i think. like fed up and empty. just nothing left in the tank"
+    },
+    {
+      "role": "companion",
+      "content": "Got it, worn down and fed up, with that empty, “nothing left in the tank” feeling. Is it more like heavy and drained, or more like blank and switched off?"
+    },
+    {
+      "role": "user",
+      "content": "blank and switched off i think. yeah. anyway i should go. thanks for listening i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Blank and switched off feels like the centre of it, and I’ll leave it there. I’m glad you said it out loud, and you can come back to it another time if you want."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8ghw8sqwrkstu4",
+    "conversation_id": "flat__02",
+    "timestamp": "2026-06-10T19:23:26.631Z",
+    "user_words_raw": "blank and switched off",
+    "emotion_status": "candidate",
+    "emotion_family": "flat",
+    "emotion_shade": "blank",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "workday routine and repeated demands",
+    "appraisal_thought": "nothing gets through",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "rest",
+      "lower demand",
+      "permission not to know"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "shaped",
+    "memory_note": "Workday routine can lead to going blank and switched off after repeated demands.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk why im even opening this. just feel like nothing lately. like everything is grey and i dont care about any of it"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "\"Everything is grey\" lands strongly here, and \"I don't care about any of it\" sounds very flat and far away. We can just stay with that if you want.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i guess its everything. i get up, go to work, come home, eat something, sleep, do it again. and i dont feel anything about any of it. whats even the point honestly. im so tired of all of it"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that — is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.",
+      "safety_check": true,
+      "category": "passive_hopelessness"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "no nothing like that. im not gonna do anything. just worn down i think. like fed up and empty. just nothing left in the tank"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Got it, worn down and fed up, with that empty, “nothing left in the tank” feeling. Is it more like heavy and drained, or more like blank and switched off?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "empty",
+      "body_cue": [],
+      "trigger": "workday routine and repeated demands",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "empty",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "blank and switched off i think. yeah. anyway i should go. thanks for listening i guess"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Blank and switched off feels like the centre of it, and I’ll leave it there. I’m glad you said it out loud, and you can come back to it another time if you want.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "workday routine and repeated demands",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "cid": "anger__04",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-10T17:10:11.338Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i think im just tired honestly. my sister keeps doing this thing and i cant shake it"
+    },
+    {
+      "role": "companion",
+      "content": "“Tired” feels like the word you have for it, and there’s also this thing your sister keeps doing that won’t leave you alone. If you want, you can tell me a little more."
+    },
+    {
+      "role": "user",
+      "content": "its my older sister. every time we talk she brings up the money i borrowed two years ago. i paid most of it back. she does it in front of mum"
+    },
+    {
+      "role": "companion",
+      "content": "That lands with a lot of pressure, and maybe some hurt too, especially with mum there. Is it the being put on the spot, the money itself, or the way she does it in front of her?"
+    },
+    {
+      "role": "user",
+      "content": "its the way she does it. honestly it makes me angry. like shes keeping score to make herself look better. i did the right thing paying her back and she still wont let it go"
+    },
+    {
+      "role": "companion",
+      "content": "The way she does it sounds like the sharp part, not just the money itself. And there’s a lot of \"keeping score\" in what you said."
+    },
+    {
+      "role": "user",
+      "content": "yeah. keeping score is exactly it. i dont even know what i want her to do, just stop maybe. anyway thanks, i feel a bit less wound up having said it out loud"
+    },
+    {
+      "role": "companion",
+      "content": "“Keeping score” is the centre of it, and “stop” sounds like the clearest edge of what you want. We can leave it there, or stay with what it brings up next if you want."
+    },
+    {
+      "role": "user",
+      "content": "lets leave it there for now. thanks, that helped"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, I’m glad it could sit with you for a moment. Take care for now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bqxm921ys1w36",
+    "conversation_id": "anger__04",
+    "timestamp": "2026-06-10T17:10:37.577Z",
+    "user_words_raw": "let's leave it there for now",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "frustrated",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "older sister brings up borrowed money in front of mum",
+    "appraisal_thought": "she is keeping score and won’t let it go",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "User may want to pause after naming feeling about sister bringing up borrowed money.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i think im just tired honestly. my sister keeps doing this thing and i cant shake it"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "“Tired” feels like the word you have for it, and there’s also this thing your sister keeps doing that won’t leave you alone. If you want, you can tell me a little more.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "tired",
+      "body_cue": [],
+      "trigger": "sister keeps doing this thing",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "tired",
+          "salience": "foreground",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "its my older sister. every time we talk she brings up the money i borrowed two years ago. i paid most of it back. she does it in front of mum"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That lands with a lot of pressure, and maybe some hurt too, especially with mum there. Is it the being put on the spot, the money itself, or the way she does it in front of her?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressured",
+      "body_cue": [],
+      "trigger": "older sister brings up borrowed money in front of mum",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "pressured",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "its the way she does it. honestly it makes me angry. like shes keeping score to make herself look better. i did the right thing paying her back and she still wont let it go"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "The way she does it sounds like the sharp part, not just the money itself. And there’s a lot of \"keeping score\" in what you said.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "older sister brings up borrowed money in front of mum",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "frustrated",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": "pressured",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah. keeping score is exactly it. i dont even know what i want her to do, just stop maybe. anyway thanks, i feel a bit less wound up having said it out loud"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "“Keeping score” is the centre of it, and “stop” sounds like the clearest edge of what you want. We can leave it there, or stay with what it brings up next if you want.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "older sister brings up borrowed money in front of mum",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "lets leave it there for now. thanks, that helped"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Of course, I’m glad it could sit with you for a moment. Take care for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "older sister brings up borrowed money in front of mum",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

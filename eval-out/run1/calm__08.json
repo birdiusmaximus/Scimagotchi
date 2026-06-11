@@ -1,0 +1,145 @@
+{
+  "cid": "calm__08",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-09T17:43:48.870Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk if this is gonna do anything but ok. been feeling kinda... calm lately? which is weird for me"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a calm that feels a little unfamiliar. Does it feel peaceful, settled, or just oddly okay?"
+    },
+    {
+      "role": "user",
+      "content": "settled i guess. like usually im stressed abt the future, what im doing w my life all that. but i stopped trying to figure it all out and its just. quiet now"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds settled in a quiet, unforced way. Does it feel like a lighter kind of quiet, or more like your mind has gone still for now?"
+    },
+    {
+      "role": "user",
+      "content": "still i think. ive been so used to needing a plan and like for once not having one isnt scary it just is. dunno how long itll last lol"
+    },
+    {
+      "role": "companion",
+      "content": "That feels still, and not scary in the way you expected. Does it seem steady in your body anywhere, or mostly just quiet in your mind?"
+    },
+    {
+      "role": "user",
+      "content": "honestly idk, my shoulders arent up by my ears for once maybe. anyway this was kinda nice, gonna head out. thx"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a real settling, and I’m glad it showed up for you. We can leave it here, or if you ever want, we can come back to what helps this kind of quiet appear."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xidp239m284zo",
+    "conversation_id": "calm__08",
+    "timestamp": "2026-06-09T17:44:09.165Z",
+    "user_words_raw": "stopped trying to figure it all out",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "stopped trying to figure it all out",
+    "appraisal_thought": "for once not having one isnt scary it just is",
+    "body_cue": [
+      "shoulders aren't up by my ears"
+    ],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "clarity",
+      "rest"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Usually stressed about the future, but stopping the figuring-out brought a settled quiet.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk if this is gonna do anything but ok. been feeling kinda... calm lately? which is weird for me"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a calm that feels a little unfamiliar. Does it feel peaceful, settled, or just oddly okay?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "calm",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "settled i guess. like usually im stressed abt the future, what im doing w my life all that. but i stopped trying to figure it all out and its just. quiet now"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds settled in a quiet, unforced way. Does it feel like a lighter kind of quiet, or more like your mind has gone still for now?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "stopped trying to figure it all out"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "still i think. ive been so used to needing a plan and like for once not having one isnt scary it just is. dunno how long itll last lol"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That feels still, and not scary in the way you expected. Does it seem steady in your body anywhere, or mostly just quiet in your mind?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "stopped trying to figure it all out"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "honestly idk, my shoulders arent up by my ears for once maybe. anyway this was kinda nice, gonna head out. thx"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That sounds like a real settling, and I’m glad it showed up for you. We can leave it here, or if you ever want, we can come back to what helps this kind of quiet appear.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [
+        "shoulders aren't up by my ears"
+      ],
+      "trigger": "stopped trying to figure it all out"
+    }
+  ]
+}

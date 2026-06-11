@@ -1,0 +1,143 @@
+{
+  "cid": "anger__07",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-09T18:17:05.711Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "honestly im just tired. didnt sleep great"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a rough, drained kind of tired. Was it more the bad sleep itself, or the kind of tired that’s been building for a while?"
+    },
+    {
+      "role": "user",
+      "content": "been building i guess. me and my gf had it out again last night. same thing every time"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds worn down and fed up, like the same fight keeps landing on you again and again. Does it feel more like frustration, or more like hurt?"
+    },
+    {
+      "role": "user",
+      "content": "frustration yeah. she said shed leave work early so we could do the thing for my mums bday and then texts me at 6 shes still at the office. third time shes done that"
+    },
+    {
+      "role": "companion",
+      "content": "That makes the frustration feel very tied to being let down again, especially with your mum’s birthday in the middle of it. Did it make you want to snap, shut down, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "kinda just went quiet on her tbh. didnt wanna start it again. anyway. thanks for letting me vent, gonna try get some sleep"
+    },
+    {
+      "role": "companion",
+      "content": "Got it — you went quiet rather than starting it again. Rest sounds like a good place to leave it, and we can pick it up another time if you want."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yp4frzf3kh6yy",
+    "conversation_id": "anger__07",
+    "timestamp": "2026-06-09T18:17:23.702Z",
+    "user_words_raw": "went quiet on her",
+    "emotion_status": "confirmed",
+    "emotion_family": "anger",
+    "emotion_shade": "frustration",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "she said she'd leave work early for my mum’s bday, then texted at 6 that she was still at the office; third time she's done that",
+    "appraisal_thought": "same thing every time",
+    "body_cue": [],
+    "behaviour_action": [
+      "went quiet"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "respect",
+      "being heard",
+      "repair"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "frustration after repeated letdown by girlfriend",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "honestly im just tired. didnt sleep great"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a rough, drained kind of tired. Was it more the bad sleep itself, or the kind of tired that’s been building for a while?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "tired",
+      "body_cue": [],
+      "trigger": "didnt sleep great"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "been building i guess. me and my gf had it out again last night. same thing every time"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds worn down and fed up, like the same fight keeps landing on you again and again. Does it feel more like frustration, or more like hurt?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "worn down",
+      "body_cue": [],
+      "trigger": "me and my gf had it out again last night"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "frustration yeah. she said shed leave work early so we could do the thing for my mums bday and then texts me at 6 shes still at the office. third time shes done that"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That makes the frustration feel very tied to being let down again, especially with your mum’s birthday in the middle of it. Did it make you want to snap, shut down, or something else?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustration",
+      "body_cue": [],
+      "trigger": "she said she'd leave work early for my mum’s bday, then texted at 6 that she was still at the office; third time she's done that"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "kinda just went quiet on her tbh. didnt wanna start it again. anyway. thanks for letting me vent, gonna try get some sleep"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Got it — you went quiet rather than starting it again. Rest sounds like a good place to leave it, and we can pick it up another time if you want.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "frustration",
+      "body_cue": [],
+      "trigger": "she said she'd leave work early for my mum’s bday, then texted at 6 that she was still at the office; third time she's done that"
+    }
+  ]
+}

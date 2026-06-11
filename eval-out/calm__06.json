@@ -2,172 +2,275 @@
   "cid": "calm__06",
   "emotion": "calm",
   "persona": null,
-  "created": "2026-06-09T17:43:42.470Z",
+  "created": "2026-06-10T22:05:30.476Z",
   "history": [
     {
       "role": "user",
-      "content": "hey. dunno if this is the right place for this but i just had a really nice moment with a friend and wanted to put it somewhere"
+      "content": "idk why im even here. not really sad or anything. just kind of a weird quiet day i guess"
     },
     {
       "role": "companion",
-      "content": "Hey — that sounds lovely, and this is a good place for it. What made the moment feel really nice?"
+      "content": "I had that wrong, let me step back. It sounds more like a quiet, hard-to-read day than sadness, what word would be closer if any?"
     },
     {
       "role": "user",
-      "content": "it wasnt really exciting nice. more like... quiet. me and my friend hadnt talked in months and we just sat on her porch and didnt even need to say much. felt like nothing was broken"
+      "content": "no its not blank really. more like calm? i dont know. nothing happened bad. its kind of the opposite actually idk how to say it"
     },
     {
       "role": "companion",
-      "content": "That sounds quiet and settled, like something repaired without needing words. Did it feel like relief, or more like being gently held in place?"
+      "content": "That sounds closer to calm than blank, and maybe a little hard to put into words."
     },
     {
       "role": "user",
-      "content": "relief i think. i was scared the time apart had wrecked something. but it hadnt. i could just breathe again sitting there"
+      "content": "yeah. i think its about my friend maybe. we hadnt talked in like months. kind of drifted. and yesterday she just texted me out of nowhere"
     },
     {
       "role": "companion",
-      "content": "Relief makes sense here — and it sounds like your breathing opened back up once you knew it hadn’t wrecked something. Did it land more in your chest or just in the whole moment?"
+      "content": "That seems to have brought the calm into sharper focus, like something quietly reopened. Was it more a soft warmth, or a careful unsettled feeling?"
     },
     {
       "role": "user",
-      "content": "my chest mostly. like a knot loosening. anyway thats all i wanted to say really. thanks for letting me put it down somewhere"
+      "content": "soft warmth mostly. like i didnt realise i was holding my breath about it until she texted and i could just. exhale. we picked right back up like no time passed"
     },
     {
       "role": "companion",
-      "content": "I’m glad you put it here — a knot loosening in the chest feels very clear. We can leave it there, or if you want, I can stay with what it meant that nothing was broken."
+      "content": "That feels like a soft, relieved calm, with your breath finally letting go when she reached out. I can stay with that, or we can just leave it here."
     },
     {
       "role": "user",
-      "content": "lets leave it there. im good. thank you :)"
+      "content": "yeah relieved is the word. funny i was kind of scared id lost her for good and i didnt even let myself think it. anyway. its nice. i didnt expect to feel this settled"
     },
     {
       "role": "companion",
-      "content": "Of course — I’ll leave it there. I’m glad you brought it here."
+      "content": "Relieved fits, and I’m hearing how scared you were of having lost her for good, even before you let yourself think it. It’s nice that this left you feeling settled."
+    },
+    {
+      "role": "user",
+      "content": "yeah. that about covers it. thanks for this. gonna go text her back actually"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a good place to leave it. Enjoy the message back."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6xi6tgwn3zxwmo",
+    "id": "evt_mq8maq2zvjh2ke46",
     "conversation_id": "calm__06",
-    "timestamp": "2026-06-09T17:44:07.974Z",
-    "user_words_raw": "nothing was broken",
+    "timestamp": "2026-06-10T22:06:06.619Z",
+    "user_words_raw": "kind of scared id lost her for good",
     "emotion_status": "confirmed",
-    "emotion_family": "joy",
-    "emotion_shade": "relieved",
-    "secondary_emotions": [],
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [
+      "joy"
+    ],
     "valence": "positive",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "sitting on a friend's porch after months without talking",
-    "appraisal_thought": "nothing was broken",
+    "trigger_event": "friend texted after months of not talking",
+    "appraisal_thought": "I thought I might have lost her for good, and now this feels settled.",
     "body_cue": [
-      "knot loosening in the chest"
+      "holding my breath",
+      "exhale"
     ],
     "behaviour_action": [
-      "could just breathe again"
+      "text her back"
     ],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
       "connection",
-      "relief",
-      "reassurance"
+      "reassurance",
+      "space"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [
+      "blank"
+    ],
+    "mixed_relation": "unclear",
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "A quiet reunion with someone close brought relief after months apart.",
+    "memory_note": "A friend reconnecting after months apart can bring relief and a settled feeling.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey. dunno if this is the right place for this but i just had a really nice moment with a friend and wanted to put it somewhere"
+      "content": "idk why im even here. not really sad or anything. just kind of a weird quiet day i guess"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey — that sounds lovely, and this is a good place for it. What made the moment feel really nice?",
+      "content": "I had that wrong, let me step back. It sounds more like a quiet, hard-to-read day than sadness, what word would be closer if any?",
       "stage": "named",
       "unlocked": false,
-      "family": "joy",
-      "shade": "nice",
+      "family": "flat",
+      "shade": "blank",
       "body_cue": [],
-      "trigger": "a really nice moment with a friend"
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "it wasnt really exciting nice. more like... quiet. me and my friend hadnt talked in months and we just sat on her porch and didnt even need to say much. felt like nothing was broken"
+      "content": "no its not blank really. more like calm? i dont know. nothing happened bad. its kind of the opposite actually idk how to say it"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds quiet and settled, like something repaired without needing words. Did it feel like relief, or more like being gently held in place?",
-      "stage": "named",
-      "unlocked": false,
-      "family": "joy",
-      "shade": "quiet and settled",
+      "content": "That sounds closer to calm than blank, and maybe a little hard to put into words.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "calm",
       "body_cue": [],
-      "trigger": "sitting on a friend's porch after months without talking"
+      "trigger": "nothing happened bad",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "relief i think. i was scared the time apart had wrecked something. but it hadnt. i could just breathe again sitting there"
+      "content": "yeah. i think its about my friend maybe. we hadnt talked in like months. kind of drifted. and yesterday she just texted me out of nowhere"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "Relief makes sense here — and it sounds like your breathing opened back up once you knew it hadn’t wrecked something. Did it land more in your chest or just in the whole moment?",
+      "content": "That seems to have brought the calm into sharper focus, like something quietly reopened. Was it more a soft warmth, or a careful unsettled feeling?",
       "stage": "understood",
-      "unlocked": true,
-      "family": "joy",
-      "shade": "relieved",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "calm",
       "body_cue": [],
-      "trigger": "sitting on a friend's porch after months without talking"
+      "trigger": "a friend texted after months of not talking",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "calm",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "my chest mostly. like a knot loosening. anyway thats all i wanted to say really. thanks for letting me put it down somewhere"
+      "content": "soft warmth mostly. like i didnt realise i was holding my breath about it until she texted and i could just. exhale. we picked right back up like no time passed"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "I’m glad you put it here — a knot loosening in the chest feels very clear. We can leave it there, or if you want, I can stay with what it meant that nothing was broken.",
+      "content": "That feels like a soft, relieved calm, with your breath finally letting go when she reached out. I can stay with that, or we can just leave it here.",
       "stage": "understood",
       "unlocked": false,
-      "family": "joy",
-      "shade": "relieved",
+      "family": "calm",
+      "shade": "relieved calm",
       "body_cue": [
-        "knot loosening in the chest"
+        "holding my breath",
+        "exhale"
       ],
-      "trigger": "sitting on a friend's porch after months without talking"
+      "trigger": "friend texted after months of not talking",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "relieved calm",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "joy",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 8,
       "role": "user",
-      "content": "lets leave it there. im good. thank you :)"
+      "content": "yeah relieved is the word. funny i was kind of scared id lost her for good and i didnt even let myself think it. anyway. its nice. i didnt expect to feel this settled"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "Of course — I’ll leave it there. I’m glad you brought it here.",
+      "content": "Relieved fits, and I’m hearing how scared you were of having lost her for good, even before you let yourself think it. It’s nice that this left you feeling settled.",
       "stage": "understood",
       "unlocked": false,
-      "family": "joy",
-      "shade": "relieved",
+      "family": "calm",
+      "shade": "relieved calm",
       "body_cue": [
-        "knot loosening in the chest"
+        "holding my breath",
+        "exhale"
       ],
-      "trigger": "sitting on a friend's porch after months without talking"
+      "trigger": "friend texted after months of not talking",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "relieved calm",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "fear",
+          "shade": "scared",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. that about covers it. thanks for this. gonna go text her back actually"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That sounds like a good place to leave it. Enjoy the message back.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [
+        "holding my breath",
+        "exhale"
+      ],
+      "trigger": "friend texted after months of not talking",
+      "label_source": "user_confirmed",
+      "mixed_relation": "unclear",
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

@@ -2,144 +2,260 @@
   "cid": "calm__08",
   "emotion": "calm",
   "persona": null,
-  "created": "2026-06-09T17:43:48.870Z",
+  "created": "2026-06-10T22:05:40.392Z",
   "history": [
     {
       "role": "user",
-      "content": "idk if this is gonna do anything but ok. been feeling kinda... calm lately? which is weird for me"
+      "content": "hi. not sure why im here honestly. just felt like saying something out loud i guess"
     },
     {
       "role": "companion",
-      "content": "That sounds like a calm that feels a little unfamiliar. Does it feel peaceful, settled, or just oddly okay?"
+      "content": "Hey, that makes sense. Sometimes saying something out loud is enough on its own."
     },
     {
       "role": "user",
-      "content": "settled i guess. like usually im stressed abt the future, what im doing w my life all that. but i stopped trying to figure it all out and its just. quiet now"
+      "content": "yeah. its weird. i think im supposed to feel scared right now. my contract ends in like 3 weeks and i dont have anything lined up. but i dont feel scared. just sort of... ok? which feels wrong somehow"
     },
     {
       "role": "companion",
-      "content": "That sounds settled in a quiet, unforced way. Does it feel like a lighter kind of quiet, or more like your mind has gone still for now?"
+      "content": "That “ok” in the middle of this feels important, especially with your contract ending in three weeks. It sounds a bit strange to yourself, like the feeling you expect is not the one that is actually there."
     },
     {
       "role": "user",
-      "content": "still i think. ive been so used to needing a plan and like for once not having one isnt scary it just is. dunno how long itll last lol"
+      "content": "no its not blank exactly. more like... relieved? thats the part i cant explain. ive hated this job for two years. so the not knowing whats next, it almost feels like air. like i can breathe again. sorry im rambling"
     },
     {
       "role": "companion",
-      "content": "That feels still, and not scary in the way you expected. Does it seem steady in your body anywhere, or mostly just quiet in your mind?"
+      "content": "Relieved makes sense here, especially after two years of hating the job. The not knowing sounds like it might feel like air, like you can breathe again."
     },
     {
       "role": "user",
-      "content": "honestly idk, my shoulders arent up by my ears for once maybe. anyway this was kinda nice, gonna head out. thx"
+      "content": "yeah. my mum keeps asking whats the plan and i keep saying i dont know and she gets this worried voice. but honestly the blank space ahead doesnt scare me. it feels like mine. first time in ages something feels like mine"
     },
     {
       "role": "companion",
-      "content": "That sounds like a real settling, and I’m glad it showed up for you. We can leave it here, or if you ever want, we can come back to what helps this kind of quiet appear."
+      "content": "That “feels like mine” lands as something quietly good, and maybe a little freeing too. What does it feel like in your body when you say that?"
+    },
+    {
+      "role": "user",
+      "content": "umm. my shoulders i think. theyre usually up by my ears and right now theyre just. down. lighter. didnt even notice till you asked"
+    },
+    {
+      "role": "companion",
+      "content": "That lighter drop in your shoulders sounds like the first clear shape of it. We can leave it there, or stay with it and see whether it feels more like relief, pride, or something else."
+    },
+    {
+      "role": "user",
+      "content": "i think i can leave it there. that was enough. didnt expect to feel better just from naming it but i kind of do. thanks. gonna let my shoulders stay down for a bit"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad we could leave it there, and I hope your shoulders get to stay down for a while."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6xidp239m284zo",
+    "id": "evt_mq8maxok2mnzbkkw",
     "conversation_id": "calm__08",
-    "timestamp": "2026-06-09T17:44:09.165Z",
-    "user_words_raw": "stopped trying to figure it all out",
+    "timestamp": "2026-06-10T22:06:16.708Z",
+    "user_words_raw": "let my shoulders stay down",
     "emotion_status": "confirmed",
-    "emotion_family": "calm",
-    "emotion_shade": "settled",
+    "emotion_family": "joy",
+    "emotion_shade": "relieved",
     "secondary_emotions": [],
     "valence": "positive",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "stopped trying to figure it all out",
-    "appraisal_thought": "for once not having one isnt scary it just is",
+    "trigger_event": "contract ending in three weeks after hating the job for two years",
+    "appraisal_thought": "the blank space ahead feels like mine",
     "body_cue": [
-      "shoulders aren't up by my ears"
+      "shoulders down",
+      "lighter"
     ],
     "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "space",
-      "clarity",
-      "rest"
+      "freedom",
+      "relief",
+      "autonomy"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Usually stressed about the future, but stopping the figuring-out brought a settled quiet.",
+    "memory_note": "Long-hated job ending soon brought relief and a sense of ownership over the open space ahead.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "idk if this is gonna do anything but ok. been feeling kinda... calm lately? which is weird for me"
+      "content": "hi. not sure why im here honestly. just felt like saying something out loud i guess"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds like a calm that feels a little unfamiliar. Does it feel peaceful, settled, or just oddly okay?",
-      "stage": "named",
+      "content": "Hey, that makes sense. Sometimes saying something out loud is enough on its own.",
+      "stage": "noticed",
       "unlocked": false,
-      "family": "calm",
-      "shade": "calm",
+      "family": null,
+      "shade": null,
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "settled i guess. like usually im stressed abt the future, what im doing w my life all that. but i stopped trying to figure it all out and its just. quiet now"
+      "content": "yeah. its weird. i think im supposed to feel scared right now. my contract ends in like 3 weeks and i dont have anything lined up. but i dont feel scared. just sort of... ok? which feels wrong somehow"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds settled in a quiet, unforced way. Does it feel like a lighter kind of quiet, or more like your mind has gone still for now?",
-      "stage": "named",
+      "content": "That “ok” in the middle of this feels important, especially with your contract ending in three weeks. It sounds a bit strange to yourself, like the feeling you expect is not the one that is actually there.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "calm",
-      "shade": "settled",
+      "family": "flat",
+      "shade": "blank",
       "body_cue": [],
-      "trigger": "stopped trying to figure it all out"
+      "trigger": "contract ending in three weeks without anything lined up",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "flat",
+          "shade": "blank",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "still i think. ive been so used to needing a plan and like for once not having one isnt scary it just is. dunno how long itll last lol"
+      "content": "no its not blank exactly. more like... relieved? thats the part i cant explain. ive hated this job for two years. so the not knowing whats next, it almost feels like air. like i can breathe again. sorry im rambling"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That feels still, and not scary in the way you expected. Does it seem steady in your body anywhere, or mostly just quiet in your mind?",
-      "stage": "named",
-      "unlocked": false,
-      "family": "calm",
-      "shade": "settled",
+      "content": "Relieved makes sense here, especially after two years of hating the job. The not knowing sounds like it might feel like air, like you can breathe again.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "relieved",
       "body_cue": [],
-      "trigger": "stopped trying to figure it all out"
+      "trigger": "contract ending in three weeks and not knowing what's next after hating the job for two years",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "relieved",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "flat",
+          "shade": "blank",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "honestly idk, my shoulders arent up by my ears for once maybe. anyway this was kinda nice, gonna head out. thx"
+      "content": "yeah. my mum keeps asking whats the plan and i keep saying i dont know and she gets this worried voice. but honestly the blank space ahead doesnt scare me. it feels like mine. first time in ages something feels like mine"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That sounds like a real settling, and I’m glad it showed up for you. We can leave it here, or if you ever want, we can come back to what helps this kind of quiet appear.",
+      "content": "That “feels like mine” lands as something quietly good, and maybe a little freeing too. What does it feel like in your body when you say that?",
       "stage": "understood",
-      "unlocked": true,
-      "family": "calm",
-      "shade": "settled",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relieved",
+      "body_cue": [],
+      "trigger": "contract ending in three weeks and an open space ahead after hating the job for two years",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "umm. my shoulders i think. theyre usually up by my ears and right now theyre just. down. lighter. didnt even notice till you asked"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That lighter drop in your shoulders sounds like the first clear shape of it. We can leave it there, or stay with it and see whether it feels more like relief, pride, or something else.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relieved",
       "body_cue": [
-        "shoulders aren't up by my ears"
+        "shoulders down",
+        "lighter"
       ],
-      "trigger": "stopped trying to figure it all out"
+      "trigger": "contract ending in three weeks and the open space ahead after hating the job for two years",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "relieved",
+          "salience": "foreground",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "i think i can leave it there. that was enough. didnt expect to feel better just from naming it but i kind of do. thanks. gonna let my shoulders stay down for a bit"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad we could leave it there, and I hope your shoulders get to stay down for a while.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relieved",
+      "body_cue": [
+        "shoulders down",
+        "lighter"
+      ],
+      "trigger": "contract ending in three weeks after hating the job for two years",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

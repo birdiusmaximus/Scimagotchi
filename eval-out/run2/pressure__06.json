@@ -1,0 +1,260 @@
+{
+  "cid": "pressure__06",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-10T17:09:28.700Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk why im even opening this. just feeling kind of off today i guess"
+    },
+    {
+      "role": "companion",
+      "content": "“Kind of off” is the clearest part of this, even if the rest is fuzzy right now."
+    },
+    {
+      "role": "user",
+      "content": "yeah i dont even know. its nothing really. probably just me being dramatic"
+    },
+    {
+      "role": "companion",
+      "content": "“Nothing really” and “being dramatic” sound like you’re keeping it very small, but the off-ness is still there. Does it feel more blank, foggy, or just hard to pin down?"
+    },
+    {
+      "role": "user",
+      "content": "hard to pin down i guess. like theres this thing with one of my friends and i cant tell if im overreacting. shes going thru a lot and i keep dropping everything for her but i just feel so tired"
+    },
+    {
+      "role": "companion",
+      "content": "There’s tiredness here, and also that hard-to-pin-down feeling around your friend. I’m wondering if this is more pressure, or if something hurt is sitting under it?"
+    },
+    {
+      "role": "user",
+      "content": "idk maybe. its more like... shes texting me at like 1am every night having a crisis and i answer every time bc what kind of friend wouldnt. but ive got my own stuff and im stretched so thin i feel like im gonna snap. but then i feel guilty for even thinking that"
+    },
+    {
+      "role": "companion",
+      "content": "That 1am pattern sounds like it keeps pulling you past where you have room, and then the guilt shows up right after. It’s a lot to hold at once."
+    },
+    {
+      "role": "user",
+      "content": "yeah. like i love her i do. but i dont remember the last time she asked how i was doing. and i hate that i even notice that bc shes hurting and im supposed to be the strong one. ugh i dont know"
+    },
+    {
+      "role": "companion",
+      "content": "That “strong one” role sounds heavy, especially with the hurt of not being asked back sitting beside the guilt. We can stay with that, or leave it here if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah maybe lets leave it there. i dont really know what to do with all that anyway. but it helped a little to say it out loud i think. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad you said it out loud here. Take care of yourself tonight."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bq10y4e26sykl",
+    "conversation_id": "pressure__06",
+    "timestamp": "2026-06-10T17:10:02.022Z",
+    "user_words_raw": "it helped a little to say it out loud",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "left out",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "friend repeatedly reaches out in crisis at night while the user feels unsupported and responsible",
+    "appraisal_thought": "I’m supposed to be the strong one, and I shouldn’t notice my own hurt",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Talking it through can help when feeling stretched thin by a friend who leans on them heavily.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk why im even opening this. just feeling kind of off today i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "“Kind of off” is the clearest part of this, even if the rest is fuzzy right now.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "off",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah i dont even know. its nothing really. probably just me being dramatic"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "“Nothing really” and “being dramatic” sound like you’re keeping it very small, but the off-ness is still there. Does it feel more blank, foggy, or just hard to pin down?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "off",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "hard to pin down i guess. like theres this thing with one of my friends and i cant tell if im overreacting. shes going thru a lot and i keep dropping everything for her but i just feel so tired"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "There’s tiredness here, and also that hard-to-pin-down feeling around your friend. I’m wondering if this is more pressure, or if something hurt is sitting under it?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "tired",
+      "body_cue": [],
+      "trigger": "one of my friends is going thru a lot and I keep dropping everything for her",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "tired",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "idk maybe. its more like... shes texting me at like 1am every night having a crisis and i answer every time bc what kind of friend wouldnt. but ive got my own stuff and im stretched so thin i feel like im gonna snap. but then i feel guilty for even thinking that"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That 1am pattern sounds like it keeps pulling you past where you have room, and then the guilt shows up right after. It’s a lot to hold at once.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "stretched",
+      "body_cue": [],
+      "trigger": "one of my friends texting at 1am every night having a crisis while you have your own stuff",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "stretched",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": "guilty",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. like i love her i do. but i dont remember the last time she asked how i was doing. and i hate that i even notice that bc shes hurting and im supposed to be the strong one. ugh i dont know"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That “strong one” role sounds heavy, especially with the hurt of not being asked back sitting beside the guilt. We can stay with that, or leave it here if you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [],
+      "trigger": "friend repeatedly reaches out in crisis at night while the user feels unsupported and responsible",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "left out",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": "stretched",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": "guilty",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah maybe lets leave it there. i dont really know what to do with all that anyway. but it helped a little to say it out loud i think. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad you said it out loud here. Take care of yourself tonight.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "left out",
+      "body_cue": [],
+      "trigger": "friend repeatedly reaches out in crisis at night while the user feels unsupported and responsible",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

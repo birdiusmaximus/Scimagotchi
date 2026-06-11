@@ -1,0 +1,173 @@
+{
+  "cid": "calm__06",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-09T17:43:42.470Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. dunno if this is the right place for this but i just had a really nice moment with a friend and wanted to put it somewhere"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — that sounds lovely, and this is a good place for it. What made the moment feel really nice?"
+    },
+    {
+      "role": "user",
+      "content": "it wasnt really exciting nice. more like... quiet. me and my friend hadnt talked in months and we just sat on her porch and didnt even need to say much. felt like nothing was broken"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds quiet and settled, like something repaired without needing words. Did it feel like relief, or more like being gently held in place?"
+    },
+    {
+      "role": "user",
+      "content": "relief i think. i was scared the time apart had wrecked something. but it hadnt. i could just breathe again sitting there"
+    },
+    {
+      "role": "companion",
+      "content": "Relief makes sense here — and it sounds like your breathing opened back up once you knew it hadn’t wrecked something. Did it land more in your chest or just in the whole moment?"
+    },
+    {
+      "role": "user",
+      "content": "my chest mostly. like a knot loosening. anyway thats all i wanted to say really. thanks for letting me put it down somewhere"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad you put it here — a knot loosening in the chest feels very clear. We can leave it there, or if you want, I can stay with what it meant that nothing was broken."
+    },
+    {
+      "role": "user",
+      "content": "lets leave it there. im good. thank you :)"
+    },
+    {
+      "role": "companion",
+      "content": "Of course — I’ll leave it there. I’m glad you brought it here."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xi6tgwn3zxwmo",
+    "conversation_id": "calm__06",
+    "timestamp": "2026-06-09T17:44:07.974Z",
+    "user_words_raw": "nothing was broken",
+    "emotion_status": "confirmed",
+    "emotion_family": "joy",
+    "emotion_shade": "relieved",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "sitting on a friend's porch after months without talking",
+    "appraisal_thought": "nothing was broken",
+    "body_cue": [
+      "knot loosening in the chest"
+    ],
+    "behaviour_action": [
+      "could just breathe again"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "relief",
+      "reassurance"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "A quiet reunion with someone close brought relief after months apart.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. dunno if this is the right place for this but i just had a really nice moment with a friend and wanted to put it somewhere"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — that sounds lovely, and this is a good place for it. What made the moment feel really nice?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "nice",
+      "body_cue": [],
+      "trigger": "a really nice moment with a friend"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "it wasnt really exciting nice. more like... quiet. me and my friend hadnt talked in months and we just sat on her porch and didnt even need to say much. felt like nothing was broken"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds quiet and settled, like something repaired without needing words. Did it feel like relief, or more like being gently held in place?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "quiet and settled",
+      "body_cue": [],
+      "trigger": "sitting on a friend's porch after months without talking"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "relief i think. i was scared the time apart had wrecked something. but it hadnt. i could just breathe again sitting there"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Relief makes sense here — and it sounds like your breathing opened back up once you knew it hadn’t wrecked something. Did it land more in your chest or just in the whole moment?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "relieved",
+      "body_cue": [],
+      "trigger": "sitting on a friend's porch after months without talking"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "my chest mostly. like a knot loosening. anyway thats all i wanted to say really. thanks for letting me put it down somewhere"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "I’m glad you put it here — a knot loosening in the chest feels very clear. We can leave it there, or if you want, I can stay with what it meant that nothing was broken.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relieved",
+      "body_cue": [
+        "knot loosening in the chest"
+      ],
+      "trigger": "sitting on a friend's porch after months without talking"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "lets leave it there. im good. thank you :)"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Of course — I’ll leave it there. I’m glad you brought it here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "relieved",
+      "body_cue": [
+        "knot loosening in the chest"
+      ],
+      "trigger": "sitting on a friend's porch after months without talking"
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "cid": "shame__03",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-10T17:12:47.705Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. how does this work"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, good to see you. I listen to what you bring, and if there’s a feeling in it, I stay close to that with you."
+    },
+    {
+      "role": "user",
+      "content": "ok. i dunno. been a weird week i guess"
+    },
+    {
+      "role": "companion",
+      "content": "“A weird week” leaves a lot unsaid, and I’m here with that. If you want, you can start anywhere."
+    },
+    {
+      "role": "user",
+      "content": "i had to ask my brother for money again. like 400 bucks for rent. he didnt say anything bad but i could tell. im 31 i shouldnt be doing this"
+    },
+    {
+      "role": "companion",
+      "content": "That carries a lot of shame, and maybe some pressure too. Is it the \"I shouldnt be doing this\" part that lands hardest?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. that part. everyone else my age has it figured out and i cant even cover rent. anyway. its fine"
+    },
+    {
+      "role": "companion",
+      "content": "“I can’t even cover rent” sounds like the sharpest edge of it, and the comparison to everyone else sits on top. We can leave it there, or stay with what that says about you for a moment, if you want."
+    },
+    {
+      "role": "user",
+      "content": "lets leave it there. thanks for listening i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, I’ll leave it there with you, and thanks for trusting me with it."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8buadtqyu59o6k",
+    "conversation_id": "shame__03",
+    "timestamp": "2026-06-10T17:13:13.485Z",
+    "user_words_raw": "I shouldnt be doing this",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "shame",
+    "secondary_emotions": [
+      "pressure"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "had to ask brother for money again for rent",
+    "appraisal_thought": "I shouldnt be doing this",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "dignity",
+      "acceptance",
+      "self-respect"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "shame",
+        "shade": "shame",
+        "salience": "foreground",
+        "source": "user_stated"
+      },
+      {
+        "family": "pressure",
+        "shade": null,
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Someone close was asked for help with rent again, and it brought up shame about being 31 and not being able to cover rent.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. how does this work"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, good to see you. I listen to what you bring, and if there’s a feeling in it, I stay close to that with you.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "ok. i dunno. been a weird week i guess"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "“A weird week” leaves a lot unsaid, and I’m here with that. If you want, you can start anywhere.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "i had to ask my brother for money again. like 400 bucks for rent. he didnt say anything bad but i could tell. im 31 i shouldnt be doing this"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That carries a lot of shame, and maybe some pressure too. Is it the \"I shouldnt be doing this\" part that lands hardest?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "had to ask brother for money again for rent",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": "pressure",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah. that part. everyone else my age has it figured out and i cant even cover rent. anyway. its fine"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "“I can’t even cover rent” sounds like the sharpest edge of it, and the comparison to everyone else sits on top. We can leave it there, or stay with what that says about you for a moment, if you want.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "had to ask brother for money for rent again",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "lets leave it there. thanks for listening i guess"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Of course, I’ll leave it there with you, and thanks for trusting me with it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "had to ask brother for money again for rent",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    }
+  ]
+}

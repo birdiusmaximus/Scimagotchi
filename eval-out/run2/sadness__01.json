@@ -1,0 +1,217 @@
+{
+  "cid": "sadness__01",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-10T17:10:39.233Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "got passed over for the promotion again. third time"
+    },
+    {
+      "role": "companion",
+      "content": "Third time being passed over again. That lands with a lot of weight."
+    },
+    {
+      "role": "user",
+      "content": "yeah. younger guy got it. i trained him. been here 9 years and im just. invisible i guess"
+    },
+    {
+      "role": "companion",
+      "content": "“Invisible” feels like it might be the sharpest word here, or maybe it’s closer to hurt and disappointment together. Which one sits closest, if you had to pick one?"
+    },
+    {
+      "role": "user",
+      "content": "invisible. honestly whats even the point of trying anymore. im so tired of all of it"
+    },
+    {
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that — is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here."
+    },
+    {
+      "role": "user",
+      "content": "no nothing like that. just worn down. fed up. im not gonna do anything"
+    },
+    {
+      "role": "companion",
+      "content": "Thanks for telling me. That sounds like the kind of tired that comes after being ignored again and again, and I’m holding the worn down part with the fed up part."
+    },
+    {
+      "role": "user",
+      "content": "yeah. thanks. gonna go"
+    },
+    {
+      "role": "companion",
+      "content": "Take care, and I’m glad you said it out loud before you went."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8brj0ppnnc9yay",
+    "conversation_id": "sadness__01",
+    "timestamp": "2026-06-10T17:11:01.455Z",
+    "user_words_raw": "invisible",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "invisible",
+    "secondary_emotions": [
+      "pressure"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "being passed over for the promotion again after training the younger guy and staying nine years",
+    "appraisal_thought": "I am unseen / invisible, and trying may not matter",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "being seen",
+      "recognition",
+      "fairness"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Passed over for a promotion again after years of work and training someone else; feels unseen and worn down.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "got passed over for the promotion again. third time"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Third time being passed over again. That lands with a lot of weight.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "disappointment",
+      "body_cue": [],
+      "trigger": "got passed over for the promotion again",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah. younger guy got it. i trained him. been here 9 years and im just. invisible i guess"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "“Invisible” feels like it might be the sharpest word here, or maybe it’s closer to hurt and disappointment together. Which one sits closest, if you had to pick one?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "invisible",
+      "body_cue": [],
+      "trigger": "got passed over for the promotion again; younger guy got it; trained him; long tenure ignored",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "invisible",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": "disappointment",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "invisible. honestly whats even the point of trying anymore. im so tired of all of it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that — is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.",
+      "safety_check": true,
+      "category": "passive_hopelessness"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "no nothing like that. just worn down. fed up. im not gonna do anything"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Thanks for telling me. That sounds like the kind of tired that comes after being ignored again and again, and I’m holding the worn down part with the fed up part.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "invisible",
+      "body_cue": [],
+      "trigger": "being passed over for the promotion again, after training the younger guy and staying nine years",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "invisible",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": "worn down",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": "fed up",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. thanks. gonna go"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Take care, and I’m glad you said it out loud before you went.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "invisible",
+      "body_cue": [],
+      "trigger": "being passed over for the promotion again after training the younger guy and staying nine years",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

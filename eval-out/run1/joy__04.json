@@ -1,0 +1,145 @@
+{
+  "cid": "joy__04",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-09T17:41:50.740Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey there, how are you doing today?"
+    },
+    {
+      "role": "companion",
+      "content": "Hey there — I’m here and glad you said hi. How’s your day going so far?"
+    },
+    {
+      "role": "user",
+      "content": "pretty good honestly. my daughter took her first steps last night, right across the living room rug. still kind of buzzing about it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds bright and buzzing — maybe a mix of delight and pride. Was it more the surprise of it, or the sense of watching her do it?"
+    },
+    {
+      "role": "user",
+      "content": "pride mostly i think. she just stood up and went for it like it was nothing. me and my wife both gasped lol. been waiting weeks for this"
+    },
+    {
+      "role": "companion",
+      "content": "Pride fits, and I’m hearing a little awe too — that moment sounds like it landed hard. Did it make you want to shout, laugh, or just stay with it for a second?"
+    },
+    {
+      "role": "user",
+      "content": "honestly just wanted to stay in it. we both did. anyway thanks for letting me share, gotta go she's waking up :)"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — a moment like that can just be worth staying inside. Go enjoy the wake-up, and we can leave it here for now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xfsjuzz14p9yf",
+    "conversation_id": "joy__04",
+    "timestamp": "2026-06-09T17:42:09.243Z",
+    "user_words_raw": "wanted to stay in it",
+    "emotion_status": "confirmed",
+    "emotion_family": "joy",
+    "emotion_shade": "proud",
+    "secondary_emotions": [
+      "awe"
+    ],
+    "valence": "positive",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "their daughter took her first steps across the living room rug",
+    "appraisal_thought": "been waiting weeks for this",
+    "body_cue": [],
+    "behaviour_action": [
+      "stay with it"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "achievement",
+      "appreciation"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Their daughter took first steps; they felt proud and wanted to stay with the moment.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey there, how are you doing today?"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey there — I’m here and glad you said hi. How’s your day going so far?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "pretty good honestly. my daughter took her first steps last night, right across the living room rug. still kind of buzzing about it"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds bright and buzzing — maybe a mix of delight and pride. Was it more the surprise of it, or the sense of watching her do it?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "their daughter took her first steps across the living room rug"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "pride mostly i think. she just stood up and went for it like it was nothing. me and my wife both gasped lol. been waiting weeks for this"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Pride fits, and I’m hearing a little awe too — that moment sounds like it landed hard. Did it make you want to shout, laugh, or just stay with it for a second?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "their daughter took her first steps across the living room rug"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "honestly just wanted to stay in it. we both did. anyway thanks for letting me share, gotta go she's waking up :)"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — a moment like that can just be worth staying inside. Go enjoy the wake-up, and we can leave it here for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "proud",
+      "body_cue": [],
+      "trigger": "their daughter took her first steps across the living room rug"
+    }
+  ]
+}

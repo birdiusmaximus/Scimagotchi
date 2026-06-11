@@ -1,0 +1,145 @@
+{
+  "cid": "hurt__01",
+  "emotion": "hurt",
+  "persona": null,
+  "created": "2026-06-09T18:20:34.541Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "got passed over for the promotion today. again."
+    },
+    {
+      "role": "companion",
+      "content": "That sounds really painful — especially with the \"again.\" Is it more like hurt, frustration, or both?"
+    },
+    {
+      "role": "user",
+      "content": "both i guess. been there 6 yrs. they gave it to some guy who started last spring. nobody even told me, found out from the all hands email."
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like being overlooked and dismissed, especially after six years there. Did it land more in your chest or throat, or make you want to pull back?"
+    },
+    {
+      "role": "user",
+      "content": "pull back. honestly whats even the point. i give everything to that place and it doesnt matter. im just so tired of all of it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like the hurt has turned into exhaustion, and maybe a kind of empty “what’s the point.” Do you want to stay with that for a moment, or leave it here?"
+    },
+    {
+      "role": "user",
+      "content": "nah leave it here. logged it at least. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Got it — we can leave it here. Thanks for telling me."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ytlq864jcuugq",
+    "conversation_id": "hurt__01",
+    "timestamp": "2026-06-09T18:20:53.740Z",
+    "user_words_raw": "pull back",
+    "emotion_status": "confirmed",
+    "emotion_family": "hurt",
+    "emotion_shade": "overlooked",
+    "secondary_emotions": [
+      "exhaustion"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "being passed over for the promotion again and finding out through the all-hands email",
+    "appraisal_thought": "it doesn't matter",
+    "body_cue": [],
+    "behaviour_action": [
+      "pull back"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "being seen",
+      "fairness",
+      "recognition"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "Felt overlooked at work after a promotion was given to someone newer; found out by email.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "got passed over for the promotion today. again."
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds really painful — especially with the \"again.\" Is it more like hurt, frustration, or both?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "passed over",
+      "body_cue": [],
+      "trigger": "being passed over for the promotion again"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "both i guess. been there 6 yrs. they gave it to some guy who started last spring. nobody even told me, found out from the all hands email."
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like being overlooked and dismissed, especially after six years there. Did it land more in your chest or throat, or make you want to pull back?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "hurt",
+      "shade": "overlooked",
+      "body_cue": [],
+      "trigger": "being passed over for the promotion again and finding out from the all-hands email"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "pull back. honestly whats even the point. i give everything to that place and it doesnt matter. im just so tired of all of it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like the hurt has turned into exhaustion, and maybe a kind of empty “what’s the point.” Do you want to stay with that for a moment, or leave it here?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "overlooked",
+      "body_cue": [],
+      "trigger": "being passed over for the promotion again and finding out through the all-hands email"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "nah leave it here. logged it at least. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Got it — we can leave it here. Thanks for telling me.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "overlooked",
+      "body_cue": [],
+      "trigger": "being passed over for the promotion again and finding out through the all-hands email"
+    }
+  ]
+}

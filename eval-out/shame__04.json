@@ -2,168 +2,190 @@
   "cid": "shame__04",
   "emotion": "shame",
   "persona": null,
-  "created": "2026-06-09T18:24:14.972Z",
+  "created": "2026-06-10T22:10:40.847Z",
   "history": [
     {
       "role": "user",
-      "content": "hey there"
+      "content": "honestly i'm just annoyed at myself today. like irritated. can't shake it"
     },
     {
       "role": "companion",
-      "content": "Hey there — good to see you. What’s been up today?"
+      "content": "That sounds like a pretty raw kind of irritation, turned inward."
     },
     {
       "role": "user",
-      "content": "not much really. just kind of a long day. how do you even start with these things lol"
+      "content": "yeah. inward is right. it's about my mum. i snapped at her on the phone yesterday over nothing and she went quiet and i just. i keep replaying it"
     },
     {
       "role": "companion",
-      "content": "We can start small — just whatever feels most present in the “long day” part, if anything. Or we can leave it vague for now, which is completely fine."
+      "content": "There’s irritation there, and maybe a slice of guilt or hurt too, since it keeps replaying after she went quiet. If you want, we can stay with just the part that keeps coming back."
     },
     {
       "role": "user",
-      "content": "i guess... we had this family dinner sunday and my brother brought up that i still havent paid back the money my parents lent me. in front of everyone. i just felt so small. like im the screwup of the family"
+      "content": "guilt yeah. that's more it honestly. she's getting older and i was short with her over something so stupid. what kind of daughter does that. i feel like a bad person"
     },
     {
       "role": "companion",
-      "content": "That sounds really small and exposed — like the dinner turned into a spotlight on you. Is it more hurt, shame, or both?"
+      "content": "\"Bad person\" sounds like the sharpest thing in the room right now, alongside the guilt. I can stay with that, or we can just sit with the part about being short with her."
     },
     {
       "role": "user",
-      "content": "shame for sure. like everyone already thinks im behind, my younger brother has the house and the career and i'm just... not there. and he wasnt even being mean, thats the worst part. it was just true"
+      "content": "yeah. i think i just needed to say it out loud. i'll call her tonight. thanks for this x"
     },
     {
       "role": "companion",
-      "content": "That sounds harsh and very exposed — like the “just true” part made it sting even more. Does it make you want to hide, explain, or fix it somehow?"
-    },
-    {
-      "role": "user",
-      "content": "hide mostly. i kind of just want to not exist at those dinners. but it helped saying it out loud i think. gonna go to bed. thanks for listening"
-    },
-    {
-      "role": "companion",
-      "content": "I’m glad you said it out loud, and we can leave it here for tonight. Sleep well."
+      "content": "That makes sense, and I’m glad you said it here. We can leave it there for now, and if you come back to it later, I’ll meet you there."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yybiydzj6hqth",
+    "id": "evt_mq8mhdfp8zhcx7t9",
     "conversation_id": "shame__04",
-    "timestamp": "2026-06-09T18:24:41.517Z",
-    "user_words_raw": "not exist at those dinners",
+    "timestamp": "2026-06-10T22:11:02.307Z",
+    "user_words_raw": "needed to say it out loud",
     "emotion_status": "confirmed",
     "emotion_family": "shame",
-    "emotion_shade": "shame",
-    "secondary_emotions": [
-      "hurt"
-    ],
-    "valence": "negative",
-    "activation": "medium",
+    "emotion_shade": "guilty",
+    "secondary_emotions": [],
+    "valence": "mixed",
+    "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "Brother brought up unpaid money at family dinner, alongside comparison with younger brother's house and career.",
-    "appraisal_thought": "everyone already thinks im behind",
+    "trigger_event": "she went quiet after the phone call",
+    "appraisal_thought": "what kind of daughter does that",
     "body_cue": [],
-    "behaviour_action": [
-      "hide"
-    ],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [
-      "dignity",
-      "belonging",
-      "acceptance"
-    ],
+    "need_value": [],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Feels shame after being called out in front of family; wants to hide at dinners.",
+    "memory_note": "User sometimes wants a place to say something aloud before acting on it.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey there"
+      "content": "honestly i'm just annoyed at myself today. like irritated. can't shake it"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey there — good to see you. What’s been up today?",
-      "stage": "noticed",
-      "unlocked": false,
-      "family": null,
-      "shade": null,
+      "content": "That sounds like a pretty raw kind of irritation, turned inward.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "irritated",
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "not much really. just kind of a long day. how do you even start with these things lol"
+      "content": "yeah. inward is right. it's about my mum. i snapped at her on the phone yesterday over nothing and she went quiet and i just. i keep replaying it"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "We can start small — just whatever feels most present in the “long day” part, if anything. Or we can leave it vague for now, which is completely fine.",
-      "stage": "named",
+      "content": "There’s irritation there, and maybe a slice of guilt or hurt too, since it keeps replaying after she went quiet. If you want, we can stay with just the part that keeps coming back.",
+      "stage": "understood",
       "unlocked": false,
-      "family": "calm",
-      "shade": null,
+      "family": "anger",
+      "shade": "irritated",
       "body_cue": [],
-      "trigger": null
+      "trigger": "she went quiet after the phone call",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "irritated",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "i guess... we had this family dinner sunday and my brother brought up that i still havent paid back the money my parents lent me. in front of everyone. i just felt so small. like im the screwup of the family"
+      "content": "guilt yeah. that's more it honestly. she's getting older and i was short with her over something so stupid. what kind of daughter does that. i feel like a bad person"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds really small and exposed — like the dinner turned into a spotlight on you. Is it more hurt, shame, or both?",
-      "stage": "named",
+      "content": "\"Bad person\" sounds like the sharpest thing in the room right now, alongside the guilt. I can stay with that, or we can just sit with the part about being short with her.",
+      "stage": "understood",
       "unlocked": false,
       "family": "shame",
-      "shade": "embarrassed",
+      "shade": "guilty",
       "body_cue": [],
-      "trigger": "brother brought up the unpaid money in front of everyone at family dinner"
+      "trigger": "she went quiet after the phone call",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "guilty",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "shame for sure. like everyone already thinks im behind, my younger brother has the house and the career and i'm just... not there. and he wasnt even being mean, thats the worst part. it was just true"
+      "content": "yeah. i think i just needed to say it out loud. i'll call her tonight. thanks for this x"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That sounds harsh and very exposed — like the “just true” part made it sting even more. Does it make you want to hide, explain, or fix it somehow?",
-      "stage": "named",
+      "content": "That makes sense, and I’m glad you said it here. We can leave it there for now, and if you come back to it later, I’ll meet you there.",
+      "stage": "understood",
       "unlocked": false,
       "family": "shame",
-      "shade": "self-critical",
+      "shade": "guilty",
       "body_cue": [],
-      "trigger": "Brother brought up unpaid money in front of everyone at family dinner, alongside comparison with younger brother's house and career."
-    },
-    {
-      "turn": 8,
-      "role": "user",
-      "content": "hide mostly. i kind of just want to not exist at those dinners. but it helped saying it out loud i think. gonna go to bed. thanks for listening"
-    },
-    {
-      "turn": 9,
-      "role": "companion",
-      "content": "I’m glad you said it out loud, and we can leave it here for tonight. Sleep well.",
-      "stage": "understood",
-      "unlocked": true,
-      "family": "shame",
-      "shade": "shame",
-      "body_cue": [],
-      "trigger": "Brother brought up unpaid money at family dinner, alongside comparison with younger brother's house and career."
+      "trigger": "she went quiet after the phone call",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

@@ -1,0 +1,379 @@
+{
+  "cid": "anger__09",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-10T17:10:33.643Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "got passed over for the lead role again. third time. they gave it to someone i literally trained"
+    },
+    {
+      "role": "companion",
+      "content": "That lands with a sharp kind of being passed over, especially after you trained them."
+    },
+    {
+      "role": "user",
+      "content": "its not hurt. i dont feel small about it. i feel like i wanna flip a table"
+    },
+    {
+      "role": "companion",
+      "content": "I had that wrong, let me step back. This sounds more like anger or protest, maybe with the urge to act it out, does that fit?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. protest. like this isnt right and nobody sees it. i built half that teams workflow. guy i mentored gets the title and i get a pat on the back"
+    },
+    {
+      "role": "companion",
+      "content": "“This isn’t right and nobody sees it” feels like the center of it. I’m hearing protest around being overlooked after you built so much of the work, is that the shape of it?"
+    },
+    {
+      "role": "user",
+      "content": "thats the shape. but its worse than the title. its like im starting to think im the kind of person who just doesnt get picked. like theres something about me they look past"
+    },
+    {
+      "role": "companion",
+      "content": "That last part feels heavier, like the title is one piece and the deeper sting is what it seems to say about you. I’m hearing a move from protest into something more like being looked past, maybe even a quieter kind of hurt underneath it."
+    },
+    {
+      "role": "user",
+      "content": "i dont wanna call it hurt. hurt feels weak. but yeah theres two things going on. mad at them and mad at myself for caring this much. for needing the stupid title to feel like im worth something"
+    },
+    {
+      "role": "companion",
+      "content": "There are two fires in that, the anger at them and the anger at yourself for caring this much. That need for the title sounds like it got tied to worth in a painful way."
+    },
+    {
+      "role": "user",
+      "content": "shame. ok. maybe. its like i keep telling people im fine being the behind the scenes guy and then this happens and i realize i was lying. i do want to be seen. and i hate that i want it"
+    },
+    {
+      "role": "companion",
+      "content": "That lands, and it sounds sharp, not small. The part where you want to be seen, and hate wanting it, feels like the knot in the middle."
+    },
+    {
+      "role": "user",
+      "content": "the knot in the middle. yeah thats it. the anger is easier than admitting i wanted it that bad. easier to be furious at them than to sit with wanting something i didnt get"
+    },
+    {
+      "role": "companion",
+      "content": "\"The knot in the middle\" feels exact. I’m hearing that the wanting itself is what feels hardest to sit with, more than the title."
+    },
+    {
+      "role": "user",
+      "content": "yeah. dont have an answer for that tonight. but its something. didnt expect to land there. gonna go sit with it i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like enough for tonight, and I’ll leave it there with you."
+    },
+    {
+      "role": "user",
+      "content": "thanks. needed that more than i thought. night"
+    },
+    {
+      "role": "companion",
+      "content": "Night. I’m glad this space helped, and I’ll leave it quiet here."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8breu3mxmi9gb5",
+    "conversation_id": "anger__09",
+    "timestamp": "2026-06-10T17:11:28.715Z",
+    "user_words_raw": "needed that more than i thought",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "shame",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "being passed over for the title after building half the team's workflow",
+    "appraisal_thought": "I wanted to be seen, and I hate that I wanted it",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [
+      "hurt"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "They may want a quiet space to name mixed feelings and stop when they’ve landed somewhere useful.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "got passed over for the lead role again. third time. they gave it to someone i literally trained"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That lands with a sharp kind of being passed over, especially after you trained them.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [],
+      "trigger": "got passed over for the lead role again",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "left out",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "its not hurt. i dont feel small about it. i feel like i wanna flip a table"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "I had that wrong, let me step back. This sounds more like anger or protest, maybe with the urge to act it out, does that fit?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "got passed over for the lead role again",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah. protest. like this isnt right and nobody sees it. i built half that teams workflow. guy i mentored gets the title and i get a pat on the back"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "“This isn’t right and nobody sees it” feels like the center of it. I’m hearing protest around being overlooked after you built so much of the work, is that the shape of it?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "got passed over for the lead role again, after training and building half the team's workflow",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "thats the shape. but its worse than the title. its like im starting to think im the kind of person who just doesnt get picked. like theres something about me they look past"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That last part feels heavier, like the title is one piece and the deeper sting is what it seems to say about you. I’m hearing a move from protest into something more like being looked past, maybe even a quieter kind of hurt underneath it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "protest",
+      "body_cue": [],
+      "trigger": "being passed over for the lead role after building half the team's workflow",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "protest",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i dont wanna call it hurt. hurt feels weak. but yeah theres two things going on. mad at them and mad at myself for caring this much. for needing the stupid title to feel like im worth something"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "There are two fires in that, the anger at them and the anger at yourself for caring this much. That need for the title sounds like it got tied to worth in a painful way.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "protest",
+      "body_cue": [],
+      "trigger": "being passed over for the lead role after building half the team's workflow",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "protest",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "shame. ok. maybe. its like i keep telling people im fine being the behind the scenes guy and then this happens and i realize i was lying. i do want to be seen. and i hate that i want it"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That lands, and it sounds sharp, not small. The part where you want to be seen, and hate wanting it, feels like the knot in the middle.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "being passed over for the title after building half the team's workflow",
+      "label_source": "user_confirmed",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "protest",
+          "salience": "background",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "the knot in the middle. yeah thats it. the anger is easier than admitting i wanted it that bad. easier to be furious at them than to sit with wanting something i didnt get"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "\"The knot in the middle\" feels exact. I’m hearing that the wanting itself is what feels hardest to sit with, more than the title.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "being passed over for the title after building half the team's workflow",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "protest",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "background",
+          "source": "user_confirmed"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "yeah. dont have an answer for that tonight. but its something. didnt expect to land there. gonna go sit with it i guess"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "That feels like enough for tonight, and I’ll leave it there with you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "being passed over for the title after building half the team's workflow",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "anger",
+          "shade": "anger",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "thanks. needed that more than i thought. night"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "Night. I’m glad this space helped, and I’ll leave it quiet here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "being passed over for the title after building half the team's workflow",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

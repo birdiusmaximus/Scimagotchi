@@ -1,0 +1,274 @@
+{
+  "cid": "fear__08",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-10T17:08:33.902Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. i dont really know how to do this"
+    },
+    {
+      "role": "companion",
+      "content": "Hi, glad you came by. We can just take it one piece at a time, no need to know how yet."
+    },
+    {
+      "role": "user",
+      "content": "i guess i just feel weird lately. like off. theres a lot up in the air right now and i cant settle"
+    },
+    {
+      "role": "companion",
+      "content": "That feels a bit unsettled, maybe more like pressure than a single clear feeling. Is it the “up in the air” part, or the not being able to settle part, that stands out most?"
+    },
+    {
+      "role": "user",
+      "content": "the not settling i think. its more like... my contract at work ends in sept and nobody will tell me if im getting renewed. so i just keep imagining everything falling apart"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like it has a fear inside it too, especially with your mind going to “everything falling apart.” Does it feel more like pressure, fear, or both?"
+    },
+    {
+      "role": "user",
+      "content": "both but mostly fear i think. i lie awake doing the math on rent and what if i cant find anything else. my brain just goes to worst case every time"
+    },
+    {
+      "role": "companion",
+      "content": "I’m holding both, with fear in front and pressure underneath it. The “worst case” and the rent math make this feel very concrete, not just vague."
+    },
+    {
+      "role": "user",
+      "content": "yeah. its the not knowing thats the worst. like i cant even plan anything. i keep refreshing my email like an answer will just appear"
+    },
+    {
+      "role": "companion",
+      "content": "The not knowing seems to be the sharp part here, like it leaves you stuck waiting for something to appear. I’m wondering if it feels more like uncertainty, or like being unable to get your footing?"
+    },
+    {
+      "role": "user",
+      "content": "uncertainty yeah. anyway i dont know. just feels heavy. i should probably try to sleep. thanks for listening i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, heavy and uncertain makes sense here. We can leave it there for now, and you can come back to it if you want."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bouhruap028q2",
+    "conversation_id": "fear__08",
+    "timestamp": "2026-06-10T17:09:06.974Z",
+    "user_words_raw": "the not knowing",
+    "emotion_status": "confirmed",
+    "emotion_family": "fear",
+    "emotion_shade": "uncertain",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "not knowing whether the work contract will be renewed",
+    "appraisal_thought": "my brain just goes to worst case every time",
+    "body_cue": [],
+    "behaviour_action": [
+      "refreshing my email",
+      "lie awake"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "certainty",
+      "security",
+      "support"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Work uncertainty is a recurring source of heavy fear, with checking email and sleep being affected.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. i dont really know how to do this"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hi, glad you came by. We can just take it one piece at a time, no need to know how yet.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i guess i just feel weird lately. like off. theres a lot up in the air right now and i cant settle"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That feels a bit unsettled, maybe more like pressure than a single clear feeling. Is it the “up in the air” part, or the not being able to settle part, that stands out most?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "unsettled",
+      "body_cue": [],
+      "trigger": "a lot up in the air right now",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "unsettled",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "the not settling i think. its more like... my contract at work ends in sept and nobody will tell me if im getting renewed. so i just keep imagining everything falling apart"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like it has a fear inside it too, especially with your mind going to “everything falling apart.” Does it feel more like pressure, fear, or both?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "unsettled",
+      "body_cue": [],
+      "trigger": "uncertainty about work renewal as contract end approaches",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": "unsettled",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "both but mostly fear i think. i lie awake doing the math on rent and what if i cant find anything else. my brain just goes to worst case every time"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "I’m holding both, with fear in front and pressure underneath it. The “worst case” and the rent math make this feel very concrete, not just vague.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "worst case",
+      "body_cue": [],
+      "trigger": "contract renewal uncertainty and rent worries",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "worst case",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. its the not knowing thats the worst. like i cant even plan anything. i keep refreshing my email like an answer will just appear"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "The not knowing seems to be the sharp part here, like it leaves you stuck waiting for something to appear. I’m wondering if it feels more like uncertainty, or like being unable to get your footing?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "uncertain",
+      "body_cue": [],
+      "trigger": "not knowing whether the work contract will be renewed",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "uncertain",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": "null",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "uncertainty yeah. anyway i dont know. just feels heavy. i should probably try to sleep. thanks for listening i guess"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Yeah, heavy and uncertain makes sense here. We can leave it there for now, and you can come back to it if you want.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "uncertain",
+      "body_cue": [],
+      "trigger": "not knowing whether the work contract will be renewed",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

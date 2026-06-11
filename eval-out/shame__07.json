@@ -2,146 +2,262 @@
   "cid": "shame__07",
   "emotion": "shame",
   "persona": null,
-  "created": "2026-06-09T18:24:15.457Z",
+  "created": "2026-06-10T22:10:59.956Z",
   "history": [
     {
       "role": "user",
-      "content": "i think im just stressed lately. been kind of off"
+      "content": "ok so i dont really know how this works. but i guess im here. been feeling kind of low about myself the last few days"
     },
     {
       "role": "companion",
-      "content": "That sounds like a stretch of stress and being a bit off. Is it more like pressure, or more like feeling unsettled and not quite yourself?"
+      "content": "That sounds like a few days of feeling low about yourself, and just being here anyway. We can stay with it gently, or leave it where it is for now."
     },
     {
       "role": "user",
-      "content": "yeah unsettled i guess. its about my girlfriend. i forgot her birthday last week. like fully forgot until she said something"
+      "content": "its not really sad exactly. more like. embarrassed at myself. me and my girlfriend got into it again and i was the one who lost it"
     },
     {
       "role": "companion",
-      "content": "That sounds unsettled and maybe a bit embarrassed too. Was it the forgetting itself that hit hardest, or what it seemed to mean to her?"
+      "content": "I had that wrong, let me step back. Maybe this is closer to embarrassment, or something sharper around getting into it again, what word would fit best?"
     },
     {
       "role": "user",
-      "content": "what it meant i think. she didnt even get mad she just looked at me like she wasnt surprised. like she already knew id be the kind of guy who forgets. makes me feel like im not good enough for her"
+      "content": "embarrassed is right. she made a comment about me still not having sorted out the job thing and i snapped. raised my voice, said stuff i didnt mean. she just went quiet and went to bed. i hate that i do that"
     },
     {
       "role": "companion",
-      "content": "That sounds like shame more than just embarrassment — the moment seemed to land as \"I’m not good enough for her.\" Does it make you want to hide, apologise, or explain yourself?"
+      "content": "That wince at yourself makes sense, especially after she went quiet and went to bed. We can stay with just that, if you want."
     },
     {
       "role": "user",
-      "content": "hide mostly. just want to disappear and not look at her. yeah thats it. ok i gotta go but that actually helped. thanks"
+      "content": "yeah. i think the thing is she wasnt even wrong. i havent sorted it out. so when she pokes at it i get defensive cause it already makes me feel like a failure. and then i prove her point by blowing up"
     },
     {
       "role": "companion",
-      "content": "I’m glad it helped, and we can leave it here. That “want to disappear” sounds like it touched a very sharp edge, and you don’t have to stay with it right now."
+      "content": "That sounds like the comment hit the part that already felt like failure, and then the blow-up seemed to confirm it. Is the harsher part here more about being seen as not sorted, or about what you did after?"
+    },
+    {
+      "role": "user",
+      "content": "honestly the second one. what i did after. the job stuff i can live with, ill figure it out eventually. but the way i talked to her, thats not who i want to be with her. she deserves better than getting yelled at over my own crap"
+    },
+    {
+      "role": "companion",
+      "content": "That lands as the hurting part, what you did after, not the job itself. It sounds like the moment turned into \"I am not being who I want to be with her,\" which is a pretty sharp kind of self-judgment."
+    },
+    {
+      "role": "user",
+      "content": "yeah thats it exactly. ok i didnt expect that to actually help a little. i should probably just go apologize to her properly instead of sitting here. thanks though"
+    },
+    {
+      "role": "companion",
+      "content": "I'm glad it clarified something. That feels settled enough to leave here, and you can go to her with it now."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yycek04jm5c6x",
+    "id": "evt_mq8mhs5vxi1xcxfr",
     "conversation_id": "shame__07",
-    "timestamp": "2026-06-09T18:24:35.470Z",
-    "user_words_raw": "want to disappear",
+    "timestamp": "2026-06-10T22:11:39.928Z",
+    "user_words_raw": "thats it exactly",
     "emotion_status": "confirmed",
     "emotion_family": "shame",
-    "emotion_shade": "inadequate",
-    "secondary_emotions": [
-      "embarrassed"
-    ],
+    "emotion_shade": "self-critical",
+    "secondary_emotions": [],
     "valence": "negative",
-    "activation": "high",
+    "activation": "medium",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "forgot girlfriend’s birthday and she reacted like she expected it",
-    "appraisal_thought": "I’m not good enough for her",
+    "trigger_event": "argument with girlfriend after she commented on the job situation",
+    "appraisal_thought": "I am not being who I want to be with her",
     "body_cue": [],
     "behaviour_action": [
-      "hide",
-      "disappear",
-      "not look at her"
+      "go apologize to her properly"
     ],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "acceptance",
-      "dignity",
-      "belonging"
+      "integrity",
+      "repair",
+      "dignity"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [
+      "sad",
+      "anxiety"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Shame came up around forgetting an important date with someone close.",
+    "memory_note": "Feels self-critical after snapping at girlfriend and wants to repair it.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "i think im just stressed lately. been kind of off"
+      "content": "ok so i dont really know how this works. but i guess im here. been feeling kind of low about myself the last few days"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds like a stretch of stress and being a bit off. Is it more like pressure, or more like feeling unsettled and not quite yourself?",
-      "stage": "named",
+      "content": "That sounds like a few days of feeling low about yourself, and just being here anyway. We can stay with it gently, or leave it where it is for now.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "pressure",
-      "shade": "stressed",
+      "family": "sadness",
+      "shade": "low",
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "yeah unsettled i guess. its about my girlfriend. i forgot her birthday last week. like fully forgot until she said something"
+      "content": "its not really sad exactly. more like. embarrassed at myself. me and my girlfriend got into it again and i was the one who lost it"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds unsettled and maybe a bit embarrassed too. Was it the forgetting itself that hit hardest, or what it seemed to mean to her?",
-      "stage": "named",
+      "content": "I had that wrong, let me step back. Maybe this is closer to embarrassment, or something sharper around getting into it again, what word would fit best?",
+      "stage": "shaped",
       "unlocked": false,
       "family": "shame",
       "shade": "embarrassed",
       "body_cue": [],
-      "trigger": "forgot girlfriend’s birthday until she mentioned it"
+      "trigger": "me and my girlfriend got into it again",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "embarrassed",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "anger",
+          "shade": "anger",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "what it meant i think. she didnt even get mad she just looked at me like she wasnt surprised. like she already knew id be the kind of guy who forgets. makes me feel like im not good enough for her"
+      "content": "embarrassed is right. she made a comment about me still not having sorted out the job thing and i snapped. raised my voice, said stuff i didnt mean. she just went quiet and went to bed. i hate that i do that"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds like shame more than just embarrassment — the moment seemed to land as \"I’m not good enough for her.\" Does it make you want to hide, apologise, or explain yourself?",
+      "content": "That wince at yourself makes sense, especially after she went quiet and went to bed. We can stay with just that, if you want.",
       "stage": "understood",
       "unlocked": true,
       "family": "shame",
-      "shade": "inadequate",
+      "shade": "embarrassed",
       "body_cue": [],
-      "trigger": "forgot girlfriend’s birthday and she reacted as if she expected it"
+      "trigger": "she made a comment about me still not having sorted out the job thing",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "embarrassed",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "hide mostly. just want to disappear and not look at her. yeah thats it. ok i gotta go but that actually helped. thanks"
+      "content": "yeah. i think the thing is she wasnt even wrong. i havent sorted it out. so when she pokes at it i get defensive cause it already makes me feel like a failure. and then i prove her point by blowing up"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "I’m glad it helped, and we can leave it here. That “want to disappear” sounds like it touched a very sharp edge, and you don’t have to stay with it right now.",
+      "content": "That sounds like the comment hit the part that already felt like failure, and then the blow-up seemed to confirm it. Is the harsher part here more about being seen as not sorted, or about what you did after?",
       "stage": "understood",
       "unlocked": false,
       "family": "shame",
       "shade": "inadequate",
       "body_cue": [],
-      "trigger": "forgot girlfriend’s birthday and she reacted like she expected it"
+      "trigger": "she made a comment about me still not having sorted out the job thing",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "inadequate",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "anger",
+          "shade": "defensive",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "honestly the second one. what i did after. the job stuff i can live with, ill figure it out eventually. but the way i talked to her, thats not who i want to be with her. she deserves better than getting yelled at over my own crap"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That lands as the hurting part, what you did after, not the job itself. It sounds like the moment turned into \"I am not being who I want to be with her,\" which is a pretty sharp kind of self-judgment.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "she made a comment about me still not having sorted out the job thing",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah thats it exactly. ok i didnt expect that to actually help a little. i should probably just go apologize to her properly instead of sitting here. thanks though"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I'm glad it clarified something. That feels settled enough to leave here, and you can go to her with it now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "argument with girlfriend after she commented on the job situation",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

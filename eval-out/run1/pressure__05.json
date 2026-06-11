@@ -1,0 +1,161 @@
+{
+  "cid": "pressure__05",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-09T17:45:41.727Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. idk why im even here lol"
+    },
+    {
+      "role": "companion",
+      "content": "Hey — good to see you. We can just take it as it comes; what’s on your mind today?"
+    },
+    {
+      "role": "user",
+      "content": "dunno really. just one of those weeks where my brain wont shut up. nothing dramatic, im fine"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that sounds like a lot of noise to carry around. Is it more like busy, tense, or just worn out?"
+    },
+    {
+      "role": "user",
+      "content": "worn out i guess? its dumb. theres this group chat from uni that popped off again planning a reunion thing and it just dragged up a whole era i thought i was over lol. like why does 5 yr old stuff still sit on my chest"
+    },
+    {
+      "role": "companion",
+      "content": "That doesn’t sound dumb — it sounds like something old got heavy again. I’m wondering if this feels more like worn out, or a bit hurt too?"
+    },
+    {
+      "role": "user",
+      "content": "yeah maybe a bit of both. anyway i shouldnt make it a thing. ill prob just mute the chat and move on. thanks tho, this helped weirdly"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that makes sense — it sounds like worn out with a bit of hurt, and you’re letting it be enough for now. We can leave it here, or if you want, we can stay with what that old era still hooks into."
+    },
+    {
+      "role": "user",
+      "content": "nah lets leave it there i think. gonna go make a cuppa and not overthink it lol. cheers"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a good place to leave it. Enjoy the cuppa."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6xkv07ugcesvqd",
+    "conversation_id": "pressure__05",
+    "timestamp": "2026-06-09T17:46:11.666Z",
+    "user_words_raw": "gonna go make a cuppa",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "worn out",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "a group chat from uni planning a reunion brought up an old era",
+    "appraisal_thought": "that old era still sits on my chest",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "They often soften and want to stop after naming a feeling; practical reset words like making tea come up at the end.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. idk why im even here lol"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey — good to see you. We can just take it as it comes; what’s on your mind today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "dunno really. just one of those weeks where my brain wont shut up. nothing dramatic, im fine"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Yeah, that sounds like a lot of noise to carry around. Is it more like busy, tense, or just worn out?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "worn out i guess? its dumb. theres this group chat from uni that popped off again planning a reunion thing and it just dragged up a whole era i thought i was over lol. like why does 5 yr old stuff still sit on my chest"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That doesn’t sound dumb — it sounds like something old got heavy again. I’m wondering if this feels more like worn out, or a bit hurt too?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "a group chat from uni planning a reunion brought up an old era"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah maybe a bit of both. anyway i shouldnt make it a thing. ill prob just mute the chat and move on. thanks tho, this helped weirdly"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Yeah, that makes sense — it sounds like worn out with a bit of hurt, and you’re letting it be enough for now. We can leave it here, or if you want, we can stay with what that old era still hooks into.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "worn out",
+      "body_cue": [],
+      "trigger": "a group chat from uni planning a reunion brought up an old era"
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "nah lets leave it there i think. gonna go make a cuppa and not overthink it lol. cheers"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That sounds like a good place to leave it. Enjoy the cuppa.",
+      "stage": "named",
+      "unlocked": false,
+      "family": null,
+      "shade": "worn out",
+      "body_cue": [],
+      "trigger": "a group chat from uni planning a reunion brought up an old era"
+    }
+  ]
+}

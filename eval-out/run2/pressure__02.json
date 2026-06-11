@@ -1,0 +1,161 @@
+{
+  "cid": "pressure__02",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-10T17:09:04.645Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ugh i just need to put this somewhere. work has been insane this week"
+    },
+    {
+      "role": "companion",
+      "content": "That \"insane this week\" lands hard. I’m here with it if you want to keep going, or we can just leave it there for now."
+    },
+    {
+      "role": "user",
+      "content": "yeah idk. its just like. my manager keeps piling stuff on and i have this big presentation friday that isnt even close to done and i havent had a proper lunch in like 4 days. everyones asking me for things at once and i cant even think straight"
+    },
+    {
+      "role": "companion",
+      "content": "There’s a lot coming at you at once, and it’s starting to sound like more than just busy. Does it feel more rushed, flooded, or trapped?"
+    },
+    {
+      "role": "user",
+      "content": "flooded probably. like theres no gap to even breathe. anyway i shouldnt dump all this here, i gotta get back to it"
+    },
+    {
+      "role": "companion",
+      "content": "“No gap to even breathe” really captures it. We can leave it here, and I’m glad you put words to it."
+    },
+    {
+      "role": "user",
+      "content": "yeah. thanks for that. ok back to it"
+    },
+    {
+      "role": "companion",
+      "content": "Of course. I’ll leave it there, and I’m glad it had a name for a moment."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bpimnbm5p76gv",
+    "conversation_id": "pressure__02",
+    "timestamp": "2026-06-10T17:09:26.293Z",
+    "user_words_raw": "flooded",
+    "emotion_status": "confirmed",
+    "emotion_family": "pressure",
+    "emotion_shade": "flooded",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "manager piling on work, big presentation friday, no proper lunch, everyone asking at once",
+    "appraisal_thought": "there’s no gap to even breathe",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Work felt flooded by piling demands and not enough space to breathe.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ugh i just need to put this somewhere. work has been insane this week"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That \"insane this week\" lands hard. I’m here with it if you want to keep going, or we can just leave it there for now.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "work has been insane this week",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah idk. its just like. my manager keeps piling stuff on and i have this big presentation friday that isnt even close to done and i havent had a proper lunch in like 4 days. everyones asking me for things at once and i cant even think straight"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "There’s a lot coming at you at once, and it’s starting to sound like more than just busy. Does it feel more rushed, flooded, or trapped?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "manager piling on work, big presentation friday, no proper lunch, everyone asking at once",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "flooded probably. like theres no gap to even breathe. anyway i shouldnt dump all this here, i gotta get back to it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "“No gap to even breathe” really captures it. We can leave it here, and I’m glad you put words to it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "flooded",
+      "body_cue": [],
+      "trigger": "manager piling on work, big presentation friday, no proper lunch, everyone asking at once",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah. thanks for that. ok back to it"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Of course. I’ll leave it there, and I’m glad it had a name for a moment.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "flooded",
+      "body_cue": [],
+      "trigger": "manager piling on work, big presentation friday, no proper lunch, everyone asking at once",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

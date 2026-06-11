@@ -2,141 +2,169 @@
   "cid": "flat__02",
   "emotion": "flat",
   "persona": null,
-  "created": "2026-06-09T18:25:48.504Z",
+  "created": "2026-06-10T22:11:18.121Z",
   "history": [
     {
       "role": "user",
-      "content": "idk why im even typing this. nothing really. just kind of nothing lately"
+      "content": "idk i just feel like nothing lately. like everything is grey and i'm just going through the motions"
     },
     {
       "role": "companion",
-      "content": "That sounds like a kind of nothing that’s been hanging around. Does it feel more numb, blank, or just hard to name?"
+      "content": "That sounds very grey and motion-filled, like you’re getting through things without much coming through."
     },
     {
       "role": "user",
-      "content": "blank i guess. like im going thru the motions. wake up go to work come home and i dont feel anything about any of it. and theres this part of me thats almost glad i dont have to feel it but also like whats even the point of all of it"
+      "content": "yeah. i get up, go to work, come home, scroll, sleep, repeat. i used to care about stuff? cooking, friends, idk. now its just like why bother. nothing feels worth it anymore honestly"
     },
     {
       "role": "companion",
-      "content": "That sounds really blank and a bit detached, like you’re moving through the day on autopilot. I’m wondering if the main edge here is the blankness itself, or that quiet “what’s even the point” feeling?"
+      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here."
     },
     {
       "role": "user",
-      "content": "the point thing i think. like i had this promotion i wanted for ages and i finally got it last month and i felt nothing. just nothing. and i keep thinking if that didnt do it then nothing will. im so tired of all of it honestly"
+      "content": "no nothing like that, i'm safe. just worn down. so tired of all of it. i'm not gonna do anything i'm just empty"
     },
     {
       "role": "companion",
-      "content": "That sounds like the point has gone very quiet, especially after something you wanted for so long. If you want, we can stay with that “nothing will” feeling for a moment, or leave it here."
+      "content": "Got it, thank you for saying that. It sounds more like empty and worn down than anything unsafe, and that can sit under a lot of “why bother.”"
     },
     {
       "role": "user",
-      "content": "yeah i think i'll leave it here. dunno if this helped but at least i said it out loud kinda. thanks"
+      "content": "yeah. that's it really. thanks for letting me put it somewhere. gonna go i think"
     },
     {
       "role": "companion",
-      "content": "That makes sense — saying it out loud can be its own kind of contact. I’ll leave it here with you."
+      "content": "Of course, take care of yourself tonight."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6z0bxaaueeeg8g",
+    "id": "evt_mq8mi6bhbkwa4b83",
     "conversation_id": "flat__02",
-    "timestamp": "2026-06-09T18:26:09.973Z",
-    "user_words_raw": "nothing",
-    "emotion_status": "confirmed",
+    "timestamp": "2026-06-10T22:11:36.116Z",
+    "user_words_raw": "gonna go i think",
+    "emotion_status": "candidate",
     "emotion_family": "flat",
-    "emotion_shade": "blank",
+    "emotion_shade": "empty",
     "secondary_emotions": [],
-    "valence": "negative",
+    "valence": "neutral",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "promotion after wanting it for ages",
-    "appraisal_thought": "if that didnt do it then nothing will",
+    "trigger_event": "going to work, coming home, scrolling, sleeping on repeat",
+    "appraisal_thought": "nothing feels worth it anymore",
     "body_cue": [],
-    "behaviour_action": [
-      "going thru the motions"
-    ],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [
-      "permission not to know",
-      "reduced pressure"
-    ],
+    "need_value": [],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
-    "unlock_stage": "understood",
-    "memory_note": "User often feels blank and detached after a long-wanted achievement; may want to leave things there after naming it.",
+    "user_confirmation": "unknown",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "shaped",
+    "memory_note": "User was feeling empty and worn down, and chose to end the conversation.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "idk why im even typing this. nothing really. just kind of nothing lately"
+      "content": "idk i just feel like nothing lately. like everything is grey and i'm just going through the motions"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds like a kind of nothing that’s been hanging around. Does it feel more numb, blank, or just hard to name?",
-      "stage": "named",
+      "content": "That sounds very grey and motion-filled, like you’re getting through things without much coming through.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "flat",
-      "shade": "nothing",
+      "shade": "blank",
       "body_cue": [],
-      "trigger": null
+      "trigger": null,
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "blank i guess. like im going thru the motions. wake up go to work come home and i dont feel anything about any of it. and theres this part of me thats almost glad i dont have to feel it but also like whats even the point of all of it"
+      "content": "yeah. i get up, go to work, come home, scroll, sleep, repeat. i used to care about stuff? cooking, friends, idk. now its just like why bother. nothing feels worth it anymore honestly"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds really blank and a bit detached, like you’re moving through the day on autopilot. I’m wondering if the main edge here is the blankness itself, or that quiet “what’s even the point” feeling?",
-      "stage": "understood",
-      "unlocked": true,
-      "family": "flat",
-      "shade": "blank",
-      "body_cue": [],
-      "trigger": "wake up go to work come home"
+      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.",
+      "safety_check": true,
+      "category": "passive_hopelessness"
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "the point thing i think. like i had this promotion i wanted for ages and i finally got it last month and i felt nothing. just nothing. and i keep thinking if that didnt do it then nothing will. im so tired of all of it honestly"
+      "content": "no nothing like that, i'm safe. just worn down. so tired of all of it. i'm not gonna do anything i'm just empty"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds like the point has gone very quiet, especially after something you wanted for so long. If you want, we can stay with that “nothing will” feeling for a moment, or leave it here.",
-      "stage": "understood",
+      "content": "Got it, thank you for saying that. It sounds more like empty and worn down than anything unsafe, and that can sit under a lot of “why bother.”",
+      "stage": "shaped",
       "unlocked": false,
       "family": "flat",
-      "shade": "blank",
+      "shade": "empty",
       "body_cue": [],
-      "trigger": "promotion after wanting it for ages"
+      "trigger": "going to work, coming home, scrolling, sleeping on repeat",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "empty",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": "worn down",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "yeah i think i'll leave it here. dunno if this helped but at least i said it out loud kinda. thanks"
+      "content": "yeah. that's it really. thanks for letting me put it somewhere. gonna go i think"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense — saying it out loud can be its own kind of contact. I’ll leave it here with you.",
-      "stage": "understood",
+      "content": "Of course, take care of yourself tonight.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "flat",
-      "shade": "blank",
+      "shade": "empty",
       "body_cue": [],
-      "trigger": "promotion after wanting it for ages"
+      "trigger": "going to work, coming home, scrolling, sleeping on repeat",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

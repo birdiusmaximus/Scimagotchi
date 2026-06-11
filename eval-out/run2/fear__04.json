@@ -1,0 +1,222 @@
+{
+  "cid": "fear__04",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-10T17:08:25.286Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "honestly i'm just so annoyed lately. my mom keeps texting me about her doctor stuff and i keep putting off calling her back"
+    },
+    {
+      "role": "companion",
+      "content": "\"So annoyed lately\" feels like the centre of this. Is it more frustration, feeling pulled, or something closer to resentment?"
+    },
+    {
+      "role": "user",
+      "content": "i guess... not really resentment. honestly i think i keep avoiding her texts cause i don't want to hear what the tests say. she's been doing scans and i just freeze every time her name pops up"
+    },
+    {
+      "role": "companion",
+      "content": "I had that wrong, let me step back. What you’re describing sounds more like dread or freezing, and I’m wondering if the texts have started to feel loaded with bad news?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. that's it. dread. every text feels like it could be the one where she tells me something bad. so i just don't open them and then i feel awful for leaving her hanging"
+    },
+    {
+      "role": "companion",
+      "content": "“Every text could be the one” carries a lot of weight, and then the leaving-her-hanging part lands on top of it. We can stay with it here, or if you want, I can just hold that dread with you for a moment."
+    },
+    {
+      "role": "user",
+      "content": "just holding it for a sec is enough i think. thanks. i might actually call her tonight"
+    },
+    {
+      "role": "companion",
+      "content": "Of course. I’ll hold it here with you, and you can leave it at that for now."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8boo4vh970hvku",
+    "conversation_id": "fear__04",
+    "timestamp": "2026-06-10T17:08:46.857Z",
+    "user_words_raw": "every text feels like it could be the one",
+    "emotion_status": "confirmed",
+    "emotion_family": "fear",
+    "emotion_shade": "dread",
+    "secondary_emotions": [
+      "shame"
+    ],
+    "valence": "mixed",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "her texts about scans and test results",
+    "appraisal_thought": "every text feels like it could be the one where she tells me something bad",
+    "body_cue": [],
+    "behaviour_action": [
+      "don't open them",
+      "call her tonight"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "certainty",
+      "reassurance",
+      "support"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [
+      "resentment"
+    ],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "fear",
+        "shade": "dread",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      },
+      {
+        "family": "shame",
+        "shade": null,
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 1,
+    "unlock_stage": "understood",
+    "memory_note": "Texts about a parent’s medical tests bring dread and guilt about not replying.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "honestly i'm just so annoyed lately. my mom keeps texting me about her doctor stuff and i keep putting off calling her back"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "\"So annoyed lately\" feels like the centre of this. Is it more frustration, feeling pulled, or something closer to resentment?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "annoyed",
+      "body_cue": [],
+      "trigger": "mom keeps texting about her doctor stuff",
+      "label_source": "user_stated",
+      "mixed_relation": "unclear",
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i guess... not really resentment. honestly i think i keep avoiding her texts cause i don't want to hear what the tests say. she's been doing scans and i just freeze every time her name pops up"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "I had that wrong, let me step back. What you’re describing sounds more like dread or freezing, and I’m wondering if the texts have started to feel loaded with bad news?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [],
+      "trigger": "her name pops up with texts about scans and test results",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "dread",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah. that's it. dread. every text feels like it could be the one where she tells me something bad. so i just don't open them and then i feel awful for leaving her hanging"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "“Every text could be the one” carries a lot of weight, and then the leaving-her-hanging part lands on top of it. We can stay with it here, or if you want, I can just hold that dread with you for a moment.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [],
+      "trigger": "her texts about scans and test results",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "dread",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "just holding it for a sec is enough i think. thanks. i might actually call her tonight"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Of course. I’ll hold it here with you, and you can leave it at that for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "dread",
+      "body_cue": [],
+      "trigger": "her texts about scans and test results",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "dread",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "cid": "calm__02",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-10T17:07:15.765Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. just wanted to log something. feeling kind of calm today i guess? like settled. dunno"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a quietly settled kind of calm, maybe with a little uncertainty around it. Does it feel easy and steady, or more like you're not quite sure it will stay?"
+    },
+    {
+      "role": "user",
+      "content": "oh it feels easy i think. nothing dramatic. i just finally cleaned my whole apartment this morning, like properly, even the corners i always ignore. and now im sitting here with coffee and it just feels nice. quiet"
+    },
+    {
+      "role": "companion",
+      "content": "Quiet and nice, with that easy kind of settledness, and the cleaning seems to have made room for it. Does it feel more like rest, or more like relief after getting it done?"
+    },
+    {
+      "role": "user",
+      "content": "honestly more like relief. it'd been hanging over me for like 2 weeks, every time i walked past the pile of stuff i felt a little guilty. so now its done and i can just breathe. anyway thats all i wanted to put down really"
+    },
+    {
+      "role": "companion",
+      "content": "Got it, I’ll leave it there. That clean, easy relief has a nice finished feel to it."
+    },
+    {
+      "role": "user",
+      "content": "yeah exactly. thanks, nice to have it written down somewhere. ok bye"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, glad it had a place to land. Bye for now, and take care."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bn6nlkuvd3qme",
+    "conversation_id": "calm__02",
+    "timestamp": "2026-06-10T17:07:36.900Z",
+    "user_words_raw": "can just breathe",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [
+      "relief"
+    ],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "finally cleaned the whole apartment after it had been hanging over them for about 2 weeks",
+    "appraisal_thought": "the thing that had been hanging over them is done, so they can breathe",
+    "body_cue": [],
+    "behaviour_action": [
+      "can just breathe"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "closure",
+      "relief"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "calm",
+        "shade": "settled",
+        "salience": "foreground",
+        "source": "user_stated"
+      },
+      {
+        "family": "joy",
+        "shade": null,
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "A completed task can bring a quiet, settled relief after hanging over them for days.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. just wanted to log something. feeling kind of calm today i guess? like settled. dunno"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a quietly settled kind of calm, maybe with a little uncertainty around it. Does it feel easy and steady, or more like you're not quite sure it will stay?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "oh it feels easy i think. nothing dramatic. i just finally cleaned my whole apartment this morning, like properly, even the corners i always ignore. and now im sitting here with coffee and it just feels nice. quiet"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Quiet and nice, with that easy kind of settledness, and the cleaning seems to have made room for it. Does it feel more like rest, or more like relief after getting it done?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "finally cleaned the whole apartment this morning",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "honestly more like relief. it'd been hanging over me for like 2 weeks, every time i walked past the pile of stuff i felt a little guilty. so now its done and i can just breathe. anyway thats all i wanted to put down really"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Got it, I’ll leave it there. That clean, easy relief has a nice finished feel to it.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "finally cleaned the whole apartment this morning after it had been hanging over them for about 2 weeks",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "settled",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah exactly. thanks, nice to have it written down somewhere. ok bye"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Of course, glad it had a place to land. Bye for now, and take care.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "finally cleaned the whole apartment after it had been hanging over them for about 2 weeks",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "settled",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "joy",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    }
+  ]
+}

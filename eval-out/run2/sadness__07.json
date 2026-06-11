@@ -1,0 +1,273 @@
+{
+  "cid": "sadness__07",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-10T17:11:20.920Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "i dont really know what im supposed to do here. a friend said this app helped her so. idk"
+    },
+    {
+      "role": "companion",
+      "content": "No rush, we can just start with whatever is here. \"I don't really know what I'm supposed to do\" feels like the main thing on the table."
+    },
+    {
+      "role": "user",
+      "content": "i mean the thing on the table is my girlfriend moved out two weeks ago. or ex i guess. so thats that"
+    },
+    {
+      "role": "companion",
+      "content": "That’s a lot to have sitting there, and “so that’s that” has a pretty final feel to it. Is it more like numb, shut down, or just hard to tell right now?"
+    },
+    {
+      "role": "user",
+      "content": "hard to tell honestly. i go to work, i come home, the flats just quiet. she took the cat too which is stupid to be upset about but here we are"
+    },
+    {
+      "role": "companion",
+      "content": "There’s a quietness to this that feels bigger than the words, and the cat sounds like it’s part of what went missing too. Is the flatness more like blank, drained, or detached?"
+    },
+    {
+      "role": "user",
+      "content": "drained probably. its weird, we were together 4 years and i think i knew it was ending for a while. so im not even shocked. just tired of it"
+    },
+    {
+      "role": "companion",
+      "content": "“Drained” fits, and I’m hearing less shock than the long wear of knowing it was ending for a while. It feels like the end itself and the months before it are tangled together here."
+    },
+    {
+      "role": "user",
+      "content": "yeah. thats it exactly actually. i grieved it before she even left if that makes sense. so now im just sort of waiting to feel something and theres nothing there"
+    },
+    {
+      "role": "companion",
+      "content": "That makes a lot of sense, grieving it before she even left can leave a kind of waiting with nothing to arrive. If you want, we can stay with that emptiness, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "lets leave it there i think. i didnt expect this to actually do anything but that landed. thanks. ill maybe come back"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it landed, and we can leave it there. Come back whenever you want."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bsfg931g5qidf",
+    "conversation_id": "sadness__07",
+    "timestamp": "2026-06-10T17:11:55.614Z",
+    "user_words_raw": "waiting to feel something",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "drained",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "girlfriend moved out after a long ending that had already started feeling real",
+    "appraisal_thought": "I already grieved this, and now I am waiting to feel something but there is nothing there.",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "User is wrapping up after talking about the end of a long relationship and feeling drained.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "i dont really know what im supposed to do here. a friend said this app helped her so. idk"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "No rush, we can just start with whatever is here. \"I don't really know what I'm supposed to do\" feels like the main thing on the table.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "using the app for the first time after a friend recommended it",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i mean the thing on the table is my girlfriend moved out two weeks ago. or ex i guess. so thats that"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That’s a lot to have sitting there, and “so that’s that” has a pretty final feel to it. Is it more like numb, shut down, or just hard to tell right now?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "girlfriend moved out two weeks ago",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "unclear",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "hard to tell honestly. i go to work, i come home, the flats just quiet. she took the cat too which is stupid to be upset about but here we are"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "There’s a quietness to this that feels bigger than the words, and the cat sounds like it’s part of what went missing too. Is the flatness more like blank, drained, or detached?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": "girlfriend moved out two weeks ago and took the cat",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "unclear",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "drained probably. its weird, we were together 4 years and i think i knew it was ending for a while. so im not even shocked. just tired of it"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "“Drained” fits, and I’m hearing less shock than the long wear of knowing it was ending for a while. It feels like the end itself and the months before it are tangled together here.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "drained",
+      "body_cue": [],
+      "trigger": "girlfriend moved out two weeks ago and took the cat",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "drained",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. thats it exactly actually. i grieved it before she even left if that makes sense. so now im just sort of waiting to feel something and theres nothing there"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That makes a lot of sense, grieving it before she even left can leave a kind of waiting with nothing to arrive. If you want, we can stay with that emptiness, or leave it here for now.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "drained",
+      "body_cue": [],
+      "trigger": "girlfriend moved out after a long ending that had already started feeling real",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "drained",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "lets leave it there i think. i didnt expect this to actually do anything but that landed. thanks. ill maybe come back"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad it landed, and we can leave it there. Come back whenever you want.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "drained",
+      "body_cue": [],
+      "trigger": "girlfriend moved out after a long ending that had already started feeling real",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

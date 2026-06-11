@@ -1,0 +1,185 @@
+{
+  "cid": "calm__01",
+  "emotion": "calm",
+  "persona": null,
+  "created": "2026-06-10T17:07:15.466Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "finally signed off on the project today. been dragging for weeks"
+    },
+    {
+      "role": "companion",
+      "content": "Finally signing off sounds like a real release after weeks of dragging."
+    },
+    {
+      "role": "user",
+      "content": "yeah. shoulders just dropped. didnt realize how tense id been"
+    },
+    {
+      "role": "companion",
+      "content": "That shoulder drop feels like the clearest sign of it. Does it feel more like settling, or like the tension is still unwinding?"
+    },
+    {
+      "role": "user",
+      "content": "settling i think. quiet. like i can breathe again"
+    },
+    {
+      "role": "companion",
+      "content": "Quiet, and like you can breathe again, points to a steadier kind of relief. I’m wondering if what it means is, for a moment, nothing is asking more of you?"
+    },
+    {
+      "role": "user",
+      "content": "yeah. thats it exactly. nothing else for tonight. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That feels complete, then. I’ll leave it here with you for tonight."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bn69e6mnti2nw",
+    "conversation_id": "calm__01",
+    "timestamp": "2026-06-10T17:07:32.514Z",
+    "user_words_raw": "nothing else for tonight",
+    "emotion_status": "confirmed",
+    "emotion_family": "calm",
+    "emotion_shade": "relief",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "signed off on the project today after weeks of dragging",
+    "appraisal_thought": "nothing else for tonight",
+    "body_cue": [
+      "can breathe again"
+    ],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "rest",
+      "closure"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "A project sign-off can bring a quiet sense of release and space.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "finally signed off on the project today. been dragging for weeks"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Finally signing off sounds like a real release after weeks of dragging.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "relief",
+      "body_cue": [],
+      "trigger": "signed off on the project today after weeks of dragging",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "calm",
+          "shade": "relief",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah. shoulders just dropped. didnt realize how tense id been"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That shoulder drop feels like the clearest sign of it. Does it feel more like settling, or like the tension is still unwinding?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "relief",
+      "body_cue": [
+        "shoulders just dropped",
+        "tense"
+      ],
+      "trigger": "signed off on the project today after weeks of dragging",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "settling i think. quiet. like i can breathe again"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Quiet, and like you can breathe again, points to a steadier kind of relief. I’m wondering if what it means is, for a moment, nothing is asking more of you?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "relief",
+      "body_cue": [
+        "can breathe again"
+      ],
+      "trigger": "signed off on the project today after weeks of dragging",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah. thats it exactly. nothing else for tonight. thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That feels complete, then. I’ll leave it here with you for tonight.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "calm",
+      "shade": "relief",
+      "body_cue": [
+        "can breathe again"
+      ],
+      "trigger": "signed off on the project today after weeks of dragging",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

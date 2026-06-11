@@ -2,202 +2,369 @@
   "cid": "flat__10",
   "emotion": "flat",
   "persona": null,
-  "created": "2026-06-09T18:26:39.831Z",
+  "created": "2026-06-10T22:12:02.803Z",
   "history": [
     {
       "role": "user",
-      "content": "hi. i dont really know why im here honestly. i guess i just feel kind of nothing lately and its weird"
+      "content": "i dont really know why im here. nothing feels wrong exactly. i just feel kind of flat lately. like nothing"
     },
     {
       "role": "companion",
-      "content": "Hey. That sounds like a weird kind of nothing — maybe blank, numb, or just hard to pin down. Does it feel more like nothing is there, or like it’s out of reach?"
+      "content": "That sounds very \"flat\", maybe even a bit blank or disconnected. We can keep it broad for now, or I can stay with the \"nothing\" if that feels truer."
     },
     {
       "role": "user",
-      "content": "i think out of reach? like its there somewhere but i cant get to it. ok so theres this thing. i got some bloodwork back a few weeks ago and theres stuff thats not normal and i have to do more tests and the doctor was kind of vague and i should be scared right, like a normal person would be freaking out, but i just... am not. i feel completely flat about it. and then theres this other part of me thats like weirdly annoyed at myself for not caring more. so both at once i guess"
+      "content": "the nothing i guess. its weird bc theres stuff i should be feeling something about. i had this health scare a few months back. they found something on a scan. ended up being ok mostly but"
     },
     {
       "role": "companion",
-      "content": "That sounds like flatness with a layer of annoyance at yourself — like the feeling is there, but distant. Does it feel more blank and detached, or more like you’re holding back a reaction?"
+      "content": "The \"nothing\" feels important here, especially with something as loaded as a health scare sitting in the background. I’m wondering if this is more like flatness, or something kept out of reach."
     },
     {
       "role": "user",
-      "content": "blank and detached i think. like im reading about someone elses test results. i told my sister on the phone and she got all teary and i was just sitting there like oh. nothing. and i kept waiting for it to hit me later, like in the shower or at 2am or whatever, and it just doesnt. its been almost three weeks. i go through the day fine, i eat, i work, i laugh at stuff, but underneath its just this gray nothing about the actual scary part. and the annoyed part is louder than the scared part which is so backwards"
+      "content": "kept out of reach maybe. like everyone kept saying thank god youre ok and i just nodded. but i didnt feel relief. i didnt feel scared either when it was happening. i just went thru the motions. appointments biopsies whatever. like it was happening to someone else. and now its over and im supposed to be grateful and i just feel. nothing. like a wall"
     },
     {
       "role": "companion",
-      "content": "That sounds really detached and gray, with the annoyed part standing nearer than the scared part. Is there anything in your body that goes with it at all, even faintly?"
+      "content": "That wall sounds like it kept everything at a distance, even while all the appointments and biopsies were happening. I can stay with that here."
     },
     {
       "role": "user",
-      "content": "huh. my body. i dunno. now that you say it theres maybe this kind of heavy thing in my chest, not like pain just... weight? like a flat stone sitting there. and my shoulders are always up by my ears lately but i dont feel anxious if that makes sense. its like my body got the memo that somethings wrong even tho my head refuses to. i havent really stopped to notice any of that til now. i kind of just keep moving so i dont have to sit in it"
+      "content": "yeah. and the thing is the wall was kind of useful you know? like i got thru it. i didnt fall apart. people said i was so strong. but now i cant find the door back. its like the wall just stayed. i go to work i eat i sleep but theres this glass between me and everything. i cant even cry about it. i tried. nothing comes"
     },
     {
       "role": "companion",
-      "content": "That sounds like a heavy, flat stone in your chest, with your body staying alert while your head stays far away from it. Did anything seem to set this off before the grayness started, or did it just arrive with the bloodwork?"
+      "content": "That sounds like the wall did two things at once, it helped you get through it and now it’s keeping you cut off from everything. I’m wondering if what you miss most is not the tears, but the sense of being back on the same side as your life."
     },
     {
       "role": "user",
-      "content": "i think it just arrived with the bloodwork. tho honestly maybe its not the first time. my mom was sick for a long time when i was a teenager and i remember being weirdly calm and useful the whole time while everyone fell apart, and people kept saying how strong i was. maybe i just learned to go flat when health stuff gets scary. like its a switch that flips. its kind of clicking for me a little, saying it out loud. the going numb isnt random, its like the oldest trick i have"
+      "content": "oh. yeah. thats. yeah thats it actually. being on the same side as my life. i hadnt thought of it like that. its not that i want to be sad about the cancer scare its that i want to be IN my life again. my partner hugs me and i feel like im watching it from across the room. my kid told me a joke last week and i laughed but i didnt feel the laugh if that makes sense"
     },
     {
       "role": "companion",
-      "content": "That makes sense — it sounds like this flatness may be a very familiar switch for health fear, not something random. If you want, we can stay with that old trick a little longer, or leave it here for now."
+      "content": "That makes sense, and it lands as more than sadness, it sounds like wanting to be back inside the moments with your partner and kid. I can stay with that, or we can keep following what “across the room” is like for you."
     },
     {
       "role": "user",
-      "content": "yeah i think id like to leave it here for now. thats kind of a lot already. but the switch thing, im gonna sit with that. thank you. i didnt expect to actually figure something out. ok. gonna go before it gets too real lol. thanks again"
+      "content": "across the room is. quiet. its not bad exactly thats the confusing part. its like being wrapped in cotton. muffled. i used to be a really feeling person you know? i cried at movies i got excited about dumb stuff. and now i keep waiting for it to come back like a tide thats gonna roll in and it just. doesnt. and im starting to wonder if this is just who i am now. if the scare broke something and it doesnt reset"
     },
     {
       "role": "companion",
-      "content": "That feels like enough for now, and it makes sense to let it rest there. I’m glad the switch got a little clearer; come back anytime if you want to look at it again."
+      "content": "Wrapped in cotton feels like the clearest part of this, muffled and quiet rather than bad. I’m here with that."
+    },
+    {
+      "role": "user",
+      "content": "yeah the fear is in there isnt it. that it wont come back. i dont say that part out loud to anyone. my partner would just worry and my friends already moved on from the whole thing like it was a chapter that closed. but for me its like the credits rolled and i never left the theater. sorry im rambling. its just been sitting in me for months and i havent really said it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds very alone, carrying the fear that it might not come back while everyone else has moved on. You do not need to apologise for saying it here."
+    },
+    {
+      "role": "user",
+      "content": "thank you. that actually. that helps more than i expected. the alone part is the worst of it i think. saying it here doesnt fix the cotton feeling but it feels a little less like im the only one in the theater. maybe ill bring it up with my doctor too. i kept thinking it was too small to mention. like im fine on paper so why complain"
+    },
+    {
+      "role": "companion",
+      "content": "The “too small to mention” part sounds important, and I’m glad the alone part got a little lighter here. We can leave it there, or stay with what it’s like to be fine on paper and not fine inside."
+    },
+    {
+      "role": "user",
+      "content": "lets leave it there i think. ive said the thing i needed to say. im kind of tired now but a good tired. thanks for sitting with me. ill come back i think"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it could rest here for now. Come back whenever you want, and we can pick it up from there."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6z1fkign3y7q84",
+    "id": "evt_mq8mj4wc2afkilx0",
     "conversation_id": "flat__10",
-    "timestamp": "2026-06-09T18:27:19.803Z",
-    "user_words_raw": "the oldest trick i have",
+    "timestamp": "2026-06-10T22:13:12.896Z",
+    "user_words_raw": "ive said the thing i needed to say",
     "emotion_status": "confirmed",
-    "emotion_family": "flat",
-    "emotion_shade": "detached",
-    "secondary_emotions": [
-      "pressure"
-    ],
-    "valence": "mixed",
+    "emotion_family": "hurt",
+    "emotion_shade": "left out",
+    "secondary_emotions": [],
+    "valence": "neutral",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "bloodwork came back not normal and more tests are needed",
-    "appraisal_thought": "this is the oldest trick i have",
-    "body_cue": [
-      "heavy thing in my chest",
-      "shoulders are always up by my ears"
-    ],
-    "behaviour_action": [
-      "keep moving so i dont have to sit in it"
-    ],
+    "trigger_event": "after the cancer scare, while other people moved on",
+    "appraisal_thought": "it might not come back, and it feels too small to mention",
+    "body_cue": [],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [
-      "clarity",
-      "space",
-      "permission not to know"
-    ],
+    "need_value": [],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Health scares seem to bring on a familiar flat switch; body stays tense while mind goes distant.",
+    "memory_note": "User feels less alone after naming the lingering post-scare disconnection and may come back later.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hi. i dont really know why im here honestly. i guess i just feel kind of nothing lately and its weird"
+      "content": "i dont really know why im here. nothing feels wrong exactly. i just feel kind of flat lately. like nothing"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey. That sounds like a weird kind of nothing — maybe blank, numb, or just hard to pin down. Does it feel more like nothing is there, or like it’s out of reach?",
-      "stage": "named",
-      "unlocked": false,
-      "family": "flat",
-      "shade": "unclear",
-      "body_cue": [],
-      "trigger": null
-    },
-    {
-      "turn": 2,
-      "role": "user",
-      "content": "i think out of reach? like its there somewhere but i cant get to it. ok so theres this thing. i got some bloodwork back a few weeks ago and theres stuff thats not normal and i have to do more tests and the doctor was kind of vague and i should be scared right, like a normal person would be freaking out, but i just... am not. i feel completely flat about it. and then theres this other part of me thats like weirdly annoyed at myself for not caring more. so both at once i guess"
-    },
-    {
-      "turn": 3,
-      "role": "companion",
-      "content": "That sounds like flatness with a layer of annoyance at yourself — like the feeling is there, but distant. Does it feel more blank and detached, or more like you’re holding back a reaction?",
-      "stage": "named",
+      "content": "That sounds very \"flat\", maybe even a bit blank or disconnected. We can keep it broad for now, or I can stay with the \"nothing\" if that feels truer.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "flat",
       "shade": "flat",
       "body_cue": [],
-      "trigger": "bloodwork came back not normal and the doctor was vague about more tests"
+      "trigger": null,
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "the nothing i guess. its weird bc theres stuff i should be feeling something about. i had this health scare a few months back. they found something on a scan. ended up being ok mostly but"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "The \"nothing\" feels important here, especially with something as loaded as a health scare sitting in the background. I’m wondering if this is more like flatness, or something kept out of reach.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": "health scare a few months back",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "flat",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "blank and detached i think. like im reading about someone elses test results. i told my sister on the phone and she got all teary and i was just sitting there like oh. nothing. and i kept waiting for it to hit me later, like in the shower or at 2am or whatever, and it just doesnt. its been almost three weeks. i go through the day fine, i eat, i work, i laugh at stuff, but underneath its just this gray nothing about the actual scary part. and the annoyed part is louder than the scared part which is so backwards"
+      "content": "kept out of reach maybe. like everyone kept saying thank god youre ok and i just nodded. but i didnt feel relief. i didnt feel scared either when it was happening. i just went thru the motions. appointments biopsies whatever. like it was happening to someone else. and now its over and im supposed to be grateful and i just feel. nothing. like a wall"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds really detached and gray, with the annoyed part standing nearer than the scared part. Is there anything in your body that goes with it at all, even faintly?",
-      "stage": "named",
+      "content": "That wall sounds like it kept everything at a distance, even while all the appointments and biopsies were happening. I can stay with that here.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "flat",
       "shade": "detached",
       "body_cue": [],
-      "trigger": "bloodwork came back not normal and more tests are needed"
+      "trigger": "health scare a few months back",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "huh. my body. i dunno. now that you say it theres maybe this kind of heavy thing in my chest, not like pain just... weight? like a flat stone sitting there. and my shoulders are always up by my ears lately but i dont feel anxious if that makes sense. its like my body got the memo that somethings wrong even tho my head refuses to. i havent really stopped to notice any of that til now. i kind of just keep moving so i dont have to sit in it"
+      "content": "yeah. and the thing is the wall was kind of useful you know? like i got thru it. i didnt fall apart. people said i was so strong. but now i cant find the door back. its like the wall just stayed. i go to work i eat i sleep but theres this glass between me and everything. i cant even cry about it. i tried. nothing comes"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That sounds like a heavy, flat stone in your chest, with your body staying alert while your head stays far away from it. Did anything seem to set this off before the grayness started, or did it just arrive with the bloodwork?",
+      "content": "That sounds like the wall did two things at once, it helped you get through it and now it’s keeping you cut off from everything. I’m wondering if what you miss most is not the tears, but the sense of being back on the same side as your life.",
       "stage": "understood",
       "unlocked": true,
       "family": "flat",
       "shade": "detached",
-      "body_cue": [
-        "heavy thing in my chest",
-        "flat stone sitting there",
-        "shoulders are always up by my ears"
+      "body_cue": [],
+      "trigger": "health scare a few months back",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "detached",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
       ],
-      "trigger": "bloodwork came back not normal and more tests are needed"
+      "mixed_confirmed": 0
     },
     {
       "turn": 8,
       "role": "user",
-      "content": "i think it just arrived with the bloodwork. tho honestly maybe its not the first time. my mom was sick for a long time when i was a teenager and i remember being weirdly calm and useful the whole time while everyone fell apart, and people kept saying how strong i was. maybe i just learned to go flat when health stuff gets scary. like its a switch that flips. its kind of clicking for me a little, saying it out loud. the going numb isnt random, its like the oldest trick i have"
+      "content": "oh. yeah. thats. yeah thats it actually. being on the same side as my life. i hadnt thought of it like that. its not that i want to be sad about the cancer scare its that i want to be IN my life again. my partner hugs me and i feel like im watching it from across the room. my kid told me a joke last week and i laughed but i didnt feel the laugh if that makes sense"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "That makes sense — it sounds like this flatness may be a very familiar switch for health fear, not something random. If you want, we can stay with that old trick a little longer, or leave it here for now.",
+      "content": "That makes sense, and it lands as more than sadness, it sounds like wanting to be back inside the moments with your partner and kid. I can stay with that, or we can keep following what “across the room” is like for you.",
       "stage": "understood",
       "unlocked": false,
       "family": "flat",
       "shade": "detached",
       "body_cue": [],
-      "trigger": "bloodwork came back not normal and more tests are needed; health scare seems to bring on the same flatness"
+      "trigger": "health scare and the aftermath of being told they're ok",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 10,
       "role": "user",
-      "content": "yeah i think id like to leave it here for now. thats kind of a lot already. but the switch thing, im gonna sit with that. thank you. i didnt expect to actually figure something out. ok. gonna go before it gets too real lol. thanks again"
+      "content": "across the room is. quiet. its not bad exactly thats the confusing part. its like being wrapped in cotton. muffled. i used to be a really feeling person you know? i cried at movies i got excited about dumb stuff. and now i keep waiting for it to come back like a tide thats gonna roll in and it just. doesnt. and im starting to wonder if this is just who i am now. if the scare broke something and it doesnt reset"
     },
     {
       "turn": 11,
       "role": "companion",
-      "content": "That feels like enough for now, and it makes sense to let it rest there. I’m glad the switch got a little clearer; come back anytime if you want to look at it again.",
+      "content": "Wrapped in cotton feels like the clearest part of this, muffled and quiet rather than bad. I’m here with that.",
       "stage": "understood",
       "unlocked": false,
       "family": "flat",
-      "shade": "detached",
-      "body_cue": [
-        "heavy thing in my chest",
-        "shoulders are always up by my ears"
+      "shade": "muted",
+      "body_cue": [],
+      "trigger": "health scare and aftermath",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "muted",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
       ],
-      "trigger": "bloodwork came back not normal and more tests are needed"
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "yeah the fear is in there isnt it. that it wont come back. i dont say that part out loud to anyone. my partner would just worry and my friends already moved on from the whole thing like it was a chapter that closed. but for me its like the credits rolled and i never left the theater. sorry im rambling. its just been sitting in me for months and i havent really said it"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That sounds very alone, carrying the fear that it might not come back while everyone else has moved on. You do not need to apologise for saying it here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "fear",
+      "body_cue": [],
+      "trigger": "after the health scare, while everyone else seemed to move on",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "fear",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "flat",
+          "shade": "muted",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "thank you. that actually. that helps more than i expected. the alone part is the worst of it i think. saying it here doesnt fix the cotton feeling but it feels a little less like im the only one in the theater. maybe ill bring it up with my doctor too. i kept thinking it was too small to mention. like im fine on paper so why complain"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "The “too small to mention” part sounds important, and I’m glad the alone part got a little lighter here. We can leave it there, or stay with what it’s like to be fine on paper and not fine inside.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [],
+      "trigger": "after the cancer scare, while other people moved on",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "left out",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": "fear",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "lets leave it there i think. ive said the thing i needed to say. im kind of tired now but a good tired. thanks for sitting with me. ill come back i think"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "I’m glad it could rest here for now. Come back whenever you want, and we can pick it up from there.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "left out",
+      "body_cue": [],
+      "trigger": "after the cancer scare, while other people moved on",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

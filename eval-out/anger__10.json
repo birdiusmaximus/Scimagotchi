@@ -2,195 +2,352 @@
   "cid": "anger__10",
   "emotion": "anger",
   "persona": null,
-  "created": "2026-06-09T18:17:05.734Z",
+  "created": "2026-06-10T22:08:24.810Z",
   "history": [
     {
       "role": "user",
-      "content": "ok so i dont even know why im opening this. just had my third doctors appointment in like two months and again they basically shrugged at me. another referral, another wait, another we'll see. im so tired of it"
+      "content": "ok i dont even know why im opening this but i need to vent before i throw my phone. been dealing with this stupid health thing for MONTHS now and i just got off the phone with the specialist office again"
     },
     {
       "role": "companion",
-      "content": "That sounds exhausting — like you’ve been handed one more wait after another. Is it mostly tiredness, or more of a frustrated kind of tired?"
+      "content": "That sounds exhausting, especially after months of it, and then being back on the phone with the specialist office again. I’m here to listen, if you want to keep venting."
     },
     {
       "role": "user",
-      "content": "no its not tired tired. im ANGRY. like properly angry. ive been telling them for months somethings wrong with my stomach, cant eat properly, lost a bunch of weight, and they keep acting like im imagining it or its just stress. and today the guy literally didnt even look up from his screen"
+      "content": "no its not just exhausting its making me FURIOUS. like im not overwhelmed im pissed. they cancelled my appointment AGAIN. third time. ive been waiting since february to find out what this thing in my chest is and every time im finally close they just bump me to next month like im nothing"
     },
     {
       "role": "companion",
-      "content": "That sounds like anger with a sharp edge of being dismissed — especially after months of trying to get them to take your stomach seriously. Did it make you want to snap, or just feel hotter and more tense inside?"
+      "content": "You’re furious, and the third cancellation after waiting since February feels like being pushed aside again and again. If you want, you can keep going with it or we can just leave it there for now."
     },
     {
       "role": "user",
-      "content": "honestly both? i sat in the parking lot after and just gripped the wheel. didnt snap at him cos whats the point theyd just write me down as difficult. but heres the thing that gets me and i feel stupid even saying it... underneath the angry im kind of scared. like what if theres actually something really wrong and theyre missing it cos they cant be bothered to look properly"
+      "content": "yeah keep going. and the thing is i CANT even be properly angry at anyone because the receptionist is just a person doing her job and the doctor is overbooked and its the system right its always the system. so i just sit here being polite on the phone saying oh ok thats fine i understand when its NOT fine. nothing about this is fine"
     },
     {
       "role": "companion",
-      "content": "That sounds like anger with fear underneath it — gripping the wheel while also worrying they’re missing something serious. Want to stay with the fear a little, or leave it here for now?"
+      "content": "You’re having to stay polite while everything in you says it is not fine, and that clash sounds intense. I’m curious whether the anger is more hot and ready to push back, or more tight and trapped."
     },
     {
       "role": "user",
-      "content": "i dont know. the fear is the part i cant control so i think thats why i keep landing back on angry, cos at least angry feels like im doing something? like the anger is easier to hold than just sitting there terrified that im not being heard. but yeah. both are real. its been a rough couple months and im just so done with not being believed"
+      "content": "trapped. definitely trapped. like theres all this heat with nowhere to go. i lie awake at night googling symptoms which i KNOW i shouldnt do and then i get up and ive got work and i cant tell anyone because what do i even say, hey i might have something serious but also i dont know anything because nobody will TELL me. its the not knowing thats eating me. 4 months of not knowing"
     },
     {
       "role": "companion",
-      "content": "That makes sense — the anger feels like something you can hold, while the fear is just sitting there wanting to be believed. If you want, we can stay with what “not being believed” has come to mean for you, or leave it here."
+      "content": "That sounds like anger holding a lot of fear underneath it, and the worst part is the not knowing. If you want, we can stay with that trapped feeling, or leave it here for now."
     },
     {
       "role": "user",
-      "content": "yeah not being believed is the whole thing isnt it. its like everytime i go in i have to prove im sick enough to deserve them looking. and i shouldnt have to fight that hard. anyway i think ive got a new referral coming so i guess ill push on that one and actually write everything down this time so they cant brush me off. saying it out loud helps a bit weirdly"
+      "content": "ok yeah. the fear thing. i didnt want to say it but yeah. its easier to be angry than scared honestly. when im angry at the hospital at least i feel like im DOING something even if im not. the scared version of me just feels like a little kid who wants someone to hold their hand and tell them its gonna be ok and nobody can do that right now. so i pick angry. angry feels stronger"
     },
     {
       "role": "companion",
-      "content": "That sounds like the whole knot: having to prove you’re sick enough just to be looked at. We can leave it there, or stay with what “not being believed” has been costing you."
+      "content": "Anger feels like the stronger one, and the scared part sounds younger, like it wants a hand to hold. We can stay with that, or leave it here if that’s enough for now."
     },
     {
       "role": "user",
-      "content": "nah lets leave it there i think. i feel a bit less like im gonna explode which is something. thanks for letting me dump all that. gonna go write my list before i forget. cheers"
+      "content": "i think i can stay a minute more. its weird saying all this out loud even just typing it. the angry part isnt gonna go away because honestly they DESERVE some anger, four cancellations is genuinely not ok, im allowed to be mad about that. but i guess i dont have to pretend the scared part isnt there too. both can be true. the mad one is kind of protecting the scared one from having to just sit there alone"
     },
     {
       "role": "companion",
-      "content": "Of course — it sounds like you got some shape around it, and I’m glad you could let it spill out here. Go write your list; we can pick this up again anytime."
+      "content": "That makes a lot of sense, the mad part is guarding the scared one so it doesn’t have to sit there alone. I can stay with that, or we can leave it right there."
+    },
+    {
+      "role": "user",
+      "content": "yeah i think i can actually leave it there now. i feel a bit less like im gonna explode. the appointment is rebooked for the 28th and i cant do anything til then so. ill just have to carry both of em around til i know more i guess. thanks for letting me dump all that, i really needed somewhere to put it"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, and I’m glad you had somewhere to put it. Carrying both of them until the 28th sounds like a lot, and you don’t have to keep it all packed away alone tonight."
+    },
+    {
+      "role": "user",
+      "content": "thanks. that means more than you know. ok im gonna try to sleep without googling anything for once lol. night"
+    },
+    {
+      "role": "companion",
+      "content": "Night. I’m glad it got a little quieter for tonight."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yp4vzmjossvj8",
+    "id": "evt_mq8megxc7wpowr2p",
     "conversation_id": "anger__10",
-    "timestamp": "2026-06-09T18:17:51.428Z",
-    "user_words_raw": "not being believed",
+    "timestamp": "2026-06-10T22:09:18.244Z",
+    "user_words_raw": "try to sleep without googling anything",
     "emotion_status": "confirmed",
-    "emotion_family": "anger",
-    "emotion_shade": "anger",
-    "secondary_emotions": [
-      "fear"
-    ],
-    "valence": "mixed",
-    "activation": "high",
+    "emotion_family": "calm",
+    "emotion_shade": "settled",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "being dismissed and not believed by doctors about stomach symptoms and weight loss",
-    "appraisal_thought": "I have to prove I’m sick enough to deserve being looked at",
+    "trigger_event": "appointment rebooked for the 28th after repeated cancellations and weeks of not knowing",
+    "appraisal_thought": "the waiting is still there, and the fear is still with it",
     "body_cue": [],
-    "behaviour_action": [
-      "gripped the wheel"
-    ],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
-      "being believed",
-      "attention",
-      "care",
-      "fairness"
+      "rest"
     ],
-    "confidence_level": "high",
+    "confidence_level": "medium",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [
+      "overwhelmed"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Ongoing frustration and fear about not being believed by doctors about stomach symptoms and weight loss; a new referral is coming.",
+    "memory_note": "User had a long stretch of fear and anger around repeated appointment cancellations and uncertainty, then settled enough to rest for the night.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "ok so i dont even know why im opening this. just had my third doctors appointment in like two months and again they basically shrugged at me. another referral, another wait, another we'll see. im so tired of it"
+      "content": "ok i dont even know why im opening this but i need to vent before i throw my phone. been dealing with this stupid health thing for MONTHS now and i just got off the phone with the specialist office again"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds exhausting — like you’ve been handed one more wait after another. Is it mostly tiredness, or more of a frustrated kind of tired?",
-      "stage": "named",
+      "content": "That sounds exhausting, especially after months of it, and then being back on the phone with the specialist office again. I’m here to listen, if you want to keep venting.",
+      "stage": "shaped",
       "unlocked": false,
       "family": "pressure",
       "shade": "overwhelmed",
       "body_cue": [],
-      "trigger": "third doctors appointment and another referral/wait"
+      "trigger": "getting off the phone with the specialist office again after months dealing with a health issue",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": "frustrated",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "no its not tired tired. im ANGRY. like properly angry. ive been telling them for months somethings wrong with my stomach, cant eat properly, lost a bunch of weight, and they keep acting like im imagining it or its just stress. and today the guy literally didnt even look up from his screen"
+      "content": "no its not just exhausting its making me FURIOUS. like im not overwhelmed im pissed. they cancelled my appointment AGAIN. third time. ive been waiting since february to find out what this thing in my chest is and every time im finally close they just bump me to next month like im nothing"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds like anger with a sharp edge of being dismissed — especially after months of trying to get them to take your stomach seriously. Did it make you want to snap, or just feel hotter and more tense inside?",
-      "stage": "named",
-      "unlocked": false,
+      "content": "You’re furious, and the third cancellation after waiting since February feels like being pushed aside again and again. If you want, you can keep going with it or we can just leave it there for now.",
+      "stage": "understood",
+      "unlocked": true,
       "family": "anger",
-      "shade": "frustrated",
+      "shade": "furious",
       "body_cue": [],
-      "trigger": "being dismissed at the doctors after months of stomach symptoms and weight loss"
+      "trigger": "the specialist office cancelled the appointment again after months of waiting",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "furious",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "honestly both? i sat in the parking lot after and just gripped the wheel. didnt snap at him cos whats the point theyd just write me down as difficult. but heres the thing that gets me and i feel stupid even saying it... underneath the angry im kind of scared. like what if theres actually something really wrong and theyre missing it cos they cant be bothered to look properly"
+      "content": "yeah keep going. and the thing is i CANT even be properly angry at anyone because the receptionist is just a person doing her job and the doctor is overbooked and its the system right its always the system. so i just sit here being polite on the phone saying oh ok thats fine i understand when its NOT fine. nothing about this is fine"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds like anger with fear underneath it — gripping the wheel while also worrying they’re missing something serious. Want to stay with the fear a little, or leave it here for now?",
+      "content": "You’re having to stay polite while everything in you says it is not fine, and that clash sounds intense. I’m curious whether the anger is more hot and ready to push back, or more tight and trapped.",
       "stage": "understood",
-      "unlocked": true,
-      "family": "fear",
-      "shade": "scared",
-      "body_cue": [
-        "gripped the wheel"
-      ],
-      "trigger": "they’re missing it because they didn’t look properly"
+      "unlocked": false,
+      "family": "anger",
+      "shade": "furious",
+      "body_cue": [],
+      "trigger": "being told the appointment was cancelled again after months of waiting",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "i dont know. the fear is the part i cant control so i think thats why i keep landing back on angry, cos at least angry feels like im doing something? like the anger is easier to hold than just sitting there terrified that im not being heard. but yeah. both are real. its been a rough couple months and im just so done with not being believed"
+      "content": "trapped. definitely trapped. like theres all this heat with nowhere to go. i lie awake at night googling symptoms which i KNOW i shouldnt do and then i get up and ive got work and i cant tell anyone because what do i even say, hey i might have something serious but also i dont know anything because nobody will TELL me. its the not knowing thats eating me. 4 months of not knowing"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense — the anger feels like something you can hold, while the fear is just sitting there wanting to be believed. If you want, we can stay with what “not being believed” has come to mean for you, or leave it here.",
+      "content": "That sounds like anger holding a lot of fear underneath it, and the worst part is the not knowing. If you want, we can stay with that trapped feeling, or leave it here for now.",
       "stage": "understood",
       "unlocked": false,
-      "family": "fear",
-      "shade": "scared",
+      "family": "anger",
+      "shade": "trapped",
       "body_cue": [],
-      "trigger": "being dismissed by doctors about stomach symptoms and weight loss"
+      "trigger": "4 months of not knowing what is going on with the thing in their chest",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "trapped",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": "unclear",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 8,
       "role": "user",
-      "content": "yeah not being believed is the whole thing isnt it. its like everytime i go in i have to prove im sick enough to deserve them looking. and i shouldnt have to fight that hard. anyway i think ive got a new referral coming so i guess ill push on that one and actually write everything down this time so they cant brush me off. saying it out loud helps a bit weirdly"
+      "content": "ok yeah. the fear thing. i didnt want to say it but yeah. its easier to be angry than scared honestly. when im angry at the hospital at least i feel like im DOING something even if im not. the scared version of me just feels like a little kid who wants someone to hold their hand and tell them its gonna be ok and nobody can do that right now. so i pick angry. angry feels stronger"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "That sounds like the whole knot: having to prove you’re sick enough just to be looked at. We can leave it there, or stay with what “not being believed” has been costing you.",
+      "content": "Anger feels like the stronger one, and the scared part sounds younger, like it wants a hand to hold. We can stay with that, or leave it here if that’s enough for now.",
       "stage": "understood",
       "unlocked": false,
-      "family": "fear",
-      "shade": "scared",
+      "family": "anger",
+      "shade": "protective",
       "body_cue": [],
-      "trigger": "being dismissed and not believed by doctors about stomach symptoms and weight loss"
+      "trigger": "waiting months without answers about a chest symptom and repeated appointment cancellations",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "protective",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": "scared",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
     },
     {
       "turn": 10,
       "role": "user",
-      "content": "nah lets leave it there i think. i feel a bit less like im gonna explode which is something. thanks for letting me dump all that. gonna go write my list before i forget. cheers"
+      "content": "i think i can stay a minute more. its weird saying all this out loud even just typing it. the angry part isnt gonna go away because honestly they DESERVE some anger, four cancellations is genuinely not ok, im allowed to be mad about that. but i guess i dont have to pretend the scared part isnt there too. both can be true. the mad one is kind of protecting the scared one from having to just sit there alone"
     },
     {
       "turn": 11,
       "role": "companion",
-      "content": "Of course — it sounds like you got some shape around it, and I’m glad you could let it spill out here. Go write your list; we can pick this up again anytime.",
+      "content": "That makes a lot of sense, the mad part is guarding the scared one so it doesn’t have to sit there alone. I can stay with that, or we can leave it right there.",
       "stage": "understood",
       "unlocked": false,
       "family": "anger",
-      "shade": "anger",
+      "shade": "protective",
       "body_cue": [],
-      "trigger": "being dismissed and not believed by doctors about stomach symptoms and weight loss"
+      "trigger": "repeated appointment cancellations and waiting months without answers about a chest symptom",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "protective",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "yeah i think i can actually leave it there now. i feel a bit less like im gonna explode. the appointment is rebooked for the 28th and i cant do anything til then so. ill just have to carry both of em around til i know more i guess. thanks for letting me dump all that, i really needed somewhere to put it"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "Of course, and I’m glad you had somewhere to put it. Carrying both of them until the 28th sounds like a lot, and you don’t have to keep it all packed away alone tonight.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "protective",
+      "body_cue": [],
+      "trigger": "appointment rebooked for the 28th after repeated cancellations and weeks of not knowing",
+      "label_source": "user_confirmed",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "protective",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "fear",
+          "shade": "null",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "thanks. that means more than you know. ok im gonna try to sleep without googling anything for once lol. night"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "Night. I’m glad it got a little quieter for tonight.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "calm",
+      "shade": "settled",
+      "body_cue": [],
+      "trigger": "appointment rebooked for the 28th after repeated cancellations and weeks of not knowing",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

@@ -2,67 +2,74 @@
   "cid": "joy__05",
   "emotion": "joy",
   "persona": null,
-  "created": "2026-06-09T17:41:51.212Z",
+  "created": "2026-06-10T22:04:40.370Z",
   "history": [
     {
       "role": "user",
-      "content": "idk why im even opening this lol. nothing's wrong really"
+      "content": "ok so i was cleaning out my parents garage today and found a box of my old demo cds from this band i was in at like 19. cringe but also kind of amazing lol"
     },
     {
       "role": "companion",
-      "content": "That sounds like a very light, half-curious kind of opening. What pulled you in just now?"
+      "content": "Cringe and kind of amazing sounds like a very real mix. I’m curious whether one part of that hit as embarrassment, or whether it was more like surprise at running into an old version of you?"
     },
     {
       "role": "user",
-      "content": "dunno. boredom probably. or my thumbs needed a hobby"
+      "content": "no honestly not embarrassed at all, thats the weird part. i put it on expecting to laugh and it actually sorta slaps?? like 19 year old me had it kinda figured out lol"
     },
     {
       "role": "companion",
-      "content": "That sounds pretty plain and restless, maybe just looking for something to do. Is it more boredom, or more that your thumbs wanted a job?"
+      "content": "That feels more like delight with a little surprise in it. Nineteen-year-old you getting to sound better than expected is a pretty sweet twist."
     },
     {
       "role": "user",
-      "content": "ok fine it's not boredom. i found an old mixtape my brother made me when i was like 14. dumb little thing. been stuck in my head all day"
+      "content": "yeah. theres a flip side tho. we all just... stopped. everyone got jobs and moved and i kinda just let it die without even noticing? so im proud of it and also like, oof, what was i thinking giving that up"
     },
     {
       "role": "companion",
-      "content": "That doesn’t sound dumb at all — it sounds like it caught something old and stayed there. Is it more sweet, or more aching?"
+      "content": "I’m holding both, then, pride and that “oof” of regret can sit together here. Did they feel side by side, or is the regret sitting underneath the pride?"
     },
     {
       "role": "user",
-      "content": "nah it's good. made me grin like an idiot in the kitchen. he put the worst songs on there on purpose to annoy me lol. kind of love that"
+      "content": "ha the regrets def underneath. like the pride is the loud one. the sad bit only shows up when i think about the fact that the cd has a song on it i genuinely cant write anymore, idk how to explain it. ill spare you the whole midlife crisis tho"
     },
     {
       "role": "companion",
-      "content": "That has a warm, teasing kind of feel to it — like being grinning and annoyed-at-the-same-time in a good way. What was it about that little prank that hit you?"
+      "content": "The pride is the loud one, and the sad bit only showing up around that song has a very specific edge to it. You can spare me the whole midlife crisis, or say a little more if you want."
     },
     {
       "role": "user",
-      "content": "eh i think it's just that he still gets me, even from back then. anyway this got soft fast lol. gonna go text him before i start crying into the dishes. thanks weird app"
+      "content": "i think its just that the song came from being 19 and broke and convinced wed make it, and i cant fake that feeling now. but honestly hearing it again felt less like grief and more like, oh there you are. proud of that kid. thats enough crying into a garage box for one day lol"
     },
     {
       "role": "companion",
-      "content": "That makes sense — it sounds like being seen by him from way back there landed pretty hard, in a good way. You can leave it here, or tell me what part of it feels closest if you want to stay with it."
+      "content": "That “oh, there you are” feels like a real homecoming to that kid. And “proud of that kid” lands like the part that wants to let it rest here for today."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. oh there you are is exactly it. thanks, this helped more than a garage cleanout had any right to. gonna go rip these to mp3 before they crumble lol"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad we found the words for it, and may the mp3 mission go smoothly."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6xfstevuus51z8",
+    "id": "evt_mq8m9ojfwyapuq29",
     "conversation_id": "joy__05",
-    "timestamp": "2026-06-09T17:42:17.209Z",
-    "user_words_raw": "he still gets me",
+    "timestamp": "2026-06-10T22:05:20.116Z",
+    "user_words_raw": "oh there you are",
     "emotion_status": "confirmed",
     "emotion_family": "joy",
-    "emotion_shade": "touched",
+    "emotion_shade": "content",
     "secondary_emotions": [
-      "grateful",
-      "fond"
+      "joy"
     ],
     "valence": "positive",
-    "activation": "medium",
+    "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "found an old mixtape their brother made when they were 14",
-    "appraisal_thought": "he still gets me, even from back then",
+    "trigger_event": "hearing an old demo song from when they were 19 and broke",
+    "appraisal_thought": "oh there you are",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
@@ -70,99 +77,212 @@
     "social_context": [],
     "need_value": [
       "connection",
-      "being seen",
-      "belonging"
+      "continuity",
+      "recognition"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [
+      "embarrassed"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "old sibling mixtape brought up feeling seen across time",
+    "memory_note": "Old demo music can bring pride, nostalgia, and a quiet sense of recognition for them.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "idk why im even opening this lol. nothing's wrong really"
+      "content": "ok so i was cleaning out my parents garage today and found a box of my old demo cds from this band i was in at like 19. cringe but also kind of amazing lol"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds like a very light, half-curious kind of opening. What pulled you in just now?",
-      "stage": "noticed",
+      "content": "Cringe and kind of amazing sounds like a very real mix. I’m curious whether one part of that hit as embarrassment, or whether it was more like surprise at running into an old version of you?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": null,
-      "shade": null,
+      "family": "shame",
+      "shade": "embarrassed",
       "body_cue": [],
-      "trigger": null
+      "trigger": "finding old demo CDs from a band they were in at 19",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "embarrassed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "joy",
+          "shade": "amazed",
+          "salience": "equal",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "dunno. boredom probably. or my thumbs needed a hobby"
+      "content": "no honestly not embarrassed at all, thats the weird part. i put it on expecting to laugh and it actually sorta slaps?? like 19 year old me had it kinda figured out lol"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds pretty plain and restless, maybe just looking for something to do. Is it more boredom, or more that your thumbs wanted a job?",
-      "stage": "understood",
-      "unlocked": true,
-      "family": "flat",
-      "shade": "restless",
+      "content": "That feels more like delight with a little surprise in it. Nineteen-year-old you getting to sound better than expected is a pretty sweet twist.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "delighted",
       "body_cue": [],
-      "trigger": "opening this"
+      "trigger": "putting on the old demo CDs and hearing them ",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "delighted",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "calm",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "ok fine it's not boredom. i found an old mixtape my brother made me when i was like 14. dumb little thing. been stuck in my head all day"
+      "content": "yeah. theres a flip side tho. we all just... stopped. everyone got jobs and moved and i kinda just let it die without even noticing? so im proud of it and also like, oof, what was i thinking giving that up"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That doesn’t sound dumb at all — it sounds like it caught something old and stayed there. Is it more sweet, or more aching?",
-      "stage": "understood",
+      "content": "I’m holding both, then, pride and that “oof” of regret can sit together here. Did they feel side by side, or is the regret sitting underneath the pride?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "sadness",
-      "shade": "restless",
+      "family": "joy",
+      "shade": "proud",
       "body_cue": [],
-      "trigger": "found an old mixtape from their brother"
+      "trigger": "finding the old demo CDs and hearing the music after the band had faded out",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "proud",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "nah it's good. made me grin like an idiot in the kitchen. he put the worst songs on there on purpose to annoy me lol. kind of love that"
+      "content": "ha the regrets def underneath. like the pride is the loud one. the sad bit only shows up when i think about the fact that the cd has a song on it i genuinely cant write anymore, idk how to explain it. ill spare you the whole midlife crisis tho"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That has a warm, teasing kind of feel to it — like being grinning and annoyed-at-the-same-time in a good way. What was it about that little prank that hit you?",
+      "content": "The pride is the loud one, and the sad bit only showing up around that song has a very specific edge to it. You can spare me the whole midlife crisis, or say a little more if you want.",
       "stage": "understood",
-      "unlocked": false,
+      "unlocked": true,
       "family": "joy",
-      "shade": "fond",
+      "shade": "proud",
       "body_cue": [],
-      "trigger": "found an old mixtape made by their brother"
+      "trigger": "thinking about the CD having a song they genuinely can't write anymore",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "proud",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": "sad",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 8,
       "role": "user",
-      "content": "eh i think it's just that he still gets me, even from back then. anyway this got soft fast lol. gonna go text him before i start crying into the dishes. thanks weird app"
+      "content": "i think its just that the song came from being 19 and broke and convinced wed make it, and i cant fake that feeling now. but honestly hearing it again felt less like grief and more like, oh there you are. proud of that kid. thats enough crying into a garage box for one day lol"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "That makes sense — it sounds like being seen by him from way back there landed pretty hard, in a good way. You can leave it here, or tell me what part of it feels closest if you want to stay with it.",
+      "content": "That “oh, there you are” feels like a real homecoming to that kid. And “proud of that kid” lands like the part that wants to let it rest here for today.",
       "stage": "understood",
       "unlocked": false,
       "family": "joy",
-      "shade": "touched",
+      "shade": "proud",
       "body_cue": [],
-      "trigger": "found an old mixtape their brother made when they were 14"
+      "trigger": "hearing an old demo song from when they were 19 and broke, written from a feeling they can't fake now",
+      "label_source": "user_confirmed",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "proud",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it there. oh there you are is exactly it. thanks, this helped more than a garage cleanout had any right to. gonna go rip these to mp3 before they crumble lol"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad we found the words for it, and may the mp3 mission go smoothly.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "joy",
+      "shade": "content",
+      "body_cue": [],
+      "trigger": "hearing an old demo song from when they were 19 and broke",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

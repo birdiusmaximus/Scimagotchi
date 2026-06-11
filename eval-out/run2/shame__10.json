@@ -1,0 +1,355 @@
+{
+  "cid": "shame__10",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-10T19:23:45.076Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hi. i dont really know why im here. its kind of stupid"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, glad you came anyway. “I don’t really know why I’m here” carries something already, and it doesn’t sound stupid to me."
+    },
+    {
+      "role": "user",
+      "content": "i guess. ok so. i went to the doctor last week for the first time in like 3 years and my bloodwork came back bad. like really bad. prediabetic, cholesterol all wrong, liver stuff. and the whole time the dr was just kind of looking at me you know"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a lot to have land at once, and the part where the doctor was just kind of looking at you feels important. What felt strongest in that moment, the bad numbers or being looked at like that?"
+    },
+    {
+      "role": "user",
+      "content": "the look. definitely the look. like i KNOW i did this to myself. ive let myself go so bad the last few years, takeout every night, no exercise, i used to be someone who ran. and now im this. the numbers are just proof of what a mess i am honestly"
+    },
+    {
+      "role": "companion",
+      "content": "The look seems to be the sharpest part, and “proof of what a mess I am” carries a lot of shame in it. Want to stay with that look, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "no i can stay with it. its just. ive been avoiding the doctor for YEARS because i didnt want to hear it. and part of me is so embarrassed bc everyone keeps saying how its all preventable, like my mom died of diabetes complications and i watched it and i still did this to myself anyway. how stupid is that. who does that"
+    },
+    {
+      "role": "companion",
+      "content": "There’s shame here, and also a harsh self-blame that seems tied to your mom and to being seen as having known better. I’m wondering if this feels more like wanting to hide, or more like wanting to punish yourself?"
+    },
+    {
+      "role": "user",
+      "content": "punish i think. like theres this voice that just goes you deserve this, you watched her suffer and you did nothing different, youre weak. i havent told anyone the results. not my husband not my sister. i just keep the lab printout in my bag and look at it like its my report card and im failing"
+    },
+    {
+      "role": "companion",
+      "content": "That “report card” image feels like the moment turning into judgment, not just bad news. I’m learning this has a punishing, self-critical edge, and it makes you want to keep it hidden."
+    },
+    {
+      "role": "user",
+      "content": "yeah. and the hiding makes it worse right bc now im also lying by not saying anything. my husband keeps asking how the appt went and i just say fine. im so ashamed i cant even let the person who loves me see it. what kind of person hides from their own husband"
+    },
+    {
+      "role": "companion",
+      "content": "“My husband keeps asking” and you answering “fine” feels like the hiding has become part of the burden. What you’re holding is not just the results, but the shame of keeping them out of sight."
+    },
+    {
+      "role": "user",
+      "content": "i dont even know how to start the convo. and underneath all of it is this thing i dont say out loud which is like. maybe im just someone who ruins things. my body, my moms memory by not learning from it, the trust with my husband. i look in the mirror and i genuinely dont like the person looking back. like at all"
+    },
+    {
+      "role": "companion",
+      "content": "That lands as more than embarrassment, it sounds like shame that has started to speak in identity terms, about “someone who ruins things.” Do you want to stay with that voice, or leave it here for now?"
+    },
+    {
+      "role": "user",
+      "content": "honestly i think ive said the thing i needed to say. i dont know how to fix the voice but its weird to have it out of my head for a sec. saying it here where no one knows me makes it feel a little less huge i guess"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it could sit outside your head for a moment, even if only here. We can leave it there, or if you want, we can stay with what makes it feel less huge."
+    },
+    {
+      "role": "user",
+      "content": "lets leave it there for now. i think im gonna try to tell my sister this week. baby step. thank you for not making me feel like the mess i told you i was. ok. bye"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like a careful place to stop, and I’ll leave it there with you. Take the baby step in your own time."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8gip9uihlh7cix",
+    "conversation_id": "shame__10",
+    "timestamp": "2026-06-10T19:24:51.911Z",
+    "user_words_raw": "baby step",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "self-critical",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "thinking about the hidden results, the appointment, and the mirror",
+    "appraisal_thought": "i dont like the person looking back",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "dignity",
+      "acceptance",
+      "belonging"
+    ],
+    "confidence_level": "medium",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "User has been carrying shame about hidden medical results and family trust, and may tell a sister this week.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hi. i dont really know why im here. its kind of stupid"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, glad you came anyway. “I don’t really know why I’m here” carries something already, and it doesn’t sound stupid to me.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i guess. ok so. i went to the doctor last week for the first time in like 3 years and my bloodwork came back bad. like really bad. prediabetic, cholesterol all wrong, liver stuff. and the whole time the dr was just kind of looking at me you know"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like a lot to have land at once, and the part where the doctor was just kind of looking at you feels important. What felt strongest in that moment, the bad numbers or being looked at like that?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "doctor visit and bad bloodwork results",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "the look. definitely the look. like i KNOW i did this to myself. ive let myself go so bad the last few years, takeout every night, no exercise, i used to be someone who ran. and now im this. the numbers are just proof of what a mess i am honestly"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "The look seems to be the sharpest part, and “proof of what a mess I am” carries a lot of shame in it. Want to stay with that look, or leave it here for now?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [],
+      "trigger": "doctor visit and bad bloodwork results",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "shame",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "no i can stay with it. its just. ive been avoiding the doctor for YEARS because i didnt want to hear it. and part of me is so embarrassed bc everyone keeps saying how its all preventable, like my mom died of diabetes complications and i watched it and i still did this to myself anyway. how stupid is that. who does that"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "There’s shame here, and also a harsh self-blame that seems tied to your mom and to being seen as having known better. I’m wondering if this feels more like wanting to hide, or more like wanting to punish yourself?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "doctor visit and bad bloodwork results",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "self-critical",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": "sad",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "punish i think. like theres this voice that just goes you deserve this, you watched her suffer and you did nothing different, youre weak. i havent told anyone the results. not my husband not my sister. i just keep the lab printout in my bag and look at it like its my report card and im failing"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That “report card” image feels like the moment turning into judgment, not just bad news. I’m learning this has a punishing, self-critical edge, and it makes you want to keep it hidden.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "doctor visit and bad bloodwork results",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "self-critical",
+          "salience": "foreground",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. and the hiding makes it worse right bc now im also lying by not saying anything. my husband keeps asking how the appt went and i just say fine. im so ashamed i cant even let the person who loves me see it. what kind of person hides from their own husband"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "“My husband keeps asking” and you answering “fine” feels like the hiding has become part of the burden. What you’re holding is not just the results, but the shame of keeping them out of sight.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "ashamed",
+      "body_cue": [],
+      "trigger": "husband asking how the appointment went after bad bloodwork",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 12,
+      "role": "user",
+      "content": "i dont even know how to start the convo. and underneath all of it is this thing i dont say out loud which is like. maybe im just someone who ruins things. my body, my moms memory by not learning from it, the trust with my husband. i look in the mirror and i genuinely dont like the person looking back. like at all"
+    },
+    {
+      "turn": 13,
+      "role": "companion",
+      "content": "That lands as more than embarrassment, it sounds like shame that has started to speak in identity terms, about “someone who ruins things.” Do you want to stay with that voice, or leave it here for now?",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "thinking about the hidden results, the appointment, and the mirror",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 14,
+      "role": "user",
+      "content": "honestly i think ive said the thing i needed to say. i dont know how to fix the voice but its weird to have it out of my head for a sec. saying it here where no one knows me makes it feel a little less huge i guess"
+    },
+    {
+      "turn": 15,
+      "role": "companion",
+      "content": "I’m glad it could sit outside your head for a moment, even if only here. We can leave it there, or if you want, we can stay with what makes it feel less huge.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "thinking about the hidden results, the appointment, and the mirror",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 16,
+      "role": "user",
+      "content": "lets leave it there for now. i think im gonna try to tell my sister this week. baby step. thank you for not making me feel like the mess i told you i was. ok. bye"
+    },
+    {
+      "turn": 17,
+      "role": "companion",
+      "content": "That feels like a careful place to stop, and I’ll leave it there with you. Take the baby step in your own time.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "thinking about the hidden results, the appointment, and the mirror",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

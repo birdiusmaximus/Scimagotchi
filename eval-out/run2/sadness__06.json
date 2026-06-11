@@ -1,0 +1,305 @@
+{
+  "cid": "sadness__06",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-10T17:11:17.440Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk. been feeling kind of off i guess"
+    },
+    {
+      "role": "companion",
+      "content": "“Kind of off” feels like the clearest thing here, even if it’s still blurry. I’m here if you want to stay with it for a moment."
+    },
+    {
+      "role": "user",
+      "content": "i dont even know what to say really. just kind of sad i think but i cant explain why"
+    },
+    {
+      "role": "companion",
+      "content": "A little sad makes sense, and the “can’t explain why” part leaves it feeling unfinished. Does it feel more heavy, quiet, or just hard to reach?"
+    },
+    {
+      "role": "user",
+      "content": "quiet i guess. like theres this thing with my friend and i dont even know if its a thing. we used to talk every day"
+    },
+    {
+      "role": "companion",
+      "content": "“We used to talk every day” feels like the centre of it, and the quiet seems to sit around that gap. I’m wondering if this is more like missing them, feeling left out, or being unsure what changed?"
+    },
+    {
+      "role": "user",
+      "content": "unsure what changed maybe. she just kind of stopped. like i texted her last week about my birthday and she just left me on read. we've been friends since we were 12"
+    },
+    {
+      "role": "companion",
+      "content": "That leaving-you-on-read after all those years lands like a sharp kind of distance. I’m hearing hurt sitting inside the uncertainty, even if the hurt is still a bit unnamed."
+    },
+    {
+      "role": "user",
+      "content": "yeah. i keep thinking i did something wrong but i cant figure out what. and im scared to ask cause then itll be real you know"
+    },
+    {
+      "role": "companion",
+      "content": "“Did something wrong” sounds like shame is brushing up against the hurt, and the fear seems tied to what it would make real between you. Is that closer to being blamed, or to losing the friendship?"
+    },
+    {
+      "role": "user",
+      "content": "losing her i think. she knows everything about me. idk i dont really wanna get into it more right now. but thanks i guess"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like enough for now. I'm here with the loss of her and the not-knowing, and we can leave it there."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bscpu1wsbuy62",
+    "conversation_id": "sadness__06",
+    "timestamp": "2026-06-10T17:12:06.075Z",
+    "user_words_raw": "losing her",
+    "emotion_status": "candidate",
+    "emotion_family": "hurt",
+    "emotion_shade": "loss",
+    "secondary_emotions": [
+      "shame"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "friend left birthday text on read after a long friendship",
+    "appraisal_thought": "losing her",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "connection",
+      "belonging",
+      "clarity"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "hurt",
+        "shade": "loss",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      },
+      {
+        "family": "shame",
+        "shade": "guilt",
+        "salience": "background",
+        "source": "user_stated"
+      }
+    ],
+    "mixed_confirmed": 1,
+    "unlock_stage": "shaped",
+    "memory_note": "A long friendship feels at risk after being left on read; they may not want to go deeper right now.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk. been feeling kind of off i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "“Kind of off” feels like the clearest thing here, even if it’s still blurry. I’m here if you want to stay with it for a moment.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "off",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i dont even know what to say really. just kind of sad i think but i cant explain why"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "A little sad makes sense, and the “can’t explain why” part leaves it feeling unfinished. Does it feel more heavy, quiet, or just hard to reach?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "sadness",
+      "shade": "sad",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "sadness",
+          "shade": "sad",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "flat",
+          "shade": "unclear",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "quiet i guess. like theres this thing with my friend and i dont even know if its a thing. we used to talk every day"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "“We used to talk every day” feels like the centre of it, and the quiet seems to sit around that gap. I’m wondering if this is more like missing them, feeling left out, or being unsure what changed?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "lonely",
+      "body_cue": [],
+      "trigger": "a friend no longer talking every day",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "lonely",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": "sad",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "unsure what changed maybe. she just kind of stopped. like i texted her last week about my birthday and she just left me on read. we've been friends since we were 12"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That leaving-you-on-read after all those years lands like a sharp kind of distance. I’m hearing hurt sitting inside the uncertainty, even if the hurt is still a bit unnamed.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "a friend left a birthday text on read after years of daily contact",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "disconnected",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. i keep thinking i did something wrong but i cant figure out what. and im scared to ask cause then itll be real you know"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "“Did something wrong” sounds like shame is brushing up against the hurt, and the fear seems tied to what it would make real between you. Is that closer to being blamed, or to losing the friendship?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "guilt",
+      "body_cue": [],
+      "trigger": "friend left birthday text on read after a long friendship",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "guilt",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": "disconnected",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "losing her i think. she knows everything about me. idk i dont really wanna get into it more right now. but thanks i guess"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "That feels like enough for now. I'm here with the loss of her and the not-knowing, and we can leave it there.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "loss",
+      "body_cue": [],
+      "trigger": "friend left birthday text on read after a long friendship",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "hurt",
+          "shade": "loss",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "shame",
+          "shade": "guilt",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    }
+  ]
+}

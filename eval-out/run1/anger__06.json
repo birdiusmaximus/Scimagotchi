@@ -1,0 +1,146 @@
+{
+  "cid": "anger__06",
+  "emotion": "anger",
+  "persona": null,
+  "created": "2026-06-09T18:17:04.876Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ugh i dont even know why im typing this. just had the most annoying day"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like a day full of friction. Was it more annoyance, frustration, or something feeling unfair?"
+    },
+    {
+      "role": "user",
+      "content": "unfair mostly. my friend cancelled on me AGAIN like an hour before. third time this month. i had the whole evening blocked out"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that sounds unfair and really blocking. Did it make you want to push back, go quiet, or just get out of there?"
+    },
+    {
+      "role": "user",
+      "content": "honestly i just went quiet. didnt even reply to her text. i hate that she does this and im always the one waiting around. like is my time worth nothing"
+    },
+    {
+      "role": "companion",
+      "content": "That quiet sounds like a sharp kind of protest, with hurt under it too. It sounds like being left waiting started to feel like “is my time worth nothing?”"
+    },
+    {
+      "role": "user",
+      "content": "yeah. exactly that. idk i feel a bit lighter saying it out loud tbh. gonna go for now but thanks"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense — we can leave it here for now. Thanks for saying it out loud."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6yp3sb5nrvwfd7",
+    "conversation_id": "anger__06",
+    "timestamp": "2026-06-09T18:17:25.269Z",
+    "user_words_raw": "went quiet",
+    "emotion_status": "confirmed",
+    "emotion_family": "anger",
+    "emotion_shade": "resigned",
+    "secondary_emotions": [
+      "hurt"
+    ],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "friend cancelled on me AGAIN like an hour before, third time this month",
+    "appraisal_thought": "is my time worth nothing",
+    "body_cue": [],
+    "behaviour_action": [
+      "went quiet",
+      "didnt even reply to her text"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "respect",
+      "being heard",
+      "fairness"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "unlock_stage": "understood",
+    "memory_note": "feels put off by repeated last-minute cancellations from someone close",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ugh i dont even know why im typing this. just had the most annoying day"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like a day full of friction. Was it more annoyance, frustration, or something feeling unfair?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "annoying",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "unfair mostly. my friend cancelled on me AGAIN like an hour before. third time this month. i had the whole evening blocked out"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Yeah, that sounds unfair and really blocking. Did it make you want to push back, go quiet, or just get out of there?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "frustrated",
+      "body_cue": [],
+      "trigger": "a friend cancelled an hour before, for the third time this month"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "honestly i just went quiet. didnt even reply to her text. i hate that she does this and im always the one waiting around. like is my time worth nothing"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That quiet sounds like a sharp kind of protest, with hurt under it too. It sounds like being left waiting started to feel like “is my time worth nothing?”",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "anger",
+      "shade": "resigned",
+      "body_cue": [],
+      "trigger": "friend cancelled on me AGAIN like an hour before, third time this month"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah. exactly that. idk i feel a bit lighter saying it out loud tbh. gonna go for now but thanks"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That makes sense — we can leave it here for now. Thanks for saying it out loud.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "resigned",
+      "body_cue": [],
+      "trigger": "friend cancelled on me AGAIN like an hour before, third time this month"
+    }
+  ]
+}

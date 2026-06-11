@@ -2,144 +2,253 @@
   "cid": "anger__05",
   "emotion": "anger",
   "persona": null,
-  "created": "2026-06-09T18:17:04.448Z",
+  "created": "2026-06-10T22:08:04.911Z",
   "history": [
     {
       "role": "user",
-      "content": "idk why im even opening this lol"
+      "content": "ok so this is a weird one. found a box of my old stuff at my parents place this weekend and now im annoyed about something from like 12 years ago lol. who even am i"
     },
     {
       "role": "companion",
-      "content": "Hey, that’s okay — sometimes opening something is just opening something. What’s been on your mind, if anything?"
+      "content": "Finding that box brought up something from 12 years ago, and it sounds annoyingly alive again."
     },
     {
       "role": "user",
-      "content": "nothing really. just stuff. my brain decided 11pm was a great time to replay a thing from like years ago, as it does"
+      "content": "yeah haha alive is one word for it. it was a folder of stuff from uni. there was this group project thing, final year, and i basically carried the whole thing and one guy put his name on it and got the credit with the prof. anyway. ancient history. its fine"
     },
     {
       "role": "companion",
-      "content": "Yeah, that late-night replay can feel very “my brain, why now?” What kind of thing is it replaying — more awkward, sad, or just annoying?"
+      "content": "That has a sharp, unfair edge to it, even if you’re calling it ancient history. I’m wondering if it’s more irritated, resentful, or that quiet kind of “I got used,” or is that too much?"
     },
     {
       "role": "user",
-      "content": "annoying i guess?? like my old manager took credit for this whole project i basically built and i just smiled and said nothing. classic me. cool cool not still mad about it 2 years later or anything haha"
+      "content": "ok rude of you to read me like that lol. yeah its resentful for sure, he literally got a job off the back of that project. but theres also this other thing thats more like... embarrassing? like i let it happen. i didnt say anything. just smiled and let him take it because i hate conflict. so im mad at him AND mad at myself which is great. very efficient"
     },
     {
       "role": "companion",
-      "content": "That sounds really annoying — and maybe a bit like being brushed aside. What feels strongest in it now: the annoyance, the being credited over, or the “I said nothing” part?"
+      "content": "That double hit makes sense, the resentment at him and the embarrassment at yourself. I’m hearing that you smiled and let it slide, and now that old project carries both protest and something self-directed."
     },
     {
       "role": "user",
-      "content": "the said nothing part probably. whatever. its done, cant change it. anyway thanks i should sleep"
+      "content": "yeah. i think the part that actually gets me is that im STILL like that. like its not just a uni story. i still do the smile and let it slide thing at work when someone takes credit. so finding that folder was kind of like oh great, twelve years and im the same pushover. cool cool cool"
     },
     {
       "role": "companion",
-      "content": "Yeah, that “said nothing” part seems to be the sharp bit. Sounds like it can rest here for now — sleep well."
+      "content": "That sounds less like a one-off memory and more like meeting a pattern you don’t like in yourself. Maybe the sharpest part is that “oh great, I’m still like this” feeling, more than the work credit itself?"
+    },
+    {
+      "role": "user",
+      "content": "ugh yeah. you got it. its the still like this part. the credit thing i can almost laugh off but the pattern one stings. anyway i dont have a neat bow for this, i just needed to say it out loud i think instead of slamming a drawer shut. which is my usual method"
+    },
+    {
+      "role": "companion",
+      "content": "That feels like the sting was in being met by the pattern, not the old project itself. We can leave it there, or stay with what that drawer-shut moment has been doing for you."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. honestly didnt expect to get psychoanalysed by an app on a sunday but here we are. it helped though. thanks. gonna go put the lid back on that box, gently this time"
+    },
+    {
+      "role": "companion",
+      "content": "Gently sounds like the right final touch for it. I’m glad you said it out loud here."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq6yp3hn95oqyevu",
+    "id": "evt_mq8me1875jchqg3h",
     "conversation_id": "anger__05",
-    "timestamp": "2026-06-09T18:17:32.040Z",
-    "user_words_raw": "said nothing",
+    "timestamp": "2026-06-10T22:08:46.836Z",
+    "user_words_raw": "put the lid back on that box, gently this time",
     "emotion_status": "confirmed",
-    "emotion_family": "anger",
-    "emotion_shade": "annoying",
-    "secondary_emotions": [
-      "resigned"
-    ],
-    "valence": "negative",
-    "activation": "medium",
+    "emotion_family": "shame",
+    "emotion_shade": "self-critical",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "old manager took credit for a project the user built",
-    "appraisal_thought": "its done, cant change it",
+    "trigger_event": "Finding an old folder from university and realising the same pattern still shows up at work",
+    "appraisal_thought": "I'm still like this",
     "body_cue": [],
-    "behaviour_action": [
-      "said nothing"
-    ],
+    "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [
-      "respect",
-      "being heard",
-      "fairness"
-    ],
+    "need_value": [],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
     "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "User can still get pulled up by an old work credit issue, especially at night.",
+    "memory_note": "User sometimes handles old work-related shame by shutting it away; saying it out loud helped.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
+  "pendingCheck": null,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "idk why im even opening this lol"
+      "content": "ok so this is a weird one. found a box of my old stuff at my parents place this weekend and now im annoyed about something from like 12 years ago lol. who even am i"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey, that’s okay — sometimes opening something is just opening something. What’s been on your mind, if anything?",
-      "stage": "noticed",
+      "content": "Finding that box brought up something from 12 years ago, and it sounds annoyingly alive again.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": null,
-      "shade": null,
+      "family": "anger",
+      "shade": "annoyed",
       "body_cue": [],
-      "trigger": null
+      "trigger": "found a box of old stuff at parents' place",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "nothing really. just stuff. my brain decided 11pm was a great time to replay a thing from like years ago, as it does"
+      "content": "yeah haha alive is one word for it. it was a folder of stuff from uni. there was this group project thing, final year, and i basically carried the whole thing and one guy put his name on it and got the credit with the prof. anyway. ancient history. its fine"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "Yeah, that late-night replay can feel very “my brain, why now?” What kind of thing is it replaying — more awkward, sad, or just annoying?",
-      "stage": "named",
+      "content": "That has a sharp, unfair edge to it, even if you’re calling it ancient history. I’m wondering if it’s more irritated, resentful, or that quiet kind of “I got used,” or is that too much?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "flat",
-      "shade": "unclear",
+      "family": "anger",
+      "shade": "resentful",
       "body_cue": [],
-      "trigger": "a memory replaying at 11pm"
+      "trigger": "A folder from uni brought back a final-year group project where they carried the work and someone else got the credit.",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "resentful",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "annoying i guess?? like my old manager took credit for this whole project i basically built and i just smiled and said nothing. classic me. cool cool not still mad about it 2 years later or anything haha"
+      "content": "ok rude of you to read me like that lol. yeah its resentful for sure, he literally got a job off the back of that project. but theres also this other thing thats more like... embarrassing? like i let it happen. i didnt say anything. just smiled and let him take it because i hate conflict. so im mad at him AND mad at myself which is great. very efficient"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds really annoying — and maybe a bit like being brushed aside. What feels strongest in it now: the annoyance, the being credited over, or the “I said nothing” part?",
-      "stage": "named",
-      "unlocked": false,
+      "content": "That double hit makes sense, the resentment at him and the embarrassment at yourself. I’m hearing that you smiled and let it slide, and now that old project carries both protest and something self-directed.",
+      "stage": "understood",
+      "unlocked": true,
       "family": "anger",
-      "shade": "annoying",
+      "shade": "resentful",
       "body_cue": [],
-      "trigger": "old manager took credit for a project the user built"
+      "trigger": "Remembering a final-year group project where someone else took the credit",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "resentful",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": "embarrassing",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "the said nothing part probably. whatever. its done, cant change it. anyway thanks i should sleep"
+      "content": "yeah. i think the part that actually gets me is that im STILL like that. like its not just a uni story. i still do the smile and let it slide thing at work when someone takes credit. so finding that folder was kind of like oh great, twelve years and im the same pushover. cool cool cool"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Yeah, that “said nothing” part seems to be the sharp bit. Sounds like it can rest here for now — sleep well.",
+      "content": "That sounds less like a one-off memory and more like meeting a pattern you don’t like in yourself. Maybe the sharpest part is that “oh great, I’m still like this” feeling, more than the work credit itself?",
       "stage": "understood",
-      "unlocked": true,
-      "family": "anger",
-      "shade": "annoying",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassed",
       "body_cue": [],
-      "trigger": "old manager took credit for a project the user built"
+      "trigger": "Finding an old folder from university and realising the same pattern still shows up at work",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "embarrassed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "anger",
+          "shade": "resentful",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "ugh yeah. you got it. its the still like this part. the credit thing i can almost laugh off but the pattern one stings. anyway i dont have a neat bow for this, i just needed to say it out loud i think instead of slamming a drawer shut. which is my usual method"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That feels like the sting was in being met by the pattern, not the old project itself. We can leave it there, or stay with what that drawer-shut moment has been doing for you.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "Finding an old folder from university and realising the same pattern still shows up at work",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it there. honestly didnt expect to get psychoanalysed by an app on a sunday but here we are. it helped though. thanks. gonna go put the lid back on that box, gently this time"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Gently sounds like the right final touch for it. I’m glad you said it out loud here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "Finding an old folder from university and realising the same pattern still shows up at work",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

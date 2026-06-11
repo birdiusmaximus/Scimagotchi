@@ -1,0 +1,276 @@
+{
+  "cid": "pressure__05",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-10T17:09:29.048Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ok so i wasnt gonna open this thing but here we are lol. anyway hi i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, hi. \"Here we are\" has a nice resignation to it, or maybe a little amusement too."
+    },
+    {
+      "role": "user",
+      "content": "amusement is doing a lot of heavy lifting yeah. honestly i dont even know why im here. its dumb its old news. but my brain keeps dragging me back to this thing from like 3 yrs ago and im like cmon man we are NOT doing this again"
+    },
+    {
+      "role": "companion",
+      "content": "There’s something pretty stubborn in the way your mind keeps tugging you back to it. Is that more like annoyance, or something heavier under the “cmon man”?"
+    },
+    {
+      "role": "user",
+      "content": "haha you caught that. ok yeah theres annoyance on top, like at myself mostly. but underneath its more like... i still feel the weight of it? i had this big project at my old job i basically ran into the ground. team of 6 looking at me, i froze, missed every deadline, whole thing collapsed. i left right after. and i swear i can still feel that exact pressure in my chest like its happening now even tho its over"
+    },
+    {
+      "role": "companion",
+      "content": "That chest pressure sounds very present, even with the project long over. I’m hearing how the annoyance at yourself is sitting on top of something heavier."
+    },
+    {
+      "role": "user",
+      "content": "the annoyance is kinda the bodyguard for the rest yeah lol. like if im busy being mad at myself i dont have to feel the actual oh no part. the oh no part is i think i proved something i was always scared of. that when it really counts ill choke. and now every time something big lands on my plate at the new job theres this little voice going remember last time buddy"
+    },
+    {
+      "role": "companion",
+      "content": "That little voice sounds very old and very specific, like it has a job of its own. I’m wondering if the heavier part is fear, or something more like shame?"
+    },
+    {
+      "role": "user",
+      "content": "oof. shame. yeah. you went straight for it huh. its shame. fear is the future version but the thing sitting in my chest is just... i let those 6 people down and i never even said sorry i just bolted. didnt know i still carried that around tbh"
+    },
+    {
+      "role": "companion",
+      "content": "That unsaid apology is still sitting there with the shame, and it sounds heavy to carry. If you want, we can stay with that, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there for today, thats plenty of feelings for a tuesday lol. but hey... thanks. didnt expect to actually name the thing. ok im out before i get any more emotional, see ya"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, we can leave it there for today. Catch you later, and take the rest of Tuesday easy."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bq14ym1hgyb1q",
+    "conversation_id": "pressure__05",
+    "timestamp": "2026-06-10T17:10:10.038Z",
+    "user_words_raw": "thats plenty of feelings for a tuesday",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "shame",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "a big project at the old job collapsed after deadlines were missed",
+    "appraisal_thought": "I let those 6 people down and I never even said sorry",
+    "body_cue": [
+      "pressure in my chest"
+    ],
+    "behaviour_action": [
+      "bolted"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "repair",
+      "dignity",
+      "acceptance"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "The person can name shame more clearly now, and it connects to an old work failure and an unsaid apology.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ok so i wasnt gonna open this thing but here we are lol. anyway hi i guess"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, hi. \"Here we are\" has a nice resignation to it, or maybe a little amusement too.",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "amusement is doing a lot of heavy lifting yeah. honestly i dont even know why im here. its dumb its old news. but my brain keeps dragging me back to this thing from like 3 yrs ago and im like cmon man we are NOT doing this again"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "There’s something pretty stubborn in the way your mind keeps tugging you back to it. Is that more like annoyance, or something heavier under the “cmon man”?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "anger",
+      "shade": "annoyance",
+      "body_cue": [],
+      "trigger": "something from 3 years ago keeps returning in their thoughts",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "annoyance",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "haha you caught that. ok yeah theres annoyance on top, like at myself mostly. but underneath its more like... i still feel the weight of it? i had this big project at my old job i basically ran into the ground. team of 6 looking at me, i froze, missed every deadline, whole thing collapsed. i left right after. and i swear i can still feel that exact pressure in my chest like its happening now even tho its over"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That chest pressure sounds very present, even with the project long over. I’m hearing how the annoyance at yourself is sitting on top of something heavier.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressure",
+      "body_cue": [
+        "pressure in my chest"
+      ],
+      "trigger": "thinking about the old project from 3 years ago",
+      "label_source": "user_stated",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "annoyance",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": "pressure",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "the annoyance is kinda the bodyguard for the rest yeah lol. like if im busy being mad at myself i dont have to feel the actual oh no part. the oh no part is i think i proved something i was always scared of. that when it really counts ill choke. and now every time something big lands on my plate at the new job theres this little voice going remember last time buddy"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That little voice sounds very old and very specific, like it has a job of its own. I’m wondering if the heavier part is fear, or something more like shame?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [
+        "pressure in my chest"
+      ],
+      "trigger": "something big lands on my plate at the new job",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "protective_layer",
+      "strands": [
+        {
+          "family": "anger",
+          "shade": "annoyance",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "oof. shame. yeah. you went straight for it huh. its shame. fear is the future version but the thing sitting in my chest is just... i let those 6 people down and i never even said sorry i just bolted. didnt know i still carried that around tbh"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That unsaid apology is still sitting there with the shame, and it sounds heavy to carry. If you want, we can stay with that, or leave it here for now.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [
+        "pressure in my chest"
+      ],
+      "trigger": "a big project at the old job collapsed after deadlines were missed",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it there for today, thats plenty of feelings for a tuesday lol. but hey... thanks. didnt expect to actually name the thing. ok im out before i get any more emotional, see ya"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course, we can leave it there for today. Catch you later, and take the rest of Tuesday easy.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "shame",
+      "body_cue": [
+        "pressure in my chest"
+      ],
+      "trigger": "a big project at the old job collapsed after deadlines were missed",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

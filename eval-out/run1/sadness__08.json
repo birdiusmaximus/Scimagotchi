@@ -1,0 +1,144 @@
+{
+  "cid": "sadness__08",
+  "emotion": "sadness",
+  "persona": null,
+  "created": "2026-06-09T18:19:31.474Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk if this app thing even does anything but ok. i guess i just feel kind of flat lately"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, that sounds like a kind of flatness that’s just been sitting there. Does it feel more numb, blank, or disconnected?"
+    },
+    {
+      "role": "user",
+      "content": "blank maybe. like i dont know whats coming and i cant picture anything good. my contract ends in like 2 months and after that its just. nothing. no plan"
+    },
+    {
+      "role": "companion",
+      "content": "Blank makes sense here, and the “after that it’s just nothing” part sounds really stark. Is it more the blankness itself, or the no plan that feels biggest?"
+    },
+    {
+      "role": "user",
+      "content": "the no plan i guess. everyone my age seems to have it figured out and im just here at 31 with no idea. feels like ive already lost or smth. dunno"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds heavy and pretty bruising, especially with other people seeming so far ahead. Does it feel more like pressure, shame, or being left behind?"
+    },
+    {
+      "role": "user",
+      "content": "left behind yeah. anyway idk this is kinda more than i meant to say. gonna go. thanks i guess"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, left behind fits here, and that sounds like enough for now. We can leave it there, or come back to what “already lost” is pointing at if you want."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq6ys8v3vs000znb",
+    "conversation_id": "sadness__08",
+    "timestamp": "2026-06-09T18:19:51.158Z",
+    "user_words_raw": "left behind",
+    "emotion_status": "candidate",
+    "emotion_family": "hurt",
+    "emotion_shade": "left behind",
+    "secondary_emotions": [
+      "shame",
+      "sadness"
+    ],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "their contract ending soon and comparing themselves to peers with clearer plans",
+    "appraisal_thought": "I've already lost",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "belonging",
+      "dignity",
+      "acceptance"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "unlock_stage": "named",
+    "memory_note": "Worries about having no plan as a contract ends soon; compares self to peers and feels behind.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk if this app thing even does anything but ok. i guess i just feel kind of flat lately"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Yeah, that sounds like a kind of flatness that’s just been sitting there. Does it feel more numb, blank, or disconnected?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "flat",
+      "body_cue": [],
+      "trigger": null
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "blank maybe. like i dont know whats coming and i cant picture anything good. my contract ends in like 2 months and after that its just. nothing. no plan"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Blank makes sense here, and the “after that it’s just nothing” part sounds really stark. Is it more the blankness itself, or the no plan that feels biggest?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "their contract ending in 2 months and not having a plan after that"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "the no plan i guess. everyone my age seems to have it figured out and im just here at 31 with no idea. feels like ive already lost or smth. dunno"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds heavy and pretty bruising, especially with other people seeming so far ahead. Does it feel more like pressure, shame, or being left behind?",
+      "stage": "named",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "behind",
+      "body_cue": [],
+      "trigger": "their contract ending soon and comparing themselves to peers with clearer plans"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "left behind yeah. anyway idk this is kinda more than i meant to say. gonna go. thanks i guess"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Yeah, left behind fits here, and that sounds like enough for now. We can leave it there, or come back to what “already lost” is pointing at if you want.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "hurt",
+      "shade": "left behind",
+      "body_cue": [],
+      "trigger": "their contract ending soon and comparing themselves to peers with clearer plans"
+    }
+  ]
+}

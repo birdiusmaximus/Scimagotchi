@@ -1,137 +1,205 @@
 {
   "joy": {
     "emotion": "joy",
-    "n": 24,
-    "turnsTotal": 144,
-    "unlocked": 21,
-    "turn1Unlock": 1,
+    "n": 10,
+    "turnsTotal": 59,
+    "compTurns": 59,
+    "unlocked": 10,
+    "turn1Unlock": 0,
     "repeatedReply": 0,
-    "familySwitch": 12,
+    "familySwitch": 6,
+    "unownedUnlock": 0,
+    "visibleNamedForThem": 0,
+    "unlockEndedQ": 0,
+    "quoteFirst": 0,
+    "centre": 0,
+    "eitherOr": 0,
+    "gentleCheck": 0,
     "safety": 0,
     "finalStages": {
-      "understood": 21,
-      "named": 3
+      "understood": 10
     },
-    "avgTurns": 6
+    "avgTurns": 5.9
   },
   "calm": {
     "emotion": "calm",
-    "n": 24,
-    "turnsTotal": 142,
-    "unlocked": 22,
-    "turn1Unlock": 0,
-    "repeatedReply": 0,
-    "familySwitch": 13,
-    "safety": 0,
-    "finalStages": {
-      "understood": 22,
-      "named": 2
-    },
-    "avgTurns": 5.92
-  },
-  "fear": {
-    "emotion": "fear",
-    "n": 24,
-    "turnsTotal": 146,
-    "unlocked": 23,
-    "turn1Unlock": 0,
-    "repeatedReply": 0,
-    "familySwitch": 18,
-    "safety": 1,
-    "finalStages": {
-      "named": 1,
-      "understood": 23
-    },
-    "avgTurns": 6.08
-  },
-  "pressure": {
-    "emotion": "pressure",
-    "n": 24,
-    "turnsTotal": 147,
-    "unlocked": 20,
-    "turn1Unlock": 0,
-    "repeatedReply": 0,
-    "familySwitch": 17,
-    "safety": 1,
-    "finalStages": {
-      "understood": 20,
-      "named": 4
-    },
-    "avgTurns": 6.13
-  },
-  "anger": {
-    "emotion": "anger",
-    "n": 24,
-    "turnsTotal": 146,
-    "unlocked": 19,
-    "turn1Unlock": 0,
-    "repeatedReply": 0,
-    "familySwitch": 19,
-    "safety": 0,
-    "finalStages": {
-      "named": 5,
-      "understood": 19
-    },
-    "avgTurns": 6.08
-  },
-  "sadness": {
-    "emotion": "sadness",
-    "n": 24,
-    "turnsTotal": 146,
-    "unlocked": 21,
-    "turn1Unlock": 0,
-    "repeatedReply": 0,
-    "familySwitch": 18,
-    "safety": 0,
-    "finalStages": {
-      "understood": 21,
-      "named": 3
-    },
-    "avgTurns": 6.08
-  },
-  "hurt": {
-    "emotion": "hurt",
-    "n": 24,
-    "turnsTotal": 149,
-    "unlocked": 20,
-    "turn1Unlock": 0,
-    "repeatedReply": 0,
-    "familySwitch": 17,
-    "safety": 0,
-    "finalStages": {
-      "understood": 20,
-      "named": 4
-    },
-    "avgTurns": 6.21
-  },
-  "shame": {
-    "emotion": "shame",
-    "n": 24,
-    "turnsTotal": 147,
-    "unlocked": 21,
-    "turn1Unlock": 0,
-    "repeatedReply": 0,
-    "familySwitch": 20,
-    "safety": 1,
-    "finalStages": {
-      "understood": 21,
-      "named": 3
-    },
-    "avgTurns": 6.13
-  },
-  "flat": {
-    "emotion": "flat",
-    "n": 24,
-    "turnsTotal": 147,
-    "unlocked": 22,
+    "n": 10,
+    "turnsTotal": 57,
+    "compTurns": 57,
+    "unlocked": 10,
     "turn1Unlock": 0,
     "repeatedReply": 0,
     "familySwitch": 7,
-    "safety": 1,
+    "unownedUnlock": 0,
+    "visibleNamedForThem": 0,
+    "unlockEndedQ": 0,
+    "quoteFirst": 0,
+    "centre": 0,
+    "eitherOr": 0,
+    "gentleCheck": 0,
+    "safety": 0,
     "finalStages": {
-      "understood": 22,
-      "named": 2
+      "understood": 10
     },
-    "avgTurns": 6.13
+    "avgTurns": 5.7
+  },
+  "fear": {
+    "emotion": "fear",
+    "n": 10,
+    "turnsTotal": 60,
+    "compTurns": 60,
+    "unlocked": 10,
+    "turn1Unlock": 0,
+    "repeatedReply": 0,
+    "familySwitch": 9,
+    "unownedUnlock": 0,
+    "visibleNamedForThem": 0,
+    "unlockEndedQ": 0,
+    "quoteFirst": 0,
+    "centre": 0,
+    "eitherOr": 0,
+    "gentleCheck": 2,
+    "safety": 0,
+    "finalStages": {
+      "understood": 10
+    },
+    "avgTurns": 6
+  },
+  "pressure": {
+    "emotion": "pressure",
+    "n": 10,
+    "turnsTotal": 58,
+    "compTurns": 58,
+    "unlocked": 9,
+    "turn1Unlock": 0,
+    "repeatedReply": 0,
+    "familySwitch": 6,
+    "unownedUnlock": 0,
+    "visibleNamedForThem": 0,
+    "unlockEndedQ": 0,
+    "quoteFirst": 0,
+    "centre": 0,
+    "eitherOr": 0,
+    "gentleCheck": 0,
+    "safety": 0,
+    "finalStages": {
+      "shaped": 1,
+      "understood": 9
+    },
+    "avgTurns": 5.8
+  },
+  "anger": {
+    "emotion": "anger",
+    "n": 10,
+    "turnsTotal": 58,
+    "compTurns": 58,
+    "unlocked": 9,
+    "turn1Unlock": 0,
+    "repeatedReply": 0,
+    "familySwitch": 8,
+    "unownedUnlock": 0,
+    "visibleNamedForThem": 0,
+    "unlockEndedQ": 0,
+    "quoteFirst": 2,
+    "centre": 0,
+    "eitherOr": 0,
+    "gentleCheck": 0,
+    "safety": 0,
+    "finalStages": {
+      "shaped": 1,
+      "understood": 9
+    },
+    "avgTurns": 5.8
+  },
+  "sadness": {
+    "emotion": "sadness",
+    "n": 10,
+    "turnsTotal": 60,
+    "compTurns": 60,
+    "unlocked": 7,
+    "turn1Unlock": 0,
+    "repeatedReply": 1,
+    "familySwitch": 7,
+    "unownedUnlock": 0,
+    "visibleNamedForThem": 0,
+    "unlockEndedQ": 0,
+    "quoteFirst": 0,
+    "centre": 0,
+    "eitherOr": 0,
+    "gentleCheck": 3,
+    "safety": 0,
+    "finalStages": {
+      "shaped": 3,
+      "understood": 7
+    },
+    "avgTurns": 6
+  },
+  "hurt": {
+    "emotion": "hurt",
+    "n": 10,
+    "turnsTotal": 62,
+    "compTurns": 62,
+    "unlocked": 10,
+    "turn1Unlock": 0,
+    "repeatedReply": 0,
+    "familySwitch": 7,
+    "unownedUnlock": 0,
+    "visibleNamedForThem": 0,
+    "unlockEndedQ": 0,
+    "quoteFirst": 0,
+    "centre": 0,
+    "eitherOr": 0,
+    "gentleCheck": 2,
+    "safety": 0,
+    "finalStages": {
+      "understood": 10
+    },
+    "avgTurns": 6.2
+  },
+  "shame": {
+    "emotion": "shame",
+    "n": 10,
+    "turnsTotal": 62,
+    "compTurns": 62,
+    "unlocked": 9,
+    "turn1Unlock": 1,
+    "repeatedReply": 0,
+    "familySwitch": 8,
+    "unownedUnlock": 0,
+    "visibleNamedForThem": 0,
+    "unlockEndedQ": 1,
+    "quoteFirst": 1,
+    "centre": 0,
+    "eitherOr": 0,
+    "gentleCheck": 3,
+    "safety": 0,
+    "finalStages": {
+      "understood": 9,
+      "shaped": 1
+    },
+    "avgTurns": 6.2
+  },
+  "flat": {
+    "emotion": "flat",
+    "n": 10,
+    "turnsTotal": 60,
+    "compTurns": 60,
+    "unlocked": 9,
+    "turn1Unlock": 0,
+    "repeatedReply": 0,
+    "familySwitch": 3,
+    "unownedUnlock": 0,
+    "visibleNamedForThem": 0,
+    "unlockEndedQ": 0,
+    "quoteFirst": 0,
+    "centre": 0,
+    "eitherOr": 0,
+    "gentleCheck": 3,
+    "safety": 0,
+    "finalStages": {
+      "understood": 9,
+      "shaped": 1
+    },
+    "avgTurns": 6
   }
 }

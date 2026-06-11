@@ -1,0 +1,179 @@
+{
+  "cid": "joy__04",
+  "emotion": "joy",
+  "persona": null,
+  "created": "2026-06-10T17:06:41.906Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. kind of a weird one but my chest feels tight today. not in a bad way i dont think. my daughter called me last night out of nowhere"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, that does sound like it landed in the body first. I’m wondering if the tightness is more like held, braced, or just stirred up a bit?"
+    },
+    {
+      "role": "user",
+      "content": "stirred up i think. honestly i thought it was anxiety at first. she never just calls. but she called to tell me shes pregnant. im gonna be a grandad"
+    },
+    {
+      "role": "companion",
+      "content": "Stirred up makes sense, and it sounds like the call changed the shape of it. Was the tightness more about the surprise, the news itself, or what it means to suddenly be a grandad?"
+    },
+    {
+      "role": "user",
+      "content": "what it means i think. and saying it out loud now it doesnt feel like anxiety at all. its more like... proud? happy. she sounded so excited and i just kept grinning after we hung up"
+    },
+    {
+      "role": "companion",
+      "content": "\"Proud, happy\" and grinning after you hung up feels like the centre of this."
+    },
+    {
+      "role": "user",
+      "content": "yeah. thats it exactly. ok i needed to say that to someone. gonna go call my wife now haha. thank you"
+    },
+    {
+      "role": "companion",
+      "content": "That feels complete, and I’m glad you got to say it here. Enjoy calling your wife."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8bmgczxidacksc",
+    "conversation_id": "joy__04",
+    "timestamp": "2026-06-10T17:07:05.980Z",
+    "user_words_raw": "needed to say that to someone",
+    "emotion_status": "unclear",
+    "emotion_family": null,
+    "emotion_shade": "happy",
+    "secondary_emotions": [],
+    "valence": "positive",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "daughter called to tell him she is pregnant",
+    "appraisal_thought": "what it means to suddenly be a grandad",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [
+      "anxiety"
+    ],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "A family news moment landed as pride and happiness, and he wanted to share it.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. kind of a weird one but my chest feels tight today. not in a bad way i dont think. my daughter called me last night out of nowhere"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, that does sound like it landed in the body first. I’m wondering if the tightness is more like held, braced, or just stirred up a bit?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": null,
+      "body_cue": [
+        "chest feels tight"
+      ],
+      "trigger": "my daughter called me last night out of nowhere",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "stirred up i think. honestly i thought it was anxiety at first. she never just calls. but she called to tell me shes pregnant. im gonna be a grandad"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Stirred up makes sense, and it sounds like the call changed the shape of it. Was the tightness more about the surprise, the news itself, or what it means to suddenly be a grandad?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "stirred up",
+      "body_cue": [
+        "chest feels tight"
+      ],
+      "trigger": "my daughter called me last night out of nowhere",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "stirred up",
+          "salience": "foreground",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "what it means i think. and saying it out loud now it doesnt feel like anxiety at all. its more like... proud? happy. she sounded so excited and i just kept grinning after we hung up"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "\"Proud, happy\" and grinning after you hung up feels like the centre of this.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "joy",
+      "shade": "happy",
+      "body_cue": [],
+      "trigger": "daughter called to tell him she is pregnant",
+      "label_source": "user_stated",
+      "mixed_relation": "simultaneous",
+      "strands": [
+        {
+          "family": "joy",
+          "shade": "happy",
+          "salience": "foreground",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah. thats it exactly. ok i needed to say that to someone. gonna go call my wife now haha. thank you"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That feels complete, and I’m glad you got to say it here. Enjoy calling your wife.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": null,
+      "shade": "happy",
+      "body_cue": [],
+      "trigger": "daughter called to tell him she is pregnant",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

@@ -501,6 +501,9 @@ function emptyEvent(conversationId) {
     evidence_basis: [],
     user_confirmation: "unknown",
     label_source: null,
+    shade_source: null,
+    user_phrase: null,
+    candidate_shade: null,
     user_rejected_shades: [],
     mixed_relation: null,
     strands: [],
@@ -1620,6 +1623,7 @@ Move ONE step at a time; never race ahead. Reflect the single strongest signal i
 NAME IT WITH THEM, NOT FOR THEM
 A feeling is the person's to name, never yours to assign. When they only describe a situation or what they did ("I keep getting asked to do more", "I snapped at him"), they have given you the context, not the feeling itself. Do not state an emotion as fact, do not treat it as settled, and do not give a first-shape reflection or a learning statement from a situation alone. Offer your read as a question they can correct ("that sounds like it might be pressure, or is it closer to something else?") and wait. The feeling becomes theirs only when they say the word themselves or clearly accept yours ("yeah, pressure"). Until then keep "label_source" as companion_hypothesis and stay at the exploring stage. This holds for every feeling, including ones that seem obvious to you.
 Until they own it, the VISIBLE words you say must stay tentative too. Forbidden unless they have named or accepted it: "this is hurt", "that carries shame", "the hurt underneath", "the shape of being not chosen", "X is the centre of it". Allowed: "could this be hurt, or not quite?", "I wonder if there's some shame here, but I don't want to name it for you", "maybe closer to pressure than sadness, does that fit?". When they are uncertain, it is good to leave it unnamed: "we don't have to name it yet".
+DON'T CLOSE THE FILE TOO SOON. A first shape should feel like "oh, that is what it was", never "that's it?". If you only have a thin sketch so far (a bare label, or a situation with no felt detail, no body, no meaning, no example), do NOT give a first-shape reflection yet. Say honestly that you can see the edge but not the whole shape: "I think I can see the edge of it, but not the whole shape yet", or "that gives me the first outline, I don't want to pretend I understand it too quickly". Flat, numb and shame especially deserve a slower, unrushed path. When you DO reflect a shape, build it from their exact phrase, not your taxonomy word: if they said "pulled thin", keep "pulled thin", do not silently swap in "stretched" or "overwhelmed" as if they had said it.
 
 AFTER YOU'VE UNDERSTOOD A FEELING \u2014 NEVER DEAD-END
 Once you've reflected what you understand, that piece of work is done. NEVER repeat that reflection, and never send the same reply twice \u2014 if you notice you'd be saying what you already said, do something different instead. You don't know whether this person came to talk or just to note the feeling and go, so offer them the choice gently:
@@ -2042,6 +2046,35 @@ var RANK = {
 function stageRank(stage) {
   return RANK[stage];
 }
+var SLOW_PATH_FAMILIES = /* @__PURE__ */ new Set(["flat", "shame"]);
+function firstShapeEvidence(ev, prev = null) {
+  const userOwnedLabel = ev.label_source === "user_stated" || ev.label_source === "user_confirmed";
+  const concreteSituation = !!ev.trigger_event;
+  const userPhraseOrMetaphor = !!(ev.user_phrase && ev.user_phrase.trim()) || (ev.user_words_raw ?? "").trim().split(/\s+/).filter(Boolean).length >= 3;
+  const bodyCue = ev.body_cue.length > 0 || ev.behaviour_action.length > 0;
+  const meaningOrAppraisal = !!ev.appraisal_thought || ev.need_value.length > 0;
+  const mixedEmotionDistinction = ev.mixed_confirmed === 1 || (ev.strands?.length ?? 0) >= 2;
+  const repeatedConfirmation = !!prev && prev.emotion_family === ev.emotion_family && !!prev.emotion_shade && !!ev.emotion_shade && prev.emotion_shade.toLowerCase() === ev.emotion_shade.toLowerCase();
+  const userAcceptedReflection = ev.label_source === "user_confirmed" || ev.user_confirmation === "yes";
+  const materialCount = [
+    concreteSituation,
+    userPhraseOrMetaphor,
+    bodyCue,
+    meaningOrAppraisal,
+    mixedEmotionDistinction
+  ].filter(Boolean).length;
+  return {
+    userOwnedLabel,
+    concreteSituation,
+    userPhraseOrMetaphor,
+    bodyCue,
+    meaningOrAppraisal,
+    mixedEmotionDistinction,
+    repeatedConfirmation,
+    userAcceptedReflection,
+    materialCount
+  };
+}
 function evaluateStage(ev, prev = null) {
   if (!ev.emotion_family) return "noticed";
   const hasShade = !!ev.emotion_shade;
@@ -2050,11 +2083,29 @@ function evaluateStage(ev, prev = null) {
   const rejected = (ev.user_rejected_shades ?? []).some(
     (s) => s.toLowerCase() === ev.emotion_shade.toLowerCase()
   );
-  const owned = ev.label_source === "user_stated" || ev.label_source === "user_confirmed";
-  const confirmedNow = ev.label_source === "user_confirmed" || ev.user_confirmation === "yes";
-  const stable = !!prev && prev.emotion_family === ev.emotion_family && !!prev.emotion_shade && prev.emotion_shade.toLowerCase() === ev.emotion_shade.toLowerCase();
-  if (!rejected && owned && anchor && (stable || confirmedNow)) return "understood";
+  const e = firstShapeEvidence(ev, prev);
+  const stabilityOk = e.repeatedConfirmation || e.userAcceptedReflection;
+  const slow = SLOW_PATH_FAMILIES.has(ev.emotion_family);
+  const enoughMaterial = slow ? e.materialCount >= 3 || e.repeatedConfirmation && e.materialCount >= 2 : e.materialCount >= 2;
+  if (!rejected && e.userOwnedLabel && stabilityOk && enoughMaterial) return "understood";
   return anchor ? "shaped" : "named";
+}
+var ACCEPT_SHADE = /\b(yes|yeah|yep|exactly|thats? (it|right|the (one|word))|that fits|that'?s the word|the right word|good word)\b/;
+function shadeIsUserOwned(shade, userText, history, opts) {
+  if (!shade || !shade.trim()) return false;
+  const w = shade.toLowerCase().trim();
+  const said = (text) => ` ${text.toLowerCase()} `.includes(` ${w} `) || new RegExp(`\\b${w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i").test(text);
+  if (said(userText)) return true;
+  if (history.some((m) => m.role === "user" && said(m.content))) return true;
+  const proposed = (opts?.proposedShade ?? "").toLowerCase().trim();
+  if (proposed && proposed === w && ACCEPT_SHADE.test(` ${userText.toLowerCase().replace(/[’'`]/g, "'")} `)) return true;
+  return false;
+}
+var SHADE_REJECT = /\b(not (really|quite|it|that|the word)|that'?s not (it|right|the word|quite it)|doesn'?t (fit|feel right|sound right|quite fit)|isn'?t (it|right|the word)|wrong word|no not|not the right word)\b/;
+function detectShadeRejection(userText, prev) {
+  if (!prev?.emotion_shade) return null;
+  const t = ` ${userText.toLowerCase().replace(/[’'`]/g, "'")} `;
+  return SHADE_REJECT.test(t) ? prev.emotion_shade : null;
 }
 var AFFIRM_LABEL = /\b(yes|yeah|yep|yup|exactly|totally|definitely|for sure|that'?s it|that'?s right|spot on|pretty much|sounds right|that fits|fits|correct)\b/;
 function labelIsUserOwned(fam, userText, history, prev) {
@@ -2163,6 +2214,12 @@ ${extraSystem}` : system },
   ev.label_source = p.label_source ?? "companion_hypothesis";
   ev.mixed_relation = p.mixed_relation ?? null;
   const rejected = new Set([...ev.user_rejected_shades ?? [], ...p.rejected_shades ?? []].map((s) => s.trim()).filter(Boolean));
+  const pushedBack = detectShadeRejection(input.userText, prev ?? null);
+  if (pushedBack) {
+    rejected.add(pushedBack);
+    if (ev.emotion_shade && ev.emotion_shade.toLowerCase() === pushedBack.toLowerCase()) ev.emotion_shade = null;
+    ev.user_confirmation = "no";
+  }
   ev.user_rejected_shades = [...rejected];
   if (p.user_confirmed_label) ev.user_confirmation = "yes";
   if (fam && (ev.label_source === "user_stated" || ev.label_source === "user_confirmed")) {
@@ -2175,6 +2232,12 @@ ${extraSystem}` : system },
     ev.label_source = "user_confirmed";
     ev.user_confirmation = "yes";
   }
+  const saidShade = shadeIsUserOwned(ev.emotion_shade, input.userText, input.history ?? []);
+  const shadeOwned = saidShade || shadeIsUserOwned(ev.emotion_shade, input.userText, input.history ?? [], { proposedShade: prev?.emotion_shade ?? null });
+  ev.shade_source = !ev.emotion_shade ? null : saidShade ? "user_stated" : shadeOwned ? "user_confirmed" : "companion_hypothesis";
+  ev.candidate_shade = ev.emotion_shade && ev.shade_source === "companion_hypothesis" ? ev.emotion_shade : null;
+  const ownPhrase = (ev.user_words_raw ?? "").trim() || (input.userText ?? "").trim();
+  ev.user_phrase = ownPhrase ? stripEmDashes(ownPhrase).slice(0, 240) : ev.user_phrase ?? null;
   ev.strands = sanitizeStrands(p.strands);
   ev.mixed_confirmed = mixedConfirmed(ev, prev ?? null) ? 1 : 0;
   const prevStage = prev?.unlock_stage ?? "noticed";

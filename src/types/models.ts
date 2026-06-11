@@ -101,6 +101,12 @@ export interface EmotionEvent {
   user_confirmation: 'yes' | 'no' | 'partial' | 'unknown';
   /** Provenance of the current label — hypotheses must never unlock (brief §8.1, §13.4). */
   label_source: LabelSource | null;
+  /** Provenance of the SHADE specifically (v0.4 §6.3) — shades drift, so it is tracked apart from family. */
+  shade_source: LabelSource | null;
+  /** The user's exact phrase for this feeling — the primary emotional memory, preferred over taxonomy shade (v0.4 §6.3). */
+  user_phrase: string | null;
+  /** A shade the companion is hypothesising but the user has NOT accepted — stored as a candidate only (v0.4 §6.3). */
+  candidate_shade: string | null;
   /** Shades the user has explicitly rejected this conversation — they block unlock and re-proposal. */
   user_rejected_shades: string[];
   /** How co-present feelings relate, when the user has shown more than one strand. */

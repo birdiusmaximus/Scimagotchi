@@ -7,10 +7,12 @@
  */
 import {
   askedForNamingHelp,
+  detectShadeRejection,
   dropTrailingQuestion,
   evaluateStage,
   EXIT_CUE,
   expressionFor,
+  firstShapeEvidence,
   isOptionMenu,
   labelIsUserOwned,
   mixedConfirmed,
@@ -20,6 +22,8 @@ import {
   routeMode,
   sanitizeStrands,
   selectVisualState,
+  shadeIsUserOwned,
+  SLOW_PATH_FAMILIES,
   softenUnownedEmotionReply,
   stripEmDashes,
   userConfirmsLabel,
@@ -65,17 +69,71 @@ check('stage: user_confirmation=yes also satisfies confirmation',
   evaluateStage(ev({ label_source: 'user_stated', user_confirmation: 'yes' }), null), 'understood');
 check('stage: rejected shade blocks unlock',
   evaluateStage(ev({ label_source: 'user_confirmed', user_rejected_shades: ['anxious'] }), ev()), 'shaped');
-check('stage: owned + appraisal counts as anchor (no separate trigger needed)',
+check('stage (v0.4): a single anchor (lone appraisal) is NOT enough — needs 2 signals',
   evaluateStage(
-    ev({ label_source: 'user_confirmed', trigger_event: null, body_cue: [], appraisal_thought: 'if I rest, something fails' }),
+    ev({ label_source: 'user_confirmed', trigger_event: null, body_cue: [], user_words_raw: '', appraisal_thought: 'if I rest, something fails' }),
+    null,
+  ), 'shaped');
+check('stage (v0.4): appraisal + body cue (2 material signals) DOES unlock',
+  evaluateStage(
+    ev({ label_source: 'user_confirmed', trigger_event: null, body_cue: ['tight chest'], appraisal_thought: 'if I rest, something fails' }),
     null,
   ), 'understood');
 check('stage: owned label but NO anchor -> named',
-  evaluateStage(ev({ label_source: 'user_confirmed', trigger_event: null, body_cue: [] }), null), 'named');
+  evaluateStage(ev({ label_source: 'user_confirmed', trigger_event: null, body_cue: [], user_words_raw: '' }), null), 'named');
 check('stage: no shade -> shaped when anchored', evaluateStage(ev({ emotion_shade: null }), null), 'shaped');
 check('stage: no family -> noticed', evaluateStage(ev({ emotion_family: null }), null), 'noticed');
 check('stage: shade changed since prev (not stable, no confirm) -> shaped',
   evaluateStage(ev({ label_source: 'user_stated' }), ev({ emotion_shade: 'dread' })), 'shaped');
+
+// ── First-Shape richness threshold (v0.4 §6.4) ───────────────────────────────
+check('richness: counts material signals (trigger + body = 2)', firstShapeEvidence(ev()).materialCount, 2);
+check('richness: lone signal counts as 1', firstShapeEvidence(ev({ trigger_event: null, body_cue: [], user_words_raw: '', appraisal_thought: 'x' })).materialCount, 1);
+check('richness: user phrase (3+ words) counts as a signal',
+  firstShapeEvidence(ev({ trigger_event: null, body_cue: [], user_words_raw: 'pulled too thin lately' })).userPhraseOrMetaphor, true);
+check('richness: mixed-emotion distinction counts',
+  firstShapeEvidence(ev({ trigger_event: null, body_cue: [], user_words_raw: '', mixed_confirmed: 1 })).mixedEmotionDistinction, true);
+// Slow-path: flat/shame need an extra turn unless very rich.
+check('slowpath: flat is a slow-path family', SLOW_PATH_FAMILIES.has('flat'), true);
+check('slowpath: shame is a slow-path family', SLOW_PATH_FAMILIES.has('shame'), true);
+check('slowpath: flat, 2 signals, confirmed but NOT stable -> not yet understood (shaped)',
+  evaluateStage(ev({ emotion_family: 'flat', emotion_shade: 'numb', label_source: 'user_confirmed' }), null), 'shaped');
+check('slowpath: flat, 2 signals, stable across a turn -> understood',
+  evaluateStage(
+    ev({ emotion_family: 'flat', emotion_shade: 'numb', label_source: 'user_confirmed' }),
+    ev({ emotion_family: 'flat', emotion_shade: 'numb', label_source: 'user_confirmed' }),
+  ), 'understood');
+check('slowpath: flat, VERY rich (3 signals) unlocks without the extra turn',
+  evaluateStage(
+    ev({ emotion_family: 'flat', emotion_shade: 'numb', label_source: 'user_confirmed', user_words_raw: 'just totally blank and far away' }),
+    null,
+  ), 'understood');
+check('slowpath: a non-slow family (fear) still unlocks on 2 signals + confirm, first turn',
+  evaluateStage(ev({ label_source: 'user_confirmed' }), null), 'understood');
+
+// ── Shade ownership gate (v0.4 §6.3) ─────────────────────────────────────────
+check('shade-own: user said the shade word -> owned', shadeIsUserOwned('dread', 'its mostly dread i think', [], false), true);
+check('shade-own: said in earlier user turn -> owned',
+  shadeIsUserOwned('dread', 'yeah', [{ role: 'user', content: 'this is dread' }], false), true);
+check('shade-own: companion-only shade, user silent -> NOT owned', shadeIsUserOwned('stretched', 'work was a lot', [], false), false);
+check('shade-own: accept of the SAME proposed shade -> owned',
+  shadeIsUserOwned('stretched', 'yeah thats the word', [], { proposedShade: 'stretched' }), true);
+check('shade-own: accept does NOT own a shade the model just SWAPPED in (pulled thin -> stretched)',
+  shadeIsUserOwned('stretched', 'yeah pulled thin is exactly it', [], { proposedShade: 'pressure' }), false);
+check('shade-own: accept does NOT own it when there was no proposal',
+  shadeIsUserOwned('stretched', 'yeah', [], {}), false);
+
+// ── Unlock pushback detector (v0.4 §6.3) ─────────────────────────────────────
+check('pushback: "no, that doesnt fit" rejects the in-play shade',
+  detectShadeRejection("no that doesnt fit", { emotion_shade: 'dread' }), 'dread');
+check('pushback: "not quite" rejects the in-play shade',
+  detectShadeRejection('hmm, not quite', { emotion_shade: 'guilt' }), 'guilt');
+check('pushback: "wrong word" rejects', detectShadeRejection('thats the wrong word honestly', { emotion_shade: 'shame' }), 'shame');
+check('pushback: a bare "no" does NOT trigger rejection (too broad)',
+  detectShadeRejection('no', { emotion_shade: 'dread' }), null);
+check('pushback: acceptance does not trigger rejection',
+  detectShadeRejection('yeah thats it', { emotion_shade: 'dread' }), null);
+check('pushback: nothing in play -> null', detectShadeRejection('no that doesnt fit', { emotion_shade: null }), null);
 
 // ── Ownership backstop: the user must name/confirm the feeling (stage.ts) ─────
 check('owned: described situation, never named the feeling -> not owned',

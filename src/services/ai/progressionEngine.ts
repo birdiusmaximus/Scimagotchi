@@ -177,10 +177,14 @@ export function advanceProgress(
 
   // ── Accumulate the family's vocabulary on meaningful (unlocked) turns ──────
   if (turn.unlocked) {
-    pushUnique(p.confirmed_shades, ev.emotion_shade);
+    // §6.3: only a USER-OWNED shade is stored as confirmed; a companion hypothesis
+    // is never written to the record as the user's truth.
+    const shadeOwned = ev.shade_source === 'user_stated' || ev.shade_source === 'user_confirmed';
+    if (shadeOwned) pushUnique(p.confirmed_shades, ev.emotion_shade);
     pushUnique(p.common_triggers, ev.trigger_event);
     ev.body_cue.forEach((b) => pushUnique(p.common_body_cues, b));
-    pushUnique(p.common_user_phrases, ev.user_words_raw);
+    // §6.3: the user's exact phrase is the primary memory, preferred over taxonomy.
+    pushUnique(p.common_user_phrases, ev.user_phrase ?? ev.user_words_raw);
     if (ev.memory_note) p.memory_summary = ev.memory_note;
   }
 

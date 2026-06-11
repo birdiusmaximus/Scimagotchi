@@ -24,7 +24,14 @@ import {
   type ResponseShape,
 } from '@/services/ai/responsePolicy';
 import { needsOwnershipRepair, softenUnownedEmotionReply } from '@/services/ai/replyOwnership';
-import { evaluateStage, labelIsUserOwned, stageRank, userConfirmsLabel } from '@/services/ai/stage';
+import {
+  detectShadeRejection,
+  evaluateStage,
+  labelIsUserOwned,
+  shadeIsUserOwned,
+  stageRank,
+  userConfirmsLabel,
+} from '@/services/ai/stage';
 import { EMOTION_MAPS } from '@/data/emotionMaps';
 import type { EmotionFamilyId, LabelSource, MixedRelation, UnlockStage } from '@/types/models';
 import { nowIso } from '@/utils/date';
@@ -161,6 +168,14 @@ export async function openaiGenerateTurn(
   ev.label_source = p.label_source ?? 'companion_hypothesis';
   ev.mixed_relation = p.mixed_relation ?? null;
   const rejected = new Set([...(ev.user_rejected_shades ?? []), ...(p.rejected_shades ?? [])].map((s) => s.trim()).filter(Boolean));
+  // Pushback detector (§6.3): if they corrected the shade the companion had in play
+  // ("no, not dread", "that doesn't fit"), record it as rejected so it cannot unlock.
+  const pushedBack = detectShadeRejection(input.userText, prev ?? null);
+  if (pushedBack) {
+    rejected.add(pushedBack);
+    if (ev.emotion_shade && ev.emotion_shade.toLowerCase() === pushedBack.toLowerCase()) ev.emotion_shade = null;
+    ev.user_confirmation = 'no';
+  }
   ev.user_rejected_shades = [...rejected];
   if (p.user_confirmed_label) ev.user_confirmation = 'yes';
 
@@ -182,6 +197,22 @@ export async function openaiGenerateTurn(
     ev.label_source = 'user_confirmed';
     ev.user_confirmation = 'yes';
   }
+
+  // ── Shade ownership gate (v0.4 §6.3) ──────────────────────────────────────
+  // A shade is the user's only when they used the word or accepted it; otherwise
+  // it stays the companion's hypothesis (a candidate), never stored as their truth.
+  // The user's exact phrase is the primary memory, preferred over taxonomy shade.
+  // said = the user used the shade word themselves (this turn or earlier);
+  // owned = said OR they accepted the SAME shade that was proposed last turn (not a
+  // word the model just swapped in — that drift is what §6.3 guards against).
+  const saidShade = shadeIsUserOwned(ev.emotion_shade, input.userText, input.history ?? []);
+  const shadeOwned =
+    saidShade ||
+    shadeIsUserOwned(ev.emotion_shade, input.userText, input.history ?? [], { proposedShade: prev?.emotion_shade ?? null });
+  ev.shade_source = !ev.emotion_shade ? null : saidShade ? 'user_stated' : shadeOwned ? 'user_confirmed' : 'companion_hypothesis';
+  ev.candidate_shade = ev.emotion_shade && ev.shade_source === 'companion_hypothesis' ? ev.emotion_shade : null;
+  const ownPhrase = (ev.user_words_raw ?? '').trim() || (input.userText ?? '').trim();
+  ev.user_phrase = ownPhrase ? stripEmDashes(ownPhrase).slice(0, 240) : ev.user_phrase ?? null;
 
   // Mixed-emotion engine (brief §9): strands may be proposed freely; the mixed
   // structure is CONFIRMED (savable) only per the §9.3 rules.

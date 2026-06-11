@@ -709,6 +709,35 @@ var RANK = {
 function stageRank(stage) {
   return RANK[stage];
 }
+var SLOW_PATH_FAMILIES = /* @__PURE__ */ new Set(["flat", "shame"]);
+function firstShapeEvidence(ev, prev = null) {
+  const userOwnedLabel = ev.label_source === "user_stated" || ev.label_source === "user_confirmed";
+  const concreteSituation = !!ev.trigger_event;
+  const userPhraseOrMetaphor = !!(ev.user_phrase && ev.user_phrase.trim()) || (ev.user_words_raw ?? "").trim().split(/\s+/).filter(Boolean).length >= 3;
+  const bodyCue = ev.body_cue.length > 0 || ev.behaviour_action.length > 0;
+  const meaningOrAppraisal = !!ev.appraisal_thought || ev.need_value.length > 0;
+  const mixedEmotionDistinction = ev.mixed_confirmed === 1 || (ev.strands?.length ?? 0) >= 2;
+  const repeatedConfirmation = !!prev && prev.emotion_family === ev.emotion_family && !!prev.emotion_shade && !!ev.emotion_shade && prev.emotion_shade.toLowerCase() === ev.emotion_shade.toLowerCase();
+  const userAcceptedReflection = ev.label_source === "user_confirmed" || ev.user_confirmation === "yes";
+  const materialCount = [
+    concreteSituation,
+    userPhraseOrMetaphor,
+    bodyCue,
+    meaningOrAppraisal,
+    mixedEmotionDistinction
+  ].filter(Boolean).length;
+  return {
+    userOwnedLabel,
+    concreteSituation,
+    userPhraseOrMetaphor,
+    bodyCue,
+    meaningOrAppraisal,
+    mixedEmotionDistinction,
+    repeatedConfirmation,
+    userAcceptedReflection,
+    materialCount
+  };
+}
 function evaluateStage(ev, prev = null) {
   if (!ev.emotion_family) return "noticed";
   const hasShade = !!ev.emotion_shade;
@@ -717,11 +746,29 @@ function evaluateStage(ev, prev = null) {
   const rejected = (ev.user_rejected_shades ?? []).some(
     (s) => s.toLowerCase() === ev.emotion_shade.toLowerCase()
   );
-  const owned = ev.label_source === "user_stated" || ev.label_source === "user_confirmed";
-  const confirmedNow = ev.label_source === "user_confirmed" || ev.user_confirmation === "yes";
-  const stable = !!prev && prev.emotion_family === ev.emotion_family && !!prev.emotion_shade && prev.emotion_shade.toLowerCase() === ev.emotion_shade.toLowerCase();
-  if (!rejected && owned && anchor && (stable || confirmedNow)) return "understood";
+  const e = firstShapeEvidence(ev, prev);
+  const stabilityOk = e.repeatedConfirmation || e.userAcceptedReflection;
+  const slow = SLOW_PATH_FAMILIES.has(ev.emotion_family);
+  const enoughMaterial = slow ? e.materialCount >= 3 || e.repeatedConfirmation && e.materialCount >= 2 : e.materialCount >= 2;
+  if (!rejected && e.userOwnedLabel && stabilityOk && enoughMaterial) return "understood";
   return anchor ? "shaped" : "named";
+}
+var ACCEPT_SHADE = /\b(yes|yeah|yep|exactly|thats? (it|right|the (one|word))|that fits|that'?s the word|the right word|good word)\b/;
+function shadeIsUserOwned(shade, userText, history, opts) {
+  if (!shade || !shade.trim()) return false;
+  const w = shade.toLowerCase().trim();
+  const said = (text) => ` ${text.toLowerCase()} `.includes(` ${w} `) || new RegExp(`\\b${w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i").test(text);
+  if (said(userText)) return true;
+  if (history.some((m) => m.role === "user" && said(m.content))) return true;
+  const proposed = (opts?.proposedShade ?? "").toLowerCase().trim();
+  if (proposed && proposed === w && ACCEPT_SHADE.test(` ${userText.toLowerCase().replace(/[’'`]/g, "'")} `)) return true;
+  return false;
+}
+var SHADE_REJECT = /\b(not (really|quite|it|that|the word)|that'?s not (it|right|the word|quite it)|doesn'?t (fit|feel right|sound right|quite fit)|isn'?t (it|right|the word)|wrong word|no not|not the right word)\b/;
+function detectShadeRejection(userText, prev) {
+  if (!prev?.emotion_shade) return null;
+  const t = ` ${userText.toLowerCase().replace(/[’'`]/g, "'")} `;
+  return SHADE_REJECT.test(t) ? prev.emotion_shade : null;
 }
 var AFFIRM_LABEL = /\b(yes|yeah|yep|yup|exactly|totally|definitely|for sure|that'?s it|that'?s right|spot on|pretty much|sounds right|that fits|fits|correct)\b/;
 function labelIsUserOwned(fam, userText, history, prev) {
@@ -1202,10 +1249,11 @@ function advanceProgress(existing, turn, conversationId, opts = {}) {
     if (to === "deepened" && !p.deepened_at) p.deepened_at = stamp;
   }
   if (turn.unlocked) {
-    pushUnique(p.confirmed_shades, ev.emotion_shade);
+    const shadeOwned = ev.shade_source === "user_stated" || ev.shade_source === "user_confirmed";
+    if (shadeOwned) pushUnique(p.confirmed_shades, ev.emotion_shade);
     pushUnique(p.common_triggers, ev.trigger_event);
     ev.body_cue.forEach((b) => pushUnique(p.common_body_cues, b));
-    pushUnique(p.common_user_phrases, ev.user_words_raw);
+    pushUnique(p.common_user_phrases, ev.user_phrase ?? ev.user_words_raw);
     if (ev.memory_note) p.memory_summary = ev.memory_note;
   }
   p.updated_at = nowIso();
@@ -1355,16 +1403,19 @@ function composeWeeklySummary(input) {
 export {
   EXIT_CUE,
   PROGRESS_RANK,
+  SLOW_PATH_FAMILIES,
   activeCards,
   advanceProgress,
   askedForNamingHelp,
   composeWeeklySummary,
+  detectShadeRejection,
   draftFromRejection,
   draftFromTurn,
   dropTrailingQuestion,
   emptyProgress,
   evaluateStage,
   expressionFor,
+  firstShapeEvidence,
   isDuplicateReply,
   isOptionMenu,
   labelIsUserOwned,
@@ -1378,6 +1429,7 @@ export {
   routeMode,
   sanitizeStrands,
   selectVisualState,
+  shadeIsUserOwned,
   softenUnownedEmotionReply,
   stageRank,
   stripEmDashes,

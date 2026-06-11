@@ -79,7 +79,7 @@ function routeMode(userText, prevEvent, entryHint = null) {
   if (familyKnown) return decide("differentiate");
   return decide("witness");
 }
-var KEEP_GOING_DIRECTIVE = 'Mode: STAY WITH IT \u2014 they tapped a button to keep exploring THIS feeling with you, not to start something new. Do NOT restate your last reflection. Build directly on their most recent words, metaphor, or the emotional shape already in play, in their own wording. Offer exactly ONE short, gentle follow-up that opens just ONE of these doors: a finer shade of the feeling, where it sits in the body or its sensory shape, what set it off, what it means or connects to, a nearby feeling it borders, whether a second strand is tangled in, or a personal memory or phrase for it. If the feeling is a GOOD one, sometimes invite them to savour and stay in it rather than analyse it ("do you want to just linger with that for a second, rather than pull it apart?"). One question only. No advice, no lists, no clinical words.';
+var KEEP_GOING_DIRECTIVE = 'Mode: STAY WITH IT \u2014 they tapped a button to keep exploring THIS feeling, not to start over. FIRST re-read what they have ALREADY told you in this conversation, especially their last substantive message, and take it ONE STEP DEEPER from there. You have already heard a lot from them: do NOT re-ask anything they have answered, do NOT repeat a question you have asked before, and never ask them to "say it in their own words" again if they already have. Respond to the SPECIFIC thing they last said \u2014 reflect it back a little more precisely \u2014 and only then, if a question genuinely helps, open just ONE new door from it: what it costs them, what it protects or needs, what it connects to or reminds them of, a finer shade, where it sits in the body, a nearby feeling, or a tangled second strand. If the feeling is a GOOD one, sometimes simply invite them to savour and stay in it rather than analyse it ("do you want to just linger with that for a second?"). At most ONE question, using their own words. No advice, no lists, no clinical language, no restating your last reflection.';
 function intentDecision(intent, prevEvent = null) {
   if (intent === "not_quite") {
     return {
@@ -215,6 +215,35 @@ function isDuplicateReply(reply, companionReplies) {
   const n = (s) => s.toLowerCase().replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
   const r = n(reply);
   return r.length > 0 && companionReplies.slice(-3).some((p) => n(p) === r);
+}
+var Q_STOP = new Set(
+  "the a an is it that this you your to of in on and or for what how do does did feel feels feeling like about would could is it more most some something else part bit there here when where i im its was were be been being just really right now your".split(
+    " "
+  )
+);
+var questionSentences = (s) => (String(s || "").match(/[^.!?]*\?/g) ?? []).map((q) => q.trim());
+var normQuestion = (q) => q.toLowerCase().replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
+var sigWords = (q) => new Set(normQuestion(q).split(" ").filter((w) => w.length > 2 && !Q_STOP.has(w)));
+function repeatsEarlierQuestion(reply, priorCompanionReplies) {
+  const qs = questionSentences(reply);
+  if (!qs.length) return false;
+  const priorQs = priorCompanionReplies.flatMap(questionSentences);
+  for (const q of qs) {
+    const nq = normQuestion(q);
+    if (nq.length < 8) continue;
+    const a = sigWords(q);
+    for (const pq of priorQs) {
+      if (normQuestion(pq) === nq) return true;
+      const b = sigWords(pq);
+      if (a.size >= 2 && b.size >= 2) {
+        let inter = 0;
+        for (const w of a) if (b.has(w)) inter++;
+        const union = (/* @__PURE__ */ new Set([...a, ...b])).size;
+        if (inter / union >= 0.6) return true;
+      }
+    }
+  }
+  return false;
 }
 
 // src/data/emotionMaps.ts
@@ -1485,6 +1514,7 @@ export {
   mixedConfirmed,
   needsOwnershipRepair,
   relevantMemory,
+  repeatsEarlierQuestion,
   replaceOptionMenu,
   replyContainsDeclarativeEmotionAssertion,
   routeMode,

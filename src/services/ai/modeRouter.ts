@@ -132,12 +132,14 @@ export function routeMode(
 }
 
 const KEEP_GOING_DIRECTIVE =
-  'Mode: STAY WITH IT — they tapped a button to keep exploring THIS feeling with you, not to start something new. Do NOT restate ' +
-  'your last reflection. Build directly on their most recent words, metaphor, or the emotional shape already in play, in their own wording. ' +
-  'Offer exactly ONE short, gentle follow-up that opens just ONE of these doors: a finer shade of the feeling, where it sits in the body or ' +
-  'its sensory shape, what set it off, what it means or connects to, a nearby feeling it borders, whether a second strand is tangled in, or a ' +
-  'personal memory or phrase for it. If the feeling is a GOOD one, sometimes invite them to savour and stay in it rather than analyse it ' +
-  '("do you want to just linger with that for a second, rather than pull it apart?"). One question only. No advice, no lists, no clinical words.';
+  'Mode: STAY WITH IT — they tapped a button to keep exploring THIS feeling, not to start over. FIRST re-read what they have ALREADY ' +
+  'told you in this conversation, especially their last substantive message, and take it ONE STEP DEEPER from there. You have already heard a ' +
+  'lot from them: do NOT re-ask anything they have answered, do NOT repeat a question you have asked before, and never ask them to "say it in ' +
+  'their own words" again if they already have. Respond to the SPECIFIC thing they last said — reflect it back a little more precisely — and ' +
+  'only then, if a question genuinely helps, open just ONE new door from it: what it costs them, what it protects or needs, what it connects ' +
+  'to or reminds them of, a finer shade, where it sits in the body, a nearby feeling, or a tangled second strand. If the feeling is a GOOD one, ' +
+  'sometimes simply invite them to savour and stay in it rather than analyse it ("do you want to just linger with that for a second?"). At most ' +
+  'ONE question, using their own words. No advice, no lists, no clinical language, no restating your last reflection.';
 
 /**
  * Map a tapped continuation chip to a turn directive (the button-intent path,

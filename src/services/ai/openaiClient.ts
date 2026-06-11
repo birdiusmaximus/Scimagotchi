@@ -19,6 +19,7 @@ import {
   isDuplicateReply,
   isOptionMenu,
   replaceOptionMenu,
+  repeatsEarlierQuestion,
   varietyDirective,
   varietySignals,
   type ResponseShape,
@@ -118,14 +119,17 @@ export async function openaiGenerateTurn(
     return JSON.parse(content) as Parsed;
   };
 
-  // ── Call, with one retry on corrupted or verbatim-repeated output ──────────
+  // ── Call, with one retry on corrupted, verbatim-repeated, or re-asked output ──
   let p = await callOnce();
-  if (hasUnexpectedScript(p.reply) || isDuplicateReply(p.reply, companionReplies)) {
+  const repeatedQ = repeatsEarlierQuestion(p.reply, companionReplies);
+  if (hasUnexpectedScript(p.reply) || isDuplicateReply(p.reply, companionReplies) || repeatedQ) {
     const reason = hasUnexpectedScript(p.reply)
-      ? 'Your previous draft contained corrupted/mixed-script text.'
-      : 'Your previous draft repeated an earlier reply verbatim.';
+      ? 'Your previous draft contained corrupted/mixed-script text. Compose a fresh reply in clean English only.'
+      : repeatedQ
+        ? 'Your previous draft asked a question they have ALREADY answered earlier in this conversation. Do NOT ask it again. Re-read what they have actually told you and respond to THAT specific thing — reflect it back a little more precisely, and only then, if it helps, open ONE genuinely new door (what it costs them, what it protects or needs, what it connects to, a finer shade). Reference their real words, not a generic prompt.'
+        : 'Your previous draft repeated an earlier reply verbatim. Say something genuinely new.';
     try {
-      p = await callOnce(`OUTPUT CORRECTION: ${reason} Compose a fresh reply — clean English only, and say something genuinely new.`);
+      p = await callOnce(`OUTPUT CORRECTION: ${reason}`);
     } catch {
       // keep the first parse; sanitise below
     }

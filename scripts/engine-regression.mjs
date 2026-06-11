@@ -19,6 +19,7 @@ import {
   labelIsUserOwned,
   mixedConfirmed,
   needsOwnershipRepair,
+  repeatsEarlierQuestion,
   replaceOptionMenu,
   replyContainsDeclarativeEmotionAssertion,
   routeMode,
@@ -245,6 +246,17 @@ const dn = intentDecision('done', ev());
 check('intent: done -> close mode', dn.mode, 'close');
 check('intent: done asks no question (except optional save)', /no question|ask no question/i.test(dn.directive), true);
 check('intent: done forbids guilt / neediness', /no guilt|no neediness|never that you will miss/i.test(dn.directive), true);
+
+// ── Repeated-question guard (Stay with it must not re-ask what they answered) ─
+const priorQ = ['The way they act sounds like the part getting under your skin. How would you say it in your own words?'];
+check('repeatQ: re-asking the same question is caught', repeatsEarlierQuestion('How would you say it in your own words?', priorQ), true);
+check('repeatQ: a genuinely new question is fine', repeatsEarlierQuestion('What does it cost you when nothing changes?', priorQ), false);
+check('repeatQ: heavy word overlap counts as a repeat',
+  repeatsEarlierQuestion('What makes it feel heavy and stuck inside?', ['What makes it feel heavy and stuck?']), true);
+check('repeatQ: a reflection with no question is never a repeat',
+  repeatsEarlierQuestion('That sounds like it costs you something.', priorQ), false);
+check('repeatQ: no prior questions -> not a repeat', repeatsEarlierQuestion('How does that sit with you?', ['I am glad you came by.']), false);
+check('intent: keep_going directive says go one step deeper / not re-ask', /one step deeper/i.test(kgKnown.directive) && /do not re-ask|never ask them to/i.test(kgKnown.directive), true);
 
 // ── Em-dash stripping (companion never shows long dashes) ────────────────────
 check('strip: spaced em dash -> comma', stripEmDashes('Go ahead — say whatever’s there'), 'Go ahead, say whatever’s there');

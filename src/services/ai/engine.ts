@@ -8,6 +8,7 @@ export {
   isDuplicateReply,
   isOptionMenu,
   replaceOptionMenu,
+  repeatsEarlierQuestion,
   varietyDirective,
   varietySignals,
 } from '@/services/ai/responsePolicy';

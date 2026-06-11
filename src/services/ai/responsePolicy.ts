@@ -187,3 +187,41 @@ export function isDuplicateReply(reply: string, companionReplies: string[]): boo
   const r = n(reply);
   return r.length > 0 && companionReplies.slice(-3).some((p) => n(p) === r);
 }
+
+// Common scaffolding words ignored when comparing two questions for sameness.
+const Q_STOP = new Set(
+  'the a an is it that this you your to of in on and or for what how do does did feel feels feeling like about would could is it more most some something else part bit there here when where i im its was were be been being just really right now your'.split(
+    ' ',
+  ),
+);
+const questionSentences = (s: string): string[] => (String(s || '').match(/[^.!?]*\?/g) ?? []).map((q) => q.trim());
+const normQuestion = (q: string) => q.toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/\s+/g, ' ').trim();
+const sigWords = (q: string): Set<string> => new Set(normQuestion(q).split(' ').filter((w) => w.length > 2 && !Q_STOP.has(w)));
+
+/**
+ * True when a reply asks a question the companion has ALREADY asked earlier in the
+ * conversation (so a "Stay with it" follow-up can't re-ask "how would you say it in
+ * your own words?" after they answered). Matches an identical question, or one whose
+ * meaningful words overlap heavily with an earlier one.
+ */
+export function repeatsEarlierQuestion(reply: string, priorCompanionReplies: string[]): boolean {
+  const qs = questionSentences(reply);
+  if (!qs.length) return false;
+  const priorQs = priorCompanionReplies.flatMap(questionSentences);
+  for (const q of qs) {
+    const nq = normQuestion(q);
+    if (nq.length < 8) continue; // ignore tiny "oh?" style fragments
+    const a = sigWords(q);
+    for (const pq of priorQs) {
+      if (normQuestion(pq) === nq) return true; // the exact same question
+      const b = sigWords(pq);
+      if (a.size >= 2 && b.size >= 2) {
+        let inter = 0;
+        for (const w of a) if (b.has(w)) inter++;
+        const union = new Set([...a, ...b]).size;
+        if (inter / union >= 0.6) return true; // heavy overlap = effectively the same ask
+      }
+    }
+  }
+  return false;
+}

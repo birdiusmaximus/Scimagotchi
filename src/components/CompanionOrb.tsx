@@ -1,8 +1,9 @@
 import { LinearGradient } from 'expo-linear-gradient';
-import { memo, useEffect } from 'react';
-import { Platform, StyleSheet, View, type ViewStyle } from 'react-native';
+import { memo, useEffect, useState } from 'react';
+import { AccessibilityInfo, Platform, StyleSheet, View, type ViewStyle } from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import Animated, {
+  cancelAnimation,
   Easing,
   interpolate,
   useAnimatedStyle,
@@ -15,10 +16,25 @@ import Animated, {
 } from 'react-native-reanimated';
 
 import { FAMILY_COLORS } from '@/data/emotionMaps';
+import {
+  type CompanionGesture,
+  durationFor,
+  MOTION_CONFIG,
+  poseFor,
+  POSE_TARGETS,
+  resolveMotion,
+} from '@/services/ai/companionPose';
 import type { CompanionVisualState } from '@/services/ai/companionVisualState';
 import { expressionFor } from '@/services/ai/orbExpression';
 import { gradients } from '@/theme/tokens';
 import type { EmotionFamilyId } from '@/types/models';
+
+// Production easing curves (from the remotion best-practices skill): a crisp
+// ease-out for settling into a pose, a balanced ease-in-out for calm loops.
+const EASE_OUT = Easing.bezier(0.16, 1, 0.3, 1);
+const EASE_IN_OUT = Easing.bezier(0.45, 0, 0.55, 1);
+// A gentle spring for arm follow-through: light mass, mild overshoot, soft settle.
+const ARM_SPRING = { damping: 13, stiffness: 95, mass: 0.9 } as const;
 
 type Props = {
   size?: number;
@@ -28,6 +44,12 @@ type Props = {
   tintFamilies?: EmotionFamilyId[];
   /** What the orb should communicate (engine brief §18); ambience only, never reward. */
   visual?: CompanionVisualState;
+  /** A transient tapped-chip gesture that briefly overrides the ambient arm pose
+   * ("stay with it" / "not quite" / "done" / "memory saved" / greeting). Bump `key`
+   * to fire it; `hold: true` sustains it (e.g. listening) until the prop clears. */
+  gesture?: { key: number; state: CompanionGesture; hold?: boolean } | null;
+  /** Force reduced motion. When undefined, the OS "reduce motion" setting is used. */
+  reducedMotion?: boolean;
   /** Enable touch reactions: eyes follow the finger, poke recoil, pet to close. */
   interactive?: boolean;
   /** Bump `key` (with a sentence count) to make the orb react as it "speaks". */
@@ -36,6 +58,8 @@ type Props = {
 };
 
 const BASE_GLOW = '0px 0px 44px 6px rgba(124,92,242,0.42), 0px 0px 96px 20px rgba(110,124,242,0.26), 0px 14px 30px rgba(70,70,140,0.26)';
+// Softer glow for the small satellite arm orbs.
+const ARM_GLOW = '0px 0px 16px 3px rgba(124,92,242,0.34), 0px 4px 10px rgba(70,70,140,0.22)';
 
 // Stable references for the LinearGradient props. The orb re-renders every frame
 // (ambient Reanimated animation on web); passing fresh array/object literals would
@@ -78,6 +102,8 @@ export function CompanionOrb({
   family = null,
   tintFamilies,
   visual = 'idle_calm',
+  gesture = null,
+  reducedMotion,
   interactive = false,
   speak,
   style,
@@ -110,8 +136,55 @@ export function CompanionOrb({
   const emoContract = useSharedValue(0); // shame/hurt/flat: inward draw
   const tremorOsc = useSharedValue(0); // fast oscillator for the tremble
   const pulseOsc = useSharedValue(0); // slower oscillator for the pulse
+  const drift = useSharedValue(0.5); // slow idle oscillator for independent arm drift
+
+  // ── Satellite arm orbs + pose (native-animation brief) ─────────────────────
+  // Each arm tracks a pose target (px = fraction × size); the body leads, the arms
+  // lag and settle, the glow follows. Initialised to the calm pose so they don't
+  // spring in from the centre on mount.
+  const C = POSE_TARGETS.calm;
+  const aLx = useSharedValue(C.leftArm.x * size);
+  const aLy = useSharedValue(C.leftArm.y * size);
+  const aLs = useSharedValue(C.leftArm.scale);
+  const aLr = useSharedValue(C.leftArm.rotate);
+  const aLo = useSharedValue(C.leftArm.opacity);
+  const aRx = useSharedValue(C.rightArm.x * size);
+  const aRy = useSharedValue(C.rightArm.y * size);
+  const aRs = useSharedValue(C.rightArm.scale);
+  const aRr = useSharedValue(C.rightArm.rotate);
+  const aRo = useSharedValue(C.rightArm.opacity);
+  const pBy = useSharedValue(0); // body pose translateY add (px)
+  const pBs = useSharedValue(0); // body pose scale add
+  const pBr = useSharedValue(0); // body pose rotate (deg)
+  const pGs = useSharedValue(C.glow.scale); // glow pose scale
+  const pGo = useSharedValue(C.glow.opacity); // glow pose opacity
+
+  // Reduced motion: explicit prop wins, else follow the OS accessibility setting.
+  const [reduceMotionSys, setReduceMotionSys] = useState(false);
+  useEffect(() => {
+    let active = true;
+    AccessibilityInfo.isReduceMotionEnabled?.().then((v) => active && setReduceMotionSys(!!v)).catch(() => {});
+    const sub = AccessibilityInfo.addEventListener?.('reduceMotionChanged', (v) => setReduceMotionSys(!!v));
+    return () => {
+      active = false;
+      sub?.remove?.();
+    };
+  }, []);
+  const rm = reducedMotion ?? reduceMotionSys;
 
   useEffect(() => {
+    // Reduced motion: hold every idle loop near-neutral, no continuous animation.
+    if (rm) {
+      for (const v of [floatY, breathe, aura, blink, tremorOsc, pulseOsc, drift]) cancelAnimation(v);
+      floatY.value = 0.5;
+      breathe.value = 0;
+      aura.value = 0.4;
+      blink.value = 1;
+      tremorOsc.value = 0.5;
+      pulseOsc.value = 0.5;
+      drift.value = 0.5;
+      return;
+    }
     floatY.value = withRepeat(withTiming(1, { duration: 2800, easing: Easing.inOut(Easing.sin) }), -1, true);
     breathe.value = withRepeat(withTiming(1, { duration: 3400, easing: Easing.inOut(Easing.sin) }), -1, true);
     aura.value = withRepeat(withTiming(1, { duration: 3000, easing: Easing.inOut(Easing.sin) }), -1, true);
@@ -123,7 +196,10 @@ export function CompanionOrb({
     // so they cost nothing visually until a feeling calls for them.
     tremorOsc.value = withRepeat(withTiming(1, { duration: 110, easing: Easing.inOut(Easing.sin) }), -1, true);
     pulseOsc.value = withRepeat(withTiming(1, { duration: 640, easing: Easing.inOut(Easing.sin) }), -1, true);
-  }, [floatY, breathe, aura, blink, tremorOsc, pulseOsc]);
+    // Slow idle drift for the arms (a different period from breathe so they drift
+    // independently of each other and of the body).
+    drift.value = withRepeat(withTiming(1, { duration: 5200, easing: EASE_IN_OUT }), -1, true);
+  }, [rm, floatY, breathe, aura, blink, tremorOsc, pulseOsc, drift]);
 
   const primaryFamily = tintFamilies?.[0] ?? family;
   const secondFamily = tintFamilies?.[1] ?? null;
@@ -155,6 +231,62 @@ export function CompanionOrb({
     }
   }, [visual, tintFactor, recede, glow]);
 
+  // ── Tapped-chip gesture: a transient pose that plays then reverts to ambient ─
+  // (sustained when `hold`, e.g. listening while the input is focused).
+  const [activeGesture, setActiveGesture] = useState<CompanionGesture | null>(null);
+  useEffect(() => {
+    if (!gesture || gesture.key === 0) {
+      setActiveGesture(null);
+      return;
+    }
+    setActiveGesture(gesture.state);
+    if (gesture.hold) return; // held until the prop clears
+    const t = setTimeout(() => setActiveGesture(null), durationFor(gesture.state) + 700);
+    return () => clearTimeout(t);
+  }, [gesture?.key, gesture?.state, gesture?.hold, gesture]);
+
+  // ── Pose animation: body leads, arms lag + settle, glow follows (brief §5/§6) ─
+  const motion = resolveMotion(visual, primaryFamily, activeGesture);
+  useEffect(() => {
+    const p = poseFor(motion);
+    const dur = durationFor(motion);
+    const lag = rm ? 0 : MOTION_CONFIG.armLagMs;
+    const glowLag = rm ? 0 : MOTION_CONFIG.glowLagMs;
+    // Body first.
+    pBy.value = withTiming(p.body.y * size, { duration: rm ? 220 : dur, easing: EASE_OUT });
+    pBs.value = withTiming(p.body.scale - 1, { duration: rm ? 220 : dur, easing: EASE_OUT });
+    pBr.value = withTiming(rm ? 0 : p.body.rotate, { duration: rm ? 220 : dur, easing: EASE_OUT });
+    // Arms lag, then settle with a gentle spring overshoot (reduced motion: a plain
+    // short ease, no spring, no overshoot).
+    const setArm = (
+      sx: typeof aLx,
+      sy: typeof aLy,
+      ss: typeof aLs,
+      sr: typeof aLr,
+      so: typeof aLo,
+      a: (typeof p)['leftArm'],
+    ) => {
+      if (rm) {
+        sx.value = withTiming(a.x * size, { duration: 220, easing: EASE_OUT });
+        sy.value = withTiming(a.y * size, { duration: 220, easing: EASE_OUT });
+        ss.value = withTiming(a.scale, { duration: 220, easing: EASE_OUT });
+        sr.value = withTiming(0, { duration: 220 });
+        so.value = withTiming(a.opacity, { duration: 220 });
+      } else {
+        sx.value = withDelay(lag, withSpring(a.x * size, ARM_SPRING));
+        sy.value = withDelay(lag, withSpring(a.y * size, ARM_SPRING));
+        ss.value = withDelay(lag, withSpring(a.scale, ARM_SPRING));
+        sr.value = withDelay(lag, withSpring(a.rotate, ARM_SPRING));
+        so.value = withDelay(lag, withTiming(a.opacity, { duration: dur, easing: EASE_OUT }));
+      }
+    };
+    setArm(aLx, aLy, aLs, aLr, aLo, p.leftArm);
+    setArm(aRx, aRy, aRs, aRr, aRo, p.rightArm);
+    // Glow follows the body.
+    pGs.value = withDelay(glowLag, withTiming(p.glow.scale, { duration: (rm ? 220 : dur) + 100, easing: EASE_OUT }));
+    pGo.value = withDelay(glowLag, withTiming(p.glow.opacity, { duration: (rm ? 220 : dur) + 100, easing: EASE_OUT }));
+  }, [motion, size, rm, aLx, aLy, aLs, aLr, aLo, aRx, aRy, aRs, aRr, aRo, pBy, pBs, pBr, pGs, pGo]);
+
   // React once per sentence as the companion speaks.
   useEffect(() => {
     if (!speak || speak.key === 0) return;
@@ -172,6 +304,7 @@ export function CompanionOrb({
   const eyeWidth = size * 0.088;
   const CENTER = haloSize / 2;
   const HALF = size * 0.5;
+  const armD = size * MOTION_CONFIG.armDiameter; // satellite arm-orb diameter
   const MAX_EYE_X = size * 0.05;
   const MAX_EYE_Y = size * 0.04;
   const MAX_HL = size * 0.045;
@@ -189,8 +322,10 @@ export function CompanionOrb({
             dragY.value +
             recoilY.value +
             interpolate(speakV.value, [0, 1], [0, -5]) +
-            emoSink.value * (size * 0.06),
+            emoSink.value * (size * 0.06) +
+            pBy.value, // pose lean / settle / recede
         },
+        { rotate: `${pBr.value}deg` }, // pose tilt (notQuite wobble, curious lean)
         {
           scale:
             1 +
@@ -200,15 +335,45 @@ export function CompanionOrb({
             speakV.value * 0.02 -
             recede.value * 0.08 +
             pulseScale -
-            emoContract.value * 0.045,
+            emoContract.value * 0.045 +
+            pBs.value, // pose squash/stretch
         },
       ],
     };
   });
 
   const auraStyle = useAnimatedStyle(() => ({
-    opacity: interpolate(aura.value, [0, 1], [0.28, 0.55]) + glow.value * 0.4 + petting.value * 0.18,
-    transform: [{ scale: interpolate(aura.value, [0, 1], [1, 1.07]) + glow.value * 0.06 + petting.value * 0.03 }],
+    opacity:
+      interpolate(aura.value, [0, 1], [0.28, 0.55]) +
+      glow.value * 0.4 +
+      petting.value * 0.18 +
+      (pGo.value - 0.55) * 0.5, // pose glow brightens (positive/firstShape) or dims (safety)
+    transform: [
+      { scale: interpolate(aura.value, [0, 1], [1, 1.07]) + glow.value * 0.06 + petting.value * 0.03 + (pGs.value - 1) * 0.5 },
+    ],
+  }));
+
+  // Satellite arm orbs: pose position + a small independent idle drift, gently
+  // coupled to the breath. Left drifts on `drift`, right on `breathe`, so the two
+  // never move in lockstep.
+  const idle = rm ? 0 : 1;
+  const armLStyle = useAnimatedStyle(() => ({
+    opacity: aLo.value,
+    transform: [
+      { translateX: aLx.value + (drift.value - 0.5) * 2 * MOTION_CONFIG.idleAmplitude * size * idle },
+      { translateY: aLy.value + interpolate(floatY.value, [0, 1], [-3, 3]) * idle },
+      { scale: aLs.value + interpolate(breathe.value, [0, 1], [0, 0.03]) * idle },
+      { rotate: `${aLr.value}deg` },
+    ],
+  }));
+  const armRStyle = useAnimatedStyle(() => ({
+    opacity: aRo.value,
+    transform: [
+      { translateX: aRx.value - (breathe.value - 0.5) * 2 * MOTION_CONFIG.idleAmplitude * size * idle },
+      { translateY: aRy.value + interpolate(floatY.value, [0, 1], [3, -3]) * idle },
+      { scale: aRs.value + interpolate(breathe.value, [0, 1], [0, 0.03]) * idle },
+      { rotate: `${aRr.value}deg` },
+    ],
   }));
 
   const tintStyle = useAnimatedStyle(() => ({ opacity: tint.value * 0.24 * tintFactor.value }));
@@ -244,6 +409,26 @@ export function CompanionOrb({
         style={[styles.aura, { width: haloSize, height: haloSize, borderRadius: haloSize / 2 }, auraStyle]}
       />
       <View style={[styles.halo, { width: size * 1.2, height: size * 1.2, borderRadius: (size * 1.2) / 2 }]} />
+
+      {/* Satellite arm orbs — detached, floating beside/below the body. Rendered
+          behind the body so they read as little companions, never literal limbs. */}
+      {[
+        { key: 'L', s: armLStyle },
+        { key: 'R', s: armRStyle },
+      ].map(({ key, s }) => (
+        <Animated.View
+          key={key}
+          style={[
+            styles.armOrb,
+            { width: armD, height: armD, borderRadius: armD / 2, left: CENTER - armD / 2, top: CENTER - armD / 2, boxShadow: ARM_GLOW },
+            s,
+          ]}
+        >
+          <OrbGradientLayer kind="base" />
+          <Animated.View style={[StyleSheet.absoluteFill, { backgroundColor: tintColor }, tintStyle]} />
+          <Animated.View style={[StyleSheet.absoluteFill, { backgroundColor: secondColor }, secondTintStyle]} />
+        </Animated.View>
+      ))}
 
       <Animated.View style={containerStyle}>
         <View style={[styles.orb, { width: size, height: size, borderRadius: size / 2, boxShadow: BASE_GLOW }]}>
@@ -329,19 +514,22 @@ export function CompanionOrb({
     });
 
   const taps = Gesture.Exclusive(doubleTap, tap);
-  const gesture =
+  const touchGesture =
     Platform.OS === 'web'
       ? Gesture.Simultaneous(hover, pan, longPress, taps)
       : Gesture.Simultaneous(pan, longPress, taps);
 
-  return <GestureDetector gesture={gesture}>{content}</GestureDetector>;
+  return <GestureDetector gesture={touchGesture}>{content}</GestureDetector>;
 }
 
 const styles = StyleSheet.create({
-  wrap: { alignItems: 'center', justifyContent: 'center' },
+  // overflow visible so the satellite arms can float beyond the halo box (into the
+  // empty space around the orb) without enlarging the component's layout footprint.
+  wrap: { alignItems: 'center', justifyContent: 'center', overflow: 'visible' },
   aura: { position: 'absolute', borderWidth: 2, borderColor: 'rgba(255,255,255,0.55)' },
   halo: { position: 'absolute', borderWidth: 1, borderColor: 'rgba(255,255,255,0.4)' },
   orb: { overflow: 'hidden', alignItems: 'center', justifyContent: 'center', elevation: 12 },
+  armOrb: { position: 'absolute', overflow: 'hidden', elevation: 8 },
   highlight: {
     position: 'absolute',
     top: '14%',

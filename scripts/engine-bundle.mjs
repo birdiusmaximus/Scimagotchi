@@ -30,8 +30,8 @@ function mixedConfirmed(ev, prev) {
   const prevStrands = prev?.strands ?? [];
   if (prevStrands.length >= 2 && ev.user_confirmation === "yes") {
     const a = new Set(strands.map((s) => s.family));
-    const b = new Set(prevStrands.map((s) => s.family));
-    if (a.size === b.size && [...a].every((f) => b.has(f))) return true;
+    const b2 = new Set(prevStrands.map((s) => s.family));
+    if (a.size === b2.size && [...a].every((f) => b2.has(f))) return true;
   }
   return false;
 }
@@ -234,11 +234,11 @@ function repeatsEarlierQuestion(reply, priorCompanionReplies) {
     const a = sigWords(q);
     for (const pq of priorQs) {
       if (normQuestion(pq) === nq) return true;
-      const b = sigWords(pq);
-      if (a.size >= 2 && b.size >= 2) {
+      const b2 = sigWords(pq);
+      if (a.size >= 2 && b2.size >= 2) {
         let inter = 0;
-        for (const w of a) if (b.has(w)) inter++;
-        const union = (/* @__PURE__ */ new Set([...a, ...b])).size;
+        for (const w of a) if (b2.has(w)) inter++;
+        const union = (/* @__PURE__ */ new Set([...a, ...b2])).size;
         if (inter / union >= 0.6) return true;
       }
     }
@@ -1169,7 +1169,7 @@ function relevantMemory(all, userText, family) {
     for (const w of ct) if (t.has(w)) score += 1;
     if (c.type === "repair_instruction" || c.type === "do_not_suggest") score += 1;
     return { c, score };
-  }).filter((x) => x.score > 0).sort((a, b) => b.score - a.score).slice(0, 3);
+  }).filter((x) => x.score > 0).sort((a, b2) => b2.score - a.score).slice(0, 3);
   if (!scored.length) return null;
   return scored.map(({ c }) => `- ${c.summary}${c.user_words.length ? ` (their words: \u201C${c.user_words[0]}\u201D)` : ""}`).join("\n");
 }
@@ -1300,7 +1300,7 @@ function advanceProgress(existing, turn, conversationId, opts = {}) {
     const shadeOwned = ev.shade_source === "user_stated" || ev.shade_source === "user_confirmed";
     if (shadeOwned) pushUnique(p.confirmed_shades, ev.emotion_shade);
     pushUnique(p.common_triggers, ev.trigger_event);
-    ev.body_cue.forEach((b) => pushUnique(p.common_body_cues, b));
+    ev.body_cue.forEach((b2) => pushUnique(p.common_body_cues, b2));
     pushUnique(p.common_user_phrases, ev.user_phrase ?? ev.user_words_raw);
     if (ev.memory_note) p.memory_summary = ev.memory_note;
   }
@@ -1332,6 +1332,99 @@ function visualTintFamilies(draftEvent) {
     return bg ? [fg.family, bg.family] : [fg.family];
   }
   return draftEvent.emotion_family ? [draftEvent.emotion_family] : [];
+}
+
+// src/services/ai/companionPose.ts
+var MOTION_CONFIG = {
+  enableIdleLoop: true,
+  maxScale: 1.18,
+  /** idle arm drift amplitude, fraction of body diameter */
+  idleAmplitude: 0.03,
+  /** arms start moving this long after the body (follow-through) */
+  armLagMs: 80,
+  /** glow follows the body by this long */
+  glowLagMs: 120,
+  /** arm size as a fraction of the body diameter (brief: 22-32%) */
+  armDiameter: 0.27
+};
+var b = (x, y, scale, rotate) => ({ x, y, scale, rotate, opacity: 1 });
+var arm = (x, y, scale, rotate, opacity) => ({ x, y, scale, rotate, opacity });
+var POSE_TARGETS = {
+  // Calm: two satellites floating beside the body, a touch below its centre line
+  // (detached, never underneath like feet).
+  calm: { body: b(0, 0, 1, 0), leftArm: arm(-0.6, 0.28, 1, 0, 0.95), rightArm: arm(0.6, 0.28, 1, 0, 0.95), glow: { scale: 1, opacity: 0.55 } },
+  greeting: { body: b(0, -0.02, 1.01, 0), leftArm: arm(-0.6, 0.28, 1, 0, 0.95), rightArm: arm(0.66, 0.04, 1.04, 14, 1), glow: { scale: 1.05, opacity: 0.62 } },
+  listening: { body: b(0, -0.02, 1.01, 0), leftArm: arm(-0.74, 0.16, 1.02, -6, 1), rightArm: arm(0.74, 0.16, 1.02, 6, 1), glow: { scale: 1.06, opacity: 0.65 } },
+  thinking: { body: b(0, 0, 0.995, 0), leftArm: arm(-0.46, 0.3, 0.94, 4, 0.9), rightArm: arm(0.46, 0.3, 0.94, -4, 0.9), glow: { scale: 1.08, opacity: 0.7 } },
+  curious: { body: b(0, -0.045, 1.025, 1), leftArm: arm(-0.7, 0.16, 1.03, -5, 1), rightArm: arm(0.76, 0.1, 1.05, 7, 1), glow: { scale: 1.08, opacity: 0.72 } },
+  stayWithIt: { body: b(0, -0.05, 1.03, 1), leftArm: arm(-0.76, 0.16, 1.04, -7, 1), rightArm: arm(0.76, 0.16, 1.04, 7, 1), glow: { scale: 1.1, opacity: 0.76 } },
+  notQuite: { body: b(0, 0, 0.985, -3), leftArm: arm(-0.5, 0.32, 0.95, 5, 0.88), rightArm: arm(0.5, 0.32, 0.95, -5, 0.88), glow: { scale: 0.98, opacity: 0.45 } },
+  positive: { body: b(0, -0.05, 1.035, 0), leftArm: arm(-0.86, 0.04, 1.08, -12, 1), rightArm: arm(0.86, 0.04, 1.08, 12, 1), glow: { scale: 1.16, opacity: 0.82 } },
+  difficult: { body: b(0, 0.01, 0.995, 0), leftArm: arm(-0.48, 0.36, 0.96, 3, 0.9), rightArm: arm(0.48, 0.36, 0.96, -3, 0.9), glow: { scale: 0.98, opacity: 0.48 } },
+  mixed: { body: b(0, -0.02, 1.01, 0), leftArm: arm(-0.78, 0.12, 1.03, -10, 1), rightArm: arm(0.52, 0.4, 0.98, 6, 0.92), glow: { scale: 1.08, opacity: 0.68 } },
+  firstShape: { body: b(0, -0.03, 1.045, 0), leftArm: arm(-0.46, 0.3, 1.02, 0, 1), rightArm: arm(0.46, 0.3, 1.02, 0, 1), glow: { scale: 1.18, opacity: 0.9 } },
+  memorySaved: { body: b(0, -0.02, 1.025, 0), leftArm: arm(-0.42, 0.32, 1, 0, 1), rightArm: arm(0.42, 0.32, 1, 0, 1), glow: { scale: 1.14, opacity: 0.78 } },
+  done: { body: b(0, 0.02, 1, 0), leftArm: arm(-0.56, 0.5, 0.96, 0, 0.9), rightArm: arm(0.56, 0.5, 0.96, 0, 0.9), glow: { scale: 0.98, opacity: 0.45 } },
+  safety: { body: b(0, 0.06, 0.92, 0), leftArm: arm(-0.5, 0.46, 0.88, 0, 0.32), rightArm: arm(0.5, 0.46, 0.88, 0, 0.32), glow: { scale: 0.92, opacity: 0.2 } }
+};
+function poseFor(state) {
+  return POSE_TARGETS[state] ?? POSE_TARGETS.calm;
+}
+var DURATIONS = {
+  calm: 1200,
+  greeting: 600,
+  listening: 550,
+  thinking: 650,
+  curious: 560,
+  stayWithIt: 620,
+  notQuite: 600,
+  positive: 600,
+  difficult: 820,
+  mixed: 720,
+  firstShape: 1100,
+  memorySaved: 900,
+  done: 1e3,
+  safety: 480
+};
+function durationFor(state) {
+  return DURATIONS[state] ?? 700;
+}
+var DIFFICULT_FAMILIES = /* @__PURE__ */ new Set(["sadness", "hurt", "shame", "pressure", "fear", "anger", "flat"]);
+var POSITIVE_FAMILIES = /* @__PURE__ */ new Set(["joy", "calm"]);
+function isPositiveFamily(f) {
+  return !!f && POSITIVE_FAMILIES.has(f);
+}
+function isDifficultFamily(f) {
+  return !!f && DIFFICULT_FAMILIES.has(f);
+}
+function ambientMotion(visual, family) {
+  switch (visual) {
+    case "safety_receded":
+      return "safety";
+    case "first_shape":
+    case "deepened":
+    case "returning_shape":
+      return "firstShape";
+    case "searching":
+      return "thinking";
+    case "uncertain":
+      return "thinking";
+    case "mixed_strands":
+      return "mixed";
+    case "stabilising":
+      return "curious";
+    case "idle_calm":
+    default:
+      if (isDifficultFamily(family)) return "difficult";
+      if (isPositiveFamily(family)) return "positive";
+      return "calm";
+  }
+}
+function resolveMotion(visual, family, gesture = null) {
+  if (visual === "safety_receded") return "safety";
+  const base = ambientMotion(visual, family);
+  if (base === "firstShape") return "firstShape";
+  return gesture ?? base;
 }
 
 // src/services/ai/orbExpression.ts
@@ -1490,10 +1583,13 @@ function composeWeeklySummary(input) {
 }
 export {
   EXIT_CUE,
+  MOTION_CONFIG,
+  POSE_TARGETS,
   PROGRESS_RANK,
   SLOW_PATH_FAMILIES,
   activeCards,
   advanceProgress,
+  ambientMotion,
   askedForNamingHelp,
   composeLearningSentence,
   composeWeeklySummary,
@@ -1501,22 +1597,27 @@ export {
   draftFromRejection,
   draftFromTurn,
   dropTrailingQuestion,
+  durationFor,
   emptyProgress,
   evaluateStage,
   expressionFor,
   firstShapeEvidence,
   intentDecision,
+  isDifficultFamily,
   isDuplicateReply,
   isOptionMenu,
+  isPositiveFamily,
   labelIsUserOwned,
   memoryBlocked,
   migrateStage,
   mixedConfirmed,
   needsOwnershipRepair,
+  poseFor,
   relevantMemory,
   repeatsEarlierQuestion,
   replaceOptionMenu,
   replyContainsDeclarativeEmotionAssertion,
+  resolveMotion,
   routeMode,
   sanitizeStrands,
   selectVisualState,

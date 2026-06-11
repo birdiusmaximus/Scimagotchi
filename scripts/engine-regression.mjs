@@ -18,10 +18,18 @@ import {
   isOptionMenu,
   labelIsUserOwned,
   mixedConfirmed,
+  ambientMotion,
+  durationFor,
+  isDifficultFamily,
+  isPositiveFamily,
+  MOTION_CONFIG,
   needsOwnershipRepair,
+  poseFor,
+  POSE_TARGETS,
   repeatsEarlierQuestion,
   replaceOptionMenu,
   replyContainsDeclarativeEmotionAssertion,
+  resolveMotion,
   routeMode,
   sanitizeStrands,
   selectVisualState,
@@ -356,6 +364,35 @@ check('visual: owned family + shade -> stabilising',
 check('visual: family-less draft -> uncertain',
   vis({ draftEvent: { emotion_family: null, emotion_shade: null, label_source: 'companion_hypothesis', strands: [] } }), 'uncertain');
 check('visual: nothing -> idle_calm', vis(), 'idle_calm');
+
+// ── Companion pose / motion system (arm-orb animation brief) ─────────────────
+const MOTION_STATES = ['calm','greeting','listening','thinking','curious','stayWithIt','notQuite','positive','difficult','mixed','firstShape','memorySaved','done','safety'];
+check('pose: every motion state has a full pose', MOTION_STATES.every((s) => POSE_TARGETS[s] && POSE_TARGETS[s].body && POSE_TARGETS[s].leftArm && POSE_TARGETS[s].rightArm && POSE_TARGETS[s].glow), true);
+check('pose: arms are detached on opposite sides (L left, R right) in calm',
+  POSE_TARGETS.calm.leftArm.x < 0 && POSE_TARGETS.calm.rightArm.x > 0, true);
+check('pose: calm arms sit just below the body centre', POSE_TARGETS.calm.leftArm.y > 0 && POSE_TARGETS.calm.rightArm.y > 0, true);
+check('pose: positive opens the arms wider than calm', Math.abs(POSE_TARGETS.positive.leftArm.x) > Math.abs(POSE_TARGETS.calm.leftArm.x), true);
+check('pose: thinking gathers the arms inward', Math.abs(POSE_TARGETS.thinking.leftArm.x) < Math.abs(POSE_TARGETS.calm.leftArm.x), true);
+check('pose: mixed is asymmetric (arms differ)', Math.abs(POSE_TARGETS.mixed.leftArm.x) !== Math.abs(POSE_TARGETS.mixed.rightArm.x) || POSE_TARGETS.mixed.leftArm.y !== POSE_TARGETS.mixed.rightArm.y, true);
+check('pose: safety recedes (small body) and fades the arms', POSE_TARGETS.safety.body.scale < 1 && POSE_TARGETS.safety.leftArm.opacity < 0.5, true);
+check('pose: firstShape brightens + steadies the glow', POSE_TARGETS.firstShape.glow.opacity > POSE_TARGETS.calm.glow.opacity, true);
+check('pose: no pose exceeds the max scale guardrail', MOTION_STATES.every((s) => POSE_TARGETS[s].body.scale <= MOTION_CONFIG.maxScale && POSE_TARGETS[s].glow.scale <= MOTION_CONFIG.maxScale + 0.001), true);
+check('pose: poseFor falls back to calm for an unknown state', poseFor('nonsense') === POSE_TARGETS.calm, true);
+
+// ambientMotion + resolveMotion priority (safety > firstShape > gesture > ambient)
+check('motion: searching -> thinking', ambientMotion('searching', null), 'thinking');
+check('motion: idle + difficult family -> difficult', ambientMotion('idle_calm', 'sadness'), 'difficult');
+check('motion: idle + positive family -> positive', ambientMotion('idle_calm', 'joy'), 'positive');
+check('motion: idle + no family -> calm', ambientMotion('idle_calm', null), 'calm');
+check('motion: mixed_strands -> mixed', ambientMotion('mixed_strands', null), 'mixed');
+check('motion: stabilising -> curious', ambientMotion('stabilising', 'fear'), 'curious');
+check('motion: safety beats a tapped gesture', resolveMotion('safety_receded', 'joy', 'stayWithIt'), 'safety');
+check('motion: a landing first shape beats a tapped gesture', resolveMotion('first_shape', 'sadness', 'notQuite'), 'firstShape');
+check('motion: a tapped gesture overrides ambient calm', resolveMotion('idle_calm', null, 'stayWithIt'), 'stayWithIt');
+check('motion: no gesture -> ambient', resolveMotion('idle_calm', 'joy', null), 'positive');
+check('motion: family valence helpers', isDifficultFamily('shame') && isPositiveFamily('calm') && !isPositiveFamily('anger'), true);
+check('motion: difficult states are slower than positive', durationFor('difficult') > durationFor('positive'), true);
+check('motion: safety is a quick, direct move', durationFor('safety') < durationFor('calm'), true);
 
 check('expr: sadness sinks', expressionFor('sadness', 'idle_calm').sink > 0, true);
 check('expr: joy lifts', expressionFor('joy', 'idle_calm').sink < 0, true);

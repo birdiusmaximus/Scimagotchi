@@ -16,6 +16,7 @@ import { MessageBubble } from '@/components/MessageBubble';
 import { TypingBubble } from '@/components/TypingBubble';
 import { Txt } from '@/components/Txt';
 import { useGoBack } from '@/hooks/useGoBack';
+import type { CompanionGesture } from '@/services/ai/companionPose';
 import { selectVisualState, visualTintFamilies } from '@/services/ai/companionVisualState';
 import { useStore } from '@/state/store';
 import { palette, radii, spacing } from '@/theme/tokens';
@@ -93,6 +94,16 @@ export default function ChatScreen() {
     if (cid && conversationId !== cid) useStore.getState().attachConversation(cid);
   }, [cid, conversationId]);
 
+  // Transient orb gestures: a tapped chip (stay with it / not quite / done) or the
+  // greeting on arrival. The arm orbs play the pose, then revert to the ambient one.
+  const [orbGesture, setOrbGesture] = useState<{ key: number; state: CompanionGesture; hold?: boolean } | null>(null);
+  const fireGesture = (state: CompanionGesture, hold?: boolean) =>
+    setOrbGesture((g) => ({ key: (g?.key ?? 0) + 1, state, hold }));
+  useEffect(() => {
+    fireGesture('greeting'); // a small wave on first arrival
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   // Make the orb react once per sentence whenever a new companion reply lands.
   const [speak, setSpeak] = useState({ key: 0, sentences: 1 });
   const lastCompanion = useRef<string | null>(null);
@@ -131,7 +142,7 @@ export default function ChatScreen() {
 
         {/* Character — top third, the focus */}
         <View style={styles.stage}>
-          <CompanionOrb size={150} interactive family={orbFamily} tintFamilies={tintFamilies} visual={visual} speak={speak} />
+          <CompanionOrb size={150} interactive family={orbFamily} tintFamilies={tintFamilies} visual={visual} speak={speak} gesture={orbGesture} />
         </View>
 
         {/* Discussion window — lower two-thirds */}
@@ -170,10 +181,17 @@ export default function ChatScreen() {
 
               {showChips ? (
                 <ChatChips
-                  onKeepGoing={() => useStore.getState().send('Let’s stay with it.', { intent: 'keep_going' })}
-                  onNotQuite={() => useStore.getState().send('Hmm, not quite.', { intent: 'not_quite' })}
+                  onKeepGoing={() => {
+                    fireGesture('stayWithIt');
+                    useStore.getState().send('Let’s stay with it.', { intent: 'keep_going' });
+                  }}
+                  onNotQuite={() => {
+                    fireGesture('notQuite');
+                    useStore.getState().send('Hmm, not quite.', { intent: 'not_quite' });
+                  }}
                   onDone={() => {
                     setClosed(true);
+                    fireGesture('done');
                     useStore.getState().send('I think I’ll leave it here.', { intent: 'done' });
                   }}
                 />

@@ -351,10 +351,11 @@ export function CompanionOrb({
     const base = poseFor(motion); // where to return when the sequence ends
 
     if (rm) {
-      tint.value = withSequence(withTiming(0.92, { duration: 320, easing: EASE_OUT }), withDelay(900, withTiming(0, { duration: 600, easing: EASE_OUT })));
-      pBs.value = withSequence(withTiming(0.03, { duration: 320, easing: EASE_OUT }), withDelay(700, withTiming(base.body.scale - 1, { duration: 520, easing: EASE_OUT })));
-      pGo.value = withSequence(withTiming(base.glow.opacity + 0.22, { duration: 320, easing: EASE_OUT }), withDelay(700, withTiming(base.glow.opacity, { duration: 520, easing: EASE_OUT })));
-      const t = setTimeout(() => setPlayColor(null), 1900);
+      // Gentle hue + scale swell, then a slow, soft return to normal.
+      tint.value = withSequence(withTiming(0.85, { duration: 620, easing: EASE_IN_OUT }), withDelay(900, withTiming(0, { duration: 1200, easing: EASE_IN_OUT })));
+      pBs.value = withSequence(withTiming(0.03, { duration: 620, easing: EASE_IN_OUT }), withDelay(900, withTiming(base.body.scale - 1, { duration: 900, easing: EASE_IN_OUT })));
+      pGo.value = withSequence(withTiming(base.glow.opacity + 0.2, { duration: 620, easing: EASE_IN_OUT }), withDelay(900, withTiming(base.glow.opacity, { duration: 900, easing: EASE_IN_OUT })));
+      const t = setTimeout(() => setPlayColor(null), 2900);
       return () => clearTimeout(t);
     }
 
@@ -392,16 +393,20 @@ export function CompanionOrb({
     pGs.value = build((p) => p.glow.scale ?? 1);
     pGo.value = build((p) => p.glow.opacity ?? 0.55);
 
-    // Hue: in over act 1, hold, out as it returns to calm.
+    // Hue: ease in gently to a soft peak, hold through the whole sequence (the spring
+    // tails run past `total`), then return to normal slowly and gently AFTER the
+    // animation has finished — never a snap back.
     const total = frames.reduce((s, f) => s + f.dur, 0);
-    const inDur = Math.min(440, frames[0].dur + 140);
-    const outDur = 600;
+    const peak = 0.9; // a little under full, so the colour shift stays soft
+    const inDur = 760;
+    const holdUntil = total + 500; // keep the hue while the spring tails settle
+    const outDur = 1200;
     cancelAnimation(tint);
     tint.value = withSequence(
-      withTiming(1, { duration: inDur, easing: EASE_OUT }),
-      withDelay(Math.max(0, total - inDur - outDur), withTiming(0, { duration: outDur, easing: EASE_OUT })),
+      withTiming(peak, { duration: inDur, easing: EASE_IN_OUT }),
+      withDelay(Math.max(0, holdUntil - inDur), withTiming(0, { duration: outDur, easing: EASE_IN_OUT })),
     );
-    const t = setTimeout(() => setPlayColor(null), total + 120);
+    const t = setTimeout(() => setPlayColor(null), holdUntil + outDur + 100);
     return () => clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [playEmotion?.key]);
@@ -546,30 +551,6 @@ export function CompanionOrb({
       />
       <View style={[styles.halo, { width: size * 1.2, height: size * 1.2, borderRadius: (size * 1.2) / 2 }]} />
 
-      {/* Satellite arm orbs — detached, floating beside/below the body. Rendered
-          behind the body so they read as little companions, never literal limbs. */}
-      {[
-        { key: 'L', s: armLStyle },
-        { key: 'R', s: armRStyle },
-      ].map(({ key, s }) => (
-        <Animated.View
-          key={key}
-          style={[
-            styles.armOrb,
-            { width: armD, height: armD, borderRadius: armD / 2, left: CENTER - armD / 2, top: CENTER - armD / 2, boxShadow: ARM_GLOW },
-            s,
-          ]}
-        >
-          <OrbGradientLayer kind="base" />
-          <Animated.View style={[StyleSheet.absoluteFill, tintStyle]}>
-            <EmotionTintLayer color={tintColor} />
-          </Animated.View>
-          <Animated.View style={[StyleSheet.absoluteFill, secondTintStyle]}>
-            <SecondTintLayer color={secondColor} />
-          </Animated.View>
-        </Animated.View>
-      ))}
-
       <Animated.View style={containerStyle}>
         {/* Emotion-coloured glow/shadow behind the orb — a deeper shade of the hue */}
         <Animated.View
@@ -594,6 +575,30 @@ export function CompanionOrb({
           </View>
         </View>
       </Animated.View>
+
+      {/* Satellite arm orbs — detached, floating beside the body. Rendered in the
+          FOREGROUND so they stay visible as they animate, never hidden behind it. */}
+      {[
+        { key: 'L', s: armLStyle },
+        { key: 'R', s: armRStyle },
+      ].map(({ key, s }) => (
+        <Animated.View
+          key={key}
+          style={[
+            styles.armOrb,
+            { width: armD, height: armD, borderRadius: armD / 2, left: CENTER - armD / 2, top: CENTER - armD / 2, boxShadow: ARM_GLOW },
+            s,
+          ]}
+        >
+          <OrbGradientLayer kind="base" />
+          <Animated.View style={[StyleSheet.absoluteFill, tintStyle]}>
+            <EmotionTintLayer color={tintColor} />
+          </Animated.View>
+          <Animated.View style={[StyleSheet.absoluteFill, secondTintStyle]}>
+            <SecondTintLayer color={secondColor} />
+          </Animated.View>
+        </Animated.View>
+      ))}
     </View>
   );
 

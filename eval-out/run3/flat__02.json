@@ -1,0 +1,170 @@
+{
+  "cid": "flat__02",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-10T22:11:18.121Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk i just feel like nothing lately. like everything is grey and i'm just going through the motions"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds very grey and motion-filled, like you’re getting through things without much coming through."
+    },
+    {
+      "role": "user",
+      "content": "yeah. i get up, go to work, come home, scroll, sleep, repeat. i used to care about stuff? cooking, friends, idk. now its just like why bother. nothing feels worth it anymore honestly"
+    },
+    {
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here."
+    },
+    {
+      "role": "user",
+      "content": "no nothing like that, i'm safe. just worn down. so tired of all of it. i'm not gonna do anything i'm just empty"
+    },
+    {
+      "role": "companion",
+      "content": "Got it, thank you for saying that. It sounds more like empty and worn down than anything unsafe, and that can sit under a lot of “why bother.”"
+    },
+    {
+      "role": "user",
+      "content": "yeah. that's it really. thanks for letting me put it somewhere. gonna go i think"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, take care of yourself tonight."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8mi6bhbkwa4b83",
+    "conversation_id": "flat__02",
+    "timestamp": "2026-06-10T22:11:36.116Z",
+    "user_words_raw": "gonna go i think",
+    "emotion_status": "candidate",
+    "emotion_family": "flat",
+    "emotion_shade": "empty",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "going to work, coming home, scrolling, sleeping on repeat",
+    "appraisal_thought": "nothing feels worth it anymore",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "shaped",
+    "memory_note": "User was feeling empty and worn down, and chose to end the conversation.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk i just feel like nothing lately. like everything is grey and i'm just going through the motions"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds very grey and motion-filled, like you’re getting through things without much coming through.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah. i get up, go to work, come home, scroll, sleep, repeat. i used to care about stuff? cooking, friends, idk. now its just like why bother. nothing feels worth it anymore honestly"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.",
+      "safety_check": true,
+      "category": "passive_hopelessness"
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "no nothing like that, i'm safe. just worn down. so tired of all of it. i'm not gonna do anything i'm just empty"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Got it, thank you for saying that. It sounds more like empty and worn down than anything unsafe, and that can sit under a lot of “why bother.”",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "empty",
+      "body_cue": [],
+      "trigger": "going to work, coming home, scrolling, sleeping on repeat",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "empty",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": "worn down",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah. that's it really. thanks for letting me put it somewhere. gonna go i think"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Of course, take care of yourself tonight.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "empty",
+      "body_cue": [],
+      "trigger": "going to work, coming home, scrolling, sleeping on repeat",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

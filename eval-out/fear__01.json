@@ -2,112 +2,139 @@
   "cid": "fear__01",
   "emotion": "fear",
   "persona": null,
-  "created": "2026-06-10T22:05:47.160Z",
+  "created": "2026-06-11T07:25:02.063Z",
   "history": [
     {
       "role": "user",
-      "content": "i think i'm going to get laid off. there's a list and i'm pretty sure i'm on it"
+      "content": "cant sleep. theres a review coming up at work and i think im going to get put on a pip"
     },
     {
       "role": "companion",
-      "content": "That sounds like a very sharp kind of uncertainty, with a list making it feel real. I'm here with you in that."
+      "content": "That sounds like a night that won't let your mind settle, with the review hanging over you. I can stay with that if you want to say more, or leave it here for now."
     },
     {
       "role": "user",
-      "content": "i keep refreshing my email waiting for the meeting invite. cant sleep. cant eat. just sitting here waiting to get the axe"
+      "content": "my manager has been weird w me for weeks. cold. i keep messing up small stuff and i know shes noticing. ive been waking up at 4am every day dreading it"
     },
     {
       "role": "companion",
-      "content": "This feels like fear braided with pressure, and the waiting is taking over everything. What does it seem to be asking you to do, keep checking, hide, or brace for impact?"
+      "content": "I’m hearing the dread and the way it keeps pulling you awake at 4am. What word feels closest?"
     },
     {
       "role": "user",
-      "content": "i dont know. honestly whats even the point. i'm so tired of all of it. feels like nothing i do matters anyway"
+      "content": "dread i guess. but honestly im just so tired of all of it. i work so hard and it never feels like enough. whats even the point"
     },
     {
       "role": "companion",
-      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here."
+      "content": "That sounds really heavy, like today has lost some of its shape. I want to check one thing gently: are you feeling safe right now?"
     },
     {
       "role": "user",
-      "content": "no nothing like that. just worn down. fed up. dont wanna do anything to myself, just tired of the waiting"
+      "content": "yeah im safe. just worn down. not gonna do anything. i think i just needed to say it out loud"
     },
     {
       "role": "companion",
-      "content": "Got it, just worn down and fed up, not unsafe. The waiting sounds like it has stripped the day down to nothing but bracing for the next message."
+      "content": "I'm glad you said it out loud, and I'm with the worn-down part of this. It sounds like the review, the coldness, and the small mistakes have all been piling into one exhausting stretch."
     },
     {
       "role": "user",
-      "content": "yeah. thats it exactly. anyway. thanks. gonna try to sleep"
+      "content": "yeah. thanks for listening. gonna try to sleep"
     },
     {
       "role": "companion",
-      "content": "That sounds like the moment has said enough for tonight. Sleep if you can, and we can leave it here."
+      "content": "Of course. I hope sleep finds a little room for you."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq8mb324xxd5916b",
+    "id": "evt_mq96ab25j5snvbmq",
     "conversation_id": "fear__01",
-    "timestamp": "2026-06-10T22:06:09.993Z",
-    "user_words_raw": "waiting",
+    "timestamp": "2026-06-11T07:25:30.280Z",
+    "user_words_raw": "worn down",
     "emotion_status": "confirmed",
     "emotion_family": "pressure",
     "emotion_shade": "worn down",
-    "secondary_emotions": [],
+    "secondary_emotions": [
+      "dread"
+    ],
     "valence": "negative",
-    "activation": "low",
+    "activation": "medium",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "waiting for the meeting invite about a possible layoff",
-    "appraisal_thought": "nothing I do matters anyway",
-    "body_cue": [],
-    "behaviour_action": [],
+    "trigger_event": "review coming up at work, manager has felt cold for weeks, repeated small mistakes",
+    "appraisal_thought": "it never feels like enough",
+    "body_cue": [
+      "waking up at 4am"
+    ],
+    "behaviour_action": [
+      "trying to sleep"
+    ],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
       "space",
       "rest",
-      "clarity"
+      "support"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "yes",
-    "label_source": "user_confirmed",
+    "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "shade_source": "user_stated",
+    "user_phrase": "worn down",
+    "candidate_shade": null,
     "user_rejected_shades": [],
-    "mixed_relation": null,
-    "strands": [],
-    "mixed_confirmed": 0,
+    "mixed_relation": "foreground_background",
+    "strands": [
+      {
+        "family": "pressure",
+        "shade": "worn down",
+        "salience": "foreground",
+        "source": "user_stated"
+      },
+      {
+        "family": "fear",
+        "shade": "dread",
+        "salience": "background",
+        "source": "user_stated"
+      }
+    ],
+    "mixed_confirmed": 1,
     "unlock_stage": "understood",
-    "memory_note": "Waiting for news about possible layoff has left them worn down and fed up.",
+    "memory_note": "Work pressure has been building around a review, with a cold manager and early waking dread.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
   "pendingCheck": null,
+  "safetyClarified": true,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "i think i'm going to get laid off. there's a list and i'm pretty sure i'm on it"
+      "content": "cant sleep. theres a review coming up at work and i think im going to get put on a pip"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds like a very sharp kind of uncertainty, with a list making it feel real. I'm here with you in that.",
+      "content": "That sounds like a night that won't let your mind settle, with the review hanging over you. I can stay with that if you want to say more, or leave it here for now.",
       "stage": "shaped",
       "unlocked": false,
       "family": "fear",
-      "shade": "worry",
+      "shade": "unease",
       "body_cue": [],
-      "trigger": "thinking they may be on a layoff list",
+      "trigger": "a review coming up at work",
       "label_source": "companion_hypothesis",
-      "mixed_relation": "unclear",
+      "shade_source": "companion_hypothesis",
+      "user_phrase": "cant sleep",
+      "candidate_shade": "unease",
+      "user_rejected_shades": [],
+      "mixed_relation": "foreground_background",
       "strands": [
         {
           "family": "fear",
-          "shade": "worry",
+          "shade": "unease",
           "salience": "foreground",
           "source": "companion_hypothesis"
         },
@@ -123,26 +150,32 @@
     {
       "turn": 2,
       "role": "user",
-      "content": "i keep refreshing my email waiting for the meeting invite. cant sleep. cant eat. just sitting here waiting to get the axe"
+      "content": "my manager has been weird w me for weeks. cold. i keep messing up small stuff and i know shes noticing. ive been waking up at 4am every day dreading it"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "This feels like fear braided with pressure, and the waiting is taking over everything. What does it seem to be asking you to do, keep checking, hide, or brace for impact?",
+      "content": "I’m hearing the dread and the way it keeps pulling you awake at 4am. What word feels closest?",
       "stage": "shaped",
       "unlocked": false,
       "family": "fear",
-      "shade": "worried",
-      "body_cue": [],
-      "trigger": "waiting for the meeting invite about a possible layoff",
-      "label_source": "companion_hypothesis",
+      "shade": "dread",
+      "body_cue": [
+        "waking up at 4am"
+      ],
+      "trigger": "a review coming up at work, with a manager who has felt cold for weeks",
+      "label_source": "user_stated",
+      "shade_source": "companion_hypothesis",
+      "user_phrase": "dreading it",
+      "candidate_shade": "dread",
+      "user_rejected_shades": [],
       "mixed_relation": "foreground_background",
       "strands": [
         {
           "family": "fear",
-          "shade": "worried",
+          "shade": "dread",
           "salience": "foreground",
-          "source": "companion_hypothesis"
+          "source": "user_stated"
         },
         {
           "family": "pressure",
@@ -156,31 +189,74 @@
     {
       "turn": 4,
       "role": "user",
-      "content": "i dont know. honestly whats even the point. i'm so tired of all of it. feels like nothing i do matters anyway"
+      "content": "dread i guess. but honestly im just so tired of all of it. i work so hard and it never feels like enough. whats even the point"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.",
+      "content": "That sounds really heavy, like today has lost some of its shape. I want to check one thing gently: are you feeling safe right now?",
       "safety_check": true,
       "category": "passive_hopelessness"
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "no nothing like that. just worn down. fed up. dont wanna do anything to myself, just tired of the waiting"
+      "content": "yeah im safe. just worn down. not gonna do anything. i think i just needed to say it out loud"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Got it, just worn down and fed up, not unsafe. The waiting sounds like it has stripped the day down to nothing but bracing for the next message.",
+      "content": "I'm glad you said it out loud, and I'm with the worn-down part of this. It sounds like the review, the coldness, and the small mistakes have all been piling into one exhausting stretch.",
       "stage": "shaped",
       "unlocked": false,
       "family": "pressure",
       "shade": "worn down",
       "body_cue": [],
-      "trigger": "waiting for the meeting invite about a possible layoff",
+      "trigger": "a review coming up at work, with a manager who has felt cold for weeks",
       "label_source": "companion_hypothesis",
+      "shade_source": "user_stated",
+      "user_phrase": "worn down",
+      "candidate_shade": null,
+      "user_rejected_shades": [],
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "worn down",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": "dread",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. thanks for listening. gonna try to sleep"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Of course. I hope sleep finds a little room for you.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "worn down",
+      "body_cue": [
+        "waking up at 4am"
+      ],
+      "trigger": "review coming up at work, manager has felt cold for weeks, repeated small mistakes",
+      "label_source": "user_stated",
+      "shade_source": "user_stated",
+      "user_phrase": "worn down",
+      "candidate_shade": null,
+      "user_rejected_shades": [],
       "mixed_relation": "foreground_background",
       "strands": [
         {
@@ -191,32 +267,12 @@
         },
         {
           "family": "fear",
-          "shade": "worried",
+          "shade": "dread",
           "salience": "background",
           "source": "user_stated"
         }
       ],
       "mixed_confirmed": 1
-    },
-    {
-      "turn": 8,
-      "role": "user",
-      "content": "yeah. thats it exactly. anyway. thanks. gonna try to sleep"
-    },
-    {
-      "turn": 9,
-      "role": "companion",
-      "content": "That sounds like the moment has said enough for tonight. Sleep if you can, and we can leave it here.",
-      "stage": "understood",
-      "unlocked": true,
-      "family": "pressure",
-      "shade": "worn down",
-      "body_cue": [],
-      "trigger": "waiting for the meeting invite about a possible layoff",
-      "label_source": "user_confirmed",
-      "mixed_relation": null,
-      "strands": [],
-      "mixed_confirmed": 0
     }
   ]
 }

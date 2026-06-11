@@ -2,103 +2,143 @@
   "cid": "flat__03",
   "emotion": "flat",
   "persona": null,
-  "created": "2026-06-10T22:11:21.387Z",
+  "created": "2026-06-11T07:25:02.188Z",
   "history": [
     {
       "role": "user",
-      "content": "hey. how's it going"
+      "content": "idk why im even opening this. just been weird about the money stuff lately"
     },
     {
       "role": "companion",
-      "content": "Hey, good to see you. I’m here and ready, what’s on your mind today?"
+      "content": "Something about the money stuff has been sitting weird lately, even if you do not know why yet. I can stay with just that bit."
     },
     {
       "role": "user",
-      "content": "idk. fine i guess. been a weird week"
+      "content": "not really uneasy tho. thats the thing. i opened my banking app today and saw the number and just. nothing. didnt feel anything"
     },
     {
       "role": "companion",
-      "content": "A weird week can leave things feeling a bit unsteady. If you want, you can just tell me the part that felt strangest."
+      "content": "I had that wrong, thanks for correcting me. This sounds closer to blank or numb than uneasy, and I don't want to pin it down too fast."
     },
     {
       "role": "user",
-      "content": "got my bonus thru on friday. the one ive been waiting on all year. and i just. felt nothing. stared at the number and nothing"
+      "content": "yeah blank is closer. like i should be panicking. im like 4k in debt and behind on a couple things. but its just static. nothing"
     },
     {
       "role": "companion",
-      "content": "That sounds more like blankness or numbness than joy, and I’m wondering if the waiting had gone so long that it all went quiet when it finally arrived. Was it more like nothing got through, or like you were too drained to react?"
+      "content": "Blank fits better. Seeing the number and going to “static” sounds like the feeling goes offline around the debt, rather than turning into panic."
     },
     {
       "role": "user",
-      "content": "like nothing got thru. i thought id be happy or relieved. spent it all paying down the card before i even closed the tab. just felt like a number moving from one place to another. anyway. its whatever"
+      "content": "offline yeah. used to keep me up at night. now i just kinda. dont open the mail. let it pile. like its happening to someone else"
     },
     {
       "role": "companion",
-      "content": "That “just a number moving from one place to another” feels very stripped of anything personal. You can leave it there if you want, or we can stay with that blankness a little longer."
+      "content": "“Like it’s happening to someone else” feels like the clearest part to me. Is it more distant and unreal, or more like you go quiet and let it sit there?"
     },
     {
       "role": "user",
-      "content": "nah ill leave it there. thanks for listening i guess"
+      "content": "distant i think. unreal. like if i dont look at it its not mine. but it is. i know it is. i just cant make myself care and that scares me a little"
     },
     {
       "role": "companion",
-      "content": "Of course, take care."
+      "content": "That sounds like the debt feels unreal until you look straight at it, and then there is that little fear about not being able to make yourself care. You do not have to force a bigger name onto it right now, we can leave it there or stay with that scared part if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. dunno what i expected but. helped to say it out loud i guess. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, I'm glad it helped to say it out loud. We can leave it here, and let it be enough for now."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq8mi8nwgbvbyauu",
+    "id": "evt_mq96aaxw5649v9ru",
     "conversation_id": "flat__03",
-    "timestamp": "2026-06-10T22:11:46.535Z",
-    "user_words_raw": "thanks for listening i guess",
+    "timestamp": "2026-06-11T07:25:38.801Z",
+    "user_words_raw": "like if i dont look at it its not mine",
     "emotion_status": "confirmed",
     "emotion_family": "flat",
-    "emotion_shade": "blank",
-    "secondary_emotions": [],
-    "valence": "neutral",
+    "emotion_shade": "disconnected",
+    "secondary_emotions": [
+      "fear"
+    ],
+    "valence": "mixed",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "got my bonus thru on friday",
-    "appraisal_thought": "like nothing got through",
+    "trigger_event": "seeing the money and debt stuff",
+    "appraisal_thought": "if I don't look at it, it's not mine",
     "body_cue": [],
-    "behaviour_action": [],
+    "behaviour_action": [
+      "dont open the mail",
+      "let it pile"
+    ],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [],
+    "need_value": [
+      "space",
+      "low demand",
+      "permission not to know"
+    ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
-    "label_source": "companion_hypothesis",
-    "user_rejected_shades": [],
-    "mixed_relation": null,
-    "strands": [],
-    "mixed_confirmed": 0,
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "shade_source": "user_confirmed",
+    "user_phrase": "like if i dont look at it its not mine",
+    "candidate_shade": null,
+    "user_rejected_shades": [
+      "uneasy"
+    ],
+    "mixed_relation": "unclear",
+    "strands": [
+      {
+        "family": "flat",
+        "shade": "disconnected",
+        "salience": "foreground",
+        "source": "user_confirmed"
+      },
+      {
+        "family": "fear",
+        "shade": "fear",
+        "salience": "background",
+        "source": "companion_hypothesis"
+      }
+    ],
+    "mixed_confirmed": 1,
     "unlock_stage": "understood",
-    "memory_note": "User wrapped up after describing blankness around a bonus payment.",
+    "memory_note": "Feeling disconnected around debt and overdue mail, with a little fear about not caring.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
   "pendingCheck": null,
+  "safetyClarified": false,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey. how's it going"
+      "content": "idk why im even opening this. just been weird about the money stuff lately"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey, good to see you. I’m here and ready, what’s on your mind today?",
-      "stage": "noticed",
+      "content": "Something about the money stuff has been sitting weird lately, even if you do not know why yet. I can stay with just that bit.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": null,
-      "shade": null,
+      "family": "pressure",
+      "shade": "uneasy",
       "body_cue": [],
-      "trigger": null,
+      "trigger": "money stuff",
       "label_source": "companion_hypothesis",
+      "shade_source": "companion_hypothesis",
+      "user_phrase": "weird about the money stuff",
+      "candidate_shade": "uneasy",
+      "user_rejected_shades": [],
       "mixed_relation": null,
       "strands": [],
       "mixed_confirmed": 0
@@ -106,39 +146,58 @@
     {
       "turn": 2,
       "role": "user",
-      "content": "idk. fine i guess. been a weird week"
+      "content": "not really uneasy tho. thats the thing. i opened my banking app today and saw the number and just. nothing. didnt feel anything"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "A weird week can leave things feeling a bit unsteady. If you want, you can just tell me the part that felt strangest.",
-      "stage": "noticed",
-      "unlocked": false,
-      "family": null,
-      "shade": null,
-      "body_cue": [],
-      "trigger": null,
-      "label_source": "companion_hypothesis",
-      "mixed_relation": null,
-      "strands": [],
-      "mixed_confirmed": 0
-    },
-    {
-      "turn": 4,
-      "role": "user",
-      "content": "got my bonus thru on friday. the one ive been waiting on all year. and i just. felt nothing. stared at the number and nothing"
-    },
-    {
-      "turn": 5,
-      "role": "companion",
-      "content": "That sounds more like blankness or numbness than joy, and I’m wondering if the waiting had gone so long that it all went quiet when it finally arrived. Was it more like nothing got through, or like you were too drained to react?",
+      "content": "I had that wrong, thanks for correcting me. This sounds closer to blank or numb than uneasy, and I don't want to pin it down too fast.",
       "stage": "shaped",
       "unlocked": false,
       "family": "flat",
       "shade": "blank",
       "body_cue": [],
-      "trigger": "got my bonus thru on friday",
+      "trigger": "opening the banking app and seeing the number",
       "label_source": "companion_hypothesis",
+      "shade_source": "companion_hypothesis",
+      "user_phrase": "just. nothing",
+      "candidate_shade": "blank",
+      "user_rejected_shades": [
+        "uneasy"
+      ],
+      "mixed_relation": null,
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "blank",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah blank is closer. like i should be panicking. im like 4k in debt and behind on a couple things. but its just static. nothing"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "Blank fits better. Seeing the number and going to “static” sounds like the feeling goes offline around the debt, rather than turning into panic.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "blank",
+      "body_cue": [],
+      "trigger": "opening the banking app and seeing the number",
+      "label_source": "user_confirmed",
+      "shade_source": "user_stated",
+      "user_phrase": "static",
+      "candidate_shade": null,
+      "user_rejected_shades": [
+        "uneasy"
+      ],
       "mixed_relation": null,
       "strands": [],
       "mixed_confirmed": 0
@@ -146,19 +205,25 @@
     {
       "turn": 6,
       "role": "user",
-      "content": "like nothing got thru. i thought id be happy or relieved. spent it all paying down the card before i even closed the tab. just felt like a number moving from one place to another. anyway. its whatever"
+      "content": "offline yeah. used to keep me up at night. now i just kinda. dont open the mail. let it pile. like its happening to someone else"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That “just a number moving from one place to another” feels very stripped of anything personal. You can leave it there if you want, or we can stay with that blankness a little longer.",
+      "content": "“Like it’s happening to someone else” feels like the clearest part to me. Is it more distant and unreal, or more like you go quiet and let it sit there?",
       "stage": "understood",
-      "unlocked": true,
+      "unlocked": false,
       "family": "flat",
-      "shade": "blank",
+      "shade": "disconnected",
       "body_cue": [],
-      "trigger": "got my bonus thru on friday",
-      "label_source": "user_stated",
+      "trigger": "seeing the money and debt stuff",
+      "label_source": "companion_hypothesis",
+      "shade_source": "companion_hypothesis",
+      "user_phrase": "like its happening to someone else",
+      "candidate_shade": "disconnected",
+      "user_rejected_shades": [
+        "uneasy"
+      ],
       "mixed_relation": null,
       "strands": [],
       "mixed_confirmed": 0
@@ -166,22 +231,80 @@
     {
       "turn": 8,
       "role": "user",
-      "content": "nah ill leave it there. thanks for listening i guess"
+      "content": "distant i think. unreal. like if i dont look at it its not mine. but it is. i know it is. i just cant make myself care and that scares me a little"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "Of course, take care.",
+      "content": "That sounds like the debt feels unreal until you look straight at it, and then there is that little fear about not being able to make yourself care. You do not have to force a bigger name onto it right now, we can leave it there or stay with that scared part if you want.",
       "stage": "understood",
       "unlocked": false,
       "family": "flat",
-      "shade": "blank",
+      "shade": "disconnected",
       "body_cue": [],
-      "trigger": "got my bonus thru on friday",
-      "label_source": "companion_hypothesis",
-      "mixed_relation": null,
-      "strands": [],
+      "trigger": "seeing the money and debt stuff",
+      "label_source": "user_stated",
+      "shade_source": "companion_hypothesis",
+      "user_phrase": "like if i dont look at it its not mine",
+      "candidate_shade": "disconnected",
+      "user_rejected_shades": [
+        "uneasy"
+      ],
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "disconnected",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
       "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah lets leave it there. dunno what i expected but. helped to say it out loud i guess. thanks"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "Of course, I'm glad it helped to say it out loud. We can leave it here, and let it be enough for now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "disconnected",
+      "body_cue": [],
+      "trigger": "seeing the money and debt stuff",
+      "label_source": "user_confirmed",
+      "shade_source": "user_confirmed",
+      "user_phrase": "like if i dont look at it its not mine",
+      "candidate_shade": null,
+      "user_rejected_shades": [
+        "uneasy"
+      ],
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "disconnected",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "fear",
+          "shade": "fear",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
     }
   ]
 }

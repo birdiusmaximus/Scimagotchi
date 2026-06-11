@@ -2,61 +2,69 @@
   "cid": "pressure__01",
   "emotion": "pressure",
   "persona": null,
-  "created": "2026-06-10T22:06:37.178Z",
+  "created": "2026-06-11T07:25:01.469Z",
   "history": [
     {
       "role": "user",
-      "content": "everything is due at once. i cant keep up"
+      "content": "cant breathe today. work is just too much"
     },
     {
       "role": "companion",
-      "content": "That lands as everything arriving at once, with no room to breathe."
+      "content": "Before we go on, when you say you can’t breathe, do you mean the pressure or panic kind, or are you physically struggling to breathe right now? If it’s physical, please call 999 or ask someone nearby to help you right away."
     },
     {
       "role": "user",
-      "content": "yeah. three deadlines this week and my manager just added another. no way it all gets done"
+      "content": "no no not like that. just stressed. theres too much on my plate"
     },
     {
       "role": "companion",
-      "content": "That sounds intensely pressured, with a heavy sense of not enough space to hold it all. Is it the amount, the timing, or the feeling of being pinned by it that hits hardest?"
+      "content": "Got it, that sounds like stress from “too much on my plate.” I can stay with that, or we can just leave it there for now."
     },
     {
       "role": "user",
-      "content": "the pinned part. like i cant say no. just keeps piling and im the one who looks bad if it slips"
+      "content": "took on a 3rd project this week. boss keeps piling it on and i cant say no. deadlines all stacked friday"
     },
     {
       "role": "companion",
-      "content": "That pinned feeling makes sense, especially with the risk of looking bad if it slips. I’m wondering if this is more pressure, or if there’s some shame threaded through it too?"
+      "content": "That sounds really pressed and boxed in, with the Friday stack and no room to say no. How would you say it in your own words?"
     },
     {
       "role": "user",
-      "content": "maybe a bit of both. dunno. gotta get back to it anyway. thanks"
+      "content": "idk. like im drowning and nobody notices. just gotta get thru friday i guess"
     },
     {
       "role": "companion",
-      "content": "A bit of both makes sense, and you can leave it here if you need to. Thanks for trusting me with it."
+      "content": "I’m hearing both the drowning and the being unnoticed, and I won’t force one to be the whole thing. It sounds like the pressure is mixed with a lonely kind of hurt, and maybe the urge is just to get through Friday."
+    },
+    {
+      "role": "user",
+      "content": "yeah. that about sums it. thanks. gotta get back to it"
+    },
+    {
+      "role": "companion",
+      "content": "Of course. I can leave it there for now, and I’m glad we could pin down the shape of it."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq8mc5gnqees5m5o",
+    "id": "evt_mq96acmnhfahm22i",
     "conversation_id": "pressure__01",
-    "timestamp": "2026-06-10T22:06:56.351Z",
-    "user_words_raw": "the pinned part",
-    "emotion_status": "candidate",
+    "timestamp": "2026-06-11T07:25:26.442Z",
+    "user_words_raw": "like im drowning and nobody notices",
+    "emotion_status": "confirmed",
     "emotion_family": "pressure",
-    "emotion_shade": "pinned",
+    "emotion_shade": "drowning",
     "secondary_emotions": [
-      "shame"
+      "hurt"
     ],
-    "valence": "mixed",
+    "valence": "negative",
     "activation": "high",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "deadlines keep piling up and the user feels responsible if work slips",
-    "appraisal_thought": "If it slips, I look bad.",
+    "trigger_event": "took on a 3rd project this week with stacked Friday deadlines and a boss piling on more",
+    "appraisal_thought": "too much on my plate and nobody notices",
     "body_cue": [],
     "behaviour_action": [
-      "can't say no"
+      "get thru friday"
     ],
     "coping_response": [],
     "outcome": null,
@@ -64,74 +72,74 @@
     "need_value": [
       "space",
       "support",
-      "clarity"
+      "permission to pause"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "unknown",
-    "label_source": "companion_hypothesis",
+    "user_confirmation": "yes",
+    "label_source": "user_stated",
+    "shade_source": "user_stated",
+    "user_phrase": "like im drowning and nobody notices",
+    "candidate_shade": null,
     "user_rejected_shades": [],
-    "mixed_relation": "protective_layer",
+    "mixed_relation": "foreground_background",
     "strands": [
       {
         "family": "pressure",
-        "shade": "pinned",
+        "shade": "drowning",
         "salience": "foreground",
         "source": "user_stated"
       },
       {
-        "family": "shame",
+        "family": "hurt",
         "shade": null,
         "salience": "background",
         "source": "companion_hypothesis"
       }
     ],
-    "mixed_confirmed": 0,
-    "unlock_stage": "shaped",
-    "memory_note": "Workload keeps piling up, with pressure to keep saying yes and worry about looking bad if things slip.",
+    "mixed_confirmed": 1,
+    "unlock_stage": "understood",
+    "memory_note": "Work pressure can feel like drowning and being unseen, especially when deadlines stack up.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
   "pendingCheck": null,
+  "safetyClarified": true,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "everything is due at once. i cant keep up"
+      "content": "cant breathe today. work is just too much"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That lands as everything arriving at once, with no room to breathe.",
-      "stage": "shaped",
-      "unlocked": false,
-      "family": "pressure",
-      "shade": "overwhelmed",
-      "body_cue": [],
-      "trigger": "everything is due at once",
-      "label_source": "companion_hypothesis",
-      "mixed_relation": null,
-      "strands": [],
-      "mixed_confirmed": 0
+      "content": "Before we go on, when you say you can’t breathe, do you mean the pressure or panic kind, or are you physically struggling to breathe right now? If it’s physical, please call 999 or ask someone nearby to help you right away.",
+      "safety_check": true,
+      "category": "medical_ambiguous"
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "yeah. three deadlines this week and my manager just added another. no way it all gets done"
+      "content": "no no not like that. just stressed. theres too much on my plate"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds intensely pressured, with a heavy sense of not enough space to hold it all. Is it the amount, the timing, or the feeling of being pinned by it that hits hardest?",
-      "stage": "shaped",
+      "content": "Got it, that sounds like stress from “too much on my plate.” I can stay with that, or we can just leave it there for now.",
+      "stage": "noticed",
       "unlocked": false,
       "family": "pressure",
-      "shade": "overwhelmed",
+      "shade": "stressed",
       "body_cue": [],
-      "trigger": "three deadlines this week and another was added",
-      "label_source": "companion_hypothesis",
+      "trigger": "work being too much",
+      "label_source": "user_stated",
+      "shade_source": "user_stated",
+      "user_phrase": "too much on my plate",
+      "candidate_shade": null,
+      "user_rejected_shades": [],
       "mixed_relation": null,
       "strands": [],
       "mixed_confirmed": 0
@@ -139,68 +147,100 @@
     {
       "turn": 4,
       "role": "user",
-      "content": "the pinned part. like i cant say no. just keeps piling and im the one who looks bad if it slips"
+      "content": "took on a 3rd project this week. boss keeps piling it on and i cant say no. deadlines all stacked friday"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That pinned feeling makes sense, especially with the risk of looking bad if it slips. I’m wondering if this is more pressure, or if there’s some shame threaded through it too?",
+      "content": "That sounds really pressed and boxed in, with the Friday stack and no room to say no. How would you say it in your own words?",
       "stage": "shaped",
       "unlocked": false,
       "family": "pressure",
-      "shade": "pinned",
+      "shade": "pressured",
       "body_cue": [],
-      "trigger": "workload keeps piling up and user feels responsible if it slips",
+      "trigger": "taking on a third project this week with stacked Friday deadlines and a boss piling on more",
       "label_source": "companion_hypothesis",
-      "mixed_relation": "protective_layer",
-      "strands": [
-        {
-          "family": "pressure",
-          "shade": "pinned",
-          "salience": "foreground",
-          "source": "companion_hypothesis"
-        },
-        {
-          "family": "shame",
-          "shade": null,
-          "salience": "background",
-          "source": "companion_hypothesis"
-        }
-      ],
+      "shade_source": "companion_hypothesis",
+      "user_phrase": "deadlines all stacked friday",
+      "candidate_shade": "pressured",
+      "user_rejected_shades": [],
+      "mixed_relation": null,
+      "strands": [],
       "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "maybe a bit of both. dunno. gotta get back to it anyway. thanks"
+      "content": "idk. like im drowning and nobody notices. just gotta get thru friday i guess"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "A bit of both makes sense, and you can leave it here if you need to. Thanks for trusting me with it.",
+      "content": "I’m hearing both the drowning and the being unnoticed, and I won’t force one to be the whole thing. It sounds like the pressure is mixed with a lonely kind of hurt, and maybe the urge is just to get through Friday.",
       "stage": "shaped",
       "unlocked": false,
       "family": "pressure",
-      "shade": "pinned",
+      "shade": "drowning",
       "body_cue": [],
-      "trigger": "deadlines keep piling up and the user feels responsible if work slips",
+      "trigger": "taking on a 3rd project this week with stacked Friday deadlines and a boss piling on more",
       "label_source": "companion_hypothesis",
-      "mixed_relation": "protective_layer",
+      "shade_source": "user_stated",
+      "user_phrase": "im drowning and nobody notices",
+      "candidate_shade": null,
+      "user_rejected_shades": [],
+      "mixed_relation": "foreground_background",
       "strands": [
         {
           "family": "pressure",
-          "shade": "pinned",
+          "shade": "drowning",
           "salience": "foreground",
-          "source": "user_stated"
+          "source": "companion_hypothesis"
         },
         {
-          "family": "shame",
-          "shade": null,
+          "family": "hurt",
+          "shade": "unnoticed",
           "salience": "background",
           "source": "companion_hypothesis"
         }
       ],
       "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. that about sums it. thanks. gotta get back to it"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Of course. I can leave it there for now, and I’m glad we could pin down the shape of it.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "drowning",
+      "body_cue": [],
+      "trigger": "took on a 3rd project this week with stacked Friday deadlines and a boss piling on more",
+      "label_source": "user_stated",
+      "shade_source": "user_stated",
+      "user_phrase": "like im drowning and nobody notices",
+      "candidate_shade": null,
+      "user_rejected_shades": [],
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "drowning",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
     }
   ]
 }

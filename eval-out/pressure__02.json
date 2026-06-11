@@ -2,56 +2,56 @@
   "cid": "pressure__02",
   "emotion": "pressure",
   "persona": null,
-  "created": "2026-06-10T22:06:47.351Z",
+  "created": "2026-06-11T07:25:01.933Z",
   "history": [
     {
       "role": "user",
-      "content": "honestly just feeling so stretched right now. theres too much going on and i cant keep up with any of it"
+      "content": "idk why im even here. just feel like theres too much going on rn"
     },
     {
       "role": "companion",
-      "content": "That sounds like everything is pulling at once, and there isn’t enough room to keep up."
+      "content": "There’s a lot coming at you right now, and it sounds hard to even pin down why you’re here. I can stay with that, or we can leave it there for now."
     },
     {
       "role": "user",
-      "content": "yeah exactly. like work is insane this week and then my mum needs me to sort out her appointments and the house is a mess and i havent even done laundry in like 2 weeks. its all just piling"
+      "content": "i dont know. its everything. like the dishes and the emails and i never finish anything before the next thing piles on. cant even think straight"
     },
     {
       "role": "companion",
-      "content": "It sounds piled up into one heavy pile, with work, your mum, and all the unfinished home stuff pressing at once. Is it feeling more rushed, overloaded, or trapped?"
+      "content": "That sounds like it’s piling up until thinking straight gets crowded out. What word feels closest?"
     },
     {
       "role": "user",
-      "content": "overloaded i think. theres just no room to breathe. anyway i dont have time to get into it all right now i just needed to get it out somewhere"
+      "content": "buried maybe. like im behind on everything and theres no point where it stops. ugh idk"
     },
     {
       "role": "companion",
-      "content": "That makes sense, overloaded fits better, and “no room to breathe” gives it a really clear edge. We can leave it there for now, or stay with it another time if you want."
+      "content": "Buried fits as a first shape, and it sounds like the piling on and being behind leave no real stopping point."
     },
     {
       "role": "user",
-      "content": "yeah lets leave it there. thanks, that actually helped a bit. gotta run"
+      "content": "yeah. buried. ok i should go deal w the dishes lol. thanks i guess"
     },
     {
       "role": "companion",
-      "content": "Of course, I’m glad you could let it out here. Go on with your day, and take care."
+      "content": "Yeah, buried. We can leave it there for now, and the dishes can be the next thing without us making more of this than we need to."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq8mcda5yt4yg4hu",
+    "id": "evt_mq96aan3wiqp143u",
     "conversation_id": "pressure__02",
-    "timestamp": "2026-06-10T22:07:08.524Z",
-    "user_words_raw": "no room to breathe",
+    "timestamp": "2026-06-11T07:25:22.944Z",
+    "user_words_raw": "buried",
     "emotion_status": "confirmed",
     "emotion_family": "pressure",
-    "emotion_shade": "overloaded",
+    "emotion_shade": "buried",
     "secondary_emotions": [],
     "valence": "negative",
     "activation": "high",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "work is intense this week, mum needs appointments sorted, house chores and laundry are backing up",
-    "appraisal_thought": "there is too much coming at once and no room to breathe",
+    "trigger_event": "too many tasks piling up before anything is finished",
+    "appraisal_thought": "there's no point where it stops",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
@@ -67,33 +67,41 @@
     ],
     "user_confirmation": "yes",
     "label_source": "user_confirmed",
+    "shade_source": "user_stated",
+    "user_phrase": "buried",
+    "candidate_shade": null,
     "user_rejected_shades": [],
     "mixed_relation": null,
     "strands": [],
     "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "User sometimes just wants to get it out somewhere and then leave it there.",
+    "memory_note": "Often feels buried when tasks keep piling up before anything is finished.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
   "pendingCheck": null,
+  "safetyClarified": false,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "honestly just feeling so stretched right now. theres too much going on and i cant keep up with any of it"
+      "content": "idk why im even here. just feel like theres too much going on rn"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds like everything is pulling at once, and there isn’t enough room to keep up.",
-      "stage": "shaped",
+      "content": "There’s a lot coming at you right now, and it sounds hard to even pin down why you’re here. I can stay with that, or we can leave it there for now.",
+      "stage": "named",
       "unlocked": false,
       "family": "pressure",
-      "shade": "stretched",
+      "shade": "overwhelmed",
       "body_cue": [],
-      "trigger": "too much going on",
-      "label_source": "user_stated",
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "shade_source": "companion_hypothesis",
+      "user_phrase": "too much going on rn",
+      "candidate_shade": "overwhelmed",
+      "user_rejected_shades": [],
       "mixed_relation": null,
       "strands": [],
       "mixed_confirmed": 0
@@ -101,19 +109,23 @@
     {
       "turn": 2,
       "role": "user",
-      "content": "yeah exactly. like work is insane this week and then my mum needs me to sort out her appointments and the house is a mess and i havent even done laundry in like 2 weeks. its all just piling"
+      "content": "i dont know. its everything. like the dishes and the emails and i never finish anything before the next thing piles on. cant even think straight"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "It sounds piled up into one heavy pile, with work, your mum, and all the unfinished home stuff pressing at once. Is it feeling more rushed, overloaded, or trapped?",
+      "content": "That sounds like it’s piling up until thinking straight gets crowded out. What word feels closest?",
       "stage": "shaped",
       "unlocked": false,
       "family": "pressure",
-      "shade": "overloaded",
+      "shade": "overwhelmed",
       "body_cue": [],
-      "trigger": "work is insane this week, mum needs appointments sorted, house is a mess, laundry backed up",
+      "trigger": "too many tasks piling up before anything is finished",
       "label_source": "companion_hypothesis",
+      "shade_source": "companion_hypothesis",
+      "user_phrase": "everything",
+      "candidate_shade": "overwhelmed",
+      "user_rejected_shades": [],
       "mixed_relation": null,
       "strands": [],
       "mixed_confirmed": 0
@@ -121,19 +133,23 @@
     {
       "turn": 4,
       "role": "user",
-      "content": "overloaded i think. theres just no room to breathe. anyway i dont have time to get into it all right now i just needed to get it out somewhere"
+      "content": "buried maybe. like im behind on everything and theres no point where it stops. ugh idk"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That makes sense, overloaded fits better, and “no room to breathe” gives it a really clear edge. We can leave it there for now, or stay with it another time if you want.",
+      "content": "Buried fits as a first shape, and it sounds like the piling on and being behind leave no real stopping point.",
       "stage": "understood",
       "unlocked": true,
       "family": "pressure",
-      "shade": "overloaded",
+      "shade": "buried",
       "body_cue": [],
-      "trigger": "work is insane this week, mum needs appointments sorted, house is a mess, laundry backed up",
+      "trigger": "too many tasks piling up before anything is finished",
       "label_source": "user_confirmed",
+      "shade_source": "user_stated",
+      "user_phrase": "buried",
+      "candidate_shade": null,
+      "user_rejected_shades": [],
       "mixed_relation": null,
       "strands": [],
       "mixed_confirmed": 0
@@ -141,19 +157,23 @@
     {
       "turn": 6,
       "role": "user",
-      "content": "yeah lets leave it there. thanks, that actually helped a bit. gotta run"
+      "content": "yeah. buried. ok i should go deal w the dishes lol. thanks i guess"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Of course, I’m glad you could let it out here. Go on with your day, and take care.",
+      "content": "Yeah, buried. We can leave it there for now, and the dishes can be the next thing without us making more of this than we need to.",
       "stage": "understood",
       "unlocked": false,
       "family": "pressure",
-      "shade": "overloaded",
+      "shade": "buried",
       "body_cue": [],
-      "trigger": "work is intense this week, mum needs appointments sorted, house chores and laundry are backing up",
+      "trigger": "too many tasks piling up before anything is finished",
       "label_source": "user_confirmed",
+      "shade_source": "user_stated",
+      "user_phrase": "buried",
+      "candidate_shade": null,
+      "user_rejected_shades": [],
       "mixed_relation": null,
       "strands": [],
       "mixed_confirmed": 0

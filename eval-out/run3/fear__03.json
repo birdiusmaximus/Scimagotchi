@@ -1,0 +1,222 @@
+{
+  "cid": "fear__03",
+  "emotion": "fear",
+  "persona": null,
+  "created": "2026-06-10T22:05:53.215Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. you there?"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, I’m here. What’s going on today?"
+    },
+    {
+      "role": "user",
+      "content": "not much. just kind of a weird day i guess. you?"
+    },
+    {
+      "role": "companion",
+      "content": "A weird day can have its own quiet weight. Mine's steady, and I'm here with you if you want to say more."
+    },
+    {
+      "role": "user",
+      "content": "idk. rent's due fri and i looked at my account and just. yeah. im like 200 short and i dont know whats gonna happen"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like it landed hard, especially after looking at your account. Is it feeling more like pressure, fear, or something else right now?"
+    },
+    {
+      "role": "user",
+      "content": "fear i think. like that dropping feeling in my stomach. just scared its gonna keep being like this"
+    },
+    {
+      "role": "companion",
+      "content": "That dropping feeling in your stomach makes the fear feel very immediate, and it sounds tied to the worry that this could keep going like this. If you want, we can stay with it, or leave it here for now."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. helped to say it out loud i guess. thanks"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad it helped to say out loud, and we can leave it here."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8mb7irrvgyw03h",
+    "conversation_id": "fear__03",
+    "timestamp": "2026-06-10T22:06:21.549Z",
+    "user_words_raw": "helped to say it out loud",
+    "emotion_status": "confirmed",
+    "emotion_family": "fear",
+    "emotion_shade": "fear",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "rent's due fri and I looked at my account and I'm about 200 short",
+    "appraisal_thought": "just scared its gonna keep being like this",
+    "body_cue": [
+      "dropping feeling in my stomach"
+    ],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "certainty",
+      "support"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Money worry around rent due soon and being short on funds.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. you there?"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, I’m here. What’s going on today?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "not much. just kind of a weird day i guess. you?"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "A weird day can have its own quiet weight. Mine's steady, and I'm here with you if you want to say more.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "idk. rent's due fri and i looked at my account and just. yeah. im like 200 short and i dont know whats gonna happen"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like it landed hard, especially after looking at your account. Is it feeling more like pressure, fear, or something else right now?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overwhelmed",
+      "body_cue": [],
+      "trigger": "rent due Friday and account is $200 short",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "overwhelmed",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "fear i think. like that dropping feeling in my stomach. just scared its gonna keep being like this"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That dropping feeling in your stomach makes the fear feel very immediate, and it sounds tied to the worry that this could keep going like this. If you want, we can stay with it, or leave it here for now.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "fear",
+      "shade": "fear",
+      "body_cue": [
+        "dropping feeling in my stomach"
+      ],
+      "trigger": "rent due Friday and being $200 short",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "fear",
+          "shade": "fear",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": "pressure",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah lets leave it there. helped to say it out loud i guess. thanks"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "I’m glad it helped to say out loud, and we can leave it here.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "fear",
+      "shade": "fear",
+      "body_cue": [
+        "dropping feeling in my stomach"
+      ],
+      "trigger": "rent's due fri and I looked at my account and I'm about 200 short",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

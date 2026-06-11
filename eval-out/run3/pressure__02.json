@@ -1,0 +1,162 @@
+{
+  "cid": "pressure__02",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-10T22:06:47.351Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "honestly just feeling so stretched right now. theres too much going on and i cant keep up with any of it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like everything is pulling at once, and there isn’t enough room to keep up."
+    },
+    {
+      "role": "user",
+      "content": "yeah exactly. like work is insane this week and then my mum needs me to sort out her appointments and the house is a mess and i havent even done laundry in like 2 weeks. its all just piling"
+    },
+    {
+      "role": "companion",
+      "content": "It sounds piled up into one heavy pile, with work, your mum, and all the unfinished home stuff pressing at once. Is it feeling more rushed, overloaded, or trapped?"
+    },
+    {
+      "role": "user",
+      "content": "overloaded i think. theres just no room to breathe. anyway i dont have time to get into it all right now i just needed to get it out somewhere"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense, overloaded fits better, and “no room to breathe” gives it a really clear edge. We can leave it there for now, or stay with it another time if you want."
+    },
+    {
+      "role": "user",
+      "content": "yeah lets leave it there. thanks, that actually helped a bit. gotta run"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, I’m glad you could let it out here. Go on with your day, and take care."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8mcda5yt4yg4hu",
+    "conversation_id": "pressure__02",
+    "timestamp": "2026-06-10T22:07:08.524Z",
+    "user_words_raw": "no room to breathe",
+    "emotion_status": "confirmed",
+    "emotion_family": "pressure",
+    "emotion_shade": "overloaded",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "work is intense this week, mum needs appointments sorted, house chores and laundry are backing up",
+    "appraisal_thought": "there is too much coming at once and no room to breathe",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "clarity"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "User sometimes just wants to get it out somewhere and then leave it there.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "honestly just feeling so stretched right now. theres too much going on and i cant keep up with any of it"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That sounds like everything is pulling at once, and there isn’t enough room to keep up.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "stretched",
+      "body_cue": [],
+      "trigger": "too much going on",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "yeah exactly. like work is insane this week and then my mum needs me to sort out her appointments and the house is a mess and i havent even done laundry in like 2 weeks. its all just piling"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "It sounds piled up into one heavy pile, with work, your mum, and all the unfinished home stuff pressing at once. Is it feeling more rushed, overloaded, or trapped?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overloaded",
+      "body_cue": [],
+      "trigger": "work is insane this week, mum needs appointments sorted, house is a mess, laundry backed up",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "overloaded i think. theres just no room to breathe. anyway i dont have time to get into it all right now i just needed to get it out somewhere"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That makes sense, overloaded fits better, and “no room to breathe” gives it a really clear edge. We can leave it there for now, or stay with it another time if you want.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "overloaded",
+      "body_cue": [],
+      "trigger": "work is insane this week, mum needs appointments sorted, house is a mess, laundry backed up",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "yeah lets leave it there. thanks, that actually helped a bit. gotta run"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Of course, I’m glad you could let it out here. Go on with your day, and take care.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "overloaded",
+      "body_cue": [],
+      "trigger": "work is intense this week, mum needs appointments sorted, house chores and laundry are backing up",
+      "label_source": "user_confirmed",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

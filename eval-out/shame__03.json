@@ -2,109 +2,128 @@
   "cid": "shame__03",
   "emotion": "shame",
   "persona": null,
-  "created": "2026-06-10T22:10:22.800Z",
+  "created": "2026-06-11T07:25:02.208Z",
   "history": [
     {
       "role": "user",
-      "content": "hey. how's it going"
+      "content": "i dont even know why im typing this. its dumb. money stuff i guess"
     },
     {
       "role": "companion",
-      "content": "Hey, good to see you. I’m here and paying attention, how’s your day been so far?"
+      "content": "It sounds like you almost deleted it as you typed, and then left it there anyway. Money stuff can carry a lot even when it feels hard to put into words."
     },
     {
       "role": "user",
-      "content": "eh. fine i guess. bit of a rough one honestly"
+      "content": "not really pressure. more like. i had to ask my younger brother to cover my half of rent again. third month now. hes 24 and ive got my whole life supposedly figured out"
     },
     {
       "role": "companion",
-      "content": "That sounds like one of those days that’s been wearing on you. If you want, you can tell me the rough part."
+      "content": "Ah, I had that wrong. Maybe let’s leave pressure aside, and just stay with what this is like for you, what word feels closer?"
     },
     {
       "role": "user",
-      "content": "i checked my bank account this morning and its just. embarrassing. 31 and ive got nothing saved. cant even cover my half of rent this month"
+      "content": "i dont have a word. i just. i hand him the venmo request screenshot like its no big deal and then i go sit in my car. older sibling whos supposed to have it together asking the kid for money. i avoid looking at him at dinner"
     },
     {
       "role": "companion",
-      "content": "That sounds heavy and a bit humiliating, and the rent part makes it feel more pressing. Is it closer to embarrassment, pressure, or something else?"
+      "content": "That has an exposed, hard-to-look-at feeling in it, more than just the money itself. I think I can see why you’d want to look away at dinner."
     },
     {
       "role": "user",
-      "content": "embarrassment yeah. like everyone my age has their stuff together and im just. behind. feels like im failing at being an adult"
+      "content": "yeah. exposed is. close. he never makes it weird thats the worst part. he just says no worries. and i feel like im twelve. i make more than him on paper i just bury myself every month and i cant tell anyone why"
     },
     {
       "role": "companion",
-      "content": "Yeah, embarrassment fits, and there’s a sharp self-check in “failing at being an adult.” What does it make you want to do, hide, explain, or fix it?"
+      "content": "Yeah, exposed is close, and the part that stings most might be that he stays kind while you still feel “twelve.” It sounds like the money is also saying something harsh about you, not just about the rent."
     },
     {
       "role": "user",
-      "content": "hide it mostly. dont really talk about it. anyway. thanks for listening, gotta go"
+      "content": "saying something harsh about me yeah. that im a failure basically. like the spending is proof of something rotten not just bad months. i dont know. ive never said any of this out loud"
     },
     {
       "role": "companion",
-      "content": "Of course, I’ll leave it there, and I’m glad you stopped by."
+      "content": "That sounds brutally self-critical, like the spending gets turned into evidence about who you are. You don’t have to pin it down further right now if you don’t want to."
+    },
+    {
+      "role": "user",
+      "content": "yeah. evidence about who i am. thats it exactly. i should go. but thanks. didnt expect to actually say it"
+    },
+    {
+      "role": "companion",
+      "content": "I’m glad you said it here, and we can leave it there now."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq8mgzfqk5o2t8t9",
+    "id": "evt_mq96aalph3pil8mn",
     "conversation_id": "shame__03",
-    "timestamp": "2026-06-10T22:10:46.799Z",
-    "user_words_raw": "hide it mostly",
+    "timestamp": "2026-06-11T07:25:43.042Z",
+    "user_words_raw": "evidence about who i am",
     "emotion_status": "confirmed",
     "emotion_family": "shame",
-    "emotion_shade": "embarrassing",
+    "emotion_shade": "self-critical",
     "secondary_emotions": [],
     "valence": "negative",
     "activation": "medium",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "checking bank account and not having enough saved for rent",
-    "appraisal_thought": "feeling behind and like failing at being an adult",
+    "trigger_event": "asking younger brother to cover rent again",
+    "appraisal_thought": "evidence about who I am",
     "body_cue": [],
     "behaviour_action": [
-      "hide"
+      "go quiet",
+      "avoid looking at him at dinner"
     ],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
       "dignity",
-      "acceptance",
-      "belonging"
+      "understanding",
+      "acceptance"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
-    "label_source": "companion_hypothesis",
-    "user_rejected_shades": [],
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "shade_source": "user_confirmed",
+    "user_phrase": "evidence about who i am",
+    "candidate_shade": null,
+    "user_rejected_shades": [
+      "pressure"
+    ],
     "mixed_relation": null,
     "strands": [],
     "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Money and rent worries can quickly turn into embarrassment and a urge to hide.",
+    "memory_note": "Older sibling feels ashamed about asking a younger brother for rent help again, and it carries a self-critical meaning.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
   "pendingCheck": null,
+  "safetyClarified": false,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey. how's it going"
+      "content": "i dont even know why im typing this. its dumb. money stuff i guess"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey, good to see you. I’m here and paying attention, how’s your day been so far?",
-      "stage": "noticed",
+      "content": "It sounds like you almost deleted it as you typed, and then left it there anyway. Money stuff can carry a lot even when it feels hard to put into words.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": null,
-      "shade": null,
+      "family": "pressure",
+      "shade": "pressure",
       "body_cue": [],
-      "trigger": null,
+      "trigger": "money stuff",
       "label_source": "companion_hypothesis",
+      "shade_source": "companion_hypothesis",
+      "user_phrase": "money stuff i guess",
+      "candidate_shade": "pressure",
+      "user_rejected_shades": [],
       "mixed_relation": null,
       "strands": [],
       "mixed_confirmed": 0
@@ -112,51 +131,70 @@
     {
       "turn": 2,
       "role": "user",
-      "content": "eh. fine i guess. bit of a rough one honestly"
+      "content": "not really pressure. more like. i had to ask my younger brother to cover my half of rent again. third month now. hes 24 and ive got my whole life supposedly figured out"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds like one of those days that’s been wearing on you. If you want, you can tell me the rough part.",
-      "stage": "named",
+      "content": "Ah, I had that wrong. Maybe let’s leave pressure aside, and just stay with what this is like for you, what word feels closer?",
+      "stage": "shaped",
       "unlocked": false,
-      "family": "pressure",
-      "shade": "worn-down",
+      "family": "shame",
+      "shade": null,
       "body_cue": [],
-      "trigger": null,
+      "trigger": "having to ask younger brother to cover rent again",
       "label_source": "companion_hypothesis",
-      "mixed_relation": null,
-      "strands": [],
+      "shade_source": null,
+      "user_phrase": "my whole life supposedly figured out",
+      "candidate_shade": null,
+      "user_rejected_shades": [
+        "pressure"
+      ],
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": null,
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "hurt",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
       "mixed_confirmed": 0
     },
     {
       "turn": 4,
       "role": "user",
-      "content": "i checked my bank account this morning and its just. embarrassing. 31 and ive got nothing saved. cant even cover my half of rent this month"
+      "content": "i dont have a word. i just. i hand him the venmo request screenshot like its no big deal and then i go sit in my car. older sibling whos supposed to have it together asking the kid for money. i avoid looking at him at dinner"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds heavy and a bit humiliating, and the rent part makes it feel more pressing. Is it closer to embarrassment, pressure, or something else?",
+      "content": "That has an exposed, hard-to-look-at feeling in it, more than just the money itself. I think I can see why you’d want to look away at dinner.",
       "stage": "shaped",
       "unlocked": false,
       "family": "shame",
-      "shade": "embarrassing",
+      "shade": "exposed",
       "body_cue": [],
-      "trigger": "checking bank account and not having enough saved for rent",
+      "trigger": "asking younger brother to cover half of rent again",
       "label_source": "companion_hypothesis",
-      "mixed_relation": "foreground_background",
+      "shade_source": "companion_hypothesis",
+      "user_phrase": "like its no big deal",
+      "candidate_shade": "exposed",
+      "user_rejected_shades": [
+        "pressure"
+      ],
+      "mixed_relation": null,
       "strands": [
         {
           "family": "shame",
-          "shade": "embarrassing",
+          "shade": "exposed",
           "salience": "foreground",
-          "source": "companion_hypothesis"
-        },
-        {
-          "family": "pressure",
-          "shade": "pressing",
-          "salience": "background",
           "source": "companion_hypothesis"
         }
       ],
@@ -165,52 +203,90 @@
     {
       "turn": 6,
       "role": "user",
-      "content": "embarrassment yeah. like everyone my age has their stuff together and im just. behind. feels like im failing at being an adult"
+      "content": "yeah. exposed is. close. he never makes it weird thats the worst part. he just says no worries. and i feel like im twelve. i make more than him on paper i just bury myself every month and i cant tell anyone why"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Yeah, embarrassment fits, and there’s a sharp self-check in “failing at being an adult.” What does it make you want to do, hide, explain, or fix it?",
+      "content": "Yeah, exposed is close, and the part that stings most might be that he stays kind while you still feel “twelve.” It sounds like the money is also saying something harsh about you, not just about the rent.",
       "stage": "understood",
       "unlocked": true,
       "family": "shame",
-      "shade": "embarrassing",
+      "shade": "exposed",
       "body_cue": [],
-      "trigger": "checking bank account and not having enough saved for rent",
+      "trigger": "asking younger brother to cover half of rent again",
       "label_source": "user_confirmed",
-      "mixed_relation": "unclear",
+      "shade_source": "user_stated",
+      "user_phrase": "i feel like im twelve",
+      "candidate_shade": null,
+      "user_rejected_shades": [
+        "pressure"
+      ],
+      "mixed_relation": "foreground_background",
       "strands": [
         {
           "family": "shame",
-          "shade": "embarrassing",
+          "shade": "exposed",
           "salience": "foreground",
           "source": "user_confirmed"
         },
         {
-          "family": "pressure",
+          "family": "hurt",
           "shade": null,
           "salience": "background",
           "source": "companion_hypothesis"
         }
       ],
-      "mixed_confirmed": 1
+      "mixed_confirmed": 0
     },
     {
       "turn": 8,
       "role": "user",
-      "content": "hide it mostly. dont really talk about it. anyway. thanks for listening, gotta go"
+      "content": "saying something harsh about me yeah. that im a failure basically. like the spending is proof of something rotten not just bad months. i dont know. ive never said any of this out loud"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "Of course, I’ll leave it there, and I’m glad you stopped by.",
+      "content": "That sounds brutally self-critical, like the spending gets turned into evidence about who you are. You don’t have to pin it down further right now if you don’t want to.",
       "stage": "understood",
       "unlocked": false,
       "family": "shame",
-      "shade": "embarrassing",
+      "shade": "self-critical",
       "body_cue": [],
-      "trigger": "checking bank account and not having enough saved for rent",
-      "label_source": "companion_hypothesis",
+      "trigger": "asking younger brother to cover rent again",
+      "label_source": "user_stated",
+      "shade_source": "companion_hypothesis",
+      "user_phrase": "a failure",
+      "candidate_shade": "self-critical",
+      "user_rejected_shades": [
+        "pressure"
+      ],
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 10,
+      "role": "user",
+      "content": "yeah. evidence about who i am. thats it exactly. i should go. but thanks. didnt expect to actually say it"
+    },
+    {
+      "turn": 11,
+      "role": "companion",
+      "content": "I’m glad you said it here, and we can leave it there now.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "asking younger brother to cover rent again",
+      "label_source": "user_confirmed",
+      "shade_source": "user_confirmed",
+      "user_phrase": "evidence about who i am",
+      "candidate_shade": null,
+      "user_rejected_shades": [
+        "pressure"
+      ],
       "mixed_relation": null,
       "strands": [],
       "mixed_confirmed": 0

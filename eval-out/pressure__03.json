@@ -2,119 +2,164 @@
   "cid": "pressure__03",
   "emotion": "pressure",
   "persona": null,
-  "created": "2026-06-10T22:06:51.789Z",
+  "created": "2026-06-11T07:25:02.075Z",
   "history": [
     {
       "role": "user",
-      "content": "hey. been a while since i opened this"
+      "content": "i dont even know why im opening this. just been a rough week"
     },
     {
       "role": "companion",
-      "content": "Hey, good to see you back. What’s been going on since you last opened this?"
+      "content": "A rough week can be enough on its own, even when the why is still blurry. We can just stay with that edge of it for a bit, or leave it there if you want."
     },
     {
       "role": "user",
-      "content": "eh. not much. just tired. money stuff mostly"
+      "content": "its money stuff. always money stuff. i keep doing the same math over and over hoping it comes out different"
     },
     {
       "role": "companion",
-      "content": "Money stuff can wear at you, especially when you’re already tired. That sounds like a lot to carry quietly."
+      "content": "That sounds like it might be pressure, with a tired kind of looping around the same numbers. What word feels closest?"
     },
     {
       "role": "user",
-      "content": "rent went up again and my hours got cut. just keeps adding up. dunno how im gonna cover next month"
+      "content": "yeah pressure i guess. theres this gap. rents due in like 9 days and my hours got cut at work and i already moved money around to cover the car thing last month so theres nothing left to move"
     },
     {
       "role": "companion",
-      "content": "That sounds like pressure piling up fast, with not enough room to catch up. Does it feel more like stretched, trapped, or just worn down?"
+      "content": "There’s a real gap there, and it sounds like you’ve already moved everything you could."
     },
     {
       "role": "user",
-      "content": "stretched. way too thin. anyway i should go. thanks for listening"
+      "content": "thats the part that gets me. like i did everything right, i didnt blow it on anything dumb, and im still short. i lie awake doing the numbers. payday isnt til after rent"
     },
     {
       "role": "companion",
-      "content": "Stretched makes sense, especially with how thin everything feels right now. We can leave it here for now, and that’s completely okay."
+      "content": "That’s the part that gets you, the part where you did everything right and it still isn’t enough. I can stay with that, or we can look a little closer at what “everything right” is doing here."
+    },
+    {
+      "role": "user",
+      "content": "i dont know. i think i just needed to say it out loud to something that wasnt gonna panic back at me. cant exactly tell my partner without them spiraling too"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense, a place that won’t spiral back can feel like a rare kind of quiet. I can just hold it here with you, or if you want, we can stay close to what it was like to finally say it out loud."
+    },
+    {
+      "role": "user",
+      "content": "yeah. just holding it is enough for tonight. thanks. dunno that anything changed but i feel a little less like im gonna crawl out of my skin. gonna try to sleep"
+    },
+    {
+      "role": "companion",
+      "content": "I’ll hold it here with you, and I’m glad the edge of it eased a little. Sleep when you can, and we can come back to it another time if you want."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq8mcgjlhfngrgom",
+    "id": "evt_mq96ab2tlnfx7f5s",
     "conversation_id": "pressure__03",
-    "timestamp": "2026-06-10T22:07:10.548Z",
-    "user_words_raw": "way too thin",
+    "timestamp": "2026-06-11T07:25:39.623Z",
+    "user_words_raw": "i did everything right",
     "emotion_status": "confirmed",
     "emotion_family": "pressure",
-    "emotion_shade": "stretched",
+    "emotion_shade": "pressured",
     "secondary_emotions": [],
     "valence": "negative",
     "activation": "high",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "rent went up again and hours got cut",
-    "appraisal_thought": "I have too much to cover next month.",
+    "trigger_event": "payday isnt til after rent, after hours got cut, and money was already moved for the car thing",
+    "appraisal_thought": "i did everything right, i didnt blow it on anything dumb, and im still short",
     "body_cue": [],
-    "behaviour_action": [],
+    "behaviour_action": [
+      "lie awake doing the numbers",
+      "try to sleep"
+    ],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
     "need_value": [
+      "quiet",
       "space",
-      "support",
-      "clarity"
+      "not spiralling",
+      "reassurance without panic"
     ],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
-    "user_confirmation": "partial",
-    "label_source": "user_stated",
+    "user_confirmation": "yes",
+    "label_source": "user_confirmed",
+    "shade_source": "user_confirmed",
+    "user_phrase": "i did everything right",
+    "candidate_shade": null,
     "user_rejected_shades": [],
     "mixed_relation": null,
     "strands": [],
     "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Money pressure has been building after rent increased and work hours were cut.",
+    "memory_note": "Money stress is recurring, especially when things are already tight and other people might spiral.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
   "pendingCheck": null,
+  "safetyClarified": false,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "hey. been a while since i opened this"
+      "content": "i dont even know why im opening this. just been a rough week"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Hey, good to see you back. What’s been going on since you last opened this?",
-      "stage": "noticed",
+      "content": "A rough week can be enough on its own, even when the why is still blurry. We can just stay with that edge of it for a bit, or leave it there if you want.",
+      "stage": "shaped",
       "unlocked": false,
-      "family": null,
-      "shade": null,
+      "family": "pressure",
+      "shade": "rough",
       "body_cue": [],
-      "trigger": null,
+      "trigger": "the week itself, without a clear single cause yet",
       "label_source": "companion_hypothesis",
-      "mixed_relation": null,
-      "strands": [],
+      "shade_source": "user_stated",
+      "user_phrase": "just been a rough week",
+      "candidate_shade": null,
+      "user_rejected_shades": [],
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
       "mixed_confirmed": 0
     },
     {
       "turn": 2,
       "role": "user",
-      "content": "eh. not much. just tired. money stuff mostly"
+      "content": "its money stuff. always money stuff. i keep doing the same math over and over hoping it comes out different"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "Money stuff can wear at you, especially when you’re already tired. That sounds like a lot to carry quietly.",
+      "content": "That sounds like it might be pressure, with a tired kind of looping around the same numbers. What word feels closest?",
       "stage": "shaped",
       "unlocked": false,
       "family": "pressure",
-      "shade": "worn_down",
+      "shade": "pressured",
       "body_cue": [],
       "trigger": "money stuff",
       "label_source": "companion_hypothesis",
+      "shade_source": "companion_hypothesis",
+      "user_phrase": "doing the same math over and over hoping it comes out different",
+      "candidate_shade": "pressured",
+      "user_rejected_shades": [],
       "mixed_relation": null,
       "strands": [],
       "mixed_confirmed": 0
@@ -122,26 +167,78 @@
     {
       "turn": 4,
       "role": "user",
-      "content": "rent went up again and my hours got cut. just keeps adding up. dunno how im gonna cover next month"
+      "content": "yeah pressure i guess. theres this gap. rents due in like 9 days and my hours got cut at work and i already moved money around to cover the car thing last month so theres nothing left to move"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "That sounds like pressure piling up fast, with not enough room to catch up. Does it feel more like stretched, trapped, or just worn down?",
-      "stage": "shaped",
+      "content": "There’s a real gap there, and it sounds like you’ve already moved everything you could.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "pressured",
+      "body_cue": [],
+      "trigger": "rent is due in 9 days, hours got cut at work, and money was already moved to cover the car last month",
+      "label_source": "user_confirmed",
+      "shade_source": "user_confirmed",
+      "user_phrase": "there's this gap",
+      "candidate_shade": null,
+      "user_rejected_shades": [],
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "thats the part that gets me. like i did everything right, i didnt blow it on anything dumb, and im still short. i lie awake doing the numbers. payday isnt til after rent"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "That’s the part that gets you, the part where you did everything right and it still isn’t enough. I can stay with that, or we can look a little closer at what “everything right” is doing here.",
+      "stage": "understood",
       "unlocked": false,
       "family": "pressure",
-      "shade": "stretched",
+      "shade": "pressured",
       "body_cue": [],
-      "trigger": "rent went up again and my hours got cut",
-      "label_source": "companion_hypothesis",
-      "mixed_relation": "unclear",
+      "trigger": "payday isn't til after rent, after hours got cut and money was already moved for the car",
+      "label_source": "user_stated",
+      "shade_source": "companion_hypothesis",
+      "user_phrase": "i did everything right",
+      "candidate_shade": "pressured",
+      "user_rejected_shades": [],
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i dont know. i think i just needed to say it out loud to something that wasnt gonna panic back at me. cant exactly tell my partner without them spiraling too"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That makes sense, a place that won’t spiral back can feel like a rare kind of quiet. I can just hold it here with you, or if you want, we can stay close to what it was like to finally say it out loud.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressured",
+      "body_cue": [],
+      "trigger": "payday isn't til after rent, after hours got cut and money was already moved for the car",
+      "label_source": "user_confirmed",
+      "shade_source": "user_confirmed",
+      "user_phrase": "i just needed to say it out loud",
+      "candidate_shade": null,
+      "user_rejected_shades": [],
+      "mixed_relation": "foreground_background",
       "strands": [
         {
           "family": "pressure",
-          "shade": "stretched",
+          "shade": "pressured",
           "salience": "foreground",
-          "source": "companion_hypothesis"
+          "source": "user_confirmed"
         },
         {
           "family": "fear",
@@ -153,21 +250,25 @@
       "mixed_confirmed": 0
     },
     {
-      "turn": 6,
+      "turn": 10,
       "role": "user",
-      "content": "stretched. way too thin. anyway i should go. thanks for listening"
+      "content": "yeah. just holding it is enough for tonight. thanks. dunno that anything changed but i feel a little less like im gonna crawl out of my skin. gonna try to sleep"
     },
     {
-      "turn": 7,
+      "turn": 11,
       "role": "companion",
-      "content": "Stretched makes sense, especially with how thin everything feels right now. We can leave it here for now, and that’s completely okay.",
+      "content": "I’ll hold it here with you, and I’m glad the edge of it eased a little. Sleep when you can, and we can come back to it another time if you want.",
       "stage": "understood",
-      "unlocked": true,
+      "unlocked": false,
       "family": "pressure",
-      "shade": "stretched",
+      "shade": "pressured",
       "body_cue": [],
-      "trigger": "rent went up again and hours got cut",
-      "label_source": "user_stated",
+      "trigger": "payday isnt til after rent, after hours got cut, and money was already moved for the car thing",
+      "label_source": "user_confirmed",
+      "shade_source": "user_confirmed",
+      "user_phrase": "i did everything right",
+      "candidate_shade": null,
+      "user_rejected_shades": [],
       "mixed_relation": null,
       "strands": [],
       "mixed_confirmed": 0

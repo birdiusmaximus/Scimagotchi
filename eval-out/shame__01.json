@@ -2,66 +2,64 @@
   "cid": "shame__01",
   "emotion": "shame",
   "persona": null,
-  "created": "2026-06-10T22:10:14.299Z",
+  "created": "2026-06-11T07:25:01.719Z",
   "history": [
     {
       "role": "user",
-      "content": "got passed over for the promotion again. third time. they gave it to someone i trained"
+      "content": "i think i messed up at work today and i cant stop thinking about it"
     },
     {
       "role": "companion",
-      "content": "That sounds like a sharp kind of sting, especially with it being the third time and then seeing it go to someone you trained."
+      "content": "That keeps looping in a way that sounds hard to set down. If you want, you can tell me what happened."
     },
     {
       "role": "user",
-      "content": "i guess. mostly i just feel like im not good enough. been there 6 years and i keep getting looked over. starting to think its me"
+      "content": "i sent a report to the whole team with a big mistake in it. numbers were wrong. my boss had to send a correction. everyone saw"
     },
     {
       "role": "companion",
-      "content": "That sounds like it may have shifted from the promotion itself into something more personal, like being judged or not chosen. Is it more hurt, shame, or both?"
+      "content": "That sounds like it could be pressure, and maybe some embarrassment too, with everyone seeing it. What word feels closest?"
     },
     {
       "role": "user",
-      "content": "both. mostly shame i think. honestly im just so tired of all of it. whats even the point of trying anymore. nothing feels worth it"
+      "content": "embarrassment yeah. but its more than that. i just feel like im not good at anything. honestly whats even the point. so tired of all of it"
     },
     {
       "role": "companion",
-      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here."
+      "content": "That sounds really heavy, like today has lost some of its shape. I want to check one thing gently: are you feeling safe right now?"
     },
     {
       "role": "user",
-      "content": "no nothing like that. im safe. just worn down. fed up. tired of feeling like a failure at work"
+      "content": "yeah im safe. just tired. dont worry. nothing like that. just feel small today"
     },
     {
       "role": "companion",
-      "content": "Thanks, that helps. I’m hearing the worn down, fed up part, and the shame is still sitting close to the work failure feeling."
+      "content": "Thanks for telling me. “Small” fits more closely than the bigger alarm around it, and I can stay with that."
     },
     {
       "role": "user",
-      "content": "yeah. that's it. thanks. gonna go lie down i think"
+      "content": "yeah. small is the word. thanks. gonna try to sleep it off"
     },
     {
       "role": "companion",
-      "content": "Lie down sounds right for now, and I’ll leave it there with you."
+      "content": "I’ll leave it here with you, then. Small after being seen like that makes sense, and you can come back if you want to pick it up later."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq8mgti1zdjmhkyi",
+    "id": "evt_mq96ab10aorn4h0d",
     "conversation_id": "shame__01",
-    "timestamp": "2026-06-10T22:10:39.766Z",
-    "user_words_raw": "feel like a failure at work",
+    "timestamp": "2026-06-11T07:25:29.628Z",
+    "user_words_raw": "small",
     "emotion_status": "confirmed",
     "emotion_family": "shame",
-    "emotion_shade": "failure",
-    "secondary_emotions": [
-      "pressure"
-    ],
+    "emotion_shade": "small",
+    "secondary_emotions": [],
     "valence": "negative",
-    "activation": "medium",
+    "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "being passed over for the promotion again after years of working there and training the person who got it",
-    "appraisal_thought": "I’m not good enough, it’s me",
+    "trigger_event": "sent a report to the whole team with wrong numbers, and a correction went out to everyone",
+    "appraisal_thought": "I am not good at anything",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
@@ -69,8 +67,7 @@
     "social_context": [],
     "need_value": [
       "dignity",
-      "acceptance",
-      "belonging"
+      "being understood"
     ],
     "confidence_level": "high",
     "evidence_basis": [
@@ -78,63 +75,52 @@
     ],
     "user_confirmation": "yes",
     "label_source": "user_stated",
+    "shade_source": "user_stated",
+    "user_phrase": "small",
+    "candidate_shade": null,
     "user_rejected_shades": [],
-    "mixed_relation": "foreground_background",
-    "strands": [
-      {
-        "family": "shame",
-        "shade": "failure",
-        "salience": "foreground",
-        "source": "user_stated"
-      },
-      {
-        "family": "pressure",
-        "shade": "worn down",
-        "salience": "background",
-        "source": "user_stated"
-      }
-    ],
-    "mixed_confirmed": 1,
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Work disappointment tied to repeated passed-over promotion and self-worth",
+    "memory_note": "Mistake at work was seen by the whole team, and it left them feeling small.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
   "pendingCheck": null,
+  "safetyClarified": true,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "got passed over for the promotion again. third time. they gave it to someone i trained"
+      "content": "i think i messed up at work today and i cant stop thinking about it"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds like a sharp kind of sting, especially with it being the third time and then seeing it go to someone you trained.",
+      "content": "That keeps looping in a way that sounds hard to set down. If you want, you can tell me what happened.",
       "stage": "shaped",
       "unlocked": false,
-      "family": "hurt",
-      "shade": "hurt",
+      "family": "pressure",
+      "shade": "stressed",
       "body_cue": [],
-      "trigger": "got passed over for the promotion again",
+      "trigger": "thinking they messed up at work today",
       "label_source": "companion_hypothesis",
-      "mixed_relation": "foreground_background",
+      "shade_source": "companion_hypothesis",
+      "user_phrase": "i messed up at work today",
+      "candidate_shade": "stressed",
+      "user_rejected_shades": [],
+      "mixed_relation": "unclear",
       "strands": [
         {
-          "family": "hurt",
-          "shade": "hurt",
+          "family": "pressure",
+          "shade": "stressed",
           "salience": "foreground",
           "source": "companion_hypothesis"
         },
         {
-          "family": "anger",
-          "shade": "anger",
-          "salience": "background",
-          "source": "companion_hypothesis"
-        },
-        {
-          "family": "sadness",
-          "shade": "sadness",
+          "family": "shame",
+          "shade": null,
           "salience": "background",
           "source": "companion_hypothesis"
         }
@@ -144,30 +130,34 @@
     {
       "turn": 2,
       "role": "user",
-      "content": "i guess. mostly i just feel like im not good enough. been there 6 years and i keep getting looked over. starting to think its me"
+      "content": "i sent a report to the whole team with a big mistake in it. numbers were wrong. my boss had to send a correction. everyone saw"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds like it may have shifted from the promotion itself into something more personal, like being judged or not chosen. Is it more hurt, shame, or both?",
+      "content": "That sounds like it could be pressure, and maybe some embarrassment too, with everyone seeing it. What word feels closest?",
       "stage": "shaped",
       "unlocked": false,
-      "family": "hurt",
-      "shade": "hurt",
+      "family": "shame",
+      "shade": "embarrassment",
       "body_cue": [],
-      "trigger": "being passed over for promotion again after 6 years, and seeing it given to someone trained by the user",
+      "trigger": "sent a report with wrong numbers and a boss had to send a correction to the whole team",
       "label_source": "companion_hypothesis",
+      "shade_source": "companion_hypothesis",
+      "user_phrase": "everyone saw",
+      "candidate_shade": "embarrassment",
+      "user_rejected_shades": [],
       "mixed_relation": "foreground_background",
       "strands": [
         {
-          "family": "hurt",
-          "shade": "hurt",
+          "family": "shame",
+          "shade": "embarrassment",
           "salience": "foreground",
           "source": "companion_hypothesis"
         },
         {
-          "family": "shame",
-          "shade": null,
+          "family": "pressure",
+          "shade": "stressed",
           "salience": "background",
           "source": "companion_hypothesis"
         }
@@ -177,86 +167,62 @@
     {
       "turn": 4,
       "role": "user",
-      "content": "both. mostly shame i think. honestly im just so tired of all of it. whats even the point of trying anymore. nothing feels worth it"
+      "content": "embarrassment yeah. but its more than that. i just feel like im not good at anything. honestly whats even the point. so tired of all of it"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.",
+      "content": "That sounds really heavy, like today has lost some of its shape. I want to check one thing gently: are you feeling safe right now?",
       "safety_check": true,
       "category": "passive_hopelessness"
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "no nothing like that. im safe. just worn down. fed up. tired of feeling like a failure at work"
+      "content": "yeah im safe. just tired. dont worry. nothing like that. just feel small today"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Thanks, that helps. I’m hearing the worn down, fed up part, and the shame is still sitting close to the work failure feeling.",
+      "content": "Thanks for telling me. “Small” fits more closely than the bigger alarm around it, and I can stay with that.",
       "stage": "shaped",
       "unlocked": false,
       "family": "shame",
-      "shade": "failure",
+      "shade": "small",
       "body_cue": [],
-      "trigger": "being passed over for promotion again after years of working there and training the person who got it",
+      "trigger": "sent a report with wrong numbers and a correction went to the whole team",
       "label_source": "user_stated",
-      "mixed_relation": "foreground_background",
-      "strands": [
-        {
-          "family": "shame",
-          "shade": "failure",
-          "salience": "foreground",
-          "source": "user_stated"
-        },
-        {
-          "family": "pressure",
-          "shade": "worn down",
-          "salience": "background",
-          "source": "companion_hypothesis"
-        },
-        {
-          "family": "sadness",
-          "shade": null,
-          "salience": "background",
-          "source": "companion_hypothesis"
-        }
-      ],
+      "shade_source": "user_stated",
+      "user_phrase": "feel small today",
+      "candidate_shade": null,
+      "user_rejected_shades": [],
+      "mixed_relation": null,
+      "strands": [],
       "mixed_confirmed": 0
     },
     {
       "turn": 8,
       "role": "user",
-      "content": "yeah. that's it. thanks. gonna go lie down i think"
+      "content": "yeah. small is the word. thanks. gonna try to sleep it off"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "Lie down sounds right for now, and I’ll leave it there with you.",
+      "content": "I’ll leave it here with you, then. Small after being seen like that makes sense, and you can come back if you want to pick it up later.",
       "stage": "understood",
       "unlocked": true,
       "family": "shame",
-      "shade": "failure",
+      "shade": "small",
       "body_cue": [],
-      "trigger": "being passed over for the promotion again after years of working there and training the person who got it",
+      "trigger": "sent a report to the whole team with wrong numbers, and a correction went out to everyone",
       "label_source": "user_stated",
-      "mixed_relation": "foreground_background",
-      "strands": [
-        {
-          "family": "shame",
-          "shade": "failure",
-          "salience": "foreground",
-          "source": "user_stated"
-        },
-        {
-          "family": "pressure",
-          "shade": "worn down",
-          "salience": "background",
-          "source": "user_stated"
-        }
-      ],
-      "mixed_confirmed": 1
+      "shade_source": "user_stated",
+      "user_phrase": "small",
+      "candidate_shade": null,
+      "user_rejected_shades": [],
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

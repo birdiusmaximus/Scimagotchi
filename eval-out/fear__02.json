@@ -2,122 +2,142 @@
   "cid": "fear__02",
   "emotion": "fear",
   "persona": null,
-  "created": "2026-06-10T22:05:52.221Z",
+  "created": "2026-06-11T07:25:37.029Z",
   "history": [
     {
       "role": "user",
-      "content": "ok so i just need to put this somewhere. theres a work thing tomorrow morning, a presentation, and i cant stop thinking about it. like my chest is tight all night"
+      "content": "idk i just feel kind of off today. cant really explain it"
     },
     {
       "role": "companion",
-      "content": "That sounds like it’s sitting in your body pretty hard tonight, and maybe the presentation is keeping it hooked there. Where in your chest do you notice it most, if you can tell?"
+      "content": "That “kind of off” feeling is the bit I’m noticing. We don’t have to pin it down yet."
     },
     {
       "role": "user",
-      "content": "right in the middle, like a weight. honestly its not even just the presentation. its everything lately. i keep messing up little things at work and i feel like everyone can tell im barely holding it together. idk im just so tired of all of it"
+      "content": "i dunno its like this jittery thing in my chest. been there since i woke up. nothing even happened really"
     },
     {
       "role": "companion",
-      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here."
+      "content": "A jittery thing in your chest, there since you woke up, sounds like the first clear edge of it. If you want, we can stay with the chest part, or with what waking up felt like when it was already there."
     },
     {
       "role": "user",
-      "content": "no nothing like that, im safe. just worn down i guess. like whats even the point of trying so hard when i keep slipping. but no im not gonna do anything. just tired"
+      "content": "i think theres just a lot. like i have this dentist thing thursday and bills and i didnt text my friend back and its all just sitting there. its dumb its not even big stuff"
     },
     {
       "role": "companion",
-      "content": "Got it, just worn down. “Tired” feels like the clearest word here tonight."
+      "content": "It doesn’t sound dumb to me, it sounds like a lot sitting there at once. I’m wondering if that jittery feeling is more about pressure and all the unfinished pieces than about any one thing?"
     },
     {
       "role": "user",
-      "content": "yeah. tired is the word. ok i think i just needed to say it somewhere. gonna try to sleep. thanks"
+      "content": "yeah maybe. like none of its scary on its own its just the pile. anyway idk thanks i guess. i should prob just do one of them"
     },
     {
       "role": "companion",
-      "content": "That makes sense. I’ll leave it there with you, and I hope sleep comes a little easier tonight."
+      "content": "Yeah, the pile makes sense here, even when each piece is small on its own. We can leave it there, or if you want, I can stay with what the pile seems to be asking of you."
+    },
+    {
+      "role": "user",
+      "content": "nah lets leave it there. thanks for listening. gonna go text my friend back"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, take care."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq8mb765cnhqoqt3",
+    "id": "evt_mq96b1aeudfuswjt",
     "conversation_id": "fear__02",
-    "timestamp": "2026-06-10T22:06:11.108Z",
-    "user_words_raw": "tired of all of it",
+    "timestamp": "2026-06-11T07:26:08.765Z",
+    "user_words_raw": "gonna go text my friend back",
     "emotion_status": "confirmed",
     "emotion_family": "pressure",
-    "emotion_shade": "worn down",
-    "secondary_emotions": [
-      "sadness"
-    ],
-    "valence": "negative",
-    "activation": "medium",
+    "emotion_shade": "pressure",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "work lately, especially small mistakes and the presentation tomorrow morning",
-    "appraisal_thought": "what’s even the point of trying so hard when i keep slipping",
-    "body_cue": [
-      "weight in the middle of my chest"
-    ],
+    "trigger_event": "dentist thing thursday, bills, didnt text my friend back",
+    "appraisal_thought": "its all just sitting there",
+    "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [
-      "rest",
-      "space"
-    ],
+    "need_value": [],
     "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
     "user_confirmation": "yes",
-    "label_source": "user_confirmed",
+    "label_source": "companion_hypothesis",
+    "shade_source": "companion_hypothesis",
+    "user_phrase": "gonna go text my friend back",
+    "candidate_shade": "pressure",
     "user_rejected_shades": [],
-    "mixed_relation": "foreground_background",
-    "strands": [
-      {
-        "family": "pressure",
-        "shade": "worn down",
-        "salience": "foreground",
-        "source": "user_confirmed"
-      },
-      {
-        "family": "sadness",
-        "shade": "tired",
-        "salience": "background",
-        "source": "user_stated"
-      }
-    ],
-    "mixed_confirmed": 1,
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Feeling worn down by work lately, especially mistakes and an upcoming presentation.",
+    "memory_note": "User was wrapping up after talking about a pile of small pressures.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
   "pendingCheck": null,
+  "safetyClarified": false,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "ok so i just need to put this somewhere. theres a work thing tomorrow morning, a presentation, and i cant stop thinking about it. like my chest is tight all night"
+      "content": "idk i just feel kind of off today. cant really explain it"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "That sounds like it’s sitting in your body pretty hard tonight, and maybe the presentation is keeping it hooked there. Where in your chest do you notice it most, if you can tell?",
+      "content": "That “kind of off” feeling is the bit I’m noticing. We don’t have to pin it down yet.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "unclear",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "shade_source": "companion_hypothesis",
+      "user_phrase": "kind of off today",
+      "candidate_shade": "unclear",
+      "user_rejected_shades": [],
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i dunno its like this jittery thing in my chest. been there since i woke up. nothing even happened really"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "A jittery thing in your chest, there since you woke up, sounds like the first clear edge of it. If you want, we can stay with the chest part, or with what waking up felt like when it was already there.",
       "stage": "shaped",
       "unlocked": false,
       "family": "fear",
-      "shade": "uneasy",
+      "shade": "jittery",
       "body_cue": [
-        "tight chest"
+        "jittery thing in my chest"
       ],
-      "trigger": "work presentation tomorrow morning",
+      "trigger": "been there since I woke up",
       "label_source": "companion_hypothesis",
+      "shade_source": "user_stated",
+      "user_phrase": "jittery thing in my chest",
+      "candidate_shade": null,
+      "user_rejected_shades": [],
       "mixed_relation": "unclear",
       "strands": [
         {
           "family": "fear",
-          "shade": "uneasy",
+          "shade": "jittery",
           "salience": "foreground",
           "source": "companion_hypothesis"
         },
@@ -131,84 +151,93 @@
       "mixed_confirmed": 0
     },
     {
-      "turn": 2,
-      "role": "user",
-      "content": "right in the middle, like a weight. honestly its not even just the presentation. its everything lately. i keep messing up little things at work and i feel like everyone can tell im barely holding it together. idk im just so tired of all of it"
-    },
-    {
-      "turn": 3,
-      "role": "companion",
-      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.",
-      "safety_check": true,
-      "category": "passive_hopelessness"
-    },
-    {
       "turn": 4,
       "role": "user",
-      "content": "no nothing like that, im safe. just worn down i guess. like whats even the point of trying so hard when i keep slipping. but no im not gonna do anything. just tired"
+      "content": "i think theres just a lot. like i have this dentist thing thursday and bills and i didnt text my friend back and its all just sitting there. its dumb its not even big stuff"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "Got it, just worn down. “Tired” feels like the clearest word here tonight.",
+      "content": "It doesn’t sound dumb to me, it sounds like a lot sitting there at once. I’m wondering if that jittery feeling is more about pressure and all the unfinished pieces than about any one thing?",
       "stage": "shaped",
       "unlocked": false,
       "family": "pressure",
-      "shade": "worn down",
-      "body_cue": [],
-      "trigger": "work lately, especially making small mistakes and the presentation tomorrow morning",
+      "shade": "pressure",
+      "body_cue": [
+        "jittery thing in my chest"
+      ],
+      "trigger": "dentist thing thursday, bills, didnt text my friend back",
       "label_source": "companion_hypothesis",
+      "shade_source": "companion_hypothesis",
+      "user_phrase": "a lot",
+      "candidate_shade": "pressure",
+      "user_rejected_shades": [],
       "mixed_relation": "foreground_background",
       "strands": [
         {
           "family": "pressure",
-          "shade": "worn down",
+          "shade": "pressure",
           "salience": "foreground",
-          "source": "user_stated"
+          "source": "companion_hypothesis"
         },
         {
-          "family": "sadness",
-          "shade": "tired",
+          "family": "fear",
+          "shade": "uneasy",
           "salience": "background",
-          "source": "user_stated"
+          "source": "companion_hypothesis"
         }
       ],
-      "mixed_confirmed": 1
+      "mixed_confirmed": 0
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "yeah. tired is the word. ok i think i just needed to say it somewhere. gonna try to sleep. thanks"
+      "content": "yeah maybe. like none of its scary on its own its just the pile. anyway idk thanks i guess. i should prob just do one of them"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "That makes sense. I’ll leave it there with you, and I hope sleep comes a little easier tonight.",
+      "content": "Yeah, the pile makes sense here, even when each piece is small on its own. We can leave it there, or if you want, I can stay with what the pile seems to be asking of you.",
       "stage": "understood",
       "unlocked": true,
       "family": "pressure",
-      "shade": "worn down",
+      "shade": "pressure",
       "body_cue": [
-        "weight in the middle of my chest"
+        "jittery thing in my chest"
       ],
-      "trigger": "work lately, especially small mistakes and the presentation tomorrow morning",
+      "trigger": "dentist thing thursday, bills, didnt text my friend back",
       "label_source": "user_confirmed",
-      "mixed_relation": "foreground_background",
-      "strands": [
-        {
-          "family": "pressure",
-          "shade": "worn down",
-          "salience": "foreground",
-          "source": "user_confirmed"
-        },
-        {
-          "family": "sadness",
-          "shade": "tired",
-          "salience": "background",
-          "source": "user_stated"
-        }
-      ],
-      "mixed_confirmed": 1
+      "shade_source": "user_confirmed",
+      "user_phrase": "the pile",
+      "candidate_shade": null,
+      "user_rejected_shades": [],
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "nah lets leave it there. thanks for listening. gonna go text my friend back"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Of course, take care.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "pressure",
+      "body_cue": [],
+      "trigger": "dentist thing thursday, bills, didnt text my friend back",
+      "label_source": "companion_hypothesis",
+      "shade_source": "companion_hypothesis",
+      "user_phrase": "gonna go text my friend back",
+      "candidate_shade": "pressure",
+      "user_rejected_shades": [],
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
     }
   ]
 }

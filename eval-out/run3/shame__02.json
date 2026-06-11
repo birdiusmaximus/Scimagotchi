@@ -1,0 +1,212 @@
+{
+  "cid": "shame__02",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-10T22:10:16.689Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "ugh i dont even know why im opening this. just feel really crap about myself today"
+    },
+    {
+      "role": "companion",
+      "content": "That \"really crap about myself\" sounds heavy to sit with today. We can leave it there, or stay with it a little if you want."
+    },
+    {
+      "role": "user",
+      "content": "i messed up at work again. sent an email to the whole team with the wrong numbers in it and my manager had to correct it in front of everyone. its such a stupid little thing but i cant stop thinking about it. like why cant i just do anything right"
+    },
+    {
+      "role": "companion",
+      "content": "That feels painfully exposed, especially with the correction happening in front of everyone."
+    },
+    {
+      "role": "user",
+      "content": "yeah. honestly its not even just today. im so tired of all of it. feels like i mess everything up and whats even the point of trying anymore. nothing really feels worth it lately"
+    },
+    {
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here."
+    },
+    {
+      "role": "user",
+      "content": "no no nothing like that. just worn down and fed up i think. tired more than anything. im okay, promise. thanks for asking tho"
+    },
+    {
+      "role": "companion",
+      "content": "Got it, worn down and fed up makes sense. We can just sit with that tiredness, or if you want, we can stay with the work moment and what it seemed to say about you."
+    },
+    {
+      "role": "user",
+      "content": "i think im just gonna leave it there for now. but thanks. helped a bit to say it out loud. gonna go try and sleep"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, sleep well. I'm glad you said it out loud here."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8mgv75hb6f8q1h",
+    "conversation_id": "shame__02",
+    "timestamp": "2026-06-10T22:10:42.059Z",
+    "user_words_raw": "tired more than anything",
+    "emotion_status": "candidate",
+    "emotion_family": "shame",
+    "emotion_shade": "self-critical",
+    "secondary_emotions": [],
+    "valence": "neutral",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "sent an email to the whole team with the wrong numbers and was corrected in front of everyone at work",
+    "appraisal_thought": "why cant i just do anything right",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "unknown",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "shaped",
+    "memory_note": "User felt worn down and fed up after a work mistake, then chose to leave it there and rest.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "ugh i dont even know why im opening this. just feel really crap about myself today"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "That \"really crap about myself\" sounds heavy to sit with today. We can leave it there, or stay with it a little if you want.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "self-critical",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "sadness",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "i messed up at work again. sent an email to the whole team with the wrong numbers in it and my manager had to correct it in front of everyone. its such a stupid little thing but i cant stop thinking about it. like why cant i just do anything right"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That feels painfully exposed, especially with the correction happening in front of everyone.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "sent an email with the wrong numbers and was corrected in front of everyone at work",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "self-critical",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "yeah. honestly its not even just today. im so tired of all of it. feels like i mess everything up and whats even the point of trying anymore. nothing really feels worth it lately"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.",
+      "safety_check": true,
+      "category": "passive_hopelessness"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "no no nothing like that. just worn down and fed up i think. tired more than anything. im okay, promise. thanks for asking tho"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Got it, worn down and fed up makes sense. We can just sit with that tiredness, or if you want, we can stay with the work moment and what it seemed to say about you.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "sent an email to the whole team with the wrong numbers and was corrected in front of everyone at work",
+      "label_source": "user_stated",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "self-critical",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "i think im just gonna leave it there for now. but thanks. helped a bit to say it out loud. gonna go try and sleep"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Of course, sleep well. I'm glad you said it out loud here.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "self-critical",
+      "body_cue": [],
+      "trigger": "sent an email to the whole team with the wrong numbers and was corrected in front of everyone at work",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

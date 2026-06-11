@@ -1,0 +1,176 @@
+{
+  "cid": "pressure__03",
+  "emotion": "pressure",
+  "persona": null,
+  "created": "2026-06-10T22:06:51.789Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. been a while since i opened this"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, good to see you back. What’s been going on since you last opened this?"
+    },
+    {
+      "role": "user",
+      "content": "eh. not much. just tired. money stuff mostly"
+    },
+    {
+      "role": "companion",
+      "content": "Money stuff can wear at you, especially when you’re already tired. That sounds like a lot to carry quietly."
+    },
+    {
+      "role": "user",
+      "content": "rent went up again and my hours got cut. just keeps adding up. dunno how im gonna cover next month"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like pressure piling up fast, with not enough room to catch up. Does it feel more like stretched, trapped, or just worn down?"
+    },
+    {
+      "role": "user",
+      "content": "stretched. way too thin. anyway i should go. thanks for listening"
+    },
+    {
+      "role": "companion",
+      "content": "Stretched makes sense, especially with how thin everything feels right now. We can leave it here for now, and that’s completely okay."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8mcgjlhfngrgom",
+    "conversation_id": "pressure__03",
+    "timestamp": "2026-06-10T22:07:10.548Z",
+    "user_words_raw": "way too thin",
+    "emotion_status": "confirmed",
+    "emotion_family": "pressure",
+    "emotion_shade": "stretched",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "high",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "rent went up again and hours got cut",
+    "appraisal_thought": "I have too much to cover next month.",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "space",
+      "support",
+      "clarity"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Money pressure has been building after rent increased and work hours were cut.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. been a while since i opened this"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, good to see you back. What’s been going on since you last opened this?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "eh. not much. just tired. money stuff mostly"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "Money stuff can wear at you, especially when you’re already tired. That sounds like a lot to carry quietly.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "worn_down",
+      "body_cue": [],
+      "trigger": "money stuff",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "rent went up again and my hours got cut. just keeps adding up. dunno how im gonna cover next month"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds like pressure piling up fast, with not enough room to catch up. Does it feel more like stretched, trapped, or just worn down?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "stretched",
+      "body_cue": [],
+      "trigger": "rent went up again and my hours got cut",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "pressure",
+          "shade": "stretched",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "fear",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "stretched. way too thin. anyway i should go. thanks for listening"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Stretched makes sense, especially with how thin everything feels right now. We can leave it here for now, and that’s completely okay.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "pressure",
+      "shade": "stretched",
+      "body_cue": [],
+      "trigger": "rent went up again and hours got cut",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

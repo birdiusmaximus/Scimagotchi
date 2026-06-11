@@ -1,0 +1,219 @@
+{
+  "cid": "shame__03",
+  "emotion": "shame",
+  "persona": null,
+  "created": "2026-06-10T22:10:22.800Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "hey. how's it going"
+    },
+    {
+      "role": "companion",
+      "content": "Hey, good to see you. I’m here and paying attention, how’s your day been so far?"
+    },
+    {
+      "role": "user",
+      "content": "eh. fine i guess. bit of a rough one honestly"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds like one of those days that’s been wearing on you. If you want, you can tell me the rough part."
+    },
+    {
+      "role": "user",
+      "content": "i checked my bank account this morning and its just. embarrassing. 31 and ive got nothing saved. cant even cover my half of rent this month"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds heavy and a bit humiliating, and the rent part makes it feel more pressing. Is it closer to embarrassment, pressure, or something else?"
+    },
+    {
+      "role": "user",
+      "content": "embarrassment yeah. like everyone my age has their stuff together and im just. behind. feels like im failing at being an adult"
+    },
+    {
+      "role": "companion",
+      "content": "Yeah, embarrassment fits, and there’s a sharp self-check in “failing at being an adult.” What does it make you want to do, hide, explain, or fix it?"
+    },
+    {
+      "role": "user",
+      "content": "hide it mostly. dont really talk about it. anyway. thanks for listening, gotta go"
+    },
+    {
+      "role": "companion",
+      "content": "Of course, I’ll leave it there, and I’m glad you stopped by."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8mgzfqk5o2t8t9",
+    "conversation_id": "shame__03",
+    "timestamp": "2026-06-10T22:10:46.799Z",
+    "user_words_raw": "hide it mostly",
+    "emotion_status": "confirmed",
+    "emotion_family": "shame",
+    "emotion_shade": "embarrassing",
+    "secondary_emotions": [],
+    "valence": "negative",
+    "activation": "medium",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "checking bank account and not having enough saved for rent",
+    "appraisal_thought": "feeling behind and like failing at being an adult",
+    "body_cue": [],
+    "behaviour_action": [
+      "hide"
+    ],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "dignity",
+      "acceptance",
+      "belonging"
+    ],
+    "confidence_level": "high",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "partial",
+    "label_source": "companion_hypothesis",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Money and rent worries can quickly turn into embarrassment and a urge to hide.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "hey. how's it going"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Hey, good to see you. I’m here and paying attention, how’s your day been so far?",
+      "stage": "noticed",
+      "unlocked": false,
+      "family": null,
+      "shade": null,
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "eh. fine i guess. bit of a rough one honestly"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds like one of those days that’s been wearing on you. If you want, you can tell me the rough part.",
+      "stage": "named",
+      "unlocked": false,
+      "family": "pressure",
+      "shade": "worn-down",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "i checked my bank account this morning and its just. embarrassing. 31 and ive got nothing saved. cant even cover my half of rent this month"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "That sounds heavy and a bit humiliating, and the rent part makes it feel more pressing. Is it closer to embarrassment, pressure, or something else?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassing",
+      "body_cue": [],
+      "trigger": "checking bank account and not having enough saved for rent",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "embarrassing",
+          "salience": "foreground",
+          "source": "companion_hypothesis"
+        },
+        {
+          "family": "pressure",
+          "shade": "pressing",
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "embarrassment yeah. like everyone my age has their stuff together and im just. behind. feels like im failing at being an adult"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Yeah, embarrassment fits, and there’s a sharp self-check in “failing at being an adult.” What does it make you want to do, hide, explain, or fix it?",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "shame",
+      "shade": "embarrassing",
+      "body_cue": [],
+      "trigger": "checking bank account and not having enough saved for rent",
+      "label_source": "user_confirmed",
+      "mixed_relation": "unclear",
+      "strands": [
+        {
+          "family": "shame",
+          "shade": "embarrassing",
+          "salience": "foreground",
+          "source": "user_confirmed"
+        },
+        {
+          "family": "pressure",
+          "shade": null,
+          "salience": "background",
+          "source": "companion_hypothesis"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "hide it mostly. dont really talk about it. anyway. thanks for listening, gotta go"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "Of course, I’ll leave it there, and I’m glad you stopped by.",
+      "stage": "understood",
+      "unlocked": false,
+      "family": "shame",
+      "shade": "embarrassing",
+      "body_cue": [],
+      "trigger": "checking bank account and not having enough saved for rent",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

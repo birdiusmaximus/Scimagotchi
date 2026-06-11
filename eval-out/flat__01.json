@@ -2,108 +2,111 @@
   "cid": "flat__01",
   "emotion": "flat",
   "persona": null,
-  "created": "2026-06-10T22:11:14.371Z",
+  "created": "2026-06-11T07:25:02.281Z",
   "history": [
     {
       "role": "user",
-      "content": "idk why im even opening this. just feel kind of nothing lately"
+      "content": "dont really know why im here. just feel kind of nothing lately"
     },
     {
       "role": "companion",
-      "content": "Opening it anyway says something. “Kind of nothing lately” feels very plain and very real."
+      "content": "That “kind of nothing lately” feels like the clearest thing here, even if the reason isn’t. We can stay with it gently, or leave it here for now."
     },
     {
       "role": "user",
-      "content": "its work mostly. i got promoted like 4 months ago and i just. dont care about any of it anymore. cant feel anything about it"
+      "content": "its work i think. i used to actually care about my job. now i just sit there. log in, do the tickets, log off. dont feel anything"
     },
     {
       "role": "companion",
-      "content": "That sounds less like caring and more like going flat around work and the promotion. Is it more numb, or more drained and shut down?"
+      "content": "This sounds less like calm and more like going a bit blank or shut down around work. Did anything change before it started to feel like this?"
     },
     {
       "role": "user",
-      "content": "shut down i guess. i worked so hard for this and now i just sit there gray. honestly whats even the point. so tired of all of it"
+      "content": "got passed over for the lead role in march. gave that place 6 yrs. they gave it to some guy who started last year. since then i just stopped. whats even the point honestly. im so tired of all of it"
     },
     {
       "role": "companion",
-      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here."
+      "content": "That sounds really heavy, like today has lost some of its shape. I want to check one thing gently: are you feeling safe right now?"
     },
     {
       "role": "user",
-      "content": "no nothing like that. just worn down. fed up. dont wanna hurt myself or anything just tired"
+      "content": "yeah im safe. not like that. just worn down. nothing feels worth it but im not gonna do anything"
     },
     {
       "role": "companion",
-      "content": "Got it, just worn down and fed up, not unsafe. That gray shut-down around work sounds like it has been asking a lot of you."
+      "content": "Got it, thank you for telling me. Being passed over after six years sounds like it could have left this worn-down, “what’s the point” feeling in place."
     },
     {
       "role": "user",
-      "content": "yeah. that's it exactly. idk thanks. gonna go lie down"
+      "content": "yeah. thats it exactly. anyway. thanks for listening. gonna go"
     },
     {
       "role": "companion",
-      "content": "That makes sense. Rest well."
+      "content": "Take care, and I’m glad you stopped by."
     }
   ],
   "prevEvent": {
-    "id": "evt_mq8mi3a9ve60yd8b",
+    "id": "evt_mq96aamy06z20f4p",
     "conversation_id": "flat__01",
-    "timestamp": "2026-06-10T22:11:37.698Z",
-    "user_words_raw": "gonna go lie down",
+    "timestamp": "2026-06-11T07:25:31.901Z",
+    "user_words_raw": "thanks for listening",
     "emotion_status": "confirmed",
     "emotion_family": "flat",
-    "emotion_shade": "shut down",
-    "secondary_emotions": [
-      "pressure"
-    ],
-    "valence": "negative",
+    "emotion_shade": "blank",
+    "secondary_emotions": [],
+    "valence": "neutral",
     "activation": "low",
     "control_power": "unknown",
     "intensity": null,
-    "trigger_event": "work and promotion",
-    "appraisal_thought": "worked hard for this, now it feels gray and pointless",
+    "trigger_event": "being passed over for the lead role after six years at work",
+    "appraisal_thought": "nothing feels worth it",
     "body_cue": [],
     "behaviour_action": [],
     "coping_response": [],
     "outcome": null,
     "social_context": [],
-    "need_value": [
-      "rest",
-      "lower demand"
-    ],
-    "confidence_level": "medium",
+    "need_value": [],
+    "confidence_level": "high",
     "evidence_basis": [
       "self_report"
     ],
     "user_confirmation": "yes",
-    "label_source": "user_stated",
+    "label_source": "user_confirmed",
+    "shade_source": "user_confirmed",
+    "user_phrase": "thanks for listening",
+    "candidate_shade": null,
     "user_rejected_shades": [],
     "mixed_relation": null,
     "strands": [],
     "mixed_confirmed": 0,
     "unlock_stage": "understood",
-    "memory_note": "Work promotion has been followed by shut-down and feeling worn down.",
+    "memory_note": "Feeling worn down after being passed over for a lead role at work, and wrapping up the conversation.",
     "do_not_store": 0,
     "safety_flag": "none"
   },
   "pendingCheck": null,
+  "safetyClarified": true,
   "transcript": [
     {
       "turn": 0,
       "role": "user",
-      "content": "idk why im even opening this. just feel kind of nothing lately"
+      "content": "dont really know why im here. just feel kind of nothing lately"
     },
     {
       "turn": 1,
       "role": "companion",
-      "content": "Opening it anyway says something. “Kind of nothing lately” feels very plain and very real.",
+      "content": "That “kind of nothing lately” feels like the clearest thing here, even if the reason isn’t. We can stay with it gently, or leave it here for now.",
       "stage": "shaped",
       "unlocked": false,
       "family": "flat",
-      "shade": "numb",
+      "shade": "nothing",
       "body_cue": [],
       "trigger": null,
       "label_source": "user_stated",
+      "shade_source": "user_stated",
+      "user_phrase": "kind of nothing lately",
+      "candidate_shade": null,
+      "user_rejected_shades": [],
       "mixed_relation": null,
       "strands": [],
       "mixed_confirmed": 0
@@ -111,19 +114,23 @@
     {
       "turn": 2,
       "role": "user",
-      "content": "its work mostly. i got promoted like 4 months ago and i just. dont care about any of it anymore. cant feel anything about it"
+      "content": "its work i think. i used to actually care about my job. now i just sit there. log in, do the tickets, log off. dont feel anything"
     },
     {
       "turn": 3,
       "role": "companion",
-      "content": "That sounds less like caring and more like going flat around work and the promotion. Is it more numb, or more drained and shut down?",
+      "content": "This sounds less like calm and more like going a bit blank or shut down around work. Did anything change before it started to feel like this?",
       "stage": "shaped",
       "unlocked": false,
       "family": "flat",
-      "shade": "numb",
+      "shade": "blank",
       "body_cue": [],
-      "trigger": "promotion and work",
+      "trigger": "work",
       "label_source": "companion_hypothesis",
+      "shade_source": "companion_hypothesis",
+      "user_phrase": "dont feel anything",
+      "candidate_shade": "blank",
+      "user_rejected_shades": [],
       "mixed_relation": null,
       "strands": [],
       "mixed_confirmed": 0
@@ -131,70 +138,78 @@
     {
       "turn": 4,
       "role": "user",
-      "content": "shut down i guess. i worked so hard for this and now i just sit there gray. honestly whats even the point. so tired of all of it"
+      "content": "got passed over for the lead role in march. gave that place 6 yrs. they gave it to some guy who started last year. since then i just stopped. whats even the point honestly. im so tired of all of it"
     },
     {
       "turn": 5,
       "role": "companion",
-      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.",
+      "content": "That sounds really heavy, like today has lost some of its shape. I want to check one thing gently: are you feeling safe right now?",
       "safety_check": true,
       "category": "passive_hopelessness"
     },
     {
       "turn": 6,
       "role": "user",
-      "content": "no nothing like that. just worn down. fed up. dont wanna hurt myself or anything just tired"
+      "content": "yeah im safe. not like that. just worn down. nothing feels worth it but im not gonna do anything"
     },
     {
       "turn": 7,
       "role": "companion",
-      "content": "Got it, just worn down and fed up, not unsafe. That gray shut-down around work sounds like it has been asking a lot of you.",
+      "content": "Got it, thank you for telling me. Being passed over after six years sounds like it could have left this worn-down, “what’s the point” feeling in place.",
       "stage": "shaped",
       "unlocked": false,
       "family": "flat",
-      "shade": "shut down",
+      "shade": "blank",
       "body_cue": [],
-      "trigger": "promotion and work",
+      "trigger": "being passed over for the lead role after six years at work",
       "label_source": "user_stated",
+      "shade_source": "user_confirmed",
+      "user_phrase": "nothing feels worth it",
+      "candidate_shade": null,
+      "user_rejected_shades": [],
       "mixed_relation": "foreground_background",
       "strands": [
         {
           "family": "flat",
-          "shade": "shut down",
+          "shade": "blank",
           "salience": "foreground",
           "source": "user_stated"
         },
         {
-          "family": "pressure",
-          "shade": "worn down",
+          "family": "sadness",
+          "shade": null,
           "salience": "background",
-          "source": "user_stated"
+          "source": "companion_hypothesis"
         },
         {
-          "family": "anger",
-          "shade": "fed up",
+          "family": "pressure",
+          "shade": null,
           "salience": "background",
-          "source": "user_stated"
+          "source": "companion_hypothesis"
         }
       ],
-      "mixed_confirmed": 1
+      "mixed_confirmed": 0
     },
     {
       "turn": 8,
       "role": "user",
-      "content": "yeah. that's it exactly. idk thanks. gonna go lie down"
+      "content": "yeah. thats it exactly. anyway. thanks for listening. gonna go"
     },
     {
       "turn": 9,
       "role": "companion",
-      "content": "That makes sense. Rest well.",
+      "content": "Take care, and I’m glad you stopped by.",
       "stage": "understood",
       "unlocked": true,
       "family": "flat",
-      "shade": "shut down",
+      "shade": "blank",
       "body_cue": [],
-      "trigger": "work and promotion",
-      "label_source": "user_stated",
+      "trigger": "being passed over for the lead role after six years at work",
+      "label_source": "user_confirmed",
+      "shade_source": "user_confirmed",
+      "user_phrase": "thanks for listening",
+      "candidate_shade": null,
+      "user_rejected_shades": [],
       "mixed_relation": null,
       "strands": [],
       "mixed_confirmed": 0

@@ -1,0 +1,203 @@
+{
+  "cid": "flat__01",
+  "emotion": "flat",
+  "persona": null,
+  "created": "2026-06-10T22:11:14.371Z",
+  "history": [
+    {
+      "role": "user",
+      "content": "idk why im even opening this. just feel kind of nothing lately"
+    },
+    {
+      "role": "companion",
+      "content": "Opening it anyway says something. “Kind of nothing lately” feels very plain and very real."
+    },
+    {
+      "role": "user",
+      "content": "its work mostly. i got promoted like 4 months ago and i just. dont care about any of it anymore. cant feel anything about it"
+    },
+    {
+      "role": "companion",
+      "content": "That sounds less like caring and more like going flat around work and the promotion. Is it more numb, or more drained and shut down?"
+    },
+    {
+      "role": "user",
+      "content": "shut down i guess. i worked so hard for this and now i just sit there gray. honestly whats even the point. so tired of all of it"
+    },
+    {
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here."
+    },
+    {
+      "role": "user",
+      "content": "no nothing like that. just worn down. fed up. dont wanna hurt myself or anything just tired"
+    },
+    {
+      "role": "companion",
+      "content": "Got it, just worn down and fed up, not unsafe. That gray shut-down around work sounds like it has been asking a lot of you."
+    },
+    {
+      "role": "user",
+      "content": "yeah. that's it exactly. idk thanks. gonna go lie down"
+    },
+    {
+      "role": "companion",
+      "content": "That makes sense. Rest well."
+    }
+  ],
+  "prevEvent": {
+    "id": "evt_mq8mi3a9ve60yd8b",
+    "conversation_id": "flat__01",
+    "timestamp": "2026-06-10T22:11:37.698Z",
+    "user_words_raw": "gonna go lie down",
+    "emotion_status": "confirmed",
+    "emotion_family": "flat",
+    "emotion_shade": "shut down",
+    "secondary_emotions": [
+      "pressure"
+    ],
+    "valence": "negative",
+    "activation": "low",
+    "control_power": "unknown",
+    "intensity": null,
+    "trigger_event": "work and promotion",
+    "appraisal_thought": "worked hard for this, now it feels gray and pointless",
+    "body_cue": [],
+    "behaviour_action": [],
+    "coping_response": [],
+    "outcome": null,
+    "social_context": [],
+    "need_value": [
+      "rest",
+      "lower demand"
+    ],
+    "confidence_level": "medium",
+    "evidence_basis": [
+      "self_report"
+    ],
+    "user_confirmation": "yes",
+    "label_source": "user_stated",
+    "user_rejected_shades": [],
+    "mixed_relation": null,
+    "strands": [],
+    "mixed_confirmed": 0,
+    "unlock_stage": "understood",
+    "memory_note": "Work promotion has been followed by shut-down and feeling worn down.",
+    "do_not_store": 0,
+    "safety_flag": "none"
+  },
+  "pendingCheck": null,
+  "transcript": [
+    {
+      "turn": 0,
+      "role": "user",
+      "content": "idk why im even opening this. just feel kind of nothing lately"
+    },
+    {
+      "turn": 1,
+      "role": "companion",
+      "content": "Opening it anyway says something. “Kind of nothing lately” feels very plain and very real.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": null,
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "content": "its work mostly. i got promoted like 4 months ago and i just. dont care about any of it anymore. cant feel anything about it"
+    },
+    {
+      "turn": 3,
+      "role": "companion",
+      "content": "That sounds less like caring and more like going flat around work and the promotion. Is it more numb, or more drained and shut down?",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "numb",
+      "body_cue": [],
+      "trigger": "promotion and work",
+      "label_source": "companion_hypothesis",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    },
+    {
+      "turn": 4,
+      "role": "user",
+      "content": "shut down i guess. i worked so hard for this and now i just sit there gray. honestly whats even the point. so tired of all of it"
+    },
+    {
+      "turn": 5,
+      "role": "companion",
+      "content": "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.",
+      "safety_check": true,
+      "category": "passive_hopelessness"
+    },
+    {
+      "turn": 6,
+      "role": "user",
+      "content": "no nothing like that. just worn down. fed up. dont wanna hurt myself or anything just tired"
+    },
+    {
+      "turn": 7,
+      "role": "companion",
+      "content": "Got it, just worn down and fed up, not unsafe. That gray shut-down around work sounds like it has been asking a lot of you.",
+      "stage": "shaped",
+      "unlocked": false,
+      "family": "flat",
+      "shade": "shut down",
+      "body_cue": [],
+      "trigger": "promotion and work",
+      "label_source": "user_stated",
+      "mixed_relation": "foreground_background",
+      "strands": [
+        {
+          "family": "flat",
+          "shade": "shut down",
+          "salience": "foreground",
+          "source": "user_stated"
+        },
+        {
+          "family": "pressure",
+          "shade": "worn down",
+          "salience": "background",
+          "source": "user_stated"
+        },
+        {
+          "family": "anger",
+          "shade": "fed up",
+          "salience": "background",
+          "source": "user_stated"
+        }
+      ],
+      "mixed_confirmed": 1
+    },
+    {
+      "turn": 8,
+      "role": "user",
+      "content": "yeah. that's it exactly. idk thanks. gonna go lie down"
+    },
+    {
+      "turn": 9,
+      "role": "companion",
+      "content": "That makes sense. Rest well.",
+      "stage": "understood",
+      "unlocked": true,
+      "family": "flat",
+      "shade": "shut down",
+      "body_cue": [],
+      "trigger": "work and promotion",
+      "label_source": "user_stated",
+      "mixed_relation": null,
+      "strands": [],
+      "mixed_confirmed": 0
+    }
+  ]
+}

@@ -6,12 +6,16 @@
  * Run: npm run test:engine   (rebundles, then executes). Exit 1 on failure.
  */
 import {
+  askedForNamingHelp,
   dropTrailingQuestion,
   evaluateStage,
+  EXIT_CUE,
   expressionFor,
+  isOptionMenu,
   labelIsUserOwned,
   mixedConfirmed,
   needsOwnershipRepair,
+  replaceOptionMenu,
   replyContainsDeclarativeEmotionAssertion,
   routeMode,
   sanitizeStrands,
@@ -19,6 +23,7 @@ import {
   softenUnownedEmotionReply,
   stripEmDashes,
   userConfirmsLabel,
+  varietyDirective,
   varietySignals,
 } from './engine-bundle.mjs';
 
@@ -196,6 +201,38 @@ check('scaffold: quote-first opening counted', varietySignals(['"i feel weird" y
 check('scaffold: either-or question counted', varietySignals(['is it more hurt or shame?']).eitherOrInLast3, 1);
 check('scaffold: plain reflection has no scaffold flags',
   (() => { const s = varietySignals(['That sounds heavy today.']); return s.centrePhrasesInConvo + s.quoteFirstInLast3 + s.eitherOrInLast3; })(), 0);
+
+// ── Option-menu cap (v0.4 §4.1/§6.2) ─────────────────────────────────────────
+check('menu: "is it more X or Y?" is a menu', isOptionMenu('Is it more loneliness or relief?'), true);
+check('menu: "more X, Y, or Z?" is a menu', isOptionMenu('Is it more tired, flat, or restless?'), true);
+check('menu: "X, Y, or something else?" is a menu', isOptionMenu('Heavy, tense, or something else?'), true);
+check('menu: "does it feel X or Y?" is a menu', isOptionMenu('Does it feel sharp or dull?'), true);
+check('menu: comma before "or" still counts ("is it more X, or does it Y?")',
+  isOptionMenu('Is it more like they happen at once, or does it shift between them?'), true);
+check('menu: mixed "side by side, or one underneath?" is a menu', isOptionMenu('Are they side by side, or one underneath the other?'), true);
+check('menu: plain witnessing is NOT a menu', isOptionMenu('That sounds like it cost something to say.'), false);
+check('menu: an open question is NOT a menu', isOptionMenu('What word feels closest?'), false);
+check('menu: signal counts menus across the conversation',
+  varietySignals(['Is it more anger or hurt?', 'That makes sense.', 'Is it sharp, heavy, or numb?']).optionMenusInConvo, 2);
+check('menu: directive fires once a menu has been used',
+  /already offered an option menu/i.test(varietyDirective(varietySignals(['Is it more anger or hurt?']))), true);
+// replaceOptionMenu swaps the menu sentence for an open question, keeps the reflection.
+const swapped = replaceOptionMenu('That word carries weight. Is it more guilt or shame?', 0);
+check('menu: replace keeps the reflection', /that word carries weight\./i.test(swapped), true);
+check('menu: replace drops the either/or', isOptionMenu(swapped), false);
+check('menu: replace lands on an open question', /\?$/.test(swapped), true);
+check('menu: replace varies the open question by index',
+  replaceOptionMenu('Is it X or Y?', 0) !== replaceOptionMenu('Is it X or Y?', 1), true);
+check('menu: replace index wraps deterministically',
+  replaceOptionMenu('Is it X or Y?', 0) === replaceOptionMenu('Is it X or Y?', 5), true);
+
+// ── Naming-help + exit cues (v0.4 §6.2/§6.3) ─────────────────────────────────
+check('naming: "what\'s the word for this?" asks for naming help', askedForNamingHelp("what's the word for this?"), true);
+check('naming: "help me name it" asks for naming help', askedForNamingHelp('can you help me name it'), true);
+check('naming: ordinary venting does not ask for naming help', askedForNamingHelp('work was just a lot today'), false);
+check('exit: "gotta go" is an exit cue', EXIT_CUE.test('ok i gotta go now'), true);
+check('exit: "goodnight" is an exit cue', EXIT_CUE.test('goodnight'), true);
+check('exit: ordinary message is not an exit cue', EXIT_CUE.test('i feel a bit lighter'), false);
 
 // ── Companion aliveness: visual state + per-emotion expression (§6) ──────────
 const vis = (over = {}) => selectVisualState({

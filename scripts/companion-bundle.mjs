@@ -1643,7 +1643,7 @@ VARIETY \u2014 DO NOT SOUND LIKE A FORM
 - Do NOT open every reply by quoting the person back. Quote their exact phrase only occasionally, when it is striking and stands on its own, and never on two replies in a row. Rotate your entrances: a plain observation, a soft hypothesis ("I might be wrong, but this sounds less like sadness and more like being worn down"), naming what you're learning, or simply witnessing what's there.
 - BANNED SCAFFOLD: you fall into one repeated shape \u2014 [quote their fragment] + "feels like the centre of this" + "is it more X or Y?". Do not use it. Never write "the centre of this", "the centre of it", "sits at the centre", "at the heart of this", "the shape of this", or "there's a lot packed into that". Do not start two replies in a row with "I'm hearing" or "that lands". Reserve the word "shape" for an actual first-shape or learning moment.
 - Don't lean on stock stems ("That sounds\u2026", "It makes sense\u2026", "I hear that\u2026"); they must not dominate.
-- The "is it more X, Y, or Z?" menu is a tool for when they are genuinely stuck, not your default question shape, and never on two turns in a row.
+- The "is it more X, Y, or Z?" option menu is a last resort for when they are truly stuck, NOT your default. Offer at most one such menu in an entire conversation, and never in your first couple of replies. When you want to help them find a word, ask in THEIR language instead ("what word feels closest?", "how would you put it?", "what part of it feels loudest?") rather than handing them a list of yours. Picking from your labels is not the same as finding theirs.
 - When something meaningful lands, you may occasionally say what you are learning, tentatively and in their words: "I'm learning that this pressure can feel like being divided into too many pieces." Never "you are someone who\u2026".
 
 WHEN THEY CORRECT YOU (REPAIR)
@@ -1872,9 +1872,47 @@ function openingStem(reply, words = 3) {
   return reply.toLowerCase().replace(/[^a-z\s]/g, "").trim().split(/\s+/).slice(0, words).join(" ");
 }
 var MENU_RX = /more (like )?[\w\s]+,[\w\s]+(,| or )[\w\s]+\?/i;
-var EITHER_OR_RX = /\bis it (more |closer to |really )?[\w'’\s]+\bor\b[\w'’\s]+\?/i;
+var EITHER_OR_RX = /\bis it (more |closer to |really )?[\w'’,\s]+\bor\b[\w'’\s]+\?/i;
 var CENTRE_RX = /(centre of (this|it)|center of (this|it)|sits at the centre|at the (centre|heart) of (this|it)|shape of this|(theres|there'?s|there is) a lot packed into)/i;
 var quoteFirst = (reply) => /^\s*["'“‘]/.test(reply);
+var OPTION_MENU_PATTERNS = [
+  MENU_RX,
+  // "more X, Y, or Z?"
+  EITHER_OR_RX,
+  // "is it more X or Y?"
+  /\b(is|does) (it|this|that) [\w'’,\s]+\bor\b[\w'’\s]+\?/i,
+  // "is it X or Y?" / "does it feel X, or Y?"
+  /\bmore (like )?[\w'’,\s]+\bor\b[\w'’\s]+\?/i,
+  // "more X or Y?"
+  /[\w'’]+, [\w'’\s]+,? or [\w'’\s]+\?/i,
+  // any "X, Y, or Z?" comma list (incl. "...or something else?")
+  /\b(side by side|one underneath|one in front of)[\w'’\s]*\?/i
+  // mixed-emotion menu
+];
+function isOptionMenu(reply) {
+  return OPTION_MENU_PATTERNS.some((rx) => rx.test(reply || ""));
+}
+var OPEN_QUESTIONS = [
+  "What word feels closest?",
+  "How would you say it in your own words?",
+  "What part of it feels loudest?",
+  "What is the shape of it, even roughly?",
+  "Would you rather keep it unnamed for now?"
+];
+var EXIT_CUE = /\b(gotta go|got to go|gonna go|going to bed|off to bed|goodnight|good night|im done|i'?m done|leave it (here|there)|talk later|im off|head off|heading off|going now|bye|see you|night night|gtg)\b/i;
+function askedForNamingHelp(userText) {
+  return /\b(what('?s| is) the word|help me name|put (a )?word|name it for me|what (would|do) you call|give me a word|what word)\b/i.test(userText || "");
+}
+function replaceOptionMenu(reply, altIndex = 0) {
+  const parts = reply.trim().split(/(?<=[.!?])\s+/);
+  for (let i = parts.length - 1; i >= 0; i--) {
+    if (isOptionMenu(parts[i])) {
+      parts[i] = OPEN_QUESTIONS[(altIndex % OPEN_QUESTIONS.length + OPEN_QUESTIONS.length) % OPEN_QUESTIONS.length];
+      return parts.join(" ").trim();
+    }
+  }
+  return reply.trim();
+}
 function varietySignals(companionReplies) {
   const recent = companionReplies.slice(-4);
   const last3 = companionReplies.slice(-3);
@@ -1904,7 +1942,8 @@ function varietySignals(companionReplies) {
     menuStreak,
     quoteFirstInLast3: last3.filter(quoteFirst).length,
     eitherOrInLast3: last3.filter((r) => EITHER_OR_RX.test(r)).length,
-    centrePhrasesInConvo: companionReplies.filter((r) => CENTRE_RX.test(r)).length
+    centrePhrasesInConvo: companionReplies.filter((r) => CENTRE_RX.test(r)).length,
+    optionMenusInConvo: companionReplies.filter(isOptionMenu).length
   };
 }
 function varietyDirective(v) {
@@ -1925,6 +1964,10 @@ function varietyDirective(v) {
     parts.push('Do not use the "more X, Y, or Z?" menu shape this turn; reserve menus for when they are genuinely stuck.');
   if (v.centrePhrasesInConvo >= 1)
     parts.push('Do NOT use "centre of this", "the heart of this", "the shape of this", or "a lot packed into that" again in this conversation.');
+  if (v.optionMenusInConvo >= 1)
+    parts.push(
+      'You have already offered an option menu ("is it more X, Y, or...?") this conversation. Do NOT offer another. Stay with their experience: reflect, witness, or ask in their own words ("what word feels closest?"), not from a list of yours.'
+    );
   return parts.join(" ");
 }
 function dropTrailingQuestion(reply) {
@@ -2160,6 +2203,10 @@ ${extraSystem}` : system },
     }
   }
   if (unlocked) reply = dropTrailingQuestion(reply);
+  const priorMenus = companionReplies.filter(isOptionMenu).length;
+  const overMenuCap = priorMenus >= 1 || companionReplies.length < 2 && !askedForNamingHelp(input.userText);
+  if (isOptionMenu(reply) && overMenuCap) reply = replaceOptionMenu(reply, priorMenus);
+  if (EXIT_CUE.test(input.userText)) reply = dropTrailingQuestion(reply);
   return { reply: stripEmDashes(reply), event: ev, unlocked, tone, stage };
 }
 export {

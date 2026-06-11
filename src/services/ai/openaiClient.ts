@@ -12,7 +12,17 @@ import { detectFamily, emptyEvent, type CompanionInput, type CompanionTurn } fro
 import { mixedConfirmed, sanitizeStrands } from '@/services/ai/mixedEmotion';
 import { routeMode } from '@/services/ai/modeRouter';
 import { buildSystemPrompt, COMPANION_OUTPUT_SCHEMA } from '@/services/ai/prompts';
-import { dropTrailingQuestion, isDuplicateReply, varietyDirective, varietySignals, type ResponseShape } from '@/services/ai/responsePolicy';
+import {
+  askedForNamingHelp,
+  dropTrailingQuestion,
+  EXIT_CUE,
+  isDuplicateReply,
+  isOptionMenu,
+  replaceOptionMenu,
+  varietyDirective,
+  varietySignals,
+  type ResponseShape,
+} from '@/services/ai/responsePolicy';
 import { needsOwnershipRepair, softenUnownedEmotionReply } from '@/services/ai/replyOwnership';
 import { evaluateStage, labelIsUserOwned, stageRank, userConfirmsLabel } from '@/services/ai/stage';
 import { EMOTION_MAPS } from '@/data/emotionMaps';
@@ -223,6 +233,19 @@ export async function openaiGenerateTurn(
 
   // Unlock-turn rest (§5.3): a first shape must land without a refining question.
   if (unlocked) reply = dropTrailingQuestion(reply);
+
+  // Option-menu cap (v0.4 §4.1/§6.2): the "is it more X, Y, or...?" menu had become
+  // the new crutch — it evades the scaffold suppressor and turns the companion into
+  // a label-picker. Allow at most ONE per conversation, and none in the opening two
+  // turns unless they explicitly ask for help naming it. Over the cap, swap the menu
+  // for an open question in THEIR language.
+  const priorMenus = companionReplies.filter(isOptionMenu).length;
+  const overMenuCap = priorMenus >= 1 || (companionReplies.length < 2 && !askedForNamingHelp(input.userText));
+  if (isOptionMenu(reply) && overMenuCap) reply = replaceOptionMenu(reply, priorMenus);
+
+  // Exit-cue rest (v0.4 §6.3): if they're signalling they're done, don't grab them
+  // with a probing question — let them leave on a settled note.
+  if (EXIT_CUE.test(input.userText)) reply = dropTrailingQuestion(reply);
 
   return { reply: stripEmDashes(reply), event: ev, unlocked, tone, stage };
 }

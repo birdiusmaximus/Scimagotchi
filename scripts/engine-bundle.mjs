@@ -86,9 +86,47 @@ function openingStem(reply, words = 3) {
   return reply.toLowerCase().replace(/[^a-z\s]/g, "").trim().split(/\s+/).slice(0, words).join(" ");
 }
 var MENU_RX = /more (like )?[\w\s]+,[\w\s]+(,| or )[\w\s]+\?/i;
-var EITHER_OR_RX = /\bis it (more |closer to |really )?[\w'’\s]+\bor\b[\w'’\s]+\?/i;
+var EITHER_OR_RX = /\bis it (more |closer to |really )?[\w'’,\s]+\bor\b[\w'’\s]+\?/i;
 var CENTRE_RX = /(centre of (this|it)|center of (this|it)|sits at the centre|at the (centre|heart) of (this|it)|shape of this|(theres|there'?s|there is) a lot packed into)/i;
 var quoteFirst = (reply) => /^\s*["'“‘]/.test(reply);
+var OPTION_MENU_PATTERNS = [
+  MENU_RX,
+  // "more X, Y, or Z?"
+  EITHER_OR_RX,
+  // "is it more X or Y?"
+  /\b(is|does) (it|this|that) [\w'’,\s]+\bor\b[\w'’\s]+\?/i,
+  // "is it X or Y?" / "does it feel X, or Y?"
+  /\bmore (like )?[\w'’,\s]+\bor\b[\w'’\s]+\?/i,
+  // "more X or Y?"
+  /[\w'’]+, [\w'’\s]+,? or [\w'’\s]+\?/i,
+  // any "X, Y, or Z?" comma list (incl. "...or something else?")
+  /\b(side by side|one underneath|one in front of)[\w'’\s]*\?/i
+  // mixed-emotion menu
+];
+function isOptionMenu(reply) {
+  return OPTION_MENU_PATTERNS.some((rx) => rx.test(reply || ""));
+}
+var OPEN_QUESTIONS = [
+  "What word feels closest?",
+  "How would you say it in your own words?",
+  "What part of it feels loudest?",
+  "What is the shape of it, even roughly?",
+  "Would you rather keep it unnamed for now?"
+];
+var EXIT_CUE = /\b(gotta go|got to go|gonna go|going to bed|off to bed|goodnight|good night|im done|i'?m done|leave it (here|there)|talk later|im off|head off|heading off|going now|bye|see you|night night|gtg)\b/i;
+function askedForNamingHelp(userText) {
+  return /\b(what('?s| is) the word|help me name|put (a )?word|name it for me|what (would|do) you call|give me a word|what word)\b/i.test(userText || "");
+}
+function replaceOptionMenu(reply, altIndex = 0) {
+  const parts = reply.trim().split(/(?<=[.!?])\s+/);
+  for (let i = parts.length - 1; i >= 0; i--) {
+    if (isOptionMenu(parts[i])) {
+      parts[i] = OPEN_QUESTIONS[(altIndex % OPEN_QUESTIONS.length + OPEN_QUESTIONS.length) % OPEN_QUESTIONS.length];
+      return parts.join(" ").trim();
+    }
+  }
+  return reply.trim();
+}
 function varietySignals(companionReplies) {
   const recent = companionReplies.slice(-4);
   const last3 = companionReplies.slice(-3);
@@ -118,7 +156,8 @@ function varietySignals(companionReplies) {
     menuStreak,
     quoteFirstInLast3: last3.filter(quoteFirst).length,
     eitherOrInLast3: last3.filter((r) => EITHER_OR_RX.test(r)).length,
-    centrePhrasesInConvo: companionReplies.filter((r) => CENTRE_RX.test(r)).length
+    centrePhrasesInConvo: companionReplies.filter((r) => CENTRE_RX.test(r)).length,
+    optionMenusInConvo: companionReplies.filter(isOptionMenu).length
   };
 }
 function varietyDirective(v) {
@@ -139,6 +178,10 @@ function varietyDirective(v) {
     parts.push('Do not use the "more X, Y, or Z?" menu shape this turn; reserve menus for when they are genuinely stuck.');
   if (v.centrePhrasesInConvo >= 1)
     parts.push('Do NOT use "centre of this", "the heart of this", "the shape of this", or "a lot packed into that" again in this conversation.');
+  if (v.optionMenusInConvo >= 1)
+    parts.push(
+      'You have already offered an option menu ("is it more X, Y, or...?") this conversation. Do NOT offer another. Stay with their experience: reflect, witness, or ask in their own words ("what word feels closest?"), not from a list of yours.'
+    );
   return parts.join(" ");
 }
 function dropTrailingQuestion(reply) {
@@ -1310,9 +1353,11 @@ function composeWeeklySummary(input) {
   };
 }
 export {
+  EXIT_CUE,
   PROGRESS_RANK,
   activeCards,
   advanceProgress,
+  askedForNamingHelp,
   composeWeeklySummary,
   draftFromRejection,
   draftFromTurn,
@@ -1321,12 +1366,14 @@ export {
   evaluateStage,
   expressionFor,
   isDuplicateReply,
+  isOptionMenu,
   labelIsUserOwned,
   memoryBlocked,
   migrateStage,
   mixedConfirmed,
   needsOwnershipRepair,
   relevantMemory,
+  replaceOptionMenu,
   replyContainsDeclarativeEmotionAssertion,
   routeMode,
   sanitizeStrands,

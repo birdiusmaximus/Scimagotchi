@@ -1,7 +1,16 @@
 /** Barrel for the deterministic engine pieces — esbuild entry for the test bundle. */
 export { mixedConfirmed, sanitizeStrands } from '@/services/ai/mixedEmotion';
 export { routeMode, type ConversationMode, type ModeDecision } from '@/services/ai/modeRouter';
-export { dropTrailingQuestion, isDuplicateReply, varietyDirective, varietySignals } from '@/services/ai/responsePolicy';
+export {
+  askedForNamingHelp,
+  dropTrailingQuestion,
+  EXIT_CUE,
+  isDuplicateReply,
+  isOptionMenu,
+  replaceOptionMenu,
+  varietyDirective,
+  varietySignals,
+} from '@/services/ai/responsePolicy';
 export {
   needsOwnershipRepair,
   replyContainsDeclarativeEmotionAssertion,

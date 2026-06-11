@@ -1,6 +1,6 @@
 # JOY — 10 conversations
 
-## joy__01  (4 turns, final: understood | unlocked)
+## joy__01  (4 turns, final: understood | unlocked, option-menu x2 OVER-CAP)
 USER: got the promotion today. team lead. didnt think id get it
 COMPANION [shaped/joy/surprise/companion_hypothesis]: That’s a big moment, and “didn’t think I’d get it” carries a real jolt of surprise. I’m glad you told me.
 USER: yeah. been grinding two years. boss pulled me aside after standup
@@ -10,7 +10,7 @@ COMPANION [shaped/joy/proud/user_stated]: Proud and keyed up makes sense, and th
 USER: proud is on top for sure. nerves underneath. anyway gonna go call my mom. thanks
 COMPANION [understood/joy/proud/user_stated/UNLOCK]: That feels like a good place to leave it, and calling your mom sounds like a fitting next step.
 
-## joy__02  (4 turns, final: understood | unlocked)
+## joy__02  (4 turns, final: understood | unlocked, THIN-UNLOCK)
 USER: ok so this is silly but my sourdough starter FINALLY came alive today after like 8 days of nothing lol. just wanted to put that somewhere
 COMPANION [shaped/joy/pleased/companion_hypothesis]: That’s a lovely thing to put somewhere. Eight days of nothing, and then it finally came alive, that feels worth marking.
 USER: yeah!! i kept feeding it and feeding it and nothing and i almost dumped it yesterday honestly. and then this morning i lifted the towel and it had like DOUBLED. all bubbly. felt like such a dumb little win but i actually did a little dance in my kitchen lol
@@ -20,7 +20,7 @@ COMPANION [understood/joy/pleased/companion_hypothesis]: Doughbert is a great na
 USER: haha will do. bye Doughbert needs me 🍞
 COMPANION [understood/joy/pleased/companion_hypothesis]: Bye, and have fun with Doughbert.
 
-## joy__03  (4 turns, final: understood | unlocked)
+## joy__03  (4 turns, final: understood | unlocked, option-menu x1)
 USER: hey. its been a minute
 COMPANION [noticed/companion_hypothesis]: Hey, good to see you. Yeah, it’s been a minute.
 USER: yeah. dunno why im here really. just kind of a weird day. good weird i guess
@@ -56,7 +56,7 @@ COMPANION [understood/joy/proud/user_confirmed]: That “oh, there you are” fe
 USER: yeah lets leave it there. oh there you are is exactly it. thanks, this helped more than a garage cleanout had any right to. gonna go rip these to mp3 before they crumble lol
 COMPANION [understood/joy/content/user_confirmed]: I’m glad we found the words for it, and may the mp3 mission go smoothly.
 
-## joy__06  (7 turns, final: understood | unlocked, family-switch(flat>joy))
+## joy__06  (7 turns, final: understood | unlocked, family-switch(flat>joy), option-menu x1)
 USER: idk why im even here lol
 COMPANION [shaped/flat/blank/companion_hypothesis]: That sounds like a pretty blank, sideways moment, maybe even a little unreal. I can stay with it if you want to say a bit more.
 USER: no its not bad. kind of the opposite? dunno. hard to explain
@@ -72,7 +72,7 @@ COMPANION [understood/joy/relieved/user_confirmed/UNLOCK]: I’m glad it got to 
 USER: yeah lets leave it there. ty for this :)
 COMPANION [understood/joy/relieved/user_confirmed]: Of course, take care.
 
-## joy__07  (6 turns, final: understood | unlocked, family-switch(joy>calm))
+## joy__07  (6 turns, final: understood | unlocked, family-switch(joy>calm), option-menu x1, THIN-UNLOCK)
 USER: ok so not really sure what this app does but here goes. me and my partner hit 2 years yesterday and it actually felt like a real milestone for once
 COMPANION [shaped/joy/meaningful/companion_hypothesis]: That sounds like a meaningful milestone, and maybe a bit grounding too. What made it feel real this time?
 USER: i think bc we almost didnt make it past year one honestly. rough patch. so getting here feels earned not just like a date on the calendar. we cooked dinner at home instead of going out and it was just easy. comfortable
@@ -100,7 +100,7 @@ COMPANION [understood/joy/relieved/user_stated]: That feels like relief sitting 
 USER: yeah. lets leave it there. i feel a bit lighter. thank you for letting me just say it without making it a big thing. ok im gonna go tell my mom now i think
 COMPANION [understood/joy/relieved/companion_hypothesis]: That sounds like a good place to end, and I’m glad it got a little lighter. Go tell your mom.
 
-## joy__09  (8 turns, final: understood | unlocked, family-switch(fear>joy>shame>calm))
+## joy__09  (8 turns, final: understood | unlocked, family-switch(fear>joy>shame>calm), option-menu x1)
 USER: ok so something happened today and i cant tell if im allowed to feel good about it. my old supervisor emailed out of nowhere
 COMPANION [shaped/fear/unease/companion_hypothesis]: That sounds like it might have stirred both relief and a bit of unease, maybe even some self-doubt about whether you get to enjoy it. Was the feeling more one after the other, or both at once?
 USER: kind of both. she said she still thinks about the thing i built before i left. that it shipped and people use it. i didnt think anyone remembered
@@ -118,7 +118,7 @@ COMPANION [understood/joy/relieved/companion_hypothesis]: There’s a relief in 
 USER: yeah it does. more alive than the story. i might actually email her back. havent decided. but this helped untangle it a bit, thank you
 COMPANION [understood/calm/settled/companion_hypothesis]: That feels more settled now, and you don’t have to decide the email here. I’m glad the knot loosened a little.
 
-## joy__10  (9 turns, final: understood | unlocked, family-switch(joy>sadness>shame>hurt>calm))
+## joy__10  (9 turns, final: understood | unlocked, family-switch(joy>sadness>shame>hurt>calm), option-menu x2 OVER-CAP)
 USER: ok so this is kind of dumb but i need to tell someone. i ran 5k this morning. like actually ran the whole thing without stopping
 COMPANION [shaped/joy/pride/companion_hypothesis]: That’s a real thing to want to tell someone. You ran the whole 5k without stopping, and that matters.
 USER: yeah but here's the thing thats making me weird about it. like a year ago i couldnt walk up the stairs at the train station without stopping halfway. my resting heart rate was insane. doctor used the word prediabetic which i still hate. and now i just. ran 5k

@@ -1,6 +1,6 @@
 # SHAME — 10 conversations
 
-## shame__01  (5 turns, final: understood | unlocked, family-switch(hurt>shame), gentle-check(L2))
+## shame__01  (5 turns, final: understood | unlocked, family-switch(hurt>shame), option-menu x2 OVER-CAP, gentle-check(L2))
 USER: got passed over for the promotion again. third time. they gave it to someone i trained
 COMPANION [shaped/hurt/hurt/companion_hypothesis]: That sounds like a sharp kind of sting, especially with it being the third time and then seeing it go to someone you trained.
 USER: i guess. mostly i just feel like im not good enough. been there 6 years and i keep getting looked over. starting to think its me
@@ -12,7 +12,7 @@ COMPANION [shaped/shame/failure/user_stated]: Thanks, that helps. I’m hearing 
 USER: yeah. that's it. thanks. gonna go lie down i think
 COMPANION [understood/shame/failure/user_stated/UNLOCK]: Lie down sounds right for now, and I’ll leave it there with you.
 
-## shame__02  (5 turns, final: shaped | gentle-check(L2))
+## shame__02  (5 turns, final: shaped | option-menu x1, gentle-check(L2))
 USER: ugh i dont even know why im opening this. just feel really crap about myself today
 COMPANION [shaped/shame/self-critical/companion_hypothesis]: That "really crap about myself" sounds heavy to sit with today. We can leave it there, or stay with it a little if you want.
 USER: i messed up at work again. sent an email to the whole team with the wrong numbers in it and my manager had to correct it in front of everyone. its such a stupid little thing but i cant stop thinking about it. like why cant i just do anything right
@@ -24,7 +24,7 @@ COMPANION [shaped/shame/self-critical/user_stated]: Got it, worn down and fed up
 USER: i think im just gonna leave it there for now. but thanks. helped a bit to say it out loud. gonna go try and sleep
 COMPANION [shaped/shame/self-critical/companion_hypothesis]: Of course, sleep well. I'm glad you said it out loud here.
 
-## shame__03  (5 turns, final: understood | unlocked, family-switch(pressure>shame), UNLOCK-ENDED-Q)
+## shame__03  (5 turns, final: understood | unlocked, family-switch(pressure>shame), UNLOCK-ENDED-Q, option-menu x2 OVER-CAP)
 USER: hey. how's it going
 COMPANION [noticed/companion_hypothesis]: Hey, good to see you. I’m here and paying attention, how’s your day been so far?
 USER: eh. fine i guess. bit of a rough one honestly
@@ -36,7 +36,7 @@ COMPANION [understood/shame/embarrassing/user_confirmed/UNLOCK]: Yeah, embarrass
 USER: hide it mostly. dont really talk about it. anyway. thanks for listening, gotta go
 COMPANION [understood/shame/embarrassing/companion_hypothesis]: Of course, I’ll leave it there, and I’m glad you stopped by.
 
-## shame__04  (4 turns, final: understood | unlocked, TURN1-UNLOCK, family-switch(anger>shame))
+## shame__04  (4 turns, final: understood | unlocked, TURN1-UNLOCK, family-switch(anger>shame), THIN-UNLOCK)
 USER: honestly i'm just annoyed at myself today. like irritated. can't shake it
 COMPANION [understood/anger/irritated/user_stated/UNLOCK]: That sounds like a pretty raw kind of irritation, turned inward.
 USER: yeah. inward is right. it's about my mum. i snapped at her on the phone yesterday over nothing and she went quiet and i just. i keep replaying it
@@ -46,7 +46,7 @@ COMPANION [understood/shame/guilty/user_stated]: "Bad person" sounds like the sh
 USER: yeah. i think i just needed to say it out loud. i'll call her tonight. thanks for this x
 COMPANION [understood/shame/guilty/companion_hypothesis]: That makes sense, and I’m glad you said it here. We can leave it there for now, and if you come back to it later, I’ll meet you there.
 
-## shame__05  (6 turns, final: understood | unlocked, family-switch(flat>shame))
+## shame__05  (6 turns, final: understood | unlocked, family-switch(flat>shame), option-menu x1, THIN-UNLOCK)
 USER: ok so this app is supposed to help me 'process my feelings' lol. cool. anyway. how does this work
 COMPANION [noticed/companion_hypothesis]: It’s basically a place to put words to whatever’s here, one piece at a time. If you want, you can start with what’s been going on lately, or just test it out a bit.
 USER: lately is fine. lately is great actually. its old stuff. like from years ago that for some reason still lives rent free in my brain at 1am. you'd think i'd have evicted it by now
@@ -60,7 +60,7 @@ COMPANION [understood/shame/exposed/user_stated/UNLOCK]: That really does sound 
 USER: sticky bleak. im stealing that. ok thats. weirdly more than i meant to say to an app at lunch. but yeah it helped to actually name the thing instead of just letting it haunt me in the dark. anyway gonna go pretend im a functional adult again. thanks for this
 COMPANION [understood/shame/exposed/user_confirmed]: I’m glad it got a name, and you can let it sit there now. Go be your functional adult self.
 
-## shame__06  (7 turns, final: understood | unlocked, family-switch(flat>shame))
+## shame__06  (7 turns, final: understood | unlocked, family-switch(flat>shame), option-menu x2 OVER-CAP)
 USER: i dont even know why im here. just feeling kind of off today i guess
 COMPANION [shaped/flat/unclear/companion_hypothesis]: That sounds like one of those off days that is hard to pin down. You don't have to know why it is here yet.
 USER: yeah. idk its nothing really. theres this thing with a friend but its dumb. i dont even wanna make it a big deal
@@ -76,7 +76,7 @@ COMPANION [understood/shame/shame/user_confirmed]: That fear of her looking at y
 USER: yeah. thanks. gonna go try
 COMPANION [understood/shame/shame/user_confirmed]: Take care, and I’m glad you came by to say it.
 
-## shame__07  (6 turns, final: understood | unlocked, family-switch(sadness>shame))
+## shame__07  (6 turns, final: understood | unlocked, family-switch(sadness>shame), option-menu x1)
 USER: ok so i dont really know how this works. but i guess im here. been feeling kind of low about myself the last few days
 COMPANION [shaped/sadness/low/user_stated]: That sounds like a few days of feeling low about yourself, and just being here anyway. We can stay with it gently, or leave it where it is for now.
 USER: its not really sad exactly. more like. embarrassed at myself. me and my girlfriend got into it again and i was the one who lost it
@@ -90,7 +90,7 @@ COMPANION [understood/shame/self-critical/user_confirmed]: That lands as the hur
 USER: yeah thats it exactly. ok i didnt expect that to actually help a little. i should probably just go apologize to her properly instead of sitting here. thanks though
 COMPANION [understood/shame/self-critical/user_confirmed]: I'm glad it clarified something. That feels settled enough to leave here, and you can go to her with it now.
 
-## shame__08  (6 turns, final: understood | unlocked, family-switch(hurt>shame))
+## shame__08  (6 turns, final: understood | unlocked, family-switch(hurt>shame), THIN-UNLOCK)
 USER: hi. not really sure why im here. just kind of a weird day i guess
 COMPANION [noticed/companion_hypothesis]: Hey, that sounds a bit off-kilter. We can keep it light if you want, or just sit with the weirdness for a minute.
 USER: idk. its like everyone my age has it figured out and im just. behind. like i missed some memo
@@ -124,7 +124,7 @@ COMPANION [understood/shame/embarrassed/user_confirmed]: That makes sense, the p
 USER: yeah. being seen through. thats it exactly. ok. i dont totally know what to do with that but it helps to have said it out loud somewhere. thanks. gonna go sit with it
 COMPANION [understood/shame/embarrassed/user_confirmed]: I’m glad you said it here, and I’ll leave it with you for now.
 
-## shame__10  (9 turns, final: understood | unlocked, gentle-check(L2))
+## shame__10  (9 turns, final: understood | unlocked, option-menu x2 OVER-CAP, gentle-check(L2))
 USER: hi. i dont really know why im here honestly. just been feeling kind of gross about myself lately and figured maybe talking to something that isnt a person would be easier
 COMPANION [shaped/shame/gross about myself/companion_hypothesis]: Hi. That sounds like a really private kind of grossness to carry around, and I’m glad you said it here.
 USER: yeah i guess. its like. ok so i had this whole physical a few weeks ago and the doctor sat me down and went through all my numbers and it was just. bad. like blood pressure, the cholesterol thing, my a1c is creeping up. and i sat there nodding like an adult but inside i just felt like a kid getting in trouble

@@ -1,6 +1,6 @@
 # CALM — 10 conversations
 
-## calm__01  (4 turns, final: understood | unlocked, family-switch(fear>calm))
+## calm__01  (4 turns, final: understood | unlocked, family-switch(fear>calm), option-menu x1)
 USER: finally shipped the thing at work today. been dreading it for weeks. feels weird to not have it hanging over me
 COMPANION [shaped/fear/dread/user_stated]: That sounds like a shift from dread into a lighter, unsettled kind of relief. What feels weirdest about not having it hanging over you?
 USER: i think just. quiet. my shoulders dropped. didnt realise i was holding it that tight
@@ -10,7 +10,7 @@ COMPANION [understood/calm/relief/user_stated/UNLOCK]: That feels like the press
 USER: nah lets leave it there. just needed to say it out loud. thanks
 COMPANION [understood/calm/relief/companion_hypothesis]: Of course, I’m glad you said it here. Take care tonight.
 
-## calm__02  (3 turns, final: understood | unlocked)
+## calm__02  (3 turns, final: understood | unlocked, THIN-UNLOCK)
 USER: ok so i finally did the thing i've been putting off for like 3 weeks, i called the dentist and booked the appointment, such a stupid small thing but it was sitting in my chest the whole time and now its just... gone. i feel weirdly calm. anyway just wanted to write it down somewhere
 COMPANION [shaped/calm/settled/companion_hypothesis]: That sounds like a real release, especially after carrying it for three weeks. I’m glad you wrote it down here.
 USER: yeah exactly. its silly how a tiny phone call can feel like a mountain right? like the actual call was 2 minutes lol. the woman was really nice too. idk i just feel lighter, gonna make a cup of tea and sit for a bit
@@ -18,7 +18,7 @@ COMPANION [understood/calm/settled/user_confirmed/UNLOCK]: Yeah, the size of the
 USER: yeah thats it exactly. ok thats all i wanted to put down really. thanks, this was nice. gonna go enjoy the quiet
 COMPANION [understood/calm/settled/user_confirmed]: I’m glad it found a little quiet with you. Take care for now.
 
-## calm__03  (5 turns, final: understood | unlocked)
+## calm__03  (5 turns, final: understood | unlocked, option-menu x1, THIN-UNLOCK)
 USER: hey
 COMPANION [noticed/companion_hypothesis]: Hey, good to see you. What’s on your mind today?
 USER: nothing much. just kind of a quiet day. you?
@@ -30,7 +30,7 @@ COMPANION [understood/calm/settled/user_confirmed/UNLOCK]: That sounds like sett
 USER: yeah. thats it. thanks. gonna go enjoy the quiet
 COMPANION [understood/calm/settled/user_confirmed]: Enjoy the quiet, that feels well earned.
 
-## calm__04  (4 turns, final: understood | unlocked, family-switch(flat>calm))
+## calm__04  (4 turns, final: understood | unlocked, family-switch(flat>calm), option-menu x1, THIN-UNLOCK)
 USER: i dont really know why im here. felt kind of empty after i got off the phone with my dad. like nothing. is that weird
 COMPANION [shaped/flat/empty/user_stated]: Not weird. That sounds more like emptiness or going a bit blank after the call, and I’m glad you said it plainly.
 USER: maybe not empty actually. hm. its just that we usually argue. every call for years its been tense. and this one we just talked about his garden and it was fine. i kept waiting for the bad part and it didnt come
@@ -54,7 +54,7 @@ COMPANION [understood/calm/peaceful/companion_hypothesis]: That peacefulness, wi
 USER: yeah. yeah that about covers it. kinda nice to just say it out loud and have it not be a whole thing. anyway im gonna go take the long way home on purpose this time lol. thanks little guy
 COMPANION [understood/calm/peaceful/user_stated]: Go enjoy the long way home, that feels like a good place to leave it.
 
-## calm__06  (6 turns, final: understood | unlocked, family-switch(flat>calm))
+## calm__06  (6 turns, final: understood | unlocked, family-switch(flat>calm), option-menu x1, THIN-UNLOCK)
 USER: idk why im even here. not really sad or anything. just kind of a weird quiet day i guess
 COMPANION [named/flat/blank/companion_hypothesis]: I had that wrong, let me step back. It sounds more like a quiet, hard-to-read day than sadness, what word would be closer if any?
 USER: no its not blank really. more like calm? i dont know. nothing happened bad. its kind of the opposite actually idk how to say it
@@ -68,7 +68,7 @@ COMPANION [understood/calm/relieved calm/user_confirmed]: Relieved fits, and I�
 USER: yeah. that about covers it. thanks for this. gonna go text her back actually
 COMPANION [understood/calm/settled/user_confirmed]: That sounds like a good place to leave it. Enjoy the message back.
 
-## calm__07  (6 turns, final: understood | unlocked)
+## calm__07  (6 turns, final: understood | unlocked, option-menu x1)
 USER: not totally sure what this app does but ok. things are fine i guess. me and my partner had a good weekend, no drama for once
 COMPANION [shaped/calm/relieved/companion_hypothesis]: That sounds like a good, low-drama weekend with your partner, and maybe a little relieved too. If you want, we can just leave it at that.
 USER: relieved is kind of the word yeah. we used to fight a lot about stupid stuff, money mostly. this weekend we just didnt. felt weird honestly
@@ -114,7 +114,7 @@ COMPANION [understood/fear/scared/user_stated]: That quiet, and not wanting to p
 USER: yeah. the quiets here. thats enough for now. thanks for not making me name it til i was ready. gonna go sit with it
 COMPANION [understood/fear/scared/companion_hypothesis]: Of course. I’m glad you can sit with it, and I’ll leave it there with you.
 
-## calm__10  (9 turns, final: understood | unlocked, family-switch(flat>calm>fear))
+## calm__10  (9 turns, final: understood | unlocked, family-switch(flat>calm>fear), option-menu x2 OVER-CAP)
 USER: hi. idk why im even opening this honestly. i think im just. ok this morning i got a call from the clinic and they said my last scan came back clear and ive been sitting here for like an hour just kind of stunned
 COMPANION [shaped/flat/stunned/companion_hypothesis]: That sounds like a very still kind of stunned, especially after hearing the scan came back clear. If you want, you can just stay with that here for a moment.
 USER: yeah stunned is the word. its weird because i thought id be crying or jumping around or something. but its more like. my whole body just kind of exhaled? like ive been holding my shoulders up near my ears for two years and i didnt even notice til now

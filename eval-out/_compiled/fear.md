@@ -1,6 +1,6 @@
 # FEAR — 10 conversations
 
-## fear__01  (5 turns, final: understood | unlocked, family-switch(fear>pressure), gentle-check(L2))
+## fear__01  (5 turns, final: understood | unlocked, family-switch(fear>pressure), option-menu x2 OVER-CAP, THIN-UNLOCK, gentle-check(L2))
 USER: i think i'm going to get laid off. there's a list and i'm pretty sure i'm on it
 COMPANION [shaped/fear/worry/companion_hypothesis]: That sounds like a very sharp kind of uncertainty, with a list making it feel real. I'm here with you in that.
 USER: i keep refreshing my email waiting for the meeting invite. cant sleep. cant eat. just sitting here waiting to get the axe
@@ -12,7 +12,7 @@ COMPANION [shaped/pressure/worn down/companion_hypothesis]: Got it, just worn do
 USER: yeah. thats it exactly. anyway. thanks. gonna try to sleep
 COMPANION [understood/pressure/worn down/user_confirmed/UNLOCK]: That sounds like the moment has said enough for tonight. Sleep if you can, and we can leave it here.
 
-## fear__02  (4 turns, final: understood | unlocked, family-switch(fear>pressure), gentle-check(L2))
+## fear__02  (4 turns, final: understood | unlocked, family-switch(fear>pressure), option-menu x1, gentle-check(L2))
 USER: ok so i just need to put this somewhere. theres a work thing tomorrow morning, a presentation, and i cant stop thinking about it. like my chest is tight all night
 COMPANION [shaped/fear/uneasy/companion_hypothesis]: That sounds like it’s sitting in your body pretty hard tonight, and maybe the presentation is keeping it hooked there. Where in your chest do you notice it most, if you can tell?
 USER: right in the middle, like a weight. honestly its not even just the presentation. its everything lately. i keep messing up little things at work and i feel like everyone can tell im barely holding it together. idk im just so tired of all of it
@@ -22,7 +22,7 @@ COMPANION [shaped/pressure/worn down/companion_hypothesis]: Got it, just worn do
 USER: yeah. tired is the word. ok i think i just needed to say it somewhere. gonna try to sleep. thanks
 COMPANION [understood/pressure/worn down/user_confirmed/UNLOCK]: That makes sense. I’ll leave it there with you, and I hope sleep comes a little easier tonight.
 
-## fear__03  (5 turns, final: understood | unlocked, family-switch(flat>pressure>fear))
+## fear__03  (5 turns, final: understood | unlocked, family-switch(flat>pressure>fear), option-menu x1)
 USER: hey. you there?
 COMPANION [noticed/companion_hypothesis]: Hey, I’m here. What’s going on today?
 USER: not much. just kind of a weird day i guess. you?
@@ -34,7 +34,7 @@ COMPANION [understood/fear/fear/user_stated/UNLOCK]: That dropping feeling in yo
 USER: yeah lets leave it there. helped to say it out loud i guess. thanks
 COMPANION [understood/fear/fear/user_confirmed]: I’m glad it helped to say out loud, and we can leave it here.
 
-## fear__04  (4 turns, final: understood | unlocked, family-switch(sadness>fear>calm))
+## fear__04  (4 turns, final: understood | unlocked, family-switch(sadness>fear>calm), THIN-UNLOCK)
 USER: honestly i'm just tired i think. been a weird week with my dad and stuff
 COMPANION [shaped/sadness/worn-down/companion_hypothesis]: That sounds worn-down, especially with a weird week around your dad and everything else hanging off it.
 USER: maybe not sad exactly. he's got a memory thing going on. keeps repeating himself and forgot my sister's birthday which he never does. theres an appointment thursday and i can't stop thinking about it
@@ -44,7 +44,7 @@ COMPANION [understood/fear/uneasy/user_stated/UNLOCK]: Thursday feels loaded wit
 USER: yeah lets let it rest there. just saying it out loud helped a bit. thanks
 COMPANION [understood/calm/settled/companion_hypothesis]: I'm glad saying it out loud helped a bit. We can leave it there for now.
 
-## fear__05  (6 turns, final: understood | unlocked, family-switch(flat>shame>fear>calm))
+## fear__05  (6 turns, final: understood | unlocked, family-switch(flat>shame>fear>calm), option-menu x1)
 USER: ok so this is gonna sound stupid but i cant stop thinking about something from like years ago lol
 COMPANION [shaped/flat/companion_hypothesis]: Not stupid at all. Something from years ago is still asking for your attention, I’m here.
 USER: its dumb. theres this email i never sent back in uni. or like, i did send it and i think i totally tanked a friendship. and now my brain decided 2am was the perfect time to replay it on loop. cool cool cool
@@ -72,7 +72,7 @@ COMPANION [understood/fear/scared/user_stated]: That sounds like the meaning is 
 USER: yeah lets leave it. i think i just needed to say it out loud even if its just to my phone lol. still scared but a little less alone with it. thanks. gonna go
 COMPANION [understood/fear/scared/user_stated]: Of course, I’m glad you said it out loud. Take care, and I’ll leave it there with you.
 
-## fear__07  (7 turns, final: understood | unlocked)
+## fear__07  (7 turns, final: understood | unlocked, option-menu x1)
 USER: ok so does this actually do anything or is it just one of those apps that says how does that make you feel on a loop
 COMPANION [noticed/companion_hypothesis]: Fair question, and no loop for the sake of a loop. I’m here to actually follow what you say, not bounce you back to the same prompt.
 USER: ok fine. its about my girlfriend. shes been on her phone a lot more lately and getting kind of distant and i keep thinking shes about to end it
@@ -88,7 +88,7 @@ COMPANION [understood/fear/dread/user_confirmed]: That helps me understand it mo
 USER: lets leave it here. thanks, im gonna go text her
 COMPANION [understood/fear/dread/companion_hypothesis]: Of course, take it from here.
 
-## fear__08  (6 turns, final: understood | unlocked, family-switch(fear>calm))
+## fear__08  (6 turns, final: understood | unlocked, family-switch(fear>calm), option-menu x1)
 USER: hi. i dont really know why im here. just kind of a weird day i guess
 COMPANION [noticed/companion_hypothesis]: Hey, glad you came by. A “weird day” is enough to start with, and we can just stay with that for a bit.
 USER: yeah idk. ive just had this knot in my stomach all week. cant really shake it. probably nothing
@@ -102,7 +102,7 @@ COMPANION [understood/fear/uneasy/user_confirmed]: That makes sense, saying it o
 USER: yeah lets leave it sitting. that helped a little actually. thank you. gonna try to get some sleep
 COMPANION [understood/calm/settled/companion_hypothesis]: Of course. I’ll leave it right there with you, and I hope sleep is gentle.
 
-## fear__09  (9 turns, final: understood | unlocked, family-switch(hurt>shame>fear>calm))
+## fear__09  (9 turns, final: understood | unlocked, family-switch(hurt>shame>fear>calm), option-menu x1)
 USER: got passed over for the senior role today. third time. they gave it to someone i trained
 COMPANION [shaped/hurt/hurt/companion_hypothesis]: That hurts to read, especially the third time and then seeing it go to someone you trained.
 USER: its not really the role. its what it means. like maybe i was never as good as i thought
@@ -122,7 +122,7 @@ COMPANION [understood/fear/scared/user_stated]: There’s a longing there for wo
 USER: not tonight. but this helped. didnt have words for it til now. thanks. gonna try to sleep
 COMPANION [understood/calm/settled/companion_hypothesis]: I’m glad it has words now, and we can leave it there for tonight. I hope sleep comes gently.
 
-## fear__10  (8 turns, final: understood | unlocked, family-switch(pressure>fear>shame>calm))
+## fear__10  (8 turns, final: understood | unlocked, family-switch(pressure>fear>shame>calm), option-menu x2 OVER-CAP, THIN-UNLOCK)
 USER: hi. i dont really know why im here, today was just a lot. my hands are kind of shaking
 COMPANION [shaped/pressure/overwhelmed/companion_hypothesis]: Hey, I’m here with you. That sounds like a lot to carry, and the shaking makes it feel very immediate, could you tell me whether it feels more like tension, restlessness, or something else?
 USER: its not really pressure i think. more like... scared. theres this thing on my neck, like a lump, and ive been able to feel it for a couple weeks now and i keep telling myself its nothing but i cant stop touching it

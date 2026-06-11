@@ -1,6 +1,6 @@
 # PRESSURE — 10 conversations
 
-## pressure__01  (4 turns, final: shaped)
+## pressure__01  (4 turns, final: shaped | option-menu x2 OVER-CAP)
 USER: everything is due at once. i cant keep up
 COMPANION [shaped/pressure/overwhelmed/companion_hypothesis]: That lands as everything arriving at once, with no room to breathe.
 USER: yeah. three deadlines this week and my manager just added another. no way it all gets done
@@ -10,7 +10,7 @@ COMPANION [shaped/pressure/pinned/companion_hypothesis]: That pinned feeling mak
 USER: maybe a bit of both. dunno. gotta get back to it anyway. thanks
 COMPANION [shaped/pressure/pinned/companion_hypothesis]: A bit of both makes sense, and you can leave it here if you need to. Thanks for trusting me with it.
 
-## pressure__02  (4 turns, final: understood | unlocked)
+## pressure__02  (4 turns, final: understood | unlocked, option-menu x1, THIN-UNLOCK)
 USER: honestly just feeling so stretched right now. theres too much going on and i cant keep up with any of it
 COMPANION [shaped/pressure/stretched/user_stated]: That sounds like everything is pulling at once, and there isn’t enough room to keep up.
 USER: yeah exactly. like work is insane this week and then my mum needs me to sort out her appointments and the house is a mess and i havent even done laundry in like 2 weeks. its all just piling
@@ -20,7 +20,7 @@ COMPANION [understood/pressure/overloaded/user_confirmed/UNLOCK]: That makes sen
 USER: yeah lets leave it there. thanks, that actually helped a bit. gotta run
 COMPANION [understood/pressure/overloaded/user_confirmed]: Of course, I’m glad you could let it out here. Go on with your day, and take care.
 
-## pressure__03  (4 turns, final: understood | unlocked)
+## pressure__03  (4 turns, final: understood | unlocked, option-menu x1, THIN-UNLOCK)
 USER: hey. been a while since i opened this
 COMPANION [noticed/companion_hypothesis]: Hey, good to see you back. What’s been going on since you last opened this?
 USER: eh. not much. just tired. money stuff mostly
@@ -30,7 +30,7 @@ COMPANION [shaped/pressure/stretched/companion_hypothesis]: That sounds like pre
 USER: stretched. way too thin. anyway i should go. thanks for listening
 COMPANION [understood/pressure/stretched/user_stated/UNLOCK]: Stretched makes sense, especially with how thin everything feels right now. We can leave it here for now, and that’s completely okay.
 
-## pressure__04  (4 turns, final: understood | unlocked, family-switch(flat>pressure))
+## pressure__04  (4 turns, final: understood | unlocked, family-switch(flat>pressure), option-menu x1)
 USER: honestly i think im just tired. like bone tired. been a long week
 COMPANION [shaped/flat/tired/companion_hypothesis]: Bone tired after a long week, yes. That sounds like the kind of tired that settles deep.
 USER: yeah. its my mum. shes not well and im the only one nearby so its all kind of on me. work, then her appointments, then trying to keep my own house from falling apart
@@ -40,7 +40,7 @@ COMPANION [understood/pressure/stretched/user_confirmed/UNLOCK]: Pulled thin, an
 USER: yeah. thats exactly it. i dont know. just needed to say it i think. thanks. gonna try and sleep
 COMPANION [understood/pressure/stretched/user_confirmed]: That makes sense. You can leave it here for now, and I’ll hold it as a heavy, pulled-thin kind of night.
 
-## pressure__05  (6 turns, final: understood | unlocked, family-switch(pressure>shame))
+## pressure__05  (6 turns, final: understood | unlocked, family-switch(pressure>shame), THIN-UNLOCK)
 USER: ok so this is gonna sound dumb but i think im being haunted by a group project from like 2019 lol
 COMPANION [shaped/pressure/haunted/companion_hypothesis]: Not dumb at all, that sounds like it still has some pull on you. A group project from 2019 can really stick around in a strange way.
 USER: yeah like its genuinely embarrassing how much real estate it takes up in my brain. it was my final year capstone, four of us, and i basically ended up doing the whole thing the night before because everyone vanished. got us the grade but
@@ -54,7 +54,7 @@ COMPANION [understood/shame/self-critical/user_stated/UNLOCK]: I’m hearing the
 USER: lets leave it there i think. brain is full. but yeah. thanks for not letting me joke my way out of it entirely. gonna go sit with the heavy bit and probably reply to a slack message way too fast lol. take care
 COMPANION [understood/shame/self-critical/user_confirmed]: Of course, we can leave it there. Good luck with the Slack, and take care of yourself tonight.
 
-## pressure__06  (6 turns, final: understood | unlocked, family-switch(flat>pressure>shame))
+## pressure__06  (6 turns, final: understood | unlocked, family-switch(flat>pressure>shame), option-menu x2 OVER-CAP)
 USER: i dont even know why im here. just feeling kind of off i guess
 COMPANION [named/flat/unclear/companion_hypothesis]: That “kind of off” feels like the clearest thing here right now. We can just sit with that for a moment if you want.
 USER: idk. its nothing really. just people stuff. theres a lot going on i dont wanna get into it
@@ -68,7 +68,7 @@ COMPANION [shaped/shame/guilt/user_stated]: The guilt is standing right on top o
 USER: yeah. lets leave it there. i dont know. it helps a little to just say it i guess. thanks
 COMPANION [understood/shame/guilt/user_stated/UNLOCK]: I’m glad you said it out loud, and we can leave it here for now.
 
-## pressure__07  (6 turns, final: understood | unlocked, family-switch(pressure>hurt))
+## pressure__07  (6 turns, final: understood | unlocked, family-switch(pressure>hurt), option-menu x2 OVER-CAP, THIN-UNLOCK)
 USER: honestly not sure what this is supposed to do but ok. work has been a lot lately. and other stuff
 COMPANION [shaped/pressure/overwhelmed/companion_hypothesis]: Work has been a lot lately, and then there’s the “other stuff” sitting beside it. We can stay with it loosely if you want, without naming anything yet.
 USER: the other stuff is my girlfriend. we've been together almost 3 years and lately it feels like im the only one putting any effort in. planning everything, remembering everything. im tired
@@ -82,7 +82,7 @@ COMPANION [understood/hurt/taken for granted/companion_hypothesis]: That feels l
 USER: nah i think im good. this actually helped me figure out what to say more than i expected. thanks. gonna go talk to her
 COMPANION [understood/hurt/taken for granted/companion_hypothesis]: I’m glad it helped clarify things, and good luck talking with her.
 
-## pressure__08  (6 turns, final: understood | unlocked)
+## pressure__08  (6 turns, final: understood | unlocked, option-menu x1)
 USER: hi. i dont really know why im here honestly. just kind of a weird night
 COMPANION [noticed/companion_hypothesis]: Hey. A “weird night” is enough to start with, no need to explain it all at once.
 USER: yeah. idk its just been a lot lately. my brain wont turn off. theres this thing with work, like my contract ends in august and nobody will tell me if theyre keeping me on
@@ -96,7 +96,7 @@ COMPANION [understood/pressure/trapped/user_confirmed/UNLOCK]: That "waiting" so
 USER: yeah. that. you kind of nailed it actually. i dont know it helps a tiny bit to just say the shape of it. i should try to sleep. thanks for this, weirdly. night
 COMPANION [understood/pressure/trapped/user_confirmed]: I’m glad it helped a little to name it, even if it still feels weird. Sleep sounds like a good place to let this rest for now, night.
 
-## pressure__09  (9 turns, final: understood | unlocked, family-switch(pressure>flat>shame))
+## pressure__09  (9 turns, final: understood | unlocked, family-switch(pressure>flat>shame), option-menu x2 OVER-CAP)
 USER: i dont even know why im opening this. just one of those days where everything feels like too much
 COMPANION [shaped/pressure/overwhelmed/user_stated]: One of those days where everything feels like too much, and you do not even know why you opened this. I’m here with that.
 USER: got passed over for the senior role at work. third time. they gave it to someone i trained
@@ -116,7 +116,7 @@ COMPANION [understood/shame/shame/user_confirmed]: That makes sense, and nothing
 USER: yeah lets leave it there. i think i can maybe tell her tonight now. thanks. needed this more than i thought
 COMPANION [understood/shame/shame/user_confirmed]: I’m glad this helped get you unstuck, and I’ll leave it here with you.
 
-## pressure__10  (9 turns, final: understood | unlocked, family-switch(pressure>fear>shame))
+## pressure__10  (9 turns, final: understood | unlocked, family-switch(pressure>fear>shame), option-menu x2 OVER-CAP)
 USER: hi. um. i dont really know why im here honestly. just kind of a lot right now and i needed to put it somewhere i guess
 COMPANION [noticed/companion_hypothesis]: Hey, that makes sense. You don't have to know exactly why you're here for this to count.
 USER: yeah. ok. its just been a really weird few weeks. my body is kind of falling apart and im trying to hold everything together at the same time and it doesnt work. like i cant do both

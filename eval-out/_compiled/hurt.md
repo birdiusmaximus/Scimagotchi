@@ -1,6 +1,6 @@
 # HURT — 10 conversations
 
-## hurt__01  (5 turns, final: understood | unlocked, gentle-check(L2))
+## hurt__01  (5 turns, final: understood | unlocked, option-menu x1, gentle-check(L2))
 USER: got passed over for the lead role today. they gave it to someone i trained
 COMPANION [shaped/hurt/hurt/companion_hypothesis]: That stings in a very particular way, especially because you trained the person who got it. It sounds like something sharp and unfair landed there.
 USER: yeah. and my manager didnt even tell me herself. found out from a group email. 4 years i gave them
@@ -12,7 +12,7 @@ COMPANION [shaped/hurt/hurt/companion_hypothesis]: Got it, just worn down and fe
 USER: yeah. cold is the word. anyway thanks. gonna go lie down
 COMPANION [understood/hurt/hurt/user_confirmed/UNLOCK]: Take care of yourself, and I’m glad you came by.
 
-## hurt__02  (4 turns, final: understood | unlocked, gentle-check(L2))
+## hurt__02  (4 turns, final: understood | unlocked, option-menu x1, gentle-check(L2))
 USER: just need to put this somewhere. my sister forgot my birthday again. like completely. not even a text
 COMPANION [shaped/hurt/left out/companion_hypothesis]: That “not even a text” lands hard, especially when it was your sister and it happened again. If you want, you can say a little more, or we can just leave it here for now.
 USER: i dont even know why i bother anymore. she remembered our cousins party last week posted everything. and me nothing. its always like this i feel like i dont matter to anyone honestly. im just so tired of all of it
@@ -22,7 +22,7 @@ COMPANION [shaped/hurt/left out/companion_hypothesis]: Thanks for clearing that 
 USER: yeah. thanks for listening i guess. needed to get it out. gonna go now
 COMPANION [understood/hurt/left out/user_stated/UNLOCK]: Of course. I’m glad you got it out, and you can leave it there.
 
-## hurt__03  (5 turns, final: understood | unlocked, family-switch(flat>hurt))
+## hurt__03  (5 turns, final: understood | unlocked, family-switch(flat>hurt), option-menu x1, THIN-UNLOCK)
 USER: hey. how's it going
 COMPANION [noticed/companion_hypothesis]: Hey, good to see you. I’m here and ready to chat, what’s been up with you?
 USER: eh. not much. been a weird couple days i guess
@@ -44,7 +44,7 @@ COMPANION [understood/hurt/overlooked/user_stated/UNLOCK]: Overlooked seems righ
 USER: yeah that was the worst part. anyway. thanks for letting me get that out
 COMPANION [understood/hurt/overlooked/user_stated]: Yeah, that was the worst part. We can leave it there, and I’m glad you said it out loud.
 
-## hurt__05  (7 turns, final: understood | unlocked)
+## hurt__05  (7 turns, final: understood | unlocked, option-menu x1)
 USER: ok so i found my old college group chat screenshots today while cleaning out my laptop. fun times. anyway how are you, do orbs have feelings lol
 COMPANION [noticed/companion_hypothesis]: Haha, I’m here and listening. Finding old college group chat screenshots while cleaning can be its own little time capsule.
 USER: time capsule yeah. mostly funny. theres this one guy in it, marcus, was basically my best friend back then. we had this whole bit going. anyway hes the reason i closed the laptop after like 2 min so. great cleaning session 10/10
@@ -60,7 +60,7 @@ COMPANION [understood/hurt/unseen/user_stated]: That makes sense, the rejection 
 USER: nah lets leave it there i think. ill probably never get the answer and i can live with that. mostly. gonna go close that laptop for real this time. thanks for sitting with the dumb screenshot thing, genuinely
 COMPANION [understood/hurt/unseen/user_confirmed]: Of course, and I’m glad you could set it down for now. Sleep well when you get there.
 
-## hurt__06  (6 turns, final: understood | unlocked, family-switch(flat>hurt))
+## hurt__06  (6 turns, final: understood | unlocked, family-switch(flat>hurt), option-menu x1)
 USER: i dont really know why im here. just kind of a weird day i guess
 COMPANION [shaped/flat/unclear/companion_hypothesis]: A weird day can leave things feeling a bit unmoored, even when you can't quite pin down why. We can just stay with that if you want.
 USER: idk its not really nothing. theres this thing with a friend but i dont even know if its a big deal. probably not
@@ -74,7 +74,7 @@ COMPANION [understood/hurt/hurt/user_stated]: There’s hurt there, and also a k
 USER: makes me feel small. like im not even worth a text. idk. i think i just needed to say it out loud to something. gonna try to sleep. thanks
 COMPANION [understood/hurt/hurt/user_stated]: That “not even worth a text” lands very small and very alone. I can leave it here with you, and I’m glad you said it out loud.
 
-## hurt__07  (6 turns, final: understood | unlocked, family-switch(hurt>fear))
+## hurt__07  (6 turns, final: understood | unlocked, family-switch(hurt>fear), option-menu x1)
 USER: not really sure what this is supposed to do but ok. found out my girlfriend has been texting her ex for like 2 months and didnt tell me
 COMPANION [shaped/hurt/companion_hypothesis]: I had that wrong, let me step back. That sounds like a lot to take in at once, and I won’t put a label on it yet, what word feels closest?
 USER: i mean betrayed i guess. like she swore there was nothing going on with him when they broke up but now im looking at 2 months of messages
@@ -104,7 +104,7 @@ COMPANION [understood/shame/foolish/companion_hypothesis]: That foolish part fee
 USER: yeah. lets leave it there. thanks for listening. means something
 COMPANION [understood/shame/foolish/user_stated]: Of course, and I'm glad this space could hold it for a moment. Take care of yourself tonight.
 
-## hurt__09  (9 turns, final: understood | unlocked, family-switch(hurt>shame))
+## hurt__09  (9 turns, final: understood | unlocked, family-switch(hurt>shame), option-menu x1)
 USER: didnt get the thing at work. they gave it to someone else
 COMPANION [shaped/hurt/left out/companion_hypothesis]: That sounds like a sharp miss, especially when it was something you were aiming for.
 USER: its not even the role. its that my manager looked me in the eye last month and said i was next in line
@@ -124,7 +124,7 @@ COMPANION [understood/shame/exposed/user_confirmed]: That lands as the moment be
 USER: not today. i cant go there right now. but it helped to say it out loud. thanks
 COMPANION [understood/shame/exposed/user_confirmed]: Of course, we can leave it here. I’m glad saying it out loud gave it a little more room.
 
-## hurt__10  (9 turns, final: understood | unlocked, family-switch(sadness>hurt))
+## hurt__10  (9 turns, final: understood | unlocked, family-switch(sadness>hurt), option-menu x1)
 USER: hi. i dont really know why im here. just had a rough appointment today and i guess i needed somewhere to put it
 COMPANION [shaped/sadness/disappointment/companion_hypothesis]: Hey, that rough appointment sounds like it left something heavy sitting with you. You can put it here if you want, or just let it be for now.
 USER: heavy yeah. its my rheumatologist. ive been seeing her for almost three years now for my RA and ive trusted her with everything. and today she basically told me she doesnt think the pain im describing is real. like she actually said maybe its more anxiety than the disease

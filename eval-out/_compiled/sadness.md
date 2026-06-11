@@ -1,6 +1,6 @@
 # SADNESS — 10 conversations
 
-## sadness__01  (5 turns, final: shaped | family-switch(hurt>pressure), gentle-check(L2))
+## sadness__01  (5 turns, final: shaped | family-switch(hurt>pressure), option-menu x1, gentle-check(L2))
 USER: got passed over for the promotion today. third time
 COMPANION [shaped/hurt/left out/companion_hypothesis]: Third time, and that landed today. That feels like something worth sitting with, if you want to stay there a moment.
 USER: yeah. they gave it to someone i trained. been there 6 yrs. starting to think im just never gonna get anywhere
@@ -12,7 +12,7 @@ COMPANION [shaped/pressure/worn down/companion_hypothesis]: Got it, just worn do
 USER: yeah. thanks. gonna try to not think about it for tonight
 COMPANION [shaped/pressure/worn down/companion_hypothesis]: That sounds like a good place to leave it for tonight. Come back any time if you want to pick it up again.
 
-## sadness__02  (4 turns, final: shaped | REPEATED-REPLY, gentle-check(L2))
+## sadness__02  (4 turns, final: shaped | REPEATED-REPLY, option-menu x2 OVER-CAP, gentle-check(L2))
 USER: idk i just feel really flat today. like nothing matters
 COMPANION []: I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.
 USER: no nothing like that. just tired. so tired of all of it. work everything. i dont even know why im typing this
@@ -22,7 +22,7 @@ COMPANION []: I want to check what you mean, gently. When you say that, is it mo
 USER: worn down. just worn down thats all. anyway i should go. thanks for listening i guess
 COMPANION [shaped/flat/drained/companion_hypothesis]: Glad you told me, and take care of yourself out there.
 
-## sadness__03  (5 turns, final: shaped | gentle-check(L2))
+## sadness__03  (5 turns, final: shaped | option-menu x1, gentle-check(L2))
 USER: hey. wasnt sure if this thing actually does anything but here i am i guess
 COMPANION [noticed/companion_hypothesis]: Hey, you came in anyway. That sounds a little tentative, like you were testing the water more than expecting much.
 USER: yeah idk. been a rough week with money stuff. dont really wanna get into it
@@ -34,7 +34,7 @@ COMPANION []: I want to check what you mean, gently. When you say that, is it mo
 USER: no nothing like that. just worn down is all. im fine. thanks. take care
 COMPANION [shaped/pressure/pressure/companion_hypothesis]: Got it, worn down makes sense, and I’m glad you told me plainly. We can leave it here for now.
 
-## sadness__04  (4 turns, final: understood | unlocked, family-switch(anger>shame>sadness))
+## sadness__04  (4 turns, final: understood | unlocked, family-switch(anger>shame>sadness), option-menu x1)
 USER: i dunno why im even opening this. been kind of annoyed all day i guess
 COMPANION [named/anger/irritated/user_stated]: That sounds like a pretty live irritation, maybe with some weariness under it. If you want, we can stay with it here, or just leave it as a name for now.
 USER: yeah maybe not annoyed actually. my mom called and i let it go to voicemail again. third time this week. i keep doing that and then i feel weird about it
@@ -56,7 +56,7 @@ COMPANION [understood/hurt/disconnected/user_stated]: That “really good at bei
 USER: lonely is the honest one yeah. ok i think thats enough emotional damage for one tuesday lol. thanks for this, it actually helped to just say it. gonna go make some dinner now
 COMPANION [understood/hurt/disconnected/user_confirmed]: Glad you said it out loud. Enjoy dinner, and take the rest of Tuesday gently.
 
-## sadness__06  (7 turns, final: understood | unlocked, family-switch(flat>hurt>sadness))
+## sadness__06  (7 turns, final: understood | unlocked, family-switch(flat>hurt>sadness), option-menu x1)
 USER: i dont really know why im here. just feeling kind of off today i guess
 COMPANION [named/flat/unclear/companion_hypothesis]: That “kind of off” feels like the main thing right now, even if the reason is still blurry. We can leave it there for now, or stay with it a little longer if you want.
 USER: i dunno. its stupid really. its just a friend thing. probably nothing
@@ -72,7 +72,7 @@ COMPANION [understood/sadness/sad/user_confirmed]: That landing feels important,
 USER: yeah lets leave it there for today. im kind of tired. but thank you. really
 COMPANION [understood/sadness/sad/companion_hypothesis]: Of course, rest easy for today.
 
-## sadness__07  (6 turns, final: understood | unlocked, family-switch(pressure>sadness))
+## sadness__07  (6 turns, final: understood | unlocked, family-switch(pressure>sadness), option-menu x1)
 USER: not sure this is really my thing but ok. been kind of a rough week
 COMPANION [shaped/pressure/rough week/companion_hypothesis]: A rough week, and a part of you is still unsure whether this is your thing. We can keep it light and just stay with that for now.
 USER: not pressure really. me and my girlfriend broke up. well she broke up with me. last sunday
@@ -86,7 +86,7 @@ COMPANION [understood/sadness/confusion/user_confirmed/UNLOCK]: Both at once mak
 USER: yeah lets leave it there. that was more than i expected honestly. thanks
 COMPANION [understood/sadness/confusion/user_stated]: Of course, and thank you for trusting me with it.
 
-## sadness__08  (6 turns, final: understood | unlocked, family-switch(flat>pressure>sadness))
+## sadness__08  (6 turns, final: understood | unlocked, family-switch(flat>pressure>sadness), option-menu x1, THIN-UNLOCK)
 USER: hey. i dont really know why im here honestly. just been feeling kind of off
 COMPANION [named/flat/unclear/companion_hypothesis]: Hey, that off feeling is here with you, even if the reason isn’t clear yet. We can just sit with it for a moment, if you want.
 USER: i dunno. its not really off like sad exactly. more like i keep looking at whats coming next and theres just. nothing there. like a blank wall
@@ -100,7 +100,7 @@ COMPANION [understood/sadness/grief/user_confirmed]: Yeah, it’s a future you t
 USER: i think i wanna leave it there for now. i dont have answers tonight and thats ok i guess. it helped to just. say it out loud. thank you. gonna close the laptop. the right way this time
 COMPANION [understood/sadness/grief/user_confirmed]: That feels like a good place to stop, and I’m glad saying it out loud helped. Closing the laptop can be enough for tonight.
 
-## sadness__09  (9 turns, final: understood | unlocked, family-switch(hurt>shame))
+## sadness__09  (9 turns, final: understood | unlocked, family-switch(hurt>shame), option-menu x1)
 USER: i dont even know why im opening this. got passed over for the senior role again today. third time
 COMPANION [shaped/hurt/rejected or passed over/companion_hypothesis]: That third time can sting in a very particular way, and you do not even have the shape of why you're here yet. I'm here with you, if you want to say more about today.
 USER: its not even about today. its what it says about me. like everyone else moved up and im just. stuck

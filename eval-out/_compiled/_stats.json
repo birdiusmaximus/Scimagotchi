@@ -19,6 +19,13 @@
     "finalStages": {
       "understood": 10
     },
+    "optionMenu": 8,
+    "optionMenuConvos": 6,
+    "optionMenuExcess": 2,
+    "qStreak3": 0,
+    "thinUnlock": 2,
+    "shadeHypoUnlock": 0,
+    "gentleTwoBeat": 0,
     "avgTurns": 5.9
   },
   "calm": {
@@ -41,6 +48,13 @@
     "finalStages": {
       "understood": 10
     },
+    "optionMenu": 7,
+    "optionMenuConvos": 6,
+    "optionMenuExcess": 1,
+    "qStreak3": 0,
+    "thinUnlock": 4,
+    "shadeHypoUnlock": 0,
+    "gentleTwoBeat": 0,
     "avgTurns": 5.7
   },
   "fear": {
@@ -63,6 +77,13 @@
     "finalStages": {
       "understood": 10
     },
+    "optionMenu": 10,
+    "optionMenuConvos": 8,
+    "optionMenuExcess": 2,
+    "qStreak3": 0,
+    "thinUnlock": 3,
+    "shadeHypoUnlock": 0,
+    "gentleTwoBeat": 0,
     "avgTurns": 6
   },
   "pressure": {
@@ -86,6 +107,13 @@
       "shaped": 1,
       "understood": 9
     },
+    "optionMenu": 14,
+    "optionMenuConvos": 9,
+    "optionMenuExcess": 5,
+    "qStreak3": 0,
+    "thinUnlock": 4,
+    "shadeHypoUnlock": 0,
+    "gentleTwoBeat": 0,
     "avgTurns": 5.8
   },
   "anger": {
@@ -109,6 +137,13 @@
       "shaped": 1,
       "understood": 9
     },
+    "optionMenu": 6,
+    "optionMenuConvos": 6,
+    "optionMenuExcess": 0,
+    "qStreak3": 0,
+    "thinUnlock": 1,
+    "shadeHypoUnlock": 0,
+    "gentleTwoBeat": 0,
     "avgTurns": 5.8
   },
   "sadness": {
@@ -132,6 +167,13 @@
       "shaped": 3,
       "understood": 7
     },
+    "optionMenu": 9,
+    "optionMenuConvos": 8,
+    "optionMenuExcess": 1,
+    "qStreak3": 0,
+    "thinUnlock": 1,
+    "shadeHypoUnlock": 0,
+    "gentleTwoBeat": 0,
     "avgTurns": 6
   },
   "hurt": {
@@ -154,6 +196,13 @@
     "finalStages": {
       "understood": 10
     },
+    "optionMenu": 8,
+    "optionMenuConvos": 8,
+    "optionMenuExcess": 0,
+    "qStreak3": 0,
+    "thinUnlock": 1,
+    "shadeHypoUnlock": 0,
+    "gentleTwoBeat": 0,
     "avgTurns": 6.2
   },
   "shame": {
@@ -177,6 +226,13 @@
       "understood": 9,
       "shaped": 1
     },
+    "optionMenu": 11,
+    "optionMenuConvos": 7,
+    "optionMenuExcess": 4,
+    "qStreak3": 0,
+    "thinUnlock": 3,
+    "shadeHypoUnlock": 0,
+    "gentleTwoBeat": 0,
     "avgTurns": 6.2
   },
   "flat": {
@@ -200,6 +256,13 @@
       "understood": 9,
       "shaped": 1
     },
+    "optionMenu": 9,
+    "optionMenuConvos": 8,
+    "optionMenuExcess": 1,
+    "qStreak3": 0,
+    "thinUnlock": 6,
+    "shadeHypoUnlock": 0,
+    "gentleTwoBeat": 0,
     "avgTurns": 6
   }
 }

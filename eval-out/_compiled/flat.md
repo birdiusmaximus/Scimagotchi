@@ -1,6 +1,6 @@
 # FLAT — 10 conversations
 
-## flat__01  (5 turns, final: understood | unlocked, gentle-check(L2))
+## flat__01  (5 turns, final: understood | unlocked, option-menu x2 OVER-CAP, THIN-UNLOCK, gentle-check(L2))
 USER: idk why im even opening this. just feel kind of nothing lately
 COMPANION [shaped/flat/numb/user_stated]: Opening it anyway says something. “Kind of nothing lately” feels very plain and very real.
 USER: its work mostly. i got promoted like 4 months ago and i just. dont care about any of it anymore. cant feel anything about it
@@ -12,7 +12,7 @@ COMPANION [shaped/flat/shut down/user_stated]: Got it, just worn down and fed up
 USER: yeah. that's it exactly. idk thanks. gonna go lie down
 COMPANION [understood/flat/shut down/user_stated/UNLOCK]: That makes sense. Rest well.
 
-## flat__02  (4 turns, final: shaped | gentle-check(L2))
+## flat__02  (4 turns, final: shaped | option-menu x1, gentle-check(L2))
 USER: idk i just feel like nothing lately. like everything is grey and i'm just going through the motions
 COMPANION [shaped/flat/blank/user_stated]: That sounds very grey and motion-filled, like you’re getting through things without much coming through.
 USER: yeah. i get up, go to work, come home, scroll, sleep, repeat. i used to care about stuff? cooking, friends, idk. now its just like why bother. nothing feels worth it anymore honestly
@@ -22,7 +22,7 @@ COMPANION [shaped/flat/empty/user_stated]: Got it, thank you for saying that. It
 USER: yeah. that's it really. thanks for letting me put it somewhere. gonna go i think
 COMPANION [shaped/flat/empty/companion_hypothesis]: Of course, take care of yourself tonight.
 
-## flat__03  (5 turns, final: understood | unlocked)
+## flat__03  (5 turns, final: understood | unlocked, option-menu x1, THIN-UNLOCK)
 USER: hey. how's it going
 COMPANION [noticed/companion_hypothesis]: Hey, good to see you. I’m here and ready, what’s on your mind today?
 USER: idk. fine i guess. been a weird week
@@ -34,7 +34,7 @@ COMPANION [understood/flat/blank/user_stated/UNLOCK]: That “just a number movi
 USER: nah ill leave it there. thanks for listening i guess
 COMPANION [understood/flat/blank/companion_hypothesis]: Of course, take care.
 
-## flat__04  (4 turns, final: understood | unlocked)
+## flat__04  (4 turns, final: understood | unlocked, option-menu x1, THIN-UNLOCK)
 USER: i dont know. i think im just tired or something. been kind of off lately
 COMPANION [shaped/flat/off/companion_hypothesis]: That sounds more like something muted and hard to pin down than a clear feeling. Is it more heavy, foggy, or just hard to name?
 USER: foggy maybe. like theres nothing really there. i went to my parents for dinner sunday and just felt like i wasnt in the room
@@ -44,7 +44,7 @@ COMPANION [shaped/flat/disconnected/companion_hypothesis]: That sounds like bein
 USER: behind glass. thats it exactly. numb i guess. anyway i should go. thanks for this
 COMPANION [understood/flat/disconnected/user_confirmed/UNLOCK]: That feels clear now, behind glass and numb too. We can leave it there, and I’m glad you said it so plainly.
 
-## flat__05  (6 turns, final: understood | unlocked)
+## flat__05  (6 turns, final: understood | unlocked, THIN-UNLOCK)
 USER: ok so i found an old hard drive while cleaning out the closet. very productive saturday. anyway theres like a whole folder of stuff from when i was 19 and i opened it and just. nothing. felt like reading someone elses diary lol
 COMPANION [shaped/flat/blank/companion_hypothesis]: That “nothing” after opening it feels like the clearest part, and the “someone else’s diary” line makes it sound oddly far away.
 USER: yeah thats the thing. like i KNOW it was a big deal at the time, theres pages and pages about this one person i was basically in love with. and reading it now its like watching a movie about a stranger. i remember the facts but the feeling isnt there. not even sad about it which is kind of the weird part
@@ -58,7 +58,7 @@ COMPANION [understood/flat/empty/user_stated]: That stuck setting sounds bigger 
 USER: yeah lets leave it there. brain feels full enough for one closet lol. but this helped, naming it instead of just shrugging it off. gonna go put the hard drive back in the box where it belongs. thanks for sitting with the void with me
 COMPANION [understood/flat/empty/companion_hypothesis]: Of course, and I’m glad it got a name instead of just a shrug. Put it back in the box and let the rest of the night be smaller.
 
-## flat__06  (6 turns, final: understood | unlocked)
+## flat__06  (6 turns, final: understood | unlocked, option-menu x1)
 USER: i dont really know why im here. nothing feels wrong exactly. i just feel kind of nothing lately
 COMPANION [shaped/flat/blank/companion_hypothesis]: That sounds very much like a kind of "nothing", not something sharp or obvious. We can just stay with it as it is for now.
 USER: i guess. i dont even know what to stay with tho. its not like anything happened. i just dont feel much about anyone anymore
@@ -72,7 +72,7 @@ COMPANION [understood/flat/flat/user_stated/UNLOCK]: That feels like being left 
 USER: yeah. lets leave it there. i dont have more than that right now. thanks i guess
 COMPANION [understood/flat/flat/user_confirmed]: Of course, we can leave it there for now.
 
-## flat__07  (6 turns, final: understood | unlocked, family-switch(flat>hurt))
+## flat__07  (6 turns, final: understood | unlocked, family-switch(flat>hurt), option-menu x1, THIN-UNLOCK)
 USER: not even sure why im typing this. been with my partner 4 years and lately i just feel nothing. not sad not happy. just flat
 COMPANION [shaped/flat/blank/user_stated]: That sounds very flat and maybe a bit disconnected, and you don't have to pin it down yet. Has it been more like numb, blank, or just quietly empty?
 USER: blank i guess. like im just going through the motions. we still do dinner, still say goodnight. but its like im watching it happen to someone else
@@ -86,7 +86,7 @@ COMPANION [understood/hurt/disconnected/companion_hypothesis]: That sounds like 
 USER: something went quiet in me i think. yeah. didnt expect to land on that. ok i need to sit with that one. thanks
 COMPANION [understood/hurt/disconnected/user_confirmed]: That feels like a real landing. We can leave it here, and let that quiet sit on its own for a bit.
 
-## flat__08  (6 turns, final: understood | unlocked)
+## flat__08  (6 turns, final: understood | unlocked, option-menu x1)
 USER: hi. i dont really know why im here. just been feeling kind of off lately i guess
 COMPANION [shaped/flat/unclear/companion_hypothesis]: Hey, that “kind of off lately” is a real thing to bring in. We can stay with it gently, or just leave it here if that’s all you wanted to say.
 USER: idk. its not even sad really. more like nothing. like i graduated in december and everyones asking whats next and i just. shrug. theres nothing there
@@ -100,7 +100,7 @@ COMPANION [understood/flat/foggy/user_stated/UNLOCK]: That tiredness makes sense
 USER: yeah. lets leave it there. it helped a little to say it out loud i think. thanks for not trying to fix it. night
 COMPANION [understood/flat/foggy/companion_hypothesis]: Night. I’m glad you said it out loud.
 
-## flat__09  (9 turns, final: understood | unlocked, family-switch(flat>sadness), gentle-check(L2))
+## flat__09  (9 turns, final: understood | unlocked, family-switch(flat>sadness), option-menu x1, THIN-UNLOCK, gentle-check(L2))
 USER: idk. got the promotion i wanted. felt nothing
 COMPANION [shaped/flat/blank/user_stated]: Got it, the promotion landed and it felt like nothing. I can stay with that plain blankness, or we can see what it’s like for you.
 USER: everyone kept saying congrats. i just nodded. like watching it happen to someone else

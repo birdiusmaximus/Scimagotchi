@@ -1,6 +1,6 @@
 # ANGER — 10 conversations
 
-## anger__01  (4 turns, final: shaped | family-switch(hurt>pressure))
+## anger__01  (4 turns, final: shaped | family-switch(hurt>pressure), option-menu x1)
 USER: got passed over for the lead role again. third time. they gave it to someone i trained
 COMPANION [shaped/hurt/left out/companion_hypothesis]: That feels especially sharp, being passed over again and seeing it go to someone you trained.
 USER: honestly its less hurt more just done. i bust my ass and they hand it to a guy who cant even run the reports without me
@@ -10,7 +10,7 @@ COMPANION [shaped/pressure/tense/companion_hypothesis]: Your jaw going tight and
 USER: yeah maybe. anyway. dont feel like getting into it more. thanks
 COMPANION [shaped/pressure/tense/companion_hypothesis]: Of course. We can leave it there, and I’m glad you told me.
 
-## anger__02  (4 turns, final: understood | unlocked)
+## anger__02  (4 turns, final: understood | unlocked, option-menu x1)
 USER: ugh i just need to put this somewhere. my roommate left their dishes in the sink AGAIN. like a full sink. for the third day
 COMPANION [shaped/anger/irritation/companion_hypothesis]: A full sink for the third day would get under my skin too. That repetition feels like it really hit a nerve.
 USER: yeah and i already asked nicely last week. like i left a note even. and they just. ignored it? idk it feels small but it builds up when youre the only one who cares about the place
@@ -20,7 +20,7 @@ COMPANION [understood/anger/resentment/user_confirmed/UNLOCK]: Yes, resentment f
 USER: yeah. ok that actually helps to just say it out loud. thanks. gonna go deal with the sink lol
 COMPANION [understood/anger/resentment/user_confirmed]: I’m glad it got a little clearer. Hope the sink is brief.
 
-## anger__03  (5 turns, final: understood | unlocked)
+## anger__03  (5 turns, final: understood | unlocked, option-menu x1, THIN-UNLOCK)
 USER: hey. you there?
 COMPANION [noticed/companion_hypothesis]: Hey, I’m here. What’s been going on today?
 USER: eh. not much. just kind of annoyed if im honest
@@ -32,7 +32,7 @@ COMPANION [shaped/anger/resigned/companion_hypothesis]: That sounds less like th
 USER: yeah. lets leave it. thanks
 COMPANION [understood/anger/resigned/user_stated/UNLOCK]: Of course, we can leave it there. Thanks for telling me.
 
-## anger__04  (4 turns, final: understood | unlocked, family-switch(pressure>anger))
+## anger__04  (4 turns, final: understood | unlocked, family-switch(pressure>anger), option-menu x1)
 USER: feeling kind of off today. just tired i guess. my sister keeps doing this thing where she volunteers me for stuff without asking
 COMPANION [shaped/pressure/worn down/companion_hypothesis]: That sounds like a tired, off kind of day, and the bit with your sister keeps putting you in things without asking. If you want, we can just stay with that for a moment.
 USER: yeah maybe. this weekend she told our whole family id host thanksgiving at my place. didnt even text me first. just announced it
@@ -70,7 +70,7 @@ COMPANION [understood/anger/frustrated/user_confirmed/UNLOCK]: That sounds like 
 USER: yeah. i think thats it. im just tired. dunno what to even do about her. anyway thanks i guess. gonna go
 COMPANION [understood/sadness/tired/user_stated]: Take care, and thanks for trusting me with it.
 
-## anger__07  (6 turns, final: understood | unlocked, family-switch(sadness>anger))
+## anger__07  (6 turns, final: understood | unlocked, family-switch(sadness>anger), option-menu x1)
 USER: honestly not sure what this app even does but ok. had kind of a rough one
 COMPANION [named/sadness/rough/companion_hypothesis]: That sounds like you’ve had a rough one, and you’re not even sure what to make of the app yet. We can keep it simple, if you want.
 USER: not really sad. more like annoyed. my girlfriend bailed on dinner again. third time this month
@@ -84,7 +84,7 @@ COMPANION [understood/anger/taken for granted/user_confirmed]: “Taken for gran
 USER: nah lets leave it there. probably need to actually just talk to her not an app. but this was less dumb than i thought. thanks
 COMPANION [understood/anger/taken for granted/companion_hypothesis]: That makes sense, and I’m glad it was useful in its own way. Take care of yourself.
 
-## anger__08  (6 turns, final: understood | unlocked, family-switch(pressure>anger))
+## anger__08  (6 turns, final: understood | unlocked, family-switch(pressure>anger), option-menu x1)
 USER: i dont even know why im opening this. just one of those days where everything feels like its up in the air and i cant do anything about it
 COMPANION [shaped/pressure/overwhelmed/companion_hypothesis]: That “up in the air” feeling sounds very present today, like nothing will settle enough to grab hold of. You don’t have to name it yet.
 USER: its not really overwhelmed. more like im just. mad? like i did everything right and it still might not matter. my whole contract thing is up in march and nobody will tell me anything

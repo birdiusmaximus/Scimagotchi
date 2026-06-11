@@ -134,7 +134,7 @@ export default function ChatScreen() {
 
   return (
     <View style={styles.root}>
-      <GradientBackground />
+      <GradientBackground families={tintFamilies} />
       <SafeAreaView style={styles.safe}>
         <View style={styles.header}>
           <IconButton name="chevron-left" onPress={goBack} />

@@ -29,7 +29,7 @@ import type { CompanionVisualState } from '@/services/ai/companionVisualState';
 import { expressionFor } from '@/services/ai/orbExpression';
 import { gradients } from '@/theme/tokens';
 import type { EmotionFamilyId } from '@/types/models';
-import { withAlpha } from '@/utils/color';
+import { shade, withAlpha } from '@/utils/color';
 
 // Production easing curves (from the remotion best-practices skill): a crisp
 // ease-out for settling into a pose, a balanced ease-in-out for calm loops.
@@ -107,6 +107,24 @@ const EmotionTintLayer = memo(function EmotionTintLayer({ color }: { color: stri
       colors={[withAlpha(color, 0.7), withAlpha(color, 0.9), withAlpha(color, 0.99)]}
       start={ORB_GRADIENT_START}
       end={ORB_GRADIENT_END}
+      style={StyleSheet.absoluteFill}
+    />
+  );
+});
+
+/**
+ * The SECOND strand of a mixed feeling, bloomed from the lower-right rather than
+ * washed flat over the whole orb — so two feelings read as two hues meeting, not a
+ * muddy grey blend. Renders nothing when there is no second family.
+ */
+const SecondTintLayer = memo(function SecondTintLayer({ color }: { color: string }) {
+  if (!color || color === 'transparent') return null;
+  return (
+    <LinearGradient
+      colors={['transparent', 'transparent', withAlpha(color, 0.92)]}
+      locations={[0, 0.46, 1]}
+      start={{ x: 0.12, y: 0.1 }}
+      end={{ x: 0.94, y: 0.96 }}
       style={StyleSheet.absoluteFill}
     />
   );
@@ -408,8 +426,17 @@ export function CompanionOrb({
   // blue, etc. — matching the per-emotion colours on the Patterns screen. The primary
   // hue is a full gradient layer (its own alpha carries the strength); a mixed feeling
   // washes a second hue over it. Both halve while the feeling is still uncertain.
+  // Default to the orb's own violet when no family, so the tint layer always has a
+  // valid colour to render and fade in/out (its opacity is gated by tint.value).
+  const tintColor = primaryFamily ? FAMILY_COLORS[primaryFamily] : '#6E5BF2';
+  const secondColor = secondFamily ? FAMILY_COLORS[secondFamily] : 'transparent';
   const tintStyle = useAnimatedStyle(() => ({ opacity: tint.value * tintFactor.value }));
-  const secondTintStyle = useAnimatedStyle(() => ({ opacity: secondTint.value * 0.4 * tintFactor.value }));
+  const secondTintStyle = useAnimatedStyle(() => ({ opacity: secondTint.value * 0.7 * tintFactor.value }));
+  // The glow/shadow behind the orb takes a deeper shade of the emotion hue and
+  // fades in with it, so the cast light matches the feeling's colour. The string is
+  // stable per colour (no per-frame reprocessing); only its opacity animates.
+  const emotionGlowStyle = useAnimatedStyle(() => ({ opacity: tint.value * tintFactor.value }));
+  const emotionGlowShadow = `0px 8px 30px 4px ${shade(tintColor, 0.1, 0.55)}, 0px 0px 52px 16px ${shade(tintColor, 0.02, 0.4)}`;
 
   const eyeStyle = useAnimatedStyle(() => {
     const closed = 0.07;
@@ -431,11 +458,6 @@ export function CompanionOrb({
       { rotate: '-16deg' },
     ],
   }));
-
-  // Default to the orb's own violet when no family, so the tint layer always has a
-  // valid colour to render and fade in/out (its opacity is gated by tint.value).
-  const tintColor = primaryFamily ? FAMILY_COLORS[primaryFamily] : '#6E5BF2';
-  const secondColor = secondFamily ? FAMILY_COLORS[secondFamily] : 'transparent';
 
   const content = (
     <View style={[styles.wrap, { width: haloSize, height: haloSize, pointerEvents: interactive ? 'auto' : 'none' }, style]}>
@@ -462,11 +484,17 @@ export function CompanionOrb({
           <Animated.View style={[StyleSheet.absoluteFill, tintStyle]}>
             <EmotionTintLayer color={tintColor} />
           </Animated.View>
-          <Animated.View style={[StyleSheet.absoluteFill, { backgroundColor: secondColor }, secondTintStyle]} />
+          <Animated.View style={[StyleSheet.absoluteFill, secondTintStyle]}>
+            <SecondTintLayer color={secondColor} />
+          </Animated.View>
         </Animated.View>
       ))}
 
       <Animated.View style={containerStyle}>
+        {/* Emotion-coloured glow/shadow behind the orb — a deeper shade of the hue */}
+        <Animated.View
+          style={[StyleSheet.absoluteFill, { borderRadius: size / 2, boxShadow: emotionGlowShadow }, emotionGlowStyle]}
+        />
         <View style={[styles.orb, { width: size, height: size, borderRadius: size / 2, boxShadow: BASE_GLOW }]}>
           <OrbGradientLayer kind="base" />
           {/* Emotion hue (foreground strand) — the orb becomes the feeling's colour */}
@@ -474,7 +502,9 @@ export function CompanionOrb({
             <EmotionTintLayer color={tintColor} />
           </Animated.View>
           {/* Background strand of a mixed feeling — a second hue washed over the first */}
-          <Animated.View style={[StyleSheet.absoluteFill, { backgroundColor: secondColor }, secondTintStyle]} />
+          <Animated.View style={[StyleSheet.absoluteFill, secondTintStyle]}>
+            <SecondTintLayer color={secondColor} />
+          </Animated.View>
           <Animated.View style={[styles.highlight, { width: size * 0.4, height: size * 0.26 }, highlightStyle]} />
           <OrbGradientLayer kind="sheen" />
 

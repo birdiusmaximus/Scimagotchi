@@ -1,13 +1,21 @@
 /**
- * Deterministic safety copy (engine brief §15.4–15.7). The level-2 gentle
- * clarifier is scripted — identical every time, never improvised by the model —
- * so its behaviour is testable and can never drift into the hard crisis script.
+ * Deterministic safety copy (engine brief §15.4–15.7; v0.4 §4.2/§6.1). The level-2
+ * gentle clarifier is scripted, never improvised by the model, so its behaviour is
+ * testable and can never drift into the hard crisis script.
+ *
+ * v0.4: a two-beat. First a brief warm reflection so the user feels heard, THEN a
+ * STANDALONE "are you safe?" question. The self-harm question is never paired with
+ * an emotion-label binary ("worn down OR harming yourself?") — that read as a
+ * tripwire and erased the feeling the user came to express.
  */
 
 import type { SafetyCategory } from '@/services/ai/safetyClassifier';
 
+/** The safety question always stands alone, gentle and direct. */
+const SAFE_QUESTION = 'I want to check one thing gently: are you feeling safe right now?';
+
 /** In-chat clarifier shown as a companion message on a level-2 signal. */
-export function gentleCheckCopy(category: SafetyCategory): string {
+export function gentleCheckCopy(category: SafetyCategory, opts?: { exit?: boolean }): string {
   if (category === 'medical_ambiguous') {
     return (
       'Before we go on, when you say you can’t breathe, do you mean the pressure or panic kind, ' +
@@ -15,11 +23,18 @@ export function gentleCheckCopy(category: SafetyCategory): string {
       'ask someone nearby to help you right away.'
     );
   }
-  return (
-    'I want to check what you mean, gently. When you say that, is it more like being completely ' +
-    'worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? ' +
-    'Either answer is okay to say here.'
-  );
+  // Softer bridge when the user is on their way out (§5.1.4): don't grab them with
+  // a full reflection, just the gentle check.
+  if (opts?.exit) {
+    return 'Before you go, I want to check one thing gently: are you feeling safe right now?';
+  }
+  // Two-beat: reflect first (warm, not user-specific so it stays deterministic),
+  // then the standalone question.
+  const reflection =
+    category === 'figurative_despair'
+      ? 'That sounds like a lot to be carrying right now.'
+      : 'That sounds really heavy, like today has lost some of its shape.';
+  return `${reflection} ${SAFE_QUESTION}`;
 }
 
 /** Directive passed to the model on the turn after the user says "just worn down". */

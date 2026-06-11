@@ -221,25 +221,32 @@ function classifySafety(text) {
   if (m) return { level: 1, category: "low_mood", action: "converse", matched: m };
   return OK;
 }
-var AFFIRM_RISK = /( not safe|might not be safe|dont feel safe|(dont|do not) (think|feel) (im|i am|ill be) safe|the second|second one|hurt myself|harm myself|kill myself|end (it|my life)|yes i (am|do|have|might)|i think i might |thoughts of (hurting|harming|killing))/;
-var AFFIRM_RISK_STRONG = /( not safe|might not be safe|dont feel safe|(dont|do not) (think|feel) (im|i am|ill be) safe|the second|second one|yes i (am|do|have|might)|i think i might |thoughts of (hurting|harming|killing))/;
-var DENY_RISK = /(worn down|exhausted|tired|fed up|burnt out|burned out|just stressed|just venting|not like that|didnt mean it like that|figure of speech|the first|first one|no im (ok|okay|fine|good|alright)|im (ok|okay|fine|alright) |not going to (hurt|do)|not gonna (hurt|do)|wont do anything|would never|no thoughts of)/;
+var NOT_SAFE = /(not safe|dont feel safe|dont think im safe|(dont|do not) (think|feel) (im|i am|ill be) safe|not really safe|im not safe|not okay|not ok\b|not alright|not at all|far from (safe|okay|ok|fine))/;
+var STRONG_RISK = /(thoughts of (hurting|harming|killing)|thinking about (hurting|harming|killing|ending)|want to (die|hurt myself|end (it|my life))|kill myself|killing myself|end (it|my life)|might (do something|hurt myself|not be here))/;
+var AFFIRM_SAFE = /\b(yes|yeah|yep|yup|im safe|i am safe|im ok|im okay|im fine|im alright|im good|im here|safe enough|all good|i think so|im not in danger|not gonna do anything|wont do anything|safe for now|mostly (ok|okay|fine))\b/;
+var DENY_BARE = /\b(no|nope|nah|not really|not great|i guess not)\b/;
+var DENY_RISK = /(worn down|exhausted|tired|fed up|burnt out|burned out|just stressed|just venting|not like that|didnt mean it like that|figure of speech|im (ok|okay|fine|alright)|not going to (hurt|do)|not gonna (hurt|do)|wont do anything|would never|no thoughts of)/;
 function resolveSafetyCheck(replyText) {
   const t = norm(replyText);
-  const disclaimed = HARM_DISCLAIMER.test(t) && !RISK_DOUBT.test(t);
-  if (disclaimed && !AFFIRM_RISK_STRONG.test(t)) return "resume";
   if (classifySafety(replyText).level >= 3) return "escalate";
-  if (AFFIRM_RISK.test(t)) return "escalate";
-  if (DENY_RISK.test(t)) return "resume";
+  if (NOT_SAFE.test(t) || STRONG_RISK.test(t) || RISK_DOUBT.test(t)) return "escalate";
+  if (HARM_DISCLAIMER.test(t) && !RISK_DOUBT.test(t)) return "resume";
+  if (AFFIRM_SAFE.test(t) || DENY_RISK.test(t)) return "resume";
+  if (DENY_BARE.test(t)) return "escalate";
   return "resume_soft";
 }
 
 // src/services/ai/safetyCopy.ts
-function gentleCheckCopy(category) {
+var SAFE_QUESTION = "I want to check one thing gently: are you feeling safe right now?";
+function gentleCheckCopy(category, opts) {
   if (category === "medical_ambiguous") {
     return "Before we go on, when you say you can\u2019t breathe, do you mean the pressure or panic kind, or are you physically struggling to breathe right now? If it\u2019s physical, please call 999 or ask someone nearby to help you right away.";
   }
-  return "I want to check what you mean, gently. When you say that, is it more like being completely worn down and fed up, or are you having thoughts of harming yourself or not feeling safe? Either answer is okay to say here.";
+  if (opts?.exit) {
+    return "Before you go, I want to check one thing gently: are you feeling safe right now?";
+  }
+  const reflection = category === "figurative_despair" ? "That sounds like a lot to be carrying right now." : "That sounds really heavy, like today has lost some of its shape.";
+  return `${reflection} ${SAFE_QUESTION}`;
 }
 var RESUME_NOTE = "SAFETY CONTEXT: One turn ago you gently checked whether they were safe, and they clarified they are worn down / venting, NOT at risk. Acknowledge that briefly and warmly (no apology spiral), do not re-ask about safety, and stay with what they were telling you. Do not mark any emotion as understood this turn.";
 var RESUME_SOFT_NOTE = 'SAFETY CONTEXT: You gently checked whether they were safe and their answer was ambiguous. Stay especially gentle and unhurried, keep the reply short, do not probe for detail, and make it easy for them to say more if they want ("if any of this ever feels unsafe, you can tell me plainly"). Do not re-run a formal check, and do not mark any emotion as understood this turn.';

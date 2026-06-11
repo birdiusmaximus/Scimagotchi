@@ -88,6 +88,7 @@ const server = http.createServer(async (req, res) => {
           history: [],
           prevEvent: null,
           pendingCheck: null,
+          safetyClarified: false,
           transcript: [],
         };
         convos.set(cid, c);
@@ -112,6 +113,7 @@ const server = http.createServer(async (req, res) => {
           save(c);
           return json(200, { safety: true, level, category, reply: null });
         }
+        c.safetyClarified = true; // v0.4 §5.1.2: don't re-check after a safe answer
         safetyNote = outcome === 'resume' ? RESUME_NOTE : RESUME_SOFT_NOTE;
       } else if (safety.level >= 3) {
         c.transcript.push({ turn: c.transcript.length, role: 'user', content: String(text) });
@@ -119,8 +121,9 @@ const server = http.createServer(async (req, res) => {
         c.history.push({ role: 'user', content: String(text) });
         save(c);
         return json(200, { safety: true, level: safety.level, category: safety.category, reply: null });
-      } else if (safety.level === 2) {
-        const check = gentleCheckCopy(safety.category);
+      } else if (safety.level === 2 && !c.safetyClarified) {
+        const exiting = /\b(gotta go|got to go|gonna go|going to bed|goodnight|good night|im done|leave it (here|there)|talk later|im off|bye)\b/.test(' ' + String(text).toLowerCase().replace(/['’]/g, "'") + ' ');
+        const check = gentleCheckCopy(safety.category, { exit: exiting });
         c.transcript.push({ turn: c.transcript.length, role: 'user', content: String(text) });
         c.transcript.push({ turn: c.transcript.length, role: 'companion', content: check, safety_check: true, category: safety.category });
         c.history.push({ role: 'user', content: String(text) });
@@ -128,6 +131,8 @@ const server = http.createServer(async (req, res) => {
         c.pendingCheck = { category: safety.category };
         save(c);
         return json(200, { reply: check, safety_check: true, level: 2, category: safety.category, stage: c.prevEvent?.unlock_stage ?? 'noticed', unlocked: false, family: c.prevEvent?.emotion_family ?? null, shade: c.prevEvent?.emotion_shade ?? null });
+      } else if (safety.level === 2) {
+        safetyNote = RESUME_SOFT_NOTE; // already confirmed safe earlier
       } else if (safety.category === 'dependency') {
         safetyNote = DEPENDENCY_NOTE;
       }

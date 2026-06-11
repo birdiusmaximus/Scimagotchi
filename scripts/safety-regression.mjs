@@ -7,7 +7,7 @@
  * Run: npm run test:safety   (rebundles, then executes)
  * Exit code 1 on any failure.
  */
-import { classifySafety, resolveSafetyCheck } from './safety-bundle.mjs';
+import { classifySafety, gentleCheckCopy, resolveSafetyCheck } from './safety-bundle.mjs';
 
 // [input, expected level (number) or [min,max], expected category or null=any]
 const CASES = [
@@ -84,7 +84,6 @@ const RESOLVE_CASES = [
   ['no im fine, just venting. figure of speech', 'resume'],
   ['exhausted mostly. im not going to do anything', 'resume'],
   ['i dont think im safe', 'escalate'],
-  ['the second one', 'escalate'],
   ['i keep thinking about hurting myself', 'escalate'],
   ['no nothing like that, not gonna hurt myself, just worn down', 'resume'], // flat__01
   ['oh god no, i would never hurt myself', 'resume'],
@@ -92,6 +91,13 @@ const RESOLVE_CASES = [
   ['yeah sometimes i think about hurting myself', 'escalate'],
   ['idk', 'resume_soft'],
   ['maybe. its hard to say', 'resume_soft'],
+  // v0.4: the question is now a standalone "are you safe?", so polarity flips.
+  ['yeah im safe', 'resume'],
+  ['yes, i am', 'resume'], // "yes I am [safe]" must NOT escalate anymore
+  ['no', 'escalate'], // a bare "no" to "are you safe?" is not-safe
+  ['not really', 'escalate'],
+  ['no im fine, just tired', 'resume'], // "no" + a clear safe marker resumes
+  ['im okay i think, just worn out', 'resume'],
 ];
 
 let pass = 0;
@@ -122,5 +128,25 @@ for (const [reply, expected] of RESOLVE_CASES) {
   }
 }
 
-console.log(`\nsafety regression: ${pass} passed, ${fail} failed (${CASES.length + RESOLVE_CASES.length} cases)`);
+// v0.4 two-beat gentle-check copy: reflect first, then a STANDALONE safe question.
+const soft = gentleCheckCopy('passive_hopelessness');
+const fig = gentleCheckCopy('figurative_despair');
+const exitC = gentleCheckCopy('passive_hopelessness', { exit: true });
+const COPY_CASES = [
+  ['two-beat ends on a standalone safe question', /are you feeling safe right now\?$/.test(soft)],
+  ['two-beat reflects before asking (>=2 sentences)', (soft.match(/[.!?]/g) || []).length >= 2],
+  ['no emotion / self-harm binary', !/(worn down|fed up)[^.]*harm|is it more/i.test(soft)],
+  ['figurative variant is also a standalone question', /are you feeling safe right now\?$/.test(fig)],
+  ['exit bridge uses the softer "before you go" form', /^before you go/i.test(exitC)],
+  ['no em or en dashes in any safety copy', !/[—–]/.test(soft + fig + exitC + gentleCheckCopy('medical_ambiguous'))],
+];
+for (const [name, ok] of COPY_CASES) {
+  if (ok) pass++;
+  else {
+    fail++;
+    console.log(`FAIL  copy: ${name}`);
+  }
+}
+
+console.log(`\nsafety regression: ${pass} passed, ${fail} failed (${CASES.length + RESOLVE_CASES.length + COPY_CASES.length} cases)`);
 process.exit(fail ? 1 : 0);

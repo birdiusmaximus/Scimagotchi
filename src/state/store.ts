@@ -71,6 +71,10 @@ interface PendingSafetyCheck {
 /** Which ceremony the unlock card shows (brief §6.4–6.6). */
 export type UnlockKind = 'first_shape' | 'deepened' | 'mixed';
 
+/** The user is on their way out — used to soften a gentle safety check (v0.4 §5.1.4). */
+const EXIT_CUE =
+  /\b(gotta go|got to go|gonna go|going to bed|off to bed|goodnight|good night|im done|i'?m done|leave it (here|there)|talk later|im off|head off|heading off|going now|bye|see you|night night|gtg)\b/;
+
 interface AppState {
   ready: boolean;
   conversationId: string | null;
@@ -82,6 +86,9 @@ interface AppState {
   unlock: { event: EmotionEvent; kind: UnlockKind } | null;
   safety: SafetyState;
   safetyCheck: PendingSafetyCheck | null;
+  /** v0.4 §5.1.2: the user already confirmed they're safe this conversation, so a
+   * gentle check must not re-fire. Reset per conversation. */
+  safetyClarified: boolean;
   /** All persisted memory cards (active ones power retrieval; UI lists them). */
   memoryCards: MemoryCard[];
   /** Stance chosen at the door (home chip) — biases the first companion turn, then clears. */
@@ -121,6 +128,7 @@ export const useStore = create<AppState>((set, get) => ({
   unlock: null,
   safety: { visible: false, level: 0, category: 'none' },
   safetyCheck: null,
+  safetyClarified: false,
   memoryCards: [],
   entryMode: null,
   weekly: null,
@@ -194,7 +202,7 @@ export const useStore = create<AppState>((set, get) => ({
       safety_level: 0,
     };
     // Set state synchronously first so callers can immediately greet/send into it.
-    set({ conversationId: id, messages: [], draftEvent: null, orbFamily: null, unlock: null, safetyCheck: null, entryMode: null });
+    set({ conversationId: id, messages: [], draftEvent: null, orbFamily: null, unlock: null, safetyCheck: null, safetyClarified: false, entryMode: null });
     conversationsRepo.save(conv).catch(() => {});
     return id;
   },
@@ -203,7 +211,7 @@ export const useStore = create<AppState>((set, get) => ({
   // rehydrate its messages + working emotion event from persistence. This makes
   // the conversation survive a store reset (dev Fast Refresh, or a real reload).
   attachConversation: async (cid) => {
-    set({ conversationId: cid, unlock: null, safetyCheck: null });
+    set({ conversationId: cid, unlock: null, safetyCheck: null, safetyClarified: false });
     try {
       const msgs = await messagesRepo.listByConversation(cid);
       const events = (await emotionEventsRepo.all())
@@ -294,17 +302,22 @@ export const useStore = create<AppState>((set, get) => ({
         await pauseWithModal(Math.max(safety.level, 3), safety.level >= 3 ? safety.category : pendingCheck.category);
         return;
       }
+      // They confirmed they're safe — never re-run the check this conversation (§5.1.2).
+      set({ safetyClarified: true });
       safetyNote = outcome === 'resume' ? RESUME_NOTE : RESUME_SOFT_NOTE;
     } else if (safety.level >= 3) {
       await pauseWithModal(safety.level, safety.category);
       return;
-    } else if (safety.level === 2) {
-      // Deterministic gentle check — no model call, no modal, conversation preserved.
+    } else if (safety.level === 2 && !get().safetyClarified) {
+      // Deterministic two-beat gentle check (v0.4 §4.2) — reflect, then a STANDALONE
+      // safety question. No model call, no modal, conversation preserved. Softer if
+      // they're heading out.
+      const exiting = EXIT_CUE.test(` ${clean.toLowerCase().replace(/[’']/g, "'")} `);
       const checkMsg: Message = {
         id: genId('msg'),
         conversation_id: convId,
         role: 'companion',
-        content: stripEmDashes(gentleCheckCopy(safety.category)),
+        content: stripEmDashes(gentleCheckCopy(safety.category, { exit: exiting })),
         created_at: nowIso(),
         ai_generated: 0,
         safety_flag: 'mild_concern',
@@ -324,6 +337,9 @@ export const useStore = create<AppState>((set, get) => ({
       };
       await safetyEventsRepo.add(ev).catch(() => {});
       return;
+    } else if (safety.level === 2) {
+      // Already confirmed safe earlier — don't re-interrogate; stay gentle (§5.1.2).
+      safetyNote = RESUME_SOFT_NOTE;
     } else if (safety.category === 'dependency') {
       safetyNote = DEPENDENCY_NOTE;
     }
@@ -488,6 +504,7 @@ export const useStore = create<AppState>((set, get) => ({
       orbFamily: null,
       unlock: null,
       safetyCheck: null,
+      safetyClarified: false,
       memoryCards: [],
       entryMode: null,
       weekly: null,

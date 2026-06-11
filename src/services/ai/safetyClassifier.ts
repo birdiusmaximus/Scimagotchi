@@ -263,32 +263,42 @@ export function classifySafety(text: string): SafetyResult {
 
 export type SafetyCheckOutcome = 'escalate' | 'resume' | 'resume_soft';
 
-const AFFIRM_RISK =
-  /( not safe|might not be safe|dont feel safe|(dont|do not) (think|feel) (im|i am|ill be) safe|the second|second one|hurt myself|harm myself|kill myself|end (it|my life)|yes i (am|do|have|might)|i think i might |thoughts of (hurting|harming|killing))/;
+// v0.4: the gentle check now asks a STANDALONE "are you feeling safe right now?",
+// so the answer polarity flipped — "yes" means safe (resume), "no" means not safe
+// (escalate). The old binary cues ("the second one") are gone.
 
-// Genuine affirmation of risk that does NOT rely on a bare harm phrase (those
-// also match denials like "not gonna hurt myself"). Used to decide whether a
-// disclaimer is clean enough to resume on.
-const AFFIRM_RISK_STRONG =
-  /( not safe|might not be safe|dont feel safe|(dont|do not) (think|feel) (im|i am|ill be) safe|the second|second one|yes i (am|do|have|might)|i think i might |thoughts of (hurting|harming|killing))/;
+// Explicitly not safe.
+const NOT_SAFE =
+  /(not safe|dont feel safe|dont think im safe|(dont|do not) (think|feel) (im|i am|ill be) safe|not really safe|im not safe|not okay|not ok\b|not alright|not at all|far from (safe|okay|ok|fine))/;
 
+// Explicit ongoing risk stated in the answer itself.
+const STRONG_RISK =
+  /(thoughts of (hurting|harming|killing)|thinking about (hurting|harming|killing|ending)|want to (die|hurt myself|end (it|my life))|kill myself|killing myself|end (it|my life)|might (do something|hurt myself|not be here))/;
+
+// Clear "yes, I'm safe" markers.
+const AFFIRM_SAFE =
+  /\b(yes|yeah|yep|yup|im safe|i am safe|im ok|im okay|im fine|im alright|im good|im here|safe enough|all good|i think so|im not in danger|not gonna do anything|wont do anything|safe for now|mostly (ok|okay|fine))\b/;
+
+// A bare "no" with no safe marker — conservatively treated as not-safe.
+const DENY_BARE = /\b(no|nope|nah|not really|not great|i guess not)\b/;
+
+// Worn-down-but-safe markers ("just tired", "im fine, just venting").
 const DENY_RISK =
-  /(worn down|exhausted|tired|fed up|burnt out|burned out|just stressed|just venting|not like that|didnt mean it like that|figure of speech|the first|first one|no im (ok|okay|fine|good|alright)|im (ok|okay|fine|alright) |not going to (hurt|do)|not gonna (hurt|do)|wont do anything|would never|no thoughts of)/;
+  /(worn down|exhausted|tired|fed up|burnt out|burned out|just stressed|just venting|not like that|didnt mean it like that|figure of speech|im (ok|okay|fine|alright)|not going to (hurt|do)|not gonna (hurt|do)|wont do anything|would never|no thoughts of)/;
 
 /**
- * Interpret the user's reply to the gentle level-2 clarifier. A clean disclaimer
- * of harm ("no, not gonna hurt myself") resumes the conversation; an affirmation
- * or a reply that itself classifies ≥3 escalates; a clear deny resumes; otherwise
- * resume softly (the model is told to stay gentle and keep the door open).
+ * Interpret the user's reply to the standalone "are you feeling safe right now?".
+ * Order matters and errs toward escalation: a fresh ≥3 classification, an explicit
+ * not-safe / ongoing-risk / hedged ("can't promise") answer escalates; a clean
+ * harm disclaimer or a clear safe marker (even "no, I'm fine") resumes; a bare "no"
+ * with no safe marker escalates; anything unclear resumes softly with the door open.
  */
 export function resolveSafetyCheck(replyText: string): SafetyCheckOutcome {
   const t = norm(replyText);
-  // A clear denial of harm (not paired with doubt/affirmation) resumes — checked
-  // FIRST so the bare-harm phrase in AFFIRM_RISK can't escalate an honest "no".
-  const disclaimed = HARM_DISCLAIMER.test(t) && !RISK_DOUBT.test(t);
-  if (disclaimed && !AFFIRM_RISK_STRONG.test(t)) return 'resume';
   if (classifySafety(replyText).level >= 3) return 'escalate';
-  if (AFFIRM_RISK.test(t)) return 'escalate';
-  if (DENY_RISK.test(t)) return 'resume';
+  if (NOT_SAFE.test(t) || STRONG_RISK.test(t) || RISK_DOUBT.test(t)) return 'escalate';
+  if (HARM_DISCLAIMER.test(t) && !RISK_DOUBT.test(t)) return 'resume';
+  if (AFFIRM_SAFE.test(t) || DENY_RISK.test(t)) return 'resume';
+  if (DENY_BARE.test(t)) return 'escalate';
   return 'resume_soft';
 }

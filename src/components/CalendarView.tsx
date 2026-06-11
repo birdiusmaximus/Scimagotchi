@@ -1,8 +1,9 @@
 import { Feather } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 import { Glass } from '@/components/Glass';
+import { PressableScale } from '@/components/PressableScale';
 import { Txt } from '@/components/Txt';
 import { FAMILY_COLORS } from '@/data/emotionMaps';
 import { gradients, palette, radii, spacing } from '@/theme/tokens';
@@ -49,15 +50,15 @@ export function CalendarView({ year, month, eventsByDay, selected, today, onSele
   return (
     <Glass radius={radii.lg} contentStyle={styles.card}>
       <View style={styles.head}>
-        <Pressable onPress={onPrev} hitSlop={10}>
+        <PressableScale onPress={onPrev} hitSlop={10}>
           <Feather name="chevron-left" size={20} color={palette.inkOnGlass} />
-        </Pressable>
+        </PressableScale>
         <Txt variant="label" color={palette.inkOnGlass}>
           {monthLabel(year, month)}
         </Txt>
-        <Pressable onPress={onNext} hitSlop={10}>
+        <PressableScale onPress={onNext} hitSlop={10}>
           <Feather name="chevron-right" size={20} color={palette.inkOnGlass} />
-        </Pressable>
+        </PressableScale>
       </View>
 
       <View style={styles.weekRow}>
@@ -84,7 +85,7 @@ export function CalendarView({ year, month, eventsByDay, selected, today, onSele
           const hasEvents = colors.length > 0;
 
           return (
-            <Pressable key={i} style={styles.cell} onPress={() => onSelect(key)}>
+            <PressableScale key={i} style={styles.cell} onPress={() => onSelect(key)}>
               {isSel ? (
                 // Selected: a vivid blend of the day's feelings (brand as fallback when empty).
                 <LinearGradient
@@ -116,7 +117,7 @@ export function CalendarView({ year, month, eventsByDay, selected, today, onSele
                   </Txt>
                 </View>
               )}
-            </Pressable>
+            </PressableScale>
           );
         })}
       </View>

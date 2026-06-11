@@ -1,6 +1,6 @@
 import { Feather } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import { useMemo, useState } from 'react';
+import { useCallback, useMemo, useRef, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -12,9 +12,11 @@ import { SuggestionChip } from '@/components/SuggestionChip';
 import { TopBar } from '@/components/TopBar';
 import { Txt } from '@/components/Txt';
 import type { CompanionVisualState } from '@/services/ai/companionVisualState';
+import { learnedFamilies, sequenceDuration } from '@/services/ai/emotionAnimations';
 import type { ConversationMode } from '@/services/ai/modeRouter';
 import { useStore } from '@/state/store';
 import { palette, spacing } from '@/theme/tokens';
+import type { EmotionFamilyId } from '@/types/models';
 
 /** Start a fresh conversation, then either greet (chip) or send the typed text. */
 function openChat(kind: 'greet' | 'say', text: string, go: (cid: string) => void, entryMode?: ConversationMode) {
@@ -114,6 +116,40 @@ export default function NowScreen() {
     return 'idle_calm';
   }, [progress]);
 
+  // ── Double-tap the companion to cycle through the feelings it has learned ─────
+  // (animation brief). Plays only learned emotions; never unlocks, writes memory,
+  // or sends messages. The home background takes the played (or dominant) hue.
+  const learned = useMemo(() => learnedFamilies(progress), [progress]);
+  const dominant = useMemo<EmotionFamilyId | null>(() => {
+    const rows = learned.map((f) => ({ f, when: progress[f]?.updated_at ?? '' }));
+    rows.sort((a, b) => b.when.localeCompare(a.when));
+    return rows[0]?.f ?? null;
+  }, [learned, progress]);
+
+  const cycleIdx = useRef(0);
+  const lockUntil = useRef(0);
+  const [playEmotion, setPlayEmotion] = useState<{ key: number; family: EmotionFamilyId } | null>(null);
+  const [activePlay, setActivePlay] = useState<EmotionFamilyId | null>(null);
+
+  const onCompanionDoubleTap = useCallback(() => {
+    const now = Date.now();
+    if (now < lockUntil.current) return; // ignore during play + brief cooldown
+    if (!learned.length) return; // nothing learned yet — the orb's pulse is the only feedback
+    const fam = learned[cycleIdx.current % learned.length];
+    cycleIdx.current = (cycleIdx.current + 1) % learned.length;
+    setPlayEmotion((p) => ({ key: (p?.key ?? 0) + 1, family: fam }));
+    setActivePlay(fam);
+    const dur = sequenceDuration(fam);
+    lockUntil.current = now + dur + 900;
+    setTimeout(() => setActivePlay((a) => (a === fam ? null : a)), dur + 250);
+  }, [learned]);
+
+  // Background reflects the feeling being embodied, else the companion's strongest learned one.
+  const bgFamilies = useMemo<EmotionFamilyId[]>(() => {
+    const f = activePlay ?? dominant;
+    return f ? [f] : [];
+  }, [activePlay, dominant]);
+
   // The most recent memory the user chose to keep — offered as a gentle thread.
   const lastMemory = useMemo(() => {
     const saved = memoryCards.filter(
@@ -131,7 +167,7 @@ export default function NowScreen() {
 
   return (
     <View style={styles.root}>
-      <GradientBackground />
+      <GradientBackground families={bgFamilies} />
       <SafeAreaView style={styles.safe}>
         <TopBar onLeft={() => router.push('/menu')} onRight={() => router.push('/memory')} />
 
@@ -153,7 +189,7 @@ export default function NowScreen() {
         ) : null}
 
         <View style={styles.orbWrap}>
-          <CompanionOrb size={160} interactive visual={homeVisual} />
+          <CompanionOrb size={160} interactive visual={homeVisual} playEmotion={playEmotion} onDoubleTap={onCompanionDoubleTap} />
         </View>
 
         <View style={styles.chips}>

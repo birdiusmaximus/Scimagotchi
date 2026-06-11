@@ -29,9 +29,9 @@ function mixedConfirmed(ev, prev) {
   if (allOwned) return true;
   const prevStrands = prev?.strands ?? [];
   if (prevStrands.length >= 2 && ev.user_confirmation === "yes") {
-    const a = new Set(strands.map((s) => s.family));
-    const b2 = new Set(prevStrands.map((s) => s.family));
-    if (a.size === b2.size && [...a].every((f) => b2.has(f))) return true;
+    const a2 = new Set(strands.map((s) => s.family));
+    const b3 = new Set(prevStrands.map((s) => s.family));
+    if (a2.size === b3.size && [...a2].every((f) => b3.has(f))) return true;
   }
   return false;
 }
@@ -231,14 +231,14 @@ function repeatsEarlierQuestion(reply, priorCompanionReplies) {
   for (const q of qs) {
     const nq = normQuestion(q);
     if (nq.length < 8) continue;
-    const a = sigWords(q);
+    const a2 = sigWords(q);
     for (const pq of priorQs) {
       if (normQuestion(pq) === nq) return true;
-      const b2 = sigWords(pq);
-      if (a.size >= 2 && b2.size >= 2) {
+      const b3 = sigWords(pq);
+      if (a2.size >= 2 && b3.size >= 2) {
         let inter = 0;
-        for (const w of a) if (b2.has(w)) inter++;
-        const union = (/* @__PURE__ */ new Set([...a, ...b2])).size;
+        for (const w of a2) if (b3.has(w)) inter++;
+        const union = (/* @__PURE__ */ new Set([...a2, ...b3])).size;
         if (inter / union >= 0.6) return true;
       }
     }
@@ -1169,7 +1169,7 @@ function relevantMemory(all, userText, family) {
     for (const w of ct) if (t.has(w)) score += 1;
     if (c.type === "repair_instruction" || c.type === "do_not_suggest") score += 1;
     return { c, score };
-  }).filter((x) => x.score > 0).sort((a, b2) => b2.score - a.score).slice(0, 3);
+  }).filter((x) => x.score > 0).sort((a2, b3) => b3.score - a2.score).slice(0, 3);
   if (!scored.length) return null;
   return scored.map(({ c }) => `- ${c.summary}${c.user_words.length ? ` (their words: \u201C${c.user_words[0]}\u201D)` : ""}`).join("\n");
 }
@@ -1300,7 +1300,7 @@ function advanceProgress(existing, turn, conversationId, opts = {}) {
     const shadeOwned = ev.shade_source === "user_stated" || ev.shade_source === "user_confirmed";
     if (shadeOwned) pushUnique(p.confirmed_shades, ev.emotion_shade);
     pushUnique(p.common_triggers, ev.trigger_event);
-    ev.body_cue.forEach((b2) => pushUnique(p.common_body_cues, b2));
+    ev.body_cue.forEach((b3) => pushUnique(p.common_body_cues, b3));
     pushUnique(p.common_user_phrases, ev.user_phrase ?? ev.user_words_raw);
     if (ev.memory_note) p.memory_summary = ev.memory_note;
   }
@@ -1510,6 +1510,115 @@ function composeLearningSentence(ev, kind = "first_shape") {
   return finish(`I think this is the first shape of ${fam} you've shown me`);
 }
 
+// src/services/ai/emotionAnimations.ts
+var EMOTION_CYCLE_ORDER = [
+  "joy",
+  "calm",
+  "sadness",
+  "anger",
+  "fear",
+  "pressure",
+  "shame",
+  "hurt",
+  "flat"
+];
+function isEmotionLearned(stage) {
+  return !!stage && PROGRESS_RANK[stage] >= PROGRESS_RANK.first_shape;
+}
+function learnedFamilies(progress) {
+  return EMOTION_CYCLE_ORDER.filter((f) => isEmotionLearned(progress[f]?.current_stage));
+}
+var b2 = (y, scale, rotate = 0) => ({ y, scale, rotate });
+var a = (x, y, scale = 1, rotate = 0) => ({ x, y, scale, rotate });
+var g = (scale, opacity) => ({ scale, opacity });
+var beat = (dur, body, left, right, glow, spring) => ({
+  dur,
+  body,
+  left,
+  right,
+  glow,
+  spring
+});
+var EMOTION_BEATS = {
+  joy: [
+    beat(240, b2(0.05, 0.99), a(-0.54, 0.36, 0.96), a(0.54, 0.36, 0.96), g(0.96, 0.55), "gentle"),
+    // anticipation dip
+    beat(520, b2(-0.18, 1.08), a(-0.82, -0.04, 1.08, -14), a(0.82, -0.08, 1.1, 16), g(1.22, 0.9), "lively"),
+    // lift
+    beat(380, b2(-0.02, 1.02), a(-0.7, 0.14, 1.04, -6), a(0.7, 0.12, 1.04, 6), g(1.12, 0.76), "gentle"),
+    // soft landing
+    beat(720, b2(0, 1), a(-0.62, 0.26, 1, -2), a(0.62, 0.26, 1, 2), g(1.08, 0.7), "soft")
+    // open settle
+  ],
+  calm: [
+    beat(900, b2(-0.03, 1.035), a(-0.66, 0.22, 1.02), a(0.66, 0.22, 1.02), g(1.18, 0.65), "soft"),
+    // quiet inhale
+    beat(1300, b2(0, 1), a(-0.78, 0.3, 0.98), a(0.78, 0.3, 0.98), g(1.24, 0.55), "restrained")
+    // wide settle
+  ],
+  sadness: [
+    beat(440, b2(0.02, 0.99), a(-0.52, 0.32, 0.96), a(0.52, 0.32, 0.96), g(0.98, 0.48), "soft"),
+    // recognition pause
+    beat(860, b2(0.16, 0.93), a(-0.4, 0.42, 0.92, 4), a(0.4, 0.42, 0.92, -4), g(0.86, 0.4), "soft"),
+    // lower + soften
+    beat(900, b2(0.1, 0.96), a(-0.46, 0.4, 0.94, 2), a(0.46, 0.4, 0.94, -2), g(0.92, 0.46), "soft")
+    // held settle
+  ],
+  anger: [
+    beat(280, b2(0.02, 0.95), a(-0.46, 0.3, 0.95), a(0.46, 0.3, 0.95), g(0.9, 0.62), "gentle"),
+    // gather heat
+    beat(440, b2(-0.02, 1.03), a(-0.86, 0.16, 1.06, -10), a(0.86, 0.16, 1.06, 10), g(1.2, 0.9), "lively"),
+    // boundary pulse
+    beat(720, b2(0.01, 1), a(-0.7, 0.24, 1, -3), a(0.7, 0.24, 1, 3), g(1.04, 0.64), "restrained")
+    // firm settle
+  ],
+  fear: [
+    beat(260, b2(-0.02, 1), a(-0.6, 0.28, 1), a(0.6, 0.28, 1), g(0.96, 0.58), "restrained"),
+    // freeze
+    beat(520, b2(-0.06, 0.93), a(-0.42, 0.22, 0.94), a(0.42, 0.22, 0.94), g(0.84, 0.64), "restrained"),
+    // gather alert
+    beat(460, b2(-0.05, 0.94), a(-0.43, 0.22, 0.94), a(0.41, 0.24, 0.94), g(0.86, 0.6), "soft"),
+    // micro tremor
+    beat(760, b2(0, 0.98), a(-0.5, 0.3, 0.96), a(0.5, 0.3, 0.96), g(0.98, 0.52), "soft")
+    // contained settle
+  ],
+  pressure: [
+    beat(420, b2(0.06, 0.9), a(-0.4, 0.26, 0.94), a(0.4, 0.26, 0.94), g(0.86, 0.62), "gentle"),
+    // space narrows
+    beat(600, b2(0.05, 0.91), a(-0.36, 0.24, 0.93), a(0.36, 0.24, 0.93), g(0.84, 0.6), "soft"),
+    // compressed wobble
+    beat(900, b2(0.01, 1), a(-0.56, 0.3, 0.98), a(0.56, 0.3, 0.98), g(1, 0.54), "soft")
+    // make some room
+  ],
+  shame: [
+    beat(560, b2(0.12, 0.88), a(-0.3, 0.2, 0.9, 8), a(0.3, 0.2, 0.9, -8), g(0.8, 0.36), "soft"),
+    // pull inward / shield
+    beat(480, b2(0.12, 0.88), a(-0.26, 0.18, 0.9, 8), a(0.26, 0.18, 0.9, -8), g(0.78, 0.34), "restrained"),
+    // small pause
+    beat(1100, b2(0.06, 0.95), a(-0.5, 0.3, 0.94), a(0.46, 0.28, 0.94), g(0.94, 0.44), "soft")
+    // gentle reopen
+  ],
+  hurt: [
+    beat(420, b2(0.04, 0.96, -2), a(-0.34, 0.26, 0.93), a(0.5, 0.32, 0.95), g(0.92, 0.5), "soft"),
+    // soft recoil
+    beat(700, b2(0.06, 0.96, -1), a(-0.22, 0.22, 0.92), a(0.46, 0.36, 0.94), g(0.9, 0.48), "soft"),
+    // protect tender spot
+    beat(900, b2(0.02, 0.99), a(-0.5, 0.3, 0.96), a(0.54, 0.3, 0.98), g(1, 0.52), "soft")
+    // small reopen
+  ],
+  flat: [
+    beat(900, b2(0.04, 0.96), a(-0.54, 0.4, 0.9), a(0.54, 0.4, 0.9), g(0.84, 0.26), "restrained"),
+    // desaturate
+    beat(820, b2(0.04, 0.96), a(-0.54, 0.4, 0.9), a(0.54, 0.4, 0.9), g(0.84, 0.26), "restrained"),
+    // almost still
+    beat(1100, b2(0.02, 0.98), a(-0.56, 0.38, 0.94), a(0.56, 0.38, 0.94), g(0.92, 0.38), "soft")
+    // faint contact
+  ]
+};
+function sequenceDuration(family) {
+  return (EMOTION_BEATS[family] ?? []).reduce((sum, x) => sum + x.dur, 0);
+}
+
 // src/services/ai/weeklyNarrative.ts
 var FAMILY_WORD = {
   joy: "joy",
@@ -1582,6 +1691,8 @@ function composeWeeklySummary(input) {
   };
 }
 export {
+  EMOTION_BEATS,
+  EMOTION_CYCLE_ORDER,
   EXIT_CUE,
   MOTION_CONFIG,
   POSE_TARGETS,
@@ -1605,9 +1716,11 @@ export {
   intentDecision,
   isDifficultFamily,
   isDuplicateReply,
+  isEmotionLearned,
   isOptionMenu,
   isPositiveFamily,
   labelIsUserOwned,
+  learnedFamilies,
   memoryBlocked,
   migrateStage,
   mixedConfirmed,
@@ -1621,6 +1734,7 @@ export {
   routeMode,
   sanitizeStrands,
   selectVisualState,
+  sequenceDuration,
   shadeIsUserOwned,
   softenUnownedEmotionReply,
   stageRank,

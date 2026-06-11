@@ -43,5 +43,12 @@ export {
 } from '@/services/ai/companionPose';
 export { expressionFor } from '@/services/ai/orbExpression';
 export { composeLearningSentence, type LearningKind } from '@/services/ai/learningSentence';
+export {
+  EMOTION_BEATS,
+  EMOTION_CYCLE_ORDER,
+  isEmotionLearned,
+  learnedFamilies,
+  sequenceDuration,
+} from '@/services/ai/emotionAnimations';
 export { composeWeeklySummary } from '@/services/ai/weeklyNarrative';
 export { stripEmDashes } from '@/utils/text';

@@ -6,6 +6,7 @@ import Animated, {
   cancelAnimation,
   Easing,
   interpolate,
+  runOnJS,
   useAnimatedStyle,
   useDerivedValue,
   useSharedValue,
@@ -25,6 +26,7 @@ import {
   POSE_TARGETS,
   resolveMotion,
 } from '@/services/ai/companionPose';
+import { EMOTION_BEATS, SEQ_SPRINGS } from '@/services/ai/emotionAnimations';
 import type { CompanionVisualState } from '@/services/ai/companionVisualState';
 import { expressionFor } from '@/services/ai/orbExpression';
 import { gradients } from '@/theme/tokens';
@@ -54,6 +56,11 @@ type Props = {
   gesture?: { key: number; state: CompanionGesture; hold?: boolean } | null;
   /** Force reduced motion. When undefined, the OS "reduce motion" setting is used. */
   reducedMotion?: boolean;
+  /** Play a learned emotion's embodied animation (home double-tap cycle). Bump `key`
+   * to trigger; the orb runs the family's 3-act sequence, then returns to its pose. */
+  playEmotion?: { key: number; family: EmotionFamilyId } | null;
+  /** Fired when the companion is double-tapped (home uses it to cycle emotions). */
+  onDoubleTap?: () => void;
   /** Enable touch reactions: eyes follow the finger, poke recoil, pet to close. */
   interactive?: boolean;
   /** Bump `key` (with a sentence count) to make the orb react as it "speaks". */
@@ -144,6 +151,8 @@ export function CompanionOrb({
   visual = 'idle_calm',
   gesture = null,
   reducedMotion,
+  playEmotion = null,
+  onDoubleTap,
   interactive = false,
   speak,
   style,
@@ -271,6 +280,9 @@ export function CompanionOrb({
     }
   }, [visual, tintFactor, recede, glow]);
 
+  // While a learned-emotion sequence plays, the orb wears that feeling's colour.
+  const [playColor, setPlayColor] = useState<string | null>(null);
+
   // ── Tapped-chip gesture: a transient pose that plays then reverts to ambient ─
   // (sustained when `hold`, e.g. listening while the input is focused).
   const [activeGesture, setActiveGesture] = useState<CompanionGesture | null>(null);
@@ -326,6 +338,73 @@ export function CompanionOrb({
     pGs.value = withDelay(glowLag, withTiming(p.glow.scale, { duration: (rm ? 220 : dur) + 100, easing: EASE_OUT }));
     pGo.value = withDelay(glowLag, withTiming(p.glow.opacity, { duration: (rm ? 220 : dur) + 100, easing: EASE_OUT }));
   }, [motion, size, rm, aLx, aLy, aLs, aLr, aLo, aRx, aRy, aRs, aRr, aRo, pBy, pBs, pBr, pGs, pGo]);
+
+  // ── Learned-emotion sequence (animation brief): on a double-tap, run the family's
+  // 3-act beat sequence on the body/arms/glow, wear its hue, then return to the
+  // current ambient pose. Reduced motion plays a gentle hue + scale pulse instead.
+  useEffect(() => {
+    if (!playEmotion || playEmotion.key === 0) return;
+    const fam = playEmotion.family;
+    const beats = EMOTION_BEATS[fam];
+    if (!beats?.length) return;
+    setPlayColor(FAMILY_COLORS[fam]);
+    const base = poseFor(motion); // where to return when the sequence ends
+
+    if (rm) {
+      tint.value = withSequence(withTiming(0.92, { duration: 320, easing: EASE_OUT }), withDelay(900, withTiming(0, { duration: 600, easing: EASE_OUT })));
+      pBs.value = withSequence(withTiming(0.03, { duration: 320, easing: EASE_OUT }), withDelay(700, withTiming(base.body.scale - 1, { duration: 520, easing: EASE_OUT })));
+      pGo.value = withSequence(withTiming(base.glow.opacity + 0.22, { duration: 320, easing: EASE_OUT }), withDelay(700, withTiming(base.glow.opacity, { duration: 520, easing: EASE_OUT })));
+      const t = setTimeout(() => setPlayColor(null), 1900);
+      return () => clearTimeout(t);
+    }
+
+    // Resolve carry-forward full poses (calm-relative), then a frame returning to base.
+    const c = POSE_TARGETS.calm;
+    let cur = { body: { ...c.body }, left: { ...c.leftArm }, right: { ...c.rightArm }, glow: { ...c.glow } };
+    const frames = beats.map((bt) => {
+      cur = {
+        body: { ...cur.body, ...bt.body },
+        left: { ...cur.left, ...bt.left },
+        right: { ...cur.right, ...bt.right },
+        glow: { ...cur.glow, ...bt.glow },
+      };
+      return { pose: cur, dur: bt.dur, spring: bt.spring };
+    });
+    frames.push({ pose: { body: base.body, left: base.leftArm, right: base.rightArm, glow: base.glow }, dur: 640, spring: 'soft' as const });
+
+    const seg = (target: number, dur: number, spring?: string) =>
+      spring ? withSpring(target, SEQ_SPRINGS[spring as keyof typeof SEQ_SPRINGS]) : withTiming(target, { duration: dur, easing: EASE_OUT });
+    const build = (get: (pose: (typeof frames)[number]['pose']) => number) =>
+      withSequence(...frames.map((f) => seg(get(f.pose), f.dur, f.spring)));
+
+    for (const v of [pBy, pBs, pBr, aLx, aLy, aLs, aLr, aRx, aRy, aRs, aRr, pGs, pGo]) cancelAnimation(v);
+    pBy.value = build((p) => p.body.y * size);
+    pBs.value = build((p) => p.body.scale - 1);
+    pBr.value = build((p) => p.body.rotate ?? 0);
+    aLx.value = build((p) => p.left.x * size);
+    aLy.value = build((p) => p.left.y * size);
+    aLs.value = build((p) => p.left.scale ?? 1);
+    aLr.value = build((p) => p.left.rotate ?? 0);
+    aRx.value = build((p) => p.right.x * size);
+    aRy.value = build((p) => p.right.y * size);
+    aRs.value = build((p) => p.right.scale ?? 1);
+    aRr.value = build((p) => p.right.rotate ?? 0);
+    pGs.value = build((p) => p.glow.scale ?? 1);
+    pGo.value = build((p) => p.glow.opacity ?? 0.55);
+
+    // Hue: in over act 1, hold, out as it returns to calm.
+    const total = frames.reduce((s, f) => s + f.dur, 0);
+    const inDur = Math.min(440, frames[0].dur + 140);
+    const outDur = 600;
+    cancelAnimation(tint);
+    tint.value = withSequence(
+      withTiming(1, { duration: inDur, easing: EASE_OUT }),
+      withDelay(Math.max(0, total - inDur - outDur), withTiming(0, { duration: outDur, easing: EASE_OUT })),
+    );
+    const t = setTimeout(() => setPlayColor(null), total + 120);
+    return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [playEmotion?.key]);
 
   // React once per sentence as the companion speaks.
   useEffect(() => {
@@ -428,7 +507,8 @@ export function CompanionOrb({
   // washes a second hue over it. Both halve while the feeling is still uncertain.
   // Default to the orb's own violet when no family, so the tint layer always has a
   // valid colour to render and fade in/out (its opacity is gated by tint.value).
-  const tintColor = primaryFamily ? FAMILY_COLORS[primaryFamily] : '#6E5BF2';
+  // A playing learned-emotion sequence wears its own hue (playColor) on top.
+  const tintColor = playColor ?? (primaryFamily ? FAMILY_COLORS[primaryFamily] : '#6E5BF2');
   const secondColor = secondFamily ? FAMILY_COLORS[secondFamily] : 'transparent';
   const tintStyle = useAnimatedStyle(() => ({ opacity: tint.value * tintFactor.value }));
   const secondTintStyle = useAnimatedStyle(() => ({ opacity: secondTint.value * 0.7 * tintFactor.value }));
@@ -565,6 +645,7 @@ export function CompanionOrb({
     .maxDelay(260)
     .onStart(() => {
       glow.value = withSequence(withTiming(1, { duration: 160 }), withTiming(0, { duration: 800 }));
+      if (onDoubleTap) runOnJS(onDoubleTap)();
     });
 
   const hover = Gesture.Hover()

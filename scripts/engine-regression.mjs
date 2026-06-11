@@ -20,7 +20,12 @@ import {
   mixedConfirmed,
   ambientMotion,
   durationFor,
+  EMOTION_BEATS,
+  EMOTION_CYCLE_ORDER,
   isDifficultFamily,
+  isEmotionLearned,
+  learnedFamilies,
+  sequenceDuration,
   isPositiveFamily,
   MOTION_CONFIG,
   needsOwnershipRepair,
@@ -393,6 +398,23 @@ check('motion: no gesture -> ambient', resolveMotion('idle_calm', 'joy', null), 
 check('motion: family valence helpers', isDifficultFamily('shame') && isPositiveFamily('calm') && !isPositiveFamily('anger'), true);
 check('motion: difficult states are slower than positive', durationFor('difficult') > durationFor('positive'), true);
 check('motion: safety is a quick, direct move', durationFor('safety') < durationFor('calm'), true);
+
+// ── Learned-emotion animations + home double-tap eligibility (animation brief) ─
+check('learned: first_shape counts as learned', isEmotionLearned('first_shape'), true);
+check('learned: deepened counts as learned', isEmotionLearned('deepened'), true);
+check('learned: returning counts as learned', isEmotionLearned('returning'), true);
+check('learned: named does NOT count (only a guess/partial)', isEmotionLearned('named'), false);
+check('learned: noticed does NOT count', isEmotionLearned('noticed'), false);
+check('learned: null/unseen does NOT count', isEmotionLearned(null) || isEmotionLearned('unseen'), false);
+check('learned: families filter to learned ones in cycle order',
+  JSON.stringify(learnedFamilies({ joy: { current_stage: 'deepened' }, sadness: { current_stage: 'first_shape' }, anger: { current_stage: 'named' }, fear: { current_stage: 'first_shape' } })),
+  JSON.stringify(['joy', 'sadness', 'fear']));
+check('learned: empty progress -> no learned families', learnedFamilies({}).length, 0);
+check('cycle: canonical order covers the 9 families', EMOTION_CYCLE_ORDER.length, 9);
+check('beats: every cycle family has a non-empty sequence', EMOTION_CYCLE_ORDER.every((f) => (EMOTION_BEATS[f]?.length ?? 0) >= 2), true);
+check('beats: joy is a recognisable multi-beat lift', EMOTION_BEATS.joy.length >= 3 && EMOTION_BEATS.joy.some((b) => (b.body?.y ?? 0) < -0.1), true);
+check('beats: sadness lowers the body (positive y)', EMOTION_BEATS.sadness.some((b) => (b.body?.y ?? 0) > 0.1), true);
+check('beats: sequence duration is in the 2-4s embodied range', sequenceDuration('joy') > 1500 && sequenceDuration('joy') < 4000, true);
 
 check('expr: sadness sinks', expressionFor('sadness', 'idle_calm').sink > 0, true);
 check('expr: joy lifts', expressionFor('joy', 'idle_calm').sink < 0, true);

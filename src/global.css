@@ -19,3 +19,18 @@ body,
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* ── Mobile keyboard handling (web) ───────────────────────────────────────────
+ * The on-screen keyboard shrinks the VISUAL viewport but not the layout viewport,
+ * so a full-height app pushes its input behind the keyboard and the browser then
+ * scrolls, shoving the companion off the top. We override the (full-screen) height
+ * of html/body with --app-height — the live visual-viewport height kept in sync by
+ * the handler in app/_layout.tsx — and Expo's `#root { height: 100% }` cascades from
+ * it, so the companion, chat and input compress to fit just above the keyboard.
+ * The page itself never scrolls (inner ScrollViews handle their own overflow). */
+html,
+body {
+  height: var(--app-height, 100%);
+  overflow: hidden;
+  overscroll-behavior: none;
+}

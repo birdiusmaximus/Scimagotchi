@@ -4,7 +4,29 @@
  * clarity, never reward (no confetti, no trophies, no pet suffering).
  */
 
-import type { EmotionEvent, EmotionFamilyId, EmotionProgress, EmotionProgressStage } from '@/types/models';
+import type { EmotionEvent, EmotionFamilyId, EmotionProgress, EmotionProgressStage, UnlockStage } from '@/types/models';
+
+/**
+ * How fully the orb wears a feeling's hue at each in-conversation unlock stage (#2/#3):
+ * barely there when first noticed, building as it unlocks, full only when deepened. Used
+ * for the live tint in chat and for the slow colour fade when returning home.
+ */
+export function tintLevelForStage(stage: UnlockStage | null | undefined): number {
+  switch (stage) {
+    case 'deepened':
+      return 1;
+    case 'understood':
+      return 0.82;
+    case 'shaped':
+      return 0.6;
+    case 'named':
+      return 0.4;
+    case 'noticed':
+      return 0.22;
+    default:
+      return 0.2;
+  }
+}
 
 export type CompanionVisualState =
   | 'idle_calm'

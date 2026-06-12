@@ -8,6 +8,7 @@ import { create } from 'zustand';
 
 import { ai, cloudAvailable } from '@/services/ai/aiClient';
 import type { CompanionTurn } from '@/services/ai/companionEngine';
+import { tintLevelForStage } from '@/services/ai/companionVisualState';
 import {
   DEPENDENCY_NOTE,
   gentleCheckCopy,
@@ -84,6 +85,12 @@ interface AppState {
   draftEvent: EmotionEvent | null;
   progress: Partial<Record<EmotionFamilyId, EmotionProgress>>;
   orbFamily: EmotionFamilyId | null;
+  /** The feeling (+ how fully coloured) from the last chat, so the home orb can fade
+   *  slowly from it back to idle blue when you return. Consumed by the home screen. */
+  chatExitEmotion: { family: EmotionFamilyId; level: number } | null;
+  /** Emotion families described TODAY (local date) — drives the very subtle daily hues
+   *  on the home orb. Resets back to none when the date rolls over (midnight). */
+  todaysEmotions: { date: string; families: EmotionFamilyId[] };
   sending: boolean;
   unlock: { event: EmotionEvent; kind: UnlockKind } | null;
   safety: SafetyState;
@@ -123,6 +130,19 @@ interface AppState {
   _updateProgress: (turn: CompanionTurn, conversationId: string, suppress: boolean) => Promise<AdvanceResult | null>;
 }
 
+/** Local calendar date (YYYY-M-D) — the boundary for the daily-hue midnight reset. */
+function localDateString(): string {
+  const d = new Date();
+  return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+}
+
+/** Add a family to today's set, resetting it when the calendar date has rolled over. */
+function addTodaysEmotion(prev: { date: string; families: EmotionFamilyId[] }, fam: EmotionFamilyId) {
+  const today = localDateString();
+  if (prev.date !== today) return { date: today, families: [fam] };
+  return prev.families.includes(fam) ? prev : { date: today, families: [...prev.families, fam] };
+}
+
 export const useStore = create<AppState>((set, get) => ({
   ready: false,
   conversationId: null,
@@ -130,6 +150,8 @@ export const useStore = create<AppState>((set, get) => ({
   draftEvent: null,
   progress: {},
   orbFamily: null,
+  chatExitEmotion: null,
+  todaysEmotions: { date: '', families: [] },
   sending: false,
   unlock: null,
   safety: { visible: false, level: 0, category: 'none' },
@@ -411,10 +433,16 @@ export const useStore = create<AppState>((set, get) => ({
         ai_generated: 1,
         safety_flag: 'none',
       };
+      const exitFam = turn.event.emotion_family ?? null;
       set((s) => ({
         messages: [...s.messages, compMsg],
         draftEvent: turn.event,
-        orbFamily: turn.event.emotion_family ?? null,
+        orbFamily: exitFam,
+        // Remember the feeling + how fully it had coloured the orb, so the home orb can
+        // fade slowly from it back to blue. Keep the last one if this turn has no family.
+        chatExitEmotion: exitFam ? { family: exitFam, level: tintLevelForStage(turn.event.unlock_stage) } : s.chatExitEmotion,
+        // Record it among today's feelings (for the subtle daily hues on the home orb).
+        todaysEmotions: exitFam ? addTodaysEmotion(s.todaysEmotions, exitFam) : s.todaysEmotions,
       }));
       await messagesRepo.add(compMsg).catch(() => {});
       await emotionEventsRepo.upsert(turn.event).catch(() => {});

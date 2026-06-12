@@ -1,5 +1,5 @@
 import { LinearGradient } from 'expo-linear-gradient';
-import { memo, useEffect, useState } from 'react';
+import { memo, useEffect, useRef, useState } from 'react';
 import { AccessibilityInfo, Platform, StyleSheet, View, type ViewStyle } from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import Animated, {
@@ -31,7 +31,7 @@ import type { CompanionVisualState } from '@/services/ai/companionVisualState';
 import { expressionFor } from '@/services/ai/orbExpression';
 import { gradients } from '@/theme/tokens';
 import type { EmotionFamilyId } from '@/types/models';
-import { shade, withAlpha } from '@/utils/color';
+import { withAlpha } from '@/utils/color';
 
 // Production easing curves (from the remotion best-practices skill): a crisp
 // ease-out for settling into a pose, a balanced ease-in-out for calm loops.
@@ -39,6 +39,8 @@ const EASE_OUT = Easing.bezier(0.16, 1, 0.3, 1);
 const EASE_IN_OUT = Easing.bezier(0.45, 0, 0.55, 1);
 // A gentle spring for arm follow-through: light mass, mild overshoot, soft settle.
 const ARM_SPRING = { damping: 13, stiffness: 95, mass: 0.9 } as const;
+// A livelier spring for the wave / anticipation gestures (a touch more bounce).
+const OPEN_SPRING = { damping: 11, stiffness: 110, mass: 0.85 } as const;
 // A laggier spring for the arms trailing the body while it is dragged about.
 const TRAIL_SPRING = { damping: 13, stiffness: 70, mass: 1.1 } as const;
 
@@ -48,6 +50,11 @@ type Props = {
   family?: EmotionFamilyId | null;
   /** Foreground + (optional) background strand hues for mixed states (overrides family). */
   tintFamilies?: EmotionFamilyId[];
+  /** How fully the emotion hue fills the orb (0..1). Driven by how well the feeling is
+   *  understood so far, so colour builds gradually as a feeling unlocks. Default 1. */
+  tintLevel?: number;
+  /** Families explored TODAY — rendered as very subtle hue hints on the orb's surface. */
+  dailyHues?: EmotionFamilyId[];
   /** What the orb should communicate (engine brief §18); ambience only, never reward. */
   visual?: CompanionVisualState;
   /** A transient tapped-chip gesture that briefly overrides the ambient arm pose
@@ -65,6 +72,16 @@ type Props = {
   interactive?: boolean;
   /** Bump `key` (with a sentence count) to make the orb react as it "speaks". */
   speak?: { key: number; sentences: number };
+  /** Bump `key` to make the companion raise its eyes, lift a hand, and wave back. */
+  wave?: { key: number } | null;
+  /** Bump `key` to play the "new conversation" anticipation: arms swing wide, then settle. */
+  anticipate?: { key: number } | null;
+  /** One-shot slow colour fade when returning home from a chat: start at the feeling's
+   *  hue (fromLevel) and ease gently back to none. Bump `key` to play. */
+  homecomingFade?: { family: EmotionFamilyId; fromLevel: number; key: number } | null;
+  /** How far (× body radius) the companion senses the cursor on web. Larger = reacts
+   *  from further away. Only used when `interactive`. */
+  reach?: number;
   style?: ViewStyle;
 };
 
@@ -137,6 +154,38 @@ const SecondTintLayer = memo(function SecondTintLayer({ color }: { color: string
   );
 });
 
+// Up to four edges for the daily-hue blooms, so each day's feelings creep in from a
+// different corner as faint, separate hints rather than one muddy wash.
+const HUE_CORNERS = [
+  { start: { x: 0.12, y: 0.12 }, end: { x: 0.92, y: 0.92 } },
+  { start: { x: 0.88, y: 0.1 }, end: { x: 0.12, y: 0.9 } },
+  { start: { x: 0.1, y: 0.9 }, end: { x: 0.9, y: 0.12 } },
+  { start: { x: 0.9, y: 0.88 }, end: { x: 0.1, y: 0.12 } },
+] as const;
+
+/**
+ * Very subtle hints of the feelings explored TODAY, bloomed faintly from the orb's
+ * edges — the companion quietly "carries" the day's feelings near its surface until
+ * midnight. Memoised by a stable colour key so it renders once per set, not per frame.
+ */
+const DailyHuesLayer = memo(function DailyHuesLayer({ colorsKey }: { colorsKey: string }) {
+  if (!colorsKey) return null;
+  return (
+    <>
+      {colorsKey.split('|').slice(0, 4).map((c, i) => (
+        <LinearGradient
+          key={i}
+          colors={['transparent', 'transparent', withAlpha(c, 0.18)]}
+          locations={[0, 0.66, 1]}
+          start={HUE_CORNERS[i % 4].start}
+          end={HUE_CORNERS[i % 4].end}
+          style={StyleSheet.absoluteFill}
+        />
+      ))}
+    </>
+  );
+});
+
 /**
  * The companion: a glowing gradient orb with two soft eyes. Ambient float/breathe/
  * blink; when `interactive`, the eyes + glossy reflection follow the finger, a poke
@@ -148,6 +197,8 @@ export function CompanionOrb({
   size = 156,
   family = null,
   tintFamilies,
+  tintLevel = 1,
+  dailyHues,
   visual = 'idle_calm',
   gesture = null,
   reducedMotion,
@@ -155,6 +206,10 @@ export function CompanionOrb({
   onDoubleTap,
   interactive = false,
   speak,
+  wave = null,
+  anticipate = null,
+  homecomingFade = null,
+  reach = 1.9,
   style,
 }: Props) {
   const floatY = useSharedValue(0);
@@ -208,6 +263,10 @@ export function CompanionOrb({
   const pGs = useSharedValue(C.glow.scale); // glow pose scale
   const pGo = useSharedValue(C.glow.opacity); // glow pose opacity
 
+  // The outer wrap's DOM node (web) — used to measure the orb centre so the eyes can
+  // track the cursor from across the screen, not just inside the orb's box.
+  const wrapRef = useRef<View>(null);
+
   // Reduced motion: explicit prop wins, else follow the OS accessibility setting.
   const [reduceMotionSys, setReduceMotionSys] = useState(false);
   useEffect(() => {
@@ -253,11 +312,14 @@ export function CompanionOrb({
   const primaryFamily = tintFamilies?.[0] ?? family;
   const secondFamily = tintFamilies?.[1] ?? null;
 
-  // Ease the emotion tints in/out when the families change.
+  // Colour fills GRADUALLY and in step with how well the feeling is understood: a faint
+  // shade when first noticed, fuller as it unlocks, full only when deepened (tintLevel).
+  // The easing is slow so the hue never snaps on — true for a brand-new feeling and for
+  // a familiar one returning, which both start subtle and deepen as the talk evolves.
   useEffect(() => {
-    tint.value = withTiming(primaryFamily ? 1 : 0, { duration: 800, easing: Easing.inOut(Easing.sin) });
-    secondTint.value = withTiming(secondFamily ? 1 : 0, { duration: 800, easing: Easing.inOut(Easing.sin) });
-  }, [primaryFamily, secondFamily, tint, secondTint]);
+    tint.value = withTiming(primaryFamily ? tintLevel : 0, { duration: 2600, easing: Easing.inOut(Easing.sin) });
+    secondTint.value = withTiming(secondFamily ? tintLevel : 0, { duration: 2600, easing: Easing.inOut(Easing.sin) });
+  }, [primaryFamily, secondFamily, tintLevel, tint, secondTint]);
 
   // Per-emotion expression (§6.2/6.3): ease the orb's motion toward the feeling.
   useEffect(() => {
@@ -282,6 +344,8 @@ export function CompanionOrb({
 
   // While a learned-emotion sequence plays, the orb wears that feeling's colour.
   const [playColor, setPlayColor] = useState<string | null>(null);
+  // While a homecoming fade runs, the orb wears the last chat's hue as it eases out.
+  const [fadeColor, setFadeColor] = useState<string | null>(null);
 
   // ── Tapped-chip gesture: a transient pose that plays then reverts to ambient ─
   // (sustained when `hold`, e.g. listening while the input is focused).
@@ -423,6 +487,118 @@ export function CompanionOrb({
     speakV.value = withSequence(...steps);
   }, [speak?.key, speak?.sentences, speakV]);
 
+  // ── Wave back (home/chat double-tap): raise the eyes, lift the right hand, give a
+  // few side-to-side waves, then let everything settle back to the ambient pose. ──
+  useEffect(() => {
+    if (!wave || wave.key === 0) return;
+    const base = poseFor(motion);
+    const upY = -0.36 * size;
+    const outX = 0.6 * size;
+    const swing = 0.16 * size;
+    // 1) the eyes lift first
+    cancelAnimation(lookY);
+    lookY.value = withSequence(
+      withTiming(-0.55, { duration: 220, easing: EASE_OUT }),
+      withDelay(1000, withTiming(0, { duration: 460, easing: EASE_OUT })),
+    );
+    // 2) the right hand rises just after, waves a few times, then settles
+    for (const v of [aRx, aRy, aRs, aRr]) cancelAnimation(v);
+    aRy.value = withSequence(
+      withDelay(170, withTiming(upY, { duration: 260, easing: EASE_OUT })),
+      withDelay(760, withSpring(base.rightArm.y * size, ARM_SPRING)),
+    );
+    aRs.value = withSequence(
+      withDelay(170, withTiming(1.07, { duration: 260, easing: EASE_OUT })),
+      withDelay(760, withSpring(base.rightArm.scale, ARM_SPRING)),
+    );
+    aRr.value = withSequence(
+      withDelay(170, withTiming(12, { duration: 240, easing: EASE_OUT })),
+      withDelay(740, withSpring(base.rightArm.rotate, ARM_SPRING)),
+    );
+    aRx.value = withSequence(
+      withDelay(170, withTiming(outX, { duration: 240, easing: EASE_OUT })),
+      withTiming(outX + swing, { duration: 170, easing: EASE_IN_OUT }),
+      withTiming(outX - swing * 0.35, { duration: 180, easing: EASE_IN_OUT }),
+      withTiming(outX + swing, { duration: 170, easing: EASE_IN_OUT }),
+      withTiming(outX, { duration: 160, easing: EASE_IN_OUT }),
+      withSpring(base.rightArm.x * size, ARM_SPRING),
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [wave?.key]);
+
+  // ── New-conversation anticipation: a tiny gather, then both arms swing WIDE and up
+  // in welcome, then settle to the ambient pose. (Replaces the small arrival wave.) ─
+  useEffect(() => {
+    if (!anticipate || anticipate.key === 0) return;
+    const base = poseFor(motion);
+    const wideX = 0.95 * size;
+    const openY = -0.04 * size;
+    const gatherX = 0.24 * size;
+    const gatherY = 0.46 * size;
+    const hold = 560;
+    for (const v of [aLx, aLy, aLs, aRx, aRy, aRs, pBy, pBs, lookY]) cancelAnimation(v);
+    // Left arm: gather in, swing wide+up, settle.
+    aLx.value = withSequence(withTiming(-gatherX, { duration: 180, easing: EASE_IN_OUT }), withSpring(-wideX, OPEN_SPRING), withDelay(hold, withSpring(base.leftArm.x * size, ARM_SPRING)));
+    aLy.value = withSequence(withTiming(gatherY, { duration: 180, easing: EASE_IN_OUT }), withSpring(openY, OPEN_SPRING), withDelay(hold, withSpring(base.leftArm.y * size, ARM_SPRING)));
+    aLs.value = withSequence(withTiming(0.95, { duration: 180 }), withSpring(1.08, OPEN_SPRING), withDelay(hold, withSpring(base.leftArm.scale, ARM_SPRING)));
+    // Right arm mirrors it.
+    aRx.value = withSequence(withTiming(gatherX, { duration: 180, easing: EASE_IN_OUT }), withSpring(wideX, OPEN_SPRING), withDelay(hold, withSpring(base.rightArm.x * size, ARM_SPRING)));
+    aRy.value = withSequence(withTiming(gatherY, { duration: 180, easing: EASE_IN_OUT }), withSpring(openY, OPEN_SPRING), withDelay(hold, withSpring(base.rightArm.y * size, ARM_SPRING)));
+    aRs.value = withSequence(withTiming(0.95, { duration: 180 }), withSpring(1.08, OPEN_SPRING), withDelay(hold, withSpring(base.rightArm.scale, ARM_SPRING)));
+    // Body dips, lifts on the open, then settles.
+    pBy.value = withSequence(withTiming(0.03 * size, { duration: 180 }), withSpring(-0.05 * size, OPEN_SPRING), withDelay(hold, withTiming(base.body.y * size, { duration: 520, easing: EASE_OUT })));
+    pBs.value = withSequence(withTiming(-0.02, { duration: 180 }), withSpring(0.05, OPEN_SPRING), withDelay(hold, withTiming(base.body.scale - 1, { duration: 520, easing: EASE_OUT })));
+    // Eyes open a touch upward, then return.
+    lookY.value = withSequence(withTiming(-0.22, { duration: 320, easing: EASE_OUT }), withDelay(420, withTiming(0, { duration: 520, easing: EASE_OUT })));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [anticipate?.key]);
+
+  // ── Homecoming fade (#6): when we return to the home screen, the orb starts at the
+  // last chat's hue and eases very slowly back to its idle blue, instead of cutting. ──
+  useEffect(() => {
+    if (!homecomingFade || homecomingFade.key === 0) return;
+    setFadeColor(FAMILY_COLORS[homecomingFade.family]);
+    cancelAnimation(tint);
+    tint.value = homecomingFade.fromLevel;
+    tint.value = withTiming(0, { duration: 3500, easing: Easing.inOut(Easing.sin) });
+    const t = setTimeout(() => setFadeColor(null), 3700);
+    return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [homecomingFade?.key]);
+
+  // ── Web: the eyes follow the cursor from a LARGER radius around the orb (#5). We
+  // measure the orb's centre on each move and deflect the gaze proportionally, fading
+  // out as the cursor drifts past the sensing radius. Window-level (no hit area), so
+  // it never blocks taps on the surrounding UI. ──
+  useEffect(() => {
+    if (Platform.OS !== 'web' || !interactive) return;
+    const radius = size * reach;
+    const clamp = (v: number) => Math.max(-1, Math.min(1, v));
+    const onMove = (e: { clientX: number; clientY: number }) => {
+      const el = wrapRef.current as unknown as { getBoundingClientRect?: () => DOMRect } | null;
+      if (!el || typeof el.getBoundingClientRect !== 'function') return;
+      const r = el.getBoundingClientRect();
+      const dx = e.clientX - (r.left + r.width / 2);
+      const dy = e.clientY - (r.top + r.height / 2);
+      const dist = Math.hypot(dx, dy) || 0.0001;
+      const mag = dist <= radius ? dist / radius : Math.max(0, 1 - (dist - radius) / radius);
+      lookX.value = clamp((dx / dist) * mag);
+      lookY.value = clamp((dy / dist) * mag);
+    };
+    const relax = () => {
+      lookX.value = withTiming(0, { duration: 700, easing: EASE_OUT });
+      lookY.value = withTiming(0, { duration: 700, easing: EASE_OUT });
+    };
+    window.addEventListener('pointermove', onMove);
+    window.addEventListener('blur', relax);
+    document.addEventListener('mouseleave', relax);
+    return () => {
+      window.removeEventListener('pointermove', onMove);
+      window.removeEventListener('blur', relax);
+      document.removeEventListener('mouseleave', relax);
+    };
+  }, [interactive, size, reach, lookX, lookY]);
+
   const haloSize = size * 1.42;
   const eyeHeight = size * 0.21;
   const eyeWidth = size * 0.088;
@@ -466,17 +642,6 @@ export function CompanionOrb({
     };
   });
 
-  const auraStyle = useAnimatedStyle(() => ({
-    opacity:
-      interpolate(aura.value, [0, 1], [0.28, 0.55]) +
-      glow.value * 0.4 +
-      petting.value * 0.18 +
-      (pGo.value - 0.55) * 0.5, // pose glow brightens (positive/firstShape) or dims (safety)
-    transform: [
-      { scale: interpolate(aura.value, [0, 1], [1, 1.07]) + glow.value * 0.06 + petting.value * 0.03 + (pGs.value - 1) * 0.5 },
-    ],
-  }));
-
   // Drag follow-through: the arms chase the body's drag/recoil with a soft, laggy
   // spring, so they trail behind and settle after it instead of staying centred
   // while the body moves away.
@@ -513,15 +678,12 @@ export function CompanionOrb({
   // Default to the orb's own violet when no family, so the tint layer always has a
   // valid colour to render and fade in/out (its opacity is gated by tint.value).
   // A playing learned-emotion sequence wears its own hue (playColor) on top.
-  const tintColor = playColor ?? (primaryFamily ? FAMILY_COLORS[primaryFamily] : '#6E5BF2');
+  const tintColor = playColor ?? fadeColor ?? (primaryFamily ? FAMILY_COLORS[primaryFamily] : '#6E5BF2');
   const secondColor = secondFamily ? FAMILY_COLORS[secondFamily] : 'transparent';
+  // Stable colour key (compared by value, so the memoised layer never re-renders per frame).
+  const dailyColorsKey = (dailyHues ?? []).map((f) => FAMILY_COLORS[f]).join('|');
   const tintStyle = useAnimatedStyle(() => ({ opacity: tint.value * tintFactor.value }));
   const secondTintStyle = useAnimatedStyle(() => ({ opacity: secondTint.value * 0.7 * tintFactor.value }));
-  // The glow/shadow behind the orb takes a deeper shade of the emotion hue and
-  // fades in with it, so the cast light matches the feeling's colour. The string is
-  // stable per colour (no per-frame reprocessing); only its opacity animates.
-  const emotionGlowStyle = useAnimatedStyle(() => ({ opacity: tint.value * tintFactor.value }));
-  const emotionGlowShadow = `0px 8px 30px 4px ${shade(tintColor, 0.1, 0.55)}, 0px 0px 52px 16px ${shade(tintColor, 0.02, 0.4)}`;
 
   const eyeStyle = useAnimatedStyle(() => {
     const closed = 0.07;
@@ -545,17 +707,8 @@ export function CompanionOrb({
   }));
 
   const content = (
-    <View style={[styles.wrap, { width: haloSize, height: haloSize, pointerEvents: interactive ? 'auto' : 'none' }, style]}>
-      <Animated.View
-        style={[styles.aura, { width: haloSize, height: haloSize, borderRadius: haloSize / 2 }, auraStyle]}
-      />
-      <View style={[styles.halo, { width: size * 1.2, height: size * 1.2, borderRadius: (size * 1.2) / 2 }]} />
-
+    <View ref={wrapRef} style={[styles.wrap, { width: haloSize, height: haloSize, pointerEvents: interactive ? 'auto' : 'none' }, style]}>
       <Animated.View style={containerStyle}>
-        {/* Emotion-coloured glow/shadow behind the orb — a deeper shade of the hue */}
-        <Animated.View
-          style={[StyleSheet.absoluteFill, { borderRadius: size / 2, boxShadow: emotionGlowShadow }, emotionGlowStyle]}
-        />
         <View style={[styles.orb, { width: size, height: size, borderRadius: size / 2, boxShadow: BASE_GLOW }]}>
           <OrbGradientLayer kind="base" />
           {/* Emotion hue (foreground strand) — the orb becomes the feeling's colour */}
@@ -566,6 +719,8 @@ export function CompanionOrb({
           <Animated.View style={[StyleSheet.absoluteFill, secondTintStyle]}>
             <SecondTintLayer color={secondColor} />
           </Animated.View>
+          {/* Very subtle hints of the feelings explored today (resets at midnight) */}
+          <DailyHuesLayer colorsKey={dailyColorsKey} />
           <Animated.View style={[styles.highlight, { width: size * 0.4, height: size * 0.26 }, highlightStyle]} />
           <OrbGradientLayer kind="sheen" />
 
@@ -653,25 +808,10 @@ export function CompanionOrb({
       if (onDoubleTap) runOnJS(onDoubleTap)();
     });
 
-  const hover = Gesture.Hover()
-    .onBegin((e) => {
-      lookX.value = Math.min(1, Math.max(-1, (e.x - CENTER) / HALF));
-      lookY.value = Math.min(1, Math.max(-1, (e.y - CENTER) / HALF));
-    })
-    .onUpdate((e) => {
-      lookX.value = Math.min(1, Math.max(-1, (e.x - CENTER) / HALF));
-      lookY.value = Math.min(1, Math.max(-1, (e.y - CENTER) / HALF));
-    })
-    .onEnd(() => {
-      lookX.value = withTiming(0, { duration: 800, easing: Easing.out(Easing.quad) });
-      lookY.value = withTiming(0, { duration: 800, easing: Easing.out(Easing.quad) });
-    });
-
+  // On web the eyes track the cursor via the window-level pointer listener above
+  // (wider radius); on touch, the pan/tap gestures drive the gaze.
   const taps = Gesture.Exclusive(doubleTap, tap);
-  const touchGesture =
-    Platform.OS === 'web'
-      ? Gesture.Simultaneous(hover, pan, longPress, taps)
-      : Gesture.Simultaneous(pan, longPress, taps);
+  const touchGesture = Gesture.Simultaneous(pan, longPress, taps);
 
   return <GestureDetector gesture={touchGesture}>{content}</GestureDetector>;
 }
@@ -680,8 +820,6 @@ const styles = StyleSheet.create({
   // overflow visible so the satellite arms can float beyond the halo box (into the
   // empty space around the orb) without enlarging the component's layout footprint.
   wrap: { alignItems: 'center', justifyContent: 'center', overflow: 'visible' },
-  aura: { position: 'absolute', borderWidth: 2, borderColor: 'rgba(255,255,255,0.55)' },
-  halo: { position: 'absolute', borderWidth: 1, borderColor: 'rgba(255,255,255,0.4)' },
   orb: { overflow: 'hidden', alignItems: 'center', justifyContent: 'center', elevation: 12 },
   armOrb: { position: 'absolute', overflow: 'hidden', elevation: 8 },
   highlight: {

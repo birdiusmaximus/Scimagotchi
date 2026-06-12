@@ -1,5 +1,5 @@
 import { Feather } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
+import { useFocusEffect, useRouter } from 'expo-router';
 import { useCallback, useMemo, useRef, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -105,7 +105,16 @@ export default function NowScreen() {
   const userName = useStore((s) => s.userName);
   const progress = useStore((s) => s.progress);
   const memoryCards = useStore((s) => s.memoryCards);
+  const todaysEmotions = useStore((s) => s.todaysEmotions);
   const [threadDismissed, setThreadDismissed] = useState(false);
+
+  // Very subtle hints of the feelings explored TODAY, carried on the orb's surface until
+  // midnight. If the stored date is no longer today, show none (the daily reset).
+  const dailyHues = useMemo<EmotionFamilyId[]>(() => {
+    const n = new Date();
+    const today = `${n.getFullYear()}-${n.getMonth() + 1}-${n.getDate()}`;
+    return todaysEmotions.date === today ? todaysEmotions.families : [];
+  }, [todaysEmotions]);
 
   // The orb quietly reflects how far the companion has grown — a learned texture,
   // not a mood it imposes on you (engine brief §13, §18). No tint on the home orb.
@@ -130,11 +139,28 @@ export default function NowScreen() {
   const lockUntil = useRef(0);
   const [playEmotion, setPlayEmotion] = useState<{ key: number; family: EmotionFamilyId } | null>(null);
   const [activePlay, setActivePlay] = useState<EmotionFamilyId | null>(null);
+  // Double-tap waves back; once feelings are learned it cycles them instead.
+  const [orbWave, setOrbWave] = useState<{ key: number } | null>(null);
+
+  // Returning from a chat: fade the orb slowly from the last feeling's hue back to blue.
+  const [homecoming, setHomecoming] = useState<{ family: EmotionFamilyId; fromLevel: number; key: number } | null>(null);
+  useFocusEffect(
+    useCallback(() => {
+      const ex = useStore.getState().chatExitEmotion;
+      if (ex) {
+        setHomecoming((h) => ({ family: ex.family, fromLevel: ex.level, key: (h?.key ?? 0) + 1 }));
+        useStore.setState({ chatExitEmotion: null });
+      }
+    }, []),
+  );
 
   const onCompanionDoubleTap = useCallback(() => {
     const now = Date.now();
     if (now < lockUntil.current) return; // ignore during play + brief cooldown
-    if (!learned.length) return; // nothing learned yet — the orb's pulse is the only feedback
+    if (!learned.length) {
+      setOrbWave((w) => ({ key: (w?.key ?? 0) + 1 })); // nothing learned yet — wave back
+      return;
+    }
     const fam = learned[cycleIdx.current % learned.length];
     cycleIdx.current = (cycleIdx.current + 1) % learned.length;
     setPlayEmotion((p) => ({ key: (p?.key ?? 0) + 1, family: fam }));
@@ -189,7 +215,7 @@ export default function NowScreen() {
         ) : null}
 
         <View style={styles.orbWrap}>
-          <CompanionOrb size={160} interactive visual={homeVisual} playEmotion={playEmotion} onDoubleTap={onCompanionDoubleTap} />
+          <CompanionOrb size={160} interactive visual={homeVisual} playEmotion={playEmotion} onDoubleTap={onCompanionDoubleTap} wave={orbWave} homecomingFade={homecoming} dailyHues={dailyHues} />
         </View>
 
         <View style={styles.chips}>

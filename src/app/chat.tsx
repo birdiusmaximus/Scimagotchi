@@ -17,7 +17,7 @@ import { TypingBubble } from '@/components/TypingBubble';
 import { Txt } from '@/components/Txt';
 import { useGoBack } from '@/hooks/useGoBack';
 import type { CompanionGesture } from '@/services/ai/companionPose';
-import { selectVisualState, visualTintFamilies } from '@/services/ai/companionVisualState';
+import { selectVisualState, tintLevelForStage, visualTintFamilies } from '@/services/ai/companionVisualState';
 import { useStore } from '@/state/store';
 import { palette, radii, spacing } from '@/theme/tokens';
 
@@ -67,6 +67,11 @@ export default function ChatScreen() {
     progressStage: family ? (progress[family]?.current_stage ?? null) : null,
   });
   const tintFamilies = visualTintFamilies(draftEvent);
+  // How fully the orb wears the feeling's colour — tied to THIS conversation's unlock
+  // stage, so it starts as a faint shade when first noticed and only fills completely
+  // once the feeling is deepened. Per-conversation, so a familiar feeling also eases in
+  // gently each time rather than snapping straight to full colour.
+  const tintLevel = orbFamily ? tintLevelForStage(draftEvent?.unlock_stage) : 0;
 
   // Continuation chips (engine brief §7.3, §16.2): offered sparingly — only when
   // the companion reflected WITHOUT asking a question, and nothing else is open.
@@ -99,10 +104,15 @@ export default function ChatScreen() {
   const [orbGesture, setOrbGesture] = useState<{ key: number; state: CompanionGesture; hold?: boolean } | null>(null);
   const fireGesture = (state: CompanionGesture, hold?: boolean) =>
     setOrbGesture((g) => ({ key: (g?.key ?? 0) + 1, state, hold }));
+
+  // Arrival: the companion plays an anticipation (arms swing wide, then settle).
+  const [orbAnticipate, setOrbAnticipate] = useState<{ key: number } | null>(null);
   useEffect(() => {
-    fireGesture('greeting'); // a small wave on first arrival
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    setOrbAnticipate({ key: 1 });
   }, []);
+  // Double-tapping the companion makes it wave back.
+  const [orbWave, setOrbWave] = useState<{ key: number } | null>(null);
+  const waveBack = () => setOrbWave((w) => ({ key: (w?.key ?? 0) + 1 }));
 
   // Make the orb react once per sentence whenever a new companion reply lands.
   const [speak, setSpeak] = useState({ key: 0, sentences: 1 });
@@ -142,7 +152,19 @@ export default function ChatScreen() {
 
         {/* Character — top third, the focus */}
         <View style={styles.stage}>
-          <CompanionOrb size={150} interactive family={orbFamily} tintFamilies={tintFamilies} visual={visual} speak={speak} gesture={orbGesture} />
+          <CompanionOrb
+            size={150}
+            interactive
+            family={orbFamily}
+            tintFamilies={tintFamilies}
+            tintLevel={tintLevel}
+            visual={visual}
+            speak={speak}
+            gesture={orbGesture}
+            wave={orbWave}
+            anticipate={orbAnticipate}
+            onDoubleTap={waveBack}
+          />
         </View>
 
         {/* Discussion window — lower two-thirds */}

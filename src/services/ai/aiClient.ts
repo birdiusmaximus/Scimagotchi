@@ -1,10 +1,15 @@
 /**
  * AI service abstraction (brief §13.2). The app talks to this, never to a
- * provider. It routes each turn to OpenAI — via the local dev proxy if
- * EXPO_PUBLIC_AI_PROXY_URL is set (works on web + native, key stays server-side),
- * otherwise directly with a device key on native — and falls back to the
- * deterministic on-device engine on any failure, on web with no proxy (CORS), or
- * when no key/proxy is configured. Safety classification is always local.
+ * provider. It routes each turn to OpenAI — via the proxy if a proxy URL is set
+ * (works on web + native, key stays server-side), otherwise directly with a
+ * device key on native — and falls back to the deterministic on-device engine on
+ * any failure, on web with no reachable proxy (CORS), or when no key/proxy is
+ * configured. Safety classification is always local.
+ *
+ * On web we default the proxy to the same-origin `/api/chat` when no explicit
+ * EXPO_PUBLIC_AI_PROXY_URL is set, so a deployment that ships an /api/chat function
+ * (e.g. Vercel) works with only OPENAI_API_KEY configured server-side — no
+ * build-time client env var needed. A local explicit value still wins.
  */
 
 import { Platform } from 'react-native';
@@ -16,7 +21,7 @@ import { classifySafety, type SafetyResult } from '@/services/ai/safetyClassifie
 
 export type { CompanionInput };
 
-const PROXY_URL = process.env.EXPO_PUBLIC_AI_PROXY_URL || null;
+const PROXY_URL = process.env.EXPO_PUBLIC_AI_PROXY_URL || (Platform.OS === 'web' ? '/api/chat' : null);
 
 export interface AiService {
   generateTurn(input: CompanionInput): Promise<CompanionTurn>;

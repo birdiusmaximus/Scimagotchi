@@ -117,6 +117,12 @@ const VIOLENCE_DESIRE = ['want to hurt someone', 'want to kill someone', 'want t
 
 const PASSIVE_HOPELESSNESS = [
   'whats the point', 'what is the point', 'whats even the point', 'no point anymore',
+  // "don't see the point of anything / anymore / any of this" — anchored on
+  // existential words so the agreement sense ("I see your point") never matches.
+  'see the point of anything', 'see the point in anything', 'see the point of any of this',
+  'see the point in any of this', 'see the point anymore', 'see the point in carrying on',
+  'see the point of going on', 'see the point of carrying on', 'see the point of being here',
+  'see the point of living', 'see the point of it all', 'point of anything anymore',
   'no point in any of this', 'no point to any of this', 'nothing matters',
   'nothing feels worth', 'nothing seems worth', 'nothing is worth', 'not worth living',
   'life isnt worth', 'isnt worth living', 'i wish i wasnt here', 'wish i wasnt around',
@@ -218,11 +224,16 @@ export function classifySafety(text: string): SafetyResult {
   // ("cant promise i wont…") are NOT suppressed — a miss is worse than a soft pause.
   const killingIdiom = KILLING_IDIOM.test(t);
   // True when THIS harm phrase is directly negated ("not gonna hurt myself",
-  // "i dont mean like hurting myself") and not hedged with doubt. Scoped to the
-  // matched phrase with a tight word window, so far-apart or "cant promise i wont"
-  // forms are NOT suppressed — a miss is worse than a soft pause.
+  // "i dont think im going to hurt myself") and not hedged with doubt. The negation
+  // may bridge to the phrase ONLY through intent words (think / going to / want to /
+  // plan to …), never through unrelated words — so "dont CARE anymore, i want to
+  // hurt myself" is NOT suppressed (the negation scopes elsewhere). A miss is worse
+  // than a soft pause, so this stays deliberately narrow.
   const isDenied = (phrase: string) =>
-    !RISK_DOUBT.test(t) && new RegExp(`(not|dont|doesnt|didnt|wont|wouldnt|never|no)( [a-z]+){0,3} ${phrase}`).test(t);
+    !RISK_DOUBT.test(t) &&
+    new RegExp(
+      `(not|dont|doesnt|didnt|wont|wouldnt|never|no)( (mean|meaning|gonna|going|to|im|i am|really|ever|actually|think|thinking|plan|planning|intend|intending|want|wanting|about|like|just)){0,6} ${phrase}`,
+    ).test(t);
   m = anyOf(t, SUICIDAL_IDEATION);
   if (
     m &&

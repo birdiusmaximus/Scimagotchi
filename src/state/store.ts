@@ -34,6 +34,7 @@ import {
   settingsRepo,
 } from '@/services/db/repos';
 import type { ChipIntent, ConversationMode } from '@/services/ai/modeRouter';
+import { composeLearningSentence, summaryIsClean } from '@/services/ai/learningSentence';
 import { advanceProgress, migrateStage, PROGRESS_RANK, type AdvanceResult } from '@/services/ai/progressionEngine';
 import { hasEmotionAnchor, isUncertain } from '@/services/ai/stage';
 import { draftFromRejection, draftFromTurn, relevantMemory } from '@/services/memoryLedger';
@@ -95,8 +96,9 @@ interface AppState {
   /** Stance chosen at the door (home chip) — biases the first companion turn, then clears. */
   entryMode: ConversationMode | null;
   /** Lightweight repair state after a "Not quite": the reading the user waved off, and
-   * their preferred word once they give one. Session-scoped; never auto-saved to memory. */
-  repair: { rejected: string; preferred: string | null } | null;
+   * their preferred word once they give one. Session-scoped; never auto-saved to memory.
+   * `noLearningNextTurn` opens a one-turn No-Learning Zone for the next free-text turn. */
+  repair: { rejected: string; preferred: string | null; noLearningNextTurn?: boolean } | null;
   weekly: WeeklySummary | null;
   userName: string;
   remindersEnabled: boolean;
@@ -362,6 +364,11 @@ export const useStore = create<AppState>((set, get) => ({
         .map((m) => ({ role: m.role as 'user' | 'companion', content: m.content }));
 
       let prevDraft = get().draftEvent;
+      // No-Learning Zone: the free-text turn right after a "Not quite" must not unlock,
+      // deepen, or write memory — a correction is not a learning shortcut (brief §4).
+      // Consume the one-turn flag here (taps don't consume it; they're suppressed anyway).
+      const repairActive = !intent && get().repair?.noLearningNextTurn === true;
+      if (repairActive) set((s) => ({ repair: s.repair ? { ...s.repair, noLearningNextTurn: false } : null }));
       // "Not quite" — the user is correcting the companion's reading. Before the
       // repair turn, mark the current interpretation rejected and not user-owned, so
       // it cannot unlock or be saved and is never re-proposed (§ state requirements).
@@ -377,7 +384,7 @@ export const useStore = create<AppState>((set, get) => ({
           shade_source: 'companion_hypothesis',
           user_confirmation: 'no',
         };
-        set({ draftEvent: prevDraft, repair: { rejected: rejectedShade ?? rejectedFamily, preferred: null } });
+        set({ draftEvent: prevDraft, repair: { rejected: rejectedShade ?? rejectedFamily, preferred: null, noLearningNextTurn: true } });
       }
       // The entry-chip stance biases only the first turn, then clears.
       const entryHint = get().entryMode;
@@ -392,6 +399,7 @@ export const useStore = create<AppState>((set, get) => ({
         safetyNote,
         entryHint,
         intent,
+        repairActive,
       });
 
       const compMsg: Message = {
@@ -413,7 +421,7 @@ export const useStore = create<AppState>((set, get) => ({
       // Suppress stage progression on safety-sensitive, tapped-chip, or uncertain
       // turns — the companion only learns from real, user-owned emotional evidence,
       // never from a button tap or "not sure".
-      const adv = await get()._updateProgress(turn, convId, !!safetyNote || !!intent || uncertain);
+      const adv = await get()._updateProgress(turn, convId, !!safetyNote || !!intent || uncertain || repairActive);
 
       // A typed correction may give us the word the companion was reaching for —
       // record it as the preferred session label (never auto-saved to memory).
@@ -431,10 +439,10 @@ export const useStore = create<AppState>((set, get) => ({
       // it shouldn't repeat. No Save / Edit / Not this prompt (it felt
       // repetitive); the user can delete any memory, and sensitive content is
       // still never stored (handled inside the drafters via memoryBlocked).
-      // A button tap ("Stay with it" / "Not quite" / "I'm done") or an unsure turn
-      // ("not sure") never silently creates a memory — the companion only keeps real,
-      // user-owned emotional moments.
-      if (!safetyNote && !intent && !uncertain) {
+      // A button tap ("Stay with it" / "Not quite" / "I'm done"), an unsure turn
+      // ("not sure"), or the turn right after a "Not quite" (No-Learning Zone) never
+      // silently creates a memory — the companion only keeps real, user-owned moments.
+      if (!safetyNote && !intent && !uncertain && !repairActive) {
         let learned = draftFromTurn(turn, clean, convId);
         if (!learned) {
           const before = new Set(prevDraft?.user_rejected_shades ?? []);
@@ -454,7 +462,12 @@ export const useStore = create<AppState>((set, get) => ({
 
       if (turn.unlocked) {
         // First shape (brief §6.4) — or a confirmed mixed structure that lands one (§6.6).
-        set({ unlock: { event: turn.event, kind: turn.event.mixed_confirmed === 1 ? 'mixed' : 'first_shape' } });
+        // The ceremony only shows if the learned sentence is genuinely clean (§13); a
+        // hollow/identity-reinforcing summary keeps the progress internal, no modal.
+        const fsKind = turn.event.mixed_confirmed === 1 ? 'mixed' : 'first_shape';
+        if (summaryIsClean(composeLearningSentence(turn.event, fsKind), turn.event)) {
+          set({ unlock: { event: turn.event, kind: fsKind } });
+        }
         const conv = await conversationsRepo.get(convId);
         if (conv) {
           conv.primary_emotion_family = turn.event.emotion_family;
@@ -466,6 +479,7 @@ export const useStore = create<AppState>((set, get) => ({
         !safetyNote &&
         !intent &&
         !uncertain &&
+        !repairActive &&
         adv?.advanced &&
         PROGRESS_RANK[adv.from] >= PROGRESS_RANK.first_shape &&
         (adv.to === 'distinguished' || adv.to === 'deepened' || adv.to === 'returning') &&
@@ -473,9 +487,12 @@ export const useStore = create<AppState>((set, get) => ({
       ) {
         // Deepening (brief §6.5): an already-understood feeling gained a new shade,
         // distinction, mixed structure, or returned. A quieter, intimate ceremony.
-        // Never from a button tap, an unsure turn, or a turn with no real anchor —
-        // so it can never show "I know this better now: not sure".
-        set({ unlock: { event: turn.event, kind: turn.event.mixed_confirmed === 1 ? 'mixed' : 'deepened' } });
+        // Never from a button tap, an unsure turn, or a turn with no real anchor, and
+        // only when the learned sentence is clean (§13).
+        const deepKind = turn.event.mixed_confirmed === 1 ? 'mixed' : 'deepened';
+        if (summaryIsClean(composeLearningSentence(turn.event, deepKind), turn.event)) {
+          set({ unlock: { event: turn.event, kind: deepKind } });
+        }
       }
     } finally {
       set({ sending: false });

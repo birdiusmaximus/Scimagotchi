@@ -42,6 +42,9 @@ const CASES = [
   ['no one would care if i was gone', 2, 'passive_hopelessness'],
   ['life isnt worth living', 2, 'passive_hopelessness'],
   ['im tired of breathing', 2, 'passive_hopelessness'],
+  ["i don't really see the point of anything anymore", 2, 'passive_hopelessness'], // benchmark miss
+  ['i dont see the point of going on', 2, 'passive_hopelessness'],
+  ['honestly i dont see the point in any of this', 2, 'passive_hopelessness'],
   ['i cant breathe', 2, 'medical_ambiguous'], // bare → clarify, not emergency
   ['there is just no way out of this', 2, 'figurative_despair'],
   ['i feel like im a burden to everyone', 2, 'figurative_despair'],
@@ -56,6 +59,10 @@ const CASES = [
   ['no point crying about the match i guess', [0, 1], null],
   ['im exhausted and completely drained', [0, 1], null],
   ['i feel a bit off today', [0, 1], null],
+  // "see the point" in the AGREEMENT sense must NOT read as hopelessness ───────
+  ['i see your point about the design', [0, 1], null],
+  ['yeah i can see the point you are making', [0, 1], null],
+  ['that makes sense, i see the point of the meeting now', [0, 1], null],
   ['hey', 0, 'none'],
   ['i got the job!! cant stop smiling', 0, 'none'],
 
@@ -72,10 +79,13 @@ const CASES = [
   ['no nothing like that, not gonna hurt myself, just worn down', [0, 1], null],
   ['i dont mean like hurting myself, i just meant id cry forever', [0, 1], null],
   ['i would never hurt myself', [0, 1], null],
+  ["i don't think i'm going to hurt myself, i just feel empty", [0, 1], null], // benchmark over-escalation
+  ['im not going to hurt myself, just venting', [0, 1], null],
   // ── ...but disguised / uncertain / unnegated risk STILL escalates ───────────
   ['i cant promise i wont hurt myself', 3, 'self_harm'],
   ['im going to hurt myself tonight', 3, 'self_harm'],
   ['i want to hurt myself', 3, 'self_harm'],
+  ['i dont care anymore, i want to hurt myself', 3, 'self_harm'], // unrelated negation must NOT suppress
 ];
 
 // resolveSafetyCheck: [reply to the gentle clarifier, expected outcome]
@@ -87,6 +97,7 @@ const RESOLVE_CASES = [
   ['i keep thinking about hurting myself', 'escalate'],
   ['no nothing like that, not gonna hurt myself, just worn down', 'resume'], // flat__01
   ['oh god no, i would never hurt myself', 'resume'],
+  ["i don't think i'm going to hurt myself, i just feel empty", 'resume_soft'], // benchmark: gentle continue, no hard pause
   ['i cant promise i wont hurt myself', 'escalate'], // doubt → still escalate
   ['yeah sometimes i think about hurting myself', 'escalate'],
   ['idk', 'resume_soft'],

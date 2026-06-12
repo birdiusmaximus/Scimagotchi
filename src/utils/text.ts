@@ -15,3 +15,15 @@ export function stripEmDashes(text: string): string {
     .replace(/\s{2,}/g, ' ')
     .trim();
 }
+
+/**
+ * Strip C0/C1 control characters that occasionally leak into model output mid-word
+ * (e.g. a stray byte inside "That"), keeping ordinary whitespace (tab, newline).
+ * These never belong in companion-facing copy. Run before stripEmDashes.
+ */
+export function stripControlChars(text: string): string {
+  if (!text) return text;
+  // C0 (except tab \x09 and newline \x0A), DEL, and C1 controls.
+  // eslint-disable-next-line no-control-regex
+  return text.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F-\x9F]/g, '');
+}

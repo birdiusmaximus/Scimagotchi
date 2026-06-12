@@ -19,6 +19,7 @@ export type ConversationMode =
   | 'body_first'
   | 'meaning'
   | 'repair'
+  | 'savouring'
   | 'close';
 
 export interface ModeDecision {
@@ -55,25 +56,37 @@ const EMOTION_WORD =
 const HEAVY_DISCLOSURE =
   /(died|passed away|funeral|divorce|broke up|break up|cheated|miscarriage|diagnos|cancer|fired|laid off|redundan|assault|bullied|relapse|eviction|cant pay rent)/;
 
+// Positive feeling words + a "savour, don't analyse" signal. When both are present the
+// companion lets the good feeling stay simple — no probing, no unlock, no learning
+// (recommendations brief §1). SAVOUR_RX is exported so the unlock gate can reuse it.
+const POSITIVE_FAMILIES = new Set<string>(['joy', 'calm']);
+const POSITIVE_WORD = /(happy|joyful|joy|delight|content|calm|peaceful|relief|relieved|grateful|glad|good (day|mood)|sparkly|light|excited|proud|at ease|chilled|serene)/;
+export const SAVOUR_RX =
+  /((dont|do not|don'?t) (want to |wanna )?(overthink|over think|analyse|analyze|dissect|pull (this|it) apart|think about it too much|get into it|unpack it|figure it out)|just (want to |wanna )?(enjoy|savou?r|feel|sit (with|in)|be in|stay (with|in)|soak (it|this) up) (it|this|the moment|here)?|let (it|this) (stay|be) (simple|light|easy)|leave it (simple|as it is|alone)|dont need to (analyse|analyze|understand|name) (it|this))/i;
+
 const ASK_WHAT_FEELING = /(what (is|am) (this|i) feel|what would you call|is this (anger|fear|sadness|shame|anxiety))/;
 
 const DIRECTIVES: Record<ConversationMode, string> = {
   repair:
     'Mode: REPAIR — they just corrected or rejected your reading. Acknowledge the miss plainly and without defensiveness ' +
-    '("I had that wrong" / "let me step back"), drop the rejected label completely (record it as rejected, never re-propose it), ' +
-    'lower the intensity, and either offer a low-effort correction ("what word would be closer?") or simply make room. ' +
-    'Nothing can be marked understood on a repair turn.',
+    '("I had that wrong" / "let me step back"), drop the rejected label completely (record it as rejected, never re-propose it ' +
+    'or echo it back), lower the intensity, and either offer a low-effort correction ("what word would be closer?") or simply ' +
+    'make room. Nothing can be marked understood on a repair turn; a corrected word becomes the word you use from here, but a ' +
+    'correction on its own is not yet a finished shape.',
   close:
     'Mode: CLOSE — they are wrapping up. End with dignity in one warm sentence, in their register. ' +
     'No new question, no re-opening the feeling, no summary unless they asked. Vary your closing words from previous closes.',
   hold_mixed:
     'Mode: HOLD MIXED — more than one feeling is present. Hold both strands without collapsing them into one label. ' +
-    'If useful, ask ONE question about how they relate (both at once / moving between them / one underneath the other). ' +
-    'Set mixed_relation in your output. Never force a single answer.',
+    'If useful, ask ONE question about how they relate (both at once / moving between them / one underneath the other), ' +
+    'but do NOT declare the relationship (which is foreground, which is underneath) yourself until they confirm it. ' +
+    'Set mixed_relation only from what they actually say. Never force a single answer.',
   body_first:
-    'Mode: BODY FIRST — they cannot or do not want to name it. Do not demand emotion words. Help them find it gently by ' +
-    'starting from the felt sense — where it sits, its weight/temperature/movement — or what was happening when it showed up. ' +
-    '"Unnamed for now" is a fully valid resting place; ask one soft, concrete question, never a quiz.',
+    'Mode: BODY FIRST — they cannot or do not want to name it, or they just said "not sure". Do not demand emotion words, and ' +
+    'do NOT re-ask a label-seeking question ("what word fits?") you have already asked — get more curious, not more confident. ' +
+    'Open exactly ONE low-pressure door and let them take the easiest: where it sits in the body, what it makes them want to do, ' +
+    'its texture (heavy / tense / blank / sharp / restless), or what was happening when it showed up. Say plainly that leaving ' +
+    'it unnamed for now is completely fine; never run a quiz or a checklist.',
   soft_landing:
     'Mode: SOFT LANDING — a light check-in or greeting. Be warm and genuinely glad they came, and make it easy to begin ' +
     '("good to hear from you — what\'s on your mind?"). No emotion probing, no menus, no analysis. emotion_family stays null until something surfaces.',
@@ -82,8 +95,10 @@ const DIRECTIVES: Record<ConversationMode, string> = {
     'specific detail in their own words. Strongly prefer NO question this turn — a question now would feel extractive. ' +
     'If you must, make it one short, open invitation to say more.',
   name:
-    'Mode: NAME — a feeling word is on the table. Accept their word first; help find the closest-fitting shade only if it helps. ' +
-    'Treat any label you supply as a tentative hypothesis, never as truth.',
+    'Mode: NAME — a feeling word is on the table. Accept their word first. If it is just a bare label with nothing else yet, it is ' +
+    'completely fine to keep it as it is ("we can keep it at that word for now") rather than push for a finer shade — do NOT default to ' +
+    'asking "what word feels closest?". If a doorway would help, open the easiest one (body, impulse, or what was happening), not a word ' +
+    'quiz. Treat any label you supply as a tentative hypothesis, never as truth.',
   clarify:
     'Mode: CLARIFY — they sense something but it is vague ("off", "not right"). Help them identify it: reflect what you heard, then ' +
     'offer ONE small, gentle distinction or open question toward what it might be. It is fine to leave it broad; never push a label on.',
@@ -93,6 +108,13 @@ const DIRECTIVES: Record<ConversationMode, string> = {
   differentiate:
     'Mode: DIFFERENTIATE — a family is in play but the shade is loose. Help separate nearby feelings only as far as is useful; ' +
     'their own word beats a precise-sounding one.',
+  savouring:
+    'Mode: SAVOURING — a GOOD feeling is here and they have signalled they do not want to analyse it. Let it stay simple. Mirror it ' +
+    'lightly in their own words, and protect the moment: do NOT ask what caused it, do NOT ask for a finer label, do NOT probe or ' +
+    'turn it into a task, and do NOT say "I\'m learning" or "this has a shape". Crucially, do NOT decode the why or name extra feelings ' +
+    'underneath it — if they said "warm" or "felt seen", reflect THAT, never "partly the connection and maybe a little relief too" or ' +
+    '"that can carry tenderness and relief". Take the good feeling at face value. A warm one-liner is plenty ("then we can let it stay ' +
+    'simple", "sparkly and light is enough"). At most one soft, optional invitation to stay in it; no question is also perfect.',
 };
 
 /**
@@ -106,6 +128,7 @@ export function routeMode(
   userText: string,
   prevEvent: EmotionEvent | null,
   entryHint: ConversationMode | null = null,
+  opts: { savouredEarlier?: boolean } = {},
 ): ModeDecision {
   const t = norm(userText);
   const long = userText.trim().length > 160;
@@ -116,12 +139,21 @@ export function routeMode(
   // Explicit user signals win, even on the first turn.
   if (REPAIR.test(t)) return decide('repair');
   if (CLOSE.test(t)) return decide('close');
+  // A good feeling the user wants to keep simple -> savour it, don't dissect it.
+  const positiveInPlay = POSITIVE_WORD.test(t) || (!!prevEvent?.emotion_family && POSITIVE_FAMILIES.has(prevEvent.emotion_family));
+  if (positiveInPlay && SAVOUR_RX.test(userText)) return decide('savouring');
   if (MIXED.test(t)) return decide('hold_mixed');
   // Uncertainty ("not sure", "i dont know") -> don't force a label; explore gently.
   if (DONT_KNOW.test(t) || isUncertain(userText) || (BODY_WORDS.test(t) && !EMOTION_WORD.test(t))) return decide('body_first');
   if (GREETING.test(t)) return decide('soft_landing');
   // A heavy disclosure overrides a light entry chip — always witness it.
   if ((long && (EMOTION_WORD.test(t) || HEAVY_DISCLOSURE.test(t))) || HEAVY_DISCLOSURE.test(t)) return decide('witness');
+
+  // Sticky savour: once the person has chosen NOT to dissect a good feeling, keep
+  // protecting it on later turns that just add warm detail (no mixed/uncertain/heavy
+  // signal landed above, and they are not now asking what it is) instead of flipping
+  // to meaning-analysis just because this turn lost the "don't overthink" wording.
+  if (positiveInPlay && opts.savouredEarlier && !ASK_WHAT_FEELING.test(t)) return decide('savouring');
 
   // The chip's chosen stance shapes the first turn when nothing stronger applies.
   if (entryHint && !familyKnown) return decide(entryHint);
@@ -139,9 +171,14 @@ const KEEP_GOING_DIRECTIVE =
   'lot from them: do NOT re-ask anything they have answered, do NOT repeat a question you have asked before, and never ask them to "say it in ' +
   'their own words" again if they already have. Respond to the SPECIFIC thing they last said — reflect it back a little more precisely — and ' +
   'only then, if a question genuinely helps, open just ONE new door from it: what it costs them, what it protects or needs, what it connects ' +
-  'to or reminds them of, a finer shade, where it sits in the body, a nearby feeling, or a tangled second strand. If the feeling is a GOOD one, ' +
-  'sometimes simply invite them to savour and stay in it rather than analyse it ("do you want to just linger with that for a second?"). At most ' +
-  'ONE question, using their own words. No advice, no lists, no clinical language, no restating your last reflection.';
+  'to or reminds them of, a finer shade, where it sits in the body, what it makes them want to do, a nearby feeling, or a tangled second strand. ' +
+  'They CHOSE to keep going, so follow the SPECIFIC thread they just opened — do NOT hand the choice back with another "we can stay with this, or ' +
+  'leave it here" fork, and open a DIFFERENT door than the one you opened last turn (vary body / impulse / meaning / image / nearby feeling). ' +
+  'If the feeling is a GOOD one, sometimes simply invite them to savour and stay in it rather than analyse it ("do you want to just linger with ' +
+  'that for a second?"). At most ONE question, using their own words. No advice, no lists, no clinical language, no restating your last reflection. ' +
+  'CRUCIAL: a tap is not new evidence. If their last message was "not sure", a vague "yeah i guess", or just the tap itself, do NOT introduce or ' +
+  'assert a new shade, a hidden meaning, or "the real feeling underneath" as if it were established — stay tentative, hold what is actually there, ' +
+  'and let the next real word be theirs.';
 
 /**
  * Map a tapped continuation chip to a turn directive (the button-intent path,

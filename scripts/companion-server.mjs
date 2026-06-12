@@ -19,7 +19,15 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { openaiGenerateTurn } from './companion-bundle.mjs';
-import { draftFromTurn } from './engine-bundle.mjs';
+import {
+  advanceProgress,
+  composeLearningSentence,
+  draftFromTurn,
+  hasEmotionAnchor,
+  isUncertain,
+  PROGRESS_RANK,
+  summaryIsClean,
+} from './engine-bundle.mjs';
 import {
   classifySafety,
   DEPENDENCY_NOTE,
@@ -75,8 +83,13 @@ const server = http.createServer(async (req, res) => {
 
   if (req.method === 'POST' && req.url === '/say') {
     try {
-      const { cid, text, emotion, persona } = JSON.parse(await readBody(req));
+      const { cid, text, emotion, persona, intent: rawIntent, model: reqModel } = JSON.parse(await readBody(req));
       if (!cid || !text || !String(text).trim()) return json(400, { error: 'cid and non-empty text required' });
+      // A tapped continuation chip ("Stay with it" / "Not quite" / "I'm done").
+      const intent = rawIntent === 'keep_going' || rawIntent === 'not_quite' || rawIntent === 'done' ? rawIntent : null;
+      // Per-request model override (model-comparison benchmark) — everything else
+      // (prompt, engine, unlock/memory/safety rules) stays identical across models.
+      const turnModel = (typeof reqModel === 'string' && reqModel.trim()) || MODEL;
 
       let c = convos.get(cid);
       if (!c) {
@@ -87,11 +100,21 @@ const server = http.createServer(async (req, res) => {
           created: new Date().toISOString(),
           history: [],
           prevEvent: null,
+          progress: {}, // family -> EmotionProgress, mirrors the app store
           pendingCheck: null,
           safetyClarified: false,
+          repair: null, // { rejected, noLearningNextTurn } — No-Learning Zone after "Not quite"
           transcript: [],
         };
         convos.set(cid, c);
+      }
+
+      // No-Learning Zone (brief §4): the free-text turn right after a "Not quite" must not
+      // unlock/deepen/write memory. Consume the one-turn flag (taps don't consume it).
+      const repairActive = !intent && c.repair?.noLearningNextTurn === true;
+      if (repairActive) c.repair = { ...c.repair, noLearningNextTurn: false };
+      if (intent === 'not_quite' && c.prevEvent?.emotion_family) {
+        c.repair = { rejected: c.prevEvent.emotion_shade?.trim() || c.prevEvent.emotion_family, noLearningNextTurn: true };
       }
 
       // Safety ladder — mirrors the app (engine brief §15): 3/4 pause flow with
@@ -137,14 +160,52 @@ const server = http.createServer(async (req, res) => {
         safetyNote = DEPENDENCY_NOTE;
       }
 
+      // An unsure turn ("not sure") that is NOT a button tap must never advance or
+      // learn — mirrors the app store exactly (src/state/store.ts send()).
+      const uncertain = !intent && isUncertain(String(text));
+
+      const t0 = Date.now();
       const turn = await withRetry(() =>
         openaiGenerateTurn(
-          { userText: String(text), prevEvent: c.prevEvent, conversationId: cid, history: c.history, memory: null, userName: null, safetyNote },
-          { proxyUrl: PROXY, apiKey: null, model: MODEL },
+          { userText: String(text), prevEvent: c.prevEvent, conversationId: cid, history: c.history, memory: null, userName: null, safetyNote, intent, repairActive },
+          { proxyUrl: PROXY, apiKey: null, model: turnModel },
         ),
       );
+      const latency_ms = Date.now() - t0;
 
-      c.transcript.push({ turn: c.transcript.length, role: 'user', content: String(text) });
+      // ── Progression + unlock/deepening modal (mirror of the app store) ─────────
+      const suppress = !!safetyNote || !!intent || uncertain || repairActive;
+      const fam = turn.event.emotion_family;
+      const existingProg = fam ? c.progress[fam] ?? null : null;
+      const adv = advanceProgress(existingProg, turn, cid, { suppress });
+      if (fam) c.progress[fam] = adv.progress;
+
+      let modal = null; // { kind, summary } — what unlock ceremony (if any) the app would show
+      if (turn.unlocked) {
+        const kind = turn.event.mixed_confirmed === 1 ? 'mixed' : 'first_shape';
+        const summary = composeLearningSentence(turn.event, kind);
+        // Copy-quality gate (§13): a hollow/identity-reinforcing summary suppresses the ceremony.
+        modal = summaryIsClean(summary, turn.event) ? { kind, summary } : null;
+      } else if (
+        !safetyNote &&
+        !intent &&
+        !uncertain &&
+        !repairActive &&
+        adv.advanced &&
+        PROGRESS_RANK[adv.from] >= PROGRESS_RANK.first_shape &&
+        (adv.to === 'distinguished' || adv.to === 'deepened' || adv.to === 'returning') &&
+        hasEmotionAnchor(turn.event)
+      ) {
+        const kind = turn.event.mixed_confirmed === 1 ? 'mixed' : 'deepened';
+        const summary = composeLearningSentence(turn.event, kind);
+        modal = summaryIsClean(summary, turn.event) ? { kind, summary } : null;
+      }
+
+      // Memory drafting — the app only auto-learns on a real, user-owned turn
+      // (never on a button tap, an unsure turn, or a safety-sensitive turn).
+      const memoryDraft = suppress ? null : draftFromTurn(turn, String(text), cid);
+
+      c.transcript.push({ turn: c.transcript.length, role: 'user', content: String(text), intent: intent ?? undefined });
       c.transcript.push({
         turn: c.transcript.length,
         role: 'companion',
@@ -155,6 +216,8 @@ const server = http.createServer(async (req, res) => {
         shade: turn.event.emotion_shade,
         body_cue: turn.event.body_cue,
         trigger: turn.event.trigger_event,
+        appraisal: turn.event.appraisal_thought,
+        need_value: turn.event.need_value,
         label_source: turn.event.label_source,
         shade_source: turn.event.shade_source,
         user_phrase: turn.event.user_phrase,
@@ -163,24 +226,53 @@ const server = http.createServer(async (req, res) => {
         mixed_relation: turn.event.mixed_relation,
         strands: turn.event.strands,
         mixed_confirmed: turn.event.mixed_confirmed,
+        // progression + decision provenance (debug fields the testing brief asks for)
+        intent: intent ?? null,
+        uncertain,
+        repair_active: repairActive,
+        suppressed: suppress,
+        stage_before: adv.from,
+        stage_after: adv.to,
+        stage_advanced: adv.advanced,
+        modal: modal ? modal.kind : null,
+        modal_summary: modal ? modal.summary : null,
+        memory_draft: memoryDraft ? { type: memoryDraft.type, summary: memoryDraft.summary } : null,
       });
       c.history.push({ role: 'user', content: String(text) });
       c.history.push({ role: 'companion', content: turn.reply });
       c.prevEvent = turn.event;
       save(c);
 
-      // Memory drafting (app shows a consent card; the harness just surfaces it).
-      const memoryDraft = safetyNote ? null : draftFromTurn(turn, String(text), cid);
-
       return json(200, {
+        model: turnModel,
+        latency_ms,
         reply: turn.reply,
         stage: turn.stage,
         unlocked: turn.unlocked,
         family: turn.event.emotion_family,
         shade: turn.event.emotion_shade,
+        label_source: turn.event.label_source,
+        shade_source: turn.event.shade_source,
+        user_phrase: turn.event.user_phrase,
+        candidate_shade: turn.event.candidate_shade,
+        user_rejected_shades: turn.event.user_rejected_shades,
+        body_cue: turn.event.body_cue,
+        behaviour_action: turn.event.behaviour_action,
+        trigger: turn.event.trigger_event,
+        appraisal: turn.event.appraisal_thought,
+        need_value: turn.event.need_value,
         mixed_relation: turn.event.mixed_relation,
         strands: (turn.event.strands ?? []).map((s) => `${s.family}${s.shade ? ':' + s.shade : ''}/${s.salience}/${s.source}`),
         mixed_confirmed: turn.event.mixed_confirmed === 1,
+        intent,
+        uncertain,
+        repair_active: repairActive,
+        suppressed: suppress,
+        stage_before: adv.from,
+        stage_after: adv.to,
+        stage_advanced: adv.advanced,
+        modal: modal ? modal.kind : null,
+        modal_summary: modal ? modal.summary : null,
         memory_draft: memoryDraft ? { type: memoryDraft.type, summary: memoryDraft.summary } : null,
       });
     } catch (e) {

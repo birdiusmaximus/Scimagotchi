@@ -37,6 +37,9 @@ export interface CompanionInput {
   entryHint?: import('@/services/ai/modeRouter').ConversationMode | null;
   /** a continuation chip the user tapped this turn ("stay with it" / "not quite" / "done") */
   intent?: import('@/services/ai/modeRouter').ChipIntent | null;
+  /** true on the turn right after a "Not quite" correction — a one-turn No-Learning Zone
+   *  that blocks unlock/deepen/memory so a correction can't be used as a learning shortcut */
+  repairActive?: boolean | null;
 }
 
 export function emptyEvent(conversationId: string): EmotionEvent {

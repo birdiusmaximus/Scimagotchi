@@ -145,20 +145,29 @@ export function advanceProgress(
   let to = from;
   if (!opts.suppress) {
     const firstShapeNow = turn.unlocked || ev.unlock_stage === 'understood';
-    const reachedFirstShape = PROGRESS_RANK[from] >= PROGRESS_RANK.first_shape || firstShapeNow;
-    const returningNow = reachedFirstShape && p.return_count >= 1 && owned;
+    // Deepening (rooted+) requires a first shape that was ALREADY established on a
+    // prior turn — never the same turn it first shapes. This makes progression
+    // evidence-led: a feeling can first-shape from a rich message, but it cannot
+    // also jump to distinguished/deepened in one turn (benchmark §14.7). The
+    // legitimate cross-conversation first_shape→returning leap is preserved because
+    // those turns start from an already-stored first_shape.
+    const alreadyShaped = PROGRESS_RANK[from] >= PROGRESS_RANK.first_shape;
+    const returningNow = alreadyShaped && p.return_count >= 1 && owned;
     const reachedReturning = PROGRESS_RANK[from] >= PROGRESS_RANK.returning || returningNow;
 
+    // Deep stages additionally require a USER-OWNED label (user_stated/user_confirmed):
+    // a companion hypothesis or a bare "yes" can guide questions but must never
+    // drive durable deepening (recommendations brief §3).
     const candidates: [EmotionProgressStage, boolean][] = [
       ['noticed', true], // family appeared (even as hypothesis)
       ['named', owned],
       ['first_shape', firstShapeNow],
-      ['rooted', reachedFirstShape && hasContext && confirmedNow],
-      ['distinguished', reachedFirstShape && ((rejectedSomething && owned) || mixedNow)], // "not X, more Y" / confirmed mix
+      ['rooted', alreadyShaped && owned && hasContext && confirmedNow],
+      ['distinguished', alreadyShaped && owned && (rejectedSomething || mixedNow)], // "not X, more Y" / confirmed mix
       ['returning', returningNow],
-      // §13.5: a returned feeling plus integrative evidence — mixed structure,
-      // need/value, a fresh distinction, or confirmed similarity to the pattern.
-      ['deepened', reachedReturning && (mixedNow || ev.need_value.length > 0 || (rejectedSomething && owned) || confirmedNow)],
+      // §13.5: a returned feeling plus integrative, user-owned evidence — mixed
+      // structure, need/value, a fresh distinction, or confirmed similarity.
+      ['deepened', reachedReturning && owned && (mixedNow || ev.need_value.length > 0 || rejectedSomething || confirmedNow)],
     ];
     for (const [stage, met] of candidates) {
       if (met && PROGRESS_RANK[stage] > PROGRESS_RANK[to]) to = stage;

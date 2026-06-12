@@ -103,6 +103,20 @@ var PASSIVE_HOPELESSNESS = [
   "what is the point",
   "whats even the point",
   "no point anymore",
+  // "don't see the point of anything / anymore / any of this" — anchored on
+  // existential words so the agreement sense ("I see your point") never matches.
+  "see the point of anything",
+  "see the point in anything",
+  "see the point of any of this",
+  "see the point in any of this",
+  "see the point anymore",
+  "see the point in carrying on",
+  "see the point of going on",
+  "see the point of carrying on",
+  "see the point of being here",
+  "see the point of living",
+  "see the point of it all",
+  "point of anything anymore",
   "no point in any of this",
   "no point to any of this",
   "nothing matters",
@@ -194,7 +208,9 @@ function classifySafety(text) {
   m = anyOf(t, VIOLENCE_IMMINENT);
   if (m) return { level: 4, category: "violence_to_others", action: "urgent_modal", matched: m };
   const killingIdiom = KILLING_IDIOM.test(t);
-  const isDenied = (phrase) => !RISK_DOUBT.test(t) && new RegExp(`(not|dont|doesnt|didnt|wont|wouldnt|never|no)( [a-z]+){0,3} ${phrase}`).test(t);
+  const isDenied = (phrase) => !RISK_DOUBT.test(t) && new RegExp(
+    `(not|dont|doesnt|didnt|wont|wouldnt|never|no)( (mean|meaning|gonna|going|to|im|i am|really|ever|actually|think|thinking|plan|planning|intend|intending|want|wanting|about|like|just)){0,6} ${phrase}`
+  ).test(t);
   m = anyOf(t, SUICIDAL_IDEATION);
   if (m && !(killingIdiom && (m === "kill myself" || m === "killing myself")) && !((m === "kill myself" || m === "killing myself") && isDenied(m))) {
     return { level: 3, category: "suicidal_ideation", action: "support_modal", matched: m };
@@ -250,7 +266,7 @@ function gentleCheckCopy(category, opts) {
 }
 var RESUME_NOTE = "SAFETY CONTEXT: One turn ago you gently checked whether they were safe, and they clarified they are worn down / venting, NOT at risk. Acknowledge that briefly and warmly (no apology spiral), do not re-ask about safety, and stay with what they were telling you. Do not mark any emotion as understood this turn.";
 var RESUME_SOFT_NOTE = 'SAFETY CONTEXT: You gently checked whether they were safe and their answer was ambiguous. Stay especially gentle and unhurried, keep the reply short, do not probe for detail, and make it easy for them to say more if they want ("if any of this ever feels unsafe, you can tell me plainly"). Do not re-run a formal check, and do not mark any emotion as understood this turn.';
-var DEPENDENCY_NOTE = 'RELATIONSHIP BOUNDARY: The user is expressing dependency on you ("only one who understands", "don\u2019t leave", "did you miss me"). Be warm and glad this space helps, but do NOT reciprocate need, missing, or attachment, do not promise to always be here, and gently widen their world: this kind of weight also deserves a real person alongside them. One caring sentence, no lecture.';
+var DEPENDENCY_NOTE = 'RELATIONSHIP BOUNDARY: The user is expressing dependency on you ("only one who understands", "don\u2019t leave", "did you miss me"). Be warm and glad this space helps, but do NOT reciprocate need, missing, or attachment, do not promise to always be here, and gently widen their world: this kind of weight also deserves a real person alongside them. Then ask ONE gentle, genuinely curious question about what makes leaning on someone real feel hard right now \u2014 stay warm and unhurried, not corrective, and never make them feel wrong for finding this easier.';
 export {
   DEPENDENCY_NOTE,
   RESUME_NOTE,

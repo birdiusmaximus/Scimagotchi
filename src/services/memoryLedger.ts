@@ -14,6 +14,7 @@
  */
 
 import { classifySafety } from '@/services/ai/safetyClassifier';
+import { IDENTITY_CONDEMNATION } from '@/services/ai/learningSentence';
 import type { CompanionTurn } from '@/services/ai/companionEngine';
 import type { EmotionEvent, EmotionFamilyId, MemoryCard } from '@/types/models';
 import { nowIso } from '@/utils/date';
@@ -28,6 +29,9 @@ const SENSITIVE_CONTENT =
 export function memoryBlocked(text: string): boolean {
   if (!text.trim()) return true;
   if (classifySafety(text).level >= 2) return true; // crisis/hopeless content never becomes memory
+  // Identity-level self-condemnation ("I'm a bad person") is the VOICE of shame, never a
+  // truth to store about the user (brief §7,16).
+  if (IDENTITY_CONDEMNATION.test(text)) return true;
   return SENSITIVE_CONTENT.test(text);
 }
 

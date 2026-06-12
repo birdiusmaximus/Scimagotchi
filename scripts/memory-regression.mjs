@@ -56,6 +56,8 @@ check('rejection draft is a repair_instruction naming the word',
 check('crisis language blocked from memory', memoryBlocked('they said they want to hurt themselves'));
 check('hopeless language blocked from memory', memoryBlocked('nothing feels worth it lately'));
 check('diagnosis/meds language blocked', memoryBlocked('started a new antidepressant last week'));
+check('identity self-condemnation blocked from memory', memoryBlocked('the user feels they are a bad person'));
+check('identity "not good enough" blocked from memory', memoryBlocked('she is fundamentally not good enough'));
 check('ordinary feeling note NOT blocked', !memoryBlocked('Pressure can feel like being divided into too many pieces.'));
 
 // ── Confirmed-only retrieval ─────────────────────────────────────────────────

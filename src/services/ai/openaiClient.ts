@@ -9,11 +9,13 @@
  */
 
 import { detectFamily, emptyEvent, type CompanionInput, type CompanionTurn } from '@/services/ai/companionEngine';
+import { isPositiveFamily } from '@/services/ai/companionPose';
 import { mixedConfirmed, sanitizeStrands } from '@/services/ai/mixedEmotion';
-import { intentDecision, routeMode } from '@/services/ai/modeRouter';
+import { intentDecision, routeMode, SAVOUR_RX } from '@/services/ai/modeRouter';
 import { buildSystemPrompt, COMPANION_OUTPUT_SCHEMA } from '@/services/ai/prompts';
 import {
   askedForNamingHelp,
+  doorwayOf,
   dropTrailingQuestion,
   EXIT_CUE,
   isDuplicateReply,
@@ -37,9 +39,21 @@ import {
 import { EMOTION_MAPS } from '@/data/emotionMaps';
 import type { EmotionFamilyId, LabelSource, MixedRelation, UnlockStage } from '@/types/models';
 import { nowIso } from '@/utils/date';
-import { stripEmDashes } from '@/utils/text';
+import { stripControlChars, stripEmDashes } from '@/utils/text';
 
 const ENDPOINT = 'https://api.openai.com/v1/chat/completions';
+
+// Figurative distress idioms must not be stored as literal BODY evidence (brief §2):
+// "I can't breathe" in a stress context is a metaphor for overwhelm, not a felt body
+// cue that defines the user's personal shape. The safety ladder handles genuine
+// medical/risk meaning separately; here we only stop the idiom from counting as a
+// feeling signal. A literal marker (in the cue OR the user's words) keeps the cue.
+const FIGURATIVE_BODY = /\b(cant breathe|can'?t breathe|cannot breathe|couldnt breathe|could not breathe|drowning|crushed|crushing|suffocat\w*|buried|smothered|choking|sinking)\b/i;
+const LITERAL_BODY_MARKER = /(right now|physically|literally|actually|chest pain|chest hurts|tight chest|ambulance|lips are blue|wheez|asthma|cant catch (my )?breath|gasping|passing out)/i;
+function stripFigurativeBody(cues: string[], userText: string): string[] {
+  const literalContext = LITERAL_BODY_MARKER.test(userText);
+  return (cues ?? []).filter((c) => !(FIGURATIVE_BODY.test(c) && !LITERAL_BODY_MARKER.test(c) && !literalContext));
+}
 
 type Parsed = {
   reply: string;
@@ -84,7 +98,15 @@ export async function openaiGenerateTurn(
   // ── Deterministic pre-stages: mode + variety + safety directives ───────────
   // A tapped continuation chip drives the mode directly (reliable intent), instead
   // of hoping the text heuristics catch it.
-  const mode = input.intent ? intentDecision(input.intent, prev ?? null) : routeMode(input.userText, prev ?? null, input.entryHint ?? null);
+  // Sticky savour: if a positive feeling is in play and the person already chose not
+  // to dissect it earlier this conversation, keep protecting it (see routeMode).
+  const savouredEarlier =
+    !!prev?.emotion_family &&
+    isPositiveFamily(prev.emotion_family) &&
+    (input.history ?? []).some((m) => m.role === 'user' && SAVOUR_RX.test(m.content));
+  const mode = input.intent
+    ? intentDecision(input.intent, prev ?? null)
+    : routeMode(input.userText, prev ?? null, input.entryHint ?? null, { savouredEarlier });
   const companionReplies = (input.history ?? []).filter((m) => m.role === 'companion').map((m) => m.content);
   const variety = varietyDirective(varietySignals(companionReplies));
 
@@ -143,6 +165,13 @@ export async function openaiGenerateTurn(
       p.reply = p.reply.replace(/[ऀ-ॿ؀-ۿ一-鿿぀-ヿ가-힯Ѐ-ӿ]+\??/g, '').replace(/\s{2,}/g, ' ').trim();
     }
   }
+  // Deterministic backstop: if the reply STILL repeats an earlier question after the
+  // retry (the model re-asked the same doorway, e.g. "Where do you notice it most?"
+  // twice), drop the trailing question rather than ask it twice. The reflection stays.
+  if (repeatsEarlierQuestion(p.reply, companionReplies)) {
+    const stripped = dropTrailingQuestion(p.reply).trim();
+    if (stripped) p.reply = stripped;
+  }
 
   // ── Merge the model's reading into the (re)built event ─────────────────────
   const ev = prev ? { ...prev } : emptyEvent(input.conversationId);
@@ -162,7 +191,8 @@ export async function openaiGenerateTurn(
   }
   ev.emotion_family = fam;
   ev.secondary_emotions = p.secondary_emotions ?? [];
-  ev.body_cue = p.body_cue ?? [];
+  // Strip figurative distress idioms so they can't masquerade as literal body evidence (§2).
+  ev.body_cue = stripFigurativeBody(p.body_cue ?? [], input.userText);
   ev.behaviour_action = p.behaviour_action ?? [];
   ev.trigger_event = p.trigger_event ?? ev.trigger_event ?? null;
   ev.appraisal_thought = p.appraisal_thought ?? ev.appraisal_thought ?? null;
@@ -170,9 +200,12 @@ export async function openaiGenerateTurn(
   ev.valence = p.valence ?? 'neutral';
   ev.activation = p.activation ?? 'medium';
   // On a tapped-chip turn there is no real new user phrase (the "text" is a button
-  // label), and an unsure turn ("not sure") is not the feeling's words either; keep
-  // the person's actual words from prev rather than overwriting them.
-  if (!input.intent && !uncertainTurn && p.user_words_raw && p.user_words_raw.trim()) ev.user_words_raw = p.user_words_raw.trim();
+  // label), an unsure turn ("not sure") is not the feeling's words, and a shallow hedge
+  // ("yeah i guess", "i guess") is not either — keep the person's actual words from prev
+  // rather than overwriting them with a non-answer (brief §8).
+  if (!input.intent && !uncertainTurn && p.user_words_raw && p.user_words_raw.trim() && !isUncertain(p.user_words_raw)) {
+    ev.user_words_raw = p.user_words_raw.trim();
+  }
   const note = p.memory_note ?? ev.memory_note ?? null;
   ev.memory_note = note ? stripEmDashes(note) : null;
   ev.confidence_level = p.confidence ?? 'medium';
@@ -227,7 +260,9 @@ export async function openaiGenerateTurn(
   ev.candidate_shade = ev.emotion_shade && ev.shade_source === 'companion_hypothesis' ? ev.emotion_shade : null;
   if (!input.intent) {
     const ownPhrase = uncertainTurn ? '' : (ev.user_words_raw ?? '').trim() || (input.userText ?? '').trim();
-    if (ownPhrase) ev.user_phrase = stripEmDashes(ownPhrase).slice(0, 240);
+    // A shallow hedge ("yeah i guess") is not the feeling's phrase — keep the prior
+    // meaningful one rather than overwriting it with a non-answer (brief §8).
+    if (ownPhrase && !isUncertain(ownPhrase)) ev.user_phrase = stripEmDashes(ownPhrase).slice(0, 240);
     // else keep the prior meaningful phrase (don't replace it with uncertainty/empty)
   }
 
@@ -242,12 +277,18 @@ export async function openaiGenerateTurn(
   // Stage never goes backwards within a conversation.
   let stage: UnlockStage = stageRank(computed) >= stageRank(prevStage) ? computed : prevStage;
 
+  // A savoured GOOD feeling must not be turned into a learned shape: a positive family
+  // plus a "let me just enjoy it, don't analyse" signal blocks the unlock and marks the
+  // turn do-not-store so no memory is written either (brief §1).
+  const savouring = isPositiveFamily(fam) && SAVOUR_RX.test(input.userText);
+  if (savouring) ev.do_not_store = 1;
+
   // No progression at safety-sensitive moments (brief §13.4), on ANY tapped-chip turn
-  // ("Stay with it" / "Not quite" / "I'm done"), or on an UNCERTAIN turn ("not sure"):
-  // a first shape should be earned from the person's own emotional words, never from a
-  // button or an unsure beat. (This also keeps a "Stay with it" follow-up question from
-  // being stripped by the unlock-rest rule.)
-  const blockUnlock = !!input.safetyNote || !!input.intent || uncertainTurn;
+  // ("Stay with it" / "Not quite" / "I'm done"), on an UNCERTAIN turn ("not sure"), on
+  // the turn right AFTER a "Not quite" correction (repairActive — no learning from the
+  // repair), or while savouring: a first shape is earned from the person's own emotional
+  // words, never from a button, an unsure beat, a correction, or a good mood.
+  const blockUnlock = !!input.safetyNote || !!input.intent || uncertainTurn || !!input.repairActive || savouring;
   if (blockUnlock && stage === 'understood' && prevStage !== 'understood' && prevStage !== 'deepened') {
     stage = prevStage;
   }
@@ -293,11 +334,17 @@ export async function openaiGenerateTurn(
   // for an open question in THEIR language.
   const priorMenus = companionReplies.filter(isOptionMenu).length;
   const overMenuCap = priorMenus >= 1 || (companionReplies.length < 2 && !askedForNamingHelp(input.userText));
-  if (isOptionMenu(reply) && overMenuCap) reply = replaceOptionMenu(reply, priorMenus);
+  if (isOptionMenu(reply) && overMenuCap) {
+    // Rotate the replacement by turn count (not menu count, which the swap itself
+    // resets to 0) and skip the previous turn's doorway, so a menu swap never lands
+    // on the same canned open question two turns running.
+    const lastDoor = companionReplies.length ? doorwayOf(companionReplies[companionReplies.length - 1]) : null;
+    reply = replaceOptionMenu(reply, companionReplies.length, lastDoor);
+  }
 
   // Exit-cue rest (v0.4 §6.3): if they're signalling they're done, don't grab them
   // with a probing question — let them leave on a settled note.
   if (EXIT_CUE.test(input.userText)) reply = dropTrailingQuestion(reply);
 
-  return { reply: stripEmDashes(reply), event: ev, unlocked, tone, stage };
+  return { reply: stripEmDashes(stripControlChars(reply)), event: ev, unlocked, tone, stage };
 }

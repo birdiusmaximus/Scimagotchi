@@ -501,12 +501,15 @@ function stageRank(stage) {
   return RANK[stage];
 }
 var SLOW_PATH_FAMILIES = /* @__PURE__ */ new Set(["flat", "shame"]);
+var FILLER_PHRASE = /^(just am|i just am|it just is|it is what it is|the same|same as (before|always|usual)|same old|like i said|as i said|nothing really|not much|i dont know|dunno|idk|i guess|kind of|sort of|whatever)\.?$/i;
 function firstShapeEvidence(ev, prev = null) {
   const userOwnedLabel = ev.label_source === "user_stated" || ev.label_source === "user_confirmed";
   const concreteSituation = !!ev.trigger_event;
-  const userPhraseOrMetaphor = !!(ev.user_phrase && ev.user_phrase.trim()) || (ev.user_words_raw ?? "").trim().split(/\s+/).filter(Boolean).length >= 3;
+  const phrase = (ev.user_phrase ?? "").trim();
+  const phraseWords = phrase ? phrase.split(/\s+/).filter(Boolean).length : 0;
+  const userPhraseOrMetaphor = phraseWords >= 2 && !FILLER_PHRASE.test(phrase) || (ev.user_words_raw ?? "").trim().split(/\s+/).filter(Boolean).length >= 3;
   const bodyCue = ev.body_cue.length > 0 || ev.behaviour_action.length > 0;
-  const meaningOrAppraisal = !!ev.appraisal_thought || ev.need_value.length > 0;
+  const meaningOrAppraisal = !!ev.appraisal_thought;
   const mixedEmotionDistinction = ev.mixed_confirmed === 1 || (ev.strands?.length ?? 0) >= 2;
   const repeatedConfirmation = !!prev && prev.emotion_family === ev.emotion_family && !!prev.emotion_shade && !!ev.emotion_shade && prev.emotion_shade.toLowerCase() === ev.emotion_shade.toLowerCase();
   const userAcceptedReflection = ev.label_source === "user_confirmed" || ev.user_confirmation === "yes";
@@ -517,6 +520,8 @@ function firstShapeEvidence(ev, prev = null) {
     meaningOrAppraisal,
     mixedEmotionDistinction
   ].filter(Boolean).length;
+  const ownedShade = !!ev.emotion_shade && (ev.shade_source === "user_stated" || ev.shade_source === "user_confirmed");
+  const feelingCount = [bodyCue, meaningOrAppraisal, mixedEmotionDistinction, ownedShade].filter(Boolean).length;
   return {
     userOwnedLabel,
     concreteSituation,
@@ -526,7 +531,8 @@ function firstShapeEvidence(ev, prev = null) {
     mixedEmotionDistinction,
     repeatedConfirmation,
     userAcceptedReflection,
-    materialCount
+    materialCount,
+    feelingCount
   };
 }
 function evaluateStage(ev, prev = null) {
@@ -541,7 +547,7 @@ function evaluateStage(ev, prev = null) {
   const stabilityOk = e.repeatedConfirmation || e.userAcceptedReflection;
   const slow = SLOW_PATH_FAMILIES.has(ev.emotion_family);
   const enoughMaterial = slow ? e.materialCount >= 3 || e.repeatedConfirmation && e.materialCount >= 2 : e.materialCount >= 2;
-  if (!rejected && e.userOwnedLabel && stabilityOk && enoughMaterial) return "understood";
+  if (!rejected && e.userOwnedLabel && stabilityOk && enoughMaterial && e.feelingCount >= 1) return "understood";
   return anchor ? "shaped" : "named";
 }
 var ACCEPT_SHADE = /\b(yes|yeah|yep|exactly|thats? (it|right|the (one|word))|that fits|that'?s the word|the right word|good word)\b/;
@@ -600,20 +606,24 @@ var VAGUE = /( feel (off|weird|strange|odd|bad|wrong) | something is off | not r
 var GREETING = /^ (hey|hi|hiya|hello|yo|sup|morning|evening|good (morning|evening|afternoon))[ ?!]*$/;
 var EMOTION_WORD = /(angry|anger|furious|frustrat|annoyed|sad|down|grief|griev|miserable|anxious|anxiety|scared|afraid|fear|worried|dread|stressed|overwhelmed|pressure|ashamed|shame|embarrass|guilty|guilt|hurt|betrayed|rejected|lonely|numb|empty|flat|happy|excited|proud|joy|calm|peaceful|relieved|content)/;
 var HEAVY_DISCLOSURE = /(died|passed away|funeral|divorce|broke up|break up|cheated|miscarriage|diagnos|cancer|fired|laid off|redundan|assault|bullied|relapse|eviction|cant pay rent)/;
+var POSITIVE_FAMILIES = /* @__PURE__ */ new Set(["joy", "calm"]);
+var POSITIVE_WORD = /(happy|joyful|joy|delight|content|calm|peaceful|relief|relieved|grateful|glad|good (day|mood)|sparkly|light|excited|proud|at ease|chilled|serene)/;
+var SAVOUR_RX = /((dont|do not|don'?t) (want to |wanna )?(overthink|over think|analyse|analyze|dissect|pull (this|it) apart|think about it too much|get into it|unpack it|figure it out)|just (want to |wanna )?(enjoy|savou?r|feel|sit (with|in)|be in|stay (with|in)|soak (it|this) up) (it|this|the moment|here)?|let (it|this) (stay|be) (simple|light|easy)|leave it (simple|as it is|alone)|dont need to (analyse|analyze|understand|name) (it|this))/i;
 var ASK_WHAT_FEELING = /(what (is|am) (this|i) feel|what would you call|is this (anger|fear|sadness|shame|anxiety))/;
 var DIRECTIVES = {
-  repair: 'Mode: REPAIR \u2014 they just corrected or rejected your reading. Acknowledge the miss plainly and without defensiveness ("I had that wrong" / "let me step back"), drop the rejected label completely (record it as rejected, never re-propose it), lower the intensity, and either offer a low-effort correction ("what word would be closer?") or simply make room. Nothing can be marked understood on a repair turn.',
+  repair: 'Mode: REPAIR \u2014 they just corrected or rejected your reading. Acknowledge the miss plainly and without defensiveness ("I had that wrong" / "let me step back"), drop the rejected label completely (record it as rejected, never re-propose it or echo it back), lower the intensity, and either offer a low-effort correction ("what word would be closer?") or simply make room. Nothing can be marked understood on a repair turn; a corrected word becomes the word you use from here, but a correction on its own is not yet a finished shape.',
   close: "Mode: CLOSE \u2014 they are wrapping up. End with dignity in one warm sentence, in their register. No new question, no re-opening the feeling, no summary unless they asked. Vary your closing words from previous closes.",
-  hold_mixed: "Mode: HOLD MIXED \u2014 more than one feeling is present. Hold both strands without collapsing them into one label. If useful, ask ONE question about how they relate (both at once / moving between them / one underneath the other). Set mixed_relation in your output. Never force a single answer.",
-  body_first: 'Mode: BODY FIRST \u2014 they cannot or do not want to name it. Do not demand emotion words. Help them find it gently by starting from the felt sense \u2014 where it sits, its weight/temperature/movement \u2014 or what was happening when it showed up. "Unnamed for now" is a fully valid resting place; ask one soft, concrete question, never a quiz.',
+  hold_mixed: "Mode: HOLD MIXED \u2014 more than one feeling is present. Hold both strands without collapsing them into one label. If useful, ask ONE question about how they relate (both at once / moving between them / one underneath the other), but do NOT declare the relationship (which is foreground, which is underneath) yourself until they confirm it. Set mixed_relation only from what they actually say. Never force a single answer.",
+  body_first: 'Mode: BODY FIRST \u2014 they cannot or do not want to name it, or they just said "not sure". Do not demand emotion words, and do NOT re-ask a label-seeking question ("what word fits?") you have already asked \u2014 get more curious, not more confident. Open exactly ONE low-pressure door and let them take the easiest: where it sits in the body, what it makes them want to do, its texture (heavy / tense / blank / sharp / restless), or what was happening when it showed up. Say plainly that leaving it unnamed for now is completely fine; never run a quiz or a checklist.',
   soft_landing: `Mode: SOFT LANDING \u2014 a light check-in or greeting. Be warm and genuinely glad they came, and make it easy to begin ("good to hear from you \u2014 what's on your mind?"). No emotion probing, no menus, no analysis. emotion_family stays null until something surfaces.`,
   witness: "Mode: WITNESS \u2014 make them feel HEARD before anything else; you are here to listen, not to classify. Reflect ONE concrete, specific detail in their own words. Strongly prefer NO question this turn \u2014 a question now would feel extractive. If you must, make it one short, open invitation to say more.",
-  name: "Mode: NAME \u2014 a feeling word is on the table. Accept their word first; help find the closest-fitting shade only if it helps. Treat any label you supply as a tentative hypothesis, never as truth.",
+  name: 'Mode: NAME \u2014 a feeling word is on the table. Accept their word first. If it is just a bare label with nothing else yet, it is completely fine to keep it as it is ("we can keep it at that word for now") rather than push for a finer shade \u2014 do NOT default to asking "what word feels closest?". If a doorway would help, open the easiest one (body, impulse, or what was happening), not a word quiz. Treat any label you supply as a tentative hypothesis, never as truth.',
   clarify: 'Mode: CLARIFY \u2014 they sense something but it is vague ("off", "not right"). Help them identify it: reflect what you heard, then offer ONE small, gentle distinction or open question toward what it might be. It is fine to leave it broad; never push a label on.',
   meaning: "Mode: MEANING \u2014 the feeling has a name and a felt shape. Gently reach for what the moment seemed to mean or what set it off, one step only, in their words. If meaning is already clear, reflect the shape you now understand.",
-  differentiate: "Mode: DIFFERENTIATE \u2014 a family is in play but the shade is loose. Help separate nearby feelings only as far as is useful; their own word beats a precise-sounding one."
+  differentiate: "Mode: DIFFERENTIATE \u2014 a family is in play but the shade is loose. Help separate nearby feelings only as far as is useful; their own word beats a precise-sounding one.",
+  savouring: `Mode: SAVOURING \u2014 a GOOD feeling is here and they have signalled they do not want to analyse it. Let it stay simple. Mirror it lightly in their own words, and protect the moment: do NOT ask what caused it, do NOT ask for a finer label, do NOT probe or turn it into a task, and do NOT say "I'm learning" or "this has a shape". Crucially, do NOT decode the why or name extra feelings underneath it \u2014 if they said "warm" or "felt seen", reflect THAT, never "partly the connection and maybe a little relief too" or "that can carry tenderness and relief". Take the good feeling at face value. A warm one-liner is plenty ("then we can let it stay simple", "sparkly and light is enough"). At most one soft, optional invitation to stay in it; no question is also perfect.`
 };
-function routeMode(userText, prevEvent, entryHint = null) {
+function routeMode(userText, prevEvent, entryHint = null, opts = {}) {
   const t = norm(userText);
   const long = userText.trim().length > 160;
   const familyKnown = !!prevEvent?.emotion_family;
@@ -621,10 +631,13 @@ function routeMode(userText, prevEvent, entryHint = null) {
   const decide = (mode) => ({ mode, directive: DIRECTIVES[mode] });
   if (REPAIR.test(t)) return decide("repair");
   if (CLOSE.test(t)) return decide("close");
+  const positiveInPlay = POSITIVE_WORD.test(t) || !!prevEvent?.emotion_family && POSITIVE_FAMILIES.has(prevEvent.emotion_family);
+  if (positiveInPlay && SAVOUR_RX.test(userText)) return decide("savouring");
   if (MIXED.test(t)) return decide("hold_mixed");
   if (DONT_KNOW.test(t) || isUncertain(userText) || BODY_WORDS.test(t) && !EMOTION_WORD.test(t)) return decide("body_first");
   if (GREETING.test(t)) return decide("soft_landing");
   if (long && (EMOTION_WORD.test(t) || HEAVY_DISCLOSURE.test(t)) || HEAVY_DISCLOSURE.test(t)) return decide("witness");
+  if (positiveInPlay && opts.savouredEarlier && !ASK_WHAT_FEELING.test(t)) return decide("savouring");
   if (entryHint && !familyKnown) return decide(entryHint);
   if (ASK_WHAT_FEELING.test(t) || EMOTION_WORD.test(t) && !familyKnown) return decide("name");
   if (VAGUE.test(t) && !familyKnown) return decide("clarify");
@@ -632,7 +645,7 @@ function routeMode(userText, prevEvent, entryHint = null) {
   if (familyKnown) return decide("differentiate");
   return decide("witness");
 }
-var KEEP_GOING_DIRECTIVE = 'Mode: STAY WITH IT \u2014 they tapped a button to keep exploring THIS feeling, not to start over. FIRST re-read what they have ALREADY told you in this conversation, especially their last substantive message, and take it ONE STEP DEEPER from there. You have already heard a lot from them: do NOT re-ask anything they have answered, do NOT repeat a question you have asked before, and never ask them to "say it in their own words" again if they already have. Respond to the SPECIFIC thing they last said \u2014 reflect it back a little more precisely \u2014 and only then, if a question genuinely helps, open just ONE new door from it: what it costs them, what it protects or needs, what it connects to or reminds them of, a finer shade, where it sits in the body, a nearby feeling, or a tangled second strand. If the feeling is a GOOD one, sometimes simply invite them to savour and stay in it rather than analyse it ("do you want to just linger with that for a second?"). At most ONE question, using their own words. No advice, no lists, no clinical language, no restating your last reflection.';
+var KEEP_GOING_DIRECTIVE = 'Mode: STAY WITH IT \u2014 they tapped a button to keep exploring THIS feeling, not to start over. FIRST re-read what they have ALREADY told you in this conversation, especially their last substantive message, and take it ONE STEP DEEPER from there. You have already heard a lot from them: do NOT re-ask anything they have answered, do NOT repeat a question you have asked before, and never ask them to "say it in their own words" again if they already have. Respond to the SPECIFIC thing they last said \u2014 reflect it back a little more precisely \u2014 and only then, if a question genuinely helps, open just ONE new door from it: what it costs them, what it protects or needs, what it connects to or reminds them of, a finer shade, where it sits in the body, what it makes them want to do, a nearby feeling, or a tangled second strand. They CHOSE to keep going, so follow the SPECIFIC thread they just opened \u2014 do NOT hand the choice back with another "we can stay with this, or leave it here" fork, and open a DIFFERENT door than the one you opened last turn (vary body / impulse / meaning / image / nearby feeling). If the feeling is a GOOD one, sometimes simply invite them to savour and stay in it rather than analyse it ("do you want to just linger with that for a second?"). At most ONE question, using their own words. No advice, no lists, no clinical language, no restating your last reflection. CRUCIAL: a tap is not new evidence. If their last message was "not sure", a vague "yeah i guess", or just the tap itself, do NOT introduce or assert a new shade, a hidden meaning, or "the real feeling underneath" as if it were established \u2014 stay tentative, hold what is actually there, and let the next real word be theirs.';
 function intentDecision(intent, prevEvent = null) {
   if (intent === "not_quite") {
     return {
@@ -661,6 +674,7 @@ var MENU_RX = /more (like )?[\w\s]+,[\w\s]+(,| or )[\w\s]+\?/i;
 var EITHER_OR_RX = /\bis it (more |closer to |really )?[\w'’,\s]+\bor\b[\w'’\s]+\?/i;
 var CENTRE_RX = /(centre of (this|it)|center of (this|it)|sits at the centre|at the (centre|heart) of (this|it)|shape of this|(theres|there'?s|there is) a lot packed into)/i;
 var quoteFirst = (reply) => /^\s*["'“‘]/.test(reply);
+var LABEL_SEEK_RX = /(what word|which word|word feels closest|word that fits|say it in your own words|in your own words|what would you call (it|this|that)|is there a word for)/i;
 var OPTION_MENU_PATTERNS = [
   MENU_RX,
   // "more X, Y, or Z?"
@@ -678,22 +692,49 @@ var OPTION_MENU_PATTERNS = [
 function isOptionMenu(reply) {
   return OPTION_MENU_PATTERNS.some((rx) => rx.test(reply || ""));
 }
+var DOORWAY_RX = [
+  ["word", LABEL_SEEK_RX],
+  ["body", /(where (do you|does it|are you) (feel|notice|sit|land|hold|carry)|in your (body|chest|stomach|belly|throat|shoulders|jaw|gut|hands|head|face)|where(abouts)? (does it|do you) (sit|live|land))/i],
+  ["impulse", /(what (does it|do you) (make you )?want to do|what(s| is) the urge|makes you want to|pull to|want to (do|move|run|hide|reach|push|pull|leave|walk))/i],
+  ["context", /(what (was|were|is) (happening|going on)|what (set|sets) (it|this) off|what (brought|led|kicked)|when (did it|it) (show up|start|begin|come up|hit)|what (triggered|sparked)|just before)/i],
+  ["relationship", /(with (him|her|them|that person)|between (you|the two)|who (was|is|were) (it|that|they)|in that (relationship|dynamic))/i],
+  ["metaphor", /(like a |as if |an image|a picture|if (it|this) (had|were) a (shape|colour|color|texture|weight|sound))/i],
+  ["meaning", /(what (does|did|might) (it|that|this) (mean|say|point to|protect)|what(s| is| was) (it|this) about|what matters|what you (need|needed|want|value)|why (does|did) (it|that) (matter|hurt|sting|land)|what (it|that) (tells|says|reveals))/i]
+];
+function doorwayOf(reply) {
+  const r = reply || "";
+  if (!r.includes("?")) return "reflection";
+  for (const [door, rx] of DOORWAY_RX) if (rx.test(r)) return door;
+  return "other";
+}
+var FORK_RX = /\b(leave it (here|there|where|as it is)|stay with (it|that|this)|keep going|come back to (it|this)|stop here|sit with (it|that))\b[^.?!]{0,60}\bor\b[^.?!]{0,60}\b(leave it|stay with|keep going|stop|look at|come back|sit with|say more|move on|done)\b|\bor (we|you|i) (can|could)\b[^.?!]{0,50}\b(leave it (here|there)|stay with (it|that)|keep going|look at|come back|stop)\b/i;
 var OPEN_QUESTIONS = [
-  "What word feels closest?",
-  "How would you say it in your own words?",
-  "What part of it feels loudest?",
-  "What is the shape of it, even roughly?",
+  "Where do you notice it most?",
+  "What does it make you want to do?",
+  "What was happening when it showed up?",
+  "Is it more heavy, tense, blank, or restless?",
   "Would you rather keep it unnamed for now?"
 ];
 var EXIT_CUE = /\b(gotta go|got to go|gonna go|going to bed|off to bed|goodnight|good night|im done|i'?m done|leave it (here|there)|talk later|im off|head off|heading off|going now|bye|see you|night night|gtg)\b/i;
 function askedForNamingHelp(userText) {
   return /\b(what('?s| is) the word|help me name|put (a )?word|name it for me|what (would|do) you call|give me a word|what word)\b/i.test(userText || "");
 }
-function replaceOptionMenu(reply, altIndex = 0) {
+function pickOpenQuestion(altIndex = 0, avoidDoor = null) {
+  const n = OPEN_QUESTIONS.length;
+  const base = (altIndex % n + n) % n;
+  for (let k = 0; k < n; k++) {
+    const q = OPEN_QUESTIONS[(base + k) % n];
+    if (isOptionMenu(q)) continue;
+    if (avoidDoor && doorwayOf(q) === avoidDoor) continue;
+    return q;
+  }
+  return OPEN_QUESTIONS[base];
+}
+function replaceOptionMenu(reply, altIndex = 0, avoidDoor = null) {
   const parts = reply.trim().split(/(?<=[.!?])\s+/);
   for (let i = parts.length - 1; i >= 0; i--) {
     if (isOptionMenu(parts[i])) {
-      parts[i] = OPEN_QUESTIONS[(altIndex % OPEN_QUESTIONS.length + OPEN_QUESTIONS.length) % OPEN_QUESTIONS.length];
+      parts[i] = pickOpenQuestion(altIndex, avoidDoor);
       return parts.join(" ").trim();
     }
   }
@@ -729,7 +770,10 @@ function varietySignals(companionReplies) {
     quoteFirstInLast3: last3.filter(quoteFirst).length,
     eitherOrInLast3: last3.filter((r) => EITHER_OR_RX.test(r)).length,
     centrePhrasesInConvo: companionReplies.filter((r) => CENTRE_RX.test(r)).length,
-    optionMenusInConvo: companionReplies.filter(isOptionMenu).length
+    optionMenusInConvo: companionReplies.filter(isOptionMenu).length,
+    labelSeekInConvo: companionReplies.filter((r) => LABEL_SEEK_RX.test(r)).length,
+    recentDoorways: lastTwo.map(doorwayOf),
+    forkInLast2: lastTwo.filter((r) => FORK_RX.test(r)).length
   };
 }
 function varietyDirective(v) {
@@ -752,7 +796,20 @@ function varietyDirective(v) {
     parts.push('Do NOT use "centre of this", "the heart of this", "the shape of this", or "a lot packed into that" again in this conversation.');
   if (v.optionMenusInConvo >= 1)
     parts.push(
-      'You have already offered an option menu ("is it more X, Y, or...?") this conversation. Do NOT offer another. Stay with their experience: reflect, witness, or ask in their own words ("what word feels closest?"), not from a list of yours.'
+      'You have already offered an option menu ("is it more X, Y, or...?") this conversation. Do NOT offer another. Stay with their experience: reflect or witness in their own words, not from a list of yours.'
+    );
+  if (v.labelSeekInConvo >= 1)
+    parts.push(
+      'You have already asked them to find or name the word for this. Do NOT ask "what word feels closest?" (or any reword of it) again. Stay with what they actually gave you: reflect it more precisely, follow the body or the situation, or let it rest unnamed.'
+    );
+  const doors = (v.recentDoorways ?? []).filter((d) => d && d !== "reflection" && d !== "other");
+  if (doors.length >= 2 && doors[doors.length - 1] === doors[doors.length - 2])
+    parts.push(
+      `You have opened the "${doors[doors.length - 1]}" door the last two turns. If you ask anything this turn, open a DIFFERENT door \u2014 the body (where it sits), the impulse (what it makes them want to do), what was happening, a nearby feeling, or an image/metaphor \u2014 so you are not exploring the same way each time.`
+    );
+  if (v.forkInLast2 >= 1)
+    parts.push(
+      'You just offered a "stay with this, or leave it here" choice. Do NOT offer that same fork again. If they want to keep going, open ONE specific new door from what they last said, rather than handing the choice back.'
     );
   return parts.join(" ");
 }
@@ -951,6 +1008,20 @@ var PASSIVE_HOPELESSNESS = [
   "what is the point",
   "whats even the point",
   "no point anymore",
+  // "don't see the point of anything / anymore / any of this" — anchored on
+  // existential words so the agreement sense ("I see your point") never matches.
+  "see the point of anything",
+  "see the point in anything",
+  "see the point of any of this",
+  "see the point in any of this",
+  "see the point anymore",
+  "see the point in carrying on",
+  "see the point of going on",
+  "see the point of carrying on",
+  "see the point of being here",
+  "see the point of living",
+  "see the point of it all",
+  "point of anything anymore",
   "no point in any of this",
   "no point to any of this",
   "nothing matters",
@@ -1041,7 +1112,9 @@ function classifySafety(text) {
   m = anyOf(t, VIOLENCE_IMMINENT);
   if (m) return { level: 4, category: "violence_to_others", action: "urgent_modal", matched: m };
   const killingIdiom = KILLING_IDIOM.test(t);
-  const isDenied = (phrase) => !RISK_DOUBT.test(t) && new RegExp(`(not|dont|doesnt|didnt|wont|wouldnt|never|no)( [a-z]+){0,3} ${phrase}`).test(t);
+  const isDenied = (phrase) => !RISK_DOUBT.test(t) && new RegExp(
+    `(not|dont|doesnt|didnt|wont|wouldnt|never|no)( (mean|meaning|gonna|going|to|im|i am|really|ever|actually|think|thinking|plan|planning|intend|intending|want|wanting|about|like|just)){0,6} ${phrase}`
+  ).test(t);
   m = anyOf(t, SUICIDAL_IDEATION);
   if (m && !(killingIdiom && (m === "kill myself" || m === "killing myself")) && !((m === "kill myself" || m === "killing myself") && isDenied(m))) {
     return { level: 3, category: "suicidal_ideation", action: "support_modal", matched: m };
@@ -1069,6 +1142,93 @@ function classifySafety(text) {
   return OK;
 }
 
+// src/utils/text.ts
+function stripEmDashes(text) {
+  if (!text) return text;
+  return text.replace(/\s*[—–―‒]\s*/g, ", ").replace(/\s+,/g, ",").replace(/,\s*,/g, ", ").replace(/,\s*([.!?;:])/g, "$1").replace(/,\s*$/g, "").replace(/\s{2,}/g, " ").trim();
+}
+function stripControlChars(text) {
+  if (!text) return text;
+  return text.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F-\x9F]/g, "");
+}
+
+// src/services/ai/learningSentence.ts
+var HOLLOW_RX = /\b(not sure|no idea|no clue|i don'?t know|dunno|idk|hard to say|unsure|unclear|i can'?t name it)\b/i;
+var IDENTITY_CONDEMNATION = /\b(bad person|terrible person|horrible person|awful person|not good enough|not enough|a failure|fundamentally flawed|worthless|unlovable|defective|something (is )?wrong with me|broken inside|i (hate|despise) myself|a burden to)\b/i;
+function relationWord(rel) {
+  switch (rel) {
+    case "foreground_background":
+      return "one in front and one underneath";
+    case "protective_layer":
+      return "one guarding the other";
+    case "oscillating":
+      return "each taking its turn";
+    case "simultaneous":
+      return "both at once";
+    default:
+      return "";
+  }
+}
+function familyWord(f) {
+  return f && EMOTION_MAPS[f] ? EMOTION_MAPS[f].label.split(/[\s&]/)[0].toLowerCase() : "this";
+}
+function frag(s, max = 90) {
+  let t = (s ?? "").trim().replace(/^["'“”‘’]+|["'“”‘’]+$/g, "").replace(/[\s,;:.!?]+$/g, "").trim();
+  if (t.length > max) t = t.slice(0, max).replace(/\s+\S*$/, "").trim();
+  return t;
+}
+function finish(s) {
+  const t = stripEmDashes(s).replace(/\s+/g, " ").trim();
+  return /[.!?]$/.test(t) ? t : `${t}.`;
+}
+function weakPhrase(phrase, fam) {
+  const p = phrase.toLowerCase().trim();
+  if (!p || p === fam) return true;
+  if (p.split(/\s+/).length < 2) return true;
+  if (/^(than|more than|less than|rather than|like|vs|versus|not)\b/.test(p)) return true;
+  return new RegExp(`^${fam}\\b\\s+(than|vs|versus|or|not|more|less)\\b`).test(p);
+}
+function composeLearningSentence(ev, kind = "first_shape") {
+  const fam = familyWord(ev.emotion_family);
+  const Fam = fam.charAt(0).toUpperCase() + fam.slice(1);
+  const rawPhrase = frag(ev.user_phrase ?? ev.user_words_raw ?? "");
+  const phrase = isUncertain(rawPhrase) || IDENTITY_CONDEMNATION.test(rawPhrase) ? "" : rawPhrase;
+  const goodPhrase = !!phrase && !weakPhrase(phrase, fam);
+  const context = frag(ev.trigger_event ?? "", 70);
+  if (kind === "mixed") {
+    const fams = [...new Set((ev.strands ?? []).map((s) => s.family))].slice(0, 2).map(familyWord);
+    if (fams.length >= 2 && fams[0] !== fams[1]) {
+      const rel = relationWord(ev.mixed_relation);
+      return finish(`Two feelings are present: ${fams[0]} and ${fams[1]}, ${rel || "and neither has to win"}`);
+    }
+    return finish("Two feelings are here at once, and neither has to win");
+  }
+  const candidates = [
+    goodPhrase ? phrase : "",
+    frag(ev.body_cue?.[0] ?? "", 60),
+    frag(ev.behaviour_action?.[0] ?? "", 60),
+    frag(ev.appraisal_thought ?? "", 60)
+  ];
+  const feltAnchor = candidates.find((c) => c && !IDENTITY_CONDEMNATION.test(c)) ?? "";
+  if (kind === "deepened") {
+    if (feltAnchor) return finish(`This became more specific: ${feltAnchor}`);
+    if (context) return finish(`This became more specific, the way it comes up when ${context}`);
+    return finish(`I know this ${fam} a little better now than I did before`);
+  }
+  if (feltAnchor) return finish(`${Fam} has a first shape here: ${feltAnchor}`);
+  if (context) return finish(`${Fam} is starting to take shape, around ${context}`);
+  return finish(`This is the first shape of ${fam} you've shown me`);
+}
+function summaryIsClean(summary, _ev) {
+  const s = (summary ?? "").trim();
+  if (!s) return false;
+  if (HOLLOW_RX.test(s) || isUncertain(s)) return false;
+  if (IDENTITY_CONDEMNATION.test(s)) return false;
+  if (/first shape of \w+ you'?ve shown me\.?$/i.test(s)) return false;
+  if (/a little better now than i did before\.?$/i.test(s)) return false;
+  return true;
+}
+
 // src/utils/date.ts
 function nowIso() {
   return (/* @__PURE__ */ new Date()).toISOString();
@@ -1086,6 +1246,7 @@ var SENSITIVE_CONTENT = /(diagnos|medication|antidepressant|prescri|therapist sa
 function memoryBlocked(text) {
   if (!text.trim()) return true;
   if (classifySafety(text).level >= 2) return true;
+  if (IDENTITY_CONDEMNATION.test(text)) return true;
   return SENSITIVE_CONTENT.test(text);
 }
 var REMEMBER_REQUEST = /(remember (this|that)|save (this|that)|keep (this|that)( one)?|dont forget (this|that))/;
@@ -1277,21 +1438,21 @@ function advanceProgress(existing, turn, conversationId, opts = {}) {
   let to = from;
   if (!opts.suppress) {
     const firstShapeNow = turn.unlocked || ev.unlock_stage === "understood";
-    const reachedFirstShape = PROGRESS_RANK[from] >= PROGRESS_RANK.first_shape || firstShapeNow;
-    const returningNow = reachedFirstShape && p.return_count >= 1 && owned;
+    const alreadyShaped = PROGRESS_RANK[from] >= PROGRESS_RANK.first_shape;
+    const returningNow = alreadyShaped && p.return_count >= 1 && owned;
     const reachedReturning = PROGRESS_RANK[from] >= PROGRESS_RANK.returning || returningNow;
     const candidates = [
       ["noticed", true],
       // family appeared (even as hypothesis)
       ["named", owned],
       ["first_shape", firstShapeNow],
-      ["rooted", reachedFirstShape && hasContext && confirmedNow],
-      ["distinguished", reachedFirstShape && (rejectedSomething && owned || mixedNow)],
+      ["rooted", alreadyShaped && owned && hasContext && confirmedNow],
+      ["distinguished", alreadyShaped && owned && (rejectedSomething || mixedNow)],
       // "not X, more Y" / confirmed mix
       ["returning", returningNow],
-      // §13.5: a returned feeling plus integrative evidence — mixed structure,
-      // need/value, a fresh distinction, or confirmed similarity to the pattern.
-      ["deepened", reachedReturning && (mixedNow || ev.need_value.length > 0 || rejectedSomething && owned || confirmedNow)]
+      // §13.5: a returned feeling plus integrative, user-owned evidence — mixed
+      // structure, need/value, a fresh distinction, or confirmed similarity.
+      ["deepened", reachedReturning && owned && (mixedNow || ev.need_value.length > 0 || rejectedSomething || confirmedNow)]
     ];
     for (const [stage, met] of candidates) {
       if (met && PROGRESS_RANK[stage] > PROGRESS_RANK[to]) to = stage;
@@ -1400,9 +1561,9 @@ function durationFor(state) {
   return DURATIONS[state] ?? 700;
 }
 var DIFFICULT_FAMILIES = /* @__PURE__ */ new Set(["sadness", "hurt", "shame", "pressure", "fear", "anger", "flat"]);
-var POSITIVE_FAMILIES = /* @__PURE__ */ new Set(["joy", "calm"]);
+var POSITIVE_FAMILIES2 = /* @__PURE__ */ new Set(["joy", "calm"]);
 function isPositiveFamily(f) {
-  return !!f && POSITIVE_FAMILIES.has(f);
+  return !!f && POSITIVE_FAMILIES2.has(f);
 }
 function isDifficultFamily(f) {
   return !!f && DIFFICULT_FAMILIES.has(f);
@@ -1472,53 +1633,6 @@ function expressionFor(family, visual) {
     };
   }
   return base;
-}
-
-// src/utils/text.ts
-function stripEmDashes(text) {
-  if (!text) return text;
-  return text.replace(/\s*[—–―‒]\s*/g, ", ").replace(/\s+,/g, ",").replace(/,\s*,/g, ", ").replace(/,\s*([.!?;:])/g, "$1").replace(/,\s*$/g, "").replace(/\s{2,}/g, " ").trim();
-}
-
-// src/services/ai/learningSentence.ts
-function familyWord(f) {
-  return f && EMOTION_MAPS[f] ? EMOTION_MAPS[f].label.split(/[\s&]/)[0].toLowerCase() : "this";
-}
-function frag(s, max = 90) {
-  let t = (s ?? "").trim().replace(/^["'“”‘’]+|["'“”‘’]+$/g, "").replace(/[\s,;:.!?]+$/g, "").trim();
-  if (t.length > max) t = t.slice(0, max).replace(/\s+\S*$/, "").trim();
-  return t;
-}
-function textureOf(ev) {
-  return frag(ev.body_cue?.[0] ?? ev.appraisal_thought ?? ev.need_value?.[0] ?? "", 60);
-}
-function finish(s) {
-  const t = stripEmDashes(s).replace(/\s+/g, " ").trim();
-  return /[.!?]$/.test(t) ? t : `${t}.`;
-}
-function composeLearningSentence(ev, kind = "first_shape") {
-  const fam = familyWord(ev.emotion_family);
-  const rawPhrase = frag(ev.user_phrase ?? ev.user_words_raw ?? "");
-  const phrase = isUncertain(rawPhrase) ? "" : rawPhrase;
-  const context = frag(ev.trigger_event ?? "", 70);
-  const texture = textureOf(ev);
-  if (kind === "mixed") {
-    const fams = [...new Set((ev.strands ?? []).map((s) => s.family))].slice(0, 2).map(familyWord);
-    if (fams.length >= 2 && fams[0] !== fams[1]) {
-      return finish(`I am learning that ${fams[0]} and ${fams[1]} can sit in you at the same time, and neither has to win`);
-    }
-    return finish("I am learning that more than one feeling can sit in you at once, and neither has to win");
-  }
-  if (kind === "deepened") {
-    if (phrase && context) return finish(`I know this a little better now: ${phrase}, the way it comes up when ${context}`);
-    if (phrase) return finish(`I know this a little better now: ${phrase}`);
-    return finish(`I know this ${fam} a little better now than I did before`);
-  }
-  if (phrase && context) return finish(`I think I'm learning that for you, ${fam} can feel like ${phrase}, especially when ${context}`);
-  if (phrase && texture) return finish(`This one has a shape now: ${phrase}, with ${texture} in it, not just ${fam}`);
-  if (phrase) return finish(`I think this is the first shape of ${fam} you've shown me: ${phrase}`);
-  if (context) return finish(`I think this is the first shape of ${fam} you've shown me, the way it comes up when ${context}`);
-  return finish(`I think this is the first shape of ${fam} you've shown me`);
 }
 
 // src/services/ai/emotionAnimations.ts
@@ -1705,6 +1819,7 @@ export {
   EMOTION_BEATS,
   EMOTION_CYCLE_ORDER,
   EXIT_CUE,
+  IDENTITY_CONDEMNATION,
   MOTION_CONFIG,
   POSE_TARGETS,
   PROGRESS_RANK,
@@ -1716,6 +1831,7 @@ export {
   composeLearningSentence,
   composeWeeklySummary,
   detectShadeRejection,
+  doorwayOf,
   draftFromRejection,
   draftFromTurn,
   dropTrailingQuestion,
@@ -1751,7 +1867,9 @@ export {
   shadeIsUserOwned,
   softenUnownedEmotionReply,
   stageRank,
+  stripControlChars,
   stripEmDashes,
+  summaryIsClean,
   userConfirmsLabel,
   varietyDirective,
   varietySignals,

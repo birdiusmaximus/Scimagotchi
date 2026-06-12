@@ -44,6 +44,9 @@ export interface VarietySignals {
   eitherOrInLast3: number; // "is it more X or Y?" two-option questions in the last 3
   centrePhrasesInConvo: number; // scaffold phrases ("centre of this", "packed into that") used so far
   optionMenusInConvo: number; // option-menu questions used so far this conversation (§4.1 cap)
+  labelSeekInConvo: number; // "what word feels closest?"-style prompts used so far (don't repeat)
+  recentDoorways: string[]; // the doorway each of the last two companion turns opened
+  forkInLast2: number; // "stay with this, or leave it here" choices in the last two replies
 }
 
 const MENU_RX = /more (like )?[\w\s]+,[\w\s]+(,| or )[\w\s]+\?/i;
@@ -55,6 +58,11 @@ const CENTRE_RX =
   /(centre of (this|it)|center of (this|it)|sits at the centre|at the (centre|heart) of (this|it)|shape of this|(theres|there'?s|there is) a lot packed into)/i;
 /** A reply that opens by quoting the user (starts with a quote mark). */
 const quoteFirst = (reply: string) => /^\s*["'“‘]/.test(reply);
+// Generic label-seeking prompts ("what word feels closest?", "say it in your own
+// words") — fine once, grating when repeated, especially after the user has
+// already answered or said they don't know (recommendations brief §6).
+const LABEL_SEEK_RX =
+  /(what word|which word|word feels closest|word that fits|say it in your own words|in your own words|what would you call (it|this|that)|is there a word for)/i;
 
 // Every option-menu shape the model drifts into (v0.4 §4.1 — the new crutch:
 // "is it more X, Y, or something else?"). Used for the per-conversation cap.
@@ -72,12 +80,40 @@ export function isOptionMenu(reply: string): boolean {
   return OPTION_MENU_PATTERNS.some((rx) => rx.test(reply || ''));
 }
 
-// Open questions that invite the user's OWN language instead of a menu (§6.2).
+// Which "doorway" a companion reply opened, so we can rotate them and not explore the
+// same way two turns running (persona-flow benchmark: variety was the weakest dim, with
+// meaning/reflection over-used). Order matters — felt doors are matched before meaning.
+const DOORWAY_RX: [string, RegExp][] = [
+  ['word', LABEL_SEEK_RX],
+  ['body', /(where (do you|does it|are you) (feel|notice|sit|land|hold|carry)|in your (body|chest|stomach|belly|throat|shoulders|jaw|gut|hands|head|face)|where(abouts)? (does it|do you) (sit|live|land))/i],
+  ['impulse', /(what (does it|do you) (make you )?want to do|what(s| is) the urge|makes you want to|pull to|want to (do|move|run|hide|reach|push|pull|leave|walk))/i],
+  ['context', /(what (was|were|is) (happening|going on)|what (set|sets) (it|this) off|what (brought|led|kicked)|when (did it|it) (show up|start|begin|come up|hit)|what (triggered|sparked)|just before)/i],
+  ['relationship', /(with (him|her|them|that person)|between (you|the two)|who (was|is|were) (it|that|they)|in that (relationship|dynamic))/i],
+  ['metaphor', /(like a |as if |an image|a picture|if (it|this) (had|were) a (shape|colour|color|texture|weight|sound))/i],
+  ['meaning', /(what (does|did|might) (it|that|this) (mean|say|point to|protect)|what(s| is| was) (it|this) about|what matters|what you (need|needed|want|value)|why (does|did) (it|that) (matter|hurt|sting|land)|what (it|that) (tells|says|reveals))/i],
+];
+
+/** Classify the doorway a companion reply opened (a question type), or 'reflection' if
+ *  it asks nothing. Used to rotate doorways across turns. */
+export function doorwayOf(reply: string): string {
+  const r = reply || '';
+  if (!r.includes('?')) return 'reflection';
+  for (const [door, rx] of DOORWAY_RX) if (rx.test(r)) return door;
+  return 'other';
+}
+
+// The "stay with this, or leave it here" choice the companion over-offers — fine once,
+// grating when handed back every turn instead of opening a new door (benchmark fix #2).
+const FORK_RX =
+  /\b(leave it (here|there|where|as it is)|stay with (it|that|this)|keep going|come back to (it|this)|stop here|sit with (it|that))\b[^.?!]{0,60}\bor\b[^.?!]{0,60}\b(leave it|stay with|keep going|stop|look at|come back|sit with|say more|move on|done)\b|\bor (we|you|i) (can|could)\b[^.?!]{0,50}\b(leave it (here|there)|stay with (it|that)|keep going|look at|come back|stop)\b/i;
+
+// Doorway questions that invite the user's OWN experience instead of a menu of labels
+// (§6.2). Words are not the default doorway — body, impulse and context come first.
 const OPEN_QUESTIONS = [
-  'What word feels closest?',
-  'How would you say it in your own words?',
-  'What part of it feels loudest?',
-  'What is the shape of it, even roughly?',
+  'Where do you notice it most?',
+  'What does it make you want to do?',
+  'What was happening when it showed up?',
+  'Is it more heavy, tense, blank, or restless?',
   'Would you rather keep it unnamed for now?',
 ];
 
@@ -91,12 +127,28 @@ export function askedForNamingHelp(userText: string): boolean {
   return /\b(what('?s| is) the word|help me name|put (a )?word|name it for me|what (would|do) you call|give me a word|what word)\b/i.test(userText || '');
 }
 
-/** Swap a trailing option-menu question for an open one (keeps the reflection). */
-export function replaceOptionMenu(reply: string, altIndex = 0): string {
+/** Pick an open doorway question, rotating from altIndex while skipping anything that is
+ *  itself an option menu and (optionally) the door we just used last turn — so two
+ *  menu-swapping turns in a row never land on the identical question. */
+export function pickOpenQuestion(altIndex = 0, avoidDoor: string | null = null): string {
+  const n = OPEN_QUESTIONS.length;
+  const base = ((altIndex % n) + n) % n;
+  for (let k = 0; k < n; k++) {
+    const q = OPEN_QUESTIONS[(base + k) % n];
+    if (isOptionMenu(q)) continue; // never replace a menu with another menu
+    if (avoidDoor && doorwayOf(q) === avoidDoor) continue; // don't repeat last turn's door
+    return q;
+  }
+  return OPEN_QUESTIONS[base];
+}
+
+/** Swap a trailing option-menu question for an open one (keeps the reflection). The
+ *  optional avoidDoor keeps consecutive swaps from reusing the same doorway. */
+export function replaceOptionMenu(reply: string, altIndex = 0, avoidDoor: string | null = null): string {
   const parts = reply.trim().split(/(?<=[.!?])\s+/);
   for (let i = parts.length - 1; i >= 0; i--) {
     if (isOptionMenu(parts[i])) {
-      parts[i] = OPEN_QUESTIONS[((altIndex % OPEN_QUESTIONS.length) + OPEN_QUESTIONS.length) % OPEN_QUESTIONS.length];
+      parts[i] = pickOpenQuestion(altIndex, avoidDoor);
       return parts.join(' ').trim();
     }
   }
@@ -139,6 +191,9 @@ export function varietySignals(companionReplies: string[]): VarietySignals {
     eitherOrInLast3: last3.filter((r) => EITHER_OR_RX.test(r)).length,
     centrePhrasesInConvo: companionReplies.filter((r) => CENTRE_RX.test(r)).length,
     optionMenusInConvo: companionReplies.filter(isOptionMenu).length,
+    labelSeekInConvo: companionReplies.filter((r) => LABEL_SEEK_RX.test(r)).length,
+    recentDoorways: lastTwo.map(doorwayOf),
+    forkInLast2: lastTwo.filter((r) => FORK_RX.test(r)).length,
   };
 }
 
@@ -163,7 +218,22 @@ export function varietyDirective(v: VarietySignals): string {
     parts.push('Do NOT use "centre of this", "the heart of this", "the shape of this", or "a lot packed into that" again in this conversation.');
   if (v.optionMenusInConvo >= 1)
     parts.push(
-      'You have already offered an option menu ("is it more X, Y, or...?") this conversation. Do NOT offer another. Stay with their experience: reflect, witness, or ask in their own words ("what word feels closest?"), not from a list of yours.',
+      'You have already offered an option menu ("is it more X, Y, or...?") this conversation. Do NOT offer another. Stay with their experience: reflect or witness in their own words, not from a list of yours.',
+    );
+  if (v.labelSeekInConvo >= 1)
+    parts.push(
+      'You have already asked them to find or name the word for this. Do NOT ask "what word feels closest?" (or any reword of it) again. Stay with what they actually gave you: reflect it more precisely, follow the body or the situation, or let it rest unnamed.',
+    );
+  // Doorway rotation: don't explore the same way two turns running.
+  const doors = (v.recentDoorways ?? []).filter((d) => d && d !== 'reflection' && d !== 'other');
+  if (doors.length >= 2 && doors[doors.length - 1] === doors[doors.length - 2])
+    parts.push(
+      `You have opened the "${doors[doors.length - 1]}" door the last two turns. If you ask anything this turn, open a DIFFERENT door — the body (where it sits), the impulse (what it makes them want to do), what was happening, a nearby feeling, or an image/metaphor — so you are not exploring the same way each time.`,
+    );
+  // Don't hand back the same "stay or leave" choice every turn.
+  if (v.forkInLast2 >= 1)
+    parts.push(
+      'You just offered a "stay with this, or leave it here" choice. Do NOT offer that same fork again. If they want to keep going, open ONE specific new door from what they last said, rather than handing the choice back.',
     );
   return parts.join(' ');
 }

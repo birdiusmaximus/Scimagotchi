@@ -3,6 +3,7 @@ export { mixedConfirmed, sanitizeStrands } from '@/services/ai/mixedEmotion';
 export { intentDecision, routeMode, type ChipIntent, type ConversationMode, type ModeDecision } from '@/services/ai/modeRouter';
 export {
   askedForNamingHelp,
+  doorwayOf,
   dropTrailingQuestion,
   EXIT_CUE,
   isDuplicateReply,
@@ -44,7 +45,7 @@ export {
   type CompanionMotionState,
 } from '@/services/ai/companionPose';
 export { expressionFor } from '@/services/ai/orbExpression';
-export { composeLearningSentence, type LearningKind } from '@/services/ai/learningSentence';
+export { composeLearningSentence, summaryIsClean, IDENTITY_CONDEMNATION, type LearningKind } from '@/services/ai/learningSentence';
 export {
   EMOTION_BEATS,
   EMOTION_CYCLE_ORDER,
@@ -53,4 +54,4 @@ export {
   sequenceDuration,
 } from '@/services/ai/emotionAnimations';
 export { composeWeeklySummary } from '@/services/ai/weeklyNarrative';
-export { stripEmDashes } from '@/utils/text';
+export { stripControlChars, stripEmDashes } from '@/utils/text';

@@ -76,6 +76,31 @@ check('returning + need/value evidence -> deepened', (() => {
   const p = { ...emptyProgress('pressure'), current_stage: 'returning', return_count: 1, last_conversation_id: 'c2' };
   return advanceProgress(p, turn({}, { label_source: 'user_confirmed', need_value: ['rest'] }), 'c3').to;
 })(), 'deepened');
+// ── Evidence-led discipline (recommendations brief §2-3) ─────────────────────
+// No same-turn multi-stage jumps: deepening needs a PRIOR-established first shape.
+check('rich first turn (owned + confirmed mix) reaches first_shape, NOT distinguished', (() => {
+  return advanceProgress(null, turn({ unlocked: true }, {
+    label_source: 'user_stated', unlock_stage: 'understood', mixed_confirmed: 1, mixed_relation: 'foreground_background',
+    strands: [
+      { family: 'pressure', shade: null, salience: 'foreground', source: 'user_stated' },
+      { family: 'fear', shade: null, salience: 'background', source: 'user_stated' },
+    ],
+  }), 'c1').to;
+})(), 'first_shape');
+check('named + mix in one turn cannot jump to distinguished (deep needs prior first_shape)', (() => {
+  const p = { ...emptyProgress('pressure'), current_stage: 'named', last_conversation_id: 'c1' };
+  return advanceProgress(p, turn({ unlocked: true }, { label_source: 'user_stated', unlock_stage: 'understood', mixed_confirmed: 1 }), 'c1').to;
+})(), 'first_shape');
+// Companion-hypothesis evidence cannot drive deepening (must be user-owned).
+check('companion-hypothesis label + context + bare yes does NOT reach rooted', (() => {
+  const p = { ...emptyProgress('pressure'), current_stage: 'first_shape', last_conversation_id: 'c1' };
+  return advanceProgress(p, turn({}, { label_source: 'companion_hypothesis', user_confirmation: 'yes', trigger_event: 'deadlines' }), 'c1').to;
+})(), 'first_shape');
+check('companion-hypothesis confirmed mix does NOT reach distinguished', (() => {
+  const p = { ...emptyProgress('pressure'), current_stage: 'first_shape', last_conversation_id: 'c1' };
+  return advanceProgress(p, turn({}, { label_source: 'companion_hypothesis', mixed_confirmed: 1 }), 'c1').to;
+})(), 'first_shape');
+
 check('monotonic: a later weak turn never lowers the stage', (() => {
   const p = { ...emptyProgress('pressure'), current_stage: 'deepened', last_conversation_id: 'c3' };
   return advanceProgress(p, turn(), 'c3').to;

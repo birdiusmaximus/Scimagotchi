@@ -8,7 +8,9 @@
 import {
   askedForNamingHelp,
   composeLearningSentence,
+  summaryIsClean,
   detectShadeRejection,
+  doorwayOf,
   dropTrailingQuestion,
   evaluateStage,
   EXIT_CUE,
@@ -43,6 +45,7 @@ import {
   shadeIsUserOwned,
   SLOW_PATH_FAMILIES,
   softenUnownedEmotionReply,
+  stripControlChars,
   stripEmDashes,
   userConfirmsLabel,
   varietyDirective,
@@ -99,6 +102,13 @@ check('stage (v0.4): appraisal + body cue (2 material signals) DOES unlock',
   ), 'understood');
 check('stage: owned label but NO anchor -> named',
   evaluateStage(ev({ label_source: 'user_confirmed', trigger_event: null, body_cue: [], user_words_raw: '' }), null), 'named');
+// Feeling vs scene evidence (brief §1,3,5): context/scene alone never reaches understood.
+check('stage: context-only (owned label + trigger + scene phrase, no felt signal) -> shaped, not understood',
+  evaluateStage(ev({ label_source: 'user_confirmed', emotion_shade: 'pressured', shade_source: 'companion_hypothesis', trigger_event: 'everyone wants a piece of me at work', user_phrase: 'everyone wants a piece of me at work', body_cue: [], behaviour_action: [], appraisal_thought: null, user_words_raw: '' }), null), 'shaped');
+check('stage: a felt body cue makes it understood (feeling signal present)',
+  evaluateStage(ev({ label_source: 'user_confirmed', emotion_shade: 'pressured', shade_source: 'companion_hypothesis', trigger_event: 'everyone wants a piece of me at work', body_cue: ['pulled apart'], appraisal_thought: null }), null), 'understood');
+check('stage: a user-owned shade is itself a feeling signal -> understood',
+  evaluateStage(ev({ label_source: 'user_stated', emotion_shade: 'pulled apart', shade_source: 'user_stated', trigger_event: 'work', user_phrase: 'pulled apart', body_cue: [], appraisal_thought: null, user_confirmation: 'yes' }), null), 'understood');
 check('stage: no shade -> shaped when anchored', evaluateStage(ev({ emotion_shade: null }), null), 'shaped');
 check('stage: no family -> noticed', evaluateStage(ev({ emotion_family: null }), null), 'noticed');
 check('stage: shade changed since prev (not stable, no confirm) -> shaped',
@@ -107,6 +117,14 @@ check('stage: shade changed since prev (not stable, no confirm) -> shaped',
 // ── First-Shape richness threshold (v0.4 §6.4) ───────────────────────────────
 check('richness: counts material signals (trigger + body = 2)', firstShapeEvidence(ev()).materialCount, 2);
 check('richness: lone signal counts as 1', firstShapeEvidence(ev({ trigger_event: null, body_cue: [], user_words_raw: '', appraisal_thought: 'x' })).materialCount, 1);
+// over-eager-unlock guards (recommendations brief §2-3)
+check('richness: an inferred need alone is NOT material', firstShapeEvidence(ev({ trigger_event: null, body_cue: [], user_words_raw: '', appraisal_thought: null, need_value: ['respect', 'autonomy'] })).materialCount, 0);
+check('richness: a filler phrase ("just am") is not material', firstShapeEvidence(ev({ trigger_event: null, body_cue: [], user_words_raw: '', appraisal_thought: null, user_phrase: 'just am' })).materialCount, 0);
+check('richness: a real 2-word metaphor ("pulled thin") still counts', firstShapeEvidence(ev({ trigger_event: null, body_cue: [], user_words_raw: '', appraisal_thought: null, user_phrase: 'pulled thin' })).materialCount, 1);
+check('stage: bare label + "just am" + inferred need does NOT unlock', evaluateStage(
+  ev({ label_source: 'user_stated', trigger_event: null, body_cue: [], appraisal_thought: null, user_words_raw: '', user_phrase: 'just am', need_value: ['respect', 'autonomy'] }),
+  ev({ label_source: 'user_stated', trigger_event: null, body_cue: [], appraisal_thought: null }),
+), 'named');
 check('richness: user phrase (3+ words) counts as a signal',
   firstShapeEvidence(ev({ trigger_event: null, body_cue: [], user_words_raw: 'pulled too thin lately' })).userPhraseOrMetaphor, true);
 check('richness: mixed-emotion distinction counts',
@@ -174,24 +192,36 @@ check('anchor: an empty/unsure turn has no anchor', hasEmotionAnchor(ev({ emotio
 // composeLearningSentence must never echo "not sure" as a learned phrase
 check('learn: never builds a sentence from "not sure"', composeLearningSentence(ev({ emotion_family: 'shame', user_phrase: 'not sure', trigger_event: null, body_cue: [], appraisal_thought: null, user_words_raw: 'not sure' }), 'deepened').toLowerCase().includes('not sure'), false);
 
-// ── Companion learning sentence (v0.4 §6.5) ──────────────────────────────────
+// ── Companion learning sentence — restrained templates (brief §6) ────────────
 const ls1 = composeLearningSentence(ev({ emotion_family: 'pressure', user_phrase: 'pulled thin', trigger_event: 'everyone needs a piece of me' }), 'first_shape');
-check('learn: uses the family word in their language', /pressure can feel like/i.test(ls1), true);
-check('learn: embeds the user\'s exact phrase', ls1.includes('pulled thin'), true);
-check('learn: embeds the situation', /everyone needs a piece of me/.test(ls1), true);
+check('learn: first shape uses the restrained "has a first shape here" form', /pressure has a first shape here/i.test(ls1), true);
+check('learn: first shape embeds the user\'s felt anchor', ls1.includes('pulled thin'), true);
 check('learn: ends as a sentence', /[.!?]$/.test(ls1), true);
 check('learn: no em or en dashes', !/[—–]/.test(ls1), true);
 check('learn: no "you are someone who" overclaim', !/you are someone who/i.test(ls1), true);
+check('learn: no "not just X" filler', !/not just/i.test(ls1), true);
 const ls2 = composeLearningSentence(ev({ emotion_family: 'fear', user_phrase: 'waiting in the not knowing', trigger_event: null, body_cue: [], appraisal_thought: null, user_words_raw: '' }), 'first_shape');
-check('learn: phrase-only -> "first shape ... you\'ve shown me"', /first shape of fear you'?ve shown me/i.test(ls2), true);
-check('learn: phrase-only embeds the phrase', ls2.includes('waiting in the not knowing'), true);
+check('learn: a metaphor phrase is the anchor', /fear has a first shape here: waiting in the not knowing/i.test(ls2), true);
 const lsMix = composeLearningSentence(ev({ strands: [{ family: 'anger', shade: null, salience: 'equal', source: 'user_stated' }, { family: 'hurt', shade: null, salience: 'equal', source: 'user_stated' }] }), 'mixed');
-check('learn: mixed names both families', /anger and hurt|hurt and anger/i.test(lsMix), true);
-check('learn: mixed says neither has to win', /neither has to win/i.test(lsMix), true);
+check('learn: mixed uses "Two feelings are present" + both families', /two feelings are present: (anger and hurt|hurt and anger)/i.test(lsMix), true);
+const lsRel = composeLearningSentence(ev({ mixed_relation: 'foreground_background', strands: [{ family: 'anger', shade: null, salience: 'foreground', source: 'user_stated' }, { family: 'hurt', shade: null, salience: 'background', source: 'user_stated' }] }), 'mixed');
+check('learn: mixed names the relationship when known', /one in front and one underneath/i.test(lsRel), true);
 const lsDeep = composeLearningSentence(ev({ emotion_family: 'sadness', user_phrase: 'a quiet heaviness', trigger_event: 'sundays' }), 'deepened');
-check('learn: deepened reads as knowing it better', /know this a little better/i.test(lsDeep), true);
+check('learn: deepened uses "became more specific" + anchor', /this became more specific: a quiet heaviness/i.test(lsDeep), true);
 check('learn: empty-ish event still yields a safe sentence',
   /first shape/i.test(composeLearningSentence(ev({ emotion_family: 'calm', user_phrase: null, user_words_raw: '', trigger_event: null, body_cue: [], appraisal_thought: null, need_value: [] }), 'first_shape')), true);
+const lsDup = composeLearningSentence(ev({ emotion_family: 'pressure', user_phrase: 'everyone wants a piece of me at work', trigger_event: 'everyone wants a piece of me at work', body_cue: [], appraisal_thought: null, need_value: [] }), 'first_shape');
+check('learn: never echoes the same fragment twice', (lsDup.toLowerCase().match(/everyone wants a piece of me at work/g) || []).length, 1);
+const lsWeak = composeLearningSentence(ev({ emotion_family: 'pressure', user_phrase: 'pressure than stress', trigger_event: 'everyone wants a piece of me', body_cue: [], appraisal_thought: null, need_value: [] }), 'deepened');
+check('learn: drops a phrase that just restates the family', /pressure than stress/i.test(lsWeak), false);
+check('learn: weak-phrase deepened still anchors on context', /comes up when everyone wants a piece of me/i.test(lsWeak), true);
+// Copy validator + identity guard (brief §6,7,13)
+check('summary: a clean felt-anchor summary passes', summaryIsClean('Pressure has a first shape here: pulled thin.'), true);
+check('summary: the bare generic fallback is rejected', summaryIsClean("This is the first shape of shame you've shown me."), false);
+check('summary: an identity-condemnation summary is rejected', summaryIsClean('Shame has a first shape here: i am a bad person.'), false);
+check('summary: a "not sure" summary is rejected', summaryIsClean('This became more specific: not sure.'), false);
+check('learn: identity self-condemnation never becomes the anchor',
+  /bad person|not good enough/i.test(composeLearningSentence(ev({ emotion_family: 'shame', user_phrase: 'im a bad person', appraisal_thought: 'im a bad person', body_cue: ['chest tight'], trigger_event: null }), 'first_shape')), false);
 
 // ── Ownership backstop: the user must name/confirm the feeling (stage.ts) ─────
 check('owned: described situation, never named the feeling -> not owned',
@@ -265,6 +295,20 @@ check('router: entry hint soft_landing for check-in', routeMode('not much, just 
 check('router: repair overrides entry hint', routeMode("no that's not it", null, 'witness').mode, 'repair');
 check('router: heavy disclosure overrides a light check-in hint', routeMode('my mum passed away yesterday', null, 'soft_landing').mode, 'witness');
 
+// ── Sticky savour: a savoured positive stays protected on later warm-detail turns ─
+check('savour: explicit "just want to enjoy it" on a positive -> savouring',
+  routeMode('i just want to enjoy it', ev({ emotion_family: 'joy' }), null).mode, 'savouring');
+check('savour: a savoured positive + neutral warm detail -> stays savouring (no analysis flip)',
+  routeMode('my brother called and it felt warm', ev({ emotion_family: 'joy' }), null, { savouredEarlier: true }).mode, 'savouring');
+check('savour: WITHOUT an earlier savour, the same turn analyses (meaning)',
+  routeMode('my brother called and it felt warm', ev({ emotion_family: 'joy' }), null, { savouredEarlier: false }).mode, 'meaning');
+check('savour: a genuine shift to mixed still wins over sticky savour',
+  routeMode('happy but also anxious now', ev({ emotion_family: 'joy' }), null, { savouredEarlier: true }).mode, 'hold_mixed');
+check('savour: a shift to uncertainty still wins over sticky savour',
+  routeMode('i dont know, it feels weird now', ev({ emotion_family: 'joy' }), null, { savouredEarlier: true }).mode, 'body_first');
+check('savour: stickiness only applies to positive families',
+  routeMode('it still sits with me', ev({ emotion_family: 'sadness' }), null, { savouredEarlier: true }).mode, 'meaning');
+
 // ── Continuation-chip intents (Stay with it / Not quite / I'm done) ──────────
 const kgKnown = intentDecision('keep_going', ev({ label_source: 'user_stated' }));
 check('intent: keep_going (shaped) -> meaning mode', kgKnown.mode, 'meaning');
@@ -304,6 +348,12 @@ check('strip: dash before full stop collapses', stripEmDashes('that’s it —.'
 check('strip: keeps ordinary hyphens', stripEmDashes('self-harm and worn-down feelings'), 'self-harm and worn-down feelings');
 check('strip: no dash is unchanged', stripEmDashes('That feels like a lot today.'), 'That feels like a lot today.');
 
+// ── Control-char scrub (the "That" glitch the benchmark surfaced) ───────────
+check('ctrl: strips a mid-word control char', stripControlChars('That feels nice'), 'That feels nice');
+check('ctrl: strips DEL', stripControlChars('warmth'), 'warmth');
+check('ctrl: keeps tab and newline', stripControlChars('a\tb\nc'), 'a\tb\nc');
+check('ctrl: clean text is unchanged', stripControlChars('That feels nice.'), 'That feels nice.');
+
 // ── Variety signals ──────────────────────────────────────────────────────────
 const v = varietySignals([
   'That sounds heavy, like a lot to carry. What part is loudest?',
@@ -311,6 +361,37 @@ const v = varietySignals([
 ]);
 check('variety: repeated "that sounds" opener flagged', v.overusedOpener, 'that sounds');
 check('variety: question streak counted', v.questionStreak, 2);
+// repeated label-seeking prompt suppression (recommendations brief §6)
+const vLabel = varietySignals(['What word feels closest?', 'That sounds heavy to carry.']);
+check('variety: label-seeking prompt counted', vLabel.labelSeekInConvo, 1);
+check('variety: bans repeating the label-seeking prompt', /what word feels closest/i.test(varietyDirective(vLabel)) && /do not ask/i.test(varietyDirective(vLabel)), true);
+
+// ── Doorway rotation + no-repeat fork (persona-flow benchmark fixes #1-2) ─────
+// doorwayOf classifies the question-type a reply opens (or 'reflection' if none).
+check('doorway: body question -> body', doorwayOf('Where do you feel it in your body?'), 'body');
+check('doorway: impulse question -> impulse', doorwayOf('What does it make you want to do?'), 'impulse');
+check('doorway: context question -> context', doorwayOf('What was happening when it showed up?'), 'context');
+check('doorway: meaning question -> meaning', doorwayOf('What does it mean to you?'), 'meaning');
+check('doorway: metaphor question -> metaphor', doorwayOf('If it had a shape or colour, what would it be?'), 'metaphor');
+check('doorway: label-seek question -> word', doorwayOf('What word feels closest?'), 'word');
+check('doorway: relationship question -> relationship', doorwayOf('Was that with him, or someone else?'), 'relationship');
+check('doorway: a reply with no question -> reflection', doorwayOf('That sounds heavy to carry.'), 'reflection');
+check('doorway: a question matching no door -> other', doorwayOf('Does that fit?'), 'other');
+// recentDoorways tracks the last two turns; the directive fires when the same door repeats.
+const vDoor = varietySignals(['What does this mean to you?', 'What is this about, underneath?']);
+check('doorway: recentDoorways records both turns', vDoor.recentDoorways, ['meaning', 'meaning']);
+check('doorway: rotation directive fires when the same door repeats',
+  /opened the "meaning" door the last two turns/i.test(varietyDirective(vDoor)), true);
+// A varied history (body then impulse) must NOT trigger the rotation note.
+const vVaried = varietySignals(['Where do you feel it most?', 'What does it make you want to do?']);
+check('doorway: rotation directive silent on a varied history',
+  /opened the ".*" door the last two turns/i.test(varietyDirective(vVaried)), false);
+// FORK_RX catches the "stay with this, or leave it here" choice; the directive bans a repeat.
+const vFork = varietySignals(['We can stay with this, or leave it here for now.']);
+check('doorway: a stay/leave fork is counted', vFork.forkInLast2, 1);
+check('doorway: no-fork directive fires after a fork',
+  /do NOT offer that same fork again/i.test(varietyDirective(vFork)), true);
+check('doorway: no-fork directive silent without a fork', vVaried.forkInLast2, 0);
 
 // ── Visible-reply ownership gate (§5.1) ──────────────────────────────────────
 check('ownership: declarative "this is X" is an assertion',
@@ -370,6 +451,14 @@ check('menu: replace varies the open question by index',
   replaceOptionMenu('Is it X or Y?', 0) !== replaceOptionMenu('Is it X or Y?', 1), true);
 check('menu: replace index wraps deterministically',
   replaceOptionMenu('Is it X or Y?', 0) === replaceOptionMenu('Is it X or Y?', 5), true);
+// The swap must never land on another menu, and never reuse the previous turn's door
+// (the repeat-"Where do you notice it most?" bug the live replay surfaced).
+check('menu: replace never lands on another menu question',
+  isOptionMenu(replaceOptionMenu('Is it more A, B, or C?', 3)), false);
+check('menu: replace avoids the prior turn\'s doorway',
+  doorwayOf(replaceOptionMenu('Is it X or Y?', 0, 'body')) !== 'body', true);
+check('menu: two consecutive menu swaps open different doors',
+  doorwayOf(replaceOptionMenu('Is it X or Y?', 0, null)) !== doorwayOf(replaceOptionMenu('Is it more X, Y, or Z?', 1, 'body')), true);
 
 // ── Naming-help + exit cues (v0.4 §6.2/§6.3) ─────────────────────────────────
 check('naming: "what\'s the word for this?" asks for naming help', askedForNamingHelp("what's the word for this?"), true);

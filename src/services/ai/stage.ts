@@ -48,7 +48,16 @@ export interface FirstShapeEvidence {
   userAcceptedReflection: boolean;
   /** Count of the five MATERIAL signals — the "is there enough to understand?" measure. */
   materialCount: number;
+  /** Count of FEELING signals (body/impulse, meaning, mixed, user-owned shade) — how
+   *  the emotion FELT, as opposed to SCENE evidence (what happened). A first shape needs
+   *  at least one feeling signal; context alone is never enough (brief §1,3,5). */
+  feelingCount: number;
 }
+
+// Deflection / filler "phrases" that carry no emotional material — a bare label
+// followed by one of these must not be mistaken for a first shape.
+const FILLER_PHRASE =
+  /^(just am|i just am|it just is|it is what it is|the same|same as (before|always|usual)|same old|like i said|as i said|nothing really|not much|i dont know|dunno|idk|i guess|kind of|sort of|whatever)\.?$/i;
 
 /**
  * The richness signals behind a first shape (v0.4 §6.4). A first shape should
@@ -58,11 +67,20 @@ export interface FirstShapeEvidence {
 export function firstShapeEvidence(ev: EmotionEvent, prev: EmotionEvent | null = null): FirstShapeEvidence {
   const userOwnedLabel = ev.label_source === 'user_stated' || ev.label_source === 'user_confirmed';
   const concreteSituation = !!ev.trigger_event;
+  // A phrase only counts as MATERIAL when it carries something — a short metaphor or
+  // descriptor ("pulled thin"), not filler/deflection ("just am", "i guess"). This
+  // stops a bare label plus a non-answer from reaching first shape (brief §2).
+  const phrase = (ev.user_phrase ?? '').trim();
+  const phraseWords = phrase ? phrase.split(/\s+/).filter(Boolean).length : 0;
   const userPhraseOrMetaphor =
-    !!(ev.user_phrase && ev.user_phrase.trim()) ||
+    (phraseWords >= 2 && !FILLER_PHRASE.test(phrase)) ||
     (ev.user_words_raw ?? '').trim().split(/\s+/).filter(Boolean).length >= 3;
   const bodyCue = ev.body_cue.length > 0 || ev.behaviour_action.length > 0;
-  const meaningOrAppraisal = !!ev.appraisal_thought || ev.need_value.length > 0;
+  // need/value is the most inference-prone field (the model routinely guesses
+  // "respect", "autonomy" the user never said), so it does NOT count toward first
+  // shape — only an actual expressed thought does. It still informs deepening, which
+  // is separately gated on a user-owned label (brief §3).
+  const meaningOrAppraisal = !!ev.appraisal_thought;
   const mixedEmotionDistinction = ev.mixed_confirmed === 1 || (ev.strands?.length ?? 0) >= 2;
   const repeatedConfirmation =
     !!prev &&
@@ -78,6 +96,11 @@ export function firstShapeEvidence(ev: EmotionEvent, prev: EmotionEvent | null =
     meaningOrAppraisal,
     mixedEmotionDistinction,
   ].filter(Boolean).length;
+  // FEELING evidence = how it felt (body/impulse, meaning, mixed structure, or a
+  // shade the user OWNS), distinct from SCENE evidence (trigger, descriptive phrase).
+  // A first shape needs the felt quality, not just the situation (brief §1,3,5).
+  const ownedShade = !!ev.emotion_shade && (ev.shade_source === 'user_stated' || ev.shade_source === 'user_confirmed');
+  const feelingCount = [bodyCue, meaningOrAppraisal, mixedEmotionDistinction, ownedShade].filter(Boolean).length;
   return {
     userOwnedLabel,
     concreteSituation,
@@ -88,6 +111,7 @@ export function firstShapeEvidence(ev: EmotionEvent, prev: EmotionEvent | null =
     repeatedConfirmation,
     userAcceptedReflection,
     materialCount,
+    feelingCount,
   };
 }
 
@@ -114,7 +138,9 @@ export function evaluateStage(ev: EmotionEvent, prev: EmotionEvent | null = null
     ? e.materialCount >= 3 || (e.repeatedConfirmation && e.materialCount >= 2)
     : e.materialCount >= 2;
 
-  if (!rejected && e.userOwnedLabel && stabilityOk && enoughMaterial) return 'understood';
+  // A first shape (understood) needs a USER-OWNED label, stability, enough material,
+  // AND at least one FEELING signal — context/scene alone can shape but never understand.
+  if (!rejected && e.userOwnedLabel && stabilityOk && enoughMaterial && e.feelingCount >= 1) return 'understood';
 
   return anchor ? 'shaped' : 'named';
 }

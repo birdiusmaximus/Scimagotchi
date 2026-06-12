@@ -26,13 +26,20 @@ configureReanimatedLogger({ level: ReanimatedLogLevel.warn, strict: false });
 const WEB_PREVIEW_INSETS: EdgeInsets = { top: 59, bottom: 34, left: 0, right: 0 };
 
 function PreviewSafeArea({ children }: { children: ReactNode }) {
+  const keyboardOpen = useStore((s) => s.keyboardOpen);
   if (Platform.OS !== 'web') return <>{children}</>;
-  // Web gets iPhone-like insets across the board: Expo Router's static export controls
-  // the viewport meta itself (it drops a custom `viewport-fit=cover`), so real iOS
-  // `env(safe-area-inset-*)` would resolve to 0 and jam the top bar against the notch.
-  // A fixed inset keeps spacing sane on every web target. The small bottom gap above
-  // the keyboard is harmless; the visual-viewport handler does the real keyboard work.
-  return <SafeAreaInsetsContext.Provider value={WEB_PREVIEW_INSETS}>{children}</SafeAreaInsetsContext.Provider>;
+  // Web gets fixed iPhone-like insets (Expo Router controls the viewport meta itself and
+  // drops a custom `viewport-fit=cover`, so real iOS env() insets would resolve to 0 and
+  // jam the top bar against the notch). BUT when the keyboard is open it covers the home
+  // indicator, so the bottom inset should be 0 — that docks the input to the keyboard
+  // instead of leaving a dead gap, and hands those pixels back to the companion.
+  const insets: EdgeInsets = {
+    top: WEB_PREVIEW_INSETS.top,
+    bottom: keyboardOpen ? 0 : WEB_PREVIEW_INSETS.bottom,
+    left: 0,
+    right: 0,
+  };
+  return <SafeAreaInsetsContext.Provider value={insets}>{children}</SafeAreaInsetsContext.Provider>;
 }
 
 export default function RootLayout() {
@@ -60,11 +67,16 @@ export default function RootLayout() {
     const vv = window.visualViewport;
     const root = document.documentElement;
     let raf = 0;
+    let maxH = vv.height; // the no-keyboard height baseline (grows if the URL bar hides)
     const update = () => {
       cancelAnimationFrame(raf);
       raf = requestAnimationFrame(() => {
+        maxH = Math.max(maxH, vv.height);
         root.style.setProperty('--app-height', `${Math.round(vv.height)}px`);
         if (window.scrollY !== 0) window.scrollTo(0, 0); // keep the app pinned to the top
+        // The keyboard takes a big bite out of the viewport; a small URL-bar change does not.
+        const open = vv.height < maxH - 120;
+        if (open !== useStore.getState().keyboardOpen) useStore.setState({ keyboardOpen: open });
       });
     };
     vv.addEventListener('resize', update);

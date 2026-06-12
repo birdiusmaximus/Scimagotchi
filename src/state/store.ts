@@ -91,6 +91,9 @@ interface AppState {
   /** Emotion families described TODAY (local date) — drives the very subtle daily hues
    *  on the home orb. Resets back to none when the date rolls over (midnight). */
   todaysEmotions: { date: string; families: EmotionFamilyId[] };
+  /** Web: the on-screen keyboard is open (set by the visual-viewport handler). Lets the
+   *  layout dock the input to the keyboard — zero the bottom inset + trim padding. */
+  keyboardOpen: boolean;
   sending: boolean;
   unlock: { event: EmotionEvent; kind: UnlockKind } | null;
   safety: SafetyState;
@@ -152,6 +155,7 @@ export const useStore = create<AppState>((set, get) => ({
   orbFamily: null,
   chatExitEmotion: null,
   todaysEmotions: { date: '', families: [] },
+  keyboardOpen: false,
   sending: false,
   unlock: null,
   safety: { visible: false, level: 0, category: 'none' },

@@ -43,6 +43,7 @@ export default function ChatScreen() {
   const safetyCheck = useStore((s) => s.safetyCheck);
   const progress = useStore((s) => s.progress);
   const memoryCards = useStore((s) => s.memoryCards);
+  const keyboardOpen = useStore((s) => s.keyboardOpen);
 
   // What the companion auto-learned in THIS conversation — shown as a gentle,
   // transparent session-end review (brief §7.2), not a save gate.
@@ -169,7 +170,7 @@ export default function ChatScreen() {
 
         {/* Discussion window — lower two-thirds */}
         <KeyboardAvoidingView
-          style={styles.windowWrap}
+          style={[styles.windowWrap, keyboardOpen && styles.windowWrapKbd]}
           behavior={Platform.OS === 'ios' ? 'padding' : undefined}
           keyboardVerticalOffset={8}
         >
@@ -277,6 +278,9 @@ const styles = StyleSheet.create({
   header: { paddingTop: spacing.sm, flexDirection: 'row', alignItems: 'center' },
   stage: { flex: 1, alignItems: 'center', justifyContent: 'center' },
   windowWrap: { flex: 2, paddingBottom: spacing.md },
+  // Keyboard up: dock the input to the keyboard (less bottom padding) and give the
+  // companion a bigger share of the now-short height (a smaller chat-window flex).
+  windowWrapKbd: { flex: 1.5, paddingBottom: spacing.xs },
   window: { flex: 1 },
   windowGlass: { flex: 1 },
   windowContent: { flex: 1, paddingHorizontal: spacing.sm, paddingTop: spacing.xs },

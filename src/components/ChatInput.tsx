@@ -1,9 +1,11 @@
 import { Feather } from '@expo/vector-icons';
 import { useEffect, useRef, useState } from 'react';
 import { StyleSheet, TextInput, View } from 'react-native';
+import Animated, { cancelAnimation, Easing, useAnimatedStyle, useSharedValue, withRepeat, withTiming } from 'react-native-reanimated';
 
 import { Glass } from '@/components/Glass';
 import { IconButton } from '@/components/IconButton';
+import { useSpeechRecognition } from '@/hooks/useSpeechRecognition';
 import { fontFamily, palette, radii, spacing } from '@/theme/tokens';
 
 type Props = {
@@ -20,6 +22,22 @@ export function ChatInput({ placeholder = 'What’s here?', onSubmit, autoFocus,
   const [text, setText] = useState('');
   const inputRef = useRef<TextInput>(null);
   const hasText = text.trim().length > 0;
+
+  // Tap-and-talk: the mic streams a live transcript into the field; the user reviews
+  // and sends. Web uses the browser Speech API; native reports unsupported (mic hidden).
+  const speech = useSpeechRecognition({ onResult: (t) => setText(t) });
+
+  // A soft radar pulse around the button while it's listening.
+  const pulse = useSharedValue(0);
+  useEffect(() => {
+    if (speech.listening) {
+      pulse.value = withRepeat(withTiming(1, { duration: 900, easing: Easing.out(Easing.ease) }), -1, false);
+    } else {
+      cancelAnimation(pulse);
+      pulse.value = 0;
+    }
+  }, [speech.listening, pulse]);
+  const pulseStyle = useAnimatedStyle(() => ({ transform: [{ scale: 1 + pulse.value * 0.6 }], opacity: 0.4 * (1 - pulse.value) }));
 
   // Focus on mount. The `autoFocus` DOM attribute only fires on a full page load,
   // not on client-side navigation, so focus explicitly here too.
@@ -62,13 +80,16 @@ export function ChatInput({ placeholder = 'What’s here?', onSubmit, autoFocus,
         returnKeyType="send"
         multiline={false}
       />
-      <IconButton
-        name={hasText ? 'arrow-up' : 'mic'}
-        variant="accent"
-        diameter={40}
-        iconSize={18}
-        onPress={submit}
-      />
+      <View style={styles.action}>
+        {speech.listening ? <Animated.View pointerEvents="none" style={[styles.pulseRing, pulseStyle]} /> : null}
+        <IconButton
+          name={speech.listening ? 'square' : hasText ? 'arrow-up' : 'mic'}
+          variant="accent"
+          diameter={40}
+          iconSize={speech.listening ? 15 : 18}
+          onPress={speech.listening ? speech.stop : hasText ? submit : speech.supported ? speech.start : submit}
+        />
+      </View>
     </Glass>
   );
 }
@@ -89,6 +110,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'rgba(255,255,255,0.55)',
+  },
+  action: { alignItems: 'center', justifyContent: 'center' },
+  pulseRing: {
+    position: 'absolute',
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: 'rgba(158,108,241,0.5)',
   },
   input: {
     flex: 1,

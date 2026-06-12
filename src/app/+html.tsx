@@ -13,10 +13,12 @@ export default function Root({ children }: PropsWithChildren) {
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover, interactive-widget=resizes-content"
-        />
+        {/* NOTE: Expo Router's static export controls the viewport meta itself and
+            overrides any custom one set here (verified: viewport-fit=cover never
+            reaches the built HTML), so we leave it at the framework default. The
+            mobile-keyboard fix instead lives in the visual-viewport handler in
+            _layout.tsx + the --app-height rule in global.css. */}
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <link rel="stylesheet" href="https://use.typekit.net/abe4vwg.css" />
         <ScrollViewStyleReset />
       </head>

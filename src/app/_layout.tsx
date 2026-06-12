@@ -27,12 +27,11 @@ const WEB_PREVIEW_INSETS: EdgeInsets = { top: 59, bottom: 34, left: 0, right: 0 
 
 function PreviewSafeArea({ children }: { children: ReactNode }) {
   if (Platform.OS !== 'web') return <>{children}</>;
-  // Real mobile browsers report true safe-area insets (and zero the bottom one when
-  // the keyboard covers the home indicator) — only desktop (a fine pointer) reports
-  // none. So feed iPhone-like insets on desktop for a faithful preview, but pass
-  // through on touch devices so a real phone uses its own insets.
-  const isDesktop = typeof window !== 'undefined' && !!window.matchMedia?.('(pointer: fine)')?.matches;
-  if (!isDesktop) return <>{children}</>;
+  // Web gets iPhone-like insets across the board: Expo Router's static export controls
+  // the viewport meta itself (it drops a custom `viewport-fit=cover`), so real iOS
+  // `env(safe-area-inset-*)` would resolve to 0 and jam the top bar against the notch.
+  // A fixed inset keeps spacing sane on every web target. The small bottom gap above
+  // the keyboard is harmless; the visual-viewport handler does the real keyboard work.
   return <SafeAreaInsetsContext.Provider value={WEB_PREVIEW_INSETS}>{children}</SafeAreaInsetsContext.Provider>;
 }
 

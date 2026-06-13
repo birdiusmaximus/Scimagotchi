@@ -660,8 +660,11 @@ function shadeIsUserOwned(shade, userText, history, opts) {
   if (!shade || !shade.trim()) return false;
   const w = shade.toLowerCase().trim();
   const said = (text) => ` ${text.toLowerCase()} `.includes(` ${w} `) || new RegExp(`\\b${w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i").test(text);
-  if (said(userText)) return true;
-  if (history.some((m) => m.role === "user" && said(m.content))) return true;
+  const userSaidEarlier = history.some((m) => m.role === "user" && said(m.content));
+  if (userSaidEarlier) return true;
+  const lastCompanion = [...history].reverse().find((m) => m.role === "companion");
+  const companionJustIntroduced = !!lastCompanion && said(lastCompanion.content);
+  if (said(userText) && !companionJustIntroduced) return true;
   const proposed = (opts?.proposedShade ?? "").toLowerCase().trim();
   if (proposed && proposed === w && ACCEPT_SHADE.test(` ${userText.toLowerCase().replace(/[’'`]/g, "'")} `)) return true;
   return false;
@@ -678,7 +681,7 @@ function isUncertain(userText) {
   const norm2 = (userText || "").toLowerCase().replace(/[’'`]/g, "'").trim();
   return UNCERTAIN_RX.test(` ${norm2} `) || HEDGE_RX.test(norm2);
 }
-var AFFIRM_LABEL = /\b(yes|yeah|yep|yup|exactly|totally|definitely|for sure|that'?s it|that'?s right|spot on|pretty much|sounds right|that fits|fits|correct)\b/;
+var AFFIRM_LABEL = /\b(that'?s (it|right|the one|exactly it)|that does fit|that fits|spot on|sounds right|exactly that|yeah,? that'?s (it|right)|yes,? that'?s (it|right))\b/;
 function labelNamedByUser(fam, userText, history) {
   const named = (text) => {
     const t = ` ${text.toLowerCase()} `;

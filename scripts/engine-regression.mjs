@@ -187,6 +187,12 @@ check('shade-own: accept does NOT own a shade the model just SWAPPED in (pulled 
   shadeIsUserOwned('stretched', 'yeah pulled thin is exactly it', [], { proposedShade: 'pressure' }), false);
 check('shade-own: accept does NOT own it when there was no proposal',
   shadeIsUserOwned('stretched', 'yeah', [], {}), false);
+// Echo guard (robustness-sim "shallow_agreement"): a word the companion just supplied,
+// repeated by the user who never used it before, is parroting, not owning.
+check('shade-own: echoing the companion\'s just-supplied word is NOT owned',
+  shadeIsUserOwned('stretched', 'yeah stretched thats it', [{ role: 'companion', content: 'sounds more like being stretched' }], {}), false);
+check('shade-own: user said it earlier, even if companion also did -> still owned',
+  shadeIsUserOwned('stretched', 'yeah', [{ role: 'user', content: 'i feel stretched' }, { role: 'companion', content: 'stretched then' }], {}), true);
 
 // ── Unlock pushback detector (v0.4 §6.3) ─────────────────────────────────────
 check('pushback: "no, that doesnt fit" rejects the in-play shade',
@@ -286,6 +292,14 @@ check('named: a bare "yeah" affirming a proposal is NOT named-by-user',
   labelNamedByUser('shame', 'yeah. lets leave it there. thanks', [{ role: 'companion', content: 'a self-critical edge' }]), false);
 check('named: describing a situation without the feeling word is NOT named',
   labelNamedByUser('shame', 'my brother left and the place is quiet', []), false);
+// Bare-yeah no longer owns a label (robustness-sim "terse"): only a label-SPECIFIC
+// affirmation does, so a people-pleaser's reflexive assent can't mint a first shape.
+check('owned: a bare "yeah" affirming a proposal is NOT enough to own',
+  labelIsUserOwned('pressure', 'yeah', [], { emotion_family: 'pressure' }), false);
+check('owned: "yeah totally" is NOT enough to own',
+  labelIsUserOwned('pressure', 'yeah totally', [], { emotion_family: 'pressure' }), false);
+check('owned: "yeah thats the one" (points at the label) DOES own',
+  labelIsUserOwned('pressure', 'yeah thats the one', [], { emotion_family: 'pressure' }), true);
 
 // ── Mixed-emotion §9.3 save rules ────────────────────────────────────────────
 const strand = (family, source, salience = 'equal') => ({ family, shade: null, salience, source });

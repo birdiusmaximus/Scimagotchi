@@ -188,8 +188,14 @@ export function shadeIsUserOwned(
   if (!shade || !shade.trim()) return false;
   const w = shade.toLowerCase().trim();
   const said = (text: string) => ` ${text.toLowerCase()} `.includes(` ${w} `) || new RegExp(`\\b${w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i').test(text);
-  if (said(userText)) return true;
-  if (history.some((m) => m.role === 'user' && said(m.content))) return true;
+  const userSaidEarlier = history.some((m) => m.role === 'user' && said(m.content));
+  if (userSaidEarlier) return true;
+  // Echo guard: if the companion introduced this word in its last reply and the user
+  // never used it before, the user repeating it now is parroting, not owning it (the
+  // shallow-agreement failure: the companion supplied "spread thin", the user echoed it).
+  const lastCompanion = [...history].reverse().find((m) => m.role === 'companion');
+  const companionJustIntroduced = !!lastCompanion && said(lastCompanion.content);
+  if (said(userText) && !companionJustIntroduced) return true;
   // Accept-branch: a generic acceptance ("exactly", "that's the word") confirms a
   // shade ONLY when it is the same shade that was actually on the table last turn —
   // never a taxonomy word the model just swapped in (the "pulled thin" -> "stretched"
@@ -257,9 +263,14 @@ export function hasEmotionAnchor(
   );
 }
 
-/** Affirmation of a label the companion already proposed ("yeah, that's it"). */
+// A label-SPECIFIC affirmation ("that's it", "that's the one"). A bare interjection
+// ("yeah", "totally", "exactly") must NOT own a label on its own: a people-pleaser on
+// autopilot says "yeah totally" to everything, and the engine's own first-shape rule
+// (ACCEPT_LABEL) already holds that a bare "yeah" never consolidates a shape. Ownership
+// by affirmation needs the user to point AT the label, not just emit assent
+// (robustness-sim "terse": a bare "yeah" flipped an un-named feeling to understood).
 const AFFIRM_LABEL =
-  /\b(yes|yeah|yep|yup|exactly|totally|definitely|for sure|that'?s it|that'?s right|spot on|pretty much|sounds right|that fits|fits|correct)\b/;
+  /\b(that'?s (it|right|the one|exactly it)|that does fit|that fits|spot on|sounds right|exactly that|yeah,? that'?s (it|right)|yes,? that'?s (it|right))\b/;
 
 /**
  * A feeling is the user's to name (engine brief §8.1). The model may PROPOSE a

@@ -562,8 +562,11 @@ function shadeIsUserOwned(shade, userText, history, opts) {
   if (!shade || !shade.trim()) return false;
   const w = shade.toLowerCase().trim();
   const said = (text) => ` ${text.toLowerCase()} `.includes(` ${w} `) || new RegExp(`\\b${w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i").test(text);
-  if (said(userText)) return true;
-  if (history.some((m) => m.role === "user" && said(m.content))) return true;
+  const userSaidEarlier = history.some((m) => m.role === "user" && said(m.content));
+  if (userSaidEarlier) return true;
+  const lastCompanion = [...history].reverse().find((m) => m.role === "companion");
+  const companionJustIntroduced = !!lastCompanion && said(lastCompanion.content);
+  if (said(userText) && !companionJustIntroduced) return true;
   const proposed = (opts?.proposedShade ?? "").toLowerCase().trim();
   if (proposed && proposed === w && ACCEPT_SHADE.test(` ${userText.toLowerCase().replace(/[’'`]/g, "'")} `)) return true;
   return false;
@@ -584,7 +587,7 @@ function hasEmotionAnchor(ev) {
   const ownedShade = !!ev.emotion_shade && (ev.shade_source === "user_stated" || ev.shade_source === "user_confirmed");
   return (ev.body_cue?.length ?? 0) > 0 || (ev.behaviour_action?.length ?? 0) > 0 || !!ev.trigger_event || !!ev.appraisal_thought || (ev.need_value?.length ?? 0) > 0 || ownedShade || ev.mixed_confirmed === 1 || (ev.strands?.length ?? 0) >= 2;
 }
-var AFFIRM_LABEL = /\b(yes|yeah|yep|yup|exactly|totally|definitely|for sure|that'?s it|that'?s right|spot on|pretty much|sounds right|that fits|fits|correct)\b/;
+var AFFIRM_LABEL = /\b(that'?s (it|right|the one|exactly it)|that does fit|that fits|spot on|sounds right|exactly that|yeah,? that'?s (it|right)|yes,? that'?s (it|right))\b/;
 function labelNamedByUser(fam, userText, history) {
   const named = (text) => {
     const t = ` ${text.toLowerCase()} `;

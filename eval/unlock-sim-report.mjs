@@ -44,6 +44,7 @@ function analyse(file) {
         family: m.family ?? null,
         shade: m.shade ?? null,
         strandStages: m.strand_stages ?? null,
+        moments: m.moments ?? [],
       });
       pendingUser = null;
     } else if (m.safety) {
@@ -55,6 +56,9 @@ function analyse(file) {
   const deepest = real.reduce((d, x) => deeper(d, x.progression ?? 'unseen'), 'unseen');
   // The strands this conversation carried (the last turn's cumulative map).
   const strands = [...real].reverse().find((x) => x.strandStages && Object.keys(x.strandStages).length)?.strandStages ?? {};
+  // The distinct kinds of moment this conversation contained, in first-seen order.
+  const momentsSeen = [];
+  for (const x of real) for (const mo of x.moments ?? []) if (!momentsSeen.includes(mo)) momentsSeen.push(mo);
   return {
     cid: t.cid,
     totalTurns: userCount,
@@ -63,6 +67,7 @@ function analyse(file) {
     deepestStage: deepest,
     family: real.find((x) => x.family)?.family ?? null,
     strands,
+    momentsSeen,
     turns,
   };
 }
@@ -82,9 +87,9 @@ const strandList = (s) => Object.entries(s || {}).filter(([, st]) => st && st !=
 
 // ── Summary table ──
 out.push('## Summary', '');
-out.push('| Emotion | Unlocked? | On turn | Deepest stage | Total turns | Strands tracked |', '|---|---|---|---|---|---|');
+out.push('| Emotion | Unlocked? | On turn | Deepest stage | Total turns | Strands tracked | Moments seen |', '|---|---|---|---|---|---|---|');
 for (const r of rows) {
-  out.push(`| ${r.emo} | ${r.unlocked ? '✅' : '—'} | ${r.unlockedOnTurn ?? '—'} | ${r.deepestStage} | ${r.totalTurns} | ${strandList(r.strands).join(', ') || '—'} |`);
+  out.push(`| ${r.emo} | ${r.unlocked ? '✅' : '—'} | ${r.unlockedOnTurn ?? '—'} | ${r.deepestStage} | ${r.totalTurns} | ${strandList(r.strands).join(', ') || '—'} | ${(r.momentsSeen ?? []).join(', ') || '—'} |`);
 }
 const unlockedN = rows.filter((r) => r.unlocked).length;
 const reached = (stage) => rows.filter((r) => (RANK[r.deepestStage] ?? 0) >= RANK[stage]).length;
@@ -100,6 +105,8 @@ for (const r of rows) {
   if (moves.length) out.push(`> progression: ${moves.join('  ')}`, '');
   const strands = strandList(r.strands);
   if (strands.length) out.push(`> strands carried: ${strands.join(' · ')}`, '');
+  const momentTurns = r.turns.filter((x) => !x.safety && x.moments && x.moments.length);
+  if (momentTurns.length) out.push(`> moments: ${momentTurns.map((x) => `t${x.n}[${x.moments.join(',')}]`).join('  ')}`, '');
   for (const x of r.turns) {
     if (x.safety) { out.push('_[safety pause]_', ''); continue; }
     const tag = x.intent ? ' _(tap: stay with it)_' : '';

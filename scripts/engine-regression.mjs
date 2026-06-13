@@ -7,6 +7,7 @@
  */
 import {
   askedForNamingHelp,
+  classifyMoments,
   composeLearningSentence,
   summaryIsClean,
   detectShadeRejection,
@@ -567,6 +568,46 @@ check('expr: clarity settles anger (less pulse than exploring)',
   expressionFor('anger', 'first_shape').pulse < expressionFor('anger', 'idle_calm').pulse, true);
 check('expr: a sad first shape stays low, not happy',
   expressionFor('sadness', 'first_shape').sink > 0.3, true);
+
+// ── Typed conversational moments (Phase 3 momentType.ts) ──────────────────────
+const mk = (event, unlocked = false) => ({ event, unlocked });
+const sa = (fams) => ({
+  results: fams.map(([f, to]) => ({ progress: { emotion_family: f }, to, from: 'unseen', advanced: true, capabilities: {} })),
+  primary: null,
+  deepest: fams.length ? fams[fams.length - 1][1] : 'unseen',
+});
+const has = (m, t) => m.includes(t);
+
+check('moment: unlock turn yields "unlocked"',
+  has(classifyMoments(mk(ev(), true), null, null, 'it just clicked'), 'unlocked'), true);
+check('moment: focus moving anger -> shame is a "shift"',
+  has(classifyMoments(mk(ev({ emotion_family: 'shame', label_source: 'user_stated' })), ev({ emotion_family: 'anger', label_source: 'user_stated' }), null, 'x'), 'shift'), true);
+check('moment: first naming (no prior feeling) is NOT a shift',
+  has(classifyMoments(mk(ev({ emotion_family: 'anger', label_source: 'user_stated' })), null, null, 'x'), 'shift'), false);
+check('moment: newly-confirmed mixed is "mixed_found"',
+  has(classifyMoments(mk(ev({ mixed_confirmed: 1 })), ev({ mixed_confirmed: 0 }), null, 'x'), 'mixed_found'), true);
+check('moment: already-confirmed mixed does NOT refire mixed_found',
+  has(classifyMoments(mk(ev({ mixed_confirmed: 1 })), ev({ mixed_confirmed: 1 }), null, 'x'), 'mixed_found'), false);
+check('moment: calm after sadness is a "landing"',
+  has(classifyMoments(mk(ev({ emotion_family: 'calm', valence: 'positive' })), ev({ emotion_family: 'sadness' }), null, 'x'), 'landing'), true);
+check('moment: calm after a difficult strand took shape is a "landing"',
+  has(classifyMoments(mk(ev({ emotion_family: 'calm' })), null, sa([['sadness', 'first_shape']]), 'x'), 'landing'), true);
+check('moment: calm with no prior difficulty is NOT a landing',
+  has(classifyMoments(mk(ev({ emotion_family: 'calm' })), ev({ emotion_family: 'joy' }), sa([['calm', 'named']]), 'x'), 'landing'), false);
+check('moment: "i think i\'ll call my brother" is a repair_intention',
+  has(classifyMoments(mk(ev()), null, null, "i think i'll call my brother tomorrow"), 'repair_intention'), true);
+check('moment: "i want her to see me" is NOT a repair_intention',
+  has(classifyMoments(mk(ev()), null, null, 'i just want her to see me'), 'repair_intention'), false);
+check('moment: "if i push back she gets this look" surfaces a hidden_rule',
+  has(classifyMoments(mk(ev()), null, null, 'if i push back she gets this look'), 'hidden_rule'), true);
+check('moment: a hidden rule in the appraisal_thought also counts',
+  has(classifyMoments(mk(ev({ appraisal_thought: "i'm not allowed to take up space" })), null, null, 'dunno'), 'hidden_rule'), true);
+check('moment: a sharpened shade (owned, no unlock) is "clarified"',
+  has(classifyMoments(mk(ev({ emotion_shade: 'dread', shade_source: 'user_confirmed' })), ev({ emotion_shade: 'anxious' }), null, 'x'), 'clarified'), true);
+check('moment: a freshly rejected shade is "clarified"',
+  has(classifyMoments(mk(ev({ user_rejected_shades: ['anxious'] })), ev({ user_rejected_shades: [] }), null, 'x'), 'clarified'), true);
+check('moment: an unlock is not also tagged "clarified"',
+  has(classifyMoments(mk(ev({ emotion_shade: 'dread', shade_source: 'user_confirmed' }), true), ev({ emotion_shade: 'anxious' }), null, 'x'), 'clarified'), false);
 
 console.log(`\nengine regression: ${pass} passed, ${fail} failed (${pass + fail} cases)`);
 process.exit(fail ? 1 : 0);

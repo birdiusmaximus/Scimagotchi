@@ -21,6 +21,7 @@ import { fileURLToPath } from 'node:url';
 import { openaiGenerateTurn } from './companion-bundle.mjs';
 import {
   advanceStrands,
+  classifyMoments,
   composeLearningSentence,
   draftFromTurn,
   hasEmotionAnchor,
@@ -185,6 +186,8 @@ const server = http.createServer(async (req, res) => {
       const adv = strandAdv.primary ?? { from: 'unseen', to: 'unseen', advanced: false, progress: null, capabilities: {} };
       // The strands carried this conversation, with their highest stage so far.
       const strandStages = Object.fromEntries(Object.entries(c.progress).map(([k, v]) => [k, v.current_stage]));
+      // What KIND of moment this turn was (Phase 3) — c.prevEvent is still last turn's event here.
+      const moments = classifyMoments(turn, c.prevEvent, strandAdv, String(text));
 
       let modal = null; // { kind, summary } — what unlock ceremony (if any) the app would show
       if (turn.unlocked) {
@@ -242,6 +245,7 @@ const server = http.createServer(async (req, res) => {
         stage_advanced: adv.advanced,
         strand_stages: strandStages,
         deepest_strand: strandAdv.deepest,
+        moments,
         modal: modal ? modal.kind : null,
         modal_summary: modal ? modal.summary : null,
         memory_draft: memoryDraft ? { type: memoryDraft.type, summary: memoryDraft.summary } : null,
@@ -281,6 +285,7 @@ const server = http.createServer(async (req, res) => {
         stage_advanced: adv.advanced,
         strand_stages: strandStages,
         deepest_strand: strandAdv.deepest,
+        moments,
         modal: modal ? modal.kind : null,
         modal_summary: modal ? modal.summary : null,
         memory_draft: memoryDraft ? { type: memoryDraft.type, summary: memoryDraft.summary } : null,

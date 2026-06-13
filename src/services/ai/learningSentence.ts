@@ -22,7 +22,7 @@ export type LearningKind = 'first_shape' | 'deepened' | 'mixed';
 // the memory layer blocks the same phrases from durable storage.
 const HOLLOW_RX = /\b(not sure|no idea|no clue|i don'?t know|dunno|idk|hard to say|unsure|unclear|i can'?t name it)\b/i;
 export const IDENTITY_CONDEMNATION =
-  /\b(bad person|terrible person|horrible person|awful person|not good enough|not enough|a failure|fundamentally flawed|worthless|unlovable|defective|something (is )?wrong with me|broken inside|i (hate|despise) myself|a burden to)\b/i;
+  /\b(bad person|terrible person|horrible person|awful person|not good enough|not enough|a failure|fundamentally flawed|worthless|unlovable|defective|something (is )?wrong with me|broken inside|i (hate|despise) myself|a burden to|i don'?t (even )?deserve|don'?t deserve (to|her|him|them|to be|good|love|happiness)|this is (just )?who (i am|you are)|i'?m the (selfish|difficult|bad|broken|stupid|useless|worthless|terrible|awful|wrong|needy) one|i'?m (just )?(a )?(screw[ -]?up|waste|mess|disappointment|disaster))\b/i;
 
 /** A short, non-clinical phrase for how two strands relate. */
 function relationWord(rel: MixedRelation | null | undefined): string {

@@ -1185,7 +1185,7 @@ function stripControlChars(text) {
 
 // src/services/ai/learningSentence.ts
 var HOLLOW_RX = /\b(not sure|no idea|no clue|i don'?t know|dunno|idk|hard to say|unsure|unclear|i can'?t name it)\b/i;
-var IDENTITY_CONDEMNATION = /\b(bad person|terrible person|horrible person|awful person|not good enough|not enough|a failure|fundamentally flawed|worthless|unlovable|defective|something (is )?wrong with me|broken inside|i (hate|despise) myself|a burden to)\b/i;
+var IDENTITY_CONDEMNATION = /\b(bad person|terrible person|horrible person|awful person|not good enough|not enough|a failure|fundamentally flawed|worthless|unlovable|defective|something (is )?wrong with me|broken inside|i (hate|despise) myself|a burden to|i don'?t (even )?deserve|don'?t deserve (to|her|him|them|to be|good|love|happiness)|this is (just )?who (i am|you are)|i'?m the (selfish|difficult|bad|broken|stupid|useless|worthless|terrible|awful|wrong|needy) one|i'?m (just )?(a )?(screw[ -]?up|waste|mess|disappointment|disaster))\b/i;
 function relationWord(rel) {
   switch (rel) {
     case "foreground_background":
@@ -1280,9 +1280,37 @@ function memoryBlocked(text) {
   if (IDENTITY_CONDEMNATION.test(text)) return true;
   return SENSITIVE_CONTENT.test(text);
 }
+var ROLE = "sisters?|brothers?|mum|mom|mother|dad|father|sons?|daughters?|wife|husband|partner|boyfriend|girlfriend|fiance|fiancee|friends?|mate|boss|manager|colleagues?|coworkers?|co-workers?|neighbours?|neighbors?|aunt|auntie|uncle|cousins?|gran|grandma|grandmother|grandad|granddad|grandfather|grandpa|nan|nana|niece|nephew|ex|roommate|flatmate|teacher|landlord|therapist|siblings?";
+var SAFE_CAPS = new Set(
+  "i monday tuesday wednesday thursday friday saturday sunday january february march april may june july august september october november december christmas easter god mum mom dad mother father today tomorrow yesterday".split(
+    " "
+  )
+);
+function scrubForMemory(text) {
+  let s = (text ?? "").trim();
+  if (!s) return s;
+  s = s.replace(
+    new RegExp(`\\b((?:[Mm]y|[Oo]ur|[Hh]is|[Hh]er|[Tt]heir|[Tt]he)\\s+(?:${ROLE}))(?:\\s+(?:named|called))?\\s+[A-Z][a-z]+\\b`, "g"),
+    "$1"
+  );
+  s = s.replace(
+    /\b(told|telling|tell|texted|texting|text|called|calling|call|phoned|phone|ring|messaged|messaging|message|emailed|email|asked|asking|ask|missed|missing|miss|saw|seeing|see|met|meeting|meet|with|visit|visited)\s+[A-Z][a-z]+\b/g,
+    "$1 them"
+  );
+  s = s.replace(
+    /^([A-Z][a-z]+)\s+(moved|move|moving|said|says|took|takes|left|leaves|did|does|came|comes|went|goes|asked|told|wanted|made|got|gets|stopped|started|never|always|just|keeps|kept|won'?t|wouldn'?t|doesn'?t|didn'?t)\b/,
+    "they $2"
+  );
+  s = s.replace(
+    /\b(moved|move|moving|relocated|flew|flying|fly|flown|went|going|gone|lives|living|live)\s+(?:out\s+|over\s+|back\s+)?(?:to|in|into)\s+[A-Z][a-z]+(?:\s+[A-Z][a-z]+)?\b/g,
+    "$1 away"
+  );
+  s = s.replace(/\b([A-Z][a-z]+)'s\b/g, (m, w) => SAFE_CAPS.has(w.toLowerCase()) ? m : "their");
+  return s.replace(/\s+/g, " ").trim();
+}
 var REMEMBER_REQUEST = /(remember (this|that)|save (this|that)|keep (this|that)( one)?|dont forget (this|that))/;
 function baseCard(over) {
-  return {
+  const card = {
     id: genId("mem"),
     created_at: nowIso(),
     updated_at: nowIso(),
@@ -1298,6 +1326,9 @@ function baseCard(over) {
     muted: 0,
     ...over
   };
+  card.summary = scrubForMemory(card.summary);
+  card.user_words = card.user_words.map((w) => scrubForMemory(w)).filter(Boolean);
+  return card;
 }
 function draftFromTurn(turn, userText, conversationId) {
   const ev = turn.event;
@@ -1334,8 +1365,8 @@ function draftFromTurn(turn, userText, conversationId) {
   }
   return null;
 }
-function draftFromRejection(newlyRejected, family, conversationId) {
-  const shade = newlyRejected[0];
+function draftFromRejection(newlyRejected2, family, conversationId) {
+  const shade = newlyRejected2[0];
   if (!shade || memoryBlocked(shade)) return null;
   return baseCard({
     source_conversation_id: conversationId,
@@ -1551,32 +1582,6 @@ function advanceStrands(existing, turn, conversationId, opts = {}) {
   return { results, primary, deepest };
 }
 
-// src/services/ai/companionVisualState.ts
-function selectVisualState(s) {
-  if (s.safetyVisible || s.safetyCheckPending) return "safety_receded";
-  if (s.unlockShowing) return "first_shape";
-  if (s.sending) return "searching";
-  if ((s.draftEvent?.strands?.length ?? 0) >= 2) return "mixed_strands";
-  if (s.progressStage === "deepened") return "deepened";
-  if (s.progressStage === "returning") return "returning_shape";
-  const d = s.draftEvent;
-  if (d?.emotion_family && d?.emotion_shade && (d.label_source === "user_stated" || d.label_source === "user_confirmed")) {
-    return "stabilising";
-  }
-  if (d && !d.emotion_family) return "uncertain";
-  return "idle_calm";
-}
-function visualTintFamilies(draftEvent) {
-  if (!draftEvent) return [];
-  const strands = draftEvent.strands ?? [];
-  if (strands.length >= 2) {
-    const fg = strands.find((x) => x.salience === "foreground") ?? strands[0];
-    const bg = strands.find((x) => x.family !== fg.family);
-    return bg ? [fg.family, bg.family] : [fg.family];
-  }
-  return draftEvent.emotion_family ? [draftEvent.emotion_family] : [];
-}
-
 // src/services/ai/companionPose.ts
 var MOTION_CONFIG = {
   enableIdleLoop: true,
@@ -1668,6 +1673,69 @@ function resolveMotion(visual, family, gesture = null) {
   const base = ambientMotion(visual, family);
   if (base === "firstShape") return "firstShape";
   return gesture ?? base;
+}
+
+// src/services/ai/momentType.ts
+var REPAIR_RX = /\b(i'?ll|i will|i'?m gonna|i'?m going to|i wanna|i want to|i think i'?ll|i think i might|i might|maybe i'?ll|i need to|i should(?: probably)?|i'?m going to try to|i'?ve decided to|i'?m ready to)\s+(call|phone|ring|text|message|msg|tell|talk to|speak to|ask|reach out|reach back|apologi[sz]e|say (?:something|sorry)|write to|email|see|visit|let .{1,20} know|check in (?:on|with)|make (?:it )?up|sort (?:it|things) out)\b/i;
+var HIDDEN_RULE_RX = /\b(i'?m not allowed|not allowed to|i'?m not supposed to|i'?m supposed to|i have to be|i always have to|i'?m the one who has to|i must (?:be|always)|if i .{0,32}\b(?:then|she|he|they|i'?m|people|everyone)\b|i can'?t (?:let|ever|be seen|show|afford to)|i'?m the (?:one who|kind who|type who)|i'?m not the (?:kind|type)|i'?m only (?:ok|okay|fine|allowed) (?:if|when)|i'?m a burden|i shouldn'?t (?:need|feel|want|have to)|i'?m too much|i can'?t be the (?:difficult|needy|selfish))/i;
+function ownedSomethingNew(ev, prev) {
+  const ownsLabel = ev.label_source === "user_stated" || ev.label_source === "user_confirmed";
+  const ownsShade = ev.shade_source === "user_stated" || ev.shade_source === "user_confirmed";
+  if (!ownsLabel && !ownsShade) return false;
+  const shadeChanged = !!ev.emotion_shade && ev.emotion_shade !== (prev?.emotion_shade ?? null);
+  const phraseChanged = !!ev.user_phrase && ev.user_phrase !== (prev?.user_phrase ?? null);
+  return shadeChanged || phraseChanged;
+}
+function newlyRejected(ev, prev) {
+  const before = new Set(prev?.user_rejected_shades ?? []);
+  return (ev.user_rejected_shades ?? []).some((s) => !before.has(s));
+}
+function classifyMoments(turn, prevEvent, strandAdvance, userText) {
+  const ev = turn.event;
+  const out = [];
+  const text = ` ${(userText ?? "").toLowerCase().replace(/[’]/g, "'")} `;
+  if (turn.unlocked) out.push("unlocked");
+  if (ev.mixed_confirmed === 1 && (prevEvent?.mixed_confirmed ?? 0) !== 1) out.push("mixed_found");
+  const prevReal = !!prevEvent?.emotion_family && prevEvent.label_source != null;
+  const curReal = !!ev.emotion_family && ev.label_source != null;
+  if (prevReal && curReal && ev.emotion_family !== prevEvent.emotion_family) out.push("shift");
+  const workedAStrand = (strandAdvance?.results ?? []).some(
+    (r) => isDifficultFamily(r.progress.emotion_family) && PROGRESS_RANK[r.to] >= PROGRESS_RANK.first_shape
+  );
+  if (isPositiveFamily(ev.emotion_family) && (isDifficultFamily(prevEvent?.emotion_family) || workedAStrand)) {
+    out.push("landing");
+  }
+  if (!turn.unlocked && (ownedSomethingNew(ev, prevEvent) || newlyRejected(ev, prevEvent))) out.push("clarified");
+  const ruleHay = `${text}${" "}${(ev.appraisal_thought ?? "").toLowerCase()}`;
+  if (HIDDEN_RULE_RX.test(ruleHay)) out.push("hidden_rule");
+  if (REPAIR_RX.test(text)) out.push("repair_intention");
+  return out;
+}
+
+// src/services/ai/companionVisualState.ts
+function selectVisualState(s) {
+  if (s.safetyVisible || s.safetyCheckPending) return "safety_receded";
+  if (s.unlockShowing) return "first_shape";
+  if (s.sending) return "searching";
+  if ((s.draftEvent?.strands?.length ?? 0) >= 2) return "mixed_strands";
+  if (s.progressStage === "deepened") return "deepened";
+  if (s.progressStage === "returning") return "returning_shape";
+  const d = s.draftEvent;
+  if (d?.emotion_family && d?.emotion_shade && (d.label_source === "user_stated" || d.label_source === "user_confirmed")) {
+    return "stabilising";
+  }
+  if (d && !d.emotion_family) return "uncertain";
+  return "idle_calm";
+}
+function visualTintFamilies(draftEvent) {
+  if (!draftEvent) return [];
+  const strands = draftEvent.strands ?? [];
+  if (strands.length >= 2) {
+    const fg = strands.find((x) => x.salience === "foreground") ?? strands[0];
+    const bg = strands.find((x) => x.family !== fg.family);
+    return bg ? [fg.family, bg.family] : [fg.family];
+  }
+  return draftEvent.emotion_family ? [draftEvent.emotion_family] : [];
 }
 
 // src/services/ai/orbExpression.ts
@@ -1901,6 +1969,7 @@ export {
   advanceStrands,
   ambientMotion,
   askedForNamingHelp,
+  classifyMoments,
   composeLearningSentence,
   composeWeeklySummary,
   detectShadeRejection,
@@ -1937,6 +2006,7 @@ export {
   resolveMotion,
   routeMode,
   sanitizeStrands,
+  scrubForMemory,
   selectVisualState,
   sequenceDuration,
   shadeIsUserOwned,

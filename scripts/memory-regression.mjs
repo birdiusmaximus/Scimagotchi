@@ -4,7 +4,7 @@
  *
  * Run: npm run test:memory (rebundles, then executes). Exit 1 on failure.
  */
-import { activeCards, draftFromRejection, draftFromTurn, memoryBlocked, relevantMemory } from './engine-bundle.mjs';
+import { activeCards, draftFromRejection, draftFromTurn, memoryBlocked, relevantMemory, scrubForMemory } from './engine-bundle.mjs';
 
 let pass = 0;
 let fail = 0;
@@ -59,6 +59,32 @@ check('diagnosis/meds language blocked', memoryBlocked('started a new antidepres
 check('identity self-condemnation blocked from memory', memoryBlocked('the user feels they are a bad person'));
 check('identity "not good enough" blocked from memory', memoryBlocked('she is fundamentally not good enough'));
 check('ordinary feeling note NOT blocked', !memoryBlocked('Pressure can feel like being divided into too many pieces.'));
+// Extended shame-verdict block (Phase 3): identity verdicts the older list missed.
+check('"I don\'t deserve…" verdict blocked', memoryBlocked("i don't even deserve to be her sister"));
+check('"this is who you are" verdict blocked', memoryBlocked('this is who you are'));
+check('"I\'m the selfish one" verdict blocked', memoryBlocked("i'm the selfish one"));
+check('observing shame\'s voice (with distance) is NOT blocked', !memoryBlocked('that voice calling me selfish again'));
+
+// ── Pattern-not-detail scrub (Phase 3 scrubForMemory) ────────────────────────
+check('scrub: drops a name after a relationship role', scrubForMemory('my sister Maya took it') === 'my sister took it');
+check('scrub: keeps the role when no name follows', scrubForMemory('missing my brother lately') === 'missing my brother lately');
+check('scrub: "named/called X" dropped after role', scrubForMemory('my brother named Danny') === 'my brother');
+check('scrub: closeness verb + Name -> them', scrubForMemory('i keep wanting to text Danny') === 'i keep wanting to text them');
+check('scrub: bare imperative "call Name" -> them', scrubForMemory('i could call Mara tonight') === 'i could call them tonight');
+check('scrub: a leading name + action verb -> they', scrubForMemory('Danny moved to Australia') === 'they moved away');
+check('scrub: place frame generalised', scrubForMemory('she lives in Sydney now') === 'she lives away now');
+check('scrub: possessive name -> their', scrubForMemory("Maya's always like this") === "their always like this");
+check('scrub: a day-of-week possessive survives', scrubForMemory("Monday's the worst") === "Monday's the worst");
+check('scrub: leaves a felt phrase untouched', scrubForMemory('right in my throat, like something stuck') === 'right in my throat, like something stuck');
+check('scrub: leaves "everyone knew" untouched', scrubForMemory('everyone knew except me') === 'everyone knew except me');
+check('scrub: empty stays empty', scrubForMemory('') === '');
+
+// Card drafting now scrubs what it stores.
+check('draft scrubs a name out of the stored phrase',
+  (() => {
+    const c = draftFromTurn(turn({}, { memory_note: 'A quiet ache when my sister Maya pulls away.', user_words_raw: 'my sister Maya pulls away' }), 'remember this', 'c1');
+    return !!c && !/Maya/.test(c.summary) && !c.user_words.some((w) => /Maya/.test(w));
+  })());
 
 // ── Confirmed-only retrieval ─────────────────────────────────────────────────
 const card = (over = {}) => ({

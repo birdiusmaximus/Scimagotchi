@@ -29,6 +29,7 @@ export {
   hasEmotionAnchor,
   isUncertain,
   labelIsUserOwned,
+  labelNamedByUser,
   shadeIsUserOwned,
   SLOW_PATH_FAMILIES,
   stageRank,

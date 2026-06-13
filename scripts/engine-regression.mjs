@@ -22,6 +22,7 @@ import {
   isOptionMenu,
   isUncertain,
   labelIsUserOwned,
+  labelNamedByUser,
   mixedConfirmed,
   ambientMotion,
   durationFor,
@@ -110,6 +111,29 @@ check('stage: owned label but NO anchor -> named',
 // Feeling vs scene evidence (brief §1,3,5): context/scene alone never reaches understood.
 check('stage: context-only (owned label + trigger + scene phrase, no felt signal) -> shaped, not understood',
   evaluateStage(ev({ label_source: 'user_confirmed', emotion_shade: 'pressured', shade_source: 'companion_hypothesis', trigger_event: 'everyone wants a piece of me at work', user_phrase: 'everyone wants a piece of me at work', body_cue: [], behaviour_action: [], appraisal_thought: null, user_words_raw: '' }), null), 'shaped');
+// Vague "foggy"/"off" shade (robustness-sim "uncertain"): a not-yet-located marker can
+// shape but never unlock, even when owned + stable across turns.
+check('stage: a "foggy" shade, owned + stable, stays shaped (never understood)',
+  evaluateStage(
+    ev({ emotion_family: 'flat', label_source: 'user_stated', emotion_shade: 'foggy', shade_source: 'user_stated', trigger_event: 'something with my brother', appraisal_thought: 'it doesnt add up' }),
+    ev({ emotion_family: 'flat', emotion_shade: 'foggy' }),
+  ), 'shaped');
+check('stage: a SPECIFIC flat shade ("numb"), owned + stable, DOES unlock',
+  evaluateStage(
+    ev({ emotion_family: 'flat', label_source: 'user_stated', emotion_shade: 'numb', shade_source: 'user_stated', trigger_event: 'after the funeral', appraisal_thought: 'nothing reaches me' }),
+    ev({ emotion_family: 'flat', emotion_shade: 'numb' }),
+  ), 'understood');
+check('stage: "murky" as a shade is vague -> shaped, not understood',
+  evaluateStage(
+    ev({ emotion_family: 'flat', label_source: 'user_stated', emotion_shade: 'murky', shade_source: 'user_stated', body_cue: ['heavy'], trigger_event: 'nothing in particular' }),
+    ev({ emotion_family: 'flat', emotion_shade: 'murky' }),
+  ), 'shaped');
+// "off" is NOT vague (the engaged happy-path unlocks on it) — it must still be able to unlock.
+check('stage: "off" as a shade is NOT vague -> can unlock',
+  evaluateStage(
+    ev({ emotion_family: 'hurt', label_source: 'user_stated', emotion_shade: 'off', shade_source: 'user_stated', body_cue: ['hollow'], trigger_event: 'left out of the dinner' }),
+    ev({ emotion_family: 'hurt', emotion_shade: 'off' }),
+  ), 'understood');
 check('stage: a felt body cue makes it understood (feeling signal present)',
   evaluateStage(ev({ label_source: 'user_confirmed', emotion_shade: 'pressured', shade_source: 'companion_hypothesis', trigger_event: 'everyone wants a piece of me at work', body_cue: ['pulled apart'], appraisal_thought: null }), null), 'understood');
 check('stage: a user-owned shade is itself a feeling signal -> understood',
@@ -187,6 +211,17 @@ check('uncertain: a clear feeling is NOT uncertainty', isUncertain('i am quite a
 check('uncertain: real detail is NOT uncertainty', isUncertain('i want to hide'), false);
 check('uncertain: "not quite" alone is NOT uncertainty (it is a rejection)', isUncertain('not quite'), false);
 check('uncertain: "maybe it is anger" (with content) is NOT bare-hedge uncertainty', isUncertain('maybe it is anger'), false);
+// Disowning phrases the old regex missed (robustness-sim "uncertain", U6): adverbs
+// between "i" and "know", disowning the framing, and "just guessing".
+check('uncertain: "i dont even know" is uncertainty', isUncertain("i dont even know what to call it"), true);
+check('uncertain: "i really just dont know what this is" is uncertainty', isUncertain('i really just dont know what this is'), true);
+check('uncertain: "that might be you putting words on it" is uncertainty', isUncertain('that might be you putting words on it'), true);
+check('uncertain: "im just guessing" is uncertainty', isUncertain('honestly im just guessing'), true);
+// Must STAY false for genuine confirmations / owned feelings (no new false positives
+// that would block a legitimate unlock).
+check('uncertain: "yeah thats it" is NOT uncertainty', isUncertain("yeah thats it"), false);
+check('uncertain: "it feels like a weight on my chest" is NOT uncertainty', isUncertain('it feels like a weight on my chest'), false);
+check('uncertain: "im furious about it" is NOT uncertainty', isUncertain('im furious about it'), false);
 // hasEmotionAnchor: a learned moment needs a real, user-owned anchor
 check('anchor: a body cue counts', hasEmotionAnchor(ev({ body_cue: ['tight chest'] })), true);
 check('anchor: a trigger counts', hasEmotionAnchor(ev({ trigger_event: 'they saw me fail', body_cue: [] })), true);
@@ -241,6 +276,16 @@ check('owned: bare affirmation with no family in play -> not owned',
   labelIsUserOwned('pressure', 'yes exactly', [], null), false);
 check('owned: only the companion used the word -> not owned',
   labelIsUserOwned('pressure', 'hmm, maybe', [{ role: 'companion', content: 'sounds like pressure' }], null), false);
+// labelNamedByUser is the STRONG half — a bare affirmation must not satisfy it (the
+// closing/uncertain backstop relies on this so a goodbye "yeah" can't unlock).
+check('named: user used a family word this turn -> named',
+  labelNamedByUser('pressure', 'I feel so overwhelmed', []), true);
+check('named: named in an earlier user turn -> named',
+  labelNamedByUser('pressure', 'and it keeps going', [{ role: 'user', content: 'I am so stressed' }]), true);
+check('named: a bare "yeah" affirming a proposal is NOT named-by-user',
+  labelNamedByUser('shame', 'yeah. lets leave it there. thanks', [{ role: 'companion', content: 'a self-critical edge' }]), false);
+check('named: describing a situation without the feeling word is NOT named',
+  labelNamedByUser('shame', 'my brother left and the place is quiet', []), false);
 
 // ── Mixed-emotion §9.3 save rules ────────────────────────────────────────────
 const strand = (family, source, salience = 'equal') => ({ family, shade: null, salience, source });

@@ -36,6 +36,7 @@ import {
   evaluateStage,
   isUncertain,
   labelIsUserOwned,
+  labelNamedByUser,
   shadeIsUserOwned,
   stageRank,
   userConfirmsLabel,
@@ -256,6 +257,22 @@ export async function openaiGenerateTurn(
   if (fam && fam === prev?.emotion_family && ev.label_source !== 'user_stated' && userConfirmsLabel(input.userText, prev)) {
     ev.label_source = 'user_confirmed';
     ev.user_confirmation = 'yes';
+  }
+
+  // Closing / still-uncertain backstop: a bare "yeah" on a turn that is winding the
+  // conversation down ("yeah, leave it there") or still hedging is agreeing to STOP,
+  // not owning the companion's last hypothesis. Unless the user actually NAMED this
+  // family in their own words, keep it a hypothesis so a goodbye can't unlock a
+  // feeling they never claimed. (robustness-sim: the "uncertain" persona, where a
+  // closing "yeah" flipped an unconfirmed "self-critical" to understood.)
+  if (
+    fam &&
+    (ev.label_source === 'user_stated' || ev.label_source === 'user_confirmed') &&
+    (EXIT_CUE.test(input.userText) || uncertainTurn) &&
+    !labelNamedByUser(fam, input.userText, input.history ?? [])
+  ) {
+    ev.label_source = 'companion_hypothesis';
+    if (ev.user_confirmation === 'yes') ev.user_confirmation = 'partial';
   }
 
   // ── Shade ownership gate (v0.4 §6.3) ──────────────────────────────────────

@@ -59,6 +59,21 @@ export interface FirstShapeEvidence {
 const FILLER_PHRASE =
   /^(just am|i just am|it just is|it is what it is|the same|same as (before|always|usual)|same old|like i said|as i said|nothing really|not much|i dont know|dunno|idk|i guess|kind of|sort of|whatever)\.?$/i;
 
+// A shade that names the FOG itself ("foggy", "blurry", "unclear") is the user
+// reporting they cannot locate the feeling yet, not a felt quality that can crystallise.
+// It can SHAPE (we see the edge) but must never be the basis of a first shape, however
+// stable it gets (robustness-sim "uncertain": "foggy was always my way of saying i
+// couldn't locate it"). Deliberately NARROW — only unambiguous not-located words. Real
+// flat shades (numb, empty, hollow, disconnected) and mild-malaise words the engaged
+// happy-path legitimately unlocks on ("off", "uneasy") are NOT vague and excluded.
+const VAGUE_SHADE =
+  /^(foggy|fog|in a fog|blurry|blurred|hazy|fuzzy|murky|cloudy|unclear|undefined|indistinct|unnameable|unnamed|vague)$/i;
+
+/** True when the shade is a not-yet-located marker rather than a felt quality. */
+function isVagueShade(shade: string | null | undefined): boolean {
+  return !!shade && VAGUE_SHADE.test(shade.trim());
+}
+
 /**
  * The richness signals behind a first shape (v0.4 §6.4). A first shape should
  * arrive only when there is enough USER-OWNED material to produce a meaningful
@@ -99,7 +114,12 @@ export function firstShapeEvidence(ev: EmotionEvent, prev: EmotionEvent | null =
   // FEELING evidence = how it felt (body/impulse, meaning, mixed structure, or a
   // shade the user OWNS), distinct from SCENE evidence (trigger, descriptive phrase).
   // A first shape needs the felt quality, not just the situation (brief §1,3,5).
-  const ownedShade = !!ev.emotion_shade && (ev.shade_source === 'user_stated' || ev.shade_source === 'user_confirmed');
+  // A vague "foggy"/"off" shade is not a felt quality, so it does not count as the
+  // owned-shade feeling signal even when the user said the word.
+  const ownedShade =
+    !!ev.emotion_shade &&
+    !isVagueShade(ev.emotion_shade) &&
+    (ev.shade_source === 'user_stated' || ev.shade_source === 'user_confirmed');
   const feelingCount = [bodyCue, meaningOrAppraisal, mixedEmotionDistinction, ownedShade].filter(Boolean).length;
   return {
     userOwnedLabel,
@@ -140,7 +160,11 @@ export function evaluateStage(ev: EmotionEvent, prev: EmotionEvent | null = null
 
   // A first shape (understood) needs a USER-OWNED label, stability, enough material,
   // AND at least one FEELING signal — context/scene alone can shape but never understand.
-  if (!rejected && e.userOwnedLabel && stabilityOk && enoughMaterial && e.feelingCount >= 1) return 'understood';
+  // A vague "foggy"/"off" shade is the user still in the fog; it can shape, never unlock.
+  const vagueShade = isVagueShade(ev.emotion_shade);
+  if (!rejected && !vagueShade && e.userOwnedLabel && stabilityOk && enoughMaterial && e.feelingCount >= 1) {
+    return 'understood';
+  }
 
   return anchor ? 'shaped' : 'named';
 }
@@ -197,7 +221,7 @@ export function detectShadeRejection(userText: string, prev: Pick<EmotionEvent, 
 // memory, no "I know this better now: not sure". (NOT the "not quite" rejection, which
 // is handled separately.)
 const UNCERTAIN_RX =
-  /\b(not sure|no idea|no clue|i dont know|i don'?t know|dunno|idk|hard to say|hard to put|cant tell|cannot tell|cant say|not really sure|not quite sure|unsure|unclear|i can'?t name it|dont have (a|the) word|cant find the word)\b/;
+  /\b(not sure|no idea|no clue|i dont know|i don'?t know|(dont|don'?t) (even|really|actually|honestly) know|(really|still|honestly|just|even) (dont|don'?t) know|dont know what (this|it|that|im|i am|i'?m|its|it'?s)|dunno|idk|hard to say|hard to put|cant tell|cannot tell|cant say|not really sure|not quite sure|unsure|unclear|i can'?t name it|dont have (a|the) word|cant find the word|putting words (on|in)|(im|i'?m) (just |only )?guessing|that'?s (just )?a guess)\b/;
 // Bare hedges that read as uncertainty when they are essentially the whole reply.
 const HEDGE_RX = /^(maybe|kind of|kinda|sort of|sorta|i guess|not really|dunno|idk|unsure|hard to say|hmm|who knows)[.!?\s]*$/;
 
@@ -246,18 +270,32 @@ const AFFIRM_LABEL =
  * hypothesis, so the First-Shape gate holds and the companion confirms before
  * any first shape forms. Applies to every family.
  */
-export function labelIsUserOwned(
+/**
+ * Did the user NAME this family in their OWN words (this turn or earlier), as
+ * opposed to merely affirming a companion proposal with a bare "yeah"? This is the
+ * strong half of ownership: it cannot be satisfied by an affirmation. Used to keep
+ * a closing or still-uncertain "yeah" from being read as owning a hypothesis label.
+ */
+export function labelNamedByUser(
   fam: EmotionFamilyId,
   userText: string,
   history: { role: 'user' | 'companion'; content: string }[],
-  prev: Pick<EmotionEvent, 'emotion_family'> | null,
 ): boolean {
   const named = (text: string) => {
     const t = ` ${text.toLowerCase()} `;
     return EMOTION_MAPS[fam].familyKeywords.some((w) => t.includes(w));
   };
   if (named(userText)) return true;
-  if (history.some((m) => m.role === 'user' && named(m.content))) return true;
+  return history.some((m) => m.role === 'user' && named(m.content));
+}
+
+export function labelIsUserOwned(
+  fam: EmotionFamilyId,
+  userText: string,
+  history: { role: 'user' | 'companion'; content: string }[],
+  prev: Pick<EmotionEvent, 'emotion_family'> | null,
+): boolean {
+  if (labelNamedByUser(fam, userText, history)) return true;
   if (prev?.emotion_family === fam && AFFIRM_LABEL.test(` ${userText.toLowerCase()} `)) return true;
   return false;
 }

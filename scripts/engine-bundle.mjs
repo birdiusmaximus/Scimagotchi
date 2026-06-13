@@ -502,6 +502,10 @@ function stageRank(stage) {
 }
 var SLOW_PATH_FAMILIES = /* @__PURE__ */ new Set(["flat", "shame"]);
 var FILLER_PHRASE = /^(just am|i just am|it just is|it is what it is|the same|same as (before|always|usual)|same old|like i said|as i said|nothing really|not much|i dont know|dunno|idk|i guess|kind of|sort of|whatever)\.?$/i;
+var VAGUE_SHADE = /^(foggy|fog|in a fog|blurry|blurred|hazy|fuzzy|murky|cloudy|unclear|undefined|indistinct|unnameable|unnamed|vague)$/i;
+function isVagueShade(shade) {
+  return !!shade && VAGUE_SHADE.test(shade.trim());
+}
 function firstShapeEvidence(ev, prev = null) {
   const userOwnedLabel = ev.label_source === "user_stated" || ev.label_source === "user_confirmed";
   const concreteSituation = !!ev.trigger_event;
@@ -520,7 +524,7 @@ function firstShapeEvidence(ev, prev = null) {
     meaningOrAppraisal,
     mixedEmotionDistinction
   ].filter(Boolean).length;
-  const ownedShade = !!ev.emotion_shade && (ev.shade_source === "user_stated" || ev.shade_source === "user_confirmed");
+  const ownedShade = !!ev.emotion_shade && !isVagueShade(ev.emotion_shade) && (ev.shade_source === "user_stated" || ev.shade_source === "user_confirmed");
   const feelingCount = [bodyCue, meaningOrAppraisal, mixedEmotionDistinction, ownedShade].filter(Boolean).length;
   return {
     userOwnedLabel,
@@ -547,7 +551,10 @@ function evaluateStage(ev, prev = null) {
   const stabilityOk = e.repeatedConfirmation || e.userAcceptedReflection;
   const slow = SLOW_PATH_FAMILIES.has(ev.emotion_family);
   const enoughMaterial = slow ? e.materialCount >= 3 || e.repeatedConfirmation && e.materialCount >= 2 : e.materialCount >= 2;
-  if (!rejected && e.userOwnedLabel && stabilityOk && enoughMaterial && e.feelingCount >= 1) return "understood";
+  const vagueShade = isVagueShade(ev.emotion_shade);
+  if (!rejected && !vagueShade && e.userOwnedLabel && stabilityOk && enoughMaterial && e.feelingCount >= 1) {
+    return "understood";
+  }
   return anchor ? "shaped" : "named";
 }
 var ACCEPT_SHADE = /\b(yes|yeah|yep|exactly|thats? (it|right|the (one|word))|that fits|that'?s the word|the right word|good word)\b/;
@@ -567,7 +574,7 @@ function detectShadeRejection(userText, prev) {
   const t = ` ${userText.toLowerCase().replace(/[’'`]/g, "'")} `;
   return SHADE_REJECT.test(t) ? prev.emotion_shade : null;
 }
-var UNCERTAIN_RX = /\b(not sure|no idea|no clue|i dont know|i don'?t know|dunno|idk|hard to say|hard to put|cant tell|cannot tell|cant say|not really sure|not quite sure|unsure|unclear|i can'?t name it|dont have (a|the) word|cant find the word)\b/;
+var UNCERTAIN_RX = /\b(not sure|no idea|no clue|i dont know|i don'?t know|(dont|don'?t) (even|really|actually|honestly) know|(really|still|honestly|just|even) (dont|don'?t) know|dont know what (this|it|that|im|i am|i'?m|its|it'?s)|dunno|idk|hard to say|hard to put|cant tell|cannot tell|cant say|not really sure|not quite sure|unsure|unclear|i can'?t name it|dont have (a|the) word|cant find the word|putting words (on|in)|(im|i'?m) (just |only )?guessing|that'?s (just )?a guess)\b/;
 var HEDGE_RX = /^(maybe|kind of|kinda|sort of|sorta|i guess|not really|dunno|idk|unsure|hard to say|hmm|who knows)[.!?\s]*$/;
 function isUncertain(userText) {
   const norm3 = (userText || "").toLowerCase().replace(/[’'`]/g, "'").trim();
@@ -578,13 +585,16 @@ function hasEmotionAnchor(ev) {
   return (ev.body_cue?.length ?? 0) > 0 || (ev.behaviour_action?.length ?? 0) > 0 || !!ev.trigger_event || !!ev.appraisal_thought || (ev.need_value?.length ?? 0) > 0 || ownedShade || ev.mixed_confirmed === 1 || (ev.strands?.length ?? 0) >= 2;
 }
 var AFFIRM_LABEL = /\b(yes|yeah|yep|yup|exactly|totally|definitely|for sure|that'?s it|that'?s right|spot on|pretty much|sounds right|that fits|fits|correct)\b/;
-function labelIsUserOwned(fam, userText, history, prev) {
+function labelNamedByUser(fam, userText, history) {
   const named = (text) => {
     const t = ` ${text.toLowerCase()} `;
     return EMOTION_MAPS[fam].familyKeywords.some((w) => t.includes(w));
   };
   if (named(userText)) return true;
-  if (history.some((m) => m.role === "user" && named(m.content))) return true;
+  return history.some((m) => m.role === "user" && named(m.content));
+}
+function labelIsUserOwned(fam, userText, history, prev) {
+  if (labelNamedByUser(fam, userText, history)) return true;
   if (prev?.emotion_family === fam && AFFIRM_LABEL.test(` ${userText.toLowerCase()} `)) return true;
   return false;
 }
@@ -1991,6 +2001,7 @@ export {
   isPositiveFamily,
   isUncertain,
   labelIsUserOwned,
+  labelNamedByUser,
   learnedFamilies,
   memoryBlocked,
   migrateStage,

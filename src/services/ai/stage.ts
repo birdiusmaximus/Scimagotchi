@@ -169,9 +169,11 @@ export function evaluateStage(ev: EmotionEvent, prev: EmotionEvent | null = null
   return anchor ? 'shaped' : 'named';
 }
 
-/** Strong, specific shade-acceptance only (a bare "yeah" must not confirm a shade). */
+// Strong, LABEL-SPECIFIC shade-acceptance only. A bare "yeah"/"yes"/"exactly" must
+// not confirm a proposed shade — a people-pleaser emits those reflexively. Acceptance
+// has to point at the word ("that's the word", "that's it"), matching the label rule.
 const ACCEPT_SHADE =
-  /\b(yes|yeah|yep|exactly|thats? (it|right|the (one|word))|that fits|that'?s the word|the right word|good word)\b/;
+  /\b(thats? (it|right|the (one|word))|that fits|that'?s the word|the right word|good word|exactly (it|right|that)|yeah,? thats? (it|right|the word)|yes,? thats? (it|right|the word))\b/;
 
 /**
  * Is the SHADE the user's own, not the companion's taxonomy (v0.4 §6.3)? True when
@@ -188,11 +190,18 @@ export function shadeIsUserOwned(
   if (!shade || !shade.trim()) return false;
   const w = shade.toLowerCase().trim();
   const said = (text: string) => ` ${text.toLowerCase()} `.includes(` ${w} `) || new RegExp(`\\b${w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i').test(text);
-  const userSaidEarlier = history.some((m) => m.role === 'user' && said(m.content));
+  // The user said it earlier IN THEIR OWN RIGHT — but a prior mention that was itself an
+  // echo of the companion's immediately-preceding line does NOT count (else an echo on
+  // one turn launders into "they said it earlier" on the next).
+  const userSaidEarlier = history.some((m, i) => {
+    if (m.role !== 'user' || !said(m.content)) return false;
+    const prevCompanion = [...history.slice(0, i)].reverse().find((p) => p.role === 'companion');
+    return !(prevCompanion && said(prevCompanion.content));
+  });
   if (userSaidEarlier) return true;
   // Echo guard: if the companion introduced this word in its last reply and the user
   // never used it before, the user repeating it now is parroting, not owning it (the
-  // shallow-agreement failure: the companion supplied "spread thin", the user echoed it).
+  // shallow-agreement failure: the companion supplied the word, the user echoed it).
   const lastCompanion = [...history].reverse().find((m) => m.role === 'companion');
   const companionJustIntroduced = !!lastCompanion && said(lastCompanion.content);
   if (said(userText) && !companionJustIntroduced) return true;

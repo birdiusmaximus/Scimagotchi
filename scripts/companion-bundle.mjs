@@ -655,12 +655,16 @@ function evaluateStage(ev, prev = null) {
   }
   return anchor ? "shaped" : "named";
 }
-var ACCEPT_SHADE = /\b(yes|yeah|yep|exactly|thats? (it|right|the (one|word))|that fits|that'?s the word|the right word|good word)\b/;
+var ACCEPT_SHADE = /\b(thats? (it|right|the (one|word))|that fits|that'?s the word|the right word|good word|exactly (it|right|that)|yeah,? thats? (it|right|the word)|yes,? thats? (it|right|the word))\b/;
 function shadeIsUserOwned(shade, userText, history, opts) {
   if (!shade || !shade.trim()) return false;
   const w = shade.toLowerCase().trim();
   const said = (text) => ` ${text.toLowerCase()} `.includes(` ${w} `) || new RegExp(`\\b${w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i").test(text);
-  const userSaidEarlier = history.some((m) => m.role === "user" && said(m.content));
+  const userSaidEarlier = history.some((m, i) => {
+    if (m.role !== "user" || !said(m.content)) return false;
+    const prevCompanion = [...history.slice(0, i)].reverse().find((p) => p.role === "companion");
+    return !(prevCompanion && said(prevCompanion.content));
+  });
   if (userSaidEarlier) return true;
   const lastCompanion = [...history].reverse().find((m) => m.role === "companion");
   const companionJustIntroduced = !!lastCompanion && said(lastCompanion.content);

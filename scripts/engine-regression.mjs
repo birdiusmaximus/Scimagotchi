@@ -193,6 +193,12 @@ check('shade-own: echoing the companion\'s just-supplied word is NOT owned',
   shadeIsUserOwned('stretched', 'yeah stretched thats it', [{ role: 'companion', content: 'sounds more like being stretched' }], {}), false);
 check('shade-own: user said it earlier, even if companion also did -> still owned',
   shadeIsUserOwned('stretched', 'yeah', [{ role: 'user', content: 'i feel stretched' }, { role: 'companion', content: 'stretched then' }], {}), true);
+check('shade-own: a prior user mention that was itself an echo does NOT launder into ownership',
+  shadeIsUserOwned('stretched', 'hmm', [{ role: 'companion', content: 'sounds stretched' }, { role: 'user', content: 'yeah stretched' }, { role: 'companion', content: 'stretched then' }], {}), false);
+check('shade-accept: a bare "yeah" no longer confirms a proposed shade',
+  shadeIsUserOwned('stretched', 'yeah', [], { proposedShade: 'stretched' }), false);
+check('shade-accept: "yeah thats the word" still confirms a proposed shade',
+  shadeIsUserOwned('stretched', 'yeah thats the word', [], { proposedShade: 'stretched' }), true);
 
 // ── Unlock pushback detector (v0.4 §6.3) ─────────────────────────────────────
 check('pushback: "no, that doesnt fit" rejects the in-play shade',

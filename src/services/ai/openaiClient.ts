@@ -20,8 +20,12 @@ import {
   EXIT_CUE,
   isDuplicateReply,
   isOptionMenu,
+  offersOffRamp,
   replaceOptionMenu,
   repeatsEarlierQuestion,
+  repeatsRecentReflection,
+  stripEchoedSentences,
+  stripOffRamp,
   varietyDirective,
   varietySignals,
   type ResponseShape,
@@ -149,12 +153,17 @@ export async function openaiGenerateTurn(
   // ── Call, with one retry on corrupted, verbatim-repeated, or re-asked output ──
   let p = await callOnce();
   const repeatedQ = repeatsEarlierQuestion(p.reply, companionReplies);
-  if (hasUnexpectedScript(p.reply) || isDuplicateReply(p.reply, companionReplies) || repeatedQ) {
+  // A "stay with it" tap that just restates the last reflection instead of opening a
+  // new door (a real failure mode on taps, where there's no new user text to react to).
+  const repeatedReflection = repeatsRecentReflection(p.reply, companionReplies);
+  if (hasUnexpectedScript(p.reply) || isDuplicateReply(p.reply, companionReplies) || repeatedQ || repeatedReflection) {
     const reason = hasUnexpectedScript(p.reply)
       ? 'Your previous draft contained corrupted/mixed-script text. Compose a fresh reply in clean English only.'
       : repeatedQ
         ? 'Your previous draft asked a question they have ALREADY answered earlier in this conversation. Do NOT ask it again. Re-read what they have actually told you and respond to THAT specific thing — reflect it back a little more precisely, and only then, if it helps, open ONE genuinely new door (what it costs them, what it protects or needs, what it connects to, a finer shade). Reference their real words, not a generic prompt.'
-        : 'Your previous draft repeated an earlier reply verbatim. Say something genuinely new.';
+        : repeatedReflection
+          ? 'Your previous draft RESTATED the reflection you just gave them, in almost the same words. Do NOT repeat yourself. Move one concrete step further: open a genuinely new door from what they last said (the body, the impulse, what it protects, what it connects to, a finer shade), or reflect a NEW angle. Never echo your own last sentence back.'
+          : 'Your previous draft repeated an earlier reply verbatim. Say something genuinely new.';
     try {
       p = await callOnce(`OUTPUT CORRECTION: ${reason}`);
     } catch {
@@ -171,6 +180,10 @@ export async function openaiGenerateTurn(
   if (repeatsEarlierQuestion(p.reply, companionReplies)) {
     const stripped = dropTrailingQuestion(p.reply).trim();
     if (stripped) p.reply = stripped;
+  }
+  // And if it still echoes the previous reflection, drop the echoed sentence(s).
+  if (repeatsRecentReflection(p.reply, companionReplies)) {
+    p.reply = stripEchoedSentences(p.reply, companionReplies[companionReplies.length - 1] ?? '');
   }
 
   // ── Merge the model's reading into the (re)built event ─────────────────────
@@ -345,6 +358,11 @@ export async function openaiGenerateTurn(
   // Exit-cue rest (v0.4 §6.3): if they're signalling they're done, don't grab them
   // with a probing question — let them leave on a settled note.
   if (EXIT_CUE.test(input.userText)) reply = dropTrailingQuestion(reply);
+
+  // No exit to someone who just tapped "stay with it": they explicitly chose to keep
+  // going, so offering "leave it here / keep it unnamed" in the same breath is wrong
+  // (the unlock-sim showed this on every premature off-ramp). Strip the off-ramp.
+  if (input.intent === 'keep_going' && offersOffRamp(reply)) reply = stripOffRamp(reply);
 
   return { reply: stripEmDashes(stripControlChars(reply)), event: ev, unlocked, tone, stage };
 }

@@ -20,13 +20,14 @@ import { fileURLToPath } from 'node:url';
 
 import { openaiGenerateTurn } from './companion-bundle.mjs';
 import {
-  advanceProgress,
+  advanceStrands,
   composeLearningSentence,
   draftFromTurn,
   hasEmotionAnchor,
   isUncertain,
   PROGRESS_RANK,
   summaryIsClean,
+  turnStrandFamilies,
 } from './engine-bundle.mjs';
 import {
   classifySafety,
@@ -174,11 +175,16 @@ const server = http.createServer(async (req, res) => {
       const latency_ms = Date.now() - t0;
 
       // ── Progression + unlock/deepening modal (mirror of the app store) ─────────
+      // Strand-aware: advance every feeling this turn surfaces, not just the primary.
       const suppress = !!safetyNote || !!intent || uncertain || repairActive;
       const fam = turn.event.emotion_family;
-      const existingProg = fam ? c.progress[fam] ?? null : null;
-      const adv = advanceProgress(existingProg, turn, cid, { suppress });
-      if (fam) c.progress[fam] = adv.progress;
+      const existingProg = {};
+      for (const f of turnStrandFamilies(turn.event)) existingProg[f] = c.progress[f] ?? null;
+      const strandAdv = advanceStrands(existingProg, turn, cid, { suppress });
+      for (const r of strandAdv.results) c.progress[r.progress.emotion_family] = r.progress;
+      const adv = strandAdv.primary ?? { from: 'unseen', to: 'unseen', advanced: false, progress: null, capabilities: {} };
+      // The strands carried this conversation, with their highest stage so far.
+      const strandStages = Object.fromEntries(Object.entries(c.progress).map(([k, v]) => [k, v.current_stage]));
 
       let modal = null; // { kind, summary } — what unlock ceremony (if any) the app would show
       if (turn.unlocked) {
@@ -234,6 +240,8 @@ const server = http.createServer(async (req, res) => {
         stage_before: adv.from,
         stage_after: adv.to,
         stage_advanced: adv.advanced,
+        strand_stages: strandStages,
+        deepest_strand: strandAdv.deepest,
         modal: modal ? modal.kind : null,
         modal_summary: modal ? modal.summary : null,
         memory_draft: memoryDraft ? { type: memoryDraft.type, summary: memoryDraft.summary } : null,
@@ -271,6 +279,8 @@ const server = http.createServer(async (req, res) => {
         stage_before: adv.from,
         stage_after: adv.to,
         stage_advanced: adv.advanced,
+        strand_stages: strandStages,
+        deepest_strand: strandAdv.deepest,
         modal: modal ? modal.kind : null,
         modal_summary: modal ? modal.summary : null,
         memory_draft: memoryDraft ? { type: memoryDraft.type, summary: memoryDraft.summary } : null,

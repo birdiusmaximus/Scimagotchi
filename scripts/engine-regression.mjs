@@ -36,6 +36,10 @@ import {
   poseFor,
   POSE_TARGETS,
   repeatsEarlierQuestion,
+  repeatsRecentReflection,
+  stripEchoedSentences,
+  offersOffRamp,
+  stripOffRamp,
   replaceOptionMenu,
   replyContainsDeclarativeEmotionAssertion,
   resolveMotion,
@@ -280,6 +284,10 @@ const mode = (text, prev = null) => routeMode(text, prev).mode;
 check('router: rejection -> repair', mode("no that's not it. stop analysing me"), 'repair');
 check('router: wrap-up -> close', mode("i'm done for tonight, thanks"), 'close');
 check('router: both/and -> hold_mixed', mode("i'm relieved but sad at the same time"), 'hold_mixed');
+check('router: "baked into it" -> hold_mixed', mode('the relief has the sadness baked into it'), 'hold_mixed');
+check('router: "in the same" -> hold_mixed', mode('the finally and the missing are in the same quiet'), 'hold_mixed');
+check('router: "underneath that" -> hold_mixed', mode('on top its anger but underneath that its hurt'), 'hold_mixed');
+check('router: body location "underneath my ribs" is NOT mixed', mode('theres a knot underneath my ribs') !== 'hold_mixed', true);
 check('router: body words, no emotion word -> body_first', mode("i don't know what i feel, my chest is just tight"), 'body_first');
 check('router: greeting -> soft_landing', mode('hey'), 'soft_landing');
 check('router: heavy disclosure -> witness', mode('my mum passed away last month and the house feels wrong'), 'witness');
@@ -337,6 +345,26 @@ check('repeatQ: a reflection with no question is never a repeat',
   repeatsEarlierQuestion('That sounds like it costs you something.', priorQ), false);
 check('repeatQ: no prior questions -> not a repeat', repeatsEarlierQuestion('How does that sit with you?', ['I am glad you came by.']), false);
 check('intent: keep_going directive says go one step deeper / not re-ask', /one step deeper/i.test(kgKnown.directive) && /do not re-ask|never ask them to/i.test(kgKnown.directive), true);
+
+// ── Repeated-reflection guard (the "stay with it" tap echoing the last reflection) ──
+const fearPrev = "One old result from your mum's story seems to be pulling this into the future for you.";
+const fearEcho = "One old result from your mum's story seems to be pulling this into the future for you. It sounds like the waiting is being filled in by that memory, over and over.";
+check('reflection-repeat: a tap that restates the last reflection is caught', repeatsRecentReflection(fearEcho, [fearPrev]), true);
+check('reflection-repeat: a genuinely new reflection is not flagged', repeatsRecentReflection('That bracing sounds exhausting to hold all week.', [fearPrev]), false);
+check('reflection-repeat: a question is not treated as a repeated reflection', repeatsRecentReflection('What does the waiting make you want to do?', [fearPrev]), false);
+check('reflection-repeat: strip drops the echoed sentence, keeps the new one',
+  stripEchoedSentences(fearEcho, fearPrev), 'It sounds like the waiting is being filled in by that memory, over and over.');
+check('reflection-repeat: strip leaves a non-echoing reply intact',
+  stripEchoedSentences('That bracing sounds exhausting.', fearPrev), 'That bracing sounds exhausting.');
+
+// ── Off-ramp guard (no exit offered right after a "stay with it" tap) ──────────
+check('offramp: "would you rather keep it unnamed" is an off-ramp', offersOffRamp('Would you rather keep it unnamed for now?'), true);
+check('offramp: "we can leave it there..." is an off-ramp', offersOffRamp('We can leave it there, or stay with it a little longer if you want.'), true);
+check('offramp: a plain reflection is not an off-ramp', offersOffRamp('That invisible feeling carries a real ache.'), false);
+check('offramp: strip drops the exit question, keeps the reflection',
+  stripOffRamp('That invisible feeling carries a real ache. Would you rather keep it unnamed for now?'), 'That invisible feeling carries a real ache.');
+check('offramp: strip leaves a reflection-only reply intact',
+  stripOffRamp('That invisible feeling carries a real ache.'), 'That invisible feeling carries a real ache.');
 
 // ── Em-dash stripping (companion never shows long dashes) ────────────────────
 check('strip: spaced em dash -> comma', stripEmDashes('Go ahead — say whatever’s there'), 'Go ahead, say whatever’s there');

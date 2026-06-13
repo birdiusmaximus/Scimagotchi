@@ -693,7 +693,7 @@ function userConfirmsLabel(userText, prev) {
 var norm = (s) => ` ${s.toLowerCase().replace(/[’'`]/g, "").replace(/[^a-z0-9?]+/g, " ").trim()} `;
 var REPAIR = /( no thats not | thats not it | not really[ ?]| youre wrong | not (anxiety|anger|sadness|fear|shame|pressure|hurt|joy|calm)|stop analy|dont analy|you sound like a therapist|thats not what i (meant|said)|youre putting words)/;
 var CLOSE = /( im done | i m done |gotta go|got to go|gonna go|going to bed|goodnight|good night|leave it (here|there)|thats it really|thanks bye|im off |talk later|thats all)/;
-var MIXED = /( but also | and also | at the same time | part of me | both | mixed | torn between |cant tell if im|switching between|one minute im)/;
+var MIXED = /( but also | and also | at the same time | at once | part of me | both | mixed | torn between |cant tell if im|switching between|one minute im| baked in| baked into | in the same | right alongside| side by side| underneath (it|that|all))/;
 var BODY_WORDS = /(chest|stomach|belly|throat|shoulders|jaw|hands|head feels|heavy|tight|tense|numb|buzzing|shaky|shaking|restless|hollow|knot|sinking|burning|cold inside|warm inside)/;
 var DONT_KNOW = /( i dont know what i feel | dont know what this is | cant name it | no idea what im feeling | i dont know[ ?])/;
 var VAGUE = /( feel (off|weird|strange|odd|bad|wrong) | something is off | not right | cant settle | feel funny )/;
@@ -1783,11 +1783,17 @@ IDENTITY-LEVEL SELF-CONDEMNATION IS THE VOICE OF SHAME, NEVER A TRUTH. When some
 
 AFTER YOU'VE UNDERSTOOD A FEELING \u2014 NEVER DEAD-END
 Once you've reflected what you understand, that piece of work is done. NEVER repeat that reflection, and never send the same reply twice \u2014 if you notice you'd be saying what you already said, do something different instead. Read whether this person is still engaged or winding down, and match it:
-- If they are clearly ENGAGED (still answering, still curious, just tapped "stay with it"), do NOT keep offering a "we could stay with this, or leave it here" choice every turn \u2014 that gets repetitive. Just open the NEXT door from the specific thing they last said: what it connects to, what it's asking for underneath, where it sits in the body, what it makes them want to do, whether it's a familiar visitor \u2014 one new thing and one question at a time, a different door than last turn.
+- If they are clearly ENGAGED (still answering, still curious, just tapped "stay with it", correcting you, or going deeper), do NOT keep offering a "we could stay with this, or leave it here" choice every turn, and do NOT offer to "leave it unnamed for now" or to stop. Those off-ramps are for someone stuck or winding down, NEVER for someone leaning in, naming, or pushing deeper, where they only break momentum. Just open the NEXT door from the specific thing they last said: what it connects to, what it's asking for underneath, where it sits in the body, what it makes them want to do, whether it's a familiar visitor \u2014 one new thing and one question at a time, a different door than last turn.
 - If they seem to be WINDING DOWN, then make stopping easy: let them know you could leave it here for now, and that's completely okay.
 - Read their signals: a short acknowledgement ("thanks", "ok", "yeah", "that's it") or a note of relief usually means they're ready to rest. Give a brief, warm close and let it be \u2014 don't re-open it or keep probing.
 You are never "solving" them and you are never stuck. Each turn either goes somewhere new or comes gently to rest, never circling the same words.
 - LET A FIRST SHAPE LAND: the turn where you reflect what you have just understood (a first shape) must NOT end with a question. No either/or, no refining question, no "does that fit?". Give the warm reflection and stop, so the clarity can settle. The same holds when they have clearly reached a resting point.
+
+EMOTIONS MOVE, AND OFTEN MORE THAN ONE IS PRESENT
+- A feeling usually starts as one thing and reveals another underneath: pressure can open into shame, anger into hurt, flatness into fear, joy into pride. When they say "it's not really X, more like Y", "underneath that", "now it feels", or "saying it out loud\u2026", the feeling has MOVED or shown a deeper layer. FOLLOW it, let the newer, truer feeling become the focus. Do not snap back to the first label, and never treat the shift as you losing the thread, the movement IS the work.
+- When two feelings are genuinely present at once ("both", "at the same time", "baked into it", "part of me wants\u2026", "the finally and the missing in the same quiet"), HOLD BOTH. Do not flatten them into one and do not just pick the stronger one, name that they are here together and how they sit with each other.
+- Shame speaks as wanting to hide, feeling exposed, "I am wrong" (not just "I did something wrong"), or one action taken as proof of something bad about them. Recognise these as the voice of shame and reflect them as that, never as the truth about who they are.
+- The heart of an unlock is THEIR words, not your label. When they land a phrase that carries the feeling ("unmistakably mine", "revving but the gear won't catch", "made myself smaller", "bracing instead of broken"), keep that exact phrase at the centre of what you reflect and what you remember.
 
 HOW YOU SPEAK
 - 1\u20132 short sentences. At most ONE question. Never paragraphs or lists.
@@ -2219,6 +2225,37 @@ function repeatsEarlierQuestion(reply, priorCompanionReplies) {
   }
   return false;
 }
+var allSentences = (s) => (String(s || "").match(/[^.!?]+[.!?]?/g) ?? []).map((x) => x.trim()).filter(Boolean);
+function sentenceOverlap(a, b2) {
+  const wa = sigWords(a);
+  const wb = sigWords(b2);
+  if (wa.size < 3 || wb.size < 3) return 0;
+  let inter = 0;
+  for (const w of wa) if (wb.has(w)) inter++;
+  return inter / (/* @__PURE__ */ new Set([...wa, ...wb])).size;
+}
+function repeatsRecentReflection(reply, priorCompanionReplies) {
+  const prev = priorCompanionReplies[priorCompanionReplies.length - 1];
+  if (!prev) return false;
+  const prevSents = allSentences(prev);
+  return allSentences(reply).some((s) => !s.includes("?") && prevSents.some((p) => sentenceOverlap(s, p) >= 0.6));
+}
+function stripEchoedSentences(reply, prevReply) {
+  if (!prevReply) return reply;
+  const prevSents = allSentences(prevReply);
+  const kept = allSentences(reply).filter((s) => s.includes("?") || !prevSents.some((p) => sentenceOverlap(s, p) >= 0.6));
+  const out = kept.join(" ").trim();
+  return out.length >= 8 ? out : reply.trim();
+}
+var OFFRAMP_RX = /(keep it unnamed|leave it unnamed|leaving it unnamed|rather (keep|leave) it|we (can|could) (just )?leave it (here|there|where|unnamed)|leave it (here|there) for now|or (we can|just) leave it|we can leave it|stay with it a little longer if you want|leave it (here|there)( for now)?[.?])/i;
+function offersOffRamp(reply) {
+  return OFFRAMP_RX.test(reply || "");
+}
+function stripOffRamp(reply) {
+  const kept = allSentences(reply).filter((s) => !OFFRAMP_RX.test(s));
+  const out = kept.join(" ").trim();
+  return out.length >= 8 ? out : reply.trim();
+}
 
 // src/services/ai/replyOwnership.ts
 var escapeRx = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -2331,8 +2368,9 @@ ${extraSystem}` : system },
   };
   let p = await callOnce();
   const repeatedQ = repeatsEarlierQuestion(p.reply, companionReplies);
-  if (hasUnexpectedScript(p.reply) || isDuplicateReply(p.reply, companionReplies) || repeatedQ) {
-    const reason = hasUnexpectedScript(p.reply) ? "Your previous draft contained corrupted/mixed-script text. Compose a fresh reply in clean English only." : repeatedQ ? "Your previous draft asked a question they have ALREADY answered earlier in this conversation. Do NOT ask it again. Re-read what they have actually told you and respond to THAT specific thing \u2014 reflect it back a little more precisely, and only then, if it helps, open ONE genuinely new door (what it costs them, what it protects or needs, what it connects to, a finer shade). Reference their real words, not a generic prompt." : "Your previous draft repeated an earlier reply verbatim. Say something genuinely new.";
+  const repeatedReflection = repeatsRecentReflection(p.reply, companionReplies);
+  if (hasUnexpectedScript(p.reply) || isDuplicateReply(p.reply, companionReplies) || repeatedQ || repeatedReflection) {
+    const reason = hasUnexpectedScript(p.reply) ? "Your previous draft contained corrupted/mixed-script text. Compose a fresh reply in clean English only." : repeatedQ ? "Your previous draft asked a question they have ALREADY answered earlier in this conversation. Do NOT ask it again. Re-read what they have actually told you and respond to THAT specific thing \u2014 reflect it back a little more precisely, and only then, if it helps, open ONE genuinely new door (what it costs them, what it protects or needs, what it connects to, a finer shade). Reference their real words, not a generic prompt." : repeatedReflection ? "Your previous draft RESTATED the reflection you just gave them, in almost the same words. Do NOT repeat yourself. Move one concrete step further: open a genuinely new door from what they last said (the body, the impulse, what it protects, what it connects to, a finer shade), or reflect a NEW angle. Never echo your own last sentence back." : "Your previous draft repeated an earlier reply verbatim. Say something genuinely new.";
     try {
       p = await callOnce(`OUTPUT CORRECTION: ${reason}`);
     } catch {
@@ -2344,6 +2382,9 @@ ${extraSystem}` : system },
   if (repeatsEarlierQuestion(p.reply, companionReplies)) {
     const stripped = dropTrailingQuestion(p.reply).trim();
     if (stripped) p.reply = stripped;
+  }
+  if (repeatsRecentReflection(p.reply, companionReplies)) {
+    p.reply = stripEchoedSentences(p.reply, companionReplies[companionReplies.length - 1] ?? "");
   }
   const ev = prev ? { ...prev } : emptyEvent(input.conversationId);
   ev.timestamp = nowIso();
@@ -2439,6 +2480,7 @@ ${extraSystem}` : system },
     reply = replaceOptionMenu(reply, companionReplies.length, lastDoor);
   }
   if (EXIT_CUE.test(input.userText)) reply = dropTrailingQuestion(reply);
+  if (input.intent === "keep_going" && offersOffRamp(reply)) reply = stripOffRamp(reply);
   return { reply: stripEmDashes(stripControlChars(reply)), event: ev, unlocked, tone, stage };
 }
 export {

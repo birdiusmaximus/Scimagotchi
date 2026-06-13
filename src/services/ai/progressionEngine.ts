@@ -200,3 +200,77 @@ export function advanceProgress(
   p.updated_at = nowIso();
   return { progress: p, advanced: PROGRESS_RANK[to] > PROGRESS_RANK[from], from, to, capabilities: caps };
 }
+
+export interface StrandAdvance {
+  /** Per-family advancement results — the primary first, then any secondary strands. */
+  results: AdvanceResult[];
+  /** The primary family's result (the one that fires unlock/deepening ceremonies). */
+  primary: AdvanceResult | null;
+  /** The deepest stage reached this turn across all strands (so a landing feeling on a
+   *  new strand never reads as the conversation regressing). */
+  deepest: EmotionProgressStage;
+}
+
+/** Families this turn touches: the primary plus any named strands (deduped, in order). */
+export function turnStrandFamilies(ev: CompanionTurn['event']): EmotionProgress['emotion_family'][] {
+  const out: EmotionProgress['emotion_family'][] = [];
+  if (ev.emotion_family) out.push(ev.emotion_family);
+  for (const s of ev.strands ?? []) if (s.family && !out.includes(s.family)) out.push(s.family);
+  return out;
+}
+
+/**
+ * Strand-aware progression (the "emotions move" model, §13 extension). A conversation
+ * is rarely one feeling: pressure opens into shame, anger into hurt, joy into pride.
+ * This advances EVERY strand the turn surfaces, not just the primary, so a feeling that
+ * appears underneath another is recorded and never lost when the focus shifts:
+ *  - the PRIMARY family gets the full evidence-based advancement (advanceProgress);
+ *  - each additional strand is tracked at `noticed` (present) or `named` (when the user
+ *    owns it), monotonically — a strand already carried deeper is never lowered, and a
+ *    new landing feeling becomes its OWN strand instead of regressing the original one.
+ * Secondary strands never first-shape here (that needs the turn's full felt evidence,
+ * which belongs to the primary); they hold their own stage until they become primary.
+ */
+export function advanceStrands(
+  existing: Partial<Record<EmotionProgress['emotion_family'], EmotionProgress | null>>,
+  turn: CompanionTurn,
+  conversationId: string,
+  opts: { suppress?: boolean } = {},
+): StrandAdvance {
+  const ev = turn.event;
+  const primaryFam = ev.emotion_family;
+  const results: AdvanceResult[] = [];
+  let primary: AdvanceResult | null = null;
+
+  if (primaryFam) {
+    primary = advanceProgress(existing[primaryFam] ?? null, turn, conversationId, opts);
+    results.push(primary);
+  }
+
+  if (!opts.suppress) {
+    const seen = new Set(primaryFam ? [primaryFam] : []);
+    for (const s of ev.strands ?? []) {
+      if (!s.family || seen.has(s.family)) continue;
+      seen.add(s.family);
+      const prev = existing[s.family] ?? emptyProgress(s.family);
+      const from = migrateStage(prev.current_stage);
+      const owned = s.source === 'user_stated' || s.source === 'user_confirmed';
+      const cand: EmotionProgressStage = owned ? 'named' : 'noticed';
+      const to = PROGRESS_RANK[cand] > PROGRESS_RANK[from] ? cand : from; // monotonic
+      const p: EmotionProgress = {
+        ...prev,
+        confirmed_shades: [...prev.confirmed_shades],
+        common_triggers: [...prev.common_triggers],
+        common_body_cues: [...prev.common_body_cues],
+        common_user_phrases: [...prev.common_user_phrases],
+        current_stage: to,
+        last_conversation_id: conversationId,
+        updated_at: nowIso(),
+      };
+      results.push({ progress: p, advanced: to !== from, from, to, capabilities: {} });
+    }
+  }
+
+  const deepest = results.reduce<EmotionProgressStage>((d, r) => (PROGRESS_RANK[r.to] > PROGRESS_RANK[d] ? r.to : d), 'unseen');
+  return { results, primary, deepest };
+}

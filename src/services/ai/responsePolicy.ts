@@ -295,3 +295,55 @@ export function repeatsEarlierQuestion(reply: string, priorCompanionReplies: str
   }
   return false;
 }
+
+const allSentences = (s: string): string[] => (String(s || '').match(/[^.!?]+[.!?]?/g) ?? []).map((x) => x.trim()).filter(Boolean);
+/** Jaccard overlap of significant words between two sentences. */
+function sentenceOverlap(a: string, b: string): number {
+  const wa = sigWords(a);
+  const wb = sigWords(b);
+  if (wa.size < 3 || wb.size < 3) return 0;
+  let inter = 0;
+  for (const w of wa) if (wb.has(w)) inter++;
+  return inter / new Set([...wa, ...wb]).size;
+}
+
+/**
+ * True when a NON-question sentence in the reply closely echoes a sentence in the
+ * immediately previous companion reply — i.e. a "stay with it" tap restating the last
+ * reflection instead of opening a new door (the fear-conversation repeat). Questions
+ * are handled by repeatsEarlierQuestion; this catches repeated reflections.
+ */
+export function repeatsRecentReflection(reply: string, priorCompanionReplies: string[]): boolean {
+  const prev = priorCompanionReplies[priorCompanionReplies.length - 1];
+  if (!prev) return false;
+  const prevSents = allSentences(prev);
+  return allSentences(reply).some((s) => !s.includes('?') && prevSents.some((p) => sentenceOverlap(s, p) >= 0.6));
+}
+
+/** Drop sentences from `reply` that closely echo the previous reply, keeping the rest
+ *  (returns the original if stripping would empty it). */
+export function stripEchoedSentences(reply: string, prevReply: string): string {
+  if (!prevReply) return reply;
+  const prevSents = allSentences(prevReply);
+  const kept = allSentences(reply).filter((s) => s.includes('?') || !prevSents.some((p) => sentenceOverlap(s, p) >= 0.6));
+  const out = kept.join(' ').trim();
+  return out.length >= 8 ? out : reply.trim();
+}
+
+// An "off-ramp": offering to stop or to leave the feeling unnamed. Fine when someone is
+// winding down, wrong right after they tapped "stay with it" (they just chose to go on).
+const OFFRAMP_RX =
+  /(keep it unnamed|leave it unnamed|leaving it unnamed|rather (keep|leave) it|we (can|could) (just )?leave it (here|there|where|unnamed)|leave it (here|there) for now|or (we can|just) leave it|we can leave it|stay with it a little longer if you want|leave it (here|there)( for now)?[.?])/i;
+
+/** True when the reply offers an exit (stop / leave it / keep it unnamed). */
+export function offersOffRamp(reply: string): boolean {
+  return OFFRAMP_RX.test(reply || '');
+}
+
+/** Drop the off-ramp sentence(s), keeping the reflection. Used when the person is clearly
+ *  engaged (e.g. just tapped "stay with it"), so we never hand them an exit mid-dive. */
+export function stripOffRamp(reply: string): string {
+  const kept = allSentences(reply).filter((s) => !OFFRAMP_RX.test(s));
+  const out = kept.join(' ').trim();
+  return out.length >= 8 ? out : reply.trim();
+}

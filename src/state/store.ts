@@ -36,7 +36,7 @@ import {
 } from '@/services/db/repos';
 import type { ChipIntent, ConversationMode } from '@/services/ai/modeRouter';
 import { composeLearningSentence, summaryIsClean } from '@/services/ai/learningSentence';
-import { advanceProgress, migrateStage, PROGRESS_RANK, type AdvanceResult } from '@/services/ai/progressionEngine';
+import { advanceStrands, migrateStage, PROGRESS_RANK, turnStrandFamilies, type AdvanceResult } from '@/services/ai/progressionEngine';
 import { hasEmotionAnchor, isUncertain } from '@/services/ai/stage';
 import { draftFromRejection, draftFromTurn, relevantMemory } from '@/services/memoryLedger';
 import { buildWeeklySummary } from '@/services/weeklySummary';
@@ -532,20 +532,26 @@ export const useStore = create<AppState>((set, get) => ({
   },
 
   _updateProgress: async (turn, conversationId, suppress) => {
-    const fam = turn.event.emotion_family;
-    const existing = fam
-      ? (get().progress[fam] ?? (await emotionProgressRepo.get(fam).catch(() => null)))
-      : null;
+    // Strand-aware: advance EVERY feeling this turn surfaces (primary + any strands),
+    // so a feeling underneath another is tracked and never lost when the focus shifts.
+    const fams = turnStrandFamilies(turn.event);
+    const existing: Partial<Record<EmotionFamilyId, EmotionProgress | null>> = {};
+    for (const f of fams) existing[f] = get().progress[f] ?? (await emotionProgressRepo.get(f).catch(() => null));
 
-    const result = advanceProgress(existing, turn, conversationId, { suppress });
+    const { results, primary } = advanceStrands(existing, turn, conversationId, { suppress });
 
-    if (fam) {
-      await emotionProgressRepo.save(result.progress).catch(() => {});
-      set((s) => ({ progress: { ...s.progress, [fam]: result.progress } }));
+    if (results.length) {
+      const next = { ...get().progress };
+      for (const r of results) {
+        await emotionProgressRepo.save(r.progress).catch(() => {});
+        next[r.progress.emotion_family] = r.progress;
+      }
+      set({ progress: next });
     }
 
-    // Capability evidence counters (§13.1) — accumulated on the settings doc.
-    const deltas = Object.entries(result.capabilities);
+    // Capability evidence counters (§13.1) — from the primary strand.
+    const result = primary;
+    const deltas = result ? Object.entries(result.capabilities) : [];
     if (deltas.length) {
       try {
         const settings = await settingsRepo.get();
@@ -556,7 +562,7 @@ export const useStore = create<AppState>((set, get) => ({
         // counters are best-effort
       }
     }
-    return fam ? result : null;
+    return result;
   },
 
   dismissUnlock: () => set({ unlock: null }),

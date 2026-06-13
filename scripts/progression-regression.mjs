@@ -4,7 +4,7 @@
  *
  * Run: npm run test:progression (rebundles, then executes). Exit 1 on failure.
  */
-import { advanceProgress, emptyProgress, migrateStage, selectVisualState, visualTintFamilies } from './engine-bundle.mjs';
+import { advanceProgress, advanceStrands, emptyProgress, migrateStage, selectVisualState, visualTintFamilies } from './engine-bundle.mjs';
 
 let pass = 0;
 let fail = 0;
@@ -125,6 +125,37 @@ check('owned context counts as contextualising',
   advanceProgress(null, turn({}, { label_source: 'user_stated', trigger_event: 'the meeting' }), 'c1').capabilities.contextualising, 1);
 check('confirmed mix counts as integrating',
   advanceProgress(null, turn({}, { mixed_confirmed: 1 }), 'c1').capabilities.integrating, 1);
+
+// ── Strand-aware progression (Phase 2: emotions move) ────────────────────────
+const strandFamily = (sa, fam) => sa.results.find((r) => r.progress.emotion_family === fam)?.to;
+// Primary advances fully; a user-named secondary strand is tracked at 'named'.
+const sA = advanceStrands({}, turn({}, {
+  emotion_family: 'pressure', label_source: 'user_stated',
+  strands: [{ family: 'shame', shade: null, salience: 'background', source: 'user_stated' }],
+}), 'cA');
+check('strands: primary (pressure) is tracked', strandFamily(sA, 'pressure'), 'named');
+check('strands: a user-named secondary strand (shame) is tracked at named', strandFamily(sA, 'shame'), 'named');
+// A companion-hypothesis strand is only "noticed" (hypotheses never reach named).
+const sB = advanceStrands({}, turn({}, {
+  emotion_family: 'anger', label_source: 'user_stated',
+  strands: [{ family: 'hurt', shade: null, salience: 'background', source: 'companion_hypothesis' }],
+}), 'cB');
+check('strands: a hypothesis secondary strand only reaches noticed', strandFamily(sB, 'hurt'), 'noticed');
+// Stop-regression: a landing feeling (calm) as the new primary does NOT lower an
+// already-deepened strand (shame), and the conversation's depth stays at the deepest.
+const deepShame = { ...emptyProgress('shame'), current_stage: 'distinguished', last_conversation_id: 'cC' };
+const sC = advanceStrands({ shame: deepShame }, turn({}, {
+  emotion_family: 'calm', label_source: 'user_stated',
+  strands: [{ family: 'shame', shade: null, salience: 'background', source: 'user_stated' }],
+}), 'cC');
+check('strands: a deepened strand is never lowered by a landing feeling', strandFamily(sC, 'shame'), 'distinguished');
+check('strands: deepest = highest strand, not the latest primary', sC.deepest, 'distinguished');
+// Suppressed turns (taps/unsure/safety) never track secondary strands.
+const sD = advanceStrands({}, turn({}, {
+  emotion_family: 'pressure', label_source: 'user_stated',
+  strands: [{ family: 'shame', shade: null, salience: 'background', source: 'user_stated' }],
+}), 'cD', { suppress: true });
+check('strands: a suppressed turn does not track secondary strands', sD.results.some((r) => r.progress.emotion_family === 'shame'), false);
 
 // ── Visual state selector (§18) ─────────────────────────────────────────────
 const base = { safetyVisible: false, safetyCheckPending: false, sending: false, unlockShowing: false, draftEvent: null, progressStage: null };

@@ -599,7 +599,7 @@ function userConfirmsLabel(userText, prev) {
 var norm = (s) => ` ${s.toLowerCase().replace(/[’'`]/g, "").replace(/[^a-z0-9?]+/g, " ").trim()} `;
 var REPAIR = /( no thats not | thats not it | not really[ ?]| youre wrong | not (anxiety|anger|sadness|fear|shame|pressure|hurt|joy|calm)|stop analy|dont analy|you sound like a therapist|thats not what i (meant|said)|youre putting words)/;
 var CLOSE = /( im done | i m done |gotta go|got to go|gonna go|going to bed|goodnight|good night|leave it (here|there)|thats it really|thanks bye|im off |talk later|thats all)/;
-var MIXED = /( but also | and also | at the same time | part of me | both | mixed | torn between |cant tell if im|switching between|one minute im)/;
+var MIXED = /( but also | and also | at the same time | at once | part of me | both | mixed | torn between |cant tell if im|switching between|one minute im| baked in| baked into | in the same | right alongside| side by side| underneath (it|that|all))/;
 var BODY_WORDS = /(chest|stomach|belly|throat|shoulders|jaw|hands|head feels|heavy|tight|tense|numb|buzzing|shaky|shaking|restless|hollow|knot|sinking|burning|cold inside|warm inside)/;
 var DONT_KNOW = /( i dont know what i feel | dont know what this is | cant name it | no idea what im feeling | i dont know[ ?])/;
 var VAGUE = /( feel (off|weird|strange|odd|bad|wrong) | something is off | not right | cant settle | feel funny )/;
@@ -854,6 +854,37 @@ function repeatsEarlierQuestion(reply, priorCompanionReplies) {
     }
   }
   return false;
+}
+var allSentences = (s) => (String(s || "").match(/[^.!?]+[.!?]?/g) ?? []).map((x) => x.trim()).filter(Boolean);
+function sentenceOverlap(a2, b3) {
+  const wa = sigWords(a2);
+  const wb = sigWords(b3);
+  if (wa.size < 3 || wb.size < 3) return 0;
+  let inter = 0;
+  for (const w of wa) if (wb.has(w)) inter++;
+  return inter / (/* @__PURE__ */ new Set([...wa, ...wb])).size;
+}
+function repeatsRecentReflection(reply, priorCompanionReplies) {
+  const prev = priorCompanionReplies[priorCompanionReplies.length - 1];
+  if (!prev) return false;
+  const prevSents = allSentences(prev);
+  return allSentences(reply).some((s) => !s.includes("?") && prevSents.some((p) => sentenceOverlap(s, p) >= 0.6));
+}
+function stripEchoedSentences(reply, prevReply) {
+  if (!prevReply) return reply;
+  const prevSents = allSentences(prevReply);
+  const kept = allSentences(reply).filter((s) => s.includes("?") || !prevSents.some((p) => sentenceOverlap(s, p) >= 0.6));
+  const out = kept.join(" ").trim();
+  return out.length >= 8 ? out : reply.trim();
+}
+var OFFRAMP_RX = /(keep it unnamed|leave it unnamed|leaving it unnamed|rather (keep|leave) it|we (can|could) (just )?leave it (here|there|where|unnamed)|leave it (here|there) for now|or (we can|just) leave it|we can leave it|stay with it a little longer if you want|leave it (here|there)( for now)?[.?])/i;
+function offersOffRamp(reply) {
+  return OFFRAMP_RX.test(reply || "");
+}
+function stripOffRamp(reply) {
+  const kept = allSentences(reply).filter((s) => !OFFRAMP_RX.test(s));
+  const out = kept.join(" ").trim();
+  return out.length >= 8 ? out : reply.trim();
 }
 
 // src/services/ai/replyOwnership.ts
@@ -1478,6 +1509,47 @@ function advanceProgress(existing, turn, conversationId, opts = {}) {
   p.updated_at = nowIso();
   return { progress: p, advanced: PROGRESS_RANK[to] > PROGRESS_RANK[from], from, to, capabilities: caps };
 }
+function turnStrandFamilies(ev) {
+  const out = [];
+  if (ev.emotion_family) out.push(ev.emotion_family);
+  for (const s of ev.strands ?? []) if (s.family && !out.includes(s.family)) out.push(s.family);
+  return out;
+}
+function advanceStrands(existing, turn, conversationId, opts = {}) {
+  const ev = turn.event;
+  const primaryFam = ev.emotion_family;
+  const results = [];
+  let primary = null;
+  if (primaryFam) {
+    primary = advanceProgress(existing[primaryFam] ?? null, turn, conversationId, opts);
+    results.push(primary);
+  }
+  if (!opts.suppress) {
+    const seen = new Set(primaryFam ? [primaryFam] : []);
+    for (const s of ev.strands ?? []) {
+      if (!s.family || seen.has(s.family)) continue;
+      seen.add(s.family);
+      const prev = existing[s.family] ?? emptyProgress(s.family);
+      const from = migrateStage(prev.current_stage);
+      const owned = s.source === "user_stated" || s.source === "user_confirmed";
+      const cand = owned ? "named" : "noticed";
+      const to = PROGRESS_RANK[cand] > PROGRESS_RANK[from] ? cand : from;
+      const p = {
+        ...prev,
+        confirmed_shades: [...prev.confirmed_shades],
+        common_triggers: [...prev.common_triggers],
+        common_body_cues: [...prev.common_body_cues],
+        common_user_phrases: [...prev.common_user_phrases],
+        current_stage: to,
+        last_conversation_id: conversationId,
+        updated_at: nowIso()
+      };
+      results.push({ progress: p, advanced: to !== from, from, to, capabilities: {} });
+    }
+  }
+  const deepest = results.reduce((d, r) => PROGRESS_RANK[r.to] > PROGRESS_RANK[d] ? r.to : d, "unseen");
+  return { results, primary, deepest };
+}
 
 // src/services/ai/companionVisualState.ts
 function selectVisualState(s) {
@@ -1826,6 +1898,7 @@ export {
   SLOW_PATH_FAMILIES,
   activeCards,
   advanceProgress,
+  advanceStrands,
   ambientMotion,
   askedForNamingHelp,
   composeLearningSentence,
@@ -1854,9 +1927,11 @@ export {
   migrateStage,
   mixedConfirmed,
   needsOwnershipRepair,
+  offersOffRamp,
   poseFor,
   relevantMemory,
   repeatsEarlierQuestion,
+  repeatsRecentReflection,
   replaceOptionMenu,
   replyContainsDeclarativeEmotionAssertion,
   resolveMotion,
@@ -1868,8 +1943,11 @@ export {
   softenUnownedEmotionReply,
   stageRank,
   stripControlChars,
+  stripEchoedSentences,
   stripEmDashes,
+  stripOffRamp,
   summaryIsClean,
+  turnStrandFamilies,
   userConfirmsLabel,
   varietyDirective,
   varietySignals,

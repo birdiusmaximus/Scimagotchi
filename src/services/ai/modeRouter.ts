@@ -39,7 +39,7 @@ const CLOSE =
   /( im done | i m done |gotta go|got to go|gonna go|going to bed|goodnight|good night|leave it (here|there)|thats it really|thanks bye|im off |talk later|thats all)/;
 
 const MIXED =
-  /( but also | and also | at the same time | part of me | both | mixed | torn between |cant tell if im|switching between|one minute im)/;
+  /( but also | and also | at the same time | at once | part of me | both | mixed | torn between |cant tell if im|switching between|one minute im| baked in| baked into | in the same | right alongside| side by side| underneath (it|that|all))/;
 
 const BODY_WORDS =
   /(chest|stomach|belly|throat|shoulders|jaw|hands|head feels|heavy|tight|tense|numb|buzzing|shaky|shaking|restless|hollow|knot|sinking|burning|cold inside|warm inside)/;

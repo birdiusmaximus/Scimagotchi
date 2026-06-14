@@ -18,8 +18,11 @@ const OUT = path.join(ROOT, 'eval-out');
 const RANK = { unseen: 0, noticed: 1, named: 2, first_shape: 3, rooted: 4, distinguished: 5, returning: 6, deepened: 7 };
 const deeper = (a, b) => ((RANK[b] ?? -1) > (RANK[a] ?? -1) ? b : a);
 const median = (xs) => (xs.length ? [...xs].sort((a, b) => a - b)[Math.floor(xs.length / 2)] : null);
-// Archetypes where the user never genuinely owns a feeling — reaching "unlocked" is suspect.
-const SHOULD_NOT_UNLOCK = new Set(['uncertain', 'terse', 'resistant', 'shallow_agreement']);
+// Detectors for the split unlock-quality flags (review action 7).
+const BARE_AGREEMENT = /^(yeah?|yep|yes|exactly|totally|for sure|right|you'?re right|that ?one|that'?s the one|true|mm+|ok(ay)?|sure|definitely|absolutely|i guess|maybe|that fits|that'?s it|you got it|you nailed it)[\s.,!]*$/i;
+const UNCERTAIN_USER = /\b(not sure|no idea|dont know|don'?t know|dunno|idk|hard to say|hard to put|cant tell|can'?t tell|unsure|both maybe|neither|cant even (tell|answer|name)|still lost|put words on it)\b/i;
+const TENTATIVE_REPLY = /\b(not sure|leave it unnamed|unnamed for now|stay (with it )?unnamed|not the whole shape|don'?t want to (name|put words)|might be|maybe it'?s|could be|hard to name|we don'?t have to name|still finding|can'?t quite name|only a guess|a guess not|signpost|not settled|not a settled name|edge of (it|something))\b/i;
+const rx = (w) => new RegExp(`\\b${String(w).toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i');
 // A capitalised mid-sentence token that looks like a leaked name (memory abstraction check).
 const SAFE_CAPS = new Set('i monday tuesday wednesday thursday friday saturday sunday january february march april may june july august september october november december christmas easter god mum mom dad mother father today tomorrow yesterday'.split(' '));
 
@@ -46,6 +49,7 @@ function analyse(file) {
         reply: m.content,
         safetyCheck: m.safety_check ?? false,
         unlocked: m.unlocked ?? false,
+        stage: m.stage ?? null,
         progression: m.stage_after ?? null,
         shade: m.shade ?? null,
         candidate_shade: m.candidate_shade ?? null,
@@ -69,21 +73,48 @@ function analyse(file) {
   const momentsSeen = [];
   for (const x of comp) for (const mo of x.moments) if (!momentsSeen.includes(mo)) momentsSeen.push(mo);
 
-  // ── Red flags ──
+  // ── Red flags (specific true-failure types, review action 7) ──
   const flags = [];
-  const nonOwned = comp.find((x) => x.unlocked && x.label_source !== 'user_stated' && x.label_source !== 'user_confirmed');
-  if (nonOwned) flags.push('non_owned_unlock');
-  if (firstUnlock && SHOULD_NOT_UNLOCK.has(archetype)) flags.push('unlock_from_uncooperative');
-  // rejected word re-offered in a reply
+
+  // Unlock-QUALITY flags, evaluated on the first unlock turn — what was the unlock
+  // actually built on? These separate a real owned first shape from a thin one.
+  if (firstUnlock) {
+    const idx = comp.indexOf(firstUnlock);
+    const utext = (firstUnlock.userText || '').toLowerCase().replace(/[’'`]/g, "'").trim();
+    const prevUser = idx > 0 ? (comp[idx - 1].userText || '') : '';
+    if (firstUnlock.label_source !== 'user_stated' && firstUnlock.label_source !== 'user_confirmed') flags.push('non_owned_unlock');
+    if (BARE_AGREEMENT.test(utext)) flags.push('unlock_from_bare_agreement');
+    if (UNCERTAIN_USER.test(` ${utext} `) || UNCERTAIN_USER.test(` ${prevUser.toLowerCase()} `)) flags.push('unlock_from_uncertainty');
+    if (archetype === 'resistant') flags.push('unlock_from_resistance');
+    // echoed companion word: the unlock shade was in the companion's PREVIOUS reply and
+    // the user never said it themselves before this turn.
+    const shade = (firstUnlock.shade || '').toLowerCase().trim();
+    if (shade) {
+      const prevReply = idx > 0 ? (comp[idx - 1].reply || '') : '';
+      const userEverSaid = rx(shade).test(utext) || comp.slice(0, idx).some((x) => rx(shade).test(x.userText || ''));
+      if (rx(shade).test(prevReply) && !userEverSaid) flags.push('unlock_from_echoed_companion_word');
+    }
+  }
+
+  // rejected_word_reused: a word the user rejected later resurfaces as a proposal
+  // (re-offered in a reply, or carried as the live shade/candidate) or in memory.
   const rejected = new Set();
   for (const x of comp) {
-    const cand = (x.candidate_shade ?? '').toLowerCase().trim();
-    if (cand && rejected.has(cand)) {
-      const rx = new RegExp(`\\b${cand.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i');
-      if (rx.test(x.reply || '')) flags.push('rejected_reoffer');
+    for (const r of rejected) {
+      const reOffered = rx(r).test(x.reply || '') && ((x.candidate_shade || '').toLowerCase().trim() === r || (x.shade || '').toLowerCase().trim() === r);
+      const inMemory = x.memory_draft?.summary && rx(r).test(x.memory_draft.summary);
+      if (reOffered || inMemory) { flags.push('rejected_word_reused'); break; }
     }
     for (const r of x.user_rejected_shades) rejected.add(String(r).toLowerCase());
   }
+
+  // state_text_mismatch: the reply talks tentatively / "leave it unnamed", yet the turn
+  // is internally marked understood or unlocked (logging one thing, saying another).
+  for (const x of comp) {
+    const claimsUnderstood = x.unlocked || x.stage === 'understood' || x.stage === 'deepened';
+    if (claimsUnderstood && TENTATIVE_REPLY.test(x.reply || '')) { flags.push('state_text_mismatch'); break; }
+  }
+
   // memory PII leak: a drafted card summary with a name-looking capitalised mid-sentence token
   for (const x of comp) {
     const s = x.memory_draft?.summary;

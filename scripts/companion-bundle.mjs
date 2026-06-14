@@ -2333,6 +2333,48 @@ function softenUnownedEmotionReply(reply, event) {
   return r;
 }
 
+// src/services/ai/evidenceLedger.ts
+var STOP = new Set(
+  "the a an and or but so of to in on at for with about from into onto over under as it its this that these those there here is are was were be been being am im i me my we us our you your he she they them his her their just really very quite too also even still only feel feels feeling felt like dont cant not no yes yeah well kind sorta sort bit more most much many lot lots thing things stuff get got getting going gonna want wanted need needed know knew think thought guess maybe sure okay ok".split(/\s+/)
+);
+function contentWords(s) {
+  return (s ?? "").toLowerCase().replace(/[^a-z\s']/g, " ").split(/\s+/).map((w) => w.replace(/'/g, "")).filter((w) => w.length > 2 && !STOP.has(w));
+}
+function userCorpus(userText, history) {
+  const parts = [userText, ...(history ?? []).filter((m) => m.role === "user").map((m) => m.content)];
+  return ` ${parts.join("  ").toLowerCase()} `;
+}
+var VAGUE2 = /^(foggy|fog|blurry|blurred|hazy|fuzzy|murky|cloudy|unclear|undefined|indistinct|unnameable|unnamed|vague|off|weird|strange|odd|funny|something|blank|dunno|idk|nothing|meh|whatever|unsure|nope|nah|nope)$/i;
+var EMOTION_WORDS = new RegExp(
+  `\\b(${[...new Set(Object.values(EMOTION_MAPS).flatMap((m) => m.familyKeywords))].filter((w) => w && !VAGUE2.test(w)).map((w) => w.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})\\b`,
+  "i"
+);
+var CONCRETE_FELT = /\b(chest|throat|stomach|gut|belly|heart|shoulders?|jaw|neck|head|hands?|arms?|legs?|skin|ribs?|body|tight(ness)?|tense|clench\w*|heavy|heaviness|hollow|empt\w*|ache|aching|achy|weight|knot\w*|sick|nause\w*|shak\w*|trembl\w*|buzz\w*|burn\w*|hot|cold|numb|frozen|freeze|froze|racing|pounding|breath\w*|sink\w*|pit|lump|spinning|wired|restless|cry\w*|tears|sob\w*|scream\w*|shout\w*|snap\w*|hide|hiding|hid|run\w*|flee|disappear\w*|withdraw\w*|curl\w*|reaching|drained|exhaust\w*|worn out|trapped|stuck|small|invisible|unseen|left out|forgotten|erased|afterthought)\b/i;
+function fieldFromSubstantiveUser(fieldText, substantive) {
+  const ws = contentWords(fieldText);
+  if (!ws.length) return false;
+  return ws.some((w) => new RegExp(`\\b${w}s?\\b`).test(substantive));
+}
+var BARE = /^(yeah?|yep|yes|exactly|totally|for sure|right|you'?re right|that ?one|that'?s the one|true|mm+|ok(ay)?|sure|definitely|absolutely|i guess|that fits|that'?s it|you got it|you nailed it)[\s.,!]*$/i;
+var HEDGE_ONLY = /^(maybe|kind of|kinda|sort of|sorta|i guess|not really|dunno|idk|unsure|hard to say|hmm|who knows|i dont know|i don'?t know|both maybe|neither|i cant tell|i can'?t tell)[\s.,!?]*$/i;
+function hasUserOwnedConcreteDetail(ev, userText, history) {
+  const corpus = userCorpus(userText, history);
+  if (CONCRETE_FELT.test(corpus)) return true;
+  if (EMOTION_WORDS.test(corpus)) return true;
+  if (ev.shade_source === "user_stated" && ev.emotion_shade && !VAGUE2.test(ev.emotion_shade.trim())) return true;
+  const substantive = ` ${[userText, ...(history ?? []).filter((m) => m.role === "user").map((m) => m.content)].filter((m) => {
+    const n = m.toLowerCase().replace(/[’'`]/g, "'").trim();
+    return n && !BARE.test(n) && !HEDGE_ONLY.test(n);
+  }).join("  ").toLowerCase()} `;
+  if (ev.user_phrase) {
+    const pw = contentWords(ev.user_phrase);
+    if (pw.length >= 3 && !VAGUE2.test(ev.user_phrase.trim()) && pw.filter((w) => new RegExp(`\\b${w}\\b`).test(substantive)).length >= 2) return true;
+  }
+  const feltFields = [...ev.body_cue ?? [], ...ev.behaviour_action ?? []].filter(Boolean);
+  if (feltFields.some((f) => fieldFromSubstantiveUser(f, substantive))) return true;
+  return false;
+}
+
 // src/utils/text.ts
 function stripEmDashes(text) {
   if (!text) return text;
@@ -2494,7 +2536,8 @@ ${extraSystem}` : system },
   const savouring = isPositiveFamily(fam) && SAVOUR_RX.test(input.userText);
   if (savouring) ev.do_not_store = 1;
   const tentativeReply = isTentativeReply(p.reply);
-  const blockUnlock = !!input.safetyNote || !!input.intent || uncertainTurn || clarifyingQuestion || tentativeReply || !!input.repairActive || savouring;
+  const noUserConcrete = !hasUserOwnedConcreteDetail(ev, input.userText, input.history ?? []);
+  const blockUnlock = !!input.safetyNote || !!input.intent || uncertainTurn || clarifyingQuestion || tentativeReply || noUserConcrete || !!input.repairActive || savouring;
   if (blockUnlock && stage === "understood" && prevStage !== "understood" && prevStage !== "deepened") {
     stage = prevStage;
   }

@@ -32,6 +32,7 @@ import {
   type ResponseShape,
 } from '@/services/ai/responsePolicy';
 import { needsOwnershipRepair, softenUnownedEmotionReply } from '@/services/ai/replyOwnership';
+import { hasUserOwnedConcreteDetail } from '@/services/ai/evidenceLedger';
 import {
   detectShadeRejection,
   evaluateStage,
@@ -342,8 +343,20 @@ export async function openaiGenerateTurn(
   // not understood/named it ("not the whole shape", "I'm not sure", "leave it unnamed"),
   // the engine must not reach understood this turn — the voice and the state must agree.
   const tentativeReply = isTentativeReply(p.reply);
+  // Stricter unlock gate (review actions 1, 9): a first shape is earned from the user's
+  // OWN words, not the model's extractions — require at least one concrete detail (body
+  // cue, urge, trigger, meaning, or owned phrase) the user actually voiced. This blocks
+  // unlocks built only on bare agreement, echoes, or companion-supplied detail.
+  const noUserConcrete = !hasUserOwnedConcreteDetail(ev, input.userText, input.history ?? []);
   const blockUnlock =
-    !!input.safetyNote || !!input.intent || uncertainTurn || clarifyingQuestion || tentativeReply || !!input.repairActive || savouring;
+    !!input.safetyNote ||
+    !!input.intent ||
+    uncertainTurn ||
+    clarifyingQuestion ||
+    tentativeReply ||
+    noUserConcrete ||
+    !!input.repairActive ||
+    savouring;
   if (blockUnlock && stage === 'understood' && prevStage !== 'understood' && prevStage !== 'deepened') {
     stage = prevStage;
   }

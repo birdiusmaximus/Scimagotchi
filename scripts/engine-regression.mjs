@@ -23,6 +23,7 @@ import {
   isOptionMenu,
   isTentativeReply,
   isUncertain,
+  hasUserOwnedConcreteDetail,
   labelIsUserOwned,
   labelNamedByUser,
   mixedConfirmed,
@@ -308,6 +309,22 @@ check('owned: bare affirmation with no family in play -> not owned',
   labelIsUserOwned('pressure', 'yes exactly', [], null), false);
 check('owned: only the companion used the word -> not owned',
   labelIsUserOwned('pressure', 'hmm, maybe', [{ role: 'companion', content: 'sounds like pressure' }], null), false);
+// Evidence ledger / stricter unlock gate (review actions 1,2): a first shape needs a
+// concrete detail the USER voiced, not one the model extracted from the companion.
+check('evidence: a body cue the user voiced counts',
+  hasUserOwnedConcreteDetail(ev({ body_cue: ['tight chest'] }), 'my chest feels really tight', []), true);
+check('evidence: a non-vague feeling word the user STATED counts',
+  hasUserOwnedConcreteDetail(ev({ shade_source: 'user_stated', emotion_shade: 'furious', body_cue: [], trigger_event: null, appraisal_thought: null, user_phrase: null }), 'honestly im furious', []), true);
+check('evidence: a vivid felt phrase the user voiced counts',
+  hasUserOwnedConcreteDetail(ev({ user_phrase: 'reaching and then nothing', shade_source: 'user_stated', body_cue: [], trigger_event: null, appraisal_thought: null }), 'its like reaching and then nothing', []), true);
+check('evidence: a situation/trigger ALONE (no felt signal) does NOT count',
+  hasUserOwnedConcreteDetail(ev({ trigger_event: 'my sister moved out', body_cue: [], behaviour_action: [], appraisal_thought: null, user_phrase: null, shade_source: 'companion_hypothesis' }), 'yeah', [{ role: 'user', content: 'my sister moved out last week' }]), false);
+check('evidence: companion-supplied body cue the user never voiced does NOT count',
+  hasUserOwnedConcreteDetail(ev({ body_cue: ['tight chest'], appraisal_thought: null, user_phrase: null, shade_source: 'companion_hypothesis' }), 'yeah exactly', [{ role: 'companion', content: 'sounds like a tight chest from the deadline' }]), false);
+check('evidence: bare agreement with no felt detail does NOT count',
+  hasUserOwnedConcreteDetail(ev({ body_cue: [], behaviour_action: [], appraisal_thought: null, user_phrase: null, shade_source: 'companion_hypothesis' }), 'yeah totally', []), false);
+check('evidence: a vague "blank/weird" shade does NOT count even if stated',
+  hasUserOwnedConcreteDetail(ev({ shade_source: 'user_stated', emotion_shade: 'blank', body_cue: [], behaviour_action: [], appraisal_thought: null, user_phrase: null }), 'i dunno, blank i guess', []), false);
 // labelNamedByUser is the STRONG half — a bare affirmation must not satisfy it (the
 // closing/uncertain backstop relies on this so a goodbye "yeah" can't unlock).
 check('named: user used a family word this turn -> named',

@@ -743,6 +743,10 @@ var EXIT_CUE = /\b(gotta go|got to go|gonna go|going to bed|off to bed|goodnight
 function askedForNamingHelp(userText) {
   return /\b(what('?s| is) the word|help me name|put (a )?word|name it for me|what (would|do) you call|give me a word|what word)\b/i.test(userText || "");
 }
+function isTentativeReply(reply) {
+  const t = (reply || "").toLowerCase().replace(/[’'`]/g, "'");
+  return /\b(not the (whole|full) shape|see the edge of|only the edge|the edge but not|moved too (fast|quick|soon)|may have moved too|got ahead of (myself|you)|i'?m not sure\b|i am not sure\b|don'?t want to name (it|this)|won'?t name it for you|not going to name it|can'?t quite name|hard to name yet|not a settled name|just a signpost|signpost,? not|leave it unnamed|keep it unnamed|stay unnamed|we don'?t have to name|don'?t have to name (it|this)|still figuring out what)\b/.test(t);
+}
 function pickOpenQuestion(altIndex = 0, avoidDoor = null) {
   const n = OPEN_QUESTIONS.length;
   const base = (altIndex % n + n) % n;
@@ -2014,6 +2018,7 @@ export {
   isEmotionLearned,
   isOptionMenu,
   isPositiveFamily,
+  isTentativeReply,
   isUncertain,
   labelIsUserOwned,
   labelNamedByUser,

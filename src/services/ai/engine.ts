@@ -8,6 +8,7 @@ export {
   EXIT_CUE,
   isDuplicateReply,
   isOptionMenu,
+  isTentativeReply,
   offersOffRamp,
   replaceOptionMenu,
   repeatsEarlierQuestion,

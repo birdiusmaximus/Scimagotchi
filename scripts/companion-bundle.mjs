@@ -2114,6 +2114,10 @@ var EXIT_CUE = /\b(gotta go|got to go|gonna go|going to bed|off to bed|goodnight
 function askedForNamingHelp(userText) {
   return /\b(what('?s| is) the word|help me name|put (a )?word|name it for me|what (would|do) you call|give me a word|what word)\b/i.test(userText || "");
 }
+function isTentativeReply(reply) {
+  const t = (reply || "").toLowerCase().replace(/[’'`]/g, "'");
+  return /\b(not the (whole|full) shape|see the edge of|only the edge|the edge but not|moved too (fast|quick|soon)|may have moved too|got ahead of (myself|you)|i'?m not sure\b|i am not sure\b|don'?t want to name (it|this)|won'?t name it for you|not going to name it|can'?t quite name|hard to name yet|not a settled name|just a signpost|signpost,? not|leave it unnamed|keep it unnamed|stay unnamed|we don'?t have to name|don'?t have to name (it|this)|still figuring out what)\b/.test(t);
+}
 function pickOpenQuestion(altIndex = 0, avoidDoor = null) {
   const n = OPEN_QUESTIONS.length;
   const base = (altIndex % n + n) % n;
@@ -2489,14 +2493,15 @@ ${extraSystem}` : system },
   let stage = stageRank(computed) >= stageRank(prevStage) ? computed : prevStage;
   const savouring = isPositiveFamily(fam) && SAVOUR_RX.test(input.userText);
   if (savouring) ev.do_not_store = 1;
-  const blockUnlock = !!input.safetyNote || !!input.intent || uncertainTurn || clarifyingQuestion || !!input.repairActive || savouring;
+  const tentativeReply = isTentativeReply(p.reply);
+  const blockUnlock = !!input.safetyNote || !!input.intent || uncertainTurn || clarifyingQuestion || tentativeReply || !!input.repairActive || savouring;
   if (blockUnlock && stage === "understood" && prevStage !== "understood" && prevStage !== "deepened") {
     stage = prevStage;
   }
   ev.unlock_stage = stage;
   const understoodNow = stage === "understood";
   const wasUnderstood = prevStage === "understood" || prevStage === "deepened";
-  const unlocked = understoodNow && !wasUnderstood;
+  let unlocked = understoodNow && !wasUnderstood;
   ev.emotion_status = fam ? understoodNow ? "confirmed" : "candidate" : "unclear";
   if (understoodNow && ev.user_confirmation === "unknown") ev.user_confirmation = "partial";
   const tone = fam ? EMOTION_MAPS[fam].tone : "calm";
@@ -2530,6 +2535,11 @@ ${extraSystem}` : system },
   }
   if (EXIT_CUE.test(input.userText)) reply = dropTrailingQuestion(reply);
   if (input.intent === "keep_going" && offersOffRamp(reply)) reply = stripOffRamp(reply);
+  if (unlocked && isTentativeReply(reply)) {
+    unlocked = false;
+    ev.unlock_stage = stage = "shaped";
+    ev.emotion_status = fam ? "candidate" : "unclear";
+  }
   return { reply: stripEmDashes(stripControlChars(reply)), event: ev, unlocked, tone, stage };
 }
 export {

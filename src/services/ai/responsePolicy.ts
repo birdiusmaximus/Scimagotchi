@@ -127,6 +127,17 @@ export function askedForNamingHelp(userText: string): boolean {
   return /\b(what('?s| is) the word|help me name|put (a )?word|name it for me|what (would|do) you call|give me a word|what word)\b/i.test(userText || '');
 }
 
+// The companion's own voice saying it has NOT understood / named the feeling yet:
+// "not the whole shape", "I'm not sure", "leave it unnamed", "I moved too fast". The
+// state-text coherence rule (review action 5) uses this: the engine must NOT mark a
+// feeling understood/unlocked on a turn where the spoken reply hedges like this.
+// Deliberately EXCLUDES healthy post-understanding closings ("leave it here", "leave
+// the rest unnamed") — those follow a real first shape, not a failure to reach one.
+export function isTentativeReply(reply: string): boolean {
+  const t = (reply || '').toLowerCase().replace(/[’'`]/g, "'");
+  return /\b(not the (whole|full) shape|see the edge of|only the edge|the edge but not|moved too (fast|quick|soon)|may have moved too|got ahead of (myself|you)|i'?m not sure\b|i am not sure\b|don'?t want to name (it|this)|won'?t name it for you|not going to name it|can'?t quite name|hard to name yet|not a settled name|just a signpost|signpost,? not|leave it unnamed|keep it unnamed|stay unnamed|we don'?t have to name|don'?t have to name (it|this)|still figuring out what)\b/.test(t);
+}
+
 /** Pick an open doorway question, rotating from altIndex while skipping anything that is
  *  itself an option menu and (optionally) the door we just used last turn — so two
  *  menu-swapping turns in a row never land on the identical question. */

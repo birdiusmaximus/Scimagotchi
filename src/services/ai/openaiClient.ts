@@ -20,6 +20,7 @@ import {
   EXIT_CUE,
   isDuplicateReply,
   isOptionMenu,
+  isTentativeReply,
   offersOffRamp,
   replaceOptionMenu,
   repeatsEarlierQuestion,
@@ -337,7 +338,12 @@ export async function openaiGenerateTurn(
   // the turn right AFTER a "Not quite" correction (repairActive — no learning from the
   // repair), or while savouring: a first shape is earned from the person's own emotional
   // words, never from a button, an unsure beat, a correction, or a good mood.
-  const blockUnlock = !!input.safetyNote || !!input.intent || uncertainTurn || clarifyingQuestion || !!input.repairActive || savouring;
+  // State-text coherence (review action 5): if the companion's OWN draft says it has
+  // not understood/named it ("not the whole shape", "I'm not sure", "leave it unnamed"),
+  // the engine must not reach understood this turn — the voice and the state must agree.
+  const tentativeReply = isTentativeReply(p.reply);
+  const blockUnlock =
+    !!input.safetyNote || !!input.intent || uncertainTurn || clarifyingQuestion || tentativeReply || !!input.repairActive || savouring;
   if (blockUnlock && stage === 'understood' && prevStage !== 'understood' && prevStage !== 'deepened') {
     stage = prevStage;
   }
@@ -345,7 +351,7 @@ export async function openaiGenerateTurn(
 
   const understoodNow = stage === 'understood';
   const wasUnderstood = prevStage === 'understood' || prevStage === 'deepened';
-  const unlocked = understoodNow && !wasUnderstood;
+  let unlocked = understoodNow && !wasUnderstood;
 
   ev.emotion_status = fam ? (understoodNow ? 'confirmed' : 'candidate') : 'unclear';
   if (understoodNow && ev.user_confirmation === 'unknown') ev.user_confirmation = 'partial';
@@ -418,6 +424,15 @@ export async function openaiGenerateTurn(
   // going, so offering "leave it here / keep it unnamed" in the same breath is wrong
   // (the unlock-sim showed this on every premature off-ramp). Strip the off-ramp.
   if (input.intent === 'keep_going' && offersOffRamp(reply)) reply = stripOffRamp(reply);
+
+  // State-text coherence backstop (review action 5): never ship an unlock whose final
+  // reply still hedges that it hasn't named the feeling. Cancel it, hold at shaped, so
+  // the recorded state matches the spoken voice. Acts only on the new-unlock turn.
+  if (unlocked && isTentativeReply(reply)) {
+    unlocked = false;
+    ev.unlock_stage = stage = 'shaped';
+    ev.emotion_status = fam ? 'candidate' : 'unclear';
+  }
 
   return { reply: stripEmDashes(stripControlChars(reply)), event: ev, unlocked, tone, stage };
 }

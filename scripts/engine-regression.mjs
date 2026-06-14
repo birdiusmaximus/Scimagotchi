@@ -21,6 +21,7 @@ import {
   intentDecision,
   isClarifyingQuestion,
   isOptionMenu,
+  isTentativeReply,
   isUncertain,
   labelIsUserOwned,
   labelNamedByUser,
@@ -245,6 +246,14 @@ check('clarifyingQ: a feeling question "why do i feel so empty?" -> false', isCl
 check('clarifyingQ: a check-in "is that bad?" -> false', isClarifyingQuestion('is that bad?'), false);
 check('clarifyingQ: a statement "i think its settled, thats the difference for me" -> false', isClarifyingQuestion("i think its settled, thats the difference for me"), false);
 check('clarifyingQ: owning a feeling "yeah, settled" -> false', isClarifyingQuestion('yeah, settled'), false);
+// State-text coherence (action 5): a reply that says it hasn't named it is tentative;
+// a clean reflection or a healthy post-understanding closing is NOT.
+check('tentative: "edge of it, but not the whole shape yet" -> true', isTentativeReply('I can see the edge of it, but not the whole shape yet.'), true);
+check('tentative: "I may have moved too fast, keep it unnamed" -> true', isTentativeReply('I may have moved too fast there, we can keep it unnamed for now.'), true);
+check('tentative: "Im not sure, it might still be forming" -> true', isTentativeReply("I'm not sure yet, it may still be forming."), true);
+check('tentative: a clean unlock reflection is NOT tentative', isTentativeReply('That hollow under your ribs is the emptiness you found.'), false);
+check('tentative: a healthy closing "leave it here together" is NOT tentative', isTentativeReply('We can leave it here, with the relief and the ache together.'), false);
+check('tentative: "leave the rest unnamed for now" (after understanding) is NOT tentative', isTentativeReply('Chest tightness with that annoyed feeling, got it. We can leave the rest unnamed for now.'), false);
 // hasEmotionAnchor: a learned moment needs a real, user-owned anchor
 check('anchor: a body cue counts', hasEmotionAnchor(ev({ body_cue: ['tight chest'] })), true);
 check('anchor: a trigger counts', hasEmotionAnchor(ev({ trigger_event: 'they saw me fail', body_cue: [] })), true);

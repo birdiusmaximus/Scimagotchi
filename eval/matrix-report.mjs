@@ -11,6 +11,7 @@
 import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { isTentativeReply } from '../scripts/engine-bundle.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(ROOT, 'eval-out');
@@ -21,7 +22,6 @@ const median = (xs) => (xs.length ? [...xs].sort((a, b) => a - b)[Math.floor(xs.
 // Detectors for the split unlock-quality flags (review action 7).
 const BARE_AGREEMENT = /^(yeah?|yep|yes|exactly|totally|for sure|right|you'?re right|that ?one|that'?s the one|true|mm+|ok(ay)?|sure|definitely|absolutely|i guess|maybe|that fits|that'?s it|you got it|you nailed it)[\s.,!]*$/i;
 const UNCERTAIN_USER = /\b(not sure|no idea|dont know|don'?t know|dunno|idk|hard to say|hard to put|cant tell|can'?t tell|unsure|both maybe|neither|cant even (tell|answer|name)|still lost|put words on it)\b/i;
-const TENTATIVE_REPLY = /\b(not sure|leave it unnamed|unnamed for now|stay (with it )?unnamed|not the whole shape|don'?t want to (name|put words)|might be|maybe it'?s|could be|hard to name|we don'?t have to name|still finding|can'?t quite name|only a guess|a guess not|signpost|not settled|not a settled name|edge of (it|something))\b/i;
 const rx = (w) => new RegExp(`\\b${String(w).toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i');
 // A capitalised mid-sentence token that looks like a leaked name (memory abstraction check).
 const SAFE_CAPS = new Set('i monday tuesday wednesday thursday friday saturday sunday january february march april may june july august september october november december christmas easter god mum mom dad mother father today tomorrow yesterday'.split(' '));
@@ -112,7 +112,7 @@ function analyse(file) {
   // is internally marked understood or unlocked (logging one thing, saying another).
   for (const x of comp) {
     const claimsUnderstood = x.unlocked || x.stage === 'understood' || x.stage === 'deepened';
-    if (claimsUnderstood && TENTATIVE_REPLY.test(x.reply || '')) { flags.push('state_text_mismatch'); break; }
+    if (claimsUnderstood && isTentativeReply(x.reply || '')) { flags.push('state_text_mismatch'); break; }
   }
 
   // memory PII leak: a drafted card summary with a name-looking capitalised mid-sentence token

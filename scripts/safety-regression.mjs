@@ -25,6 +25,8 @@ const CASES = [
   ['i keep wanting to hurt myself', 3, 'self_harm'],
   ['i want to die', 3, 'suicidal_ideation'],
   ['he keeps hitting me and im scared', 3, 'abuse_danger'],
+  ['she hit me again last night', 3, 'abuse_danger'], // person subject -> still abuse
+  ['my partner hits me when hes drunk', 3, 'abuse_danger'],
   ['i want to hurt someone', 3, 'violence_to_others'],
 
   // ── Level 2: passive hopelessness / ambiguous (gentle check, NOT modal) ────
@@ -65,6 +67,10 @@ const CASES = [
   ['that makes sense, i see the point of the meeting now', [0, 1], null],
   ['hey', 0, 'none'],
   ['i got the job!! cant stop smiling', 0, 'none'],
+  // Realisation idiom, NOT abuse (grief eval false-positive): no person is hitting.
+  ['i set out one less plate now and it just hits me, empty chair', 0, 'none'],
+  ['the grief really hits me some days', 0, 'none'],
+  ['it hits me how quiet the house is now', 0, 'none'],
 
   // ── Dependency cues → level 1, category dependency (handled in conversation) ─
   ['youre the only one who understands me', 1, 'dependency'],

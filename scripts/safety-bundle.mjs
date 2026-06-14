@@ -97,6 +97,8 @@ var ABUSE_DANGER = [
   "scared of what he will do",
   "scared of what she will do"
 ];
+var HIT_IDIOM = /\b(it|this|that|reality|grief|loss|truth|news|weight|silence|emptiness|enormity|the (grief|loss|truth|news|weight|silence|emptiness|reality|finality))\s+(just |really |suddenly |finally |still |then )*(hits|hit|hitting) me\b|\b(hits|hit|hitting) me\s+(that|how|when|like a|all at once|just how)\b/;
+var ABUSE_PERSON = /\b(he|she|they|him|her|partner|husband|wife|boyfriend|girlfriend|bf|gf|dad|mum|mom|father|mother|stepdad|stepfather|stepmum|brother|sister|boss|ex|someone)\b/;
 var VIOLENCE_DESIRE = ["want to hurt someone", "want to kill someone", "want to hurt him", "want to hurt her"];
 var PASSIVE_HOPELESSNESS = [
   "whats the point",
@@ -218,7 +220,11 @@ function classifySafety(text) {
   m = anyOf(t, SELF_HARM);
   if (m && !isDenied(m)) return { level: 3, category: "self_harm", action: "support_modal", matched: m };
   m = anyOf(t, ABUSE_DANGER);
-  if (m) return { level: 3, category: "abuse_danger", action: "support_modal", matched: m };
+  if (m) {
+    const isHitPhrase = /\bhit(s|ting)? me\b/.test(m);
+    const idiom = isHitPhrase && HIT_IDIOM.test(t) && !ABUSE_PERSON.test(t);
+    if (!idiom) return { level: 3, category: "abuse_danger", action: "support_modal", matched: m };
+  }
   m = anyOf(t, VIOLENCE_DESIRE);
   if (m) return { level: 3, category: "violence_to_others", action: "support_modal", matched: m };
   if (!POINT_OF_MUNDANE.test(t)) {

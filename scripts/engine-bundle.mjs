@@ -587,6 +587,13 @@ function isUncertain(userText) {
   const norm3 = (userText || "").toLowerCase().replace(/[’'`]/g, "'").trim();
   return UNCERTAIN_RX.test(` ${norm3} `) || HEDGE_RX.test(norm3);
 }
+var CLARIFYING_Q = /(what('?s| is| are)?\s+the\s+(difference|diff|distinction)|what do you mean|what does (that|it|this) mean|which (one|of (those|them|the))|what'?s the diff|how (is|are|do)\b.{0,40}\b(differ|different)\b|tell .{0,20} apart|can you explain|what would you call (it|that)|what'?s? .{0,20}\bmean\b|is .{0,30}\bthe same as\b)/i;
+function isClarifyingQuestion(userText) {
+  const t = (userText || "").toLowerCase().replace(/[’'`]/g, "'").trim();
+  if (!t) return false;
+  const looksQuestion = t.endsWith("?") || /^(what|which|how|whats|hows|can you|could you|do you mean)\b/.test(t);
+  return looksQuestion && CLARIFYING_Q.test(t);
+}
 function hasEmotionAnchor(ev) {
   const ownedShade = !!ev.emotion_shade && (ev.shade_source === "user_stated" || ev.shade_source === "user_confirmed");
   return (ev.body_cue?.length ?? 0) > 0 || (ev.behaviour_action?.length ?? 0) > 0 || !!ev.trigger_event || !!ev.appraisal_thought || (ev.need_value?.length ?? 0) > 0 || ownedShade || ev.mixed_confirmed === 1 || (ev.strands?.length ?? 0) >= 2;
@@ -2001,6 +2008,7 @@ export {
   firstShapeEvidence,
   hasEmotionAnchor,
   intentDecision,
+  isClarifyingQuestion,
   isDifficultFamily,
   isDuplicateReply,
   isEmotionLearned,

@@ -34,6 +34,7 @@ import { needsOwnershipRepair, softenUnownedEmotionReply } from '@/services/ai/r
 import {
   detectShadeRejection,
   evaluateStage,
+  isClarifyingQuestion,
   isUncertain,
   labelIsUserOwned,
   labelNamedByUser,
@@ -99,6 +100,9 @@ export async function openaiGenerateTurn(
   // companion gets more curious, never more confident — no unlock, and their unsure
   // words must not be stored as the feeling's phrase.
   const uncertainTurn = !input.intent && isUncertain(input.userText);
+  // The user is asking the companion to explain/distinguish its own words ("what's the
+  // difference between quiet and settled?") — a question to answer, not a feeling to bank.
+  const clarifyingQuestion = !input.intent && isClarifyingQuestion(input.userText);
 
   // ── Deterministic pre-stages: mode + variety + safety directives ───────────
   // A tapped continuation chip drives the mode directly (reliable intent), instead
@@ -288,8 +292,23 @@ export async function openaiGenerateTurn(
     shadeIsUserOwned(ev.emotion_shade, input.userText, input.history ?? [], { proposedShade: prev?.emotion_shade ?? null });
   ev.shade_source = !ev.emotion_shade ? null : saidShade ? 'user_stated' : shadeOwned ? 'user_confirmed' : 'companion_hypothesis';
   ev.candidate_shade = ev.emotion_shade && ev.shade_source === 'companion_hypothesis' ? ev.emotion_shade : null;
+
+  // Clarifying-question guard: when the user is asking ABOUT the companion's words
+  // ("what's the difference between quiet and settled?"), a feeling word inside that
+  // question is not theirs to own — only an EARLIER turn (history, not this question)
+  // can confer ownership. Stops a question being read as a decision/confirmation.
+  if (clarifyingQuestion) {
+    if (ev.emotion_shade && !shadeIsUserOwned(ev.emotion_shade, '', input.history ?? [])) {
+      ev.shade_source = 'companion_hypothesis';
+      ev.candidate_shade = ev.emotion_shade;
+    }
+    if (fam && (ev.label_source === 'user_stated' || ev.label_source === 'user_confirmed') && !labelNamedByUser(fam, '', input.history ?? [])) {
+      ev.label_source = 'companion_hypothesis';
+      if (ev.user_confirmation === 'yes') ev.user_confirmation = 'partial';
+    }
+  }
   if (!input.intent) {
-    const ownPhrase = uncertainTurn ? '' : (ev.user_words_raw ?? '').trim() || (input.userText ?? '').trim();
+    const ownPhrase = uncertainTurn || clarifyingQuestion ? '' : (ev.user_words_raw ?? '').trim() || (input.userText ?? '').trim();
     // A shallow hedge ("yeah i guess") is not the feeling's phrase — keep the prior
     // meaningful one rather than overwriting it with a non-answer (brief §8).
     if (ownPhrase && !isUncertain(ownPhrase)) ev.user_phrase = stripEmDashes(ownPhrase).slice(0, 240);
@@ -318,7 +337,7 @@ export async function openaiGenerateTurn(
   // the turn right AFTER a "Not quite" correction (repairActive — no learning from the
   // repair), or while savouring: a first shape is earned from the person's own emotional
   // words, never from a button, an unsure beat, a correction, or a good mood.
-  const blockUnlock = !!input.safetyNote || !!input.intent || uncertainTurn || !!input.repairActive || savouring;
+  const blockUnlock = !!input.safetyNote || !!input.intent || uncertainTurn || clarifyingQuestion || !!input.repairActive || savouring;
   if (blockUnlock && stage === 'understood' && prevStage !== 'understood' && prevStage !== 'deepened') {
     stage = prevStage;
   }
@@ -339,6 +358,25 @@ export async function openaiGenerateTurn(
   // it: one constrained re-call for natural tentative language, deterministic
   // softening as a fallback.
   let reply = p.reply;
+
+  // Clarifying-question repair: if the user asked the companion to explain/distinguish
+  // its words, the reply must ANSWER that, not declare a feeling. Re-call once with a
+  // pointed instruction so the companion stops treating the question as a decision.
+  if (clarifyingQuestion) {
+    try {
+      const pq = await callOnce(
+        'The user asked you a QUESTION about your own words (for example the difference between two ' +
+          'feeling words you offered). ANSWER it directly, warmly, in 1-2 short plain sentences. Do NOT ' +
+          'treat their question as choosing or confirming a feeling: never say "this is X", "I\'m learning ' +
+          'this is X", or call their feeling settled/named. After answering, you may gently invite them to ' +
+          'notice which fits, but leave it theirs to say.',
+      );
+      if (pq.reply && pq.reply.trim()) reply = pq.reply;
+    } catch {
+      /* keep the original draft; the ownership repair below still applies */
+    }
+  }
+
   const owned = ev.label_source === 'user_stated' || ev.label_source === 'user_confirmed';
   if (needsOwnershipRepair(reply, ev, owned)) {
     try {

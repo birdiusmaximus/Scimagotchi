@@ -27,6 +27,7 @@ export {
   evaluateStage,
   firstShapeEvidence,
   hasEmotionAnchor,
+  isClarifyingQuestion,
   isUncertain,
   labelIsUserOwned,
   labelNamedByUser,

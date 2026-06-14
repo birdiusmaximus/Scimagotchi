@@ -19,6 +19,7 @@ import {
   firstShapeEvidence,
   hasEmotionAnchor,
   intentDecision,
+  isClarifyingQuestion,
   isOptionMenu,
   isUncertain,
   labelIsUserOwned,
@@ -234,6 +235,16 @@ check('uncertain: "im just guessing" is uncertainty', isUncertain('honestly im j
 check('uncertain: "yeah thats it" is NOT uncertainty', isUncertain("yeah thats it"), false);
 check('uncertain: "it feels like a weight on my chest" is NOT uncertainty', isUncertain('it feels like a weight on my chest'), false);
 check('uncertain: "im furious about it" is NOT uncertainty', isUncertain('im furious about it'), false);
+// Clarifying-question guard (live bug): asking about the companion's offered words is a
+// question to answer, not a feeling being chosen.
+check('clarifyingQ: "whats the difference between quiet and settled?" -> true', isClarifyingQuestion("whats the difference between quiet and settled?"), true);
+check('clarifyingQ: "what do you mean?" -> true', isClarifyingQuestion('what do you mean?'), true);
+check('clarifyingQ: "which one?" -> true', isClarifyingQuestion('which one?'), true);
+check('clarifyingQ: "is settled the same as calm?" -> true', isClarifyingQuestion('is settled the same as calm?'), true);
+check('clarifyingQ: a feeling question "why do i feel so empty?" -> false', isClarifyingQuestion('why do i feel so empty?'), false);
+check('clarifyingQ: a check-in "is that bad?" -> false', isClarifyingQuestion('is that bad?'), false);
+check('clarifyingQ: a statement "i think its settled, thats the difference for me" -> false', isClarifyingQuestion("i think its settled, thats the difference for me"), false);
+check('clarifyingQ: owning a feeling "yeah, settled" -> false', isClarifyingQuestion('yeah, settled'), false);
 // hasEmotionAnchor: a learned moment needs a real, user-owned anchor
 check('anchor: a body cue counts', hasEmotionAnchor(ev({ body_cue: ['tight chest'] })), true);
 check('anchor: a trigger counts', hasEmotionAnchor(ev({ trigger_event: 'they saw me fail', body_cue: [] })), true);

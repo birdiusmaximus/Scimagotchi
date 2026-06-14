@@ -246,6 +246,23 @@ export function isUncertain(userText: string): boolean {
   return UNCERTAIN_RX.test(` ${norm} `) || HEDGE_RX.test(norm);
 }
 
+// The user is asking the companion to EXPLAIN or DISTINGUISH its own words/options
+// ("what's the difference between quiet and settled?", "what do you mean?", "which
+// one?"), not stating a feeling. A feeling word inside such a question is being asked
+// ABOUT, not claimed — so the question must be answered, never read as a choice/unlock.
+// Scoped to meaning/distinction questions so it does NOT catch feeling-laden ones
+// ("why do i feel so empty?", "is that bad?").
+const CLARIFYING_Q =
+  /(what('?s| is| are)?\s+the\s+(difference|diff|distinction)|what do you mean|what does (that|it|this) mean|which (one|of (those|them|the))|what'?s the diff|how (is|are|do)\b.{0,40}\b(differ|different)\b|tell .{0,20} apart|can you explain|what would you call (it|that)|what'?s? .{0,20}\bmean\b|is .{0,30}\bthe same as\b)/i;
+
+/** True when the user is asking the companion to clarify/define its own words, not naming a feeling. */
+export function isClarifyingQuestion(userText: string): boolean {
+  const t = (userText || '').toLowerCase().replace(/[’'`]/g, "'").trim();
+  if (!t) return false;
+  const looksQuestion = t.endsWith('?') || /^(what|which|how|whats|hows|can you|could you|do you mean)\b/.test(t);
+  return looksQuestion && CLARIFYING_Q.test(t);
+}
+
 /**
  * Does the event carry a REAL, user-owned emotional anchor (detail beyond a bare
  * label or uncertainty)? Required before a learned moment (first shape / deepening)

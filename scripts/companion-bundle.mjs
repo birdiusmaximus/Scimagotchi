@@ -685,6 +685,13 @@ function isUncertain(userText) {
   const norm2 = (userText || "").toLowerCase().replace(/[’'`]/g, "'").trim();
   return UNCERTAIN_RX.test(` ${norm2} `) || HEDGE_RX.test(norm2);
 }
+var CLARIFYING_Q = /(what('?s| is| are)?\s+the\s+(difference|diff|distinction)|what do you mean|what does (that|it|this) mean|which (one|of (those|them|the))|what'?s the diff|how (is|are|do)\b.{0,40}\b(differ|different)\b|tell .{0,20} apart|can you explain|what would you call (it|that)|what'?s? .{0,20}\bmean\b|is .{0,30}\bthe same as\b)/i;
+function isClarifyingQuestion(userText) {
+  const t = (userText || "").toLowerCase().replace(/[’'`]/g, "'").trim();
+  if (!t) return false;
+  const looksQuestion = t.endsWith("?") || /^(what|which|how|whats|hows|can you|could you|do you mean)\b/.test(t);
+  return looksQuestion && CLARIFYING_Q.test(t);
+}
 var AFFIRM_LABEL = /\b(that'?s (it|right|the one|exactly it)|that does fit|that fits|spot on|sounds right|exactly that|yeah,? that'?s (it|right)|yes,? that'?s (it|right))\b/;
 function labelNamedByUser(fam, userText, history) {
   const named = (text) => {
@@ -1793,6 +1800,7 @@ Move ONE step at a time; never race ahead. Reflect the single strongest signal i
 
 NAME IT WITH THEM, NOT FOR THEM
 A feeling is the person's to name, never yours to assign. When they only describe a situation or what they did ("I keep getting asked to do more", "I snapped at him"), they have given you the context, not the feeling itself. Do not state an emotion as fact, do not treat it as settled, and do not give a first-shape reflection or a learning statement from a situation alone. Offer your read as a question they can correct ("that sounds like it might be pressure, or is it closer to something else?") and wait. The feeling becomes theirs only when they say the word themselves or clearly accept yours ("yeah, pressure"). Until then keep "label_source" as companion_hypothesis and stay at the exploring stage. This holds for every feeling, including ones that seem obvious to you.
+When the person asks a QUESTION about your words \u2014 "what's the difference between quiet and settled?", "what do you mean?", "which one?" \u2014 they are asking you to explain, NOT choosing a feeling. Answer the question plainly and warmly. Never read the feeling words inside their question as a decision: do not say "this is X" or "I'm learning this is X", do not mark the shade/label as theirs, and do not advance. After answering you can gently invite them to notice which fits, but it stays theirs to say.
 Until they own it, the VISIBLE words you say must stay tentative too. Forbidden unless they have named or accepted it: "this is hurt", "that carries shame", "the hurt underneath", "the shape of being not chosen", "X is the centre of it". Allowed: "could this be hurt, or not quite?", "I wonder if there's some shame here, but I don't want to name it for you", "maybe closer to pressure than sadness, does that fit?". When they are uncertain, it is good to leave it unnamed: "we don't have to name it yet".
 DON'T CLOSE THE FILE TOO SOON. A first shape should feel like "oh, that is what it was", never "that's it?". If you only have a thin sketch so far (a bare label, or a situation with no felt detail, no body, no meaning, no example), do NOT give a first-shape reflection yet. Say honestly that you can see the edge but not the whole shape: "I think I can see the edge of it, but not the whole shape yet", or "that gives me the first outline, I don't want to pretend I understand it too quickly". Flat, numb and shame especially deserve a slower, unrushed path. When you DO reflect a shape, build it from their exact phrase, not your taxonomy word: if they said "pulled thin", keep "pulled thin", do not silently swap in "stretched" or "overwhelmed" as if they had said it.
 
@@ -2346,6 +2354,7 @@ async function openaiGenerateTurn(input, opts) {
   const prev = input.prevEvent;
   const family = prev?.emotion_family ?? detectFamily(input.userText);
   const uncertainTurn = !input.intent && isUncertain(input.userText);
+  const clarifyingQuestion = !input.intent && isClarifyingQuestion(input.userText);
   const savouredEarlier = !!prev?.emotion_family && isPositiveFamily(prev.emotion_family) && (input.history ?? []).some((m) => m.role === "user" && SAVOUR_RX.test(m.content));
   const mode = input.intent ? intentDecision(input.intent, prev ?? null) : routeMode(input.userText, prev ?? null, input.entryHint ?? null, { savouredEarlier });
   const companionReplies = (input.history ?? []).filter((m) => m.role === "companion").map((m) => m.content);
@@ -2459,8 +2468,18 @@ ${extraSystem}` : system },
   const shadeOwned = saidShade || shadeIsUserOwned(ev.emotion_shade, input.userText, input.history ?? [], { proposedShade: prev?.emotion_shade ?? null });
   ev.shade_source = !ev.emotion_shade ? null : saidShade ? "user_stated" : shadeOwned ? "user_confirmed" : "companion_hypothesis";
   ev.candidate_shade = ev.emotion_shade && ev.shade_source === "companion_hypothesis" ? ev.emotion_shade : null;
+  if (clarifyingQuestion) {
+    if (ev.emotion_shade && !shadeIsUserOwned(ev.emotion_shade, "", input.history ?? [])) {
+      ev.shade_source = "companion_hypothesis";
+      ev.candidate_shade = ev.emotion_shade;
+    }
+    if (fam && (ev.label_source === "user_stated" || ev.label_source === "user_confirmed") && !labelNamedByUser(fam, "", input.history ?? [])) {
+      ev.label_source = "companion_hypothesis";
+      if (ev.user_confirmation === "yes") ev.user_confirmation = "partial";
+    }
+  }
   if (!input.intent) {
-    const ownPhrase = uncertainTurn ? "" : (ev.user_words_raw ?? "").trim() || (input.userText ?? "").trim();
+    const ownPhrase = uncertainTurn || clarifyingQuestion ? "" : (ev.user_words_raw ?? "").trim() || (input.userText ?? "").trim();
     if (ownPhrase && !isUncertain(ownPhrase)) ev.user_phrase = stripEmDashes(ownPhrase).slice(0, 240);
   }
   ev.strands = sanitizeStrands(p.strands);
@@ -2470,7 +2489,7 @@ ${extraSystem}` : system },
   let stage = stageRank(computed) >= stageRank(prevStage) ? computed : prevStage;
   const savouring = isPositiveFamily(fam) && SAVOUR_RX.test(input.userText);
   if (savouring) ev.do_not_store = 1;
-  const blockUnlock = !!input.safetyNote || !!input.intent || uncertainTurn || !!input.repairActive || savouring;
+  const blockUnlock = !!input.safetyNote || !!input.intent || uncertainTurn || clarifyingQuestion || !!input.repairActive || savouring;
   if (blockUnlock && stage === "understood" && prevStage !== "understood" && prevStage !== "deepened") {
     stage = prevStage;
   }
@@ -2482,6 +2501,15 @@ ${extraSystem}` : system },
   if (understoodNow && ev.user_confirmation === "unknown") ev.user_confirmation = "partial";
   const tone = fam ? EMOTION_MAPS[fam].tone : "calm";
   let reply = p.reply;
+  if (clarifyingQuestion) {
+    try {
+      const pq = await callOnce(
+        `The user asked you a QUESTION about your own words (for example the difference between two feeling words you offered). ANSWER it directly, warmly, in 1-2 short plain sentences. Do NOT treat their question as choosing or confirming a feeling: never say "this is X", "I'm learning this is X", or call their feeling settled/named. After answering, you may gently invite them to notice which fits, but leave it theirs to say.`
+      );
+      if (pq.reply && pq.reply.trim()) reply = pq.reply;
+    } catch {
+    }
+  }
   const owned = ev.label_source === "user_stated" || ev.label_source === "user_confirmed";
   if (needsOwnershipRepair(reply, ev, owned)) {
     try {

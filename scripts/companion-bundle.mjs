@@ -2495,6 +2495,13 @@ ${extraSystem}` : system },
     ev.user_confirmation = "no";
   }
   ev.user_rejected_shades = [...rejected];
+  if (ev.emotion_shade) {
+    const sl = ev.emotion_shade.toLowerCase().trim();
+    const reintroduced = new RegExp(`\\b${sl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i").test(input.userText || "");
+    if ([...rejected].some((r) => r.toLowerCase().trim() === sl) && !reintroduced) {
+      ev.emotion_shade = null;
+    }
+  }
   if (p.user_confirmed_label) ev.user_confirmation = "yes";
   if (fam && (ev.label_source === "user_stated" || ev.label_source === "user_confirmed")) {
     if (!labelIsUserOwned(fam, input.userText, input.history ?? [], prev ?? null)) {

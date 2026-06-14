@@ -48,6 +48,11 @@ check('mixed_confirmed draft becomes mixed_pattern',
       { family: 'hurt', shade: null, salience: 'background', source: 'user_stated' },
     ],
   }), 'yeah both', 'c1')?.type === 'mixed_pattern');
+// Rejected-word quarantine (review action 4): a word the user pushed away never reaches memory.
+check('a note containing a rejected word is NOT stored',
+  draftFromTurn(turn({}, { user_rejected_shades: ['dread'], memory_note: 'A dread that sits in the chest.' }), 'it clicked', 'c1') === null);
+check('a clean note (no rejected word) still stores even when other words were rejected',
+  draftFromTurn(turn({}, { user_rejected_shades: ['dread'], memory_note: 'A heaviness that sits in the chest.' }), 'it clicked', 'c1') !== null);
 check('rejection draft is a repair_instruction naming the word',
   draftFromRejection(['anxious'], 'fear', 'c1')?.summary?.includes('anxious') === true &&
   draftFromRejection(['anxious'], 'fear', 'c1')?.type === 'repair_instruction');

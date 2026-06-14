@@ -244,6 +244,17 @@ export async function openaiGenerateTurn(
     ev.user_confirmation = 'no';
   }
   ev.user_rejected_shades = [...rejected];
+  // Durable quarantine (review action 4): a shade the user has EVER rejected must not
+  // come back as the companion's proposal on a later turn — only the user reintroducing
+  // the word themselves lifts it. Clears it from the event so it can't ride along as the
+  // shade/candidate, reach memory, or be reflected back as if newly proposed.
+  if (ev.emotion_shade) {
+    const sl = ev.emotion_shade.toLowerCase().trim();
+    const reintroduced = new RegExp(`\\b${sl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i').test(input.userText || '');
+    if ([...rejected].some((r) => r.toLowerCase().trim() === sl) && !reintroduced) {
+      ev.emotion_shade = null;
+    }
+  }
   if (p.user_confirmed_label) ev.user_confirmation = 'yes';
 
   // Ownership backstop: the user must name or accept the feeling before it can be

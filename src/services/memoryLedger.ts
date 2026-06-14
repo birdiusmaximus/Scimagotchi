@@ -122,12 +122,18 @@ export function draftFromTurn(turn: CompanionTurn, userText: string, conversatio
   const ev = turn.event;
   if (ev.do_not_store === 1 || ev.safety_flag !== 'none') return null;
 
+  // Quarantine (review action 4): a word the user rejected must never reach durable
+  // memory (or, via memory, the weekly summary). Drop any draft whose text carries one.
+  const rejectedWords = (ev.user_rejected_shades ?? []).map((s) => s.toLowerCase().trim()).filter(Boolean);
+  const taintedByRejected = (text: string | null | undefined) =>
+    !!text && rejectedWords.some((r) => new RegExp(`\\b${r.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i').test(text));
+
   const askedToRemember = REMEMBER_REQUEST.test(` ${userText.toLowerCase().replace(/[’']/g, '')} `);
 
   // 1) An explicit "remember this" — honour it with whatever is in play.
   if (askedToRemember) {
     const summary = ev.memory_note ?? (ev.user_words_raw ? `“${ev.user_words_raw}” felt worth keeping.` : null);
-    if (!summary || memoryBlocked(summary) || memoryBlocked(userText)) return null;
+    if (!summary || memoryBlocked(summary) || memoryBlocked(userText) || taintedByRejected(summary) || taintedByRejected(ev.user_words_raw)) return null;
     return baseCard({
       source_conversation_id: conversationId,
       type: ev.mixed_confirmed === 1 ? 'mixed_pattern' : 'emotional_pattern',
@@ -138,7 +144,7 @@ export function draftFromTurn(turn: CompanionTurn, userText: string, conversatio
   }
 
   // 2) A first shape just landed (unlock) with a model-written learning note.
-  if (turn.unlocked && ev.memory_note && !memoryBlocked(ev.memory_note)) {
+  if (turn.unlocked && ev.memory_note && !memoryBlocked(ev.memory_note) && !taintedByRejected(ev.memory_note) && !taintedByRejected(ev.user_words_raw)) {
     return baseCard({
       source_conversation_id: conversationId,
       type: ev.mixed_confirmed === 1 ? 'mixed_pattern' : 'emotional_pattern',
@@ -149,7 +155,7 @@ export function draftFromTurn(turn: CompanionTurn, userText: string, conversatio
   }
 
   // 3) A confirmed mixed structure (even without unlock) is a distinction worth offering.
-  if (ev.mixed_confirmed === 1 && ev.mixed_relation && ev.strands.length >= 2 && ev.memory_note && !memoryBlocked(ev.memory_note)) {
+  if (ev.mixed_confirmed === 1 && ev.mixed_relation && ev.strands.length >= 2 && ev.memory_note && !memoryBlocked(ev.memory_note) && !taintedByRejected(ev.memory_note)) {
     return baseCard({
       source_conversation_id: conversationId,
       type: 'mixed_pattern',

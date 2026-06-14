@@ -16,6 +16,8 @@ import type { EmotionEvent } from '@/types/models';
 import { isDifficultFamily, isPositiveFamily } from '@/services/ai/companionPose';
 import type { StrandAdvance } from '@/services/ai/progressionEngine';
 import { PROGRESS_RANK } from '@/services/ai/progressionEngine';
+import { hasEmotionAnchor, isUncertain } from '@/services/ai/stage';
+import { EXIT_CUE } from '@/services/ai/responsePolicy';
 
 export type MomentType =
   | 'unlocked' // a first shape formed — the existing unlock ceremony
@@ -24,7 +26,8 @@ export type MomentType =
   | 'mixed_found' // two feelings confirmed co-present this turn
   | 'shift' // the focus moved to a different feeling than the turn before
   | 'landing' // a settling feeling (calm/relief/joy) arrived after difficult work
-  | 'repair_intention'; // the user decided to do something ("I think I'll call my brother")
+  | 'repair_intention' // the user decided to do something ("I think I'll call my brother")
+  | 'held_unnamed'; // real material surfaced but the feeling stays unnamed — a valid resting place, not a failure
 
 // A decision to act toward someone — the moment a feeling turns into an intention.
 const REPAIR_RX =
@@ -97,6 +100,14 @@ export function classifyMoments(
 
   // The user decided to do something about it.
   if (REPAIR_RX.test(text)) out.push('repair_intention');
+
+  // Held Unnamed (review action 3): real material surfaced (there's an anchor) but the
+  // feeling was never owned, and the user is holding it lightly or winding down. A valid
+  // resting place — "I learned the edge of something, but not its name yet" — not a miss.
+  const owned = ev.label_source === 'user_stated' || ev.label_source === 'user_confirmed';
+  if (!turn.unlocked && !owned && hasEmotionAnchor(ev) && (isUncertain(userText) || EXIT_CUE.test(userText ?? ''))) {
+    out.push('held_unnamed');
+  }
 
   return out;
 }

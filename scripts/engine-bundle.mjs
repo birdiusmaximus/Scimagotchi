@@ -1794,6 +1794,10 @@ function classifyMoments(turn, prevEvent, strandAdvance, userText) {
   const ruleHay = `${text}${" "}${(ev.appraisal_thought ?? "").toLowerCase()}`;
   if (HIDDEN_RULE_RX.test(ruleHay)) out.push("hidden_rule");
   if (REPAIR_RX.test(text)) out.push("repair_intention");
+  const owned = ev.label_source === "user_stated" || ev.label_source === "user_confirmed";
+  if (!turn.unlocked && !owned && hasEmotionAnchor(ev) && (isUncertain(userText) || EXIT_CUE.test(userText ?? ""))) {
+    out.push("held_unnamed");
+  }
   return out;
 }
 

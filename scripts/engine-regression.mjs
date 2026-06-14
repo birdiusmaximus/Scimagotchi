@@ -710,6 +710,10 @@ check('moment: a freshly rejected shade is "clarified"',
   has(classifyMoments(mk(ev({ user_rejected_shades: ['anxious'] })), ev({ user_rejected_shades: [] }), null, 'x'), 'clarified'), true);
 check('moment: an unlock is not also tagged "clarified"',
   has(classifyMoments(mk(ev({ emotion_shade: 'dread', shade_source: 'user_confirmed' }), true), ev({ emotion_shade: 'anxious' }), null, 'x'), 'clarified'), false);
+check('moment: real material held without a name (uncertain close) is "held_unnamed"',
+  has(classifyMoments(mk(ev({ label_source: 'companion_hypothesis', body_cue: ['heavy'] })), null, null, 'i still dont really know what it is'), 'held_unnamed'), true);
+check('moment: an owned unlock is NOT held_unnamed',
+  has(classifyMoments(mk(ev({ label_source: 'user_stated', body_cue: ['heavy'] }), true), null, null, 'yeah thats it'), 'held_unnamed'), false);
 
 console.log(`\nengine regression: ${pass} passed, ${fail} failed (${pass + fail} cases)`);
 process.exit(fail ? 1 : 0);

@@ -14,7 +14,9 @@ import { fileURLToPath } from 'node:url';
 import { isTentativeReply } from '../scripts/engine-bundle.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
-const OUT = path.join(ROOT, 'eval-out');
+// Defaults to eval-out; set EVAL_DIR to analyse an archived run (e.g. the v1 baseline)
+// with the exact same detectors, for an honest before/after.
+const OUT = process.env.EVAL_DIR ? path.resolve(ROOT, process.env.EVAL_DIR) : path.join(ROOT, 'eval-out');
 
 const RANK = { unseen: 0, noticed: 1, named: 2, first_shape: 3, rooted: 4, distinguished: 5, returning: 6, deepened: 7 };
 const deeper = (a, b) => ((RANK[b] ?? -1) > (RANK[a] ?? -1) ? b : a);

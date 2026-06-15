@@ -4,7 +4,7 @@
  *
  * Run: npm run test:progression (rebundles, then executes). Exit 1 on failure.
  */
-import { advanceProgress, advanceStrands, emptyProgress, migrateStage, selectVisualState, visualTintFamilies } from './engine-bundle.mjs';
+import { advanceProgress, advanceStrands, emptyProgress, migrateStage, selectVisualState, visualTintFamilies, updateFacets } from './engine-bundle.mjs';
 
 let pass = 0;
 let fail = 0;
@@ -30,6 +30,21 @@ const ev = (over = {}) => ({
   ...over,
 });
 const turn = (over = {}, evOver = {}) => ({ reply: 'r', event: ev(evOver), unlocked: false, tone: 'calm', stage: 'named', ...over });
+
+// ── Emotion constellations / facets (review #9,#10) ───────────────────────────
+const facetEv = (o) => ev({ emotion_shade: o.shade ?? null, shade_source: o.src ?? 'user_stated', trigger_event: o.domain ?? null, body_cue: o.body ?? [], appraisal_thought: o.meaning ?? null, user_phrase: o.phrase ?? null });
+check('facet: a user-owned form is recorded',
+  updateFacets([], facetEv({ shade: 'energised', domain: 'after football' })).length, 1);
+check('facet: same form again ENRICHES (vertical), not a new facet',
+  (() => { const a = updateFacets([], facetEv({ shade: 'energised', domain: 'football' })); const b = updateFacets(a, facetEv({ shade: 'energised', domain: 'a run', body: ['buzzing'] })); return b.length === 1 && b[0].count === 2 && b[0].domains.length === 2; })(), true);
+check('facet: a NEW form adds a facet (horizontal), keeping the first',
+  (() => { const a = updateFacets([], facetEv({ shade: 'energised', domain: 'sport' })); const b = updateFacets(a, facetEv({ shade: 'quiet', domain: 'after dinner' })); return b.length === 2; })(), true);
+check('facet: a companion-hypothesis shade is NOT recorded',
+  updateFacets([], facetEv({ shade: 'content', src: 'companion_hypothesis' })).length, 0);
+check('facet: a vague "blank" form is NOT recorded',
+  updateFacets([], facetEv({ shade: 'blank', src: 'user_stated' })).length, 0);
+check('facet: a substantive owned phrase counts as a form when no shade',
+  updateFacets([], facetEv({ shade: null, phrase: 'reaching and then nothing' })).length, 1);
 
 // ── Migration ────────────────────────────────────────────────────────────────
 check('migrate: shaped -> named', migrateStage('shaped'), 'named');

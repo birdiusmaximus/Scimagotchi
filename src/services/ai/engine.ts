@@ -38,7 +38,7 @@ export {
   userConfirmsLabel,
 } from '@/services/ai/stage';
 export { activeCards, draftFromRejection, draftFromTurn, memoryBlocked, relevantMemory, scrubForMemory } from '@/services/memoryLedger';
-export { advanceProgress, advanceStrands, emptyProgress, migrateStage, PROGRESS_RANK, turnStrandFamilies } from '@/services/ai/progressionEngine';
+export { advanceProgress, advanceStrands, emptyProgress, migrateStage, PROGRESS_RANK, turnStrandFamilies, updateFacets } from '@/services/ai/progressionEngine';
 export { buildLedger, hasUserOwnedConcreteDetail, userHasOriginated, intenseUserWord, INTENSE_FEELING, SOFTENING_CUE, type EvidenceLedger } from '@/services/ai/evidenceLedger';
 export { classifyMoments, type MomentType } from '@/services/ai/momentType';
 export { selectVisualState, visualTintFamilies, type CompanionVisualState } from '@/services/ai/companionVisualState';

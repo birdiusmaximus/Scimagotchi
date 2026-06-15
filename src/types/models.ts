@@ -121,6 +121,23 @@ export interface EmotionEvent {
   safety_flag: SafetyFlag;
 }
 
+/**
+ * One FORM of an emotion (review #9/#10) — a constellation point. An emotion is not a
+ * single badge: happiness might appear as energised (after sport) and quiet (after
+ * friends). Each facet is a user-owned shape, deepened vertically (more detail on one
+ * form) and grown horizontally (new forms), never replacing the earlier ones.
+ */
+export interface EmotionFacet {
+  id: string;
+  form: string; // the user's word for this form ("energised", "proud", "quiet")
+  domains: string[]; // the life contexts it has appeared in ("sport", "after dinner")
+  body_cues: string[];
+  meanings: string[]; // what it gives them / what it means
+  count: number; // how many times this form has appeared
+  first_seen: string;
+  last_seen: string;
+}
+
 export interface EmotionProgress {
   id: string; // equals the emotion_family id (one row per family)
   emotion_family: EmotionFamilyId;
@@ -139,6 +156,8 @@ export interface EmotionProgress {
   common_triggers: string[];
   common_body_cues: string[];
   common_user_phrases: string[];
+  /** The distinct user-owned FORMS of this emotion discovered so far (review #9/#10). */
+  facets: EmotionFacet[];
   memory_summary: string | null;
   updated_at: string;
 }

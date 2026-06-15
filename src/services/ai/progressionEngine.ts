@@ -17,6 +17,7 @@
 import type { CompanionTurn } from '@/services/ai/companionEngine';
 import type { EmotionalCapability, EmotionProgress, EmotionProgressStage } from '@/types/models';
 import { nowIso } from '@/utils/date';
+import { genId } from '@/utils/ids';
 
 export const PROGRESS_RANK: Record<EmotionProgressStage, number> = {
   unseen: 0,
@@ -66,9 +67,59 @@ export function emptyProgress(family: EmotionProgress['emotion_family']): Emotio
     common_triggers: [],
     common_body_cues: [],
     common_user_phrases: [],
+    facets: [],
     memory_summary: null,
     updated_at: nowIso(),
   };
+}
+
+// A vague/not-located word is never a facet form (mirrors stage.VAGUE_SHADE).
+const VAGUE_FORM = /^(foggy|fog|blurry|blurred|hazy|fuzzy|murky|cloudy|unclear|undefined|vague|off|weird|strange|odd|funny|something|blank|numbish)$/i;
+
+/** The user-owned word for this turn's FORM of the emotion (owned shade, else a short
+ *  owned phrase), or null when nothing the user owns names a form. */
+function facetForm(ev: CompanionTurn['event']): string | null {
+  const ownedShade = ev.emotion_shade && (ev.shade_source === 'user_stated' || ev.shade_source === 'user_confirmed');
+  if (ownedShade && !VAGUE_FORM.test(ev.emotion_shade!.trim())) return ev.emotion_shade!.toLowerCase().trim();
+  const phrase = (ev.user_phrase ?? '').trim();
+  if (phrase && phrase.split(/\s+/).filter(Boolean).length >= 2 && !VAGUE_FORM.test(phrase)) return phrase.toLowerCase().slice(0, 60);
+  return null;
+}
+
+/**
+ * Grow the emotion's constellation (review #9/#10) from a user-owned turn. Vertical:
+ * a form already known gains more detail (body cue, domain, meaning) + a count. Horizontal:
+ * a new form becomes a new facet, never replacing the earlier ones. Only user-owned forms
+ * are recorded — companion hypotheses and echoes never become a facet. Pure; returns a new array.
+ */
+export function updateFacets(facets: EmotionProgress['facets'], ev: CompanionTurn['event'], stamp = nowIso()): EmotionProgress['facets'] {
+  const form = facetForm(ev);
+  if (!form) return facets;
+  const out = facets.map((f) => ({ ...f, domains: [...f.domains], body_cues: [...f.body_cues], meanings: [...f.meanings] }));
+  const add = (arr: string[], v: string | null | undefined) => {
+    const s = (v ?? '').trim();
+    if (s && !arr.some((x) => x.toLowerCase() === s.toLowerCase())) arr.push(s);
+  };
+  const existing = out.find((f) => f.form === form);
+  if (existing) {
+    existing.count += 1;
+    existing.last_seen = stamp;
+    add(existing.domains, ev.trigger_event);
+    (ev.body_cue ?? []).forEach((b) => add(existing.body_cues, b));
+    add(existing.meanings, ev.appraisal_thought);
+  } else {
+    out.push({
+      id: genId('facet'),
+      form,
+      domains: ev.trigger_event ? [ev.trigger_event] : [],
+      body_cues: [...(ev.body_cue ?? [])],
+      meanings: ev.appraisal_thought ? [ev.appraisal_thought] : [],
+      count: 1,
+      first_seen: stamp,
+      last_seen: stamp,
+    });
+  }
+  return out;
 }
 
 function pushUnique(arr: string[], value: string | null | undefined) {
@@ -113,7 +164,16 @@ export function advanceProgress(
     };
   }
 
-  const p: EmotionProgress = existing ? { ...existing, confirmed_shades: [...existing.confirmed_shades], common_triggers: [...existing.common_triggers], common_body_cues: [...existing.common_body_cues], common_user_phrases: [...existing.common_user_phrases] } : emptyProgress(family);
+  const p: EmotionProgress = existing
+    ? {
+        ...existing,
+        confirmed_shades: [...existing.confirmed_shades],
+        common_triggers: [...existing.common_triggers],
+        common_body_cues: [...existing.common_body_cues],
+        common_user_phrases: [...existing.common_user_phrases],
+        facets: existing.facets ? [...existing.facets] : [], // migration-safe for rows saved before facets existed
+      }
+    : emptyProgress(family);
   const from = migrateStage(p.current_stage);
   p.current_stage = from;
 
@@ -197,6 +257,10 @@ export function advanceProgress(
     if (ev.memory_note) p.memory_summary = ev.memory_note;
   }
 
+  // Grow the constellation (review #9/#10): a user-owned turn adds/enriches a form of
+  // this emotion. self-gated to owned shade/phrase, so echoes/hypotheses never create one.
+  if (!opts.suppress) p.facets = updateFacets(p.facets, ev);
+
   p.updated_at = nowIso();
   return { progress: p, advanced: PROGRESS_RANK[to] > PROGRESS_RANK[from], from, to, capabilities: caps };
 }
@@ -263,6 +327,7 @@ export function advanceStrands(
         common_triggers: [...prev.common_triggers],
         common_body_cues: [...prev.common_body_cues],
         common_user_phrases: [...prev.common_user_phrases],
+        facets: prev.facets ? [...prev.facets] : [], // secondary strands keep their constellation
         current_stage: to,
         last_conversation_id: conversationId,
         updated_at: nowIso(),

@@ -1495,9 +1495,47 @@ function emptyProgress(family) {
     common_triggers: [],
     common_body_cues: [],
     common_user_phrases: [],
+    facets: [],
     memory_summary: null,
     updated_at: nowIso()
   };
+}
+var VAGUE_FORM = /^(foggy|fog|blurry|blurred|hazy|fuzzy|murky|cloudy|unclear|undefined|vague|off|weird|strange|odd|funny|something|blank|numbish)$/i;
+function facetForm(ev) {
+  const ownedShade = ev.emotion_shade && (ev.shade_source === "user_stated" || ev.shade_source === "user_confirmed");
+  if (ownedShade && !VAGUE_FORM.test(ev.emotion_shade.trim())) return ev.emotion_shade.toLowerCase().trim();
+  const phrase = (ev.user_phrase ?? "").trim();
+  if (phrase && phrase.split(/\s+/).filter(Boolean).length >= 2 && !VAGUE_FORM.test(phrase)) return phrase.toLowerCase().slice(0, 60);
+  return null;
+}
+function updateFacets(facets, ev, stamp = nowIso()) {
+  const form = facetForm(ev);
+  if (!form) return facets;
+  const out = facets.map((f) => ({ ...f, domains: [...f.domains], body_cues: [...f.body_cues], meanings: [...f.meanings] }));
+  const add = (arr, v) => {
+    const s = (v ?? "").trim();
+    if (s && !arr.some((x) => x.toLowerCase() === s.toLowerCase())) arr.push(s);
+  };
+  const existing = out.find((f) => f.form === form);
+  if (existing) {
+    existing.count += 1;
+    existing.last_seen = stamp;
+    add(existing.domains, ev.trigger_event);
+    (ev.body_cue ?? []).forEach((b3) => add(existing.body_cues, b3));
+    add(existing.meanings, ev.appraisal_thought);
+  } else {
+    out.push({
+      id: genId("facet"),
+      form,
+      domains: ev.trigger_event ? [ev.trigger_event] : [],
+      body_cues: [...ev.body_cue ?? []],
+      meanings: ev.appraisal_thought ? [ev.appraisal_thought] : [],
+      count: 1,
+      first_seen: stamp,
+      last_seen: stamp
+    });
+  }
+  return out;
 }
 function pushUnique(arr, value) {
   const v = (value ?? "").trim();
@@ -1519,7 +1557,15 @@ function advanceProgress(existing, turn, conversationId, opts = {}) {
       capabilities: caps2
     };
   }
-  const p = existing ? { ...existing, confirmed_shades: [...existing.confirmed_shades], common_triggers: [...existing.common_triggers], common_body_cues: [...existing.common_body_cues], common_user_phrases: [...existing.common_user_phrases] } : emptyProgress(family);
+  const p = existing ? {
+    ...existing,
+    confirmed_shades: [...existing.confirmed_shades],
+    common_triggers: [...existing.common_triggers],
+    common_body_cues: [...existing.common_body_cues],
+    common_user_phrases: [...existing.common_user_phrases],
+    facets: existing.facets ? [...existing.facets] : []
+    // migration-safe for rows saved before facets existed
+  } : emptyProgress(family);
   const from = migrateStage(p.current_stage);
   p.current_stage = from;
   const owned = ev.label_source === "user_stated" || ev.label_source === "user_confirmed";
@@ -1578,6 +1624,7 @@ function advanceProgress(existing, turn, conversationId, opts = {}) {
     pushUnique(p.common_user_phrases, ev.user_phrase ?? ev.user_words_raw);
     if (ev.memory_note) p.memory_summary = ev.memory_note;
   }
+  if (!opts.suppress) p.facets = updateFacets(p.facets, ev);
   p.updated_at = nowIso();
   return { progress: p, advanced: PROGRESS_RANK[to] > PROGRESS_RANK[from], from, to, capabilities: caps };
 }
@@ -1612,6 +1659,8 @@ function advanceStrands(existing, turn, conversationId, opts = {}) {
         common_triggers: [...prev.common_triggers],
         common_body_cues: [...prev.common_body_cues],
         common_user_phrases: [...prev.common_user_phrases],
+        facets: prev.facets ? [...prev.facets] : [],
+        // secondary strands keep their constellation
         current_stage: to,
         last_conversation_id: conversationId,
         updated_at: nowIso()
@@ -2146,6 +2195,7 @@ export {
   stripOffRamp,
   summaryIsClean,
   turnStrandFamilies,
+  updateFacets,
   userConfirmsLabel,
   userHasOriginated,
   varietyDirective,

@@ -110,11 +110,15 @@ function analyse(file) {
     for (const r of x.user_rejected_shades) rejected.add(String(r).toLowerCase());
   }
 
-  // state_text_mismatch: the reply talks tentatively / "leave it unnamed", yet the turn
-  // is internally marked understood or unlocked (logging one thing, saying another).
+  // State-language mismatch, split (review #8): only HARMFUL overclaim is a failure —
+  // a turn that fires a NEW unlock while the voice still hedges (state more certain than
+  // the evidence). Humble wording AFTER a legit unlock (stage carried understood + a
+  // tentative reply, no new unlock) is GOOD product voice, tracked but never flagged.
+  let humbleAfterUnlock = 0;
   for (const x of comp) {
-    const claimsUnderstood = x.unlocked || x.stage === 'understood' || x.stage === 'deepened';
-    if (claimsUnderstood && isTentativeReply(x.reply || '')) { flags.push('state_text_mismatch'); break; }
+    if (!isTentativeReply(x.reply || '')) continue;
+    if (x.unlocked) flags.push('overclaim_unlock');
+    else if (x.stage === 'understood' || x.stage === 'deepened') humbleAfterUnlock += 1;
   }
 
   // memory PII leak: a drafted card summary with a name-looking capitalised mid-sentence token
@@ -134,7 +138,7 @@ function analyse(file) {
     cid, emotion, archetype, totalTurns: userCount,
     unlocked: !!firstUnlock, unlockedOnTurn: firstUnlock ? firstUnlock.n : null,
     deepestStage: deepest, strandCount: strandList.length, momentsSeen,
-    flags: [...new Set(flags)], safetyPause: turns.some((x) => x.safety || x.safetyCheck), turns,
+    flags: [...new Set(flags)], humbleAfterUnlock, safetyPause: turns.some((x) => x.safety || x.safetyCheck), turns,
   };
 }
 
@@ -192,6 +196,8 @@ out.push(`- **Red flags:** ${Object.entries(flagTally).map(([k, n]) => `${k}=${n
 out.push(`- **Moment types seen:** ${Object.entries(momentTally).sort((a, b) => b[1] - a[1]).map(([k, n]) => `${k}=${n}`).join(' · ') || 'none'}.`);
 const safetyRows = rows.filter((r) => r.safetyPause);
 out.push(`- **Safety pauses:** ${safetyRows.length} conversation(s)${safetyRows.length ? ` — ${safetyRows.map((r) => r.cid.replace('mx__', '')).join(', ')} (review for false-positives vs intended caution on ambiguous phrasing)` : ''}.`);
+const humbleTotal = rows.reduce((n, r) => n + (r.humbleAfterUnlock ?? 0), 0);
+out.push(`- **Humble wording after a legit unlock:** ${humbleTotal} turn(s) across ${rows.filter((r) => (r.humbleAfterUnlock ?? 0) > 0).length} conversation(s) — GOOD careful voice, not a failure (review #8: distinct from the harmful overclaim_unlock flag).`);
 
 // ── Flagged transcripts ──
 const flagged = rows.filter((r) => r.flags.length);

@@ -32,7 +32,7 @@ import {
   type ResponseShape,
 } from '@/services/ai/responsePolicy';
 import { needsOwnershipRepair, softenUnownedEmotionReply } from '@/services/ai/replyOwnership';
-import { hasUserOwnedConcreteDetail } from '@/services/ai/evidenceLedger';
+import { hasUserOwnedConcreteDetail, intenseUserWord, INTENSE_FEELING, SOFTENING_CUE } from '@/services/ai/evidenceLedger';
 import {
   detectShadeRejection,
   evaluateStage,
@@ -320,6 +320,28 @@ export async function openaiGenerateTurn(
       if (ev.user_confirmation === 'yes') ev.user_confirmation = 'partial';
     }
   }
+
+  // Intensity preservation (review #6): never downgrade the user's own intensity to a
+  // milder synonym ("furious" must not become "frustrated"). If they voiced an intense
+  // word this turn, that IS the shade; and once an intense word is owned, it holds
+  // unless the user says it has eased — the companion follows shifts, never softens them.
+  const userIntense = intenseUserWord(input.userText);
+  if (userIntense && ev.emotion_shade && ev.emotion_shade.toLowerCase() !== userIntense && !INTENSE_FEELING.test(ev.emotion_shade)) {
+    ev.emotion_shade = userIntense;
+    ev.shade_source = 'user_stated';
+    ev.candidate_shade = null;
+  } else if (
+    prev?.emotion_shade &&
+    INTENSE_FEELING.test(prev.emotion_shade) &&
+    ev.emotion_shade &&
+    !INTENSE_FEELING.test(ev.emotion_shade) &&
+    !SOFTENING_CUE.test(input.userText)
+  ) {
+    ev.emotion_shade = prev.emotion_shade;
+    ev.shade_source = prev.shade_source ?? 'user_stated';
+    ev.candidate_shade = null;
+  }
+
   if (!input.intent) {
     const ownPhrase = uncertainTurn || clarifyingQuestion ? '' : (ev.user_words_raw ?? '').trim() || (input.userText ?? '').trim();
     // A shallow hedge ("yeah i guess") is not the feeling's phrase — keep the prior

@@ -102,6 +102,22 @@ export function hasUserOwnedConcreteDetail(
   return false;
 }
 
+// High-intensity feeling words. Preserving the user's intensity (review #6) means
+// never quietly storing/reflecting a milder synonym than the word they actually used.
+export const INTENSE_FEELING =
+  /\b(furious|livid|enraged|seething|raging|terrified|petrified|panicking|panicked|frantic|desperate|devastated|heartbroken|gutted|crushed|shattered|hollow|numb|empty|broken|drowning|suffocating|despairing|hopeless|worthless|trapped|excruciating|unbearable|agony|agonising|destroyed)\b/i;
+
+// The user said it has eased — the ONLY licence to soften their named intensity.
+export const SOFTENING_CUE =
+  /\b(calmer|calming down|less (angry|scared|sad|upset|intense|bad)|not as (angry|scared|bad|intense)|easing|eased|settling|settled down|fading|wearing off|better now|a bit better|relief|relieved|lighter now)\b/i;
+
+/** The strongest feeling word the user voiced in this turn (or null) — used to keep
+ *  their intensity from being downgraded to a milder synonym. */
+export function intenseUserWord(userText: string): string | null {
+  const m = (userText ?? '').match(INTENSE_FEELING);
+  return m ? m[0].toLowerCase() : null;
+}
+
 export interface EvidenceLedger {
   concreteFromUser: boolean; // the gate signal — at least one user-voiced concrete detail
   userTurns: number;

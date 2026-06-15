@@ -24,6 +24,7 @@ import {
   isTentativeReply,
   isUncertain,
   hasUserOwnedConcreteDetail,
+  intenseUserWord,
   labelIsUserOwned,
   labelNamedByUser,
   mixedConfirmed,
@@ -325,6 +326,11 @@ check('evidence: bare agreement with no felt detail does NOT count',
   hasUserOwnedConcreteDetail(ev({ body_cue: [], behaviour_action: [], appraisal_thought: null, user_phrase: null, shade_source: 'companion_hypothesis' }), 'yeah totally', []), false);
 check('evidence: a vague "blank/weird" shade does NOT count even if stated',
   hasUserOwnedConcreteDetail(ev({ shade_source: 'user_stated', emotion_shade: 'blank', body_cue: [], behaviour_action: [], appraisal_thought: null, user_phrase: null }), 'i dunno, blank i guess', []), false);
+// Intensity preservation (review #6): the user's strong word is detected so the engine never softens it.
+check('intensity: "absolutely furious" -> furious', intenseUserWord('honestly im absolutely furious about it'), 'furious');
+check('intensity: "i feel hollow inside" -> hollow', intenseUserWord('i feel hollow inside'), 'hollow');
+check('intensity: "a bit frustrated" -> null (not an intense word)', intenseUserWord('just a bit frustrated i guess'), null);
+check('intensity: "terrified of the result" -> terrified', intenseUserWord('im terrified of the result'), 'terrified');
 // labelNamedByUser is the STRONG half — a bare affirmation must not satisfy it (the
 // closing/uncertain backstop relies on this so a goodbye "yeah" can't unlock).
 check('named: user used a family word this turn -> named',

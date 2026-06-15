@@ -1061,6 +1061,8 @@ var ABUSE_DANGER = [
   "scared of what he will do",
   "scared of what she will do"
 ];
+var HIT_IDIOM = /\b(it|this|that|reality|grief|loss|truth|news|weight|silence|emptiness|enormity|the (grief|loss|truth|news|weight|silence|emptiness|reality|finality))\s+(just |really |suddenly |finally |still |then )*(hits|hit|hitting) me\b|\b(hits|hit|hitting) me\s+(that|how|when|like a|all at once|just how)\b/;
+var ABUSE_PERSON = /\b(he|she|they|him|her|partner|husband|wife|boyfriend|girlfriend|bf|gf|dad|mum|mom|father|mother|stepdad|stepfather|stepmum|brother|sister|boss|ex|someone)\b/;
 var VIOLENCE_DESIRE = ["want to hurt someone", "want to kill someone", "want to hurt him", "want to hurt her"];
 var PASSIVE_HOPELESSNESS = [
   "whats the point",
@@ -1181,7 +1183,11 @@ function classifySafety(text) {
   m = anyOf(t, SELF_HARM);
   if (m && !isDenied(m)) return { level: 3, category: "self_harm", action: "support_modal", matched: m };
   m = anyOf(t, ABUSE_DANGER);
-  if (m) return { level: 3, category: "abuse_danger", action: "support_modal", matched: m };
+  if (m) {
+    const isHitPhrase = /\bhit(s|ting)? me\b/.test(m);
+    const idiom = isHitPhrase && HIT_IDIOM.test(t) && !ABUSE_PERSON.test(t);
+    if (!idiom) return { level: 3, category: "abuse_danger", action: "support_modal", matched: m };
+  }
   m = anyOf(t, VIOLENCE_DESIRE);
   if (m) return { level: 3, category: "violence_to_others", action: "support_modal", matched: m };
   if (!POINT_OF_MUNDANE.test(t)) {
@@ -1653,6 +1659,12 @@ function hasUserOwnedConcreteDetail(ev, userText, history) {
   if (feltFields.some((f) => fieldFromSubstantiveUser(f, substantive))) return true;
   return false;
 }
+var INTENSE_FEELING = /\b(furious|livid|enraged|seething|raging|terrified|petrified|panicking|panicked|frantic|desperate|devastated|heartbroken|gutted|crushed|shattered|hollow|numb|empty|broken|drowning|suffocating|despairing|hopeless|worthless|trapped|excruciating|unbearable|agony|agonising|destroyed)\b/i;
+var SOFTENING_CUE = /\b(calmer|calming down|less (angry|scared|sad|upset|intense|bad)|not as (angry|scared|bad|intense)|easing|eased|settling|settled down|fading|wearing off|better now|a bit better|relief|relieved|lighter now)\b/i;
+function intenseUserWord(userText) {
+  const m = (userText ?? "").match(INTENSE_FEELING);
+  return m ? m[0].toLowerCase() : null;
+}
 var BARE_AGREEMENT = /^(yeah?|yep|yes|exactly|totally|for sure|right|you'?re right|that ?one|that'?s the one|true|mm+|ok(ay)?|sure|definitely|absolutely|i guess|that fits|that'?s it|you got it|you nailed it)[\s.,!]*$/i;
 var HEDGE = /^(maybe|kind of|kinda|sort of|sorta|i guess|not really|dunno|idk|unsure|hard to say|hmm|who knows|i dont know|i don'?t know)[\s.,!?]*$/i;
 function buildLedger(ev, userText, history) {
@@ -2049,10 +2061,12 @@ export {
   EMOTION_CYCLE_ORDER,
   EXIT_CUE,
   IDENTITY_CONDEMNATION,
+  INTENSE_FEELING,
   MOTION_CONFIG,
   POSE_TARGETS,
   PROGRESS_RANK,
   SLOW_PATH_FAMILIES,
+  SOFTENING_CUE,
   activeCards,
   advanceProgress,
   advanceStrands,
@@ -2074,6 +2088,7 @@ export {
   firstShapeEvidence,
   hasEmotionAnchor,
   hasUserOwnedConcreteDetail,
+  intenseUserWord,
   intentDecision,
   isClarifyingQuestion,
   isDifficultFamily,

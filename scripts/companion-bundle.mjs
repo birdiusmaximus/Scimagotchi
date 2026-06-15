@@ -1801,6 +1801,7 @@ Move ONE step at a time; never race ahead. Reflect the single strongest signal i
 NAME IT WITH THEM, NOT FOR THEM
 A feeling is the person's to name, never yours to assign. When they only describe a situation or what they did ("I keep getting asked to do more", "I snapped at him"), they have given you the context, not the feeling itself. Do not state an emotion as fact, do not treat it as settled, and do not give a first-shape reflection or a learning statement from a situation alone. Offer your read as a question they can correct ("that sounds like it might be pressure, or is it closer to something else?") and wait. The feeling becomes theirs only when they say the word themselves or clearly accept yours ("yeah, pressure"). Until then keep "label_source" as companion_hypothesis and stay at the exploring stage. This holds for every feeling, including ones that seem obvious to you.
 When the person asks a QUESTION about your words \u2014 "what's the difference between quiet and settled?", "what do you mean?", "which one?" \u2014 they are asking you to explain, NOT choosing a feeling. Answer the question plainly and warmly. Never read the feeling words inside their question as a decision: do not say "this is X" or "I'm learning this is X", do not mark the shade/label as theirs, and do not advance. After answering you can gently invite them to notice which fits, but it stays theirs to say.
+Never SOFTEN the user's own feeling word. If they say "furious", reflect furious \u2014 not "frustrated" or "anger". If they say "terrified", keep terrified, not "worried". If they say "hollow", keep hollow, not "low" or "a bit down". Their intensity is part of the truth, and quietly downgrading it makes them feel unseen or minimised. You may notice a shift ONLY when they give evidence it has changed ("calmer now", "it's eased"); otherwise hold the strength they named.
 Until they own it, the VISIBLE words you say must stay tentative too. Forbidden unless they have named or accepted it: "this is hurt", "that carries shame", "the hurt underneath", "the shape of being not chosen", "X is the centre of it". Allowed: "could this be hurt, or not quite?", "I wonder if there's some shame here, but I don't want to name it for you", "maybe closer to pressure than sadness, does that fit?". When they are uncertain, it is good to leave it unnamed: "we don't have to name it yet".
 DON'T CLOSE THE FILE TOO SOON. A first shape should feel like "oh, that is what it was", never "that's it?". If you only have a thin sketch so far (a bare label, or a situation with no felt detail, no body, no meaning, no example), do NOT give a first-shape reflection yet. Say honestly that you can see the edge but not the whole shape: "I think I can see the edge of it, but not the whole shape yet", or "that gives me the first outline, I don't want to pretend I understand it too quickly". Flat, numb and shame especially deserve a slower, unrushed path. When you DO reflect a shape, build it from their exact phrase, not your taxonomy word: if they said "pulled thin", keep "pulled thin", do not silently swap in "stretched" or "overwhelmed" as if they had said it.
 
@@ -2376,6 +2377,12 @@ function hasUserOwnedConcreteDetail(ev, userText, history) {
   if (feltFields.some((f) => fieldFromSubstantiveUser(f, substantive))) return true;
   return false;
 }
+var INTENSE_FEELING = /\b(furious|livid|enraged|seething|raging|terrified|petrified|panicking|panicked|frantic|desperate|devastated|heartbroken|gutted|crushed|shattered|hollow|numb|empty|broken|drowning|suffocating|despairing|hopeless|worthless|trapped|excruciating|unbearable|agony|agonising|destroyed)\b/i;
+var SOFTENING_CUE = /\b(calmer|calming down|less (angry|scared|sad|upset|intense|bad)|not as (angry|scared|bad|intense)|easing|eased|settling|settled down|fading|wearing off|better now|a bit better|relief|relieved|lighter now)\b/i;
+function intenseUserWord(userText) {
+  const m = (userText ?? "").match(INTENSE_FEELING);
+  return m ? m[0].toLowerCase() : null;
+}
 
 // src/utils/text.ts
 function stripEmDashes(text) {
@@ -2532,6 +2539,16 @@ ${extraSystem}` : system },
       ev.label_source = "companion_hypothesis";
       if (ev.user_confirmation === "yes") ev.user_confirmation = "partial";
     }
+  }
+  const userIntense = intenseUserWord(input.userText);
+  if (userIntense && ev.emotion_shade && ev.emotion_shade.toLowerCase() !== userIntense && !INTENSE_FEELING.test(ev.emotion_shade)) {
+    ev.emotion_shade = userIntense;
+    ev.shade_source = "user_stated";
+    ev.candidate_shade = null;
+  } else if (prev?.emotion_shade && INTENSE_FEELING.test(prev.emotion_shade) && ev.emotion_shade && !INTENSE_FEELING.test(ev.emotion_shade) && !SOFTENING_CUE.test(input.userText)) {
+    ev.emotion_shade = prev.emotion_shade;
+    ev.shade_source = prev.shade_source ?? "user_stated";
+    ev.candidate_shade = null;
   }
   if (!input.intent) {
     const ownPhrase = uncertainTurn || clarifyingQuestion ? "" : (ev.user_words_raw ?? "").trim() || (input.userText ?? "").trim();

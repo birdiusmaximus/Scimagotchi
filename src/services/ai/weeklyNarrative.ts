@@ -98,7 +98,8 @@ export function composeWeeklySummary(input: WeeklyInput): WeeklySummary {
       if (forms.length < 2) continue;
       const word = FAMILY_WORD[mf.family];
       const described = forms.map((x) => (x.domains?.[0] ? `${x.form} (${x.domains[0]})` : x.form));
-      parts.push(`${word.charAt(0).toUpperCase()}${word.slice(1)} showed up in more than one way: ${joinList(described)}.`);
+      const count = forms.length === 2 ? 'two' : forms.length === 3 ? 'three' : 'several';
+      parts.push(`${word.charAt(0).toUpperCase()}${word.slice(1)} appeared in ${count} different ways this week: ${joinList(described)}.`);
     }
 
     summary = parts.join(' ');

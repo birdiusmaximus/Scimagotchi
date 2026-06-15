@@ -7,6 +7,7 @@
  */
 import {
   advanceStrands,
+  buildSystemPrompt,
   draftFromTurn,
   emptyProgress,
   evaluateOutcome,
@@ -132,6 +133,18 @@ check('shift: retaining the prior layer never lowers or advances it',
   shiftAdv.results.find((r) => r.progress.emotion_family === 'anger')?.advanced, false);
 check('shift: retention is opt-in — no priorFamily means the prior family is not carried',
   advanceStrands({ anger: prog('anger', 'first_shape'), sadness: null }, shiftTurn, 'c1', {}).results.some((r) => r.progress.emotion_family === 'anger'), false);
+
+// ── Phase 5: facet-aware language data path (#12) ────────────────────────────
+// The system prompt grows a tentative "forms of this feeling" section ONLY when the active
+// family already has >=2 user-owned forms and a family is in play (voice wording is judged
+// in the live matrix, not here — this just verifies the data reaches the prompt).
+const twoForms = [{ form: 'energised', domains: ['sport'] }, { form: 'quiet', domains: ['dinner'] }];
+check('facet voice: >=2 known forms emits the facet section',
+  buildSystemPrompt({ family: 'joy', knownEvent: null, facets: twoForms }).includes('FORMS OF'), true);
+check('facet voice: a single known form does NOT emit the section',
+  buildSystemPrompt({ family: 'joy', knownEvent: null, facets: [twoForms[0]] }).includes('FORMS OF'), false);
+check('facet voice: no family in play -> no facet section',
+  buildSystemPrompt({ family: null, knownEvent: null, facets: twoForms }).includes('FORMS OF'), false);
 
 // sanity: the fixture is anchored by default (so the rules above are exercised correctly)
 check('fixture sanity: default event has an anchor', hasEmotionAnchor(ev()), true);

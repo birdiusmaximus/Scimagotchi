@@ -167,10 +167,15 @@ const server = http.createServer(async (req, res) => {
       // learn — mirrors the app store exactly (src/state/store.ts send()).
       const uncertain = !intent && isUncertain(String(text));
 
+      // The active family's known FORMS (top 3) — for facet-aware companion voice (#12).
+      const aFam = c.prevEvent?.emotion_family ?? null;
+      const activeFacets = aFam
+        ? [...(c.progress[aFam]?.facets ?? [])].sort((a, b) => (b.count ?? 0) - (a.count ?? 0)).slice(0, 3).map((f) => ({ form: f.form, domains: f.domains ?? [] }))
+        : null;
       const t0 = Date.now();
       const turn = await withRetry(() =>
         openaiGenerateTurn(
-          { userText: String(text), prevEvent: c.prevEvent, conversationId: cid, history: c.history, memory: null, userName: null, safetyNote, intent, repairActive },
+          { userText: String(text), prevEvent: c.prevEvent, conversationId: cid, history: c.history, memory: null, userName: null, safetyNote, intent, repairActive, activeFacets },
           { proxyUrl: PROXY, apiKey: null, model: turnModel },
         ),
       );

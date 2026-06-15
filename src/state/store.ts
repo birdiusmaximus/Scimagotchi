@@ -423,6 +423,15 @@ export const useStore = create<AppState>((set, get) => ({
       // The entry-chip stance biases only the first turn, then clears.
       const entryHint = get().entryMode;
       if (entryHint) set({ entryMode: null });
+      // The active family's known FORMS (top 3 by count) — lets the companion speak
+      // facet-aware ("different from the sports-shaped joy you showed me"), review #12.
+      const activeFam = prevDraft?.emotion_family ?? null;
+      const activeFacets = activeFam
+        ? [...(get().progress[activeFam]?.facets ?? [])]
+            .sort((a, b) => (b.count ?? 0) - (a.count ?? 0))
+            .slice(0, 3)
+            .map((f) => ({ form: f.form, domains: f.domains ?? [] }))
+        : null;
       const turn = await ai.generateTurn({
         userText: clean,
         prevEvent: prevDraft,
@@ -434,6 +443,7 @@ export const useStore = create<AppState>((set, get) => ({
         entryHint,
         intent,
         repairActive,
+        activeFacets,
       });
 
       const compMsg: Message = {

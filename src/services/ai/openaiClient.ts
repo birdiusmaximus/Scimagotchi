@@ -126,6 +126,7 @@ export async function openaiGenerateTurn(
     knownEvent: prev,
     memory: input.memory ?? null,
     userName: input.userName ?? null,
+    facets: input.activeFacets ?? null,
     turn: { modeDirective: mode.directive, varietyDirective: variety, safetyNote: input.safetyNote ?? null },
   });
 

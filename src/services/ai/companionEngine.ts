@@ -40,6 +40,9 @@ export interface CompanionInput {
   /** true on the turn right after a "Not quite" correction — a one-turn No-Learning Zone
    *  that blocks unlock/deepen/memory so a correction can't be used as a learning shortcut */
   repairActive?: boolean | null;
+  /** The user-owned FORMS the active family has taken before (the constellation, capped),
+   *  so the cloud model can speak facet-aware ("different from the sports-shaped joy"). */
+  activeFacets?: { form: string; domains: string[] }[] | null;
 }
 
 export function emptyEvent(conversationId: string): EmotionEvent {

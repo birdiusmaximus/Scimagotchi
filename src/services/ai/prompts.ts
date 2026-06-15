@@ -184,11 +184,28 @@ function knownSoFar(ev: EmotionEvent | null): string | null {
   return `So far you've gathered — ${bits.join('; ')}.${next}`;
 }
 
+/**
+ * Facet-aware voice (review #12): when this emotion has already shown the person more than
+ * one FORM (a constellation), let the companion gently wonder whether THIS instance is one
+ * of those shapes or a new one — always tentatively, never asserting, never reciting the list.
+ * Only emitted at >=2 known forms, so it never appears for a feeling met just once.
+ */
+function facetVoice(family: EmotionFamilyId, facets: { form: string; domains: string[] }[]): string | null {
+  const forms = (facets ?? []).filter((f) => f && f.form).slice(0, 3);
+  if (forms.length < 2) return null;
+  const label = EMOTION_REFERENCE[family].label;
+  const described = forms.map((f) => (f.domains?.[0] ? `${f.form} (${f.domains[0]})` : f.form)).join('; ');
+  return `FORMS OF ${label.toUpperCase()} THEY'VE SHOWN YOU: ${described}.
+You've met this feeling in more than one form before. If THIS one feels close to one of them, you may gently wonder aloud whether it is that same shape or a new one — only as a question they can correct ("this feels different from the ${forms[0].form} kind — closer to ${forms[1].form}, or something new?"), never asserted, and never reciting this list. If it is genuinely new, you can note you are meeting this feeling in a new way.`;
+}
+
 export function buildSystemPrompt(opts: {
   family: EmotionFamilyId | null;
   knownEvent: EmotionEvent | null;
   memory?: string | null;
   userName?: string | null;
+  /** The user-owned FORMS this family has taken before (the constellation), for facet-aware voice. */
+  facets?: { form: string; domains: string[] }[] | null;
   /** Per-turn response plan (engine brief §23.2): mode + variety + safety directives. */
   turn?: { modeDirective?: string | null; varietyDirective?: string | null; safetyNote?: string | null };
 }): string {
@@ -196,6 +213,10 @@ export function buildSystemPrompt(opts: {
   if (opts.family) sections.push(familyBlock(opts.family));
   const known = knownSoFar(opts.knownEvent);
   if (known) sections.push(known);
+  if (opts.family && opts.facets) {
+    const fv = facetVoice(opts.family, opts.facets);
+    if (fv) sections.push(fv);
+  }
   if (opts.memory) {
     sections.push(
       `WHAT YOU REMEMBER (only things this person chose to keep — use at most one, only if genuinely relevant):

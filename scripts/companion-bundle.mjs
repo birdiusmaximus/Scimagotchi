@@ -1938,11 +1938,23 @@ function knownSoFar(ev) {
   const next = missing.length ? ` Gently reach toward: ${missing[0]}.` : " You already understand this feeling. Do NOT repeat your earlier reflection \u2014 instead either gently deepen it (what it connects to, what it needs, whether it is familiar) or let them know you can leave it here for now. Follow their lead.";
   return `So far you've gathered \u2014 ${bits.join("; ")}.${next}`;
 }
+function facetVoice(family, facets) {
+  const forms = (facets ?? []).filter((f) => f && f.form).slice(0, 3);
+  if (forms.length < 2) return null;
+  const label = EMOTION_REFERENCE[family].label;
+  const described = forms.map((f) => f.domains?.[0] ? `${f.form} (${f.domains[0]})` : f.form).join("; ");
+  return `FORMS OF ${label.toUpperCase()} THEY'VE SHOWN YOU: ${described}.
+You've met this feeling in more than one form before. If THIS one feels close to one of them, you may gently wonder aloud whether it is that same shape or a new one \u2014 only as a question they can correct ("this feels different from the ${forms[0].form} kind \u2014 closer to ${forms[1].form}, or something new?"), never asserted, and never reciting this list. If it is genuinely new, you can note you are meeting this feeling in a new way.`;
+}
 function buildSystemPrompt(opts) {
   const sections = [BASE, allFamiliesLine()];
   if (opts.family) sections.push(familyBlock(opts.family));
   const known = knownSoFar(opts.knownEvent);
   if (known) sections.push(known);
+  if (opts.family && opts.facets) {
+    const fv = facetVoice(opts.family, opts.facets);
+    if (fv) sections.push(fv);
+  }
   if (opts.memory) {
     sections.push(
       `WHAT YOU REMEMBER (only things this person chose to keep \u2014 use at most one, only if genuinely relevant):
@@ -2433,6 +2445,7 @@ async function openaiGenerateTurn(input, opts) {
     knownEvent: prev,
     memory: input.memory ?? null,
     userName: input.userName ?? null,
+    facets: input.activeFacets ?? null,
     turn: { modeDirective: mode.directive, varietyDirective: variety, safetyNote: input.safetyNote ?? null }
   });
   const history = (input.history ?? []).slice(-8).map((m) => ({ role: m.role === "companion" ? "assistant" : "user", content: m.content }));

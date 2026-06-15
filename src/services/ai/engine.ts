@@ -41,6 +41,7 @@ export { activeCards, draftFromRejection, draftFromTurn, memoryBlocked, relevant
 export { advanceProgress, advanceStrands, emptyProgress, migrateStage, PROGRESS_RANK, turnStrandFamilies, updateFacets } from '@/services/ai/progressionEngine';
 export { buildLedger, hasUserOwnedConcreteDetail, userHasOriginated, intenseUserWord, INTENSE_FEELING, SOFTENING_CUE, type EvidenceLedger } from '@/services/ai/evidenceLedger';
 export { classifyMoments, type MomentType } from '@/services/ai/momentType';
+export { evaluateOutcome, type OutcomeInput } from '@/services/ai/outcome';
 export { selectVisualState, visualTintFamilies, type CompanionVisualState } from '@/services/ai/companionVisualState';
 export {
   ambientMotion,

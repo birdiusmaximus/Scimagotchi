@@ -1881,6 +1881,23 @@ function classifyMoments(turn, prevEvent, strandAdvance, userText) {
   return out;
 }
 
+// src/services/ai/outcome.ts
+function evaluateOutcome(input) {
+  const { unlocked, event: ev, userText, progressBefore, facetsGrew } = input;
+  if (!ev.emotion_family || ev.do_not_store === 1 || ev.safety_flag !== "none") return null;
+  if (unlocked) return "understood";
+  if (facetsGrew && progressBefore && PROGRESS_RANK[progressBefore] >= PROGRESS_RANK.first_shape) {
+    return "new_facet";
+  }
+  const owned = ev.label_source === "user_stated" || ev.label_source === "user_confirmed";
+  if (!owned && hasEmotionAnchor(ev) && (isUncertain(userText) || EXIT_CUE.test(userText ?? ""))) {
+    return "held_unnamed";
+  }
+  if (!owned && hasEmotionAnchor(ev)) return "edge_found";
+  if (ev.label_source === "companion_hypothesis") return "hypothesis";
+  return null;
+}
+
 // src/services/ai/companionVisualState.ts
 function selectVisualState(s) {
   if (s.safetyVisible || s.safetyCheckPending) return "safety_receded";
@@ -2158,6 +2175,7 @@ export {
   dropTrailingQuestion,
   durationFor,
   emptyProgress,
+  evaluateOutcome,
   evaluateStage,
   expressionFor,
   firstShapeEvidence,

@@ -75,6 +75,20 @@ export interface Message {
   safety_flag: SafetyFlag;
 }
 
+/**
+ * The five-way emotional OUTCOME of a turn (v3.1 keystone). The engine no longer
+ * collapses every turn into "unlocked / not"; it tells apart genuinely learning a
+ * feeling from finding only its edge, holding it unnamed, a bare companion guess, or
+ * meeting a new FORM of a feeling already known. Only `understood` and `new_facet`
+ * may write durable memory. Decided by `evaluateOutcome` (services/ai/outcome.ts).
+ */
+export type EmotionOutcome =
+  | 'understood' // a genuine first shape — the emotion was learned, user-owned
+  | 'edge_found' // an anchor surfaced (body cue / trigger / meaning / urge) but the label was never user-owned
+  | 'held_unnamed' // real material + the user chose NOT to name it — a successful resting place, not a failure
+  | 'hypothesis' // the companion floated a label the user never owned, with no real anchor behind it
+  | 'new_facet'; // another FORM of an already-known emotion (constellation growth), not a first unlock
+
 export interface EmotionEvent {
   id: string;
   conversation_id: string;
@@ -93,7 +107,9 @@ export interface EmotionEvent {
   body_cue: string[];
   behaviour_action: string[];
   coping_response: string[];
-  outcome: string | null;
+  /** The turn's five-way emotional outcome (v3.1), set by evaluateOutcome at the
+   *  orchestration layer. null until reconciled / when nothing emotional happened. */
+  outcome: EmotionOutcome | null;
   social_context: string[];
   need_value: string[];
   confidence_level: Confidence;

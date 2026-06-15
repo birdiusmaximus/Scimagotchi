@@ -14,6 +14,7 @@ import {
   hasEmotionAnchor,
   hasUserOwnedConcreteDetail,
   labelNamedByUser,
+  reintroducesWord,
 } from './engine-bundle.mjs';
 
 let pass = 0;
@@ -145,6 +146,14 @@ check('facet voice: a single known form does NOT emit the section',
   buildSystemPrompt({ family: 'joy', knownEvent: null, facets: [twoForms[0]] }).includes('FORMS OF'), false);
 check('facet voice: no family in play -> no facet section',
   buildSystemPrompt({ family: null, knownEvent: null, facets: twoForms }).includes('FORMS OF'), false);
+
+// ── Phase 6 audit fix: rejected-word re-entry must be genuine ownership (#7) ──
+// A word appearing INSIDE its own rejection ("not empty") is pushing it away, not re-owning
+// it — so it must NOT lift the quarantine. Genuine re-entry (the user owning it again) does.
+check('re-entry: "no, not empty" is rejecting, not reintroducing', reintroducesWord('empty', 'no, not empty'), false);
+check('re-entry: "i dont feel empty" is not reintroducing', reintroducesWord('empty', "i dont feel empty"), false);
+check('re-entry: genuinely re-owning the word lifts it', reintroducesWord('empty', 'actually, maybe it is empty now that i sit with it'), true);
+check('re-entry: a negator on a DIFFERENT word (clause break) still owns this one', reintroducesWord('empty', 'not anxious, more empty'), true);
 
 // sanity: the fixture is anchored by default (so the rules above are exercised correctly)
 check('fixture sanity: default event has an anchor', hasEmotionAnchor(ev()), true);

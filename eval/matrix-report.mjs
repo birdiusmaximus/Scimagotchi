@@ -141,7 +141,9 @@ function analyse(file) {
     const toks = s.split(/\s+/);
     for (let i = 1; i < toks.length; i++) {
       const w = toks[i].replace(/[^A-Za-z']/g, '');
-      if (/^[A-Z][a-z]{2,}$/.test(w) && !SAFE_CAPS.has(w.toLowerCase()) && !/[.!?]$/.test(toks[i - 1])) {
+      // Exempt a plural safe-cap too ("Sundays" -> "sunday") so a day/month isn't a false leak.
+      const lw = w.toLowerCase();
+      if (/^[A-Z][a-z]{2,}$/.test(w) && !SAFE_CAPS.has(lw) && !SAFE_CAPS.has(lw.replace(/s$/, '')) && !/[.!?]$/.test(toks[i - 1])) {
         flags.push(`memory_leak:${w}`);
       }
     }

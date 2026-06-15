@@ -2409,6 +2409,15 @@ function userHasOriginated(history, currentUserText) {
   }
   return false;
 }
+function reintroducesWord(word, userText) {
+  const w = (word ?? "").toLowerCase().trim();
+  if (!w) return false;
+  const esc = w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const txt = (userText ?? "").replace(/[’'`]/g, "'");
+  if (!new RegExp(`\\b${esc}\\b`, "i").test(txt)) return false;
+  const negated = new RegExp(`\\b(not|no|never|isn'?t|wasn'?t|aren'?t|ain'?t|don'?t|dont|hardly)\\b[^.!?,]{0,14}\\b${esc}\\b`, "i");
+  return !negated.test(txt);
+}
 
 // src/utils/text.ts
 function stripEmDashes(text) {
@@ -2533,7 +2542,7 @@ ${extraSystem}` : system },
   ev.user_rejected_shades = [...rejected];
   if (ev.emotion_shade) {
     const sl = ev.emotion_shade.toLowerCase().trim();
-    const reintroduced = new RegExp(`\\b${sl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i").test(input.userText || "");
+    const reintroduced = reintroducesWord(sl, input.userText || "");
     if ([...rejected].some((r) => r.toLowerCase().trim() === sl) && !reintroduced) {
       ev.emotion_shade = null;
     }

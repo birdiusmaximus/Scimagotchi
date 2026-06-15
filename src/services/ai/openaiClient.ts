@@ -32,7 +32,7 @@ import {
   type ResponseShape,
 } from '@/services/ai/responsePolicy';
 import { needsOwnershipRepair, softenUnownedEmotionReply } from '@/services/ai/replyOwnership';
-import { hasUserOwnedConcreteDetail, userHasOriginated, intenseUserWord, INTENSE_FEELING, SOFTENING_CUE } from '@/services/ai/evidenceLedger';
+import { hasUserOwnedConcreteDetail, userHasOriginated, reintroducesWord, intenseUserWord, INTENSE_FEELING, SOFTENING_CUE } from '@/services/ai/evidenceLedger';
 import {
   detectShadeRejection,
   evaluateStage,
@@ -251,7 +251,9 @@ export async function openaiGenerateTurn(
   // shade/candidate, reach memory, or be reflected back as if newly proposed.
   if (ev.emotion_shade) {
     const sl = ev.emotion_shade.toLowerCase().trim();
-    const reintroduced = new RegExp(`\\b${sl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i').test(input.userText || '');
+    // Only the user genuinely RE-OWNING the word lifts the quarantine — the word appearing
+    // inside its own rejection ("no, not empty") is pushing it away, not reintroducing it (#7).
+    const reintroduced = reintroducesWord(sl, input.userText || '');
     if ([...rejected].some((r) => r.toLowerCase().trim() === sl) && !reintroduced) {
       ev.emotion_shade = null;
     }

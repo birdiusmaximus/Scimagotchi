@@ -142,6 +142,24 @@ export function userHasOriginated(history: Turn[], currentUserText: string): boo
   return false;
 }
 
+/**
+ * True when the user is genuinely RE-OWNING `word` in their text — it appears AND is not
+ * inside a negation/rejection of it. "not empty", "no, not empty", "don't feel empty" are
+ * REJECTING the word, not reintroducing it, so they must not lift a rejected-shade
+ * quarantine (review #7: re-entry must be the user owning it again, never the word merely
+ * surfacing as it is pushed away). The negator window stops at a clause break so "not
+ * anxious, more empty" still counts as owning "empty".
+ */
+export function reintroducesWord(word: string, userText: string): boolean {
+  const w = (word ?? '').toLowerCase().trim();
+  if (!w) return false;
+  const esc = w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const txt = (userText ?? '').replace(/[’'`]/g, "'");
+  if (!new RegExp(`\\b${esc}\\b`, 'i').test(txt)) return false;
+  const negated = new RegExp(`\\b(not|no|never|isn'?t|wasn'?t|aren'?t|ain'?t|don'?t|dont|hardly)\\b[^.!?,]{0,14}\\b${esc}\\b`, 'i');
+  return !negated.test(txt);
+}
+
 export interface EvidenceLedger {
   concreteFromUser: boolean; // the gate signal — at least one user-voiced concrete detail
   userTurns: number;

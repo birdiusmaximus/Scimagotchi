@@ -1757,6 +1757,15 @@ function userHasOriginated(history, currentUserText) {
   }
   return false;
 }
+function reintroducesWord(word, userText) {
+  const w = (word ?? "").toLowerCase().trim();
+  if (!w) return false;
+  const esc = w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const txt = (userText ?? "").replace(/[’'`]/g, "'");
+  if (!new RegExp(`\\b${esc}\\b`, "i").test(txt)) return false;
+  const negated = new RegExp(`\\b(not|no|never|isn'?t|wasn'?t|aren'?t|ain'?t|don'?t|dont|hardly)\\b[^.!?,]{0,14}\\b${esc}\\b`, "i");
+  return !negated.test(txt);
+}
 var BARE_AGREEMENT = /^(yeah?|yep|yes|exactly|totally|for sure|right|you'?re right|that ?one|that'?s the one|true|mm+|ok(ay)?|sure|definitely|absolutely|i guess|that fits|that'?s it|you got it|you nailed it)[\s.,!]*$/i;
 var HEDGE = /^(maybe|kind of|kinda|sort of|sorta|i guess|not really|dunno|idk|unsure|hard to say|hmm|who knows|i dont know|i don'?t know)[\s.,!?]*$/i;
 function buildLedger(ev, userText, history) {
@@ -3414,6 +3423,7 @@ export {
   needsOwnershipRepair,
   offersOffRamp,
   poseFor,
+  reintroducesWord,
   relevantMemory,
   repeatsEarlierQuestion,
   repeatsRecentReflection,

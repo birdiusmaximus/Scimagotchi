@@ -8,6 +8,8 @@
 import {
   evaluateOutcome,
   hasEmotionAnchor,
+  hasUserOwnedConcreteDetail,
+  labelNamedByUser,
 } from './engine-bundle.mjs';
 
 let pass = 0;
@@ -78,6 +80,18 @@ check('outcome: anchor discriminates edge_found from hypothesis',
 // ── Rule 7: owned-but-unfinished -> null (in progress, nothing durable) ───────
 check('outcome: owned label, no unlock, no facet, not established -> null',
   out({ event: ev({ label_source: 'user_stated' }), userText: 'it was the exam' }), null);
+
+// ── Phase 2: final-turn guard building blocks (#6) ───────────────────────────
+// The guard blocks an unlock on an EXIT_CUE turn unless the user NAMES + OWNS the feeling
+// in THIS message (empty-history reads). These exercise that this-message-only detection.
+check('final-turn: a bare goodbye does NOT name the family (this message only)',
+  labelNamedByUser('fear', 'thanks, that really helped, bye', []), false);
+check('final-turn: a genuine final-message naming IS detected',
+  labelNamedByUser('fear', "honestly, i think it's just fear", []), true);
+check('final-turn: a bare goodbye carries no user-owned concrete detail this message',
+  hasUserOwnedConcreteDetail(ev(), 'thanks, that helped, bye', []), false);
+check('final-turn: a felt phrase in the final message IS user-owned detail',
+  hasUserOwnedConcreteDetail(ev(), 'it sat heavy in my chest', []), true);
 
 // sanity: the fixture is anchored by default (so the rules above are exercised correctly)
 check('fixture sanity: default event has an anchor', hasEmotionAnchor(ev()), true);

@@ -2578,7 +2578,8 @@ ${extraSystem}` : system },
   const tentativeReply = isTentativeReply(p.reply);
   const noUserConcrete = !hasUserOwnedConcreteDetail(ev, input.userText, input.history ?? []);
   const neverOriginated = !userHasOriginated(input.history ?? [], input.userText);
-  const blockUnlock = !!input.safetyNote || !!input.intent || uncertainTurn || clarifyingQuestion || tentativeReply || noUserConcrete || neverOriginated || !!input.repairActive || savouring;
+  const namesAndOwnsThisMessage = !!fam && labelNamedByUser(fam, input.userText, []) && hasUserOwnedConcreteDetail(ev, input.userText, []);
+  const blockUnlock = !!input.safetyNote || !!input.intent || uncertainTurn || clarifyingQuestion || tentativeReply || noUserConcrete || neverOriginated || !!input.repairActive || savouring || EXIT_CUE.test(input.userText) && !namesAndOwnsThisMessage;
   if (blockUnlock && stage === "understood" && prevStage !== "understood" && prevStage !== "deepened") {
     stage = prevStage;
   }

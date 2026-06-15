@@ -385,6 +385,14 @@ export async function openaiGenerateTurn(
   // word somewhere (not just echoed the companion's). Closes the shallow-agreement case
   // the turn-local gate can't — agreeing with / parroting the companion is never a shape.
   const neverOriginated = !userHasOriginated(input.history ?? [], input.userText);
+  // Final-turn guard (review #6): a goodbye / thanks / "I'll leave it there" turn must not
+  // crystallise a feeling unless the user NAMES and OWNS it in THIS very message. Ending a
+  // conversation well shouldn't force an unlock of something they only owned earlier (or
+  // never did) — the unlock should have landed on the owning turn, not the farewell. Empty
+  // history forces a "this message only" read, so a genuine final-message naming ("oh — it's
+  // grief, that's the word") still unlocks, while "thanks, bye" cannot.
+  const namesAndOwnsThisMessage =
+    !!fam && labelNamedByUser(fam, input.userText, []) && hasUserOwnedConcreteDetail(ev, input.userText, []);
   const blockUnlock =
     !!input.safetyNote ||
     !!input.intent ||
@@ -394,7 +402,8 @@ export async function openaiGenerateTurn(
     noUserConcrete ||
     neverOriginated ||
     !!input.repairActive ||
-    savouring;
+    savouring ||
+    (EXIT_CUE.test(input.userText) && !namesAndOwnsThisMessage);
   if (blockUnlock && stage === 'understood' && prevStage !== 'understood' && prevStage !== 'deepened') {
     stage = prevStage;
   }

@@ -50,6 +50,8 @@ export interface WeeklyInput {
   /** Verbatim phrases from this week's events (fallback when nothing was saved). */
   eventPhrases: string[];
   repeatedThemes: string[];
+  /** Emotions that appeared in more than one FORM (review #11) — the constellation. */
+  multiFormEmotions?: { family: EmotionFamilyId; forms: { form: string; domains: string[] }[] }[];
 }
 
 function caveatFor(saved: number, checkins: number): string {
@@ -88,6 +90,15 @@ export function composeWeeklySummary(input: WeeklyInput): WeeklySummary {
     if (input.deepenedPatterns.length) {
       const dp = joinList(input.deepenedPatterns.map((f) => FAMILY_WORD[f]));
       parts.push(`And ${dp} is starting to feel familiar; we’ve met it more than once now.`);
+    }
+
+    // Constellation (review #11): name the FORMS an emotion took, not just that it appeared.
+    for (const mf of input.multiFormEmotions ?? []) {
+      const forms = (mf.forms ?? []).filter((x) => x.form).slice(0, 3);
+      if (forms.length < 2) continue;
+      const word = FAMILY_WORD[mf.family];
+      const described = forms.map((x) => (x.domains?.[0] ? `${x.form} (${x.domains[0]})` : x.form));
+      parts.push(`${word.charAt(0).toUpperCase()}${word.slice(1)} showed up in more than one way: ${joinList(described)}.`);
     }
 
     summary = parts.join(' ');

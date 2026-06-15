@@ -39,6 +39,17 @@ check('leads with "moments that stood out"', withSaved.companion_summary.startsW
 check('includes the learning statement verbatim', withSaved.companion_summary.includes('divided into too many pieces'));
 check('learning statement field set', withSaved.companion_learning_statement?.includes('divided into too many pieces') === true);
 check('saved_count reflects kept memories', withSaved.saved_count === 1);
+
+// ── Constellation: name an emotion's FORMS, not just that it appeared (review #11) ──
+const withForms = make({
+  checkinCount: 2,
+  emotionsIntroduced: ['joy'],
+  multiFormEmotions: [{ family: 'joy', forms: [{ form: 'energised', domains: ['after sport'] }, { form: 'quiet', domains: ['after dinner with friends'] }] }],
+});
+check('describes the two forms of joy', withForms.companion_summary.includes('more than one way') && withForms.companion_summary.includes('energised (after sport)') && withForms.companion_summary.includes('quiet (after dinner with friends)'));
+check('a single form does NOT trigger the constellation line',
+  !make({ checkinCount: 1, emotionsIntroduced: ['joy'], multiFormEmotions: [{ family: 'joy', forms: [{ form: 'energised', domains: ['sport'] }] }] }).companion_summary.includes('more than one way'));
+check('constellation line stays clean of banned language', clean(withForms.companion_summary));
 check('caveat present + scoped to what stood out', withSaved.caveat.includes('moments that stood out'));
 check('user words carried into phrases', withSaved.key_user_phrases.includes('not enough of me to go around'));
 check('no dashboard/guilt language (saved)', clean(withSaved.companion_summary) && clean(withSaved.caveat));

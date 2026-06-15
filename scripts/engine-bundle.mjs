@@ -2101,6 +2101,13 @@ function composeWeeklySummary(input) {
       const dp = joinList(input.deepenedPatterns.map((f) => FAMILY_WORD[f]));
       parts.push(`And ${dp} is starting to feel familiar; we\u2019ve met it more than once now.`);
     }
+    for (const mf of input.multiFormEmotions ?? []) {
+      const forms = (mf.forms ?? []).filter((x) => x.form).slice(0, 3);
+      if (forms.length < 2) continue;
+      const word = FAMILY_WORD[mf.family];
+      const described = forms.map((x) => x.domains?.[0] ? `${x.form} (${x.domains[0]})` : x.form);
+      parts.push(`${word.charAt(0).toUpperCase()}${word.slice(1)} showed up in more than one way: ${joinList(described)}.`);
+    }
     summary = parts.join(" ");
   }
   summary = stripEmDashes(summary);

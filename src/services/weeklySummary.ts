@@ -64,6 +64,16 @@ export async function buildWeeklySummary(weekStart: Date): Promise<WeeklySummary
     .filter(([, count]) => count >= 2)
     .map(([t]) => t);
 
+  // Constellation (review #11): emotions that have more than one user-owned FORM.
+  const multiFormEmotions = progress
+    .filter((p) => (p.facets ?? []).length >= 2)
+    .map((p) => ({
+      family: p.emotion_family,
+      forms: [...(p.facets ?? [])]
+        .sort((a, b) => (b.count ?? 0) - (a.count ?? 0))
+        .map((f) => ({ form: f.form, domains: f.domains ?? [] })),
+    }));
+
   const summary = composeWeeklySummary({
     id: `week_${start.getFullYear()}-${pad(start.getMonth() + 1)}-${pad(start.getDate())}`,
     weekStart: start.toISOString(),
@@ -77,6 +87,7 @@ export async function buildWeeklySummary(weekStart: Date): Promise<WeeklySummary
     deepenedPatterns,
     eventPhrases,
     repeatedThemes,
+    multiFormEmotions,
   });
 
   weeklySummariesRepo.save(summary).catch(() => {});

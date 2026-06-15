@@ -179,7 +179,34 @@ var FLAT_MAP = {
     "dunno",
     "detached",
     "drained",
-    "unclear"
+    "unclear",
+    // Low-access / partially-unavailable states (review #3) — recognise these as FLAT, not as
+    // sadness/shame underneath. Multi-word so they don't false-match other families (flat is
+    // matched LAST in DETECTION_ORDER, so a genuinely sad/ashamed phrase still wins first).
+    "behind glass",
+    "behind a wall",
+    "going through the motions",
+    "going through motions",
+    "switched off",
+    "switched-off",
+    "switch off",
+    "glassy",
+    "grey",
+    "gray",
+    "distant",
+    "should feel something",
+    "cant reach",
+    "can't reach",
+    "cannot reach",
+    "volume turned down",
+    "volume is turned down",
+    "volume got turned down",
+    "volume down",
+    "muffled",
+    "far away",
+    "far-off",
+    "not really here",
+    "going through the day"
   ],
   noticed: "I think this may be one of the hard-to-name feelings.",
   shapeQuestion: "That is allowed \u2014 we can leave it unnamed for now. Does it feel more heavy, tense, blank, or restless?",
@@ -488,6 +515,17 @@ var EMOTION_MAPS = {
   joy: JOY_MAP,
   calm: CALM_MAP
 };
+var DETECTION_ORDER = [
+  "anger",
+  "fear",
+  "pressure",
+  "hurt",
+  "shame",
+  "sadness",
+  "joy",
+  "calm",
+  "flat"
+];
 
 // src/services/ai/stage.ts
 var RANK = {
@@ -1931,6 +1969,18 @@ function evaluateOutcome(input) {
   return null;
 }
 
+// src/services/ai/companionEngine.ts
+var pad = (s) => ` ${s.toLowerCase()} `;
+function detectFamily(text) {
+  const t = pad(text);
+  const flatPhrases = EMOTION_MAPS.flat.familyKeywords.filter((k) => k.includes(" "));
+  if (flatPhrases.some((k) => t.includes(k))) return "flat";
+  for (const id of DETECTION_ORDER) {
+    if (EMOTION_MAPS[id].familyKeywords.some((k) => t.includes(k))) return id;
+  }
+  return null;
+}
+
 // src/data/emotionDistinctions.ts
 var FAMILY_CRAFT = {
   anger: {
@@ -2045,11 +2095,13 @@ var FAMILY_CRAFT = {
     avoid: [
       "don\u2019t demand depth or emotion words \u2014 body words are enough",
       "never infer depression from an entry",
-      'never treat "nothing" as unimportant'
+      'never treat "nothing" as unimportant',
+      'don\u2019t rush it toward sadness or shame \u2014 "behind glass", "the volume turned down", "going through the motions", "I can see it but can\u2019t reach it" are low-access states, not a darker feeling underneath. Reflect the feeling as partly unavailable, not as something sad/ashamed it is hiding.'
     ],
     learning: [
       "I\u2019m learning that this is not calm \u2014 it\u2019s more like low-access feeling.",
-      "This flatness may be your system going quiet after too much."
+      "This flatness may be your system going quiet after too much.",
+      "I\u2019m learning the feeling is here but hard to reach right now, rather than gone or bad."
     ]
   },
   calm: {
@@ -3391,6 +3443,7 @@ export {
   classifyMoments,
   composeLearningSentence,
   composeWeeklySummary,
+  detectFamily,
   detectShadeRejection,
   doorwayOf,
   draftFromRejection,

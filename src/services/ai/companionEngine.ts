@@ -89,6 +89,11 @@ const pad = (s: string) => ` ${s.toLowerCase()} `;
 
 export function detectFamily(text: string): EmotionFamilyId | null {
   const t = pad(text);
+  // Low-access flat idioms ("the volume is turned down", "behind glass", "going through the
+  // motions") are multi-word + specific; let them win FIRST so a bare single word inside them
+  // (e.g. sadness's "down" in "turned down") can't rush a flat state to a darker family (#3).
+  const flatPhrases = EMOTION_MAPS.flat.familyKeywords.filter((k) => k.includes(' '));
+  if (flatPhrases.some((k) => t.includes(k))) return 'flat';
   for (const id of DETECTION_ORDER) {
     if (EMOTION_MAPS[id].familyKeywords.some((k) => t.includes(k))) return id;
   }

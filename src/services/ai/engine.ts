@@ -42,6 +42,7 @@ export { advanceProgress, advanceStrands, emptyProgress, migrateStage, PROGRESS_
 export { buildLedger, hasUserOwnedConcreteDetail, userHasOriginated, reintroducesWord, intenseUserWord, INTENSE_FEELING, SOFTENING_CUE, type EvidenceLedger } from '@/services/ai/evidenceLedger';
 export { classifyMoments, type MomentType } from '@/services/ai/momentType';
 export { evaluateOutcome, type OutcomeInput } from '@/services/ai/outcome';
+export { detectFamily } from '@/services/ai/companionEngine';
 export { buildSystemPrompt } from '@/services/ai/prompts';
 export { selectVisualState, visualTintFamilies, type CompanionVisualState } from '@/services/ai/companionVisualState';
 export {

@@ -127,10 +127,12 @@ export const FAMILY_CRAFT: Record<EmotionFamilyId, FamilyCraft> = {
       'don’t demand depth or emotion words — body words are enough',
       'never infer depression from an entry',
       'never treat "nothing" as unimportant',
+      'don’t rush it toward sadness or shame — "behind glass", "the volume turned down", "going through the motions", "I can see it but can’t reach it" are low-access states, not a darker feeling underneath. Reflect the feeling as partly unavailable, not as something sad/ashamed it is hiding.',
     ],
     learning: [
       'I’m learning that this is not calm — it’s more like low-access feeling.',
       'This flatness may be your system going quiet after too much.',
+      'I’m learning the feeling is here but hard to reach right now, rather than gone or bad.',
     ],
   },
   calm: {

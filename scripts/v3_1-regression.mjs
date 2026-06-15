@@ -8,6 +8,7 @@
 import {
   advanceStrands,
   buildSystemPrompt,
+  detectFamily,
   draftFromTurn,
   emptyProgress,
   evaluateOutcome,
@@ -154,6 +155,23 @@ check('re-entry: "no, not empty" is rejecting, not reintroducing', reintroducesW
 check('re-entry: "i dont feel empty" is not reintroducing', reintroducesWord('empty', "i dont feel empty"), false);
 check('re-entry: genuinely re-owning the word lifts it', reintroducesWord('empty', 'actually, maybe it is empty now that i sit with it'), true);
 check('re-entry: a negator on a DIFFERENT word (clause break) still owns this one', reintroducesWord('empty', 'not anxious, more empty'), true);
+
+// ── v3.2 #3: flat/numb low-access states route to FLAT, not sadness/shame ────
+// The brief's phrases should read as the flat (low-access) family, never rushed to a
+// darker feeling. (detectFamily is the deterministic fallback; the live model gets the
+// same framing via the flat reference block.)
+for (const phrase of [
+  'i feel nothing',
+  "i should feel something but i dont",
+  'im behind glass',
+  'the volume is turned down on everything',
+  'im just going through the motions',
+  'i can see it but cant reach it',
+  'everything feels muffled and far away',
+]) {
+  const fam = detectFamily(phrase);
+  check(`flat: "${phrase}" -> flat (got ${fam})`, fam === 'flat', true);
+}
 
 // sanity: the fixture is anchored by default (so the rules above are exercised correctly)
 check('fixture sanity: default event has an anchor', hasEmotionAnchor(ev()), true);

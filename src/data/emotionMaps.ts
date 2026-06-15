@@ -125,6 +125,14 @@ const FLAT_MAP: EmotionMap = {
     'numb', 'blank', 'nothing', 'empty', 'foggy', 'disconnected', 'shut down', 'flat',
     'feel off', 'meh', "don't know", 'dont know', 'not sure', 'no idea', 'dunno', 'detached',
     'drained', 'unclear',
+    // Low-access / partially-unavailable states (review #3) — recognise these as FLAT, not as
+    // sadness/shame underneath. Multi-word so they don't false-match other families (flat is
+    // matched LAST in DETECTION_ORDER, so a genuinely sad/ashamed phrase still wins first).
+    'behind glass', 'behind a wall', 'going through the motions', 'going through motions',
+    'switched off', 'switched-off', 'switch off', 'glassy', 'grey', 'gray', 'distant',
+    'should feel something', 'cant reach', "can't reach", 'cannot reach',
+    'volume turned down', 'volume is turned down', 'volume got turned down', 'volume down',
+    'muffled', 'far away', 'far-off', 'not really here', 'going through the day',
   ],
   noticed: 'I think this may be one of the hard-to-name feelings.',
   shapeQuestion:

@@ -33,4 +33,9 @@ body {
   height: var(--app-height, 100%);
   overflow: hidden;
   overscroll-behavior: none;
+  /* Paint the lavender wash on the root itself so the iOS safe-area regions (notch +
+   * home indicator) — which sit OUTSIDE the page when viewport-fit isn't cover, and
+   * would otherwise fall back to a dark default — blend into the app instead of showing
+   * as dark bands at the top and bottom. */
+  background-color: #e7e0ff;
 }

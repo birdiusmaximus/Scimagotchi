@@ -141,7 +141,12 @@ function EmotionBlob({ family, slot }: { family: EmotionFamilyId | null; slot: 0
  */
 export function GradientBackground({ families = [] }: { families?: EmotionFamilyId[] }) {
   return (
-    <View style={[StyleSheet.absoluteFill, { pointerEvents: 'none' }]}>
+    // overflow:hidden clips the blobs to the screen. They bleed off the edges by design
+    // (top:-150 … bottom:-170), and without clipping they inflate the page's scroll height
+    // past the viewport — which lets a focused input scroll the body, leaving a gap at the
+    // bottom and a scroll-vs-reset flicker at the top. The off-screen parts are invisible
+    // anyway, so clipping changes nothing visible and kills the overflow at its source.
+    <View style={[StyleSheet.absoluteFill, { pointerEvents: 'none', overflow: 'hidden' }]}>
       <LinearGradient
         colors={gradients.background}
         start={{ x: 0.1, y: 0 }}

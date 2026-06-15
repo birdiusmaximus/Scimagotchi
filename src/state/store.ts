@@ -91,9 +91,15 @@ interface AppState {
   /** Emotion families described TODAY (local date) — drives the very subtle daily hues
    *  on the home orb. Resets back to none when the date rolls over (midnight). */
   todaysEmotions: { date: string; families: EmotionFamilyId[] };
-  /** Web: the on-screen keyboard is open (set by the visual-viewport handler). Lets the
-   *  layout dock the input to the keyboard — zero the bottom inset + trim padding. */
+  /** Web: the on-screen keyboard is open (set by the visual-viewport handler, or the
+   *  Capacitor Keyboard plugin on native). Lets the layout dock the input to the
+   *  keyboard — zero the bottom inset + trim padding, and collapse the hero orb. */
   keyboardOpen: boolean;
+  /** Capacitor native only: the keyboard's pixel height. The native WebView is set to
+   *  resize:'none' (so it never squishes — no jump), which means the layout must lift
+   *  its own content by this much. Stays 0 in a plain mobile browser, where the visual
+   *  viewport shrinks instead and no manual lift is needed. */
+  keyboardHeight: number;
   sending: boolean;
   unlock: { event: EmotionEvent; kind: UnlockKind } | null;
   safety: SafetyState;
@@ -156,6 +162,7 @@ export const useStore = create<AppState>((set, get) => ({
   chatExitEmotion: null,
   todaysEmotions: { date: '', families: [] },
   keyboardOpen: false,
+  keyboardHeight: 0,
   sending: false,
   unlock: null,
   safety: { visible: false, level: 0, category: 'none' },

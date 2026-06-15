@@ -10,6 +10,7 @@ import { configureReanimatedLogger, ReanimatedLogLevel } from 'react-native-rean
 
 import { SafetyModal } from '@/components/SafetyModal';
 import { WeeklySummaryModal } from '@/components/WeeklySummaryModal';
+import { initNativeKeyboard, initStatusBarOverlay, isCapacitorNative } from '@/services/native/capacitor';
 import { useStore } from '@/state/store';
 import { palette } from '@/theme/tokens';
 
@@ -28,6 +29,10 @@ const WEB_PREVIEW_INSETS: EdgeInsets = { top: 59, bottom: 34, left: 0, right: 0 
 function PreviewSafeArea({ children }: { children: ReactNode }) {
   const keyboardOpen = useStore((s) => s.keyboardOpen);
   if (Platform.OS !== 'web') return <>{children}</>;
+  // Inside the Capacitor shell the WebView is a real device surface, so let the actual
+  // env(safe-area-inset-*) values flow through (viewport-fit=cover is patched into the
+  // exported HTML) instead of the desktop preview's faked iPhone insets.
+  if (isCapacitorNative()) return <>{children}</>;
   // Web gets fixed iPhone-like insets (Expo Router controls the viewport meta itself and
   // drops a custom `viewport-fit=cover`, so real iOS env() insets would resolve to 0 and
   // jam the top bar against the notch). BUT when the keyboard is open it covers the home
@@ -59,11 +64,33 @@ export default function RootLayout() {
     }
   }, []);
 
-  // Mobile web: track the visual viewport so the on-screen keyboard COMPRESSES the
-  // layout (companion + chat + input fit just above it) instead of pushing content
-  // off the top of the page. Drives the #root height var defined in global.css.
+  // Capacitor native shell: drive the keyboard state from the plugin. The WebView is
+  // set to resize:'none' so the visual viewport below never moves (that's what removes
+  // the jump) — the layout lifts its own content by keyboardHeight instead. Also overlay
+  // the status bar so the gradient runs edge-to-edge (no white bar).
   useEffect(() => {
-    if (Platform.OS !== 'web' || typeof window === 'undefined' || !window.visualViewport) return;
+    if (!isCapacitorNative()) return;
+    initStatusBarOverlay();
+    let cleanup = () => {};
+    initNativeKeyboard({
+      setOpen: (open) => {
+        if (open !== useStore.getState().keyboardOpen) useStore.setState({ keyboardOpen: open });
+      },
+      setHeight: (h) => {
+        if (h !== useStore.getState().keyboardHeight) useStore.setState({ keyboardHeight: h });
+      },
+    }).then((c) => {
+      cleanup = c;
+    });
+    return () => cleanup();
+  }, []);
+
+  // Mobile web (plain browser): track the visual viewport so the on-screen keyboard
+  // COMPRESSES the layout (companion + chat + input fit just above it) instead of pushing
+  // content off the top of the page. Drives the #root height var defined in global.css.
+  // Skipped under Capacitor, where resize:'none' means the viewport wouldn't move anyway.
+  useEffect(() => {
+    if (Platform.OS !== 'web' || typeof window === 'undefined' || !window.visualViewport || isCapacitorNative()) return;
     const vv = window.visualViewport;
     const root = document.documentElement;
     let raf = 0;

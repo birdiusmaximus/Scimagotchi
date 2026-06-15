@@ -1,8 +1,9 @@
+import { LinearGradient } from 'expo-linear-gradient';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
-import { KeyboardAvoidingView, Platform, ScrollView, StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import Animated, { Easing, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { ChatChips } from '@/components/ChatChips';
 import { ChatInput } from '@/components/ChatInput';
@@ -18,14 +19,18 @@ import { Txt } from '@/components/Txt';
 import { useGoBack } from '@/hooks/useGoBack';
 import type { CompanionGesture } from '@/services/ai/companionPose';
 import { selectVisualState, tintLevelForStage, visualTintFamilies } from '@/services/ai/companionVisualState';
+import { isCapacitorNative } from '@/services/native/capacitor';
 import { useStore } from '@/state/store';
-import { palette, radii, spacing } from '@/theme/tokens';
+import { gradients, palette, radii, spacing } from '@/theme/tokens';
 
 /**
- * Chat — the character sits large in the top third (the focus), and the
- * conversation lives in a dedicated glass "discussion window" that fills the
- * lower two-thirds. The window animates up on mount, and clips its messages at
- * its rounded edge so they read as contained — not floating in thin air.
+ * Chat — "conversation mode". At rest the character sits large in the top third (the
+ * focus). When the keyboard opens, the hero orb gracefully collapses and a small
+ * companion avatar fades into the header, so the companion stays VISIBLE while the
+ * discussion window + docked input take the freed room — instead of the big orb being
+ * crushed and the view jumping. Inside the Capacitor shell the WebView is set to
+ * resize:'none', so we lift content above the keyboard by its reported height; in a
+ * plain browser the visual viewport shrinks and no manual lift is needed.
  */
 export default function ChatScreen() {
   const router = useRouter();
@@ -44,6 +49,10 @@ export default function ChatScreen() {
   const progress = useStore((s) => s.progress);
   const memoryCards = useStore((s) => s.memoryCards);
   const keyboardOpen = useStore((s) => s.keyboardOpen);
+  const keyboardHeight = useStore((s) => s.keyboardHeight);
+
+  const insets = useSafeAreaInsets();
+  const native = isCapacitorNative();
 
   // What the companion auto-learned in THIS conversation — shown as a gentle,
   // transparent session-end review (brief §7.2), not a save gate.
@@ -141,18 +150,55 @@ export default function ChatScreen() {
     transform: [{ translateY: (1 - rise.value) * 72 }, { scale: 0.97 + rise.value * 0.03 }],
   }));
 
+  // Conversation mode: when the keyboard opens, collapse the hero orb (top) and cross-
+  // fade a compact companion avatar into the header, so the character stays present
+  // without crushing the chat. Driven by one shared value so both move together.
+  const kb = useSharedValue(0);
+  useEffect(() => {
+    kb.value = withTiming(keyboardOpen ? 1 : 0, { duration: 280, easing: Easing.out(Easing.cubic) });
+  }, [keyboardOpen, kb]);
+  // Scale the orb DOWN as its box collapses (rather than clipping it) — at every point
+  // the scaled orb is smaller than its maxHeight box, so nothing overflows and there's no
+  // hard clip rectangle cutting the orb's soft glow (which showed as lines mid-shift).
+  const stageStyle = useAnimatedStyle(() => ({
+    maxHeight: (1 - kb.value) * 240,
+    opacity: 1 - kb.value,
+    transform: [{ scale: 1 - kb.value }],
+  }));
+  const headerAvatarStyle = useAnimatedStyle(() => ({
+    opacity: kb.value,
+    transform: [{ scale: 0.7 + kb.value * 0.3 }, { translateX: (1 - kb.value) * -6 }],
+  }));
+
+  // Bottom spacing: at rest, clear the home indicator. Keyboard up on native — lift the
+  // input by the keyboard's height (resize:'none', so we move it ourselves). Keyboard up
+  // in a browser — 0, because the visual viewport already shrank to sit above the keys.
+  const bottomPad = keyboardOpen ? (native ? keyboardHeight : 0) : insets.bottom;
+
   const isEmpty = messages.length === 0 && !sending;
 
   return (
     <View style={styles.root}>
       <GradientBackground families={tintFamilies} />
-      <SafeAreaView style={styles.safe}>
+      <SafeAreaView style={styles.safe} edges={['top', 'left', 'right']}>
         <View style={styles.header}>
           <IconButton name="chevron-left" onPress={goBack} />
+          {/* Compact companion — fades in while typing so the character never disappears. */}
+          <Animated.View style={[styles.headerAvatar, headerAvatarStyle]} pointerEvents="none">
+            <LinearGradient
+              colors={gradients.orbCalm}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 1 }}
+              style={styles.headerAvatarGrad}
+            >
+              <View style={styles.miniEye} />
+              <View style={styles.miniEye} />
+            </LinearGradient>
+          </Animated.View>
         </View>
 
-        {/* Character — top third, the focus */}
-        <View style={styles.stage}>
+        {/* Character — the hero at rest, collapses when the keyboard is up */}
+        <Animated.View style={[styles.stage, stageStyle]}>
           <CompanionOrb
             size={150}
             interactive
@@ -166,14 +212,10 @@ export default function ChatScreen() {
             anticipate={orbAnticipate}
             onDoubleTap={waveBack}
           />
-        </View>
+        </Animated.View>
 
-        {/* Discussion window — lower two-thirds */}
-        <KeyboardAvoidingView
-          style={[styles.windowWrap, keyboardOpen && styles.windowWrapKbd]}
-          behavior={Platform.OS === 'ios' ? 'padding' : undefined}
-          keyboardVerticalOffset={8}
-        >
+        {/* Discussion window — grows to fill, input docked at its base */}
+        <View style={[styles.windowWrap, { paddingBottom: bottomPad }]}>
           <Animated.View style={[styles.window, windowStyle]}>
             <Glass
               radius={radii.xl}
@@ -232,7 +274,7 @@ export default function ChatScreen() {
               </View>
             </Glass>
           </Animated.View>
-        </KeyboardAvoidingView>
+        </View>
       </SafeAreaView>
 
       {unlock ? (
@@ -275,12 +317,21 @@ const styles = StyleSheet.create({
   root: { flex: 1 },
   flex: { flex: 1 },
   safe: { flex: 1, paddingHorizontal: spacing.lg },
-  header: { paddingTop: spacing.sm, flexDirection: 'row', alignItems: 'center' },
-  stage: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  windowWrap: { flex: 2, paddingBottom: spacing.md },
-  // Keyboard up: dock the input to the keyboard (less bottom padding) and give the
-  // companion a bigger share of the now-short height (a smaller chat-window flex).
-  windowWrapKbd: { flex: 1.5, paddingBottom: spacing.xs },
+  header: { paddingTop: spacing.sm, flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
+  headerAvatar: { width: 40, height: 40 },
+  headerAvatarGrad: {
+    flex: 1,
+    borderRadius: 20,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 7,
+  },
+  miniEye: { width: 6, height: 6, borderRadius: 3, backgroundColor: '#fff' },
+  // Hero area at rest; its height animates to 0 as the keyboard opens. No overflow:hidden
+  // — the orb scales with the box (see stageStyle), so there's nothing to clip.
+  stage: { alignItems: 'center', justifyContent: 'center' },
+  windowWrap: { flex: 1, paddingTop: spacing.xs },
   window: { flex: 1 },
   windowGlass: { flex: 1 },
   windowContent: { flex: 1, paddingHorizontal: spacing.sm, paddingTop: spacing.xs },

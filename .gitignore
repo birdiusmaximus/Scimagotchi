@@ -45,4 +45,5 @@ example
 
 # eval run artifacts (regenerated; the harness source in eval/ is tracked)
 eval-out/
+eval-out-*/
 eval-results/

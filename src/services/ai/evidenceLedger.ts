@@ -118,6 +118,30 @@ export function intenseUserWord(userText: string): string | null {
   return m ? m[0].toLowerCase() : null;
 }
 
+/**
+ * Has the user ORIGINATED at least one felt/feeling word across the whole conversation
+ * — one they voiced that was NOT already in the companion's immediately-preceding reply
+ * (i.e. not an echo)? The conversation-level ownership gate (review #1/#2): a first
+ * shape needs the user to have brought something of their own, never only echoed/agreed.
+ * Closes the shallow-agreement case that the turn-local gate can't (the user echoes the
+ * companion's words back, which "presence" checks accept but origination does not).
+ */
+export function userHasOriginated(history: Turn[], currentUserText: string): boolean {
+  const turns = [...(history ?? []), { role: 'user' as const, content: currentUserText ?? '' }];
+  const feltRx = new RegExp(`${CONCRETE_FELT.source}|${EMOTION_WORDS.source}`, 'gi');
+  for (let i = 0; i < turns.length; i++) {
+    if (turns[i].role !== 'user') continue;
+    const utext = (turns[i].content || '').toLowerCase().replace(/[’'`]/g, "'");
+    const words = (utext.match(feltRx) || []).map((w) => w.toLowerCase().trim()).filter(Boolean);
+    if (!words.length) continue;
+    const prevCompanion = [...turns.slice(0, i)].reverse().find((x) => x.role === 'companion');
+    const prevText = (prevCompanion?.content || '').toLowerCase();
+    // originated if a felt word the user used did NOT appear in the companion's last reply
+    if (words.some((w) => !new RegExp(`\\b${w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`, 'i').test(prevText))) return true;
+  }
+  return false;
+}
+
 export interface EvidenceLedger {
   concreteFromUser: boolean; // the gate signal — at least one user-voiced concrete detail
   userTurns: number;

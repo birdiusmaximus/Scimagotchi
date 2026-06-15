@@ -2383,6 +2383,20 @@ function intenseUserWord(userText) {
   const m = (userText ?? "").match(INTENSE_FEELING);
   return m ? m[0].toLowerCase() : null;
 }
+function userHasOriginated(history, currentUserText) {
+  const turns = [...history ?? [], { role: "user", content: currentUserText ?? "" }];
+  const feltRx = new RegExp(`${CONCRETE_FELT.source}|${EMOTION_WORDS.source}`, "gi");
+  for (let i = 0; i < turns.length; i++) {
+    if (turns[i].role !== "user") continue;
+    const utext = (turns[i].content || "").toLowerCase().replace(/[’'`]/g, "'");
+    const words = (utext.match(feltRx) || []).map((w) => w.toLowerCase().trim()).filter(Boolean);
+    if (!words.length) continue;
+    const prevCompanion = [...turns.slice(0, i)].reverse().find((x) => x.role === "companion");
+    const prevText = (prevCompanion?.content || "").toLowerCase();
+    if (words.some((w) => !new RegExp(`\\b${w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`, "i").test(prevText))) return true;
+  }
+  return false;
+}
 
 // src/utils/text.ts
 function stripEmDashes(text) {
@@ -2563,7 +2577,8 @@ ${extraSystem}` : system },
   if (savouring) ev.do_not_store = 1;
   const tentativeReply = isTentativeReply(p.reply);
   const noUserConcrete = !hasUserOwnedConcreteDetail(ev, input.userText, input.history ?? []);
-  const blockUnlock = !!input.safetyNote || !!input.intent || uncertainTurn || clarifyingQuestion || tentativeReply || noUserConcrete || !!input.repairActive || savouring;
+  const neverOriginated = !userHasOriginated(input.history ?? [], input.userText);
+  const blockUnlock = !!input.safetyNote || !!input.intent || uncertainTurn || clarifyingQuestion || tentativeReply || noUserConcrete || neverOriginated || !!input.repairActive || savouring;
   if (blockUnlock && stage === "understood" && prevStage !== "understood" && prevStage !== "deepened") {
     stage = prevStage;
   }

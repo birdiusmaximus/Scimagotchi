@@ -24,6 +24,7 @@ import {
   isTentativeReply,
   isUncertain,
   hasUserOwnedConcreteDetail,
+  userHasOriginated,
   intenseUserWord,
   labelIsUserOwned,
   labelNamedByUser,
@@ -331,6 +332,15 @@ check('intensity: "absolutely furious" -> furious', intenseUserWord('honestly im
 check('intensity: "i feel hollow inside" -> hollow', intenseUserWord('i feel hollow inside'), 'hollow');
 check('intensity: "a bit frustrated" -> null (not an intense word)', intenseUserWord('just a bit frustrated i guess'), null);
 check('intensity: "terrified of the result" -> terrified', intenseUserWord('im terrified of the result'), 'terrified');
+// Conversation-level ownership (review #1/#2): originated felt word vs echo/agreement.
+check('originated: user voiced a feeling word of their own -> true',
+  userHasOriginated([], 'honestly im so furious about it'), true);
+check('originated: user voiced a body cue the companion did not say -> true',
+  userHasOriginated([{ role: 'companion', content: 'where do you notice it?' }], 'tight in my chest'), true);
+check('originated: only agreement + echoing the companion word -> false',
+  userHasOriginated([{ role: 'companion', content: 'it sounds like you feel hollow' }, { role: 'user', content: 'yeah hollow' }], 'yeah exactly, hollow'), false);
+check('originated: pure agreement, no feeling word -> false',
+  userHasOriginated([{ role: 'companion', content: 'sounds like grief, maybe?' }], 'yeah totally, youre right'), false);
 // labelNamedByUser is the STRONG half — a bare affirmation must not satisfy it (the
 // closing/uncertain backstop relies on this so a goodbye "yeah" can't unlock).
 check('named: user used a family word this turn -> named',

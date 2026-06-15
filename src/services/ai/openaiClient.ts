@@ -32,7 +32,7 @@ import {
   type ResponseShape,
 } from '@/services/ai/responsePolicy';
 import { needsOwnershipRepair, softenUnownedEmotionReply } from '@/services/ai/replyOwnership';
-import { hasUserOwnedConcreteDetail, intenseUserWord, INTENSE_FEELING, SOFTENING_CUE } from '@/services/ai/evidenceLedger';
+import { hasUserOwnedConcreteDetail, userHasOriginated, intenseUserWord, INTENSE_FEELING, SOFTENING_CUE } from '@/services/ai/evidenceLedger';
 import {
   detectShadeRejection,
   evaluateStage,
@@ -381,6 +381,10 @@ export async function openaiGenerateTurn(
   // cue, urge, trigger, meaning, or owned phrase) the user actually voiced. This blocks
   // unlocks built only on bare agreement, echoes, or companion-supplied detail.
   const noUserConcrete = !hasUserOwnedConcreteDetail(ev, input.userText, input.history ?? []);
+  // Conversation-level ownership (review #1/#2): the user must have ORIGINATED a felt
+  // word somewhere (not just echoed the companion's). Closes the shallow-agreement case
+  // the turn-local gate can't — agreeing with / parroting the companion is never a shape.
+  const neverOriginated = !userHasOriginated(input.history ?? [], input.userText);
   const blockUnlock =
     !!input.safetyNote ||
     !!input.intent ||
@@ -388,6 +392,7 @@ export async function openaiGenerateTurn(
     clarifyingQuestion ||
     tentativeReply ||
     noUserConcrete ||
+    neverOriginated ||
     !!input.repairActive ||
     savouring;
   if (blockUnlock && stage === 'understood' && prevStage !== 'understood' && prevStage !== 'deepened') {

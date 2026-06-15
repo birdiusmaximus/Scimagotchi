@@ -1670,6 +1670,20 @@ function intenseUserWord(userText) {
   const m = (userText ?? "").match(INTENSE_FEELING);
   return m ? m[0].toLowerCase() : null;
 }
+function userHasOriginated(history, currentUserText) {
+  const turns = [...history ?? [], { role: "user", content: currentUserText ?? "" }];
+  const feltRx = new RegExp(`${CONCRETE_FELT.source}|${EMOTION_WORDS.source}`, "gi");
+  for (let i = 0; i < turns.length; i++) {
+    if (turns[i].role !== "user") continue;
+    const utext = (turns[i].content || "").toLowerCase().replace(/[’'`]/g, "'");
+    const words = (utext.match(feltRx) || []).map((w) => w.toLowerCase().trim()).filter(Boolean);
+    if (!words.length) continue;
+    const prevCompanion = [...turns.slice(0, i)].reverse().find((x) => x.role === "companion");
+    const prevText = (prevCompanion?.content || "").toLowerCase();
+    if (words.some((w) => !new RegExp(`\\b${w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`, "i").test(prevText))) return true;
+  }
+  return false;
+}
 var BARE_AGREEMENT = /^(yeah?|yep|yes|exactly|totally|for sure|right|you'?re right|that ?one|that'?s the one|true|mm+|ok(ay)?|sure|definitely|absolutely|i guess|that fits|that'?s it|you got it|you nailed it)[\s.,!]*$/i;
 var HEDGE = /^(maybe|kind of|kinda|sort of|sorta|i guess|not really|dunno|idk|unsure|hard to say|hmm|who knows|i dont know|i don'?t know)[\s.,!?]*$/i;
 function buildLedger(ev, userText, history) {
@@ -2133,6 +2147,7 @@ export {
   summaryIsClean,
   turnStrandFamilies,
   userConfirmsLabel,
+  userHasOriginated,
   varietyDirective,
   varietySignals,
   visualTintFamilies

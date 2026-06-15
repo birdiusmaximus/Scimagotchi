@@ -59,6 +59,7 @@ function analyse(file) {
         user_rejected_shades: m.user_rejected_shades ?? [],
         strandStages: m.strand_stages ?? null,
         moments: m.moments ?? [],
+        outcome: m.outcome ?? null,
         memory_draft: m.memory_draft ?? null,
       });
       pending = null;
@@ -74,6 +75,9 @@ function analyse(file) {
   const strandList = Object.entries(strands).filter(([, s]) => s && s !== 'unseen');
   const momentsSeen = [];
   for (const x of comp) for (const mo of x.moments) if (!momentsSeen.includes(mo)) momentsSeen.push(mo);
+  // The five-way outcomes this conversation reached (v3.1) — distinct, in order.
+  const outcomesSeen = [];
+  for (const x of comp) if (x.outcome && !outcomesSeen.includes(x.outcome)) outcomesSeen.push(x.outcome);
 
   // ── Red flags (specific true-failure types, review action 7) ──
   const flags = [];
@@ -137,7 +141,7 @@ function analyse(file) {
   return {
     cid, emotion, archetype, totalTurns: userCount,
     unlocked: !!firstUnlock, unlockedOnTurn: firstUnlock ? firstUnlock.n : null,
-    deepestStage: deepest, strandCount: strandList.length, momentsSeen,
+    deepestStage: deepest, strandCount: strandList.length, momentsSeen, outcomesSeen,
     flags: [...new Set(flags)], humbleAfterUnlock, safetyPause: turns.some((x) => x.safety || x.safetyCheck), turns,
   };
 }
@@ -190,10 +194,17 @@ const flagTally = {};
 for (const f of allFlags) { const k = f.split(':')[0]; flagTally[k] = (flagTally[k] ?? 0) + 1; }
 const momentTally = {};
 for (const r of rows) for (const m of r.momentsSeen) momentTally[m] = (momentTally[m] ?? 0) + 1;
+// Five-way outcomes (v3.1): edge_found / held_unnamed / new_facet are SUCCESSES, not misses.
+const outcomeTally = {};
+for (const r of rows) for (const o of r.outcomesSeen) outcomeTally[o] = (outcomeTally[o] ?? 0) + 1;
+const PARTIAL_OUTCOMES = new Set(['edge_found', 'held_unnamed', 'new_facet']);
+const partialConvos = rows.filter((r) => !r.unlocked && r.outcomesSeen.some((o) => PARTIAL_OUTCOMES.has(o)));
 out.push('', '## System-wide', '');
 out.push(`- **${rows.length}** conversations · **${rows.filter((r) => r.unlocked).length}** unlocked (${Math.round((100 * rows.filter((r) => r.unlocked).length) / rows.length)}%) · **${rows.filter((r) => r.strandCount >= 2).length}** tracked ≥2 strands.`);
 out.push(`- **Red flags:** ${Object.entries(flagTally).map(([k, n]) => `${k}=${n}`).join(' · ') || 'none'} (across ${rows.filter((r) => r.flags.length).length} conversations).`);
 out.push(`- **Moment types seen:** ${Object.entries(momentTally).sort((a, b) => b[1] - a[1]).map(([k, n]) => `${k}=${n}`).join(' · ') || 'none'}.`);
+out.push(`- **Outcomes reached:** ${Object.entries(outcomeTally).sort((a, b) => b[1] - a[1]).map(([k, n]) => `${k}=${n}`).join(' · ') || 'none'} _(conversations reaching each)_.`);
+out.push(`- **Successful partial outcomes:** ${partialConvos.length} non-unlock conversation(s) reached edge_found / held_unnamed / new_facet — a wise resting place ("I understand the edge / we're leaving it unnamed / a new form of a known feeling"), counted as success, NOT a missed unlock.`);
 const safetyRows = rows.filter((r) => r.safetyPause);
 out.push(`- **Safety pauses:** ${safetyRows.length} conversation(s)${safetyRows.length ? ` — ${safetyRows.map((r) => r.cid.replace('mx__', '')).join(', ')} (review for false-positives vs intended caution on ambiguous phrasing)` : ''}.`);
 const humbleTotal = rows.reduce((n, r) => n + (r.humbleAfterUnlock ?? 0), 0);

@@ -61,7 +61,8 @@
     "bundle:eval": "esbuild src/services/ai/openaiClient.ts --bundle --platform=node --format=esm --tsconfig=tsconfig.json --outfile=scripts/companion-bundle.mjs && esbuild src/services/ai/safety.ts --bundle --platform=node --format=esm --tsconfig=tsconfig.json --outfile=scripts/safety-bundle.mjs && esbuild src/services/ai/engine.ts --bundle --platform=node --format=esm --tsconfig=tsconfig.json --outfile=scripts/engine-bundle.mjs",
     "test:safety": "npm run bundle:eval --silent && node scripts/safety-regression.mjs",
     "test:engine": "npm run bundle:eval --silent && node scripts/engine-regression.mjs",
-    "test:all": "npm run bundle:eval --silent && node scripts/safety-regression.mjs && node scripts/engine-regression.mjs && node scripts/memory-regression.mjs && node scripts/progression-regression.mjs && node scripts/summary-regression.mjs",
+    "test:all": "npm run bundle:eval --silent && node scripts/safety-regression.mjs && node scripts/engine-regression.mjs && node scripts/memory-regression.mjs && node scripts/progression-regression.mjs && node scripts/summary-regression.mjs && node scripts/v3_1-regression.mjs",
+    "test:v3_1": "npm run bundle:eval --silent && node scripts/v3_1-regression.mjs",
     "test:memory": "npm run bundle:eval --silent && node scripts/memory-regression.mjs",
     "test:progression": "npm run bundle:eval --silent && node scripts/progression-regression.mjs",
     "test:summary": "npm run bundle:eval --silent && node scripts/summary-regression.mjs"

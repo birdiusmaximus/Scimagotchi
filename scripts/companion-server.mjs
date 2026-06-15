@@ -24,6 +24,7 @@ import {
   classifyMoments,
   composeLearningSentence,
   draftFromTurn,
+  evaluateOutcome,
   hasEmotionAnchor,
   isUncertain,
   PROGRESS_RANK,
@@ -189,6 +190,19 @@ const server = http.createServer(async (req, res) => {
       // What KIND of moment this turn was (Phase 3) — c.prevEvent is still last turn's event here.
       const moments = classifyMoments(turn, c.prevEvent, strandAdv, String(text));
 
+      // The five-way emotional OUTCOME (v3.1) — set on the event so memory + eval read one
+      // source of truth. progressBefore is the primary family's stage before this turn;
+      // facetsGrew compares the family's constellation before vs after advanceStrands.
+      const facetSig = (fs) => (fs ?? []).map((f) => `${f.form}:${f.count}`).join('|');
+      const facetsGrew = facetSig(existingProg[fam]?.facets) !== facetSig(adv.progress?.facets);
+      turn.event.outcome = evaluateOutcome({
+        unlocked: turn.unlocked,
+        event: turn.event,
+        userText: String(text),
+        progressBefore: fam ? adv.from : null,
+        facetsGrew,
+      });
+
       let modal = null; // { kind, summary } — what unlock ceremony (if any) the app would show
       if (turn.unlocked) {
         const kind = turn.event.mixed_confirmed === 1 ? 'mixed' : 'first_shape';
@@ -246,6 +260,7 @@ const server = http.createServer(async (req, res) => {
         strand_stages: strandStages,
         deepest_strand: strandAdv.deepest,
         moments,
+        outcome: turn.event.outcome,
         modal: modal ? modal.kind : null,
         modal_summary: modal ? modal.summary : null,
         memory_draft: memoryDraft ? { type: memoryDraft.type, summary: memoryDraft.summary } : null,
@@ -286,6 +301,7 @@ const server = http.createServer(async (req, res) => {
         strand_stages: strandStages,
         deepest_strand: strandAdv.deepest,
         moments,
+        outcome: turn.event.outcome,
         modal: modal ? modal.kind : null,
         modal_summary: modal ? modal.summary : null,
         memory_draft: memoryDraft ? { type: memoryDraft.type, summary: memoryDraft.summary } : null,

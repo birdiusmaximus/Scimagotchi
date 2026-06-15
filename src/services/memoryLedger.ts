@@ -122,6 +122,16 @@ export function draftFromTurn(turn: CompanionTurn, userText: string, conversatio
   const ev = turn.event;
   if (ev.do_not_store === 1 || ev.safety_flag !== 'none') return null;
 
+  // Memory is stricter than chat (review #4): a durable card needs USER-OWNED evidence
+  // (their own label, an accepted shade, or a real personal phrase) PLUS a concrete
+  // anchor (body cue, urge, trigger, or meaning). Bare agreement, echoes, an uncertain
+  // "maybe", a goodbye, or a companion-only hypothesis with no new detail never qualify.
+  const ownedLabel = ev.label_source === 'user_stated' || ev.label_source === 'user_confirmed';
+  const ownedShade = ev.shade_source === 'user_stated' || ev.shade_source === 'user_confirmed';
+  const realPhrase = !!ev.user_phrase && ev.user_phrase.trim().split(/\s+/).filter(Boolean).length >= 2;
+  const anchor = (ev.body_cue?.length ?? 0) > 0 || (ev.behaviour_action?.length ?? 0) > 0 || !!ev.trigger_event || !!ev.appraisal_thought;
+  const wellSupported = (ownedLabel || ownedShade || realPhrase) && anchor;
+
   // Quarantine (review action 4): a word the user rejected must never reach durable
   // memory (or, via memory, the weekly summary). Drop any draft whose text carries one.
   const rejectedWords = (ev.user_rejected_shades ?? []).map((s) => s.toLowerCase().trim()).filter(Boolean);
@@ -133,7 +143,7 @@ export function draftFromTurn(turn: CompanionTurn, userText: string, conversatio
   // 1) An explicit "remember this" — honour it with whatever is in play.
   if (askedToRemember) {
     const summary = ev.memory_note ?? (ev.user_words_raw ? `“${ev.user_words_raw}” felt worth keeping.` : null);
-    if (!summary || memoryBlocked(summary) || memoryBlocked(userText) || taintedByRejected(summary) || taintedByRejected(ev.user_words_raw)) return null;
+    if (!summary || memoryBlocked(summary) || memoryBlocked(userText) || taintedByRejected(summary) || taintedByRejected(ev.user_words_raw) || !wellSupported) return null;
     return baseCard({
       source_conversation_id: conversationId,
       type: ev.mixed_confirmed === 1 ? 'mixed_pattern' : 'emotional_pattern',
@@ -144,7 +154,7 @@ export function draftFromTurn(turn: CompanionTurn, userText: string, conversatio
   }
 
   // 2) A first shape just landed (unlock) with a model-written learning note.
-  if (turn.unlocked && ev.memory_note && !memoryBlocked(ev.memory_note) && !taintedByRejected(ev.memory_note) && !taintedByRejected(ev.user_words_raw)) {
+  if (turn.unlocked && wellSupported && ev.memory_note && !memoryBlocked(ev.memory_note) && !taintedByRejected(ev.memory_note) && !taintedByRejected(ev.user_words_raw)) {
     return baseCard({
       source_conversation_id: conversationId,
       type: ev.mixed_confirmed === 1 ? 'mixed_pattern' : 'emotional_pattern',
@@ -155,7 +165,7 @@ export function draftFromTurn(turn: CompanionTurn, userText: string, conversatio
   }
 
   // 3) A confirmed mixed structure (even without unlock) is a distinction worth offering.
-  if (ev.mixed_confirmed === 1 && ev.mixed_relation && ev.strands.length >= 2 && ev.memory_note && !memoryBlocked(ev.memory_note) && !taintedByRejected(ev.memory_note)) {
+  if (ev.mixed_confirmed === 1 && ev.mixed_relation && ev.strands.length >= 2 && ev.memory_note && !memoryBlocked(ev.memory_note) && !taintedByRejected(ev.memory_note) && (wellSupported || ev.strands.some((s) => s.source === 'user_stated' || s.source === 'user_confirmed'))) {
     return baseCard({
       source_conversation_id: conversationId,
       type: 'mixed_pattern',

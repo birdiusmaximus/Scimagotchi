@@ -48,6 +48,13 @@ check('mixed_confirmed draft becomes mixed_pattern',
       { family: 'hurt', shade: null, salience: 'background', source: 'user_stated' },
     ],
   }), 'yeah both', 'c1')?.type === 'mixed_pattern');
+// Memory stricter than chat (review #4): weak/companion-only evidence never stored.
+check('companion-hypothesis with no anchor is NOT stored even on unlock',
+  draftFromTurn(turn({}, { label_source: 'companion_hypothesis', shade_source: 'companion_hypothesis', user_phrase: null, body_cue: [], behaviour_action: [], trigger_event: null, appraisal_thought: null }), 'yeah', 'c1') === null);
+check('"remember this" with no user-owned evidence is NOT stored',
+  draftFromTurn(turn({ unlocked: false }, { label_source: 'companion_hypothesis', shade_source: 'companion_hypothesis', user_phrase: null, body_cue: [], behaviour_action: [], trigger_event: null, appraisal_thought: null, memory_note: 'Some vague feeling.' }), 'please remember this', 'c1') === null);
+check('owned label + a real anchor IS stored on unlock',
+  draftFromTurn(turn({}, { label_source: 'user_stated', body_cue: ['buzzing chest'], trigger_event: 'deadlines' }), 'it clicked', 'c1') !== null);
 // Rejected-word quarantine (review action 4): a word the user pushed away never reaches memory.
 check('a note containing a rejected word is NOT stored',
   draftFromTurn(turn({}, { user_rejected_shades: ['dread'], memory_note: 'A dread that sits in the chest.' }), 'it clicked', 'c1') === null);

@@ -271,6 +271,7 @@ for (const r of ordered) {
     const ann = [
       x.safetyCheck ? '⚠ safety check-in' : null,
       x.unlocked ? '🔓 unlocked' : null,
+      x.outcome ? `outcome ${x.outcome}` : null,
       x.progression ? `stage ${x.progression}` : null,
       x.shade ? `shade "${x.shade}"` : null,
       x.label_source ? `label ${x.label_source}` : null,

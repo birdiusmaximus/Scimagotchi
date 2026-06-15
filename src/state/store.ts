@@ -37,6 +37,7 @@ import {
 import type { ChipIntent, ConversationMode } from '@/services/ai/modeRouter';
 import { composeLearningSentence, summaryIsClean } from '@/services/ai/learningSentence';
 import { advanceStrands, migrateStage, PROGRESS_RANK, turnStrandFamilies, type AdvanceResult } from '@/services/ai/progressionEngine';
+import { evaluateOutcome } from '@/services/ai/outcome';
 import { hasEmotionAnchor, isUncertain } from '@/services/ai/stage';
 import { draftFromRejection, draftFromTurn, relevantMemory } from '@/services/memoryLedger';
 import { buildWeeklySummary } from '@/services/weeklySummary';
@@ -136,7 +137,7 @@ interface AppState {
   setApiKey: (key: string) => Promise<void>;
   setModel: (model: string) => Promise<void>;
   resetAllData: () => Promise<void>;
-  _updateProgress: (turn: CompanionTurn, conversationId: string, suppress: boolean) => Promise<AdvanceResult | null>;
+  _updateProgress: (turn: CompanionTurn, conversationId: string, suppress: boolean, priorFamily?: EmotionFamilyId | null) => Promise<AdvanceResult | null>;
 }
 
 /** Local calendar date (YYYY-M-D) — the boundary for the daily-hue midnight reset. */
@@ -460,7 +461,24 @@ export const useStore = create<AppState>((set, get) => ({
       // Suppress stage progression on safety-sensitive, tapped-chip, or uncertain
       // turns — the companion only learns from real, user-owned emotional evidence,
       // never from a button tap or "not sure".
-      const adv = await get()._updateProgress(turn, convId, !!safetyNote || !!intent || uncertain || repairActive);
+      const famNow = turn.event.emotion_family;
+      const facetsBefore = famNow ? (get().progress[famNow]?.facets ?? []) : [];
+      const adv = await get()._updateProgress(turn, convId, !!safetyNote || !!intent || uncertain || repairActive, prevDraft?.emotion_family ?? null);
+
+      // The turn's five-way OUTCOME (v3.1) — decided now that staging + facets are known.
+      // new_facet (a new owned FORM of an already-established family) needs the before/after
+      // facet delta + the prior stage, which only exist here. Set on the event so memory and
+      // UI read one source of truth, then persist it.
+      const facetSig = (fs: { form: string; count: number }[] | null | undefined) => (fs ?? []).map((f) => `${f.form}:${f.count}`).join('|');
+      const facetsGrew = facetSig(facetsBefore) !== facetSig(adv?.progress?.facets);
+      turn.event.outcome = evaluateOutcome({
+        unlocked: turn.unlocked,
+        event: turn.event,
+        userText: clean,
+        progressBefore: adv ? adv.from : null,
+        facetsGrew,
+      });
+      await emotionEventsRepo.upsert(turn.event).catch(() => {});
 
       // A typed correction may give us the word the companion was reaching for —
       // record it as the preferred session label (never auto-saved to memory).
@@ -538,14 +556,16 @@ export const useStore = create<AppState>((set, get) => ({
     }
   },
 
-  _updateProgress: async (turn, conversationId, suppress) => {
+  _updateProgress: async (turn, conversationId, suppress, priorFamily) => {
     // Strand-aware: advance EVERY feeling this turn surfaces (primary + any strands),
     // so a feeling underneath another is tracked and never lost when the focus shifts.
     const fams = turnStrandFamilies(turn.event);
     const existing: Partial<Record<EmotionFamilyId, EmotionProgress | null>> = {};
     for (const f of fams) existing[f] = get().progress[f] ?? (await emotionProgressRepo.get(f).catch(() => null));
+    // The prior foreground must be loaded too, so a shift can retain it as a layer (#8).
+    if (priorFamily && !(priorFamily in existing)) existing[priorFamily] = get().progress[priorFamily] ?? (await emotionProgressRepo.get(priorFamily).catch(() => null));
 
-    const { results, primary } = advanceStrands(existing, turn, conversationId, { suppress });
+    const { results, primary } = advanceStrands(existing, turn, conversationId, { suppress, priorFamily });
 
     if (results.length) {
       const next = { ...get().progress };

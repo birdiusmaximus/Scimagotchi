@@ -180,9 +180,12 @@ const server = http.createServer(async (req, res) => {
       // Strand-aware: advance every feeling this turn surfaces, not just the primary.
       const suppress = !!safetyNote || !!intent || uncertain || repairActive;
       const fam = turn.event.emotion_family;
+      // The prior foreground — kept as a layer if the focus has shifted away from it (#8).
+      const priorFam = c.prevEvent?.emotion_family ?? null;
       const existingProg = {};
       for (const f of turnStrandFamilies(turn.event)) existingProg[f] = c.progress[f] ?? null;
-      const strandAdv = advanceStrands(existingProg, turn, cid, { suppress });
+      if (priorFam && !(priorFam in existingProg)) existingProg[priorFam] = c.progress[priorFam] ?? null;
+      const strandAdv = advanceStrands(existingProg, turn, cid, { suppress, priorFamily: priorFam });
       for (const r of strandAdv.results) c.progress[r.progress.emotion_family] = r.progress;
       const adv = strandAdv.primary ?? { from: 'unseen', to: 'unseen', advanced: false, progress: null, capabilities: {} };
       // The strands carried this conversation, with their highest stage so far.

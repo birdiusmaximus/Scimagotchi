@@ -6,7 +6,9 @@
  * Grows across the v3.1 phases. Run: npm run test:v3_1 (rebundles, then executes).
  */
 import {
+  advanceStrands,
   draftFromTurn,
+  emptyProgress,
   evaluateOutcome,
   hasEmotionAnchor,
   hasUserOwnedConcreteDetail,
@@ -112,6 +114,24 @@ check('memory: edge_found writes NOTHING', !!draftFromTurn(mkTurn(false, 'edge_f
 check('memory: hypothesis writes NOTHING', !!draftFromTurn(mkTurn(false, 'hypothesis', { label_source: 'companion_hypothesis', body_cue: [], trigger_event: null }), 'maybe', 'c1'), false);
 check('memory: explicit "remember this" is still honoured on a held turn (user choice)',
   !!draftFromTurn(mkTurn(false, 'held_unnamed'), 'please remember this', 'c1'), true);
+
+// ── Phase 4: shift-state retention (#8) ──────────────────────────────────────
+// anger (already first-shaped) softens into sadness: the foreground moves to sadness while
+// anger is kept as a layer at its own stage — preserved, not lost, and not still "dominant".
+const prog = (family, stage) => ({ ...emptyProgress(family), current_stage: stage });
+const shiftTurn = {
+  reply: 'ok', unlocked: false, tone: 'warm', stage: 'named',
+  event: ev({ emotion_family: 'sadness', emotion_shade: 'heavy', label_source: 'user_stated', shade_source: 'user_stated', body_cue: ['heavy chest'], trigger_event: null, strands: [] }),
+};
+const shiftAdv = advanceStrands({ anger: prog('anger', 'first_shape'), sadness: null }, shiftTurn, 'c1', { priorFamily: 'anger' });
+check('shift: the foreground moves to the new family (sadness is primary)',
+  shiftAdv.primary?.progress.emotion_family, 'sadness');
+check('shift: the prior family (anger) is retained as a layer at its stage',
+  shiftAdv.results.find((r) => r.progress.emotion_family === 'anger')?.to, 'first_shape');
+check('shift: retaining the prior layer never lowers or advances it',
+  shiftAdv.results.find((r) => r.progress.emotion_family === 'anger')?.advanced, false);
+check('shift: retention is opt-in — no priorFamily means the prior family is not carried',
+  advanceStrands({ anger: prog('anger', 'first_shape'), sadness: null }, shiftTurn, 'c1', {}).results.some((r) => r.progress.emotion_family === 'anger'), false);
 
 // sanity: the fixture is anchored by default (so the rules above are exercised correctly)
 check('fixture sanity: default event has an anchor', hasEmotionAnchor(ev()), true);

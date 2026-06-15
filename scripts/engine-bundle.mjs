@@ -1668,6 +1668,29 @@ function advanceStrands(existing, turn, conversationId, opts = {}) {
       };
       results.push({ progress: p, advanced: to !== from, from, to, capabilities: {} });
     }
+    const prior = opts.priorFamily;
+    if (prior && prior !== primaryFam && !seen.has(prior) && existing[prior]) {
+      seen.add(prior);
+      const prev = existing[prior];
+      const from = migrateStage(prev.current_stage);
+      results.push({
+        progress: {
+          ...prev,
+          confirmed_shades: [...prev.confirmed_shades],
+          common_triggers: [...prev.common_triggers],
+          common_body_cues: [...prev.common_body_cues],
+          common_user_phrases: [...prev.common_user_phrases],
+          facets: prev.facets ? [...prev.facets] : [],
+          current_stage: from,
+          last_conversation_id: conversationId,
+          updated_at: nowIso()
+        },
+        advanced: false,
+        from,
+        to: from,
+        capabilities: {}
+      });
+    }
   }
   const deepest = results.reduce((d, r) => PROGRESS_RANK[r.to] > PROGRESS_RANK[d] ? r.to : d, "unseen");
   return { results, primary, deepest };

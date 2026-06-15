@@ -299,7 +299,7 @@ export function advanceStrands(
   existing: Partial<Record<EmotionProgress['emotion_family'], EmotionProgress | null>>,
   turn: CompanionTurn,
   conversationId: string,
-  opts: { suppress?: boolean } = {},
+  opts: { suppress?: boolean; priorFamily?: EmotionProgress['emotion_family'] | null } = {},
 ): StrandAdvance {
   const ev = turn.event;
   const primaryFam = ev.emotion_family;
@@ -333,6 +333,35 @@ export function advanceStrands(
         updated_at: nowIso(),
       };
       results.push({ progress: p, advanced: to !== from, from, to, capabilities: {} });
+    }
+
+    // Retain the PRIOR foreground as a layer when the focus has shifted away from it
+    // (review #8): a feeling that softened into another — anger into sadness — is kept at
+    // its own stage instead of being dropped, while the NEW family stays the foreground
+    // (primary). Monotonic: it is only carried, never lowered and never advanced here. Opt-in
+    // (priorFamily), so callers that don't pass it — e.g. the unit suite — are unaffected.
+    const prior = opts.priorFamily;
+    if (prior && prior !== primaryFam && !seen.has(prior) && existing[prior]) {
+      seen.add(prior);
+      const prev = existing[prior]!;
+      const from = migrateStage(prev.current_stage);
+      results.push({
+        progress: {
+          ...prev,
+          confirmed_shades: [...prev.confirmed_shades],
+          common_triggers: [...prev.common_triggers],
+          common_body_cues: [...prev.common_body_cues],
+          common_user_phrases: [...prev.common_user_phrases],
+          facets: prev.facets ? [...prev.facets] : [],
+          current_stage: from,
+          last_conversation_id: conversationId,
+          updated_at: nowIso(),
+        },
+        advanced: false,
+        from,
+        to: from,
+        capabilities: {},
+      });
     }
   }
 

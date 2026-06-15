@@ -153,8 +153,13 @@ export function draftFromTurn(turn: CompanionTurn, userText: string, conversatio
     });
   }
 
-  // 2) A first shape just landed (unlock) with a model-written learning note.
-  if (turn.unlocked && wellSupported && ev.memory_note && !memoryBlocked(ev.memory_note) && !taintedByRejected(ev.memory_note) && !taintedByRejected(ev.user_words_raw)) {
+  // 2) A first shape just landed (unlock = outcome 'understood'), OR a new FORM of an
+  // already-known emotion took shape (outcome 'new_facet') — both are genuinely user-owned
+  // learning, so both may persist (review #17/#3). Every other outcome (edge_found,
+  // held_unnamed, hypothesis) is never unlocked and not a facet, so it falls through here
+  // and writes nothing: the companion can hold an edge in conversation without recording it.
+  const memoryWorthyOutcome = turn.unlocked || ev.outcome === 'new_facet';
+  if (memoryWorthyOutcome && wellSupported && ev.memory_note && !memoryBlocked(ev.memory_note) && !taintedByRejected(ev.memory_note) && !taintedByRejected(ev.user_words_raw)) {
     return baseCard({
       source_conversation_id: conversationId,
       type: ev.mixed_confirmed === 1 ? 'mixed_pattern' : 'emotional_pattern',

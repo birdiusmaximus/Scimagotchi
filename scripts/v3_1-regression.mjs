@@ -6,6 +6,7 @@
  * Grows across the v3.1 phases. Run: npm run test:v3_1 (rebundles, then executes).
  */
 import {
+  draftFromTurn,
   evaluateOutcome,
   hasEmotionAnchor,
   hasUserOwnedConcreteDetail,
@@ -92,6 +93,25 @@ check('final-turn: a bare goodbye carries no user-owned concrete detail this mes
   hasUserOwnedConcreteDetail(ev(), 'thanks, that helped, bye', []), false);
 check('final-turn: a felt phrase in the final message IS user-owned detail',
   hasUserOwnedConcreteDetail(ev(), 'it sat heavy in my chest', []), true);
+
+// ── Phase 3: outcome-gated memory (#17, #3) ──────────────────────────────────
+// Durable memory only from understood (unlock) or new_facet — never from a held edge,
+// an unnamed hold, or a bare hypothesis. A wellSupported, model-noted turn at each outcome:
+const mkTurn = (unlocked, outcome, evOver = {}) => ({
+  reply: 'ok', unlocked, tone: 'warm', stage: unlocked ? 'understood' : 'shaped',
+  event: ev({
+    label_source: 'user_stated', shade_source: 'user_stated', emotion_shade: 'restless',
+    body_cue: ['tight chest'], trigger_event: 'the meeting',
+    memory_note: 'A restless edge shows up before meetings.', outcome, ...evOver,
+  }),
+});
+check('memory: understood (unlock) writes a card', !!draftFromTurn(mkTurn(true, 'understood'), 'i feel restless', 'c1'), true);
+check('memory: new_facet (new form of a known feeling) writes a card', !!draftFromTurn(mkTurn(false, 'new_facet'), 'restless before meetings', 'c1'), true);
+check('memory: held_unnamed writes NOTHING', !!draftFromTurn(mkTurn(false, 'held_unnamed'), "i don't know really", 'c1'), false);
+check('memory: edge_found writes NOTHING', !!draftFromTurn(mkTurn(false, 'edge_found'), 'right before the meeting', 'c1'), false);
+check('memory: hypothesis writes NOTHING', !!draftFromTurn(mkTurn(false, 'hypothesis', { label_source: 'companion_hypothesis', body_cue: [], trigger_event: null }), 'maybe', 'c1'), false);
+check('memory: explicit "remember this" is still honoured on a held turn (user choice)',
+  !!draftFromTurn(mkTurn(false, 'held_unnamed'), 'please remember this', 'c1'), true);
 
 // sanity: the fixture is anchored by default (so the rules above are exercised correctly)
 check('fixture sanity: default event has an anchor', hasEmotionAnchor(ev()), true);

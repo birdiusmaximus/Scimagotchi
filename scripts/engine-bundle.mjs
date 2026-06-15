@@ -1386,7 +1386,8 @@ function draftFromTurn(turn, userText, conversationId) {
       emotion_family: ev.emotion_family
     });
   }
-  if (turn.unlocked && wellSupported && ev.memory_note && !memoryBlocked(ev.memory_note) && !taintedByRejected(ev.memory_note) && !taintedByRejected(ev.user_words_raw)) {
+  const memoryWorthyOutcome = turn.unlocked || ev.outcome === "new_facet";
+  if (memoryWorthyOutcome && wellSupported && ev.memory_note && !memoryBlocked(ev.memory_note) && !taintedByRejected(ev.memory_note) && !taintedByRejected(ev.user_words_raw)) {
     return baseCard({
       source_conversation_id: conversationId,
       type: ev.mixed_confirmed === 1 ? "mixed_pattern" : "emotional_pattern",

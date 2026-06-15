@@ -81,6 +81,8 @@ function analyse(file) {
 
   // ── Red flags (specific true-failure types, review action 7) ──
   const flags = [];
+  // Non-failure audit tags (review #5): an echoed word the user DID later own is not a miss.
+  const echoTags = [];
 
   // Unlock-QUALITY flags, evaluated on the first unlock turn — what was the unlock
   // actually built on? These separate a real owned first shape from a thin one.
@@ -98,7 +100,14 @@ function analyse(file) {
     if (shade) {
       const prevReply = idx > 0 ? (comp[idx - 1].reply || '') : '';
       const userEverSaid = rx(shade).test(utext) || comp.slice(0, idx).some((x) => rx(shade).test(x.userText || ''));
-      if (rx(shade).test(prevReply) && !userEverSaid) flags.push('unlock_from_echoed_companion_word');
+      if (rx(shade).test(prevReply)) {
+        // The unlock shade was in the companion's previous reply — split the manual-audit
+        // categories (#5/#15) instead of one noisy flag: a word the user DID later voice is
+        // a legitimate owned unlock (not a failure); a still-hypothesis label is the worst.
+        if (userEverSaid) echoTags.push('echoed_then_owned');
+        else if (firstUnlock.label_source === 'companion_hypothesis') flags.push('echoed_companion_hypothesis');
+        else flags.push('echoed_never_owned');
+      }
     }
   }
 
@@ -138,11 +147,24 @@ function analyse(file) {
     }
   }
 
+  // Detector taxonomy (#15): classify WHY a conversation is (or isn't) flagged, so we stop
+  // over-correcting on noise — harmful overclaim vs harmless humble wording vs a detector
+  // false-positive (flagged but actually a wise partial) vs a legit owned unlock vs partial work.
+  const uniqueFlags = [...new Set(flags)];
+  const partial = outcomesSeen.some((o) => o === 'held_unnamed' || o === 'edge_found' || o === 'new_facet');
+  const taxonomy = [];
+  if (uniqueFlags.includes('overclaim_unlock')) taxonomy.push('harmful_overclaim');
+  if (humbleAfterUnlock > 0) taxonomy.push('harmless_humble');
+  if (!firstUnlock && partial) taxonomy.push('partial_understanding');
+  if (uniqueFlags.length && !firstUnlock && partial) taxonomy.push('detector_fp');
+  if (firstUnlock && !uniqueFlags.includes('non_owned_unlock')) taxonomy.push('legit_owned');
+
   return {
     cid, emotion, archetype, totalTurns: userCount,
     unlocked: !!firstUnlock, unlockedOnTurn: firstUnlock ? firstUnlock.n : null,
     deepestStage: deepest, strandCount: strandList.length, momentsSeen, outcomesSeen,
-    flags: [...new Set(flags)], humbleAfterUnlock, safetyPause: turns.some((x) => x.safety || x.safetyCheck), turns,
+    flags: uniqueFlags, echoTags: [...new Set(echoTags)], taxonomy, humbleAfterUnlock,
+    safetyPause: turns.some((x) => x.safety || x.safetyCheck), turns,
   };
 }
 
@@ -199,12 +221,18 @@ const outcomeTally = {};
 for (const r of rows) for (const o of r.outcomesSeen) outcomeTally[o] = (outcomeTally[o] ?? 0) + 1;
 const PARTIAL_OUTCOMES = new Set(['edge_found', 'held_unnamed', 'new_facet']);
 const partialConvos = rows.filter((r) => !r.unlocked && r.outcomesSeen.some((o) => PARTIAL_OUTCOMES.has(o)));
+const taxonomyTally = {};
+for (const r of rows) for (const t of r.taxonomy ?? []) taxonomyTally[t] = (taxonomyTally[t] ?? 0) + 1;
+const echoTally = {};
+for (const r of rows) for (const e of r.echoTags ?? []) echoTally[e] = (echoTally[e] ?? 0) + 1;
 out.push('', '## System-wide', '');
 out.push(`- **${rows.length}** conversations · **${rows.filter((r) => r.unlocked).length}** unlocked (${Math.round((100 * rows.filter((r) => r.unlocked).length) / rows.length)}%) · **${rows.filter((r) => r.strandCount >= 2).length}** tracked ≥2 strands.`);
 out.push(`- **Red flags:** ${Object.entries(flagTally).map(([k, n]) => `${k}=${n}`).join(' · ') || 'none'} (across ${rows.filter((r) => r.flags.length).length} conversations).`);
 out.push(`- **Moment types seen:** ${Object.entries(momentTally).sort((a, b) => b[1] - a[1]).map(([k, n]) => `${k}=${n}`).join(' · ') || 'none'}.`);
 out.push(`- **Outcomes reached:** ${Object.entries(outcomeTally).sort((a, b) => b[1] - a[1]).map(([k, n]) => `${k}=${n}`).join(' · ') || 'none'} _(conversations reaching each)_.`);
 out.push(`- **Successful partial outcomes:** ${partialConvos.length} non-unlock conversation(s) reached edge_found / held_unnamed / new_facet — a wise resting place ("I understand the edge / we're leaving it unnamed / a new form of a known feeling"), counted as success, NOT a missed unlock.`);
+out.push(`- **Detector taxonomy (#15):** ${Object.entries(taxonomyTally).sort((a, b) => b[1] - a[1]).map(([k, n]) => `${k}=${n}`).join(' · ') || 'none'} — only harmful_overclaim + the echoed_never_owned/companion_hypothesis flags are real failures; harmless_humble / detector_fp / partial_understanding / legit_owned are not.`);
+if (Object.keys(echoTally).length) out.push(`- **Echo audit (#5):** ${Object.entries(echoTally).map(([k, n]) => `${k}=${n}`).join(' · ')} — echoed_then_owned means the user later voiced the word themselves (a legitimate owned unlock, not echo-laundering).`);
 const safetyRows = rows.filter((r) => r.safetyPause);
 out.push(`- **Safety pauses:** ${safetyRows.length} conversation(s)${safetyRows.length ? ` — ${safetyRows.map((r) => r.cid.replace('mx__', '')).join(', ')} (review for false-positives vs intended caution on ambiguous phrasing)` : ''}.`);
 const humbleTotal = rows.reduce((n, r) => n + (r.humbleAfterUnlock ?? 0), 0);

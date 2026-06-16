@@ -187,6 +187,29 @@ export function userIsResisting(history: Turn[], currentUserText: string): boole
   return lastResist >= 0 && lastResist >= lastReopen;
 }
 
+// Single-word, non-vague feeling words the user might own as a shade. Multi-word low-access
+// phrases ("behind glass") are deliberately excluded — those are captured as user_phrase, not
+// a one-word shade. Used so a user-voiced feeling word beats a companion hypothesis (#5).
+const SHADE_WORDS = new RegExp(
+  `\\b(${[...new Set(Object.values(EMOTION_MAPS).flatMap((m) => m.familyKeywords))]
+    .filter((w) => w && !VAGUE.test(w) && !w.includes(' ') && !w.includes('-') && w.length >= 3)
+    .map((w) => w.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+    .join('|')})\\b`,
+  'i',
+);
+
+/**
+ * The single feeling word the user voiced in THIS message, if any (review #5). The user's own
+ * word for the feeling should win over a companion's taxonomy guess — anger family but "robbed"
+ * if that's what they said. Returns the matched word lower-cased, or null. (Only base feeling
+ * words are detectable here; an exotic owned shade the model extracts is already promoted by
+ * shadeIsUserOwned — this is the deterministic backstop for when the model picked its own word.)
+ */
+export function userVoicedShade(userText: string): string | null {
+  const m = (userText ?? '').toLowerCase().replace(/[’'`]/g, "'").match(SHADE_WORDS);
+  return m ? m[0].toLowerCase() : null;
+}
+
 export interface EvidenceLedger {
   concreteFromUser: boolean; // the gate signal — at least one user-voiced concrete detail
   userTurns: number;

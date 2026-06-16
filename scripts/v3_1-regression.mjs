@@ -17,6 +17,7 @@ import {
   labelNamedByUser,
   reintroducesWord,
   userIsResisting,
+  userVoicedShade,
 } from './engine-bundle.mjs';
 
 let pass = 0;
@@ -188,6 +189,12 @@ check('resist: an explicit re-open lifts it',
   userIsResisting([U('i dont want to get into it')], 'actually yeah i do want to talk about it'), false);
 check('resist: an ordinary willing turn is not resisting',
   userIsResisting([], 'i feel anxious about the exam tomorrow'), false);
+
+// ── v3.2 #5: a user-voiced feeling word beats a companion taxonomy guess ─────
+check('shade: a voiced feeling word is detected', userVoicedShade('i just feel so angry right now'), 'angry');
+check('shade: a vague word is not a voiced shade', userVoicedShade('dunno, kind of nothing'), null);
+check('shade: no feeling word -> null', userVoicedShade('the meeting ran late and i left'), null);
+check('shade: a multi-word low-access phrase is NOT a one-word shade', userVoicedShade('it feels behind glass'), null);
 
 // sanity: the fixture is anchored by default (so the rules above are exercised correctly)
 check('fixture sanity: default event has an anchor', hasEmotionAnchor(ev()), true);

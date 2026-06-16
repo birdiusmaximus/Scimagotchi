@@ -33,7 +33,7 @@ import {
   type ResponseShape,
 } from '@/services/ai/responsePolicy';
 import { needsOwnershipRepair, softenUnownedEmotionReply } from '@/services/ai/replyOwnership';
-import { hasUserOwnedConcreteDetail, userHasOriginated, userIsResisting, reintroducesWord, intenseUserWord, INTENSE_FEELING, SOFTENING_CUE } from '@/services/ai/evidenceLedger';
+import { hasUserOwnedConcreteDetail, userHasOriginated, userIsResisting, reintroducesWord, userVoicedShade, intenseUserWord, INTENSE_FEELING, SOFTENING_CUE } from '@/services/ai/evidenceLedger';
 import {
   detectShadeRejection,
   evaluateStage,
@@ -344,6 +344,19 @@ export async function openaiGenerateTurn(
     ev.emotion_shade = prev.emotion_shade;
     ev.shade_source = prev.shade_source ?? 'user_stated';
     ev.candidate_shade = null;
+  }
+
+  // Owned-shade-wins backstop (review #5): if the shade the engine landed on is the companion's
+  // OWN hypothesis but the user voiced a feeling word THIS turn, the user's word is the shade —
+  // their word beats the companion's taxonomy guess. (An exotic owned shade the model extracted
+  // is already user_stated via shadeIsUserOwned; this catches the case it kept its own word.)
+  if (ev.shade_source === 'companion_hypothesis' && !input.intent && !uncertainTurn && !clarifyingQuestion) {
+    const voiced = userVoicedShade(input.userText);
+    if (voiced && voiced !== (ev.emotion_shade ?? '').toLowerCase().trim()) {
+      ev.emotion_shade = voiced;
+      ev.shade_source = 'user_stated';
+      ev.candidate_shade = null;
+    }
   }
 
   if (!input.intent) {

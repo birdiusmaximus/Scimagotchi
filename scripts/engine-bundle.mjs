@@ -1828,6 +1828,14 @@ function userIsResisting(history, currentUserText) {
   });
   return lastResist >= 0 && lastResist >= lastReopen;
 }
+var SHADE_WORDS = new RegExp(
+  `\\b(${[...new Set(Object.values(EMOTION_MAPS).flatMap((m) => m.familyKeywords))].filter((w) => w && !VAGUE2.test(w) && !w.includes(" ") && !w.includes("-") && w.length >= 3).map((w) => w.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})\\b`,
+  "i"
+);
+function userVoicedShade(userText) {
+  const m = (userText ?? "").toLowerCase().replace(/[’'`]/g, "'").match(SHADE_WORDS);
+  return m ? m[0].toLowerCase() : null;
+}
 var BARE_AGREEMENT = /^(yeah?|yep|yes|exactly|totally|for sure|right|you'?re right|that ?one|that'?s the one|true|mm+|ok(ay)?|sure|definitely|absolutely|i guess|that fits|that'?s it|you got it|you nailed it)[\s.,!]*$/i;
 var HEDGE = /^(maybe|kind of|kinda|sort of|sorta|i guess|not really|dunno|idk|unsure|hard to say|hmm|who knows|i dont know|i don'?t know)[\s.,!?]*$/i;
 function buildLedger(ev, userText, history) {
@@ -3526,6 +3534,7 @@ export {
   userConfirmsLabel,
   userHasOriginated,
   userIsResisting,
+  userVoicedShade,
   varietyDirective,
   varietySignals,
   visualTintFamilies

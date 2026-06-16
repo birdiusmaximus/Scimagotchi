@@ -2463,6 +2463,14 @@ function userIsResisting(history, currentUserText) {
   });
   return lastResist >= 0 && lastResist >= lastReopen;
 }
+var SHADE_WORDS = new RegExp(
+  `\\b(${[...new Set(Object.values(EMOTION_MAPS).flatMap((m) => m.familyKeywords))].filter((w) => w && !VAGUE2.test(w) && !w.includes(" ") && !w.includes("-") && w.length >= 3).map((w) => w.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})\\b`,
+  "i"
+);
+function userVoicedShade(userText) {
+  const m = (userText ?? "").toLowerCase().replace(/[’'`]/g, "'").match(SHADE_WORDS);
+  return m ? m[0].toLowerCase() : null;
+}
 
 // src/utils/text.ts
 function stripEmDashes(text) {
@@ -2630,6 +2638,14 @@ ${extraSystem}` : system },
     ev.emotion_shade = prev.emotion_shade;
     ev.shade_source = prev.shade_source ?? "user_stated";
     ev.candidate_shade = null;
+  }
+  if (ev.shade_source === "companion_hypothesis" && !input.intent && !uncertainTurn && !clarifyingQuestion) {
+    const voiced = userVoicedShade(input.userText);
+    if (voiced && voiced !== (ev.emotion_shade ?? "").toLowerCase().trim()) {
+      ev.emotion_shade = voiced;
+      ev.shade_source = "user_stated";
+      ev.candidate_shade = null;
+    }
   }
   if (!input.intent) {
     const ownPhrase = uncertainTurn || clarifyingQuestion ? "" : (ev.user_words_raw ?? "").trim() || (input.userText ?? "").trim();

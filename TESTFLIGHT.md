@@ -7,8 +7,10 @@ suits this Mac (no Homebrew / a too-old system Ruby). The native keyboard handli
 lift), so the keyboard behaves on a real device the way it does in the design.
 
 > The Capacitor wrap (`capacitor.config.ts`, `CAPACITOR*.md`) stays in the repo as an alternative
-> WebView path, but it is **not** used here — EAS ships native. The `@capacitor/*` deps are inert
-> for the native build (the bridge no-ops off-web).
+> WebView path, but it is **not** used here — EAS ships native. The `@capacitor/*` packages ship
+> iOS podspecs, so `react-native.config.js` excludes them from autolinking — otherwise their
+> `Capacitor`/`CapacitorCordova` pods get pulled into the native Podfile and break `pod install`
+> on EAS. With them excluded the bridge no-ops off-web, so the native build is unaffected.
 
 ## What's already configured
 - `app.json`: `ios.bundleIdentifier` + `android.package` = `health.gig.scimagotchi`, build/version numbers.

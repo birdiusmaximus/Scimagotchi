@@ -129,7 +129,22 @@ export const EXIT_CUE =
  * isUncertain ("I don't know what I feel") — here they may know, and choose to leave it.
  */
 export const NAMING_BOUNDARY =
-  /\b(leave it unnamed|leaving it unnamed|don'?t want to (name|label|pin|define|put a word|put a name on) ?(it|this)?|don'?t need to (name|label|figure (it|this) out|pin)|rather not (name|label|put a word|pin it down|define)|don'?t have to (name|figure) ?(it|this)?|happy to leave it (unnamed|be|as is)|prefer (not to name|to leave it)|leave it (as it is|where it is)|don'?t want to pin it down|cant? (quite )?put a word on it|won'?t put a word on it|some things don'?t need (a name|naming))\b/i;
+  /\b(leave it unnamed|leaving it unnamed|don'?t want to (name|label|pin|define|put a word|put a name on) ?(it|this)?|don'?t need to (name|label|figure (it|this) out|pin)|rather not (name|label|put a word|pin it down|define)|don'?t have to (name|figure) ?(it|this)?|happy to leave it (unnamed|be|as is)|prefer (not to name|to leave it)|leave it (as it is|where it is)|don'?t want to pin it down|cant? (quite )?put a word on it|won'?t put a word on it|some things don'?t need (a name|naming)|(force|put|squeeze|cram|jam) it into a box|in?to a box|box it (up|in)|don'?t want to make it (a thing|into a thing|clean|tidy|neat)|make it (a thing|into a thing|too clean|too tidy))\b/i;
+
+/** A thanks / "you got it" affirmation — a LANDING, not new material. On its own (an echo of the
+ *  companion's words, with no fresh user-owned naming) it must not be the unlock turn (review #4):
+ *  ending warmly or saying "that helped" is gratitude, not the moment the feeling crystallised. */
+export const THANKS_AFFIRM =
+  /\b(that (really )?(helped|helps)|this (really )?(helped|helps)|you'?ve? got it|that'?s (exactly )?it\b|that'?s exactly right|you nailed it|exactly that|that'?s the one|spot on|you (get|understand|got) (it|me)|perfectly put|well put|yes,? exactly|thank you|thanks( so much| for (that|this|listening))?)\b/i;
+
+/** Absence / low-access shade words (review #2) — they name a feeling being UNAVAILABLE, so a
+ *  casual mention while hedging is not a confirmed shape; unlock needs clear ownership of them. */
+export const ABSENCE_SHADE =
+  /^(flat|numb|numbness|blank|hollow|empty|emptiness|shut ?down|foggy|fog|disconnected|detached|distant|grey|gray|switched ?off|nothing|nothingness|void|vacant)$/i;
+
+/** Soft hedges that mean a word was floated, not owned ("maybe", "i guess", "kind of"). */
+export const LOOSE_HEDGE =
+  /\b(maybe|i guess|kinda|kind of|sort of|sorta|i think|i suppose|probably|or something|not really sure|cant really tell|hard to say)\b/i;
 
 /** True when the user explicitly asks for help naming the feeling (§6.2). */
 export function askedForNamingHelp(userText: string): boolean {

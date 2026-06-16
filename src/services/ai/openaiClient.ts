@@ -17,8 +17,11 @@ import {
   askedForNamingHelp,
   doorwayOf,
   dropTrailingQuestion,
+  ABSENCE_SHADE,
   EXIT_CUE,
+  LOOSE_HEDGE,
   NAMING_BOUNDARY,
+  THANKS_AFFIRM,
   isDuplicateReply,
   isOptionMenu,
   isTentativeReply,
@@ -414,6 +417,14 @@ export async function openaiGenerateTurn(
   // re-opened it), revealing a detail is useful reflection but not an unlock — wait for them to
   // choose to explore. Reduces unlock_from_resistance.
   const resisting = userIsResisting(input.history ?? [], input.userText);
+  // Flat/absence loose-word gate (review v3.2 #2): an absence-state word ("blank", "numb",
+  // "shut down") floated WHILE hedging ("maybe", "i guess", "kind of") is not a confirmed
+  // shape — hold it as an edge until the user clearly says the word fits.
+  const absenceWhileLoose = ABSENCE_SHADE.test((ev.emotion_shade ?? '').trim()) && LOOSE_HEDGE.test(input.userText);
+  // Thanks/echo landing (review v3.2 #4): "that helped", "you got it", "that's exactly it" —
+  // gratitude or an echo of the companion's word, not new material. Not the unlock turn unless
+  // the user freshly NAMES and OWNS the feeling in this same message.
+  const thanksEcho = THANKS_AFFIRM.test(input.userText) && !namesAndOwnsThisMessage;
   const blockUnlock =
     !!input.safetyNote ||
     !!input.intent ||
@@ -425,6 +436,8 @@ export async function openaiGenerateTurn(
     !!input.repairActive ||
     savouring ||
     resisting ||
+    absenceWhileLoose ||
+    thanksEcho ||
     NAMING_BOUNDARY.test(input.userText) || // chose not to name it = a boundary, not understanding (#2)
     (EXIT_CUE.test(input.userText) && !namesAndOwnsThisMessage);
   if (blockUnlock && stage === 'understood' && prevStage !== 'understood' && prevStage !== 'deepened') {

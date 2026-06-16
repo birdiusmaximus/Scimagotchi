@@ -6,9 +6,13 @@
  * Grows across the v3.1 phases. Run: npm run test:v3_1 (rebundles, then executes).
  */
 import {
+  ABSENCE_SHADE,
   advanceStrands,
   buildSystemPrompt,
   detectFamily,
+  LOOSE_HEDGE,
+  NAMING_BOUNDARY,
+  THANKS_AFFIRM,
   draftFromTurn,
   emptyProgress,
   evaluateOutcome,
@@ -195,6 +199,18 @@ check('shade: a voiced feeling word is detected', userVoicedShade('i just feel s
 check('shade: a vague word is not a voiced shade', userVoicedShade('dunno, kind of nothing'), null);
 check('shade: no feeling word -> null', userVoicedShade('the meeting ran late and i left'), null);
 check('shade: a multi-word low-access phrase is NOT a one-word shade', userVoicedShade('it feels behind glass'), null);
+
+// ── v3.2 precision pass: box boundary, thanks-echo, absence loose-word ───────
+check('box: "force it into a box" is a naming boundary', NAMING_BOUNDARY.test('i dont want to force it into a box'), true);
+check('box: "make it into a thing" is a naming boundary', NAMING_BOUNDARY.test('i dont want to make it into a thing'), true);
+check('thanks-echo: "that really helped, thanks" is a thanks/landing', THANKS_AFFIRM.test('that really helped, thanks'), true);
+check('thanks-echo: "you got it, exactly that" is a thanks/landing', THANKS_AFFIRM.test('yeah you got it, exactly that'), true);
+check('thanks-echo: a real owned line is NOT a thanks/landing', THANKS_AFFIRM.test('it sits heavy in my chest before meetings'), false);
+check('absence: "blank" is an absence-state shade', ABSENCE_SHADE.test('blank'), true);
+check('absence: "shut down" is an absence-state shade', ABSENCE_SHADE.test('shut down'), true);
+check('absence: a real feeling word is NOT an absence shade', ABSENCE_SHADE.test('furious'), false);
+check('hedge: "kind of, i guess" is a loose hedge', LOOSE_HEDGE.test('its kind of that, i guess'), true);
+check('hedge: a firm statement is not a loose hedge', LOOSE_HEDGE.test('it is exactly that'), false);
 
 // sanity: the fixture is anchored by default (so the rules above are exercised correctly)
 check('fixture sanity: default event has an anchor', hasEmotionAnchor(ev()), true);

@@ -195,11 +195,38 @@ const RESULT = {
   },
 };
 
-// Full 150-spec matrix, OR a targeted gap-fill subset when `args` is a list of cids
-// (each cid is mx__<emotion>__<archetype>__NN, so emotion+archetype parse straight out).
+// The built-in TARGETED v3.2 set (8 weak surfaces × 3 emotions) — the DEFAULT, so a missing /
+// mis-delivered `args` can never fall through to the full 150 by accident again.
+const TARGETED_CIDS = [
+  'mx__fear__uncertain__00', 'mx__flat__uncertain__01', 'mx__shame__uncertain__02',
+  'mx__pressure__shallow_agreement__00', 'mx__hurt__shallow_agreement__01', 'mx__sadness__shallow_agreement__02',
+  'mx__fear__final_turn__00', 'mx__anger__final_turn__01', 'mx__sadness__final_turn__02',
+  'mx__fear__rejected_reentry__00', 'mx__shame__rejected_reentry__01', 'mx__anger__rejected_reentry__02',
+  'mx__anger__shift_state__00', 'mx__pressure__shift_state__01', 'mx__hurt__shift_state__02',
+  'mx__sadness__safety_fp__00', 'mx__shame__safety_fp__01', 'mx__flat__safety_fp__02',
+  'mx__joy__constellation__00', 'mx__calm__constellation__01', 'mx__anger__constellation__02',
+  'mx__flat__memory_after_partial__00', 'mx__fear__memory_after_partial__01', 'mx__sadness__memory_after_partial__02',
+];
+
+// Normalize `args`: the Workflow harness can deliver it as a JSON STRING rather than an array
+// (that was the bug that quietly ran the full 150). Parse a string, accept an array; only the
+// literal 'full' runs the whole matrix — anything empty/invalid defaults to the targeted set.
+let cidArg = args;
+if (typeof cidArg === 'string') {
+  const s = cidArg.trim();
+  if (s !== 'full') {
+    try { cidArg = JSON.parse(s); } catch { cidArg = s ? s.split(/[\s,]+/).filter(Boolean) : []; }
+  }
+}
+let mode;
+let cids;
+if (cidArg === 'full') { mode = 'full matrix'; cids = null; }
+else if (Array.isArray(cidArg) && cidArg.length) { mode = 'passed subset'; cids = cidArg.map(String); }
+else { mode = 'default targeted set'; cids = TARGETED_CIDS; }
+
 let specs = [];
-if (Array.isArray(args) && args.length) {
-  specs = args.map((cid) => {
+if (cids) {
+  specs = cids.map((cid) => {
     const p = String(cid).split('__');
     return { emotion: p[1], archetype: p[2], cid: String(cid) };
   });
@@ -212,7 +239,7 @@ if (Array.isArray(args) && args.length) {
 }
 
 phase('Matrix');
-log(`Running ${specs.length} conversations (gpt-5.4-mini)${Array.isArray(args) && args.length ? ' — gap-fill subset' : ' — full matrix'}...`);
+log(`Running ${specs.length} conversations (gpt-5.4-mini) — ${mode} (args type=${typeof args})...`);
 
 const results = await parallel(
   specs.map((s) => () => agent(personaPrompt(s.emotion, s.archetype, s.cid), { label: `${s.emotion}:${s.archetype}`, phase: 'Matrix', schema: RESULT })),

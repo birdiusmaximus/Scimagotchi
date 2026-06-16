@@ -72,6 +72,11 @@ check('outcome: anchor + not owned + winding down (exit cue) -> held_unnamed',
   out({ userText: "i think i'll leave it here" }), 'held_unnamed');
 check('outcome: held_unnamed ranks above edge_found (uncertain wins)',
   out({ event: ev(), userText: 'not sure, maybe' }), 'held_unnamed');
+// v3.2 #2: choosing NOT to name it is a boundary (held_unnamed), never understanding.
+check('outcome: "id rather not put a word on it" -> held_unnamed',
+  out({ userText: 'id rather not put a word on it' }), 'held_unnamed');
+check('outcome: "lets leave it unnamed" -> held_unnamed',
+  out({ userText: 'i think we can leave it unnamed for now' }), 'held_unnamed');
 
 // ── Rule 5: edge_found — anchor present, label not owned, NOT uncertain ───────
 check('outcome: anchor + not owned + steady -> edge_found',

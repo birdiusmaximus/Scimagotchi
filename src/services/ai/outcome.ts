@@ -15,7 +15,7 @@
  * server) without the moments array — which only the eval server builds.
  */
 
-import { EXIT_CUE } from '@/services/ai/responsePolicy';
+import { EXIT_CUE, NAMING_BOUNDARY } from '@/services/ai/responsePolicy';
 import { hasEmotionAnchor, isUncertain } from '@/services/ai/stage';
 import { PROGRESS_RANK } from '@/services/ai/progressionEngine';
 import type { EmotionEvent, EmotionOutcome, EmotionProgressStage } from '@/types/models';
@@ -56,7 +56,7 @@ export function evaluateOutcome(input: OutcomeInput): EmotionOutcome | null {
   // 4) Held unnamed — real material surfaced but the label was never user-owned AND the
   //    user is uncertain or winding down. A SUCCESSFUL resting place, not a failed unlock.
   //    (Same predicate as momentType's held_unnamed; stricter than edge_found, so first.)
-  if (!owned && hasEmotionAnchor(ev) && (isUncertain(userText) || EXIT_CUE.test(userText ?? ''))) {
+  if (!owned && hasEmotionAnchor(ev) && (isUncertain(userText) || EXIT_CUE.test(userText ?? '') || NAMING_BOUNDARY.test(userText ?? ''))) {
     return 'held_unnamed';
   }
 

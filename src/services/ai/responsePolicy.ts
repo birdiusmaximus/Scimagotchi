@@ -122,6 +122,15 @@ const OPEN_QUESTIONS = [
 export const EXIT_CUE =
   /\b(gotta go|got to go|gonna go|going to bed|off to bed|goodnight|good night|im done|i'?m done|leave it (here|there)|talk later|im off|head off|heading off|going now|bye|see you|night night|gtg)\b/i;
 
+/**
+ * The user is deliberately CHOOSING NOT TO NAME the feeling — a boundary, not not-knowing
+ * (review #2). "I understand the boundary around this feeling" is not "I understand the
+ * feeling": these turns are a successful held_unnamed rest, never an unlock. Distinct from
+ * isUncertain ("I don't know what I feel") — here they may know, and choose to leave it.
+ */
+export const NAMING_BOUNDARY =
+  /\b(leave it unnamed|leaving it unnamed|don'?t want to (name|label|pin|define|put a word|put a name on) ?(it|this)?|don'?t need to (name|label|figure (it|this) out|pin)|rather not (name|label|put a word|pin it down|define)|don'?t have to (name|figure) ?(it|this)?|happy to leave it (unnamed|be|as is)|prefer (not to name|to leave it)|leave it (as it is|where it is)|don'?t want to pin it down|cant? (quite )?put a word on it|won'?t put a word on it|some things don'?t need (a name|naming))\b/i;
+
 /** True when the user explicitly asks for help naming the feeling (§6.2). */
 export function askedForNamingHelp(userText: string): boolean {
   return /\b(what('?s| is) the word|help me name|put (a )?word|name it for me|what (would|do) you call|give me a word|what word)\b/i.test(userText || '');

@@ -9,6 +9,7 @@ export {
   isDuplicateReply,
   isOptionMenu,
   isTentativeReply,
+  NAMING_BOUNDARY,
   offersOffRamp,
   replaceOptionMenu,
   repeatsEarlierQuestion,

@@ -17,7 +17,7 @@ import { isDifficultFamily, isPositiveFamily } from '@/services/ai/companionPose
 import type { StrandAdvance } from '@/services/ai/progressionEngine';
 import { PROGRESS_RANK } from '@/services/ai/progressionEngine';
 import { hasEmotionAnchor, isUncertain } from '@/services/ai/stage';
-import { EXIT_CUE } from '@/services/ai/responsePolicy';
+import { EXIT_CUE, NAMING_BOUNDARY } from '@/services/ai/responsePolicy';
 
 export type MomentType =
   | 'unlocked' // a first shape formed — the existing unlock ceremony
@@ -105,7 +105,7 @@ export function classifyMoments(
   // feeling was never owned, and the user is holding it lightly or winding down. A valid
   // resting place — "I learned the edge of something, but not its name yet" — not a miss.
   const owned = ev.label_source === 'user_stated' || ev.label_source === 'user_confirmed';
-  if (!turn.unlocked && !owned && hasEmotionAnchor(ev) && (isUncertain(userText) || EXIT_CUE.test(userText ?? ''))) {
+  if (!turn.unlocked && !owned && hasEmotionAnchor(ev) && (isUncertain(userText) || EXIT_CUE.test(userText ?? '') || NAMING_BOUNDARY.test(userText ?? ''))) {
     out.push('held_unnamed');
   }
 

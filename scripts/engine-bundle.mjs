@@ -778,6 +778,7 @@ var OPEN_QUESTIONS = [
   "Would you rather keep it unnamed for now?"
 ];
 var EXIT_CUE = /\b(gotta go|got to go|gonna go|going to bed|off to bed|goodnight|good night|im done|i'?m done|leave it (here|there)|talk later|im off|head off|heading off|going now|bye|see you|night night|gtg)\b/i;
+var NAMING_BOUNDARY = /\b(leave it unnamed|leaving it unnamed|don'?t want to (name|label|pin|define|put a word|put a name on) ?(it|this)?|don'?t need to (name|label|figure (it|this) out|pin)|rather not (name|label|put a word|pin it down|define)|don'?t have to (name|figure) ?(it|this)?|happy to leave it (unnamed|be|as is)|prefer (not to name|to leave it)|leave it (as it is|where it is)|don'?t want to pin it down|cant? (quite )?put a word on it|won'?t put a word on it|some things don'?t need (a name|naming))\b/i;
 function askedForNamingHelp(userText) {
   return /\b(what('?s| is) the word|help me name|put (a )?word|name it for me|what (would|do) you call|give me a word|what word)\b/i.test(userText || "");
 }
@@ -1969,7 +1970,7 @@ function classifyMoments(turn, prevEvent, strandAdvance, userText) {
   if (HIDDEN_RULE_RX.test(ruleHay)) out.push("hidden_rule");
   if (REPAIR_RX.test(text)) out.push("repair_intention");
   const owned = ev.label_source === "user_stated" || ev.label_source === "user_confirmed";
-  if (!turn.unlocked && !owned && hasEmotionAnchor(ev) && (isUncertain(userText) || EXIT_CUE.test(userText ?? ""))) {
+  if (!turn.unlocked && !owned && hasEmotionAnchor(ev) && (isUncertain(userText) || EXIT_CUE.test(userText ?? "") || NAMING_BOUNDARY.test(userText ?? ""))) {
     out.push("held_unnamed");
   }
   return out;
@@ -1984,7 +1985,7 @@ function evaluateOutcome(input) {
     return "new_facet";
   }
   const owned = ev.label_source === "user_stated" || ev.label_source === "user_confirmed";
-  if (!owned && hasEmotionAnchor(ev) && (isUncertain(userText) || EXIT_CUE.test(userText ?? ""))) {
+  if (!owned && hasEmotionAnchor(ev) && (isUncertain(userText) || EXIT_CUE.test(userText ?? "") || NAMING_BOUNDARY.test(userText ?? ""))) {
     return "held_unnamed";
   }
   if (!owned && hasEmotionAnchor(ev)) return "edge_found";
@@ -3452,6 +3453,7 @@ export {
   IDENTITY_CONDEMNATION,
   INTENSE_FEELING,
   MOTION_CONFIG,
+  NAMING_BOUNDARY,
   POSE_TARGETS,
   PROGRESS_RANK,
   SLOW_PATH_FAMILIES,

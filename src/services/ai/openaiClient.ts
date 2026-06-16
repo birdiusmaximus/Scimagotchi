@@ -18,6 +18,7 @@ import {
   doorwayOf,
   dropTrailingQuestion,
   EXIT_CUE,
+  NAMING_BOUNDARY,
   isDuplicateReply,
   isOptionMenu,
   isTentativeReply,
@@ -411,6 +412,7 @@ export async function openaiGenerateTurn(
     !!input.repairActive ||
     savouring ||
     resisting ||
+    NAMING_BOUNDARY.test(input.userText) || // chose not to name it = a boundary, not understanding (#2)
     (EXIT_CUE.test(input.userText) && !namesAndOwnsThisMessage);
   if (blockUnlock && stage === 'understood' && prevStage !== 'understood' && prevStage !== 'deepened') {
     stage = prevStage;

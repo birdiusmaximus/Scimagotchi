@@ -1,7 +1,7 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { Platform, ScrollView, StyleSheet, View } from 'react-native';
 import Animated, { Easing, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -52,7 +52,10 @@ export default function ChatScreen() {
   const keyboardHeight = useStore((s) => s.keyboardHeight);
 
   const insets = useSafeAreaInsets();
-  const native = isCapacitorNative();
+  // Any native runtime that must lift its own content above the keyboard: a real RN build
+  // (iOS/Android via EAS) or the Capacitor WebView (resize:'none'). Plain mobile web doesn't —
+  // its visual viewport shrinks instead, so the input already sits above the keys.
+  const liftByKeyboard = Platform.OS !== 'web' || isCapacitorNative();
 
   // What the companion auto-learned in THIS conversation — shown as a gentle,
   // transparent session-end review (brief §7.2), not a save gate.
@@ -173,7 +176,7 @@ export default function ChatScreen() {
   // Bottom spacing: at rest, clear the home indicator. Keyboard up on native — lift the
   // input by the keyboard's height (resize:'none', so we move it ourselves). Keyboard up
   // in a browser — 0, because the visual viewport already shrank to sit above the keys.
-  const bottomPad = keyboardOpen ? (native ? keyboardHeight : 0) : insets.bottom;
+  const bottomPad = keyboardOpen ? (liftByKeyboard ? keyboardHeight : 0) : insets.bottom;
 
   const isEmpty = messages.length === 0 && !sending;
 

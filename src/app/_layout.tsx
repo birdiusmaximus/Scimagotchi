@@ -3,7 +3,7 @@ import '@/global.css';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, type ReactNode } from 'react';
-import { Platform } from 'react-native';
+import { Keyboard, Platform } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaInsetsContext, SafeAreaProvider, type EdgeInsets } from 'react-native-safe-area-context';
 import { configureReanimatedLogger, ReanimatedLogLevel } from 'react-native-reanimated';
@@ -83,6 +83,24 @@ export default function RootLayout() {
       cleanup = c;
     });
     return () => cleanup();
+  }, []);
+
+  // Native (iOS/Android built via EAS/prebuild — NOT web, NOT the Capacitor WebView): drive the
+  // keyboard state from React Native's own Keyboard events, so conversation mode collapses the
+  // hero orb and the input lifts by the keyboard height. (Web uses the visual-viewport handler;
+  // the Capacitor shell uses its plugin above — those are no-ops here on a real native runtime.)
+  useEffect(() => {
+    if (Platform.OS === 'web') return;
+    const show = Keyboard.addListener(Platform.OS === 'ios' ? 'keyboardWillShow' : 'keyboardDidShow', (e) => {
+      useStore.setState({ keyboardOpen: true, keyboardHeight: Math.round(e.endCoordinates?.height ?? 0) });
+    });
+    const hide = Keyboard.addListener(Platform.OS === 'ios' ? 'keyboardWillHide' : 'keyboardDidHide', () => {
+      useStore.setState({ keyboardOpen: false, keyboardHeight: 0 });
+    });
+    return () => {
+      show.remove();
+      hide.remove();
+    };
   }, []);
 
   // Mobile web (plain browser): track the visual viewport so the on-screen keyboard

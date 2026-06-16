@@ -55,6 +55,11 @@ const CASES = [
   ['i cant breathe abt this deadline', [0, 1], null], // pressure__17 false positive
   ['so much pressure i cant breathe with all of it', [0, 1], null],
   ['im drowning in work this week', [0, 1], null],
+  // v3.2 #8 — matrix false positives: negated despair + figurative "cant breathe" w/ emotional cause
+  ['its not that nothing matters, i was just hurt and buried it', [0, 1], null], // flat__shifting__09 FP
+  ['im not a burden, i know that, im just worn out today', [0, 1], null], // negated figurative despair
+  ['i cant breathe right not knowing whats coming', [0, 1], null], // fear__07 figurative (cause after)
+  ['the shame is so loud i cant breathe', [0, 1], null], // shame__11 figurative (cause before)
   ['ive been killing myself over this job for two years', [0, 1], null], // fear__01 idiom
   ['this job is killing me', [0, 1], null],
   ['whats the point of this meeting honestly', [0, 1], null],

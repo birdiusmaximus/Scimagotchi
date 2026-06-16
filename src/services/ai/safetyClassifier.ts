@@ -191,11 +191,19 @@ const LOW_MOOD = ['hopeless', 'worn down', 'cant cope', 'falling apart', 'at my 
 function classifyBreathing(t: string): SafetyResult | null {
   if (!t.includes('cant breathe') && !t.includes('couldnt breathe') && !t.includes('can not breathe')) return null;
 
+  // A literal cue ("physically", "right now") means treat as possibly real — don't let the
+  // figurative reads below swallow it; the literal check + ambiguous fallback handle those.
+  const literalCue = /(right now|physically|actually|literally|properly)/.test(t);
   const figurative =
-    /(cant|couldnt) breathe (about|abt|over|with all|around|when i think|thinking about|because of (work|him|her|them|it all))/.test(t) ||
-    /feels? like i cant breathe/.test(t) ||
-    /(so much|workload|deadline|pressure|stress).{0,30}cant breathe/.test(t) ||
-    /cant breathe.{0,30}(deadline|workload|with everything going on)/.test(t);
+    !literalCue &&
+    (/(cant|couldnt) breathe (about|abt|over|with all|around|when i think|thinking about|because of (work|him|her|them|it all))/.test(t) ||
+      /feels? like i cant breathe/.test(t) ||
+      /(so much|workload|deadline|pressure|stress).{0,30}cant breathe/.test(t) ||
+      /cant breathe.{0,30}(deadline|workload|with everything going on)/.test(t) ||
+      // An emotional cause before/after "cant breathe" is an anxiety/shame idiom, not a medical
+      // event (review #8): "shame so loud i cant breathe", "cant breathe right not knowing".
+      /(shame|fear|anxiety|anxious|panic|grief|dread|worry|worried|nerves|guilt|the thought|not knowing).{0,40}cant breathe/.test(t) ||
+      /cant breathe.{0,40}(not knowing|when i (think|dont know)|thinking|worrying|about (it|him|her|them|this)|over (it|this|him|her|them))/.test(t));
   if (figurative) return { level: 1, category: 'low_mood', action: 'converse', matched: 'cant breathe (figurative)' };
 
   const literal =
@@ -266,13 +274,25 @@ export function classifySafety(text: string): SafetyResult {
   if (m) return { level: 3, category: 'violence_to_others', action: 'support_modal', matched: m };
 
   // Level 2 — passive hopelessness / figurative despair (gentle check).
+  // Negation guard (review #8): a NEGATED despair phrase ("it's NOT that nothing matters",
+  // "i'm not a burden") is reassurance, not risk — a negator right before the phrase (no clause
+  // break) flips its meaning. ONLY applied to phrases that REVERSE when negated; "dont see the
+  // point", "no way out" etc. are already-negated despair (the negation is the hopelessness) and
+  // must still fire, so they are deliberately excluded.
+  const REVERSIBLE_DESPAIR = /nothing matters|nothing (feels|is|seems) worth|worth living|worth it|a burden|better off without|reason to live/;
+  const negatedDespair = (phrase: string): boolean => {
+    if (!REVERSIBLE_DESPAIR.test(phrase)) return false;
+    const idx = t.indexOf(phrase);
+    if (idx < 0) return false;
+    return /\b(not|isn'?t|doesn'?t|dont|never|nor)\b[^.!?,]{0,12}$/.test(t.slice(Math.max(0, idx - 22), idx));
+  };
   if (!POINT_OF_MUNDANE.test(t)) {
     m = anyOf(t, PASSIVE_HOPELESSNESS);
-    if (m) return { level: 2, category: 'passive_hopelessness', action: 'gentle_check', matched: m };
+    if (m && !negatedDespair(m)) return { level: 2, category: 'passive_hopelessness', action: 'gentle_check', matched: m };
   }
   if (!DROWNING_MUNDANE.test(t)) {
     m = anyOf(t, FIGURATIVE_DESPAIR);
-    if (m) return { level: 2, category: 'figurative_despair', action: 'gentle_check', matched: m };
+    if (m && !negatedDespair(m)) return { level: 2, category: 'figurative_despair', action: 'gentle_check', matched: m };
   }
 
   // Level 1 — stay in conversation, soften / handle dependency.

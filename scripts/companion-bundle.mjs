@@ -141,7 +141,34 @@ var FLAT_MAP = {
     "dunno",
     "detached",
     "drained",
-    "unclear"
+    "unclear",
+    // Low-access / partially-unavailable states (review #3) — recognise these as FLAT, not as
+    // sadness/shame underneath. Multi-word so they don't false-match other families (flat is
+    // matched LAST in DETECTION_ORDER, so a genuinely sad/ashamed phrase still wins first).
+    "behind glass",
+    "behind a wall",
+    "going through the motions",
+    "going through motions",
+    "switched off",
+    "switched-off",
+    "switch off",
+    "glassy",
+    "grey",
+    "gray",
+    "distant",
+    "should feel something",
+    "cant reach",
+    "can't reach",
+    "cannot reach",
+    "volume turned down",
+    "volume is turned down",
+    "volume got turned down",
+    "volume down",
+    "muffled",
+    "far away",
+    "far-off",
+    "not really here",
+    "going through the day"
   ],
   noticed: "I think this may be one of the hard-to-name feelings.",
   shapeQuestion: "That is allowed \u2014 we can leave it unnamed for now. Does it feel more heavy, tense, blank, or restless?",
@@ -517,6 +544,8 @@ function emptyEvent(conversationId) {
 var pad = (s) => ` ${s.toLowerCase()} `;
 function detectFamily(text) {
   const t = pad(text);
+  const flatPhrases = EMOTION_MAPS.flat.familyKeywords.filter((k) => k.includes(" "));
+  if (flatPhrases.some((k) => t.includes(k))) return "flat";
   for (const id of DETECTION_ORDER) {
     if (EMOTION_MAPS[id].familyKeywords.some((k) => t.includes(k))) return id;
   }
@@ -897,11 +926,13 @@ var FAMILY_CRAFT = {
     avoid: [
       "don\u2019t demand depth or emotion words \u2014 body words are enough",
       "never infer depression from an entry",
-      'never treat "nothing" as unimportant'
+      'never treat "nothing" as unimportant',
+      'don\u2019t rush it toward sadness or shame \u2014 "behind glass", "the volume turned down", "going through the motions", "I can see it but can\u2019t reach it" are low-access states, not a darker feeling underneath. Reflect the feeling as partly unavailable, not as something sad/ashamed it is hiding.'
     ],
     learning: [
       "I\u2019m learning that this is not calm \u2014 it\u2019s more like low-access feeling.",
-      "This flatness may be your system going quiet after too much."
+      "This flatness may be your system going quiet after too much.",
+      "I\u2019m learning the feeling is here but hard to reach right now, rather than gone or bad."
     ]
   },
   calm: {
@@ -2418,6 +2449,19 @@ function reintroducesWord(word, userText) {
   const negated = new RegExp(`\\b(not|no|never|isn'?t|wasn'?t|aren'?t|ain'?t|don'?t|dont|hardly)\\b[^.!?,]{0,14}\\b${esc}\\b`, "i");
   return !negated.test(txt);
 }
+var RESISTANCE_CUE = /\b(dont want to (get into|talk about|do this|go there|dig)|dont really want to|do not want to get into|this is (a bit much|too much|a lot right now)|can we not|not sure (this|it|that) (helps|is helping|is working)|dont want (questions|to be asked|to dig|to go deeper)|keep it (small|light|surface|simple)|rather not (get into|talk|go there)|leave it for now|im not ready to|not in the mood to (talk|get into)|dont feel like getting into|dont wanna get into|can we keep this (light|small)|i regret (opening|saying))\b/;
+var REOPEN_CUE = /\b(i (do |really |actually )?want to (talk|get into|explore|go (there|deeper|into it)|understand it)|lets (keep going|do this|talk about it|get into it|go deeper)|ok(ay)?,? (lets|i can|i will|go on|im ready)|actually,? (yeah |yes |)?(im ready|lets|i (do|can) want)|im ready (to talk|to get into|now)|go on then|i think i (do want|can talk)|fine,? lets)\b/;
+function userIsResisting(history, currentUserText) {
+  const texts = [...(history ?? []).filter((m) => m.role === "user").map((m) => m.content), currentUserText ?? ""];
+  let lastResist = -1;
+  let lastReopen = -1;
+  texts.forEach((c, i) => {
+    const t = (c || "").toLowerCase().replace(/[’'`]/g, "'");
+    if (RESISTANCE_CUE.test(t)) lastResist = i;
+    if (REOPEN_CUE.test(t)) lastReopen = i;
+  });
+  return lastResist >= 0 && lastResist >= lastReopen;
+}
 
 // src/utils/text.ts
 function stripEmDashes(text) {
@@ -2601,7 +2645,8 @@ ${extraSystem}` : system },
   const noUserConcrete = !hasUserOwnedConcreteDetail(ev, input.userText, input.history ?? []);
   const neverOriginated = !userHasOriginated(input.history ?? [], input.userText);
   const namesAndOwnsThisMessage = !!fam && labelNamedByUser(fam, input.userText, []) && hasUserOwnedConcreteDetail(ev, input.userText, []);
-  const blockUnlock = !!input.safetyNote || !!input.intent || uncertainTurn || clarifyingQuestion || tentativeReply || noUserConcrete || neverOriginated || !!input.repairActive || savouring || EXIT_CUE.test(input.userText) && !namesAndOwnsThisMessage;
+  const resisting = userIsResisting(input.history ?? [], input.userText);
+  const blockUnlock = !!input.safetyNote || !!input.intent || uncertainTurn || clarifyingQuestion || tentativeReply || noUserConcrete || neverOriginated || !!input.repairActive || savouring || resisting || EXIT_CUE.test(input.userText) && !namesAndOwnsThisMessage;
   if (blockUnlock && stage === "understood" && prevStage !== "understood" && prevStage !== "deepened") {
     stage = prevStage;
   }

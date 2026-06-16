@@ -16,6 +16,7 @@ import {
   hasUserOwnedConcreteDetail,
   labelNamedByUser,
   reintroducesWord,
+  userIsResisting,
 } from './engine-bundle.mjs';
 
 let pass = 0;
@@ -172,6 +173,16 @@ for (const phrase of [
   const fam = detectFamily(phrase);
   check(`flat: "${phrase}" -> flat (got ${fam})`, fam === 'flat', true);
 }
+
+// ── v3.2 #1: resistant-user gate (reluctance blocks unlock until a clear re-open) ──
+const U = (s) => ({ role: 'user', content: s });
+check('resist: a reluctance cue resists', userIsResisting([], "honestly i dont really want to get into it"), true);
+check('resist: revealing detail while still resisting is NOT a re-open',
+  userIsResisting([U('this is a bit much, can we not')], 'i guess it started at work'), true);
+check('resist: an explicit re-open lifts it',
+  userIsResisting([U('i dont want to get into it')], 'actually yeah i do want to talk about it'), false);
+check('resist: an ordinary willing turn is not resisting',
+  userIsResisting([], 'i feel anxious about the exam tomorrow'), false);
 
 // sanity: the fixture is anchored by default (so the rules above are exercised correctly)
 check('fixture sanity: default event has an anchor', hasEmotionAnchor(ev()), true);

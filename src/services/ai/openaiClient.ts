@@ -32,7 +32,7 @@ import {
   type ResponseShape,
 } from '@/services/ai/responsePolicy';
 import { needsOwnershipRepair, softenUnownedEmotionReply } from '@/services/ai/replyOwnership';
-import { hasUserOwnedConcreteDetail, userHasOriginated, reintroducesWord, intenseUserWord, INTENSE_FEELING, SOFTENING_CUE } from '@/services/ai/evidenceLedger';
+import { hasUserOwnedConcreteDetail, userHasOriginated, userIsResisting, reintroducesWord, intenseUserWord, INTENSE_FEELING, SOFTENING_CUE } from '@/services/ai/evidenceLedger';
 import {
   detectShadeRejection,
   evaluateStage,
@@ -396,6 +396,10 @@ export async function openaiGenerateTurn(
   // grief, that's the word") still unlocks, while "thanks, bye" cannot.
   const namesAndOwnsThisMessage =
     !!fam && labelNamedByUser(fam, input.userText, []) && hasUserOwnedConcreteDetail(ev, input.userText, []);
+  // Resistance gate (review #1): while the user is holding the door closed (and hasn't clearly
+  // re-opened it), revealing a detail is useful reflection but not an unlock — wait for them to
+  // choose to explore. Reduces unlock_from_resistance.
+  const resisting = userIsResisting(input.history ?? [], input.userText);
   const blockUnlock =
     !!input.safetyNote ||
     !!input.intent ||
@@ -406,6 +410,7 @@ export async function openaiGenerateTurn(
     neverOriginated ||
     !!input.repairActive ||
     savouring ||
+    resisting ||
     (EXIT_CUE.test(input.userText) && !namesAndOwnsThisMessage);
   if (blockUnlock && stage === 'understood' && prevStage !== 'understood' && prevStage !== 'deepened') {
     stage = prevStage;

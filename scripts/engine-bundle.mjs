@@ -1192,7 +1192,10 @@ var DEPENDENCY_CUES = [
 var LOW_MOOD = ["hopeless", "worn down", "cant cope", "falling apart", "at my limit", "completely drained"];
 function classifyBreathing(t) {
   if (!t.includes("cant breathe") && !t.includes("couldnt breathe") && !t.includes("can not breathe")) return null;
-  const figurative = /(cant|couldnt) breathe (about|abt|over|with all|around|when i think|thinking about|because of (work|him|her|them|it all))/.test(t) || /feels? like i cant breathe/.test(t) || /(so much|workload|deadline|pressure|stress).{0,30}cant breathe/.test(t) || /cant breathe.{0,30}(deadline|workload|with everything going on)/.test(t);
+  const literalCue = /(right now|physically|actually|literally|properly)/.test(t);
+  const figurative = !literalCue && (/(cant|couldnt) breathe (about|abt|over|with all|around|when i think|thinking about|because of (work|him|her|them|it all))/.test(t) || /feels? like i cant breathe/.test(t) || /(so much|workload|deadline|pressure|stress).{0,30}cant breathe/.test(t) || /cant breathe.{0,30}(deadline|workload|with everything going on)/.test(t) || // An emotional cause before/after "cant breathe" is an anxiety/shame idiom, not a medical
+  // event (review #8): "shame so loud i cant breathe", "cant breathe right not knowing".
+  /(shame|fear|anxiety|anxious|panic|grief|dread|worry|worried|nerves|guilt|the thought|not knowing).{0,40}cant breathe/.test(t) || /cant breathe.{0,40}(not knowing|when i (think|dont know)|thinking|worrying|about (it|him|her|them|this)|over (it|this|him|her|them))/.test(t));
   if (figurative) return { level: 1, category: "low_mood", action: "converse", matched: "cant breathe (figurative)" };
   const literal = /(right now|physically|actually|literally) .{0,20}(cant|couldnt) breathe/.test(t) || /(cant|couldnt) breathe (right now|physically|properly right now)/.test(t) || t.includes("chest pain") || t.includes("chest hurts") || t.includes("call an ambulance") || t.includes("need an ambulance") || t.includes("lips are blue");
   if (literal) return { level: 4, category: "medical_emergency", action: "urgent_modal", matched: "cant breathe (literal)" };
@@ -1228,13 +1231,20 @@ function classifySafety(text) {
   }
   m = anyOf(t, VIOLENCE_DESIRE);
   if (m) return { level: 3, category: "violence_to_others", action: "support_modal", matched: m };
+  const REVERSIBLE_DESPAIR = /nothing matters|nothing (feels|is|seems) worth|worth living|worth it|a burden|better off without|reason to live/;
+  const negatedDespair = (phrase) => {
+    if (!REVERSIBLE_DESPAIR.test(phrase)) return false;
+    const idx = t.indexOf(phrase);
+    if (idx < 0) return false;
+    return /\b(not|isn'?t|doesn'?t|dont|never|nor)\b[^.!?,]{0,12}$/.test(t.slice(Math.max(0, idx - 22), idx));
+  };
   if (!POINT_OF_MUNDANE.test(t)) {
     m = anyOf(t, PASSIVE_HOPELESSNESS);
-    if (m) return { level: 2, category: "passive_hopelessness", action: "gentle_check", matched: m };
+    if (m && !negatedDespair(m)) return { level: 2, category: "passive_hopelessness", action: "gentle_check", matched: m };
   }
   if (!DROWNING_MUNDANE.test(t)) {
     m = anyOf(t, FIGURATIVE_DESPAIR);
-    if (m) return { level: 2, category: "figurative_despair", action: "gentle_check", matched: m };
+    if (m && !negatedDespair(m)) return { level: 2, category: "figurative_despair", action: "gentle_check", matched: m };
   }
   m = anyOf(t, DEPENDENCY_CUES);
   if (m) return { level: 1, category: "dependency", action: "converse", matched: m };
@@ -1803,6 +1813,19 @@ function reintroducesWord(word, userText) {
   if (!new RegExp(`\\b${esc}\\b`, "i").test(txt)) return false;
   const negated = new RegExp(`\\b(not|no|never|isn'?t|wasn'?t|aren'?t|ain'?t|don'?t|dont|hardly)\\b[^.!?,]{0,14}\\b${esc}\\b`, "i");
   return !negated.test(txt);
+}
+var RESISTANCE_CUE = /\b(dont want to (get into|talk about|do this|go there|dig)|dont really want to|do not want to get into|this is (a bit much|too much|a lot right now)|can we not|not sure (this|it|that) (helps|is helping|is working)|dont want (questions|to be asked|to dig|to go deeper)|keep it (small|light|surface|simple)|rather not (get into|talk|go there)|leave it for now|im not ready to|not in the mood to (talk|get into)|dont feel like getting into|dont wanna get into|can we keep this (light|small)|i regret (opening|saying))\b/;
+var REOPEN_CUE = /\b(i (do |really |actually )?want to (talk|get into|explore|go (there|deeper|into it)|understand it)|lets (keep going|do this|talk about it|get into it|go deeper)|ok(ay)?,? (lets|i can|i will|go on|im ready)|actually,? (yeah |yes |)?(im ready|lets|i (do|can) want)|im ready (to talk|to get into|now)|go on then|i think i (do want|can talk)|fine,? lets)\b/;
+function userIsResisting(history, currentUserText) {
+  const texts = [...(history ?? []).filter((m) => m.role === "user").map((m) => m.content), currentUserText ?? ""];
+  let lastResist = -1;
+  let lastReopen = -1;
+  texts.forEach((c, i) => {
+    const t = (c || "").toLowerCase().replace(/[’'`]/g, "'");
+    if (RESISTANCE_CUE.test(t)) lastResist = i;
+    if (REOPEN_CUE.test(t)) lastReopen = i;
+  });
+  return lastResist >= 0 && lastResist >= lastReopen;
 }
 var BARE_AGREEMENT = /^(yeah?|yep|yes|exactly|totally|for sure|right|you'?re right|that ?one|that'?s the one|true|mm+|ok(ay)?|sure|definitely|absolutely|i guess|that fits|that'?s it|you got it|you nailed it)[\s.,!]*$/i;
 var HEDGE = /^(maybe|kind of|kinda|sort of|sorta|i guess|not really|dunno|idk|unsure|hard to say|hmm|who knows|i dont know|i don'?t know)[\s.,!?]*$/i;
@@ -3500,6 +3523,7 @@ export {
   updateFacets,
   userConfirmsLabel,
   userHasOriginated,
+  userIsResisting,
   varietyDirective,
   varietySignals,
   visualTintFamilies

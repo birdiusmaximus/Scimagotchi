@@ -160,6 +160,33 @@ export function reintroducesWord(word: string, userText: string): boolean {
   return !negated.test(txt);
 }
 
+// The user is holding the door closed: doesn't want to get into it, wants it small, no
+// questions, half-regrets opening the app. Reluctance, not refusal.
+const RESISTANCE_CUE =
+  /\b(dont want to (get into|talk about|do this|go there|dig)|dont really want to|do not want to get into|this is (a bit much|too much|a lot right now)|can we not|not sure (this|it|that) (helps|is helping|is working)|dont want (questions|to be asked|to dig|to go deeper)|keep it (small|light|surface|simple)|rather not (get into|talk|go there)|leave it for now|im not ready to|not in the mood to (talk|get into)|dont feel like getting into|dont wanna get into|can we keep this (light|small)|i regret (opening|saying))\b/;
+// The user actively re-opens the door — chooses to explore, not just reveals a detail while
+// still resisting. Only this lifts the resistance gate (review #1).
+const REOPEN_CUE =
+  /\b(i (do |really |actually )?want to (talk|get into|explore|go (there|deeper|into it)|understand it)|lets (keep going|do this|talk about it|get into it|go deeper)|ok(ay)?,? (lets|i can|i will|go on|im ready)|actually,? (yeah |yes |)?(im ready|lets|i (do|can) want)|im ready (to talk|to get into|now)|go on then|i think i (do want|can talk)|fine,? lets)\b/;
+
+/**
+ * True while the user is RESISTING (review #1): a reluctance cue has been voiced and the user
+ * has not since clearly RE-OPENED the door. Revealing a detail while still resisting does not
+ * count as re-opening — only an explicit choice to explore does. Used to block unlock until
+ * the user chooses to go further, which reduces unlock_from_resistance.
+ */
+export function userIsResisting(history: Turn[], currentUserText: string): boolean {
+  const texts = [...(history ?? []).filter((m) => m.role === 'user').map((m) => m.content), currentUserText ?? ''];
+  let lastResist = -1;
+  let lastReopen = -1;
+  texts.forEach((c, i) => {
+    const t = (c || '').toLowerCase().replace(/[’'`]/g, "'");
+    if (RESISTANCE_CUE.test(t)) lastResist = i;
+    if (REOPEN_CUE.test(t)) lastReopen = i;
+  });
+  return lastResist >= 0 && lastResist >= lastReopen;
+}
+
 export interface EvidenceLedger {
   concreteFromUser: boolean; // the gate signal — at least one user-voiced concrete detail
   userTurns: number;

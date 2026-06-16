@@ -10,15 +10,16 @@
     "ios": {
       "icon": "./assets/expo.icon",
       "bundleIdentifier": "health.gig.scimagotchi",
-      "buildNumber": "1",
       "supportsTablet": false,
       "config": {
         "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
       "package": "health.gig.scimagotchi",
-      "versionCode": 1,
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",

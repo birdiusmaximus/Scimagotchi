@@ -157,15 +157,12 @@ export default function ChatScreen() {
     transform: [{ translateY: (1 - rise.value) * 48 }],
   }));
 
-  // Keyboard: the orb NEVER collapses. It just eases up (and a touch smaller) so it stays
-  // centred in the space above the keyboard. One shared value drives it.
-  const kb = useSharedValue(0);
-  useEffect(() => {
-    kb.value = withTiming(keyboardOpen ? 1 : 0, { duration: 280, easing: Easing.out(Easing.cubic) });
-  }, [keyboardOpen, kb]);
-  const orbLayerStyle = useAnimatedStyle(() => ({
-    transform: [{ translateY: kb.value * -78 }, { scale: 1 - kb.value * 0.12 }],
-  }));
+  // The orb fills the room above the dock and shrinks to stay FULLY visible when the
+  // keyboard compresses the screen — measured from the actual zone height, so it works
+  // whether the squeeze comes from the native keyboard lift or mobile web's shrinking
+  // visual viewport. It is never cut off behind the reply.
+  const [orbZoneH, setOrbZoneH] = useState(0);
+  const orbSize = orbZoneH > 0 ? Math.round(Math.min(208, Math.max(104, orbZoneH - 16))) : 190;
 
   // Bottom spacing: at rest, clear the home indicator. Keyboard up on native — lift the
   // dock by the keyboard's height (resize:'none', so we move it ourselves). Keyboard up
@@ -176,34 +173,32 @@ export default function ChatScreen() {
     <View style={styles.root}>
       <GradientBackground families={tintFamilies} />
 
-      {/* Character — a full-bleed backdrop. It stays large; the keyboard only nudges it up. */}
-      <Animated.View style={[styles.orbLayer, { top: insets.top + 60 }, orbLayerStyle]} pointerEvents="box-none">
-        <CompanionOrb
-          size={208}
-          interactive
-          family={orbFamily}
-          tintFamilies={tintFamilies}
-          tintLevel={tintLevel}
-          visual={visual}
-          speak={speak}
-          gesture={orbGesture}
-          wave={orbWave}
-          anticipate={orbAnticipate}
-          onDoubleTap={waveBack}
-        />
-      </Animated.View>
-
-      <SafeAreaView style={styles.safe} edges={['top', 'left', 'right']} pointerEvents="box-none">
+      <SafeAreaView style={styles.safe} edges={['top', 'left', 'right']}>
         <View style={styles.header}>
           <IconButton name="chevron-left" onPress={goBack} />
         </View>
 
-        {/* Empty middle — taps fall through to the companion behind. */}
-        <View style={styles.spacer} pointerEvents="box-none" />
+        {/* Character — fills the space above the dock and shrinks to stay FULLY visible
+            when the keyboard compresses the screen (never cut off behind the reply). */}
+        <View style={styles.orbZone} onLayout={(e) => setOrbZoneH(e.nativeEvent.layout.height)}>
+          <CompanionOrb
+            size={orbSize}
+            interactive
+            family={orbFamily}
+            tintFamilies={tintFamilies}
+            tintLevel={tintLevel}
+            visual={visual}
+            speak={speak}
+            gesture={orbGesture}
+            wave={orbWave}
+            anticipate={orbAnticipate}
+            onDoubleTap={waveBack}
+          />
+        </View>
 
-        {/* The companion's current voice + the input, floating over the backdrop. */}
-        <Animated.View style={[styles.dock, dockStyle, { paddingBottom: bottomPad }]} pointerEvents="box-none">
-          <View style={styles.voiceRow} pointerEvents="box-none">
+        {/* The companion's current voice + the input. */}
+        <Animated.View style={[styles.dock, dockStyle, { paddingBottom: bottomPad }]}>
+          <View style={styles.voiceRow}>
             {sending ? (
               <TypingBubble />
             ) : reply ? (
@@ -286,9 +281,9 @@ const styles = StyleSheet.create({
   root: { flex: 1 },
   safe: { flex: 1, paddingHorizontal: spacing.lg },
   header: { paddingTop: spacing.sm, flexDirection: 'row', alignItems: 'center' },
-  // Full-bleed backdrop layer; the orb is centred horizontally and anchored near the top.
-  orbLayer: { position: 'absolute', left: 0, right: 0, alignItems: 'center' },
-  spacer: { flex: 1 },
+  // The companion's room: fills everything between header and dock; the orb centres in it
+  // and is sized to fit (see orbSize), so it shrinks rather than getting cut off.
+  orbZone: { flex: 1, alignItems: 'center', justifyContent: 'center', paddingVertical: spacing.sm },
   dock: { paddingTop: spacing.xs },
   voiceRow: { paddingBottom: spacing.sm },
   prompt: { textAlign: 'center', paddingHorizontal: spacing.md, paddingVertical: spacing.sm },

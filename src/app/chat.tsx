@@ -168,9 +168,11 @@ export default function ChatScreen() {
     <View style={styles.root}>
       <GradientBackground families={tintFamilies} />
 
-      {/* Character — FIXED size (matches home) and pinned near the top. It never moves or
-          resizes; the glass chat surfaces just layer over it. */}
-      <View style={[styles.orbAnchor, { top: insets.top + 40 }]} pointerEvents="box-none">
+      {/* Character — FIXED size (matches home) and pinned HIGH near the top (the orb's box
+          carries ~33px of glow above the body, so a small/negative offset seats the body
+          just under the status bar and uses the space up top). It never moves or resizes;
+          the glass chat surfaces just layer over its lower edge. */}
+      <View style={[styles.orbAnchor, { top: insets.top - 8 }]} pointerEvents="box-none">
         <CompanionOrb
           size={ORB_SIZE}
           interactive

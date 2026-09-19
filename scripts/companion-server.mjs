@@ -86,7 +86,7 @@ const server = http.createServer(async (req, res) => {
 
   if (req.method === 'POST' && req.url === '/say') {
     try {
-      const { cid, text, emotion, persona, intent: rawIntent, model: reqModel } = JSON.parse(await readBody(req));
+      const { cid, text, emotion, persona, intent: rawIntent, model: reqModel, memory } = JSON.parse(await readBody(req));
       if (!cid || !text || !String(text).trim()) return json(400, { error: 'cid and non-empty text required' });
       // A tapped continuation chip ("Stay with it" / "Not quite" / "I'm done").
       const intent = rawIntent === 'keep_going' || rawIntent === 'not_quite' || rawIntent === 'done' ? rawIntent : null;
@@ -102,6 +102,8 @@ const server = http.createServer(async (req, res) => {
           persona: persona ?? null,
           created: new Date().toISOString(),
           history: [],
+          // Optional durable "user history" for testing continuity/callback (eval only).
+          memory: memory ?? null,
           prevEvent: null,
           progress: {}, // family -> EmotionProgress, mirrors the app store
           pendingCheck: null,
@@ -175,7 +177,7 @@ const server = http.createServer(async (req, res) => {
       const t0 = Date.now();
       const turn = await withRetry(() =>
         openaiGenerateTurn(
-          { userText: String(text), prevEvent: c.prevEvent, conversationId: cid, history: c.history, memory: null, userName: null, safetyNote, intent, repairActive, activeFacets },
+          { userText: String(text), prevEvent: c.prevEvent, conversationId: cid, history: c.history, memory: c.memory ?? null, userName: null, safetyNote, intent, repairActive, activeFacets },
           { proxyUrl: PROXY, apiKey: null, model: turnModel },
         ),
       );

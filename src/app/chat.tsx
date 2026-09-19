@@ -1,7 +1,6 @@
-import { LinearGradient } from 'expo-linear-gradient';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
-import { Platform, ScrollView, StyleSheet, View } from 'react-native';
+import { Platform, StyleSheet, View } from 'react-native';
 import Animated, { Easing, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -9,7 +8,6 @@ import { ChatChips } from '@/components/ChatChips';
 import { ChatInput } from '@/components/ChatInput';
 import { CompanionOrb } from '@/components/CompanionOrb';
 import { EmotionUnlockCard } from '@/components/EmotionUnlockCard';
-import { Glass } from '@/components/Glass';
 import { GradientBackground } from '@/components/GradientBackground';
 import { IconButton } from '@/components/IconButton';
 import { LearningReviewCard } from '@/components/LearningReviewCard';
@@ -21,16 +19,17 @@ import type { CompanionGesture } from '@/services/ai/companionPose';
 import { selectVisualState, tintLevelForStage, visualTintFamilies } from '@/services/ai/companionVisualState';
 import { isCapacitorNative } from '@/services/native/capacitor';
 import { useStore } from '@/state/store';
-import { gradients, palette, radii, spacing } from '@/theme/tokens';
+import { palette, spacing } from '@/theme/tokens';
 
 /**
- * Chat — "conversation mode". At rest the character sits large in the top third (the
- * focus). When the keyboard opens, the hero orb gracefully collapses and a small
- * companion avatar fades into the header, so the companion stays VISIBLE while the
- * discussion window + docked input take the freed room — instead of the big orb being
- * crushed and the view jumping. Inside the Capacitor shell the WebView is set to
- * resize:'none', so we lift content above the keyboard by its reported height; in a
- * plain browser the visual viewport shrinks and no manual lift is needed.
+ * Chat — "companion-first". The character is a full-bleed BACKDROP that stays large at
+ * all times: when the keyboard opens it simply eases up to stay centred in the space
+ * above the keys, instead of collapsing into a header avatar. There is no transcript —
+ * the user's words live only in the input field and are never drawn as bubbles; only the
+ * companion's latest reply floats over the backdrop, above the input. This dissolves the
+ * keyboard-crush problem (nothing scrolls, so nothing competes with the orb for height)
+ * and keeps the creature — the point of the app — front and centre. Memory is untouched:
+ * every turn is still recorded in the store/SQLite; this only changes what is rendered.
  */
 export default function ChatScreen() {
   const router = useRouter();
@@ -54,7 +53,7 @@ export default function ChatScreen() {
   const insets = useSafeAreaInsets();
   // Any native runtime that must lift its own content above the keyboard: a real RN build
   // (iOS/Android via EAS) or the Capacitor WebView (resize:'none'). Plain mobile web doesn't —
-  // its visual viewport shrinks instead, so the input already sits above the keys.
+  // its visual viewport shrinks instead, so the input already sits above the keyboard.
   const liftByKeyboard = Platform.OS !== 'web' || isCapacitorNative();
 
   // What the companion auto-learned in THIS conversation — shown as a gentle,
@@ -82,14 +81,21 @@ export default function ChatScreen() {
   const tintFamilies = visualTintFamilies(draftEvent);
   // How fully the orb wears the feeling's colour — tied to THIS conversation's unlock
   // stage, so it starts as a faint shade when first noticed and only fills completely
-  // once the feeling is deepened. Per-conversation, so a familiar feeling also eases in
-  // gently each time rather than snapping straight to full colour.
+  // once the feeling is deepened.
   const tintLevel = orbFamily ? tintLevelForStage(draftEvent?.unlock_stage) : 0;
+
+  // Companion-first display: only the companion's latest line is ever shown. The user's
+  // messages still enter the store (engine + memory) but are never rendered as bubbles.
+  let reply = null;
+  for (let i = messages.length - 1; i >= 0; i--) {
+    if (messages[i].role === 'companion') {
+      reply = messages[i];
+      break;
+    }
+  }
 
   // Continuation chips (engine brief §7.3, §16.2): offered sparingly — only when
   // the companion reflected WITHOUT asking a question, and nothing else is open.
-  // Tapping one is a lightweight intent (stay with it / not quite / done), not a
-  // canned message — it asks the companion engine for the right next turn.
   const [chipsDismissedFor, setChipsDismissedFor] = useState<string | null>(null);
   const [closed, setClosed] = useState(false);
   const last = messages[messages.length - 1];
@@ -104,8 +110,6 @@ export default function ChatScreen() {
     !safetyCheck &&
     !closed &&
     chipsDismissedFor !== last.id;
-
-  const scrollRef = useRef<ScrollView>(null);
 
   // Re-attach the conversation from the URL if the store lost it (reload/refresh).
   useEffect(() => {
@@ -143,141 +147,103 @@ export default function ChatScreen() {
     }
   }, [messages]);
 
-  // The discussion window rises + fades in when the chat opens.
+  // The dock (reply + input) rises + fades in when the chat opens.
   const rise = useSharedValue(0);
   useEffect(() => {
     rise.value = withTiming(1, { duration: 540, easing: Easing.out(Easing.cubic) });
   }, [rise]);
-  const windowStyle = useAnimatedStyle(() => ({
+  const dockStyle = useAnimatedStyle(() => ({
     opacity: rise.value,
-    transform: [{ translateY: (1 - rise.value) * 72 }, { scale: 0.97 + rise.value * 0.03 }],
+    transform: [{ translateY: (1 - rise.value) * 48 }],
   }));
 
-  // Conversation mode: when the keyboard opens, collapse the hero orb (top) and cross-
-  // fade a compact companion avatar into the header, so the character stays present
-  // without crushing the chat. Driven by one shared value so both move together.
+  // Keyboard: the orb NEVER collapses. It just eases up (and a touch smaller) so it stays
+  // centred in the space above the keyboard. One shared value drives it.
   const kb = useSharedValue(0);
   useEffect(() => {
     kb.value = withTiming(keyboardOpen ? 1 : 0, { duration: 280, easing: Easing.out(Easing.cubic) });
   }, [keyboardOpen, kb]);
-  // Scale the orb DOWN as its box collapses (rather than clipping it) — at every point
-  // the scaled orb is smaller than its maxHeight box, so nothing overflows and there's no
-  // hard clip rectangle cutting the orb's soft glow (which showed as lines mid-shift).
-  const stageStyle = useAnimatedStyle(() => ({
-    maxHeight: (1 - kb.value) * 240,
-    opacity: 1 - kb.value,
-    transform: [{ scale: 1 - kb.value }],
-  }));
-  const headerAvatarStyle = useAnimatedStyle(() => ({
-    opacity: kb.value,
-    transform: [{ scale: 0.7 + kb.value * 0.3 }, { translateX: (1 - kb.value) * -6 }],
+  const orbLayerStyle = useAnimatedStyle(() => ({
+    transform: [{ translateY: kb.value * -78 }, { scale: 1 - kb.value * 0.12 }],
   }));
 
   // Bottom spacing: at rest, clear the home indicator. Keyboard up on native — lift the
-  // input by the keyboard's height (resize:'none', so we move it ourselves). Keyboard up
+  // dock by the keyboard's height (resize:'none', so we move it ourselves). Keyboard up
   // in a browser — 0, because the visual viewport already shrank to sit above the keys.
   const bottomPad = keyboardOpen ? (liftByKeyboard ? keyboardHeight : 0) : insets.bottom;
-
-  const isEmpty = messages.length === 0 && !sending;
 
   return (
     <View style={styles.root}>
       <GradientBackground families={tintFamilies} />
-      <SafeAreaView style={styles.safe} edges={['top', 'left', 'right']}>
+
+      {/* Character — a full-bleed backdrop. It stays large; the keyboard only nudges it up. */}
+      <Animated.View style={[styles.orbLayer, { top: insets.top + 60 }, orbLayerStyle]} pointerEvents="box-none">
+        <CompanionOrb
+          size={208}
+          interactive
+          family={orbFamily}
+          tintFamilies={tintFamilies}
+          tintLevel={tintLevel}
+          visual={visual}
+          speak={speak}
+          gesture={orbGesture}
+          wave={orbWave}
+          anticipate={orbAnticipate}
+          onDoubleTap={waveBack}
+        />
+      </Animated.View>
+
+      <SafeAreaView style={styles.safe} edges={['top', 'left', 'right']} pointerEvents="box-none">
         <View style={styles.header}>
           <IconButton name="chevron-left" onPress={goBack} />
-          {/* Compact companion — fades in while typing so the character never disappears. */}
-          <Animated.View style={[styles.headerAvatar, headerAvatarStyle]} pointerEvents="none">
-            <LinearGradient
-              colors={gradients.orbCalm}
-              start={{ x: 0, y: 0 }}
-              end={{ x: 1, y: 1 }}
-              style={styles.headerAvatarGrad}
-            >
-              <View style={styles.miniEye} />
-              <View style={styles.miniEye} />
-            </LinearGradient>
-          </Animated.View>
         </View>
 
-        {/* Character — the hero at rest, collapses when the keyboard is up */}
-        <Animated.View style={[styles.stage, stageStyle]}>
-          <CompanionOrb
-            size={150}
-            interactive
-            family={orbFamily}
-            tintFamilies={tintFamilies}
-            tintLevel={tintLevel}
-            visual={visual}
-            speak={speak}
-            gesture={orbGesture}
-            wave={orbWave}
-            anticipate={orbAnticipate}
-            onDoubleTap={waveBack}
-          />
+        {/* Empty middle — taps fall through to the companion behind. */}
+        <View style={styles.spacer} pointerEvents="box-none" />
+
+        {/* The companion's current voice + the input, floating over the backdrop. */}
+        <Animated.View style={[styles.dock, dockStyle, { paddingBottom: bottomPad }]} pointerEvents="box-none">
+          <View style={styles.voiceRow} pointerEvents="box-none">
+            {sending ? (
+              <TypingBubble />
+            ) : reply ? (
+              <MessageBubble key={reply.id} message={reply} />
+            ) : (
+              <Txt variant="body" color={palette.inkSoft} style={styles.prompt}>
+                I’m here. Tell me what’s on your mind.
+              </Txt>
+            )}
+          </View>
+
+          {showChips ? (
+            <ChatChips
+              onKeepGoing={() => {
+                fireGesture('stayWithIt');
+                useStore.getState().send('Let’s stay with it.', { intent: 'keep_going' });
+              }}
+              onNotQuite={() => {
+                fireGesture('notQuite');
+                useStore.getState().send('Hmm, not quite.', { intent: 'not_quite' });
+              }}
+              onDone={() => {
+                setClosed(true);
+                fireGesture('done');
+                useStore.getState().send('I think I’ll leave it here.', { intent: 'done' });
+              }}
+            />
+          ) : null}
+
+          <View style={styles.inputWrap} pointerEvents="auto">
+            <ChatInput
+              autoFocus
+              refocusSignal={speak.key}
+              onSubmit={(t) => {
+                setClosed(false);
+                useStore.getState().send(t);
+              }}
+            />
+          </View>
         </Animated.View>
-
-        {/* Discussion window — grows to fill, input docked at its base */}
-        <View style={[styles.windowWrap, { paddingBottom: bottomPad }]}>
-          <Animated.View style={[styles.window, windowStyle]}>
-            <Glass
-              radius={radii.xl}
-              fill={palette.glassFillSoft}
-              style={styles.windowGlass}
-              contentStyle={styles.windowContent}
-            >
-              {isEmpty ? (
-                <View style={styles.empty}>
-                  <Txt variant="body" color={palette.inkSoft} align="center">
-                    I’m here. Tell me what’s on your mind.
-                  </Txt>
-                </View>
-              ) : (
-                <ScrollView
-                  ref={scrollRef}
-                  style={styles.flex}
-                  contentContainerStyle={styles.messages}
-                  onContentSizeChange={() => scrollRef.current?.scrollToEnd({ animated: true })}
-                  showsVerticalScrollIndicator={false}
-                >
-                  {messages.map((m) => (
-                    <MessageBubble key={m.id} message={m} />
-                  ))}
-                  {sending ? <TypingBubble /> : null}
-                </ScrollView>
-              )}
-
-              {showChips ? (
-                <ChatChips
-                  onKeepGoing={() => {
-                    fireGesture('stayWithIt');
-                    useStore.getState().send('Let’s stay with it.', { intent: 'keep_going' });
-                  }}
-                  onNotQuite={() => {
-                    fireGesture('notQuite');
-                    useStore.getState().send('Hmm, not quite.', { intent: 'not_quite' });
-                  }}
-                  onDone={() => {
-                    setClosed(true);
-                    fireGesture('done');
-                    useStore.getState().send('I think I’ll leave it here.', { intent: 'done' });
-                  }}
-                />
-              ) : null}
-
-              <View style={styles.inputWrap}>
-                <ChatInput
-                  autoFocus
-                  refocusSignal={speak.key}
-                  onSubmit={(t) => {
-                    setClosed(false);
-                    useStore.getState().send(t);
-                  }}
-                />
-              </View>
-            </Glass>
-          </Animated.View>
-        </View>
       </SafeAreaView>
 
       {unlock ? (
@@ -318,27 +284,13 @@ export default function ChatScreen() {
 
 const styles = StyleSheet.create({
   root: { flex: 1 },
-  flex: { flex: 1 },
   safe: { flex: 1, paddingHorizontal: spacing.lg },
-  header: { paddingTop: spacing.sm, flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
-  headerAvatar: { width: 40, height: 40 },
-  headerAvatarGrad: {
-    flex: 1,
-    borderRadius: 20,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 7,
-  },
-  miniEye: { width: 6, height: 6, borderRadius: 3, backgroundColor: '#fff' },
-  // Hero area at rest; its height animates to 0 as the keyboard opens. No overflow:hidden
-  // — the orb scales with the box (see stageStyle), so there's nothing to clip.
-  stage: { alignItems: 'center', justifyContent: 'center' },
-  windowWrap: { flex: 1, paddingTop: spacing.xs },
-  window: { flex: 1 },
-  windowGlass: { flex: 1 },
-  windowContent: { flex: 1, paddingHorizontal: spacing.sm, paddingTop: spacing.xs },
-  messages: { paddingTop: spacing.sm, paddingHorizontal: spacing.xs, gap: 2, flexGrow: 1, justifyContent: 'flex-end' },
-  empty: { flex: 1, alignItems: 'center', justifyContent: 'center', paddingHorizontal: spacing.md },
-  inputWrap: { paddingTop: spacing.xs, paddingBottom: spacing.xs },
+  header: { paddingTop: spacing.sm, flexDirection: 'row', alignItems: 'center' },
+  // Full-bleed backdrop layer; the orb is centred horizontally and anchored near the top.
+  orbLayer: { position: 'absolute', left: 0, right: 0, alignItems: 'center' },
+  spacer: { flex: 1 },
+  dock: { paddingTop: spacing.xs },
+  voiceRow: { paddingBottom: spacing.sm },
+  prompt: { textAlign: 'center', paddingHorizontal: spacing.md, paddingVertical: spacing.sm },
+  inputWrap: { paddingTop: spacing.xs },
 });

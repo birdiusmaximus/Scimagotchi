@@ -1,17 +1,17 @@
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
 import { Platform, StyleSheet, View } from 'react-native';
-import Animated, { Easing, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
+import Animated, { Easing, FadeInLeft, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { ChatChips } from '@/components/ChatChips';
 import { ChatInput } from '@/components/ChatInput';
 import { CompanionOrb } from '@/components/CompanionOrb';
 import { EmotionUnlockCard } from '@/components/EmotionUnlockCard';
+import { Glass } from '@/components/Glass';
 import { GradientBackground } from '@/components/GradientBackground';
 import { IconButton } from '@/components/IconButton';
 import { LearningReviewCard } from '@/components/LearningReviewCard';
-import { MessageBubble } from '@/components/MessageBubble';
 import { TypingBubble } from '@/components/TypingBubble';
 import { Txt } from '@/components/Txt';
 import { useGoBack } from '@/hooks/useGoBack';
@@ -19,17 +19,22 @@ import type { CompanionGesture } from '@/services/ai/companionPose';
 import { selectVisualState, tintLevelForStage, visualTintFamilies } from '@/services/ai/companionVisualState';
 import { isCapacitorNative } from '@/services/native/capacitor';
 import { useStore } from '@/state/store';
-import { palette, spacing } from '@/theme/tokens';
+import { palette, radii, spacing } from '@/theme/tokens';
+
+/** The companion is the same size as on home (160) and pinned in one spot near the top —
+ * it never moves or resizes. */
+const ORB_SIZE = 160;
+/** How transparent the reply glass is, so the companion reads through it when they overlap
+ * (lighter than the input's frosted fill). */
+const REPLY_FILL = 'rgba(255,255,255,0.36)';
 
 /**
- * Chat — "companion-first". The character is a full-bleed BACKDROP that stays large at
- * all times: when the keyboard opens it simply eases up to stay centred in the space
- * above the keys, instead of collapsing into a header avatar. There is no transcript —
- * the user's words live only in the input field and are never drawn as bubbles; only the
- * companion's latest reply floats over the backdrop, above the input. This dissolves the
- * keyboard-crush problem (nothing scrolls, so nothing competes with the orb for height)
- * and keeps the creature — the point of the app — front and centre. Memory is untouched:
- * every turn is still recorded in the store/SQLite; this only changes what is rendered.
+ * Chat — "companion-first". The character sits at a FIXED size and a FIXED spot near the
+ * top; it never collapses, shrinks, or moves when the keyboard opens. There is no
+ * transcript — the user's words live only in the input and are never drawn as bubbles;
+ * only the companion's latest reply shows, as a translucent glass card that can layer OVER
+ * the companion (you see it through the glass). Memory is untouched: every turn is still
+ * recorded in the store; this only changes what is rendered.
  */
 export default function ChatScreen() {
   const router = useRouter();
@@ -79,9 +84,6 @@ export default function ChatScreen() {
     progressStage: family ? (progress[family]?.current_stage ?? null) : null,
   });
   const tintFamilies = visualTintFamilies(draftEvent);
-  // How fully the orb wears the feeling's colour — tied to THIS conversation's unlock
-  // stage, so it starts as a faint shade when first noticed and only fills completely
-  // once the feeling is deepened.
   const tintLevel = orbFamily ? tintLevelForStage(draftEvent?.unlock_stage) : 0;
 
   // Companion-first display: only the companion's latest line is ever shown. The user's
@@ -157,13 +159,6 @@ export default function ChatScreen() {
     transform: [{ translateY: (1 - rise.value) * 48 }],
   }));
 
-  // The orb fills the room above the dock and shrinks to stay FULLY visible when the
-  // keyboard compresses the screen — measured from the actual zone height, so it works
-  // whether the squeeze comes from the native keyboard lift or mobile web's shrinking
-  // visual viewport. It is never cut off behind the reply.
-  const [orbZoneH, setOrbZoneH] = useState(0);
-  const orbSize = orbZoneH > 0 ? Math.round(Math.min(208, Math.max(104, orbZoneH - 16))) : 190;
-
   // Bottom spacing: at rest, clear the home indicator. Keyboard up on native — lift the
   // dock by the keyboard's height (resize:'none', so we move it ourselves). Keyboard up
   // in a browser — 0, because the visual viewport already shrank to sit above the keys.
@@ -173,36 +168,54 @@ export default function ChatScreen() {
     <View style={styles.root}>
       <GradientBackground families={tintFamilies} />
 
-      <SafeAreaView style={styles.safe} edges={['top', 'left', 'right']}>
+      {/* Character — FIXED size (matches home) and pinned near the top. It never moves or
+          resizes; the glass chat surfaces just layer over it. */}
+      <View style={[styles.orbAnchor, { top: insets.top + 40 }]} pointerEvents="box-none">
+        <CompanionOrb
+          size={ORB_SIZE}
+          interactive
+          family={orbFamily}
+          tintFamilies={tintFamilies}
+          tintLevel={tintLevel}
+          visual={visual}
+          speak={speak}
+          gesture={orbGesture}
+          wave={orbWave}
+          anticipate={orbAnticipate}
+          onDoubleTap={waveBack}
+        />
+      </View>
+
+      <SafeAreaView style={styles.safe} edges={['top', 'left', 'right']} pointerEvents="box-none">
         <View style={styles.header}>
           <IconButton name="chevron-left" onPress={goBack} />
         </View>
 
-        {/* Character — fills the space above the dock and shrinks to stay FULLY visible
-            when the keyboard compresses the screen (never cut off behind the reply). */}
-        <View style={styles.orbZone} onLayout={(e) => setOrbZoneH(e.nativeEvent.layout.height)}>
-          <CompanionOrb
-            size={orbSize}
-            interactive
-            family={orbFamily}
-            tintFamilies={tintFamilies}
-            tintLevel={tintLevel}
-            visual={visual}
-            speak={speak}
-            gesture={orbGesture}
-            wave={orbWave}
-            anticipate={orbAnticipate}
-            onDoubleTap={waveBack}
-          />
-        </View>
+        {/* Empty middle — taps fall through to the companion behind. */}
+        <View style={styles.spacer} pointerEvents="box-none" />
 
-        {/* The companion's current voice + the input. */}
-        <Animated.View style={[styles.dock, dockStyle, { paddingBottom: bottomPad }]}>
-          <View style={styles.voiceRow}>
+        {/* The companion's current voice + the input — translucent glass over the character. */}
+        <Animated.View style={[styles.dock, dockStyle, { paddingBottom: bottomPad }]} pointerEvents="box-none">
+          <View style={styles.voiceRow} pointerEvents="box-none">
             {sending ? (
               <TypingBubble />
             ) : reply ? (
-              <MessageBubble key={reply.id} message={reply} />
+              <Animated.View
+                key={reply.id}
+                entering={FadeInLeft.springify().damping(20).mass(0.7)}
+                style={styles.replyRow}
+              >
+                <Glass
+                  radius={radii.xl}
+                  fill={REPLY_FILL}
+                  style={styles.replyBubble}
+                  contentStyle={styles.replyContent}
+                >
+                  <Txt variant="body" color={palette.inkOnGlass}>
+                    {reply.content}
+                  </Txt>
+                </Glass>
+              </Animated.View>
             ) : (
               <Txt variant="body" color={palette.inkSoft} style={styles.prompt}>
                 I’m here. Tell me what’s on your mind.
@@ -228,7 +241,7 @@ export default function ChatScreen() {
             />
           ) : null}
 
-          <View style={styles.inputWrap} pointerEvents="auto">
+          <View style={styles.inputWrap}>
             <ChatInput
               autoFocus
               refocusSignal={speak.key}
@@ -281,11 +294,14 @@ const styles = StyleSheet.create({
   root: { flex: 1 },
   safe: { flex: 1, paddingHorizontal: spacing.lg },
   header: { paddingTop: spacing.sm, flexDirection: 'row', alignItems: 'center' },
-  // The companion's room: fills everything between header and dock; the orb centres in it
-  // and is sized to fit (see orbSize), so it shrinks rather than getting cut off.
-  orbZone: { flex: 1, alignItems: 'center', justifyContent: 'center', paddingVertical: spacing.sm },
+  // Fixed companion anchor: horizontally centred, pinned near the top (top set inline).
+  orbAnchor: { position: 'absolute', left: 0, right: 0, alignItems: 'center' },
+  spacer: { flex: 1 },
   dock: { paddingTop: spacing.xs },
   voiceRow: { paddingBottom: spacing.sm },
+  replyRow: { flexDirection: 'row', justifyContent: 'flex-start' },
+  replyBubble: { maxWidth: '88%', borderBottomLeftRadius: 6 },
+  replyContent: { paddingVertical: 14, paddingHorizontal: 18 },
   prompt: { textAlign: 'center', paddingHorizontal: spacing.md, paddingVertical: spacing.sm },
   inputWrap: { paddingTop: spacing.xs },
 });

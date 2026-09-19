@@ -5,7 +5,7 @@ import Animated, { cancelAnimation, Easing, useAnimatedStyle, useSharedValue, wi
 
 import { Glass } from '@/components/Glass';
 import { IconButton } from '@/components/IconButton';
-import { useSpeechRecognition } from '@/hooks/useSpeechRecognition';
+import { useLiveTalk } from '@/hooks/useLiveTalk';
 import { fontFamily, palette, radii, spacing } from '@/theme/tokens';
 
 type Props = {
@@ -17,26 +17,46 @@ type Props = {
   refocusSignal?: number;
 };
 
-/** The always-visible chat input pill: + button · text field · mic/send. */
+/** The always-visible chat input pill: + button · text field · mic (live talk) / send. */
 export function ChatInput({ placeholder = 'What’s here?', onSubmit, autoFocus, refocusSignal }: Props) {
   const [text, setText] = useState('');
   const inputRef = useRef<TextInput>(null);
   const hasText = text.trim().length > 0;
 
-  // Tap-and-talk: the mic streams a live transcript into the field; the user reviews
-  // and sends. Web uses the browser Speech API; native reports unsupported (mic hidden).
-  const speech = useSpeechRecognition({ onResult: (t) => setText(t) });
+  // Live talk: tap the mic to start a hands-free session. It transcribes as you speak and,
+  // after a ~1.5s pause, sends that utterance to the companion on its own, then keeps
+  // listening — a spoken back-and-forth. Web only for now; native reports unsupported.
+  const talk = useLiveTalk({
+    onUtterance: (t) => {
+      onSubmit?.(t);
+      setText('');
+    },
+  });
+
+  // While live, mirror the running transcript into the field so you see what's heard; clear
+  // it once the session ends.
+  const wasLive = useRef(false);
+  useEffect(() => {
+    if (talk.live) setText(talk.interim);
+    else if (wasLive.current) setText('');
+    wasLive.current = talk.live;
+  }, [talk.live, talk.interim]);
+
+  // Going live is a voice experience — drop the keyboard so it doesn't cover the companion.
+  useEffect(() => {
+    if (talk.live) inputRef.current?.blur();
+  }, [talk.live]);
 
   // A soft radar pulse around the button while it's listening.
   const pulse = useSharedValue(0);
   useEffect(() => {
-    if (speech.listening) {
+    if (talk.live) {
       pulse.value = withRepeat(withTiming(1, { duration: 900, easing: Easing.out(Easing.ease) }), -1, false);
     } else {
       cancelAnimation(pulse);
       pulse.value = 0;
     }
-  }, [speech.listening, pulse]);
+  }, [talk.live, pulse]);
   const pulseStyle = useAnimatedStyle(() => ({ transform: [{ scale: 1 + pulse.value * 0.6 }], opacity: 0.4 * (1 - pulse.value) }));
 
   // Focus on mount. The `autoFocus` DOM attribute only fires on a full page load,
@@ -45,10 +65,11 @@ export function ChatInput({ placeholder = 'What’s here?', onSubmit, autoFocus,
     if (autoFocus) inputRef.current?.focus();
   }, [autoFocus]);
 
-  // Keep the field active after each companion reply so the user can keep typing.
+  // Keep the field active after each companion reply so the user can keep typing — but not
+  // while live talk is running (that's voice; the keyboard should stay down).
   useEffect(() => {
-    if (refocusSignal && refocusSignal > 0) inputRef.current?.focus();
-  }, [refocusSignal]);
+    if (refocusSignal && refocusSignal > 0 && !talk.live) inputRef.current?.focus();
+  }, [refocusSignal, talk.live]);
 
   const submit = () => {
     if (!hasText) return;
@@ -56,6 +77,14 @@ export function ChatInput({ placeholder = 'What’s here?', onSubmit, autoFocus,
     setText('');
     // Stay focused so the user can keep typing without tapping the field again.
     inputRef.current?.focus();
+  };
+
+  // The mic/send button: end a live session, send typed text, or start live talk.
+  const onAction = () => {
+    if (talk.live) talk.stop();
+    else if (hasText) submit();
+    else if (talk.supported) talk.start();
+    else submit();
   };
 
   return (
@@ -71,7 +100,8 @@ export function ChatInput({ placeholder = 'What’s here?', onSubmit, autoFocus,
         ref={inputRef}
         value={text}
         onChangeText={setText}
-        placeholder={placeholder}
+        editable={!talk.live}
+        placeholder={talk.live ? 'Listening…' : placeholder}
         placeholderTextColor="rgba(110,108,155,0.5)"
         style={styles.input}
         onSubmitEditing={submit}
@@ -81,13 +111,13 @@ export function ChatInput({ placeholder = 'What’s here?', onSubmit, autoFocus,
         multiline={false}
       />
       <View style={styles.action}>
-        {speech.listening ? <Animated.View pointerEvents="none" style={[styles.pulseRing, pulseStyle]} /> : null}
+        {talk.live ? <Animated.View pointerEvents="none" style={[styles.pulseRing, pulseStyle]} /> : null}
         <IconButton
-          name={speech.listening ? 'square' : hasText ? 'arrow-up' : 'mic'}
+          name={talk.live ? 'square' : hasText ? 'arrow-up' : 'mic'}
           variant="accent"
           diameter={40}
-          iconSize={speech.listening ? 15 : 18}
-          onPress={speech.listening ? speech.stop : hasText ? submit : speech.supported ? speech.start : submit}
+          iconSize={talk.live ? 15 : 18}
+          onPress={onAction}
         />
       </View>
     </Glass>

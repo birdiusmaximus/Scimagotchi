@@ -9,7 +9,7 @@ import * as SecureStore from 'expo-secure-store';
 
 const KEY = 'scima_openai_key';
 const MODEL = 'scima_openai_model';
-export const DEFAULT_MODEL = 'gpt-5.4-mini';
+export const DEFAULT_MODEL = 'gpt-5.6-terra';
 
 export async function getApiKey(): Promise<string | null> {
   const env = process.env.EXPO_PUBLIC_OPENAI_API_KEY;

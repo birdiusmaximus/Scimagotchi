@@ -176,7 +176,7 @@ export const useStore = create<AppState>((set, get) => ({
   userName: '',
   remindersEnabled: false,
   apiKeySet: false,
-  aiModel: 'gpt-5.4-mini',
+  aiModel: 'gpt-5.6-terra',
   cloudActive: false,
 
   init: async () => {
@@ -631,7 +631,7 @@ export const useStore = create<AppState>((set, get) => ({
 
   setModel: async (model) => {
     await persistModel(model).catch(() => {});
-    set({ aiModel: model.trim() || 'gpt-5.4-mini' });
+    set({ aiModel: model.trim() || 'gpt-5.6-terra' });
   },
 
   resetAllData: async () => {

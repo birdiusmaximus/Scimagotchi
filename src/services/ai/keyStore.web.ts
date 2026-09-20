@@ -6,7 +6,7 @@
 
 const KEY = 'scima:openai_key';
 const MODEL = 'scima:openai_model';
-export const DEFAULT_MODEL = 'gpt-5.4-mini';
+export const DEFAULT_MODEL = 'gpt-5.6-terra';
 
 const ls = (): Storage | null => {
   try {

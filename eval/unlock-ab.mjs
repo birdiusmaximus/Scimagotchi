@@ -74,8 +74,13 @@ const BALANCED = [
   ['joy', 'savouring'], ['calm', 'savouring'], ['anger', 'not_quite'], ['hurt', 'not_quite'],
   ['pressure', 'shifting'], ['anger', 'shifting'],
 ];
+const ONLY_ARCH = (process.argv.find((a) => a.startsWith('--archetypes=')) || '').split('=')[1];
 let SPECS;
-if (FULL) {
+if (ONLY_ARCH) {
+  // Focused run: the named archetypes across every emotion (fast gate validation).
+  SPECS = [];
+  for (const a of ONLY_ARCH.split(',')) for (const e of Object.keys(EMO)) SPECS.push([e, a]);
+} else if (FULL) {
   SPECS = [];
   for (const e of Object.keys(EMO)) for (const a of mixFor(e)) SPECS.push([e, a]);
 } else SPECS = BALANCED;
